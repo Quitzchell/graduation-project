@@ -68,7 +68,7 @@ Op basis van de resultaten van deze tests en migratieproeven worden de prestatie
 - **Activiteiten:** 
 	- Functionele analyse huidige CMS.
 	- Ontwerpen van initiële prototype webapplicatie.
-	- implementatie en basisvalidatie.
+	- Implementatie en basis validatie.
 - **Deliverables:** 
 	- Initiële advies voortgang CMS.
 	- Documentatie huidige CMS.

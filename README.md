@@ -5,5 +5,5 @@
 * ### [Logboek](Logboek.md)
 
 ## Analyse
-* ### [Onderzoek naar het Huidige CMS](Onderzoek/onderzoek-naar-het-huidige-cms.md)
+* ### [Onderzoek naar het Huidige CMS](Onderzoek-naar-het-huidige-cms.md)
 
