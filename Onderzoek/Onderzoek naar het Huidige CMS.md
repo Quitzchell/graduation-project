@@ -18,7 +18,7 @@ Binnen het CMS wordt het **Page**-model gebruikt om pagina's te representeren. I
 de page-modellen vormen de kern van alle content op een website. Het concept is simpel: zonder pagina's is er geen content.
 
 #### Templates
-Binnen de code van de webapplicaties kunnen templates aangemaakt worden op basis van .xml-bestanden. Deze templates dienen als sjabloon om te bepalen op welke manier en wat voor inforamtie eindgebruikers kunnen meegeven die op een pagina weergegeven moet worden. Hoe de informatie ingevoerd kan worden, wordt bepaald aan de hand van [[#FormFields]].
+Binnen de code van de webapplicaties kunnen templates aangemaakt worden op basis van .xml-bestanden. Deze templates dienen als sjabloon om te bepalen op welke manier en wat voor inforamtie eindgebruikers kunnen meegeven die op een pagina weergegeven moet worden. Hoe de informatie ingevoerd kan worden, wordt bepaald aan de hand van [FormFields](#FormField).
 
 Het binnen templates mogelijk om naar andere samenstellingen van FormFields te verwijzen. In dit geval heten ze binnen het systeem geen **Template** meer, maar spreken we over **blocks**. Deze structuur vormt de basis voor de verschillende soorten content die gebruikers op een pagina kunnen definiëren en organiseren.
 ### FormFields #fixme
