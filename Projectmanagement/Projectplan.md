@@ -1,5 +1,5 @@
 ## Revitalising Content Management
-***Versie 1***
+***Versie 2***
 
 ## AllesOnline
 AllesOnline is een full-service bureau dat zich richt op zowel online als offline communicatie. Het bedrijf bedient een diverse groep stakeholders, van grote internationale ondernemingen tot regionale servicegerichte instanties. De diensten die ze aanbieden variëren van productiegerelateerde werkzaamheden, zoals DTO en vormgeving, tot het ontwerpen en realiseren van full-stack webapplicaties.
@@ -28,35 +28,33 @@ Om te controleren of de migratie correct verloopt, zal ik tests uitvoeren om te 
 
 Door deze aanpak hoop ik niet alleen te bepalen hoe de huidige CMS-architectuur geoptimaliseerd kan worden, maar ook praktische richtlijnen te bieden voor een efficiënte en effectieve migratie of herstructurering.
 
-### Fase 1: Onderzoek
+### Fase 1: Onderzoek en initieel advies
 In de eerste fase van het project wordt een analyse uitgevoerd van het bestaande Content Management Systeem (CMS) van AllesOnline. Deze fase richt zich op het vaststellen van de vereisten voor modernisering. Het doel is om een goed onderbouwd advies te formuleren over de beste aanpak: ofwel een grondige refactor van het bestaande CMS of migratie naar een nieuw systeem.
 
-Het onderzoek begint met een functionele evaluatie van het huidige CMS. Hierbij worden de bestaande functionaliteiten gedocumenteerd om inzicht in het systeem te krijgen. Vervolgens worden de criteria vastgesteld waaraan een nieuw CMS moet voldoen, zoals schaalbaarheid, onderhoudbaarheid, kosten, en ondersteuning voor moderne ontwikkelpraktijken. Parallel aan deze evaluatie wordt marktonderzoek verricht naar beschikbare commerciële en open-source CMS-oplossingen die aan de gedefinieerde criteria voldoen.Daarnaast worden de kosten van refactoring en migratie ingeschat. Dit omvat de tijd en middelen die nodig zijn voor de ontwikkeling van een nieuw CMS. 
+Het onderzoek begint met een functionele evaluatie van het huidige CMS. Hierbij worden de bestaande functionaliteiten onder de loep genomen om inzicht in het systeem te krijgen. Vervolgens wordt vastgelegd aan welke criteria een nieuw CMS moet voldoen, zoals schaalbaarheid, onderhoudbaarheid, kosten, en ondersteuning voor moderne ontwikkelpraktijken. Parallel aan deze evaluatie wordt marktonderzoek verricht naar beschikbare commerciële en open-source CMS-oplossingen die aan de gedefinieerde criteria voldoen. 
 
-De voordelen van elk scenario worden geëvalueerd, waarbij factoren zoals verbeterde prestaties, verhoogde stabiliteit, maar ook financiële aspecten worden meegenomen.
+In deze fase worden ook de specificaties en functionaliteiten voor een prototypische webapplicatie, die de kernfunctionaliteiten van het huidige CMS bevat, worden vastgesteld.
 
 ### Fase 2: Iteratieve ontwikkelingscyclus
 In de tweede fase wordt een iteratieve ontwikkelingscyclus gevolgd om de haalbaarheid van de modernisering of migratie te testen. Deze fase omvat de volgende stappen:
 
-1. **Specificaties opstellen**: De specificaties en functionaliteiten voor een prototypische webapplicatie, die de kernfunctionaliteiten van het huidige CMS bevat, worden vastgesteld.
+
+1. **Ontwikkeling**: De webapplicatie wordt ontwikkeld met het huidige CMS, waarbij de ontwikkelings- en testprocessen worden gedocumenteerd.  In vervolgsprints worden dit gerealiseerd met een anders CMS pakket
      
      
-1. **Ontwikkeling**: De webapplicatie wordt ontwikkeld met het huidige CMS, waarbij de ontwikkelings- en testprocessen worden gedocumenteerd.  
+2. **Migratieplan ontwikkelen**: Een gedetailleerd migratieplan wordt opgesteld op basis van proefimplementaties van verschillende CMS-oplossingen. Dit plan bevat stappen voor de migratie van gegevens, integratie en testen.
      
      
-3. **Migratieplan ontwikkelen**: Een gedetailleerd migratieplan wordt opgesteld op basis van proefimplementaties van verschillende CMS-oplossingen. Dit plan bevat stappen voor de migratie van gegevens, integratie en testen.
+3. **Uitvoering van migratieproeven**: Er worden migratieproeven uitgevoerd om te testen hoe goed de nieuwe systemen presteren bij het overzetten van bestaande gegevens en functionaliteiten.
      
      
-4. **Uitvoering van migratieproeven**: Er worden migratieproeven uitgevoerd om te testen hoe goed de nieuwe systemen presteren bij het overzetten van bestaande gegevens en functionaliteiten.
+4. **Functionele tests**: Functionele tests worden uitgevoerd om te controleren of de nieuwe of aangepaste CMS-oplossing alle gewenste functionaliteiten ondersteunt en correct functioneert.
      
      
-5. **Functionele tests**: Functionele tests worden uitgevoerd om te controleren of de nieuwe of aangepaste CMS-oplossing alle gewenste functionaliteiten ondersteunt en correct functioneert.
+5. **Prestatie- en stress tests**: De prestaties en belasting van de webapplicatie worden onder verschillende omstandigheden getest om te waarborgen dat het systeem aan de schaalbaarheidsvereisten voldoet.
      
      
-6. **Prestatie- en stress tests**: De prestaties en belasting van de webapplicatie worden onder verschillende omstandigheden getest om te waarborgen dat het systeem aan de schaalbaarheidsvereisten voldoet.
-     
-     
-7. **Gebruikerstest**: Eindgebruikers testen de nieuwe of gerefactoreerde CMS-oplossing om de gebruikerservaring te evalueren en eventuele problemen met de gebruiksvriendelijkheid te identificeren.
+6. **Gebruikerstest**: Eindgebruikers testen de nieuwe of gerefactoreerde CMS-oplossing om de gebruikerservaring te evalueren en eventuele problemen met de gebruiksvriendelijkheid te identificeren.
      
      
 
@@ -64,34 +62,33 @@ Op basis van de resultaten van deze tests en migratieproeven worden de prestatie
 
 ## Planning
 
-### Voorbereiding en analyse (4 weken)
-#### Week 3-4: Verkenning en evaluatie
-- Verzamelen van gegevens en analyse van de huidige situatie.
-- Documenteren van bestaande functionaliteiten en identificeren van beperkingen.
-#### Week 5: Criteria en onderzoek
-- Vaststellen van de eisen en criteria voor de nieuwe oplossing.
-- Vergelijken van beschikbare opties en uitvoeren van marktonderzoek.
-#### Week 6: Kosten en vergelijking
-- Schatting van kosten en evalueren van de opties.
-- Opstellen van een voorlopig rapport en verzamelen.
-### Ontwikkeling en validatie (8 weken)
-#### Week 7: Specificaties en ontwikkeling
-- Definiëren van specificaties en ontwikkelen van prototypes of oplossingen.    
-#### Week 8-9: Ontwikkeling
-- Voortzetten van de ontwikkeling van de webapplicatie met het huidige CMS.
-- Documenteren van de ontwikkelings- en testprocessen.
-#### Week 10: Migratieplan en voorbereiding
-- Opstellen van een gedetailleerd migratieplan voor verschillende CMS-oplossingen.
-- Voorbereiden van de migratieproeven.
-#### Week 11-12: Tests
-- Uitvoeren van migratieproeven en functionele tests.
-- Evalueren van prestaties en stabiliteit.
-#### Week 13-15: Prestatie-, stress- en gebruikerstests
-- Uitvoeren van prestatie- en stresstests om schaalbaarheid en stabiliteit te evalueren.
-- Betrekken van eindgebruikers bij tests en verzamelen van feedback over de gebruiksvriendelijkheid.
-- Oplossen van eventuele problemen op basis van feedback.
-### Documentatie en presentatie (3 weken)
-#### Week 16: Rapportage
-- Documenteren van bevindingen, aanbevelingen en voorgestelde actieplan in een gedetailleerd rapport.
-#### Week 17: Voorbereiding presentatie
-- Inleveren van portfolio
+#### Sprint 1 (week 3 t/m 4)
+- **Doel:** Eerste analyse en ontwerp, bouwen van prototype webapplicaite met het huidige CMS.
+- **Activiteiten:** 
+	- Functionele analyse huidige CMS.
+	- Ontwerpen van initiële prototype webapplicatie.
+	- implementatie en basisvalidatie.
+- **Deliverables:** 
+	- Initiële advies voortgang CMS.
+	- Documentatie huidige CMS.
+	- Prototype met huidige CMS.
+### Sprint 2 t/m 7 (Week 5 t/m 14)
+Per twee sprints het realiseren van een nieuwe prototype en architectuur. Uitkomst is om aan het eind van het project meerdere prototypen te hebben waar AllesOnline aan kan zien welke opties beschikbaar zijn en wat de voor en nadelen van deze opties zijn.
+#### Activiteiten voor iteratieve sprints
+1. Analyse van het CMS-pakket.
+2. Ontwikkeling van prototype.
+3. Validatie aan de hand van testen.
+4. Gebruikersfeedback.
+#### Deliverables voor iteratieve sprints
+ - Een werkend prototype van een CMS-pakket.
+*  Documentatie en testresultaten.
+ * Advies over het CMS-pakket in vergelijking met het huidige systeem.
+### Sprint 8 (Week 15 t/m 16)
+
+- **Doel:** Samenvoegen van deliverables en formuleren van eindadvies voor stakeholders.
+- **Activiteiten:**
+    - Analyse van alle prototypes en testresultaten.
+    - Formuleren van een eindadvies op basis van de verzamelde data en feedback.
+- **Deliverables:**
+    - Eindadviesrapport voor stakeholders.
+#### Week 17: Inleveren van portfolio
