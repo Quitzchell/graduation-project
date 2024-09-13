@@ -5,8 +5,7 @@ In februari 2015 begon AllesOnline met de ontwikkeling van een eigen Content Man
 ## Doel van het Onderzoek
 Het doel van dit onderzoek is om een grondige evaluatie van het bestaande CMS te geven, de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem, en de noodzaak voor mogelijke modernisering of vervangingen te analyseren. 
 
-## Functionaliteit
-
+## Opbouw
 ### Beheren van Content
 Vanuit het CMS is het mogelijk om content van de website te beheren. Om dit mogelijk te maken zijn er verschillende modules en componenten in het CMS dat samenwerken.
 #### ContentManagerModule
@@ -23,6 +22,5 @@ Het binnen templates mogelijk om naar andere samenstellingen van **FormFields** 
 FormFields bepalen hoe de eindgebruikers informatie kunnen meegegeven die op pagina's weergegeven moet worden. Kortom, alle content van de website wordt doormiddel van FormFields ingegeven. 
 
 De **FormFields** zijn gerealiseerd met zowel componenten voor de gebruikersinterface, als componenten met backend logica die verantwoordelijk zijn voor het persisteren van gegevens.
-
-
+### Beheren van Objecten
 
