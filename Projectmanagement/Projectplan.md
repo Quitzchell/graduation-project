@@ -22,7 +22,7 @@ Echter, gezien de omvang van zo’n refactor is het wellicht verstandiger om alt
 
 Om binnen een realistische termijn tot een goed onderbouwd advies te komen, ben ik van plan om gedurende dit project verschillende casestudies uit te voeren. Mijn doel is om met een concreet advies te komen over hoe AllesOnline de architectuur rondom het gebruik van een CMS kan moderniseren. Het is hierbij essentieel om rekening te houden met het feit dat bestaande webapplicaties, die momenteel het huidige CMS gebruiken, moeten kunnen worden gemigreerd naar de nieuwe architectuur.
 
-Om tot een goed afgewogen advies te komen, ben ik van plan een eenvoudige webapplicatie te ontwikkelen met het huidige CMS. Deze applicatie zal de belangrijkste functionaliteiten van het CMS bevatten. Op basis van deze applicatie zal ik onderzoeken hoe de migratie van het huidige CMS naar andere CMS-pakketten kan plaatsvinden, of hoe een refactor van het bestaande CMS kan worden uitgevoerd.
+Om tot een goed afgewogen advies te komen, ben ik van plan een eenvoudige webapplicatie te ontwikkelen met het huidige CMS. Deze applicatie zal als blauwdruk dienen voor de functionaliteiten die nodig zijn voor een typisch AllesOnline webapplicatie. Op basis van deze applicatie zal ik andere CMS oplossingen uittesten. Dit stelt mij in staat om gemakkelijk te onderzoeken hoe de migratie van het huidige CMS naar andere CMS-pakketten kan plaatsvinden.
 
 Om te controleren of de migratie correct verloopt, zal ik tests uitvoeren om te verifiëren of het CMS nog steeds het gewenste resultaat levert. Dit omvat het testen van de rendering van webpagina's om te waarborgen dat alle bestaande inhoud behouden blijft. Ook zal ik aandacht besteden aan de integriteit van de data en de werking van de bestaande functionaliteiten, om te garanderen dat de overgang naar de nieuwe architectuur soepel verloopt zonder verlies van functionaliteit of gegevens.
 
@@ -33,11 +33,12 @@ In de eerste fase van het project wordt een analyse uitgevoerd van het bestaande
 
 Het onderzoek begint met een functionele evaluatie van het huidige CMS. Hierbij worden de bestaande functionaliteiten onder de loep genomen om inzicht in het systeem te krijgen. Vervolgens wordt vastgelegd aan welke criteria een nieuw CMS moet voldoen, zoals schaalbaarheid, onderhoudbaarheid, kosten, en ondersteuning voor moderne ontwikkelpraktijken. Parallel aan deze evaluatie wordt marktonderzoek verricht naar beschikbare commerciële en open-source CMS-oplossingen die aan de gedefinieerde criteria voldoen. 
 
-In deze fase worden ook de specificaties en functionaliteiten voor een prototypische webapplicatie, die de kernfunctionaliteiten van het huidige CMS bevat, worden vastgesteld.
+In deze fase worden ook de specificaties en functionaliteiten voor een prototype webapplicatie, die de kernfunctionaliteiten van het huidige CMS bevat, vastgesteld.
 
 ### Fase 2: Iteratieve ontwikkelingscyclus
-In de tweede fase wordt een iteratieve ontwikkelingscyclus gevolgd om de haalbaarheid van de modernisering of migratie te testen. Deze fase omvat de volgende stappen:
+In de tweede fase wordt een iteratieve ontwikkelingscyclus gevolgd om te onderzoeken hoe de modernisering en migrate van het CMS kan plaatsvinden. Hier wordt voortgebouwd op de resultaten van Fase 1.
 
+**Deze fase omvat de volgende stappen**
 
 1. **Ontwikkeling**: De webapplicatie wordt ontwikkeld met het huidige CMS, waarbij de ontwikkelings- en testprocessen worden gedocumenteerd.  In vervolgsprints worden dit gerealiseerd met een anders CMS pakket
      
@@ -58,7 +59,7 @@ In de tweede fase wordt een iteratieve ontwikkelingscyclus gevolgd om de haalbaa
      
      
 
-Op basis van de resultaten van deze tests en migratieproeven worden de prestaties, stabiliteit en kosten van de nieuwe oplossing vergeleken met die van het huidige CMS. Er worden concrete aanbevelingen geformuleerd over de vraag of AllesOnline moet investeren in de refactoring van het huidige CMS of moet overstappen naar een nieuw CMS. De bevindingen, aanbevelingen en het voorgestelde actieplan worden gedocumenteerd in een rapport, dat vervolgens aan de belanghebbenden binnen AllesOnline wordt gepresenteerd.
+Op basis van de resultaten van deze tests en migratieproeven worden de prestaties, stabiliteit en kosten van de nieuwe oplossing vergeleken met die van het huidige CMS. Er worden concrete aanbevelingen geformuleerd die AllesOnline inzicht geven in de vraag of zij moeten investeren in de refactoring van het huidige CMS of kunnen overstappen naar een nieuw CMS-pakket. De bevindingen en aanbevelingen worden gedocumenteerd in een rapport, dat vervolgens aan de belanghebbenden binnen AllesOnline wordt gepresenteerd.
 
 ## Planning
 
@@ -84,7 +85,6 @@ Per twee sprints het realiseren van een nieuwe prototype en architectuur. Uitkom
 *  Documentatie en testresultaten.
  * Advies over het CMS-pakket in vergelijking met het huidige systeem.
 ### Sprint 8 (Week 15 t/m 16)
-
 - **Doel:** Samenvoegen van deliverables en formuleren van eindadvies voor stakeholders.
 - **Activiteiten:**
     - Analyse van alle prototypes en testresultaten.
@@ -92,3 +92,44 @@ Per twee sprints het realiseren van een nieuwe prototype en architectuur. Uitkom
 - **Deliverables:**
     - Eindadviesrapport voor stakeholders.
 #### Week 17: Inleveren van portfolio
+
+# Risicomanagement
+Er zijn uiteraard enkele gevallen te bedenken waarin het niet mogelijk is om met het huidig voorgelegde planning door te werken. Hieronder een aantal risico en eventuele oplossingen. 
+
+| Risico                                                             | Beschrijving                                                                                                                                                                                                                                                                                            | impact    | waarschijnlijkheid | mitigatie                                                                                                                                                                    |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Vertragingen in de ontwikkeling**                                | Onvoorziene problemen tijdens de ontwikkeling van de prototypes kunnen leiden tot vertragingen.                                                                                                                                                                                                         | Hoog      | Gemiddeld          | Gebruik van Agile methodologie om flexibel om te gaan met veranderingen en vertragingen.                                                                                     |
+| **Onvoldoende acceptatie van de nieuwe oplossing door gebruikers** | Eindgebruikers kunnen weerstand bieden tegen veranderingen of problemen ondervinden met de nieuwe CMS-oplossing.                                                                                                                                                                                        | Gemiddeld | Gemiddeld          | Betrekken van eindgebruikers in het test- en feedbackproces om hun behoeften en zorgen te begrijpen.                                                                         |
+| **Technische onverenigbaarheid **                                  | Technische incompatibiliteiten tussen het huidige CMS en de nieuwe oplossingen kunnen problemen veroorzaken.                                                                                                                                                                                            | Gemiddeld | Laag               | Voorafgaand onderzoek en evaluatie van de technische specificaties van nieuwe CMS-oplossingen.                                                                               |
+| **Onvoldoende Technische Diepgang voor Eindexamen**                | Het project kan mogelijk niet voldoen aan de vereiste technische diepgang die nodig is voor een succesvol eindexamen. Dit kan zich uiten in onvoldoende complexe technische oplossingen, beperkte innovatie, of een gebrek aan technische details die vereist zijn om een goede beoordeling te krijgen. | Hoog      | Gemiddeld          | Identificeren van gebieden in het project waar extra technische diepgang kan worden toevoegd, zoals complexere architectuur, diepgaande analyse, of innovatieve oplossingen. |
+
+
+# Persoonlijke leerdoelen
+Tijdens dit project heb ik ook persoonlijke leerdoelen waarop ik me wil richten om mijn professionele vaardigheden verder te ontwikkelen. Hieronder worden de doelen beschreven die ik heb opgesteld in mijn Graduation Proposal.
+
+### Tijdsmanagement en Prioritering
+Uit eerdere projectfeedback blijkt dat mijn vaardigheden op het gebied van tijdmanagement en prioritering verbeterd kunnen worden. Dit heeft impact op het halen van deadlines en het effectiever maken van projectplanningen. Om dit te verbeteren, zal ik de volgende strategieën toepassen:
+
+- **Opdelen van Taken**: Grote taken splitsen in kleinere, beheersbare onderdelen om overzicht en controle te behouden.
+- **Gebruik van Productiviteitstools**: Tools inzetten om voortgang en deadlines bij te houden.
+- **Reserveren van Gefocuste Werkuren**: Specifieke tijdsblokken inplannen voor geconcentreerd werk zonder onderbrekingen.
+
+Met verbeterd tijdmanagement streef ik naar tijdige voltooiing van opdrachten en het minimaliseren van projectvertragingen.
+
+### Aanpassingsvermogen en Veerkracht
+Om zowel persoonlijke als professionele uitdagingen effectiever aan te pakken, wil ik mijn aanpassingsvermogen en veerkracht verbeteren. Dit omvat:
+
+- **Cultiveren van een Positieve Mindset**: Proactief leren van fouten en feedback, en veerkrachtig omgaan met tegenslagen.
+- **Uitdagingen Aangaan**: Activiteiten ondernemen die mijn comfortzone uitdagen en me helpen om flexibeler te reageren op veranderingen.
+- **Zoeken naar Begeleiding**: Regelmatig advies en ondersteuning zoeken van mentoren of counselors wanneer ik moeilijkheden ondervind.
+
+Het versterken van deze vaardigheden zal me helpen om succesvoller te navigeren door uitdagingen en onzekerheden in zowel persoonlijke als professionele contexten.
+
+### Communicatieve Vaardigheden
+Ik wil mijn communicatieve vaardigheden verbeteren om effectiever te communiceren met teamleden, klanten en andere belanghebbenden. Dit omvat:
+
+- **Heldere Boodschappen**: Werken aan duidelijke en beknopte communicatie, zowel verbaal als schriftelijk.
+- **Actief Luisteren**: Meer aandacht besteden aan de behoeften en feedback van anderen om betere samenwerking te bevorderen.
+- **Verbeteren van Non-Verbale Communicatie**: Bewustzijn vergroten van lichaamstaal en andere non-verbale signalen om de communicatie te versterken.
+
+Door deze vaardigheden te verbeteren, streef ik naar betere samenwerkingsverbanden, effectievere conflictoplossing en algehele verbetering van de communicatie binnen projecten.
