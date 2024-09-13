@@ -1,5 +1,5 @@
 # Revitalising Content Management
 
 ## Projectmanagement
-* ### [[Projectplan]]
+* ### [Projectplan](Projectmanagement/Projectplan.md)
 * ### [[Logboek]]
