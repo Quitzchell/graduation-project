@@ -2,4 +2,5 @@
 
 ## Projectmanagement
 * ### [Projectplan](Projectmanagement/Projectplan.md)
-* ### [[Logboek]]
+* ### [Logboek](Projectmanagement.Logboek)
+
