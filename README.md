@@ -1,8 +1,8 @@
 # Revitalising Content Management
 
 ## Projectmanagement
-* ### [Projectplan](Projectmanagement/projectplan.md)
-* ### [Logboek](Projectmanagement/logboek.md)
+* ### [Projectplan](Projectplan.md)
+* ### [Logboek](Logboek.md)
 
 ## Analyse
 * ### [Onderzoek naar het Huidige CMS](Onderzoek/onderzoek-naar-het-huidige-cms.md)
