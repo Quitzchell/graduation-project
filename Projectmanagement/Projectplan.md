@@ -74,7 +74,7 @@ Op basis van de resultaten van deze tests en migratieproeven worden de prestatie
 	- Documentatie huidige CMS.
 	- Prototype met huidige CMS.
 ### Sprint 2 t/m 7 (Week 5 t/m 14)
-Per twee sprints het realiseren van een nieuwe prototype en architectuur. Uitkomst is om aan het eind van het project meerdere prototypen te hebben waar AllesOnline aan kan zien welke opties beschikbaar zijn en wat de voor en nadelen van deze opties zijn.
+Per twee sprints het realiseren van een nieuw prototype en architectuur. Uitkomst is om aan het eind van het project meerdere prototypen te hebben waar AllesOnline aan kan zien welke opties beschikbaar zijn en wat de voor en nadelen van deze opties zijn.
 #### Activiteiten voor iteratieve sprints
 1. Analyse van het CMS-pakket.
 2. Ontwikkeling van prototype.
@@ -96,40 +96,60 @@ Per twee sprints het realiseren van een nieuwe prototype en architectuur. Uitkom
 # Risicomanagement
 Er zijn uiteraard enkele gevallen te bedenken waarin het niet mogelijk is om met het huidig voorgelegde planning door te werken. Hieronder een aantal risico en eventuele oplossingen. 
 
-| Risico                                                             | Beschrijving                                                                                                                                                                                                                                                                                            | impact    | waarschijnlijkheid | mitigatie                                                                                                                                                                    |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Vertragingen in de ontwikkeling**                                | Onvoorziene problemen tijdens de ontwikkeling van de prototypes kunnen leiden tot vertragingen.                                                                                                                                                                                                         | Hoog      | Gemiddeld          | Gebruik van Agile methodologie om flexibel om te gaan met veranderingen en vertragingen.                                                                                     |
-| **Onvoldoende acceptatie van de nieuwe oplossing door gebruikers** | Eindgebruikers kunnen weerstand bieden tegen veranderingen of problemen ondervinden met de nieuwe CMS-oplossing.                                                                                                                                                                                        | Gemiddeld | Gemiddeld          | Betrekken van eindgebruikers in het test- en feedbackproces om hun behoeften en zorgen te begrijpen.                                                                         |
-| **Technische onverenigbaarheid **                                  | Technische incompatibiliteiten tussen het huidige CMS en de nieuwe oplossingen kunnen problemen veroorzaken.                                                                                                                                                                                            | Gemiddeld | Laag               | Voorafgaand onderzoek en evaluatie van de technische specificaties van nieuwe CMS-oplossingen.                                                                               |
-| **Onvoldoende Technische Diepgang voor Eindexamen**                | Het project kan mogelijk niet voldoen aan de vereiste technische diepgang die nodig is voor een succesvol eindexamen. Dit kan zich uiten in onvoldoende complexe technische oplossingen, beperkte innovatie, of een gebrek aan technische details die vereist zijn om een goede beoordeling te krijgen. | Hoog      | Gemiddeld          | Identificeren van gebieden in het project waar extra technische diepgang kan worden toevoegd, zoals complexere architectuur, diepgaande analyse, of innovatieve oplossingen. |
-
-
+1. **Risico**: Vertragingen in de ontwikkeling
+	- **Beschrijving**: Onvoorziene problemen tijdens de ontwikkeling van de prototypes kunnen leiden tot vertragingen.
+	- **Impact**: Hoog
+	- **Waarschijnlijkheid**: Gemiddeld
+	- **Mitigatie**: Gebruik van Agile methodologie om flexibel om te gaan met veranderingen en vertragingen.   
+     
+     
+2. **Risico**: Onvoldoende acceptatie van de nieuwe oplossing door gebruikers
+	- **Beschrijving**: Eindgebruikers kunnen weerstand bieden tegen veranderingen of problemen ondervinden met de nieuwe CMS-oplossing.
+	- **Impact**: Gemiddeld
+	- **Waarschijnlijkheid**: Gemiddeld
+	- **Mitigatie**: Betrekken van eindgebruikers in het test- en feedbackproces om hun behoeften en zorgen te begrijpen.
+    
+    
+3. **Risico**: Technische onverenigbaarheid
+	- **Beschrijving**: Technische incompatibiliteiten tussen het huidige CMS en de nieuwe oplossingen kunnen problemen veroorzaken.
+	- **Impact**: Gemiddeld
+	- **Waarschijnlijkheid**: Laag
+	- **Mitigatie**: Voorafgaand onderzoek en evaluatie van de technische specificaties van nieuwe CMS-oplossingen.
+    
+    
+1. **Risico**: Onvoldoende Technische Diepgang voor Eindexamen
+	- **Beschrijving**: Het project kan mogelijk niet voldoen aan de vereiste technische diepgang die nodig is voor een succesvol eindexamen. Dit kan zich uiten in onvoldoende complexe technische oplossingen, beperkte innovatie, of een gebrek aan technische details die vereist zijn om een goede beoordeling te krijgen.
+	- **Impact**: Hoog
+	- **Waarschijnlijkheid**: Gemiddeld
+	- **Mitigatie**: Identificeren van gebieden in het project waar extra technische diepgang kan worden toegevoegd, zoals complexere architectuur, diepgaande analyse, of innovatieve oplossingen.
+    
+    
 # Persoonlijke leerdoelen
 Tijdens dit project heb ik ook persoonlijke leerdoelen waarop ik me wil richten om mijn professionele vaardigheden verder te ontwikkelen. Hieronder worden de doelen beschreven die ik heb opgesteld in mijn Graduation Proposal.
 
 ### Tijdsmanagement en Prioritering
 Uit eerdere projectfeedback blijkt dat mijn vaardigheden op het gebied van tijdmanagement en prioritering verbeterd kunnen worden. Dit heeft impact op het halen van deadlines en het effectiever maken van projectplanningen. Om dit te verbeteren, zal ik de volgende strategieën toepassen:
 
-- **Opdelen van Taken**: Grote taken splitsen in kleinere, beheersbare onderdelen om overzicht en controle te behouden.
-- **Gebruik van Productiviteitstools**: Tools inzetten om voortgang en deadlines bij te houden.
-- **Reserveren van Gefocuste Werkuren**: Specifieke tijdsblokken inplannen voor geconcentreerd werk zonder onderbrekingen.
+- **Opdelen van taken**: Grote taken splitsen in kleinere, beheersbare onderdelen om overzicht en controle te behouden.
+- **Gebruik van productiviteitstools**: Tools inzetten om voortgang en deadlines bij te houden.
+- **Reserveren van gefocuste werkuren**: Specifieke tijdsblokken inplannen voor geconcentreerd werk zonder onderbrekingen.
 
-Met verbeterd tijdmanagement streef ik naar tijdige voltooiing van opdrachten en het minimaliseren van projectvertragingen.
+Met verbeterd tijdmanagement streef ik naar tijdige voltooiing van opdrachten en het minimaliseren van project vertragingen.
 
 ### Aanpassingsvermogen en Veerkracht
 Om zowel persoonlijke als professionele uitdagingen effectiever aan te pakken, wil ik mijn aanpassingsvermogen en veerkracht verbeteren. Dit omvat:
 
-- **Cultiveren van een Positieve Mindset**: Proactief leren van fouten en feedback, en veerkrachtig omgaan met tegenslagen.
-- **Uitdagingen Aangaan**: Activiteiten ondernemen die mijn comfortzone uitdagen en me helpen om flexibeler te reageren op veranderingen.
-- **Zoeken naar Begeleiding**: Regelmatig advies en ondersteuning zoeken van mentoren of counselors wanneer ik moeilijkheden ondervind.
+- **Cultiveren van een positieve mindset**: Proactief leren van fouten en feedback, en veerkrachtig omgaan met tegenslagen.
+- **Uitdagingen aangaan**: Activiteiten ondernemen die mijn comfort zone uitdagen en me helpen om flexibeler te reageren op veranderingen.
+- **Zoeken naar begeleiding**: Regelmatig advies en ondersteuning zoeken van mentoren of counselors wanneer ik moeilijkheden ervaar.
 
 Het versterken van deze vaardigheden zal me helpen om succesvoller te navigeren door uitdagingen en onzekerheden in zowel persoonlijke als professionele contexten.
 
 ### Communicatieve Vaardigheden
 Ik wil mijn communicatieve vaardigheden verbeteren om effectiever te communiceren met teamleden, klanten en andere belanghebbenden. Dit omvat:
 
-- **Heldere Boodschappen**: Werken aan duidelijke en beknopte communicatie, zowel verbaal als schriftelijk.
-- **Actief Luisteren**: Meer aandacht besteden aan de behoeften en feedback van anderen om betere samenwerking te bevorderen.
-- **Verbeteren van Non-Verbale Communicatie**: Bewustzijn vergroten van lichaamstaal en andere non-verbale signalen om de communicatie te versterken.
+- **Heldere boodschappen**: Werken aan duidelijke en beknopte communicatie, zowel verbaal als schriftelijk.
+- **Actief luisteren**: Meer aandacht besteden aan de behoeften en feedback van anderen om betere samenwerking te bevorderen.
+- **Verbeteren van non-verbale communicatie**: Bewustzijn vergroten van lichaamstaal en andere non-verbale signalen om de communicatie te versterken.
 
 Door deze vaardigheden te verbeteren, streef ik naar betere samenwerkingsverbanden, effectievere conflictoplossing en algehele verbetering van de communicatie binnen projecten.
