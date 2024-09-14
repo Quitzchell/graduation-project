@@ -32,15 +32,15 @@ Binnen templates is het mogelijk om naar andere samenstellingen van **FormFields
 ### FormFields
 De **FormFields**-module en de bijbehorende view zijn verantwoordelijk voor het genereren van invoervelden waarmee eindgebruikers content kunnen toevoegen of bewerken binnen het CMS. Deze module biedt een interface waarmee verschillende soorten gegevens kunnen worden ingevoerd, zoals tekst, afbeeldingen, en andere contenttypen. De velden worden op de pagina weergegeven via een gestandaardiseerde **blade**-template die de invoeropties overzichtelijk maakt en gebruiksvriendelijke interactie mogelijk maakt.
 
-De weergave van de velden is afhankelijk van de configuratie van de specifieke template waarop ze worden toegepast. Elk formulier kan worden samengesteld uit verschillende **FormFields**, die flexibel ingezet worden om aan de specifieke vereisten van de pagina te voldoen.
+De weergave van de FormFields is afhankelijk van de configuratie van de specifieke template waarop ze worden toegepast. Elk formulier kan worden samengesteld uit verschillende FormFields, die flexibel ingezet worden om aan de specifieke vereisten van de pagina te voldoen.
 ## Beheren van Objecten
 Met het CMS kun je ook objecten beheren. Dit omvat verschillende modellen die binnen een applicatie worden gebruikt. Bijvoorbeeld, in een webapplicatie voor een kookwebsite kunnen dit diverse recepten zijn. In een meer abstracte context kan het bijvoorbeeld gaan om transacties binnen een financiële applicatie.
-
 ### ObjectManagerController
-Om de objecten te beheren, is er de ObjectManagerController, een controller die de Laravel controller extend. Het biedt mogelijkheden zoals het bewerken en verwijderen van objecten, het beheren van relaties tussen modellen, en het afhandelen van permissies en autorisatie. De controller maakt gebruik van middleware voor authenticatie en taalbeheer en bevat methoden voor het dynamisch ophalen van modellen, het verwerken van relaties en het uitvoeren van acties zoals sorteren, zoeken en ordenen van gegevens.
+De ObjectManagerController is verantwoordelijk voor het beheren van objecten. Deze controller extend de Laravel controller. Het biedt mogelijkheden zoals het bewerken en verwijderen van objecten, het beheren van relaties tussen modellen, en het afhandelen van permissies en autorisatie. De controller maakt gebruik van middleware voor authenticatie en taalbeheer en bevat methoden voor het dynamisch ophalen van modellen, het verwerken van relaties en het uitvoeren van acties zoals sorteren, zoeken en ordenen van gegevens. Eloquent maakt het mogelijk om relaties tussen modellen eenvoudig te definiëren en te beheren.
+### Eloquent models
+In het CMS worden alle objecten vertegenwoordigd door **Eloquent**-modellen. Eloquent is een krachtige objectgeoriënteerde tool die het werken met databasegegevens vereenvoudigt. Elk model komt overeen met een tabel in de database, waarbij elk record in die tabel de gegevens van een specifiek object bevat. Met Eloquent kun je eenvoudig gegevens ophalen, bijwerken, verwijderen en relaties tussen verschillende tabellen beheren.
 
-#### Eloquent models
+Door Eloquent te gebruiken, kan het CMS op een flexibele manier omgaan met de objecten binnen een webapplicatie.
+### Templates
 
-#### Templates
-
-#### FormFields
+### FormFields
