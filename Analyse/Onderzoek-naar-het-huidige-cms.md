@@ -5,11 +5,11 @@ In februari 2015 begon AllesOnline met de ontwikkeling van een eigen Content Man
 ## Doel van het Onderzoek
 Het doel van dit onderzoek is om een grondige evaluatie van het bestaande CMS te geven, de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem, en de noodzaak voor mogelijke modernisering of vervangingen te analyseren. 
 
-## Opbouw
-### Beheren van Content
-Vanuit het CMS is het mogelijk om content van de website te beheren. Om dit mogelijk te maken zijn er verschillende modules en componenten in het CMS dat samenwerken.
-#### ContentManagerController
-De ContentManagerController beheert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken verwijderen en kopiëren van pagina's. De belangrijkste onderdelen zijn: 
+
+## Beheren van Content
+Het CMS biedt de mogelijkheid om de content van de website te beheren. Dit wordt gerealiseerd door verschillende modules en componenten die in het CMS samenwerken.
+### ContentManagerController
+De **ContentManagerController** beheert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's. De belangrijkste onderdelen zijn: 
 1. **Contentbeheer**: 
 	* **Toevoegen/Bewerken**: Pagina's worden toegevoegd via `getAdd` en `postAdd`, en bewerkt via `getEdit` en `postEdit`. Na elke actie worden wijzigingen opgelsagen en events zoals `PageWasUpdated` getriggerd.
 	* **Verwijderen**: `postDelete` verwijderd een pagina
@@ -19,24 +19,24 @@ De ContentManagerController beheert de content binnen het CMS en biedt functiona
 	* **Templates:** Verkrijgt beschikbare templates voor een pagina.
 	* **URL-generatie**: Biedt methodes voor het genereren van URL's voor content.
 4. **Events en Models:** Werkt samen met modellen zoals `Page` en `ManagedContent` en gebruikt events zoals `PageWasUpdated` voor systeemreacties op wijzigingen.
-#### ContentManagerModule
-De **ContentManagerModule** en bijhorende view zijn verantwoordelijk voor het tonen en beheren van hiërarchische georganiseerde pagina in het CMS. Deze module maakt het mogelijk om pagina's aan te maken, bewerken, verwijderen en te ordenen. De weergave van de module wordt gerealiseerd door een **blade**-template, waarin de pagina-items en hun hiërarchie (zoals paginagroepen) worden weergegeven in een gemakkelijk te ordenen drag-en-drop interface. Afhankelijk van de rechten van de gebruiker worden er bewerkings- en verwijderingopties getoond, evenals knoppen om pagina's te bekijken of te kopiëren.
-#### Page (model)
-Binnen het CMS wordt het **Page**-model gebruikt om pagina's te representeren. In dit model worden onder andere de naam van de pagina en het toegepaste template opgeslagen. Daarnaast dient het om via gerelateerde tabellen te bepalen welke content aan welke pagina gekoppeld is. Het model is gebaseerd op **Eloquent**, het ORM-systeem van het Laravel-framework.
+### ContentManagerModule
+De **ContentManagerModule** en de bijbehorende view zijn verantwoordelijk voor het tonen en beheren van hiërarchisch georganiseerde pagina's binnen het CMS. Deze module biedt mogelijkheden om pagina's aan te maken, te bewerken, te verwijderen en te ordenen. De weergave van de module wordt verzorgd door een **blade**-template, waarin de pagina-items en hun hiërarchie (zoals paginagroepen) overzichtelijk worden weergegeven in een drag-en-drop-interface. Afhankelijk van de gebruikersrechten worden bewerkings- en verwijderopties getoond, evenals knoppen om pagina's te bekijken of te kopiëren.
+### Page (model)
+Het **Page**-model vormt de kern van de contentstructuur van een website. Dit model vertegenwoordigt individuele pagina's en slaat essentiële informatie op, zoals de naam en het toegepaste template. Het **Page**-model bepaalt ook welke content aan specifieke pagina's is gekoppeld via relaties met andere tabellen, zoals het **ManagedContent**-model.
 
-de **page**-modellen vormen de kern van alle content op een website. Het concept is simpel: zonder pagina's is er geen content.
-#### Templates
-Binnen de code van de webapplicaties kunnen templates aangemaakt worden op basis van .xml-bestanden. Deze templates dienen als sjabloon om te bepalen op welke manier en wat voor informatie eindgebruikers kunnen meegeven die op een pagina weergegeven moet worden. Hoe de informatie ingevoerd kan worden, wordt bepaald aan de hand van **FormFields**.
+Het model maakt gebruik van **Eloquent**, het ORM-systeem van Laravel, om efficiënt met de database te communiceren. Met functies zoals **getTemplatePage** kan het **Page**-model pagina's vinden op basis van hun template, terwijl de functie **createForUri** nieuwe pagina's kan genereren op basis van een URI-structuur. Daarnaast biedt het model ondersteuning voor meertalige namen en dynamische URL-generatie op basis van de contenthiërarchie.
+### Templates
+In de codebase van de webapplicatie kunnen templates worden aangemaakt op basis van .xml-bestanden. Deze templates dienen als sjablonen om te bepalen op welke manier en welke informatie eindgebruikers kunnen toevoegen die op een pagina weergegeven moet worden. Hoe deze informatie ingevoerd kan worden, wordt bepaald door middel van **FormFields**.
 
-Het binnen templates mogelijk om naar andere samenstellingen van **FormFields** te verwijzen. In dit geval heten ze binnen het systeem geen **Template** meer, maar spreken we over **blocks**. Deze structuur vormt de basis voor de verschillende soorten content die gebruikers op een pagina kunnen definiëren en organiseren.
-#### FormFields
-FormFields bepalen hoe de eindgebruikers informatie kunnen meegegeven die op pagina's weergegeven moet worden. Kortom, alle content van de website wordt doormiddel van FormFields ingegeven. 
+Binnen templates is het mogelijk om naar andere samenstellingen van **FormFields** te verwijzen. In dit geval worden ze binnen het systeem geen "templates" meer genoemd, maar "blocks". Deze structuur vormt de basis voor de verschillende soorten content die gebruikers op een pagina kunnen definiëren en organiseren.
+### FormFields
+De **FormFields**-module en de bijbehorende view zijn verantwoordelijk voor het genereren van invoervelden waarmee eindgebruikers content kunnen toevoegen of bewerken binnen het CMS. Deze module biedt een interface waarmee verschillende soorten gegevens kunnen worden ingevoerd, zoals tekst, afbeeldingen, en andere contenttypen. De velden worden op de pagina weergegeven via een gestandaardiseerde **blade**-template die de invoeropties overzichtelijk maakt en gebruiksvriendelijke interactie mogelijk maakt.
 
-De **FormFields** zijn gerealiseerd met zowel componenten voor de gebruikersinterface, als componenten met backend logica die verantwoordelijk zijn voor het persisteren van gegevens.
-### Beheren van Objecten
+De weergave van de velden is afhankelijk van de configuratie van de specifieke template waarop ze worden toegepast. Elk formulier kan worden samengesteld uit verschillende **FormFields**, die flexibel ingezet worden om aan de specifieke vereisten van de pagina te voldoen.
+## Beheren van Objecten
 Met het CMS kun je ook objecten beheren. Dit omvat verschillende modellen die binnen een applicatie worden gebruikt. Bijvoorbeeld, in een webapplicatie voor een kookwebsite kunnen dit diverse recepten zijn. In een meer abstracte context kan het bijvoorbeeld gaan om transacties binnen een financiële applicatie.
 
-#### ObjectManagerController
+### ObjectManagerController
 Om de objecten te beheren, is er de ObjectManagerController, een controller die de Laravel controller extend. Het biedt mogelijkheden zoals het bewerken en verwijderen van objecten, het beheren van relaties tussen modellen, en het afhandelen van permissies en autorisatie. De controller maakt gebruik van middleware voor authenticatie en taalbeheer en bevat methoden voor het dynamisch ophalen van modellen, het verwerken van relaties en het uitvoeren van acties zoals sorteren, zoeken en ordenen van gegevens.
 
 #### Eloquent models
