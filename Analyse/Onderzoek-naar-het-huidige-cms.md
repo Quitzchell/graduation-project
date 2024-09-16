@@ -26,7 +26,7 @@ Het **Page**-model vormt de kern van de contentstructuur van een website. Dit mo
 
 Het model maakt gebruik van **Eloquent**, het ORM-systeem van Laravel, om efficiënt met de database te communiceren. Met functies zoals **getTemplatePage** kan het **Page**-model pagina's vinden op basis van hun template, terwijl de functie **createForUri** nieuwe pagina's kan genereren op basis van een URI-structuur. Daarnaast biedt het model ondersteuning voor meertalige namen en dynamische URL-generatie op basis van de contenthiërarchie.
 ### Templates
-In de codebase van de webapplicatie kunnen templates worden aangemaakt op basis van .xml-bestanden. Deze templates dienen als sjablonen om te bepalen op welke manier en welke informatie eindgebruikers kunnen toevoegen die op een pagina weergegeven moet worden. Hoe deze informatie ingevoerd kan worden, wordt bepaald door middel van **FormFields**.
+In de codebase van de webapplicatie kunnen schema's voor pagina's worden aangemaakt op basis van xml-bestanden. Deze zogenoemde templates dienen als sjablonen om te bepalen op welke manier en welke informatie eindgebruikers kunnen toevoegen die op een pagina weergegeven moet worden. Hoe deze informatie ingevoerd kan worden, wordt bepaald door middel van **FormFields**.
 
 Binnen templates is het mogelijk om naar andere templates te verwijzen. In dit geval worden ze binnen het systeem geen _templates_ meer genoemd, maar _blocks_. Deze structuur vormt de basis voor de verschillende soorten content die gebruikers op een pagina kunnen definiëren en organiseren.
 ### FormFields
@@ -41,10 +41,22 @@ De ObjectManagerController is verantwoordelijk voor het beheren van objecten. De
 Voor de representatie van de objecten in het CMS wordt gebruikgemaakt van **Eloquent**-modellen. Eloquent is een krachtige objectgeoriënteerde tool die het werken met databasegegevens vereenvoudigt. Elk model komt overeen met een tabel in de database, waarbij elk record in die tabel de gegevens van een specifiek object bevat. Met Eloquent kun je eenvoudig gegevens ophalen, bijwerken, verwijderen en relaties tussen verschillende tabellen beheren.
 
 Door Eloquent te gebruiken, kan het CMS op een flexibele manier omgaan met de objecten binnen een webapplicatie.
-### Templates
-In de codebase van de webapplicaties kunnen op basis van .xml-bestanden templates voor objecten worden aangemaakt. Deze templates dienen als blauwdruk voor de weergave en het beheer van objecten in het CMS. Hieronder vallen weergaven voor het aanmaken, bewerken van objecten en het weergeven van een overzicht hiervan. Voor het aanmaken en bewerken van objecten worden, net als bij content-templates, **FormFields** gebruikt. 
+### CMS modellen
+In de codebase van de webapplicaties kunnen op basis xml-bestanden ook schema's voor CMS modellen voor objecten worden aangemaakt. Deze schema's dienen als sjabloon voor de weergave en het beheer van objecten in het CMS. Hieronder vallen weergaven voor het aanmaken, bewerken van objecten en het weergeven van een overzicht hiervan. Voor het aanmaken en bewerken van objecten worden, net als bij content-templates, **FormFields** gebruikt. 
 
 In de templates kan ook worden vastgelegd hoe relaties tussen objecten beheerd moeten worden. Denk hierbij aan het toevoegen, bewerken of loskoppelen van gerelateerde objecten vanuit een ander object.
 
 ### FormFields
 De **FormField**-modules voor objecten biedt een interface voor het invoeren en beheren van gegevens binnen de object templates. Deze modules laten gebruikers toe om verschillende gegevensvelden toe te voegen aan objecten, vergelijkbaar met hoe het werkt voor pagina's. Elk veld wordt gepresenteerd op een gestandaardiseerde **blade**-template, die de invoeropties overzichtelijk maakt en de interactie vergemakkelijkt. De configuratie van de FormFields in object templates bepaalt hoe gegevens moeten worden ingevoerd en weergegeven, en kan variëren afhankelijk van de specifieke vereisten van de object template.
+
+## Evaluatie van het CMS
+Hoewel het door AllesOnline ontwikkelde CMS functioneert en totzover een robuuste technische basis biedt voor het ontwikkelen van webapplicaties, is het belangrijk om een kritische evaluatie uit te voeren om de effectiviteit en efficiëntie ervan te beoordelen. Dit onderdeel richt zich op het analyseren van de opbouw en prestaties van het huidige CMS, met als doel om eventuele tekortkomingen en verbeterpunten te identificeren.
+
+In deze evaluatie zullen we de architectuur en werking van het CMS onder de loep nemen, met speciale aandacht voor de ontwikkelaar-vriendelijkheid, prestaties, flexibiliteit, en onderhoudbaarheid. We zullen onderzoeken hoe het zich verhoudt tot de behoeften en verwachtingen van ontwikkelaars. Daarnaast wordt er gekeken naar mogelijke beperkingen en beveiligingsaspecten die van invloed kunnen zijn op de algehele functionaliteit en stabiliteit van het CMS.
+
+### Schema's op basis van XML
+Dat schema's voor pagina's, contentblokken en objecten binnen het CMS worden gedefinieerd met XML-bestanden, zou in principe geen problemen moeten veroorzaken. XML heeft immers een duidelijke syntax, en de oplossing voor het opstellen van de schema's binnen het CMS is helder en goed te volgen. Echter, zijn er enkele moeilijkheden met de huidige implementatie van het opbouwen van pagina's, contentblokken en objecten binnen het CMS.
+
+#### Gebrek aan documentatie
+Alleerst het gebrek aan documentatie
+
