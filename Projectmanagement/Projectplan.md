@@ -18,10 +18,10 @@ Het ontbreken van een sterk fundament in het CMS beperkt de schaalbaarheid en fl
 
 Echter, gezien de omvang van zo’n refactor is het wellicht verstandiger om alternatieve systemen te overwegen die duurzamer en kostenefficiënter zijn. Deze systemen zouden al voldoen aan moderne ontwikkelpraktijken en betere ondersteuning bieden voor toekomstige innovaties. Daarom zal het onderzoek zich richten op de haalbaarheid en voordelen van migreren naar een bestaand CMS-pakket, dat al voldoet aan moderne ontwikkel standaarden. Dit kan op lange termijn een duurzamere en kosten efficiëntere oplossing bieden dan verdere investeringen in het huidige systeem.
 
-### Onderzoeksvraag
+## Onderzoeksvraag
  Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaalbaarheid, onderhoudbaarheid en toekomstbestendigheid van haar webapplicaties te verbeteren?
 
-#### Deelvragen
+### Deelvragen
 
 1. **Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS van AllesOnline?**
     
