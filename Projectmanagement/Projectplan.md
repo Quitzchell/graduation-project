@@ -1,5 +1,5 @@
 ## Revitalising Content Management
-***Versie 2***
+***Versie 2.5***
 
 ## AllesOnline
 AllesOnline is een full-service bureau dat zich richt op zowel online als offline communicatie. Het bedrijf bedient een diverse groep stakeholders, van grote internationale ondernemingen tot regionale servicegerichte instanties. De diensten die ze aanbieden variëren van productiegerelateerde werkzaamheden, zoals DTO en vormgeving, tot het ontwerpen en realiseren van full-stack webapplicaties.
@@ -16,7 +16,23 @@ Het is dus duidelijk dat het CMS, het fundament van de door AllesOnline aangebod
 
 Het ontbreken van een sterk fundament in het CMS beperkt de schaalbaarheid en flexibiliteit, wat innovaties moeilijker maakt zonder concessies te doen aan de stabiliteit en betrouwbaarheid van het systeem. De verouderde codebase vormt een structureel probleem dat niet eenvoudig kan worden opgelost met tijdelijke aanpassingen. Een grondige refactor van het CMS, in combinatie met geautomatiseerde tests, zou de kwaliteit en het onderhoud verbeteren, en een solide basis leggen voor toekomstige innovaties. Dit zou het CMS in lijn brengen met moderne ontwikkelpraktijken en AllesOnline in staat stellen huidige en toekomstige uitdagingen met vertrouwen aan te gaan.
 
-Echter, gezien de omvang van zo’n refactor is het wellicht verstandiger om alternatieve systemen te overwegen die duurzamer en kostenefficiënter zijn. Deze systemen zouden al voldoen aan moderne ontwikkelpraktijken en betere ondersteuning bieden voor toekomstige innovaties. Daarom is het belangrijk om te bepalen of verdere investeringen in het huidige systeem gerechtvaardigd zijn, of dat het slimmer is om te kijken naar duurzame alternatieven van derden.
+Echter, gezien de omvang van zo’n refactor is het wellicht verstandiger om alternatieve systemen te overwegen die duurzamer en kostenefficiënter zijn. Deze systemen zouden al voldoen aan moderne ontwikkelpraktijken en betere ondersteuning bieden voor toekomstige innovaties. Daarom zal het onderzoek zich richten op de haalbaarheid en voordelen van migreren naar een bestaand CMS-pakket, dat al voldoet aan moderne ontwikkel standaarden. Dit kan op lange termijn een duurzamere en kosten efficiëntere oplossing bieden dan verdere investeringen in het huidige systeem.
+
+### Onderzoeksvraag
+ Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaalbaarheid, onderhoudbaarheid en toekomstbestendigheid van haar webapplicaties te verbeteren?
+
+#### Deelvragen
+
+1. **Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS van AllesOnline?**
+    
+2. **Aan welke criteria moet een gemoderniseerd CMS voldoen om de huidige en toekomstige behoeften van AllesOnline te ondersteunen?**
+    
+3. **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
+    
+4. **Hoe verloopt de migratie van de bestaande webapplicaties naar een nieuw CMS, en welke technische uitdagingen komen hierbij kijken?**
+    
+5. **Welke prestatieverschillen en kosten zijn er tussen het huidige CMS en een nieuw systeem?**
+    
 
 ## Aanpak voor modernisering van het CMS
 
@@ -26,10 +42,10 @@ Om tot een goed afgewogen advies te komen, ben ik van plan een eenvoudige webapp
 
 Om te controleren of de migratie correct verloopt, zal ik tests uitvoeren om te verifiëren of het CMS nog steeds het gewenste resultaat levert. Dit omvat het testen van de rendering van webpagina's om te waarborgen dat alle bestaande inhoud behouden blijft. Ook zal ik aandacht besteden aan de integriteit van de data en de werking van de bestaande functionaliteiten, om te garanderen dat de overgang naar de nieuwe architectuur soepel verloopt zonder verlies van functionaliteit of gegevens.
 
-Door deze aanpak hoop ik niet alleen te bepalen hoe de huidige CMS-architectuur geoptimaliseerd kan worden, maar ook praktische richtlijnen te bieden voor een efficiënte en effectieve migratie of herstructurering.
+Door deze aanpak hoop ik vooral te bepalen of migratie naar een bestaand CMS-pakket een efficiëntere oplossing biedt dan het doorontwikkelen van het huidige CMS, en praktische richtlijnen te formuleren voor een soepele migratie.
 
 ### Fase 1: Onderzoek en initieel advies
-In de eerste fase van het project wordt een analyse uitgevoerd van het bestaande Content Management Systeem (CMS) van AllesOnline. Deze fase richt zich op het vaststellen van de vereisten voor modernisering. Het doel is om een goed onderbouwd advies te formuleren over de beste aanpak: ofwel een grondige refactor van het bestaande CMS of migratie naar een nieuw systeem.
+In de eerste fase van het project wordt een analyse uitgevoerd van het bestaande Content Management Systeem (CMS) van AllesOnline. Deze fase richt zich op het vaststellen van de vereisten voor modernisering. Het doel is om een goed onderbouwd advies te formuleren over de beste aanpak, waarbij de nadruk ligt op de mogelijkheden van migratie naar een bestaand CMS-pakket dat voldoet aan moderne standaarden en een duurzamere oplossing biedt dan het huidige CMS.
 
 Het onderzoek begint met een functionele evaluatie van het huidige CMS. Hierbij worden de bestaande functionaliteiten onder de loep genomen om inzicht in het systeem te krijgen. Vervolgens wordt vastgelegd aan welke criteria een nieuw CMS moet voldoen, zoals schaalbaarheid, onderhoudbaarheid, kosten, en ondersteuning voor moderne ontwikkelpraktijken. Parallel aan deze evaluatie wordt marktonderzoek verricht naar beschikbare commerciële en open-source CMS-oplossingen die aan de gedefinieerde criteria voldoen. 
 
@@ -40,7 +56,7 @@ In de tweede fase wordt een iteratieve ontwikkelingscyclus gevolgd om te onderzo
 
 **Deze fase omvat de volgende stappen**
 
-1. **Ontwikkeling**: De webapplicatie wordt ontwikkeld met het huidige CMS, waarbij de ontwikkelings- en testprocessen worden gedocumenteerd.  In vervolgsprints worden dit gerealiseerd met een anders CMS pakket
+1. **Ontwikkeling**: De webapplicatie wordt ontwikkeld met het huidige CMS, waarbij de ontwikkelings- en testprocessen worden gedocumenteerd. De nadruk van de vervolgsprints ligt op het ontwikkelen van een webapplicatie met bestaande CMS-oplossingen, waarbij wordt onderzocht of deze systemen de vereiste functionaliteiten en flexibiliteit bieden zonder de noodzaak voor uitgebreide aanpassingen.
      
      
 2. **Migratieplan ontwikkelen**: Een gedetailleerd migratieplan wordt opgesteld op basis van proefimplementaties van verschillende CMS-oplossingen. Dit plan bevat stappen voor de migratie van gegevens, integratie en testen.
