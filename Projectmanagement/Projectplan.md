@@ -16,6 +16,7 @@
 * [Planning](#planning)
 * [Risicomanagement](#risicomanagement)
 * [Persoonlijke leerdoelen](#persoonlijke-leerdoelen)
+
 ## AllesOnline
 AllesOnline is een full-service bureau dat zich richt op zowel online als offline communicatie. Het bedrijf bedient een diverse groep stakeholders, van grote internationale ondernemingen tot regionale servicegerichte instanties. De diensten die ze aanbieden variëren van productiegerelateerde werkzaamheden, zoals DTO en vormgeving, tot het ontwerpen en realiseren van full-stack webapplicaties.
 
