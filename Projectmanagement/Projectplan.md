@@ -85,7 +85,7 @@ Op basis van de resultaten van deze tests en migratieproeven worden de prestatie
 ### Versiebeheer
 Voor dit project wordt gebruikgemaakt van Git als versiebeheersysteem, waarbij elk project zijn eigen Git-historie bijhoudt. Dit zorgt voor een overzichtelijke en gestructureerde aanpak van de ontwikkeling, waarbij de voortgang en wijzigingen eenvoudig te traceren zijn.
 
-### Branchingstrategie
+#### Branchingstrategie
 De volgende hoofdbranches gehanteerd:
 
 - **Master Branch**: Deze branch vertegenwoordigt de meest recente stabiele versie van het project. Wijzigingen in deze branch zijn alleen toegestaan na uitgebreide testen en goedkeuring van nieuwe functies. Dit waarborgt dat de productieve code altijd betrouwbaar is en snel kan worden ingezet.
