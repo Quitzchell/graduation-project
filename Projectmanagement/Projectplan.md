@@ -71,11 +71,11 @@ In de tweede fase wordt een iteratieve ontwikkelingscyclus gevolgd om te onderzo
      
 2. **Migratieplan ontwikkelen**: Een gedetailleerd migratieplan wordt opgesteld op basis van proefimplementaties van verschillende CMS-oplossingen. Dit plan bevat stappen voor de migratie van gegevens, integratie en testen.
      
-3. **Uitvoering van migratieproeven**: Er worden migratieproeven uitgevoerd om te testen hoe goed de nieuwe systemen presteren bij het overzetten van bestaande gegevens en functionaliteiten.
+3. **Uitvoering van migratieproeven**: Er worden migratieproeven uitgevoerd om te testen of de nieuwe systemen werken bij het overzetten van bestaande gegevens en functionaliteiten.
      
 4. **Functionele tests**: Functionele tests worden uitgevoerd om te controleren of de nieuwe of aangepaste CMS-oplossing alle gewenste functionaliteiten ondersteunt en correct functioneert.
      
-5. **Prestatie- en stress tests**: De prestaties en belasting van de webapplicatie worden onder verschillende omstandigheden getest om te waarborgen dat het systeem aan de schaalbaarheidsvereisten voldoet.
+5. **Prestatie- en stress tests**: De prestaties en belasting van de webapplicatie worden onder verschillende omstandigheden getest om te waarborgen dat het systeem aan de vereisten voldoet.
      
 6. **Gebruikerstest**: Eindgebruikers testen de nieuwe of gerefactoreerde CMS-oplossing om de gebruikerservaring te evalueren en eventuele problemen met de gebruiksvriendelijkheid te identificeren.
 
@@ -86,7 +86,7 @@ Op basis van de resultaten van deze tests en migratieproeven worden de prestatie
 Voor dit project wordt gebruikgemaakt van Git als versiebeheersysteem, waarbij elk project zijn eigen Git-historie bijhoudt. Dit zorgt voor een overzichtelijke en gestructureerde aanpak van de ontwikkeling, waarbij de voortgang en wijzigingen eenvoudig te traceren zijn.
 
 #### Branchingstrategie
-De volgende hoofdbranches gehanteerd:
+De volgende hoofdbranches gehanteerd.
 
 - **Master Branch**: Deze branch vertegenwoordigt de meest recente stabiele versie van het project. Wijzigingen in deze branch zijn alleen toegestaan na uitgebreide testen en goedkeuring van nieuwe functies. Dit waarborgt dat de productieve code altijd betrouwbaar is en snel kan worden ingezet.
     
@@ -100,7 +100,7 @@ De volgende hoofdbranches gehanteerd:
 Deze gestructureerde aanpak van versiebeheer zorgt ervoor dat de ontwikkeling efficiënt en georganiseerd verloopt, en dat de kwaliteit van de code gewaarborgd blijft.
 
 ### CI/CD (Continuous Integration/Continuous Deployment)
-Aangezien dit project zich richt op het vergelijken van verschillende CMS-pakketten, vindt er geen daadwerkelijke livegang van het project plaats. Desondanks is er wel het plan om geautomatiseerde CI/CD-pipelines op te zetten voor de development en het opzetten van staging omgevingen. Deze pipelines faciliteren een continue integratie en continue levering van de code, waarbij de codebase automatisch wordt geformatteerd en getest.
+Aangezien dit project zich richt op het vergelijken van verschillende CMS-pakketten, vindt er geen daadwerkelijke livegang van het project plaats. Desondanks is er wel het plan om geautomatiseerde CI/CD-pipelines op te zetten voor de development en het opzetten van stagingomgevingen. Deze pipelines faciliteren een continue integratie en continue levering van de code, waarbij de codebase automatisch wordt geformatteerd en getest.
 
 - **Automatische Testing**: Bij elke nieuwe commit in de development-, master- en staging-branch worden geautomatiseerde tests uitgevoerd. Dit omvat zowel unit tests als integratietests die controleren of de code de gewenste functionaliteit biedt. Dit vermindert het risico op regressies en vergroot de betrouwbaarheid van de software.
     
@@ -129,7 +129,7 @@ Houd er wel rekening mee dat ik gebruikmaak van bestaande CMS-pakketten. Daarom 
     - **Responstijdtests**: Automatische tests meten de snelheid van pagina’s en API-aanroepen, evenals de prestaties van caching en database-query's onder normale omstandigheden.
 
 ## Planning
-#### Sprint 1 (week 3 t/m 4)
+### Sprint 1 (week 3 t/m 4)
 - **Doel:** Eerste analyse en ontwerp, bouwen van prototype webapplicaite met het huidige CMS.
 - **Activiteiten:** 
 	- Functionele analyse huidige CMS.
@@ -157,7 +157,7 @@ Per twee sprints het realiseren van een nieuw prototype en architectuur. Uitkoms
     - Formuleren van een eindadvies op basis van de verzamelde data en feedback.
 - **Deliverables:**
     - Eindadviesrapport voor stakeholders.
-#### Week 17: Inleveren van portfolio
+### Week 17: Inleveren van portfolio
 
 # Risicomanagement
 Er zijn uiteraard enkele gevallen te bedenken waarin het niet mogelijk is om met het huidig voorgelegde planning door te werken. Hieronder een aantal risico en eventuele oplossingen. 
