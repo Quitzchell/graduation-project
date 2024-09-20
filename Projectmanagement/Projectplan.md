@@ -3,18 +3,19 @@
 
 # Inhoudsopgave
 * [AllesOnline](#allesonline)
-* [Content Management Systeem](<#content management systeem>)
-* [Noodzaak voor sterker fundament](<#noodzaak voor sterker fundament>)
+* [Content Management Systeem](#content-management-systeem)
+* [Noodzaak voor sterker fundament](#noodzaak-voor-sterker-fundament)
 * [Onderzoeksvraag](#onderzoeksvraag)
-* [Aanpak voor modernisering van het CMS](<#aanpak voor modernisering van het cms>)
-* [Fase 1: Onderzoek en initieel advies](<#fase 1 onderzoek en initieel advies>)
-* [Fase 2: Iteratieve ontwikkelingscyclus](<#fase 2 iteratieve ontwikkelingscyclus>)
-* [Versiebeheer](<#versiebeheer>)
-* [CI/CD (Continuous Integration/Continuous Deployment)](<#ci/cd (continuous integration/continuous deployment>)
-* [Automatische Tests en Evaluaties](<#automatische tests en evaluaties>)
+* [Aanpak voor modernisering van het CMS](#aanpak-voor-modernisering-van-het-cms)
+* [Fase 1: Onderzoek en initieel advies](#fase-1-onderzoek-en-initieel-advies)
+* [Fase 2: Iteratieve ontwikkelingscyclus](#fase-2-iteratieve-ontwikkelingscyclus)
+* [Technische benadering van het project](#technische-benadering-van-het-project)
+* [Versiebeheer](#versiebeheer)
+* [CI/CD (Continuous Integration/Continuous Deployment)](#cicd-continuous-integrationcontinuous-deployment)
+* [Automatische Tests en Evaluaties](#automatische-tests-en-evaluaties)
 * [Planning](#planning)
 * [Risicomanagement](#risicomanagement)
-* [Persoonlijke leerdoelen](<#persoonlijke leerdoelen>)
+* [Persoonlijke leerdoelen](#persoonlijke-leerdoelen)
 ## AllesOnline
 AllesOnline is een full-service bureau dat zich richt op zowel online als offline communicatie. Het bedrijf bedient een diverse groep stakeholders, van grote internationale ondernemingen tot regionale servicegerichte instanties. De diensten die ze aanbieden variëren van productiegerelateerde werkzaamheden, zoals DTO en vormgeving, tot het ontwerpen en realiseren van full-stack webapplicaties.
 
@@ -79,10 +80,11 @@ In de tweede fase wordt een iteratieve ontwikkelingscyclus gevolgd om te onderzo
 
 Op basis van de resultaten van deze tests en migratieproeven worden de prestaties, stabiliteit en kosten van de nieuwe oplossing vergeleken met die van het huidige CMS. Er worden concrete aanbevelingen geformuleerd die AllesOnline inzicht geven in de vraag of zij moeten investeren in de refactoring van het huidige CMS of kunnen overstappen naar een nieuw CMS-pakket. De bevindingen en aanbevelingen worden gedocumenteerd in een rapport, dat vervolgens aan de belanghebbenden binnen AllesOnline wordt gepresenteerd.
 
-## ### Versiebeheer
+## Technische benadering van het project
+### Versiebeheer
 Voor dit project wordt gebruikgemaakt van Git als versiebeheersysteem, waarbij elk project zijn eigen Git-historie bijhoudt. Dit zorgt voor een overzichtelijke en gestructureerde aanpak van de ontwikkeling, waarbij de voortgang en wijzigingen eenvoudig te traceren zijn.
 
-#### Branchingstrategie
+### Branchingstrategie
 De volgende hoofdbranches gehanteerd:
 
 - **Master Branch**: Deze branch vertegenwoordigt de meest recente stabiele versie van het project. Wijzigingen in deze branch zijn alleen toegestaan na uitgebreide testen en goedkeuring van nieuwe functies. Dit waarborgt dat de productieve code altijd betrouwbaar is en snel kan worden ingezet.
