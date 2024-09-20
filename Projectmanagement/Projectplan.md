@@ -159,7 +159,7 @@ Per twee sprints het realiseren van een nieuw prototype en architectuur. Uitkoms
     - Eindadviesrapport voor stakeholders.
 ### Week 17: Inleveren van portfolio
 
-# Risicomanagement
+## Risicomanagement
 Er zijn uiteraard enkele gevallen te bedenken waarin het niet mogelijk is om met het huidig voorgelegde planning door te werken. Hieronder een aantal risico en eventuele oplossingen. 
 
 1. **Risico**: Vertragingen in de ontwikkeling
@@ -187,7 +187,7 @@ Er zijn uiteraard enkele gevallen te bedenken waarin het niet mogelijk is om met
 	- **Mitigatie**: Identificeren van gebieden in het project waar extra technische diepgang kan worden toegevoegd, zoals complexere architectuur, diepgaande analyse, of innovatieve oplossingen.
 	  
 
-# Persoonlijke leerdoelen
+## Persoonlijke leerdoelen
 Tijdens dit project heb ik ook persoonlijke leerdoelen waarop ik me wil richten om mijn professionele vaardigheden verder te ontwikkelen. Hieronder worden de doelen beschreven die ik heb opgesteld in mijn Graduation Proposal.
 ### Tijdsmanagement en Prioritering
 Uit eerdere projectfeedback blijkt dat mijn vaardigheden op het gebied van tijdmanagement en prioritering verbeterd kunnen worden. Dit heeft impact op het halen van deadlines en het effectiever maken van projectplanningen. Om dit te verbeteren, zal ik de volgende strategieën toepassen:
