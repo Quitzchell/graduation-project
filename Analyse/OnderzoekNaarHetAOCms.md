@@ -138,3 +138,11 @@ Een van de meest significante tekortkomingen van de huidige architectuur is dat 
 - **Iteratieve Verbeteringen**:
     - Voer veranderingen iteratief door en evalueer regelmatig de impact van deze wijzigingen op de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van het systeem. Dit zorgt ervoor dat het team kan inspelen op nieuwe inzichten en voortdurend kan verbeteren.
       
+
+## Conclusie
+
+Het is evident dat het huidige AllesOnline CMS potentie heeft voor verbetering en refactoring. Ondanks de huidige tekortkomingen in de architectuur en de documentatie is het zeker mogelijk om de functionaliteiten van het systeem te optimaliseren. Het is echter belangrijk om te begrijpen dat het verbeteren van de codestructuur en het implementeren van de SOLID-principes ook aanzienlijke investeringen in tijd en middelen vereisen.
+
+Het is aan te raden om deze wijzigingen gefaseerd door te voeren. Dit is noodzakelijk omdat er niet alleen geïnvesteerd moet worden in de ontwikkeling van nieuwe modules, maar ook in het opstellen van uitgebreide documentatie, het aanmaken van geautomatiseerde tests en het trainen van ontwikkelaars in het begrijpen van de SOLID-principes.
+
+Hoewel de voordelen van refactoring aantoonbaar zijn, is het ook noodzakelijk dat AllesOnline, mocht het deze weg willen inslaan, zich voorbereidt op een aanzienlijke inspanning van het ontwikkelaarsteam. Het is dus belangrijk om een balans op te maken tussen de benodigde investeringen en de verwachte voordelen wanneer het project is afgerond. De belangrijkste vraag is: hoe belangrijk is het dat AllesOnline een eigen beheert CMS heeft, als het hoogstwaarschijnlijk voor een kleine investering gebruik kan maken van bestaande en goed onderhouden third-party CMS-pakketten?
