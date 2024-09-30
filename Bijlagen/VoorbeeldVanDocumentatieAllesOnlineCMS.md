@@ -12,11 +12,11 @@
 - groupable
 - free_entries
 - hide_label
-- placeholder = "Voeg een tag toe | false"
+- placeholder = "Voeg een tag toe \| false"
 - uri = "api/complete-tags"
 - class = "form-control"
 - readonly = "false"
-- where = "status:!=:1 | status:1"
+- where = "status:!=:1 \| status:1"
 - order_by = "name"
 - show_first = "1,3,2"
 - prefix_by = "parent_id"
