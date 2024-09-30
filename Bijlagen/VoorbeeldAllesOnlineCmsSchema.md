@@ -1,3 +1,5 @@
+# Voorbeeld CMS schema voor een AllesOnline object
+
 ```xml
 <model>
     <configuration>
