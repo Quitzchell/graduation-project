@@ -2,8 +2,8 @@
 
 # Project Raport
 * ### [Voorpagina](ProjectRaport/Voorpagina.md)
-* ### [De Opdracht](ProjectRaport/Opdracht.md)
-* ### [Project Raport](ProjectRaport/ProjectRaport.md)
+* ### [De opdracht](ProjectRaport/Opdracht.md)
+* ### [Projectraport](ProjectRaport/ProjectRaport.md)
 
 # Projectmanagement
 * ### [Projectplan](Projectmanagement/Projectplan.md)
@@ -14,5 +14,5 @@
 * ### [Prototype](Analyse/Prototype.md)
 
 ## Bijlagen
-* #### [Voorbeeld van Schema in AllesOnline CMS](Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
-* #### [Voorbeeld van Documentatie AllesOnline CMS](Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
+* #### [Voorbeeld van schema in AllesOnline CMS](Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
+* #### [Voorbeeld van documentatie AllesOnline CMS](Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
