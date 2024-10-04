@@ -26,5 +26,5 @@
 ### Location
 
 File:
-- [/src/FormFields/FormTags/FormTagsModule.php]
+- /src/FormFields/FormTags/FormTagsModule.php
 

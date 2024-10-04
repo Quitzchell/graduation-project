@@ -60,7 +60,7 @@ Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een solide basis b
 
 ### Gebrekkige Documentatie
 
-Een van de grootste obstakels in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is over de basisfunctionaliteiten, zoals de velden in de XML-schema's, ontbreekt het aan meer gedetailleerde en up-to-date informatie over functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars die niet goed kunnen achterhalen welke parameters voor welke FormModules geschikt zijn. _Een voorbeeld van documentatie vind je in de bijlage: [voorbeeld documentatie AllesOnline CMS](bijlagen/VoorbeeldVanDocumentatieAllesOnlineCms.md)_
+Een van de grootste obstakels in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is over de basisfunctionaliteiten, zoals de velden in de XML-schema's, ontbreekt het aan meer gedetailleerde en up-to-date informatie over functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars die niet goed kunnen achterhalen welke parameters voor welke FormModules geschikt zijn. _Een voorbeeld van documentatie vind je in de bijlage: [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCms.md)_
 
 **Aanbeveling**:
 - Een verbeteringsslag in de documentatie. Inclusief een up-to-date beschrijving van alle beschikbare modules en parameters met voorbeelden van gebruik in verschillende scenario’s voorkomt onduidelijkheid bij ontwikkelaars.
