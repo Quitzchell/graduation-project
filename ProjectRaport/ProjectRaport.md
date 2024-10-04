@@ -4,7 +4,7 @@ In de eerste weken van het project heb ik me gericht op het onderzoek naar het h
 
 Tijdens het onderzoek en het realiseren van het prototype heb ik vanuit een bepaalde invalshoek al antwoorden kunnen formuleren op enkele deelvragen uit mijn projectplan.
 
-##### Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?
+#####  Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?
 * **Beperkte Documentatie:** De documentatie is verouderd, waardoor ontwikkelaars onnodig lang bezig zijn bij het begrijpen van bepaalde functionaliteiten en parameters.
 - **Complexe Codestructuur:** Veel modules hebben te veel verantwoordelijkheden, wat onderhoud en uitbreiding bemoeilijkt.
 - **Sterke Afhankelijkheid:** Modules zijn te afhankelijk van elkaar, waardoor wijzigingen in één module andere modules kunnen beïnvloeden.
@@ -12,7 +12,7 @@ Tijdens het onderzoek en het realiseren van het prototype heb ik vanuit een bepa
 
 ##### Aan welke criteria moet een gemoderniseerd CMS voldoen?
 * **Uitgebreide Documentatie:** Het CMS moet beschikken over actuele documentatie die modules en parameters helder beschrijft.
-- **Modularisatie:** Het systeem moet opgesplitst zijn in kleinere, onafhankelijke modules met specifieke verantwoordelijkheden zodat deze gemakkelijk uitgebreid kan worden als nodig.
+- **Modulariteit:** Het systeem moet opgesplitst zijn in kleinere, onafhankelijke modules met specifieke verantwoordelijkheden zodat deze gemakkelijk uitgebreid kan worden als nodig.
 
 ##### Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?
 * **Prestatieverschillen:** Het gebrek aan modulariteit en documentatie resulteert in hogere onderhoudskosten en meer bugs, wat de prestaties en stabiliteit beïnvloedt.
