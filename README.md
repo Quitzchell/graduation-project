@@ -12,7 +12,7 @@
 # Analyse
 * ### [Onderzoek naar het AllesOnline CMS](Analyse/OnderzoekNaarHetAOCms.md)
 * ### [Prototype](Analyse/Prototype.md)
-* ### [Requirements](analyse/Requirements)
+* ### [Requirements](Analyse/Requirements.md)
 
 ## Bijlagen
 * #### [Voorbeeld van schema in AllesOnline CMS](Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
