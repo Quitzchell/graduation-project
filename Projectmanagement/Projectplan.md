@@ -139,6 +139,7 @@ Houd er wel rekening mee dat ik gebruikmaak van bestaande CMS-pakketten. Daarom 
 	- Initiële advies voortgang CMS.
 	- Documentatie huidige CMS.
 	- Prototype met huidige CMS.
+
 ### Sprint 2 t/m 7 (Week 5 t/m 14)
 Per twee sprints het realiseren van een nieuw prototype en architectuur. Uitkomst is om aan het eind van het project meerdere prototypen te hebben waar AllesOnline aan kan zien welke opties beschikbaar zijn en wat de voor en nadelen van deze opties zijn.
 #### Activiteiten voor iteratieve sprints

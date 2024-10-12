@@ -13,14 +13,17 @@ Om vast te stellen of een CMS-pakket geschikt is voor algemeen gebruik op een Al
 | **Textarea FormField**   | Ondersteuning voor lange tekstvelden (meerdere regels).                                 | Must Have   |
 | **URL FormField**        | Ondersteuning voor URL-invoer met validatie.                                            | Must Have   |
 | **Media-item FormField** | Ondersteuning voor het toevoegen van media (afbeeldingen).                              | Must Have   |
+| **File FormField**       | Ondersteuning voor het toevoegen van bestanden                                          | Must Have   |
 | **Relations module**     | Ondersteuning voor het zichtbaar maken van relaties tussen verschillende objecten.      | Must Have   |
 | **Video FormField**      | Ondersteuning voor het uploaden en beheren van embedded video's binnen het CMS.         | Should Have |
+| **Maps FormField**       | Ondersteuning voor het beheren van een google maps locatie                              | Must have   |
+| **OAuth2 FormField**     | Ondersteuning voor OAuth2                                                               | Should have |
 
 ### Niet-Functionele Vereisten:
 
-| **Vereiste**                | **Beschrijving**                                                                                         |
-| --------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **Gebruiksvriendelijkheid** | Het systeem moet intuïtief en eenvoudig te bedienen zijn, ook voor niet-technische gebruikers.           |
-| **Flexibiliteit**           | Het CMS moet uitbreidbaar zijn met nieuwe velden en modules op basis van toekomstige behoeften.          |
-| **Schaalbaarheid**          | Het CMS moet grote hoeveelheden content en gebruikersverzoeken aankunnen zonder prestatieproblemen.      |
-| **Integraties**             | Ondersteuning voor integraties met externe systemen of API's die nodig zijn voor de AllesOnline-website. |
+| **Vereiste**                | **Beschrijving**                                                                                              |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Gebruiksvriendelijkheid** | Het systeem moet intuïtief en eenvoudig te bedienen zijn, ook voor niet-technische gebruikers.                |
+| **Flexibiliteit**           | Het CMS moet uitbreidbaar zijn met nieuwe velden en modules op basis van toekomstige of specifieke behoeften. |
+| **Schaalbaarheid**          | Het CMS moet grote hoeveelheden content en gebruikersverzoeken aankunnen zonder prestatieproblemen.           |
+| **Integraties**             | Ondersteuning voor integraties met externe systemen of API's die nodig zijn voor de AllesOnline-website.      |

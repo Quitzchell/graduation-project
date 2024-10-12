@@ -1,6 +1,6 @@
 # Onderzoek naar het AllesOnline CMS
 # Inleiding
-In dit document wordt de analyse van het door AllesOnline ontwikkelde CMS-systeem gepresenteerd. Het onderzoek richt zich op het identificeren van knelpunten binnen de huidige structuur en functionaliteit van het CMS. Het doel van dit onderzoek is om een evaluatie van het bestaande CMS te geven, de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem, en de noodzaak voor mogelijke modernisering of vervangingen te analyseren. 
+In dit document wordt de analyse van het door AllesOnline ontwikkelde CMS-systeem gepresenteerd. Deze evaluatie is uitgevoerd als een **Available Product Analysis**, gericht op het identificeren van knelpunten binnen de huidige structuur en functionaliteit van het CMS. Het doel van dit onderzoek is niet alleen om een evaluatie van het bestaande CMS te geven, maar ook om de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem. Daarnaast dient het als basis voor vergelijking met andere CMS systemen, om te bepalen welke oplossingen het beste aansluiten bij de behoeften van onze developers en klanten.
 
 # Beheren van content
 Het CMS biedt de mogelijkheid om de content van de website te beheren. Dit wordt gerealiseerd door verschillende modules en componenten die in het CMS samenwerken. Hieronder een uiteenzetting van de belangrijkste onderdelen binnen dit systeem.
@@ -56,11 +56,13 @@ De **FormField**-modules voor objecten biedt een interface voor het invoeren en 
 
 # Evaluatie van het CMS
 
-Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een solide basis biedt voor webontwikkeling, kent het systeem aanzienlijke beperkingen op het gebied van ontwikkelaar-vriendelijkheid, onderhoudbaarheid en uitbreidbaarheid. Deze evaluatie richt zich op de architectuur, codestructuur en documentatie, en onderzoekt hoe het huidige CMS voldoet aan de basisprincipes van softwareontwikkeling, zoals de SOLID-principes.
+Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een solide basis biedt voor webontwikkeling, kent het systeem aanzienlijke beperkingen op het gebied van ontwikkelaarsvriendelijkheid, onderhoudbaarheid en uitbreidbaarheid. Deze evaluatie richt zich op de architectuur, codestructuur en documentatie, en onderzoekt hoe het huidige CMS voldoet aan de basisprincipes van softwareontwikkeling, zoals de SOLID-principes.
 
 ### Gebrekkige Documentatie
 
-Een van de grootste obstakels in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is over de basisfunctionaliteiten, zoals de velden in de XML-schema's, ontbreekt het aan meer gedetailleerde en up-to-date informatie over functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars die niet goed kunnen achterhalen welke parameters voor welke FormModules geschikt zijn. _Een voorbeeld van documentatie vind je in de bijlage: [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCms.md)_
+Een van de grootste obstakels in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is, zoals over de velden die in het CMS beschikbaar zijn via de XML-schema's, ontbreekt het aan meer gedetailleerde en up-to-date informatie over functionaliteiten verschillende functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars die niet goed kunnen achterhalen welke parameters voor welke FormModules geschikt zijn. 
+
+_Een voorbeeld van documentatie vind je in de bijlage: [voorbeeld documentatie AllesOnline CMS](Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCms.md)_
 
 **Aanbeveling**:
 - Een verbeteringsslag in de documentatie. Inclusief een up-to-date beschrijving van alle beschikbare modules en parameters met voorbeelden van gebruik in verschillende scenario’s voorkomt onduidelijkheid bij ontwikkelaars.
@@ -70,74 +72,49 @@ De huidige codestructuur van modules vormt ook een probleem. Deze modules bevatt
 
 **Gevolgen van deze complexiteit**:
 - De kans op bugs neemt toe, aangezien wijzigingen in een deel van de module vaak onbedoeld andere delen beïnvloeden.
-- Het ontbreken van duidelijke abstracties zorgt voor een lange leercurve voor nieuwe ontwikkelaars.
+- Het ontbreken van duidelijke interfaces tussen modules beperkt de mogelijkheid om de applicatie uit te breiden of om componenten opnieuw te gebruiken.
 
 **Aanbeveling**:
-- Refactor de modules door de verantwoordelijkheden van de module te scheiden in kleinere, meer specifieke classes. Bijvoorbeeld een aparte klasse voor relatiebeheer en een aparte klasse voor gegevensformattering.
+- Een grondige refactoring van de modules, waarbij de verantwoordelijkheden worden opgesplitst en er duidelijke interfaces worden gedefinieerd.
+### Tight Coupling en SOLID principes
 
-### Tight Coupling 
+Een belangrijk probleem van het AllesOnline CMS is het niet naleven van de **SOLID-principes**, wat de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van de code aanzienlijk belemmert.
+#### Kernprincipes
 
-Een groot probleem van het AllesOnline CMS is het niet naleven van de **SOLID-principes**, wat gevolgen heeft voor de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van de code. Dit komt duidelijk naar voren in de `FormTagsModule`, maar geldt ook voor andere delen van het CMS.
-
-Laten we specifiek ingaan op het **Single Responsibilty Principle (SRP)**, **Open/Closed Principe (OCP)** en **Dependency Inversion Principle (DIP)** en hoe het gebrek hieraan de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van de code bemoeilijkt.
-
-### Single Responsibility Principle (SRP)
-
-Het Single Responsibility Principle (SRP) stelt dat:
-- Een class slechts één reden tot verandering zou moeten hebben.
-- Dit houdt in dat elke class zich moet richten op een enkele verantwoordelijkheid en niet meerdere functionaliteiten moet combineren.
-
-In het AllesOnline CMS zijn veel voorbeelden te vinden van classes die meerdere verantwoordelijkheden samenbrengen. Dit leidt tot een verhoogde complexiteit, omdat ontwikkelaars gedwongen worden om met een module te werken die verantwoordelijk is voor alle logica. Hierdoor wordt het moeilijk om specifieke functionaliteiten in isolatie te testen of opnieuw te gebruiken in andere delen van de applicatie. 
-### Open/Closed Principle (OCP)
-
-Het Open/Closed Principle (OCP) stelt dat:
-- Software-entiteiten (klassen, modules, functies, enz.) open moeten zijn voor uitbreiding, maar gesloten voor aanpassing.
-- Dit betekent dat het mogelijk moet zijn om nieuwe functionaliteit toe te voegen aan bestaande systemen zonder de bestaande code te hoeven wijzigen.
-
-Momenteel is de architectuur van het AllesOnline CMS niet in lijn met het OCP. Nieuwe functionaliteiten vereisen vaak wijzigingen in de bestaande code. Bijvoorbeeld, wanneer er nieuwe functionaliteiten aan modules moeten worden toegevoegd moeten ontwikkelaars vaak al bestaande methodes aanpassen of uitbreiden. Dit leidt niet alleen tot een verhoogd risico op bugs en regressies, maar maakt het ook moeilijker om de code te onderhouden en te begrijpen.
-
-#### **Dependency Inversion Principle (DIP)**
-
-Het **Dependency Inversion Principle (DIP)** stelt dat:
-- Hogere niveau modules niet afhankelijk zouden moeten zijn van lagere niveau modules, maar van abstracties (interfaces of abstracte classes).
-- Abstracties zouden niet afhankelijk moeten zijn van details; details moeten afhankelijk zijn van abstracties.
-
-Momenteel worden in het AllesOnline CMS veel afhankelijkheden (dependencies) direct binnen de classes aangeroepen. Een voorbeeld hiervan is de `FormTagsModule`, waarbij de formatteringslogica hard-coded is, zonder gebruik te maken van interfaces of abstracties. Dit leidt tot een sterke afhankelijkheid van concrete, hardcoded implementaties, wat het moeilijk maakt om onderdelen van de code te vervangen of te testen zonder de volledige module te laden.
-#### Gebrek aan onafhankelijkheid
-
-Een van de meest significante tekortkomingen van de huidige architectuur is dat er uberhaupt geen losse classes zijn voor de verschillende functionaliteiten binnen de modules. Alle logica is ingebouwd in een enkele module, wat betekent dat verantwoordelijkheden niet goed zijn gescheiden. Dit maakt het onmogelijk om specifieke functionaliteiten in isolatie te testen of opnieuw te gebruiken in andere delen van de applicatie.
-
-**Gevolgen:**
-* **Verlies van Herbruikbaarheid**: Wanneer functionaliteiten zijn ingebouwd in één grote module, kunnen ze niet eenvoudig in andere modules of contexten worden hergebruikt. Dit leidt tot duplicatie van code wanneer ontwikkelaars vergelijkbare functionaliteiten in andere delen van het CMS willen implementeren. Over tijd veroorzaakt dit inconsistenties in de werking van een bepaalde functionaliteit.
+1. **Single Responsibility Principle (SRP)**: Dit principe stelt dat een klasse slechts één reden tot verandering moet hebben. In het AllesOnline CMS zijn veel klassen verantwoordelijk voor meerdere functionaliteiten, wat leidt tot complexiteit en bemoeilijkt het isoleren en hergebruiken van functionaliteiten.
     
-* **Slechte Testbaarheid**: Aangezien alle logica vaak in één module is ondergebracht, is het moeilijk om individuele functionaliteiten te testen zonder de hele module te laden. Dit verhoogt de complexiteit van tests en maakt het onpraktisch om unit tests te schrijven, omdat ontwikkelaars gedwongen worden om met de volledige module te werken, inclusief al zijn afhankelijkheden.
+2. **Open/Closed Principle (OCP)**: Software-entiteiten moeten open zijn voor uitbreiding, maar gesloten voor aanpassing. In de huidige architectuur vereisen nieuwe functionaliteiten vaak wijzigingen in bestaande code, wat de kans op bugs vergroot en de onderhoudbaarheid bemoeilijkt.
     
-* **Moeilijk Onderhoudbaar**: Het onderhoud van een grote module met een overvloed aan functionaliteiten is bijzonder uitdagend. Wanneer er wijzigingen of bugfixes moeten worden doorgevoerd, is de kans groter dat andere delen van de module worden beïnvloed, wat de kans op regressies vergroot en de totale stabiliteit van het systeem in gevaar brengt.
+3. **Dependency Inversion Principle (DIP)**: Hogere niveau modules moeten afhankelijk zijn van abstracties in plaats van concrete implementaties. In het AllesOnline CMS worden veel afhankelijkheden direct binnen klassen aangeroepen.
+     
+
+In de `FormTagsModule` worden deze SOLID-principes geschonden: het **Single Responsibility Principle (SRP)** door gecombineerde verantwoordelijkheden, het **Open/Closed Principle (OCP)** door noodzakelijke aanpassingen voor nieuwe functionaliteiten, en het **Dependency Inversion Principle (DIP)** door directe afhankelijkheden van concrete klassen, wat de onderhoudbaarheid en testbaarheid van de code vermindert.
+#### Gevolgen van niet naleven SOLID principes
+
+- **Verlies van herbruikbaarheid**: Functionaliteiten zijn ingebed in grote modules, waardoor hergebruik in andere delen van het CMS lastig is. Dit leidt tot duplicatie van code en inconsistenties in functionaliteit.
     
-* **Moeilijk Uitbreidbaar:** Omdat de modules afhankelijk zijn van concrete implementaties in plaats van abstracties, is het moeilijk om nieuwe functionaliteiten toe te voegen zonder bestaande code aan te passen. Dit gaat direct in tegen het **Open/Closed Principle (OCP)**, wat stelt dat klassen open moeten zijn voor uitbreiding, maar gesloten voor aanpassing.
+- **Slechte testbaarheid**: Omdat logica vaak in één module is ondergebracht, is het moeilijk om individuele functionaliteiten te testen zonder de hele module te laden. Dit maakt het schrijven van unit tests onpraktisch.
     
-* **Tight Coupling:** De huidige architectuur creëert tight coupling tussen verschillende delen van de applicaties. Dit betekent dat wanneer een deel van de module verandert, andere delen ook beïnvloed kunnen worden, wat de kans op regressies vergroot. Dit maakt het moeilijk om snel aanpassingen of verbeteringen door te voeren zonder onverwachte bugs te introduceren.
+- **Moeilijk onderhoudbaar**: Het onderhoud van een grote module met veel functionaliteiten is uitdagend. Wijzigingen kunnen andere delen van de module beïnvloeden, wat de stabiliteit van het systeem in gevaar brengt.
+    
+- **Moeilijk uitbreidbaar**: Nieuwe functionaliteiten kunnen niet eenvoudig worden toegevoegd zonder bestaande code aan te passen, wat indruist tegen het OCP.
+    
+- **Tight coupling**: De huidige architectuur creëert sterke afhankelijkheden tussen verschillende delen van de applicatie, wat de kans op regressies vergroot bij wijzigingen.
     
 
-**Aanbevelingen**
-- **Herziening van de architectuur**:
-    - Voer een uitgebreide herziening van de huidige architectuur uit om de naleving van de SOLID-principes te waarborgen. Dit kan inhouden dat bestaande modules worden ontleed in kleinere, zelfstandige classes met duidelijk gedefinieerde verantwoordelijkheden.
-      
-- **Implementatie van interface-gebaseerde ontwikkeling**:
-    - Introduceer interface-gebaseerde ontwikkeling om de afhankelijkheid van concrete implementaties te verminderen. Dit helpt bij het creëren van een flexibeler en uitbreidbaar systeem dat beter kan inspelen op veranderende eisen.
-      
-- **Modularisatie van functionaliteiten**:
-    - Split modules op in kleinere, onafhankelijke eenheden. Dit vergroot de herbruikbaarheid van code en maakt het eenvoudiger om specifieke functionaliteiten in isolatie te testen.
-      
-- **Unit Testing en Continuous Integration**:
-    - Ontwikkel een uitgebreide suite van unit tests voor de verschillende modules. Combineer dit met een Continuous Integration (CI) proces om ervoor te zorgen dat elke wijziging in de codebasis wordt getest, wat de kans op regressies vermindert.
-      
-- **Documentatie en Training**:
-    - Zorg voor adequate documentatie over de nieuwe architecturale richtlijnen en principes. Organiseer training voor ontwikkelaars om hen bekend te maken met de SOLID-principes en de nieuwe ontwikkelingsstandaarden.
-      
-- **Iteratieve Verbeteringen**:
-    - Voer veranderingen iteratief door en evalueer regelmatig de impact van deze wijzigingen op de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van het systeem. Dit zorgt ervoor dat het team kan inspelen op nieuwe inzichten en voortdurend kan verbeteren.
-      
+#### Aanbevelingen voor verbetering
+
+1. **Herziening van de architectuur**: Voer een grondige herziening uit om de SOLID-principes te waarborgen. Ontleed bestaande modules in kleinere, zelfstandige klassen met duidelijke verantwoordelijkheden.
+    
+2. **Implementatie van interface-gebaseerde ontwikkeling**: Verminder de afhankelijkheid van concrete implementaties door interface-gebaseerde ontwikkeling te introduceren. Dit maakt het systeem flexibeler en beter uitbreidbaar.
+    
+3. **Modularisatie van functionaliteiten**: Split modules op in kleinere, onafhankelijke eenheden om de herbruikbaarheid en testbaarheid te vergroten.
+    
+4. **Unit Testing en Continuous Integration**: Ontwikkel een uitgebreide suite van unit tests en implementeer een Continuous Integration (CI) proces om regressies te minimaliseren.
+    
+5. **Documentatie en training**: Zorg voor documentatie van de nieuwe architecturale richtlijnen en organiseer training voor ontwikkelaars in de SOLID-principes.
+    
+6. **Iteratieve verbeteringen**: Voer veranderingen iteratief door en evalueer regelmatig de impact op de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van het systeem.
 
 ## Conclusie
 
