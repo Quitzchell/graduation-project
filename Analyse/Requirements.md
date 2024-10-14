@@ -17,7 +17,7 @@ Om vast te stellen of een CMS-pakket geschikt is voor algemeen gebruik op een Al
 | **Relations module**     | Ondersteuning voor het zichtbaar maken van relaties tussen verschillende objecten.      | Must Have   |
 | **Video FormField**      | Ondersteuning voor het uploaden en beheren van embedded video's binnen het CMS.         | Should Have |
 | **Maps FormField**       | Ondersteuning voor het beheren van een google maps locatie                              | Must have   |
-| **OAuth2 FormField**     | Ondersteuning voor OAuth2                                                               | Should have |
+| **OAuth2 FormField**     | Ondersteuning voor OAuth2.                                                              | Should have |
 
 ### Niet-Functionele Vereisten:
 

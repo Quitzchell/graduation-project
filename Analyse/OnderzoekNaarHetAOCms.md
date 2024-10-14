@@ -1,6 +1,6 @@
 # Onderzoek naar het AllesOnline CMS
 # Inleiding
-In dit document wordt de analyse van het door AllesOnline ontwikkelde CMS-systeem gepresenteerd. Deze evaluatie is uitgevoerd als een **Available Product Analysis**, gericht op het identificeren van knelpunten binnen de huidige structuur en functionaliteit van het CMS. Het doel van dit onderzoek is niet alleen om een evaluatie van het bestaande CMS te geven, maar ook om de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem. Daarnaast dient het als basis voor vergelijking met andere CMS systemen, om te bepalen welke oplossingen het beste aansluiten bij de behoeften van onze developers en klanten.
+In dit document wordt de analyse van het door AllesOnline ontwikkelde CMS gepresenteerd. Deze evaluatie is uitgevoerd als een **Available Product Analysis**, gericht op het identificeren van knelpunten binnen de huidige structuur en functionaliteit van het CMS. Het doel van dit onderzoek is niet alleen om een evaluatie van het bestaande CMS te geven, maar ook om de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem. Daarnaast dient het als basis voor vergelijking met andere CMS systemen, om te bepalen welke oplossingen het beste aansluiten bij de behoeften van onze developers en klanten.
 
 # Beheren van content
 Het CMS biedt de mogelijkheid om de content van de website te beheren. Dit wordt gerealiseerd door verschillende modules en componenten die in het CMS samenwerken. Hieronder een uiteenzetting van de belangrijkste onderdelen binnen dit systeem.

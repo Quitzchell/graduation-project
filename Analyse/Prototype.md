@@ -1,21 +1,20 @@
 # Prototype
 
 ## Inleiding
-Om het onderzoek naar verschillende Content Management Systemen (CMS) in een praktische context uit te voeren, wordt er een prototype applicatie ontwikkeld. Deze prototype applicatie dient als blauwdruk voor de standaard functionaliteiten van een typische AllesOnline-webapplicatie. Het doel van dit prototype is om zowel een subjectieve als objectieve vergelijking te maken tussen het huidige AllesOnline CMS en alternatieve CMS-pakketten, door dezelfde functionaliteiten in verschillende systemen te implementeren en te evalueren.
+In dit onderzoek vergelijken we verschillende Content Management Systemen (CMS) door een praktisch experiment uit te voeren. We ontwikkelen meerdere prototypes om te zien hoe eenvoudig het is om van het AllesOnline CMS naar andere systemen te migreren.
 
-Het prototype stelt ons in staat om de technische mogelijkheden van elk CMS in een gecontroleerde omgeving te testen. Hierbij worden belangrijke aspecten zoals schaalbaarheid, onderhoudbaarheid, gebruiksvriendelijkheid en prestaties onderzocht. Daarnaast biedt het prototype de mogelijkheid om realistische migratieproeven uit te voeren, waarbij de gegevens en functionaliteiten van het huidige CMS worden overgezet naar nieuwe systemen. Op deze manier kunnen potentiële obstakels, zoals data-integriteit en het verlies van functionaliteiten, vroegtijdig worden geïdentificeerd.
+Het eerste prototype, gebaseerd op het AllesOnline CMS, fungeert als referentiepunt. Dit betekent dat we de meest gebruikte functies van een typische AllesOnline-webapplicatie, zoals object-en contentbeheer, hierin opnemen. Dit referentiepunt dient als basis om later het migratieproces naar andere CMS-pakketten te kunnen beoordelen.
 
-# Doelstellingen van het prototype
-Het prototype heeft de volgende doelstellingen:
+Het doel van dit project is om te onderzoeken hoe gemakkelijk het is om het AllesOnline CMS naar verschillende alternatieve CMS-pakketten te migreren. Door hetzelfde prototype in andere systemen te bouwen, kunnen we de complexiteit van de migratie evalueren. We richten ons op de volgende aspecten:
 
-1. **Vergelijking van CMS-pakketten**: Objectieve evaluatie van de technische en functionele mogelijkheden van het huidige AllesOnline CMS ten opzichte van de alternatieve CMS-pakketten.
-   
-2. **Migratieanalyse**: Onderzoeken van het migratieproces door het overzetten van data en functionaliteiten van het huidige CMS naar de alternatieve systemen. Hierbij worden de prestaties, compatibiliteit en eventuele technische uitdagingen in kaart gebracht.
+- **Compatibiliteit van functies**: Hoe makkelijk kunnen de kernfunctionaliteiten van AllesOnline worden toegepast in andere systemen? Zijn er aanpassingen nodig om dezelfde functionaliteiten te behouden?
+- **Migratie-inspanningen**: Hoeveel tijd en middelen kost de migratie? Welke obstakels komen we tegen?
+- **Gebruiksvriendelijkheid en schaalbaarheid**: Bieden de alternatieve CMS-pakketten voldoende flexibiliteit en schaalbaarheid? Hoe gebruiksvriendelijk zijn ze in vergelijking met AllesOnline?
+- **Integratiemogelijkheden**: Hoe eenvoudig is het om bestaande backend-systemen en API-koppelingen van AllesOnline naar andere CMS-pakketten te migreren?
 
-3. **Functionele validatie**: Valideren dat de basale functionaliteiten van de AllesOnline-webapplicaties, zoals contentbeheer, gebruikersbeheer en API-integraties, in elk CMS correct functioneren.
+Het uiteindelijke doel van dit onderzoek is inzicht te krijgen in de haalbaarheid en efficiëntie van het overstappen naar andere CMS-systemen. Hierbij kijken we niet alleen naar de technische mogelijkheden, maar ook naar de lange termijn voordelen, zoals lagere kosten, eenvoudiger onderhoud en toekomstbestendigheid.
 
-4. **Gebruikerservaring en onderhoudbaarheid**: Het testen van de gebruiksvriendelijkheid van het beheer in de verschillende CMS-oplossingen, alsmede de onderhoudbaarheid en het aanpassingsgemak voor ontwikkelaars.
-
+Deze vergelijking stelt ons in staat om een goed onderbouwd advies te geven over welk CMS het beste aansluit bij de behoeften van onze klanten en developers.
 # Prototype Specificaties
 ### Functionele eisen
 Het prototype is ontworpen om de kernfunctionaliteiten van een standaard AllesOnline-webapplicatie te simuleren. Dit omvat onder andere:
@@ -24,6 +23,8 @@ Het prototype is ontworpen om de kernfunctionaliteiten van een standaard AllesOn
 - **Gebruikersbeheer**: Functies voor het toevoegen, beheren en authenticeren van gebruikers.
 - **API-integraties**: Integratie van API’s voor data-uitwisseling tussen de backend en frontend.
 - **Data validatie**: Controleren of ingevoerde gegevens correct worden verwerkt en weergegeven in de frontend.
+
+Een lijst met **requirements**, waarin de functionaliteiten van het huidige CMS staan die in het prototype moeten worden opgenomen, is te vinden in de [requirements](/Analyse/Requirements.md). Hierin zijn ook een aantal Non-Functional requirements opgenomen.
 
 ### Technische specificaties
 Het prototype wordt gebouwd met de volgende technische kenmerken:
@@ -72,7 +73,7 @@ De categorieën waarin blogposts kunnen worden onderverdeeld. In de objectmanage
 | name      | text           |
 
 ### FrontendGebruiker (FrontendUser)
-Gebruikers die zich kunnen aanmelden op de website om reacties op blogposts achter te laten.
+Gebruikers die zich kunnen aanmelden op de website om reacties op blogposts en reviews achter te laten.
 
 | Attribute | FormField type |
 | --------- | -------------- |
@@ -80,10 +81,5 @@ Gebruikers die zich kunnen aanmelden op de website om reacties op blogposts acht
 | Password  | password       |
 | Email     | email          |
 
-### Producten
-
-
 ## Content
 ### 
-# Functionele Vereisten
-De functionele vereisten zijn... 
