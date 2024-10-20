@@ -1,4 +1,4 @@
-Om vast te stellen of een CMS-pakket geschikt is voor algemeen gebruik op een AllesOnline-website, en om te identificeren wat nodig is voor de migratie van de huidige architectuur met het AllesOnline CMS naar een systeem met het nieuwe pakket zijn de volgende requirements vastgesteld. 
+Om vast te stellen aan welke eisen een CMS-pakket moet voldoen voor gebruik bij een AllesOnline-website, heb ik op basis van gesprekken met developers en een analyse de volgende lijst met requirements opgesteld. De functionele eisen betreffen functionaliteiten die momenteel beschikbaar zijn in het huidige CMS en daarom ook aanwezig moeten zijn in een CMS-pakket om in aanmerking te komen voor een AllesOnline-website. Deze requirements vormen de basis voor het ontwikkelen van een prototype, zowel met het AllesOnline CMS als met andere CMS-pakketten.
 
 | **Vereiste**             | **Beschrijving**                                                                        | **MoSCoW**  |
 | ------------------------ | --------------------------------------------------------------------------------------- | ----------- |
