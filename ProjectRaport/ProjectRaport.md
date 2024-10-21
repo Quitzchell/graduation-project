@@ -23,22 +23,24 @@ In dit project wordt de vraag onderzocht of migratie naar een nieuw, modern CMS 
 
 In de eerste weken van het project heb ik me voornamelijk gericht op het onderzoeken van het huidige CMS, waarbij ik verschillende invalshoeken heb toegepast. Allereerst heb ik informele gesprekken gevoerd met de developers binnen AllesOnline om inzicht te krijgen in hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarbij heb ik ook mijn eigen ervaringen met CMS meegenomen. Vervolgens heb ik een grondige analyse uitgevoerd van de code, de structuur en de functionaliteiten van het systeem. Dit proces liep parallel aan het opstellen van de requirements en het realiseren van een prototype-applicatie, waardoor ik dieper in de werking van het CMS ben gedoken en zelf de belangrijkste knelpunten in de praktijk heb ervaren.
 
-Uit de gesprekken en bevindingen van de analyse zijn verschillende punten naar voren gekomen waar het CMS niet aan bepaalde verwachtingen voldoet. Ondanks deze beperkingen lukt het vaak wel om pragmatische oplossingen te vinden, maar dit staat wel haaks op enkele softwareontwikkelingsstandaarden, zoals de SOLID-principes. Tijdens het onderzoek en het realiseren van het prototype heb ik vanuit een bepaalde invalshoek al antwoorden kunnen formuleren op enkele deelvragen uit mijn projectplan.
+Uit de gesprekken en bevindingen van de analyse zijn verschillende punten naar voren gekomen waar het CMS niet aan bepaalde verwachtingen voldoet. Ondanks deze beperkingen lukt het vaak wel om pragmatische oplossingen te vinden, maar dit staat wel haaks op enkele ontwikkelingsstandaarden, zoals de SOLID-principes. Tijdens het onderzoek en het realiseren van het prototype heb ik vanuit een bepaalde invalshoek al antwoorden kunnen formuleren op enkele deelvragen uit mijn projectplan.
 
 * [Onderzoek naar het AllesOnline CMS](analyse/OnderzoekNaarHetAOCms.md)
 * [Requirements](Analyse/Requirements.md)
 * [Prototype](Analyse/prototype.md)
 
-#####  Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?
+Aan de hand van deze activiteiten kan ik al voor een deel antwoord geven op de volgende deelvragen: 
+ 
+__Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?__
 * **Beperkte Documentatie:** De documentatie is verouderd, waardoor ontwikkelaars onnodig lang bezig zijn bij het begrijpen van bepaalde functionaliteiten en parameters.
 - **Complexe Codestructuur:** Veel modules hebben te veel verantwoordelijkheden, wat onderhoud en uitbreiding bemoeilijkt.
 - **Sterke Afhankelijkheid:** Modules zijn te afhankelijk van elkaar, waardoor wijzigingen in één module andere modules kunnen beïnvloeden.
 - **Niet-Naleven van SOLID-principes:** Het systeem voldoet niet aan de SOLID-principes, wat leidt tot hogere complexiteit en lagere testbaarheid en onderhoudbaarheid.
 
-##### Aan welke criteria moet een gemoderniseerd CMS voldoen?
+__Aan welke criteria moet een gemoderniseerd CMS voldoen?__
 * **Uitgebreide Documentatie:** Het CMS moet beschikken over actuele documentatie die modules en parameters helder beschrijft.
 - **Modulariteit:** Het systeem moet opgesplitst zijn in kleinere, onafhankelijke modules met specifieke verantwoordelijkheden zodat deze gemakkelijk uitgebreid kan worden als nodig.
 
-##### Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?
+__Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
 * **Prestatieverschillen:** Het gebrek aan modulariteit en documentatie resulteert in hogere onderhoudskosten en meer bugs, wat de prestaties en stabiliteit beïnvloedt.
 * **Kosten:** De investeringen in het opschonen en onderhouden van een eigen systeem moet goed worden afgewogen tegen de voordelen van een al bestaande oplossing, die doorgaans lagere onderhoudskosten met zich meebrengt.
