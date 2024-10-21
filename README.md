@@ -17,3 +17,4 @@
 ## Bijlagen
 * #### [Voorbeeld van schema in AllesOnline CMS](Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
 * #### [Voorbeeld van documentatie AllesOnline CMS](Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
+* #### [UML Entiteiten diagram voor Prototype](Bijlagen/UmlEntiteitenDiagramPrototype.md)
