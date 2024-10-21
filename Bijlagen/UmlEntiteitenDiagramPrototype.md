@@ -1,1 +1,1 @@
-![[UML class - Page 1.png]]
+![UML met entiteiten voor Prototype](/images/uml-entity-prototype.png)
