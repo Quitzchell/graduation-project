@@ -1,4 +1,4 @@
-# Prototype
+# Opzet van het prototype
 
 ## Inleiding
 
@@ -28,7 +28,7 @@ Globaal gezien zal een prototype aan de volgende eisen moeten voldoen.
 - **Gebruikersbeheer**: Functies voor het toevoegen, beheren en authenticeren van gebruikers.
 - **API-integraties**: Integratie van API’s voor data-uitwisseling tussen de backend en frontend.
 
-Een lijst met **requirements**, waarin de functionaliteiten van het huidige CMS staan die in het prototype moeten worden opgenomen, is te vinden in de [requirements](/Analyse/Requirements.md). Hierin zijn ook een aantal non-functionele requirements opgenomen.
+Een lijst met **requirements**, waarin de functionaliteiten van het huidige CMS staan die in het prototype moeten worden opgenomen, is te vinden in de [requirements](Requirements.md). Hierin zijn ook een aantal non-functionele requirements opgenomen.
 
 ## Beschrijving van Objecten en Contentblokken
 

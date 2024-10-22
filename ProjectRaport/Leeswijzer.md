@@ -25,9 +25,9 @@ In de eerste weken van het project heb ik me voornamelijk gericht op het onderzo
 
 Uit de gesprekken en bevindingen van de analyse zijn verschillende punten naar voren gekomen waar het CMS niet aan bepaalde verwachtingen voldoet. Ondanks deze beperkingen lukt het vaak wel om pragmatische oplossingen te vinden, maar dit staat wel haaks op enkele ontwikkelingsstandaarden, zoals de SOLID-principes. Tijdens het onderzoek en het realiseren van het prototype heb ik vanuit een bepaalde invalshoek al antwoorden kunnen formuleren op enkele deelvragen uit mijn projectplan.
 
-* [Onderzoek naar het AllesOnline CMS](analyse/OnderzoekNaarHetAOCms.md)
-* [Requirements](Analyse/Requirements.md)
-* [Prototype](Analyse/prototype.md)
+* [Onderzoek naar het AllesOnline CMS](OnderzoekNaarHetAOCms.md)
+* [Requirements](Requirements.md)
+* [OpzetVanHetPrototype](OpzetVanHetPrototype.md)
 
 Aan de hand van deze activiteiten kan ik al voor een deel antwoord geven op de volgende deelvragen: 
  
