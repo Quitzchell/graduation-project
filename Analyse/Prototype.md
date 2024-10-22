@@ -30,7 +30,9 @@ Globaal gezien zal een prototype aan de volgende eisen moeten voldoen.
 
 Een lijst met **requirements**, waarin de functionaliteiten van het huidige CMS staan die in het prototype moeten worden opgenomen, is te vinden in de [requirements](/Analyse/Requirements.md). Hierin zijn ook een aantal non-functionele requirements opgenomen.
 
-## In het prototype zijn verschillende objecten en contentblokken beschikbaar. Hieronder volgt een lijst met de objecten, blokken en de bijbehorende FormFields die worden gebruikt om de inhoud van deze objecten en content te beheren.
+## Beschrijving van Objecten en Contentblokken
+
+ In het prototype zijn verschillende objecten en contentblokken beschikbaar. Hieronder volgt een lijst met de objecten, blokken en de bijbehorende FormFields die worden gebruikt om de inhoud van deze objecten en content te beheren.
 
 ### Pagina (Page)
 
@@ -152,7 +154,48 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |Email|email|
 |Inloggen|submit|
 
+## Templates
+### Blog
 
+| Attribuut    | FormField type |
+| ------------ | -------------- |
+| header_image | media-item     |
+| header_title | text           |
+| blocks       | blocks         |
+### Home
 
-## Content
-### 
+| Attribuut    | FormField type |
+| ------------ | -------------- |
+| header_image | media-item     |
+| header_title | text           |
+| about        | blocks         |
+| blocks       | blocks         |
+### Review
+| Attribuut    | FormField type |
+| ------------ | -------------- |
+| header_image | media-item     |
+| header_title | text           |
+| blocks       | blocks         |
+## Blocks
+
+### Call to Action
+| Attribuut   | FormField type |
+| ----------- | -------------- |
+| title       | text           |
+| text        | html           |
+| button_url  | url            |
+| button_text | text           |
+### Image
+| Attribuut    | FormField type |
+| ------------ | -------------- |
+| image        | media-item     |
+### Paragraph
+| Attribuut | FormField type |
+| --------- | -------------- |
+| title     | text           |
+| html      | text           |
+### About
+| Attribuut | FormField type |
+| --------- | -------------- |
+| title     | text           |
+| text      | html           |

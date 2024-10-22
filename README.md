@@ -3,7 +3,7 @@
 # Project Raport
 * ### [Voorpagina](ProjectRaport/Voorpagina.md)
 * ### [De opdracht](ProjectRaport/Opdracht.md)
-* ### [Projectraport](ProjectRaport/ProjectRaport.md)
+* ### [Leeswijzer](Leeswijzer.md)
 
 # Projectmanagement
 * ### [Projectplan](Projectmanagement/Projectplan.md)
