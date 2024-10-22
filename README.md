@@ -1,7 +1,4 @@
 # Revitalising Content Management
-
----
-
 # Project Raport
 ---
 
