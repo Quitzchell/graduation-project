@@ -4,7 +4,7 @@
 
 * ### [Voorpagina](ProjectRaport/Voorpagina.md)
 * ### [De opdracht](ProjectRaport/Opdracht.md)
-* ### [Leeswijzer](Leeswijzer.md)
+* ### [Leeswijzer](ProjectRaport/Leeswijzer.md)
 
 # Projectmanagement
 ---
