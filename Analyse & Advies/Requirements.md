@@ -24,6 +24,7 @@ Om vast te stellen aan welke eisen een CMS-pakket moet voldoen voor gebruik bij 
 | **Vereiste**                | **Beschrijving**                                                                                              |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | **Gebruiksvriendelijkheid** | Het systeem moet intuïtief en eenvoudig te bedienen zijn, ook voor niet-technische gebruikers.                |
+| **Developer experience**    | Het systeem moet intuitief en gemakkelijk te developen zijn.                                                  |
 | **Flexibiliteit**           | Het CMS moet uitbreidbaar zijn met nieuwe velden en modules op basis van toekomstige of specifieke behoeften. |
 | **Schaalbaarheid**          | Het CMS moet grote hoeveelheden content en gebruikersverzoeken aankunnen zonder prestatieproblemen.           |
 | **Integraties**             | Ondersteuning voor integraties met externe systemen of API's die nodig zijn voor de AllesOnline-website.      |
