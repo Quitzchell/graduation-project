@@ -14,7 +14,7 @@ Een belangrijke laatste wens van Stefan is dat hij het belangrijk vindt om het v
 
 # Wilco Kuipers
 
-* Algemeen
+* Algemene gesprekken
  
 Wilco werkt al ongeveer acht jaar bij AllesOnline en is onze senior software developer. In de gesprekken die ik tijdens werktijd met hem voer, komt het CMS regelmatig ter sprake. Deze gesprekken vinden vooral plaats wanneer we samen in de wirwar van spaghetticode op zoek zijn naar een bug of een specifieke casus proberen mogelijk te maken binnen het CMS. Hij erkent dat het CMS, hoewel functioneel, erg ongestructureerd is. Volgens hem beperkt dit niet alleen onze flexibiliteit bij het realiseren van maatwerkoplossingen, maar ook de mogelijkheid om een grondige test-suite voor het systeem op te zetten.
 
