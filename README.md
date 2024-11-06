@@ -16,6 +16,7 @@
 ---
 
 * ### [Onderzoek naar het AllesOnline CMS](AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+* ### [Gesprekken met Developers](AnalyseAdvies/GesprekkenMetDevelopers.md)
 * ### [Requirements](AnalyseAdvies/Requirements.md)
 
 # Design & Realisatie
