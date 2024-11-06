@@ -15,13 +15,13 @@
 # Analyse & Advies
 ---
 
-* ### [Onderzoek naar het AllesOnline CMS](Analyse%20%26%20Advies/OnderzoekNaarHetAOCms.md)
-* ### [Requirements](Analyse%20%26%20Advies/Requirements.md)
+* ### [Onderzoek naar het AllesOnline CMS](AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+* ### [Requirements](AnalyseAdvies/Requirements.md)
 
 # Design & Realisatie
 ---
 
-* ### [Opzet van het prototype](Design%20%26%20Realisatie/OpzetVanHetPrototype.md)
+* ### [Opzet van het prototype](DesignRealisatie/OpzetVanHetPrototype.md)
 
 # Bijlagen
 ---

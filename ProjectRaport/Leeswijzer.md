@@ -24,12 +24,12 @@ In de eerste weken van het project heb ik me voornamelijk gericht op het onderzo
 
 Uit de gesprekken en bevindingen van de analyse zijn verschillende punten naar voren gekomen waar het CMS niet aan bepaalde verwachtingen voldoet. Ondanks deze beperkingen lukt het vaak wel om pragmatische oplossingen te vinden, maar dit staat wel haaks op enkele ontwikkelingsstandaarden, zoals de SOLID-principes. 
 
-* [Onderzoek naar het AllesOnline CMS](/Analyse%20&%20Advies/OnderzoekNaarHetAOCms.md)
+* [Onderzoek naar het AllesOnline CMS](OnderzoekNaarHetAOCms.md)
 
 Dit proces liep parallel aan het opstellen van de requirements en het ontwikkelen van een prototype-applicatie, waardoor ik ook dieper in de werking van het CMS moest duiken en bepaalde knelpunten in de praktijk ervaarde. Het prototype dat ik heb gerealiseerd is opgebouwd uit drie lagen: een frontend, verwisselbare backends gebaseerd op diverse CMS-pakketten (waaronder het AllesOnline CMS) inclusief database gevuld met dummydata die te genereren is doormiddel van seeders. Deze opzet zorgt voor een gestandaardiseerde situatie waarin elke CMS-implementatie aan de hand van e2e-tests onafhankelijk kan worden beoordeeld op functionaliteit en prestaties.
 
-* [Requirements](/Analyse%20&%20Advies/Requirements.md)
-* [Opzet van het prototype](/Design%20&%20Realisatie/OpzetVanHetPrototype.md)
+* [Requirements](Requirements.md)
+* [Opzet van het prototype](OpzetVanHetPrototype.md)
 
 Tijdens het onderzoek en het realiseren van het prototype heb ik vanuit een bepaalde invalshoek al antwoorden kunnen formuleren op enkele deelvragen uit mijn projectplan.
  
