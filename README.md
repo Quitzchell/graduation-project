@@ -23,6 +23,7 @@
 ---
 
 * ### [Opzet van het prototype](DesignRealisatie/OpzetVanHetPrototype.md)
+* ### [Repository Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 
 # Bijlagen
 ---
