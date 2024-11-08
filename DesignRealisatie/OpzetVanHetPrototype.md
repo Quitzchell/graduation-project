@@ -173,14 +173,17 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |blocks|blocks|
 
 ### Review
+
 |Attribuut|FormField type|
 |---|---|
 |header_image|media-item|
 |header_title|text|
 |blocks|blocks|
+
 ## Blocks
 
 ### Call to Action
+
 |Attribuut|FormField type|
 |---|---|
 |title|text|
@@ -189,17 +192,20 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |button_text|text|
 
 ### Image
+
 |Attribuut|FormField type|
 |---|---|
 |image|media-item|
 
 ### Paragraph
+
 |Attribuut|FormField type|
 |---|---|
 |title|text|
 |html|text|
 
 ### About
+
 |Attribuut|FormField type|
 |---|---|
 |title|text|
