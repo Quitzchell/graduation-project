@@ -40,15 +40,15 @@ De pagina’s die beschikbaar zijn via XML-templates en dynamisch worden opgemaa
 
 ### Actor
 
-| Attribuut   | FormField type |
-| ----------- | -------------- |
-| name        | text           |
-| middle_name | text           |
-| surname     | text           |
-| dob         | date           |
-| movies      | tags           |
-| movie_names | dynamic        |
-| full_name   | dynamic        |
+|Attribuut|FormField type|
+|---|---|
+|name|text|
+|middle_name|text|
+|surname|text|
+|dob|date|
+|movies|tags|
+|movie_names|dynamic|
+|full_name|dynamic|
 
 ### Author
 
@@ -157,45 +157,50 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 ## Templates
 ### Blog
 
-| Attribuut    | FormField type |
-| ------------ | -------------- |
-| header_image | media-item     |
-| header_title | text           |
-| blocks       | blocks         |
+|Attribuut|FormField type|
+|---|---|
+|header_image|media-item|
+|header_title|text|
+|blocks| blocks|
+
 ### Home
 
-| Attribuut    | FormField type |
-| ------------ | -------------- |
-| header_image | media-item     |
-| header_title | text           |
-| about        | blocks         |
-| blocks       | blocks         |
+|Attribuut|FormField type|
+|---|---|
+|header_image|media-item|
+|header_title|text|
+|about|blocks|
+|blocks|blocks|
+
 ### Review
-| Attribuut    | FormField type |
-| ------------ | -------------- |
-| header_image | media-item     |
-| header_title | text           |
-| blocks       | blocks         |
+|Attribuut|FormField type|
+|---|---|
+|header_image|media-item|
+|header_title|text|
+|blocks|blocks|
 ## Blocks
 
 ### Call to Action
-| Attribuut   | FormField type |
-| ----------- | -------------- |
-| title       | text           |
-| text        | html           |
-| button_url  | url            |
-| button_text | text           |
+|Attribuut|FormField type|
+|---|---|
+|title|text|
+|text|html|
+|button_url|url|
+|button_text|text|
+
 ### Image
-| Attribuut    | FormField type |
-| ------------ | -------------- |
-| image        | media-item     |
+|Attribuut|FormField type|
+|---|---|
+|image|media-item|
+
 ### Paragraph
-| Attribuut | FormField type |
-| --------- | -------------- |
-| title     | text           |
-| html      | text           |
+|Attribuut|FormField type|
+|---|---|
+|title|text|
+|html|text|
+
 ### About
-| Attribuut | FormField type |
-| --------- | -------------- |
-| title     | text           |
-| text      | html           |
+|Attribuut|FormField type|
+|---|---|
+|title|text|
+|text|html|
