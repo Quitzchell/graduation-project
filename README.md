@@ -18,14 +18,15 @@
 * ### [Onderzoek naar het AllesOnline CMS](AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 * ### [Gesprekken met Developers](AnalyseAdvies/GesprekkenMetDevelopers.md)
 * ### [Requirements](AnalyseAdvies/Requirements.md)
+* ### [Checklist voor CMS criteria](AnalyseAdvies/ChecklistVoorCMSCriteria)
 
 # Design & Realisatie
 ---
 
 * ### [Opzet van het prototype](DesignRealisatie/OpzetVanHetPrototype.md)
 * ### [Repository Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
-* ### [Repository Backend with AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
-* ### [Repository Backend with Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
+* ### [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
+* ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
  
 # Bijlagen
 ---
