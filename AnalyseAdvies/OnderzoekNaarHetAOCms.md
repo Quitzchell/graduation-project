@@ -1,7 +1,9 @@
 # Onderzoek naar het AllesOnline CMS
 # Inleiding
 
-Dit verslag beschrijft de analyse van het AllesOnline CMS. Deze evaluatie is uitgevoerd als een onderdeel van de *Available Product Analysis*, maar ook gericht op het identificeren van knelpunten binnen het huidige AllesOnline CMS. Het doel van dit onderzoek is niet alleen om een evaluatie van het bestaande CMS te geven, maar ook om de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem. 
+Dit document beschrijft de analyse van het AllesOnline CMS. Deze evaluatie is uitgevoerd als een onderdeel van de *Available Product Analysis*, maar ook gericht op het identificeren van knelpunten binnen het huidige AllesOnline CMS. Het doel van dit onderzoek is niet alleen om een SWOT-analyse van het bestaande CMS te realiseren, maar ook om de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem. 
+
+*De belangrijkste sterke en zwakke punten van het AllesOnline CMS, evenals mogelijke kansen en bedreigingen, zijn in kaart gebracht in de SWOT-analyse, die je [hier kunt lezen](SwotAOCms).*
 ## Systeemoverzicht: Beheren van content 
 
 Het AllesOnline CMS biedt uitgebreide mogelijkheden voor het beheren van de content op een website. Dit wordt gerealiseerd door verschillende modules en componenten die samenwerken om een gestructureerd en schaalbaar systeem te vormen.

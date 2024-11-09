@@ -1,3 +1,5 @@
+# Checklist. voor CMS criteria
+
 | Criteria                   | AllesOnline | Filament | Statamic | ntb |
 | -------------------------- | ----------- | -------- | -------- | --- |
 | Blocks Form Field          | 🟢          | 🟢       |          |     |
