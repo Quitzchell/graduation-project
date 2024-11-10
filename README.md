@@ -15,12 +15,13 @@
 # Analyse & Advies
 ---
 
-* ### [Onderzoek naar het AllesOnline CMS](AnalyseAdvies/OnderzoekNaarHetAOCms.md)
-* ### [SWOT: AllesOnline CMS](SwotAOCms.md)
 * ### [Gesprekken met Developers](AnalyseAdvies/GesprekkenMetDevelopers.md)
 * ### [Requirements](AnalyseAdvies/Requirements.md)
 * ### [Checklist voor CMS criteria](AnalyseAdvies/ChecklistVoorCMSCriteria)
+* ### [Onderzoek naar het AllesOnline CMS](AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+* ### [SWOT: AllesOnline CMS](SwotAOCms.md)
 * ### [Onderzoek naar CMS met Filament](AnalyseAdvies/OnderzoekNaarCMSMetFilament.md)
+* ### [SWOT: CMS met Filament](AnalyseAdvies/SwotFilamentCms.md)
 
 # Design & Realisatie
 ---
