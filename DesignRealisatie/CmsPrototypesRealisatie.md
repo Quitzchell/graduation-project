@@ -117,7 +117,7 @@ class Page extends Model implements UrlableContract
 ### Filament PageResource en Dynamische Templates
 Met dit `Page`-model kan een Filament `PageResource` een formulier genereren voor het beheren van pagina’s. Een selectievak stelt de gebruiker in staat een template te kiezen, waarna het formulier dynamisch wordt aangepast op basis van de geselecteerde template.
 
-**Resource voor Content Management in CMS met Filament**
+**Schema voor Content Management in CMS met Filament**
 
 ```php
 public static function form(Form $form): Form
