@@ -58,7 +58,7 @@ Dit blok bevat een titel- en tekstveld met RichText-functionaliteit voor tekstop
 
 In Filament kan een soortgelijke functionaliteit worden gerealiseerd door gebruik te maken van Resources en een Eloquent-model gebaseerd op het `Page`-model van AllesOnline CMS. Dit model bevat de gegevens en relaties van pagina’s en hun hiërarchie.
 
-*Een simpel UML-diagram met het onderstaande concept voor content management kan je [hier bekijken](../Images/uml-entity-content-management-filament.png)*
+*Een simpel UML-diagram met het onderstaande concept voor content management kan je [hier bekijken](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)*
 
 ### Eloquent Model: Page
 Het `Page`-model slaat paginagegevens in de database op en beheert relaties tussen pagina's.
