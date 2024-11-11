@@ -1,12 +1,12 @@
 # CMS Prototype Realisaties
 
-Dit document biedt een aantal suggesties voor het opzetten van de basisfunctionaliteiten van een Content Management Systeem (CMS), waarbij gebruik wordt gemaakt van libraries van derde partijen.
+Dit document geeft een overzicht van de basisfunctionaliteiten van een Content Management Systeem (CMS) en beschrijft hoe de prototypes kunnen worden opgebouwd.
+## Contentbeheer in AllesOnline CMS
 
-## Contentbeheer
+### ContentManagerController
+In het AllesOnline CMS worden pagina’s en hun content beheerd via de `ContentManagerController`. Deze controller wordt meestal zonder aanpassingen geïmporteerd vanuit het AllesOnline CMS-pakket en biedt toegang tot de `ManagedContent`, `Page`, en `CMSContent`-modellen voor de configuratie van content-elementen.
 
-### AllesOnline CMS
-
-In het AllesOnline CMS worden pagina’s, hun volgorde en de beschikbare content beheerd via de `ContentManagerController`. Deze functionaliteit wordt doorgaans zonder aanpassingen overgenomen uit het AllesOnline CMS-pakket. Vanuit deze controller heeft het systeem directe toegang tot de `ManagedContent`, `Page` en `CMSContent`-modellen.
+**ContentManagerController in AO CMS**
 
 ```php
 <?php
@@ -17,11 +17,14 @@ use ContentManager;
 
 class ContentManagerController extends ContentManager
 {
-    //
+    // Controller implementatie
 }
 ```
 
-Binnen de `ContentManager` worden `Page`-objecten beheerd, die gebruikmaken van XML-templates. Deze templates definiëren welke extra velden, naast de standaard velden op een pagina, als `CMSContent` kunnen worden toegevoegd. Een voorbeeld van een XML-template ziet er als volgt uit:
+### XML-schema voor Templates met CMS-content
+Binnen de `ContentManager` worden `Page`-objecten dynamisch gegenereerd via XML-templates die specificeren welke velden (zoals tekst, afbeeldingen en blokken) kunnen worden toegevoegd. Dit stelt ontwikkelaars in staat om template-schema's te definiëren voor CMS-gebruikers.
+
+**XML-schema voor Template in AO CMS**
 
 ```xml
 <template name="Review page">
@@ -32,9 +35,12 @@ Binnen de `ContentManager` worden `Page`-objecten beheerd, die gebruikmaken van 
 </template>
 ```
 
-Zoals zichtbaar in het template, wordt hier bepaald welke velden beschikbaar zijn en welk type deze hebben. Naast individuele velden kunnen ook blokken worden toegevoegd. Deze blokken bevatten vaak een verzameling velden en vertegenwoordigen onderdelen van de website die herbruikbaar zijn, zoals meerdere keren op dezelfde pagina of op verschillende pagina’s.
+In het bovenstaande template zijn velden voor een headerafbeelding en een titel opgenomen. Gebruikers kunnen daarnaast blokken selecteren om toe te voegen, wat flexibiliteit biedt bij het vormgeven van de pagina.
 
-Een voorbeeld van een blok kan er als volgt uitzien:
+### Blok-schema's voor Blokken met CMS-content
+Contentblokken kunnen ook worden gedefinieerd met XML en vervolgens in verschillende templates worden hergebruikt.
+
+**XML-schema voor Blok in AO CMS**
 
 ```xml
 <template name="Paragraph">
@@ -44,9 +50,18 @@ Een voorbeeld van een blok kan er als volgt uitzien:
 </template>
 ```
 
-## Filament
+Dit blok bevat een titel- en tekstveld met RichText-functionaliteit voor tekstopmaak.
 
-In Filament kunnen we iets vergelijkbaars realiseren met behulp van Resources en een Eloquent-model dat gebaseerd is op het Page-model van het AllesOnline CMS.
+---
+
+## Contentbeheer in CMS met Filament
+
+In Filament kan een soortgelijke functionaliteit worden gerealiseerd door gebruik te maken van Resources en een Eloquent-model gebaseerd op het `Page`-model van AllesOnline CMS. Dit model bevat de gegevens en relaties van pagina’s en hun hiërarchie.
+
+### Eloquent Model: Page
+Het `Page`-model slaat paginagegevens in de database op en beheert relaties tussen pagina's.
+
+**Page-model in CMS met Filament**
 
 ```php
 <?php
@@ -73,7 +88,7 @@ class Page extends Model implements UrlableContract
         'content' => 'array',
     ];
 
-    /* Relations */
+    // Relaties
     public function parent(): BelongsTo 
     {
         return $this->belongsTo(Page::class, 'parent_id');
@@ -84,7 +99,7 @@ class Page extends Model implements UrlableContract
         return $this->hasMany(Page::class, 'parent_id');
     }
 
-    /* Urlable */
+    // URL-functies
     public function uri($lang = null) { 
         $uri = strtolower($this->name); 
         if ($this->parent) { 
@@ -99,7 +114,10 @@ class Page extends Model implements UrlableContract
 }
 ```
 
-Met dit model kan een Filament `PageResource` een formulier genereren voor het aanmaken en bewerken van pagina's. Binnen dit formulier is een selectieveld toegevoegd dat, afhankelijk van het gekozen template, de bijbehorende velden via de TemplateFactory dynamisch aan het formulier toevoegt en aan de gebruiker in het CMS toont.
+### Filament PageResource en Dynamische Templates
+Met dit `Page`-model kan een Filament `PageResource` een formulier genereren voor het beheren van pagina’s. Een selectievak stelt de gebruiker in staat een template te kiezen, waarna het formulier dynamisch wordt aangepast op basis van de geselecteerde template.
+
+**Resource voor Content Management in CMS met Filament**
 
 ```php
 public static function form(Form $form): Form
@@ -128,6 +146,11 @@ public static function form(Form $form): Form
         ->model(Page::class);
 }
 ```
+
+### TemplateFactory voor Dynamische Template-selectie
+De `TemplateFactory`-klasse ondersteunt de selectie en dynamische weergave van velden op basis van het door de gebruiker gekozen template.
+
+**TemplateFactory in CMS met Filament**
 
 ```php
 <?php
@@ -173,3 +196,91 @@ class TemplateFactory
     }
 }
 ```
+
+### Class voor Templates in CMS met Filament
+Template-velden worden beheerd in specifieke classes die een array met Filament FormField-componenten teruggeven aan de Resource.
+
+**Template-class in CMS met Filament**
+
+```php
+<?php
+
+namespace App\Cms\Templates;
+
+use App\Cms\Blocks\About;
+use App\Cms\Blocks\CallToAction;
+use App\Cms\Blocks\Image;
+use App\Cms\Blocks\Map;
+use App\Cms\Blocks\Paragraph;
+use App\Cms\Templates\Interfaces\TemplateContract;
+use Filament\Forms\Components\Builder;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TextInput;
+
+class Homepage implements TemplateContract
+{
+    public static function getForm(): array
+    {
+        return [
+            TextInput::make('header_title')
+                ->label('Header title'),
+
+            FileUpload::make('header_image')
+                ->label('Header Image')
+                ->image()
+                ->required(),
+
+            Builder::make('content')->schema([
+                About::getBlock(),
+                CallToAction::getBlock(),
+                Image::getBlock(),
+                Map::getBlock(),
+                Paragraph::getBlock(),
+            ]),
+        ];
+    }
+}
+```
+
+Het bovenstaande template bevat, net zoals het AO CMS-template, een veld voor een headerafbeelding en een titel. Gebruikers kunnen ook blokken selecteren om toe te voegen.
+
+### Blok-schema's voor Contentblokken in CMS met Filament
+In het CMS met Filament worden contentblokken gedefinieerd via PHP-classes die in verschillende templates hergebruikt kunnen worden.
+
+**Blok-class in CMS met Filament**
+
+```php 
+<?php
+
+namespace App\Cms\Blocks;
+
+use App\Cms\Blocks\Interfaces\BlockContract;
+use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TextInput;
+
+class Paragraph implements BlockContract
+{
+    public static function getBlock(): Block
+    {
+        return Block::make('paragraph')
+            ->schema([
+                TextInput::make('title')
+                    ->label('Title'),
+                RichEditor::make('text')
+                    ->label('Text')
+                    ->toolbarButtons([
+                        'h1',
+                        'h2',
+                        'bold',
+                        'italic',
+                        'underline',
+                        'orderedList',
+                        'bulletList',
+                    ]),
+            ]);
+    }
+}
+```
+
+Dit schema biedt, net als in het AO CMS, een titel- en tekstveld met RichText-opties voor tekstopmaak.
