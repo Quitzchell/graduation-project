@@ -27,7 +27,7 @@
 ---
 
 * ### [Opzet van het prototype](DesignRealisatie/OpzetVanHetPrototype.md)
-* ### [CMS criteria in praktijk](DesignRealisatie/CmsCriteriaInPraktijk.md)
+* ### [CMS criteria in praktijk](CmsPrototypesRealisatie.md)
 * ### [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 * ### [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 * ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
