@@ -2,7 +2,7 @@
 
 Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_, waarin wordt onderzocht hoe AllesOnline, een full-service bureau voor online en offline communicatie, haar huidige Content Management Systeem (CMS) kan moderniseren. Het bestaande CMS, dat sinds 2015 operationeel is, vormt de basis van de webapplicaties van het bedrijf. Door veroudering en beperkt onderhoud is het systeem echter moeilijk uitbreidbaar en minder efficiënt geworden, wat de schaalbaarheid en toekomstbestendigheid belemmert.
 
-Binnen dit project wordt onderzocht of migratie naar een nieuw, modern CMS een duurzamer en kostenefficiënter alternatief biedt voor doorontwikkeling van de huidige systeem. Er wordt hierbij specifiek gekeken naar de beperkingen van het bestaande systeem, de vereisten voor een toekomstbestendig CMS, mogelijke alternatieven en de uitdagingen en voordelen van een migratieproces.
+Binnen dit project wordt onderzocht of migratie naar een nieuw, modern CMS een duurzamer en kostenefficiënter alternatief biedt voor doorontwikkeling van het huidige systeem. Er wordt hierbij specifiek gekeken naar de beperkingen van het bestaande systeem, de vereisten voor een toekomstbestendig CMS, mogelijke alternatieven en de uitdagingen en voordelen van een migratieproces.
 ## Onderzoeksvraag
 Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaalbaarheid, onderhoudbaarheid en toekomstbestendigheid van haar webapplicaties te verbeteren?
 ### Deelvragen
@@ -24,9 +24,9 @@ In de eerste weken van het project heb ik mij gericht op het analyseren van het 
 
 Uit de gesprekken en analyses kwamen verschillende knelpunten naar voren die aantonen dat het huidige CMS niet volledig aan de verwachtingen voldoet. Hoewel pragmatische oplossingen vaak mogelijk zijn, botsen deze oplossingen met ontwikkelingsstandaarden, zoals de SOLID-principes.
 
-* [Gesprekken met Developers](AnalyseAdvies/GesprekkenMetDevelopers.md)
-* [Onderzoek naar het AllesOnline CMS](AnalyseAdvies/OnderzoekNaarHetAOCms.md)
-* [SWOT: AllesOnline CMS](AnalyseAdvies/SwotAOCms.md)
+* [Gesprekken met Developers](../AnalyseAdvies/GesprekkenMetDevelopers.md)
+* [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+* [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 
 Parallel aan het onderzoek heb ik de requirements opgesteld en een prototype-applicatie ontwikkeld, waardoor ik het CMS op praktische knelpunten kon evalueren. Dit prototype bestaat uit drie lagen: een frontend, verwisselbare backends gebaseerd op verschillende CMS-pakketten (waaronder het AllesOnline CMS), en een database gevuld met dummydata die gegenereerd wordt door seeders. Deze opzet creëert een gestandaardiseerde testomgeving waarin iedere CMS-implementatie onafhankelijk kan worden beoordeeld op functionaliteit en prestaties via end-to-end tests.
 
@@ -75,6 +75,9 @@ Tijdens het onderzoek ben ik ook begonnen met het ontwerpen en realiseren van ee
 * [Design voor CMS functionaliteit in Filament](Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 * [Concepten voor CMS Prototype Realisaties](DesignRealisatie/CmsPrototypesRealisatie.md)
 * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
+
+3. **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
+*  **Filament**: 
 
 5. __Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
 * **Ondersteuning en ontwikkelkosten**: Filament heeft een groeiende community maar kan bij complexe functies extra ontwikkeltijd vergen vanwege het gebrek aan out-of-the-box oplossingen voor hiërarchische content. Dit kan leiden tot hogere onderhouds- en ontwikkelkosten in vergelijking met meer volwassen systemen.
