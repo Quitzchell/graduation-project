@@ -60,7 +60,7 @@ Om de betrouwbaarheid en consistentie van verschillende backends ten opzichte va
 De suite controleert of de gegevensuitwisseling tussen de backend en frontend correct verloopt en evalueert of de frontend de gegevens accuraat kan ontvangen. Hiermee kan, zodra een CMS-implementatie gerealiseerd is, door middel van gestandaardiseerde tests gevalideerd worden.
 
 * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
-* [Video: Cypress test-suite](../bijlagen/CypressTestsAOCms.md)
+* [Video: Cypress test-suite](../Bijlagen/CypressTestsAOCms.md)
 
 Omdat Cypress niet in onze standaard Docker-container kan draaien vanwege bepaalde dependencies die ontbreken in een Alpine-omgeving, heb ik het zo ingericht dat een externe container, specifiek opgezet voor Cypress, kan communiceren met de frontend-container om de tests uit te voeren. Het voordeel hiervan is dat de container voor de frontend niet onnodig groter wordt door de toevoeging van Cypress. Het nadeel is echter dat er een pauze moet worden ingebouwd tussen de requests, omdat de frontend-container anders te snel opeenvolgende verzoeken van hetzelfde adres ontvangt.
 # Onderzoek naar CMS met Filament
