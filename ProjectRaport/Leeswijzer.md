@@ -30,9 +30,9 @@ Uit de gesprekken en analyses kwamen verschillende knelpunten naar voren die aan
 
 Parallel aan het onderzoek heb ik de requirements opgesteld en een prototype-applicatie ontwikkeld, waardoor ik het CMS op praktische knelpunten kon evalueren. Dit prototype bestaat uit drie lagen: een frontend, verwisselbare backends gebaseerd op verschillende CMS-pakketten (waaronder het AllesOnline CMS), en een database gevuld met dummydata die gegenereerd wordt door seeders. Deze opzet creëert een gestandaardiseerde testomgeving waarin iedere CMS-implementatie onafhankelijk kan worden beoordeeld op functionaliteit en prestaties via end-to-end tests.
 
-* [Requirements](AnalyseAdvies/Requirements.md)
-* [Checklist voor CMS criteria](AnalyseAdvies/ChecklistVoorCMSCriteria)
-* [Opzet van het prototype](DesignRealisatie/OpzetVanHetPrototype.md)
+* [Requirements](../AnalyseAdvies/Requirements.md)
+* [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
+* [Opzet van het prototype](../DesignRealisatie/OpzetVanHetPrototype.md)
 * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
@@ -60,20 +60,20 @@ Om de betrouwbaarheid en consistentie van verschillende backends ten opzichte va
 De suite controleert of de gegevensuitwisseling tussen de backend en frontend correct verloopt en evalueert of de frontend de gegevens accuraat kan ontvangen. Hiermee kan, zodra een CMS-implementatie gerealiseerd is, door middel van gestandaardiseerde tests gevalideerd worden.
 
 * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
-* [Video: Cypress test-suite](bijlagen/CypressTestsAOCms.md)
+* [Video: Cypress test-suite](../bijlagen/CypressTestsAOCms.md)
 
 Omdat Cypress niet in onze standaard Docker-container kan draaien vanwege bepaalde dependencies die ontbreken in een Alpine-omgeving, heb ik het zo ingericht dat een externe container, specifiek opgezet voor Cypress, kan communiceren met de frontend-container om de tests uit te voeren. Het voordeel hiervan is dat de container voor de frontend niet onnodig groter wordt door de toevoeging van Cypress. Het nadeel is echter dat er een pauze moet worden ingebouwd tussen de requests, omdat de frontend-container anders te snel opeenvolgende verzoeken van hetzelfde adres ontvangt.
 # Onderzoek naar CMS met Filament
 
 Na het realiseren van het prototype met het AllesOnline CMS en het voorbereiden van de Cypress Test-suite, ben ik aan de gang gegaan met het onderzoeken van Filament. Filament is zoals ze het zelf zeggen  *"A collection of beautiful full-stack  components"*. Het biedt een verzameling componenten die ingezet kunnen worden om eenvoudig CRUD-functionaliteit op te zetten om gegevens te beheren. 
 
-* [Onderzoek naar CMS met Filament](AnalyseAdvies/OnderzoekNaarCMSMetFilament.md)
-* [SWOT: Filament](AnalyseAdvies/SwotFilamentCms.md)
+* [Onderzoek naar CMS met Filament](../AnalyseAdvies/OnderzoekNaarCMSMetFilament.md)
+* [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
 
 Tijdens het onderzoek ben ik ook begonnen met het ontwerpen en realiseren van een CMS met behulp van de Filament Library. Hierbij heb ik zowel de checklist voor CMS-criteria als de requirements in acht genomen. Daarnaast ben ik begonnen met het beschrijven van de vergelijking tussen hoe specifieke functionaliteiten gerealiseerd kunnen worden in verschillende frameworks en libraries.
 
-* [Design voor CMS functionaliteit in Filament](Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
-* [Concepten voor CMS Prototype Realisaties](DesignRealisatie/CmsPrototypesRealisatie.md)
+* [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+* [Concepten voor CMS Prototype Realisaties](../DesignRealisatie/CmsPrototypesRealisatie.md)
 * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
 
 3. **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
