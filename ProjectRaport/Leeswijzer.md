@@ -1,10 +1,14 @@
+
+> * [Evidence in verhouding tot leeruitkomsten](../Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
 # Inleiding
 
 Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_, waarin wordt onderzocht hoe AllesOnline, een full-service bureau voor online en offline communicatie, haar huidige Content Management Systeem (CMS) kan moderniseren. Het bestaande CMS, dat sinds 2015 operationeel is, vormt de basis van de webapplicaties van het bedrijf. Door veroudering en beperkt onderhoud is het systeem echter moeilijk uitbreidbaar en minder efficiënt geworden, wat de schaalbaarheid en toekomstbestendigheid belemmert.
 
 Binnen dit project wordt onderzocht of migratie naar een nieuw, modern CMS een duurzamer en kostenefficiënter alternatief biedt voor doorontwikkeling van het huidige systeem. Er wordt hierbij specifiek gekeken naar de beperkingen van het bestaande systeem, de vereisten voor een toekomstbestendig CMS, mogelijke alternatieven en de uitdagingen en voordelen van een migratieproces.
+
 ## Onderzoeksvraag
 Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaalbaarheid, onderhoudbaarheid en toekomstbestendigheid van haar webapplicaties te verbeteren?
+
 ### Deelvragen
 
 1. **Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS van AllesOnline?**
@@ -24,17 +28,17 @@ In de eerste weken van het project heb ik mij gericht op het analyseren van het 
 
 Uit de gesprekken en analyses kwamen verschillende knelpunten naar voren die aantonen dat het huidige CMS niet volledig aan de verwachtingen voldoet. Hoewel pragmatische oplossingen vaak mogelijk zijn, botsen deze oplossingen met ontwikkelingsstandaarden, zoals de SOLID-principes.
 
-* [Gesprekken met Developers](../AnalyseAdvies/GesprekkenMetDevelopers.md)
-* [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
-* [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
+> * [Gesprekken met Developers](../AnalyseAdvies/GesprekkenMetDevelopers.md)
+> * [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+> * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 
 Parallel aan het onderzoek heb ik de requirements opgesteld en een prototype-applicatie ontwikkeld, waardoor ik het CMS op praktische knelpunten kon evalueren. Dit prototype bestaat uit drie lagen: een frontend, verwisselbare backends gebaseerd op verschillende CMS-pakketten (waaronder het AllesOnline CMS), en een database gevuld met dummydata die gegenereerd wordt door seeders. Deze opzet creëert een gestandaardiseerde testomgeving waarin iedere CMS-implementatie onafhankelijk kan worden beoordeeld op functionaliteit en prestaties via end-to-end tests.
 
-* [Requirements](../AnalyseAdvies/Requirements.md)
-* [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
-* [Opzet van het prototype](../DesignRealisatie/OpzetVanHetPrototype.md)
-* [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
-* [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
+> * [Requirements](../AnalyseAdvies/Requirements.md)
+> * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
+> * [Opzet van het prototype](../DesignRealisatie/OpzetVanHetPrototype.md)
+> * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
+> * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
 Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden formuleren op enkele deelvragen.
  
@@ -59,8 +63,8 @@ Om de betrouwbaarheid en consistentie van verschillende backends ten opzichte va
 
 De suite controleert of de gegevensuitwisseling tussen de backend en frontend correct verloopt en evalueert of de frontend de gegevens accuraat kan ontvangen. Hiermee kan, zodra een CMS-implementatie gerealiseerd is, door middel van gestandaardiseerde tests gevalideerd worden.
 
-* [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
-* [Video: Cypress test-suite](../Bijlagen/CypressTestsAOCms.md)
+> * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
+> * [Video: Cypress test-suite](../Bijlagen/CypressTestsAOCms.md)
 
 Omdat Cypress niet in onze standaard Docker-container kan draaien vanwege bepaalde dependencies die ontbreken in een Alpine-omgeving, heb ik het zo ingericht dat een externe container, specifiek opgezet voor Cypress, kan communiceren met de frontend-container om de tests uit te voeren. Het voordeel hiervan is dat de container voor de frontend niet onnodig groter wordt door de toevoeging van Cypress. Het nadeel is echter dat er een pauze moet worden ingebouwd tussen de requests, omdat de frontend-container anders te snel opeenvolgende verzoeken van hetzelfde adres ontvangt.
 
@@ -68,14 +72,14 @@ Omdat Cypress niet in onze standaard Docker-container kan draaien vanwege bepaal
 
 Na het realiseren van het prototype met het AllesOnline CMS en het voorbereiden van de Cypress Test-suite, ben ik aan de gang gegaan met het onderzoeken van Filament. Filament is zoals ze het zelf zeggen  *"A collection of beautiful full-stack  components"*. Het biedt een verzameling componenten die ingezet kunnen worden om eenvoudig CRUD-functionaliteit op te zetten om gegevens te beheren. 
 
-* [Onderzoek naar CMS met Filament](../AnalyseAdvies/OnderzoekNaarCMSMetFilament.md)
-* [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
+> * [Onderzoek naar CMS met Filament](../AnalyseAdvies/OnderzoekNaarCMSMetFilament.md)
+> * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
 
 Tijdens het onderzoek ben ik ook begonnen met het ontwerpen en realiseren van een CMS met behulp van de Filament Library. Hierbij heb ik zowel de checklist voor CMS-criteria als de requirements in acht genomen. Daarnaast ben ik begonnen met het beschrijven van de vergelijking tussen hoe specifieke functionaliteiten gerealiseerd kunnen worden in verschillende frameworks en libraries.
 
-* [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
-* [Concepten voor CMS Prototype Realisaties](../DesignRealisatie/CmsPrototypesRealisatie.md)
-* [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
+> * [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+> * [Concepten voor CMS Prototype Realisaties](../DesignRealisatie/CmsPrototypesRealisatie.md)
+> * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
 
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
 	- **Filament**: Filament is dankzij zijn flexibiliteit en modulaire opbouw geschikt als basis voor een CMS voor organisaties die maatwerk nodig hebben bij het beheren van hun contentbehoeften. Daarnaast is de library populair binnen de Laravel-community ([State of Laravel, Administration Panel Results](https://stateoflaravel.com/results#question:administration+panel)). Vanwege de beperkte ondersteuning voor diepere hiërarchieën en relationele structuren is de library echter nog afhankelijk van externe of zelfontwikkelde oplossingen.
