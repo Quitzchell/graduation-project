@@ -38,17 +38,17 @@ Parallel aan het onderzoek heb ik de requirements opgesteld en een prototype-app
 
 Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden formuleren op enkele deelvragen.
  
-1. __Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?__
+* __Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?__
 	* **Beperkte documentatie:** De documentatie is verouderd, waardoor ontwikkelaars onnodig lang bezig zijn met het begrijpen van bepaalde functionaliteiten en parameters.
 	* **Complexe codestructuur:** Veel modules hebben te veel verantwoordelijkheden, wat onderhoud en uitbreiding bemoeilijkt.
 	* **Sterke afhankelijkheid:** Modules en functionaliteiten zijn te afhankelijk van elkaar, waardoor wijzigingen in één module andere modules kunnen beïnvloeden.
 	* **Niet-naleven van SOLID-principes:** Het systeem voldoet niet aan de SOLID-principes, wat leidt tot hogere complexiteit en lagere testbaarheid en onderhoudbaarheid.
 
-2. __Aan welke criteria moet een gemoderniseerd CMS voldoen?__
+* __Aan welke criteria moet een gemoderniseerd CMS voldoen?__
 	* **Uitgebreide documentatie:** Het CMS beschikt over actuele documentatie die modules en parameters helder beschrijft.
 	* **Modulariteit:** Het systeem moet opgesplitst zijn in kleinere, onafhankelijke modules met specifieke verantwoordelijkheden zodat deze gemakkelijk uitgebreid kan worden indien nodig.
 
-5. __Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
+* __Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
 	* **Prestatie:** Het gebrek aan modulariteit en documentatie resulteert in hogere onderhoudskosten en meer bugs, wat de prestaties en stabiliteit beïnvloedt.
 	* **Kosten:** De investeringen in het opschonen en onderhouden van een eigen systeem moet goed worden afgewogen tegen de voordelen van een al bestaande oplossing, die doorgaans lagere onderhoudskosten met zich meebrengt.
 
@@ -77,11 +77,11 @@ Tijdens het onderzoek ben ik ook begonnen met het ontwerpen en realiseren van ee
 * [Concepten voor CMS Prototype Realisaties](../DesignRealisatie/CmsPrototypesRealisatie.md)
 * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
 
-3. **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
-	- **Filament**: Filament is dankzij zijn flexibiliteit en modulaire opbouw geschikt als basis voor een CMS voor organisaties die maatwerk nodig hebben bij het beheren van hun contentbehoeften. Daarnaast is het een populair library binnen de Laravel-community. Vanwege de beperkte ondersteuning voor diepere hiërarchieën en relationele structuren is de library echter nog afhankelijk van externe of zelfontwikkelde oplossingen.
+* **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
+	- **Filament**: Filament is dankzij zijn flexibiliteit en modulaire opbouw geschikt als basis voor een CMS voor organisaties die maatwerk nodig hebben bij het beheren van hun contentbehoeften. Daarnaast is het een populaire library binnen de Laravel-community. Vanwege de beperkte ondersteuning voor diepere hiërarchieën en relationele structuren is de library echter nog afhankelijk van externe of zelfontwikkelde oplossingen.
 
 
-5. **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
+* **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
 	* **Ondersteuning en ontwikkelkosten**: Filament heeft een groeiende community maar kan bij complexe functies extra ontwikkeltijd vergen vanwege het gebrek aan out-of-the-box oplossingen voor hiërarchische content. Dit kan leiden tot hogere onderhouds- en ontwikkelkosten in vergelijking met meer volwassen systemen.
 	* **Laravel**: Filament maakt gebruik van Laravel’s Eloquent ORM, wat het beheer van resources vergemakkelijkt. Daarnaast biedt het het huidige developer-team een voordeel omdat ze al bekenend met Laravel zijn.
 	* **Documentatie en schaalbaarheid**: De relatief nieuwe status van Filament betekent dat de ondersteuning en documentatie nog beperkt zijn, wat kan resulteren in hogere kosten om specifieke oplossingen te ontwikkelen en te onderhouden.
