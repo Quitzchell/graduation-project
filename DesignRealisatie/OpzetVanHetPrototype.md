@@ -40,7 +40,7 @@ Een lijst met **requirements**, met de functionaliteiten van het huidige CMS die
 
 De **Pagina**-objecten vertegenwoordigen de webpagina's die worden weergegeven op de website. Ze zijn gebaseerd op `templates` en worden dynamisch opgemaakt. Dit maakt het mogelijk voor gebruikers om pagina’s te creëren en aan te passen. Deze templates vormen de basisstructuur voor het presenteren van verschillende soorten content.
 ### Actor
-Het **Actor**-object is bedoeld om informatie over acteurs vast te leggen, zoals naam, geboortedatum en de films waarin ze voorkomen. Dit object kan nuttig zijn om te koppelen aan bijvoorbeeld filmgerelateerde blogposts of recensies.
+Het **Actor**-object is bedoeld om informatie over acteurs vast te leggen, zoals naam, geboortedatum en de films waarin ze voorkomen.
 
 | Attribuut   | FormField type |
 | ----------- | -------------- |
@@ -66,7 +66,7 @@ Het **Author**-object bevat gegevens over auteurs, vergelijkbaar met het Actor-o
 |full_name|dynamic|
 
 ### BlogPost
-Het **BlogPost**-object is een essentieel onderdeel van de website en dient als opslagstructuur voor blogartikelen. Elk artikel kan categorieën, afbeeldingen en verschillende contentblokken bevatten.
+Het **BlogPost**-object wordt gebruikt om informatie rondom blog artikelen op te slaan. Elk artikel kan categorieën, afbeeldingen en verschillende contentblokken bevatten.
 
 | Attribuut    | FormField type |
 | ------------ | -------------- |
@@ -137,7 +137,7 @@ Het **Movie**-object biedt de structuur om informatie over films op te slaan, in
 |release_year_formatted|dynamic|
 
 ### Review
-Het **Review**-object is bedoeld voor recensies van boeken en films. Gebruikers kunnen beoordelingen en scores achterlaten.
+Het **Review**-object is bedoeld voor recensies van boeken en films. 
 
 |Attribuut|FormField type|
 |---|---|
@@ -178,12 +178,12 @@ De **Blog**-template wordt gebruikt voor blogpagina’s en bevat de lay-out voor
 ### Home
 De **Home**-template vormt de opmaak van de homepage. Deze template bevat velden voor een afbeelding, een titel, een over-sectie, en algemene contentblokken.
 
-|Attribuut|FormField type|
-|---|---|
-|header_image|media-item|
-|header_title|text|
-|about|blocks|
-|blocks|blocks|
+| Attribuut    | FormField type |
+| ------------ | -------------- |
+| header_image | media-item     |
+| header_title | text           |
+| about        | blocks         |
+| blocks       | blocks         |
 
 ### Review
 De **Review**-template biedt de lay-outstructuur voor recensiepagina's.
@@ -220,11 +220,3 @@ Het **Paragraph**-block biedt een sectie met tekst en een optionele titel voor a
 |---|---|
 |title|text|
 |html|text|
-
-### About
-Het **About**-block wordt vaak gebruikt om algemene informatie weer te geven, zoals op een "Over ons"-pagina.
-
-|Attribuut|FormField type|
-|---|---|
-|title|text|
-|text|html|
