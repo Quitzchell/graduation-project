@@ -19,5 +19,5 @@
 1. **Beperkingen in de lange termijn schaalbaarheid**: Voor organisaties die hun contentbeheer en objectbeheer op lange termijn willen uitbreiden, kan Filament beperkingen opleveren in termen van schaalbaarheid. Het toevoegen van complexere logica kan leiden tot een verhoogd risico op bugs en onderhoudsproblemen.
 2. **Concurrentie van andere CMS-oplossingen**: Filament moet zich onderscheiden van meer volwassen CMS-oplossingen die robuustere mogelijkheden voor content- en objectbeheer bieden. Een goed onderhouden custom-built systemen bieden vaak meer flexibiliteit voor complexere applicaties.
 3. **Kosten van maatwerkontwikkeling**: Filament is goed voor eenvoudige tot middelgrote projecten, maar voor organisaties die uitgebreide, complexe structuren nodig hebben, kunnen de kosten voor maatwerk en de tijdsinvestering in aanpassing snel oplopen.
-### Conclusie
+## Conclusie
 Filament biedt een solide basis voor eenvoudig contentbeheer en objectbeheer, maar vertoont enkele beperkingen in termen van complexiteit en uitbreidbaarheid. Het is goed geschikt voor kleinere tot middelgrote projecten, maar voor meer complexe of grootschalige toepassingen zijn er mogelijk alternatieven die oplossingen voor complexere use cases bieden. Verder hangt de toekomst van Filament hangt af van de verdere ontwikkeling van de community.

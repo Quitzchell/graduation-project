@@ -1,6 +1,6 @@
 # Opzet van het prototype
 
-## Inleiding
+# Inleiding
 
 Om verschillende Content Management Systemen (CMS) te vergelijken in gecontroleerde situaties, zal ik in dit project een praktisch experiment uitvoeren. Namelijk, het ontwikkelen van een full-stack prototype met verschillende CMS-pakketten. Dit maakt het eenvoudig om te beoordelen of verschillende functionaliteiten, die in het AllesOnline CMS beschikbaar zijn (of verwacht worden), ook beschikbaar zijn in CMS'en ontwikkeld door derden. Daarnaast maakt dit het mogelijk om te onderzoeken of een migratie van het AllesOnline CMS naar een nieuw pakket (deels) geautomatiseerd kan worden.
 
@@ -30,9 +30,11 @@ Globaal gezien zal een prototype aan de volgende eisen moeten voldoen.
 
 Een lijst met **requirements**, waarin de functionaliteiten van het huidige CMS staan die in het prototype moeten worden opgenomen, is te vinden in de [requirements](Requirements.md). Hierin zijn ook een aantal non-functionele requirements opgenomen.
 
-## Beschrijving van Objecten en Contentblokken
+# Beschrijving van Objecten en Contentblokken
 
  In het prototype zijn verschillende objecten en contentblokken beschikbaar. Hieronder volgt een lijst met de objecten, blokken en de bijbehorende FormFields die worden gebruikt om de inhoud van deze objecten en content te beheren.
+
+## Objecten
 
 ### Pagina (Page)
 

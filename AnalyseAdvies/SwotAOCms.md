@@ -24,5 +24,5 @@
 3. **Concurrentie van third-party CMS-systemen**: Externe, goed onderhouden CMS-oplossingen bieden mogelijk een kostenefficiënt en gebruiksvriendelijk alternatief voor AllesOnline, waardoor de relevantie van een eigen CMS-oplossing kan afnemen.
 4. **Beperkte testbaarheid van de huidige code**: Zonder refactoring zijn unit tests lastig te implementeren, wat de stabiliteit en kwaliteit van toekomstige updates kan ondermijnen.
 
-### Conclusie
+## Conclusie
 De AllesOnline CMS biedt waardevolle functionaliteit voor content- en objectbeheer, maar kampt met aanzienlijke beperkingen op het gebied van architectuur, onderhoudbaarheid en uitbreidbaarheid. Hoewel het systeem robuust is, zou een gefaseerde investering in refactoring, documentatieverbeteringen en geautomatiseerde tests de toekomstbestendigheid kunnen vergroten. Echter, gelet op de tijd en kosten die hiermee gemoeid zijn, kan het verkennen van externe CMS-alternatieven een strategische afweging zijn.

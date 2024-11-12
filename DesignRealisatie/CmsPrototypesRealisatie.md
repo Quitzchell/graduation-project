@@ -52,8 +52,6 @@ Contentblokken kunnen ook worden gedefinieerd met XML en vervolgens in verschill
 
 Dit blok bevat een titel- en tekstveld met RichText-functionaliteit voor tekstopmaak.
 
----
-
 ## Contentbeheer in CMS met Filament
 
 In Filament kan een soortgelijke functionaliteit worden gerealiseerd door gebruik te maken van Resources en een Eloquent-model gebaseerd op het `Page`-model van AllesOnline CMS. Dit model bevat de gegevens en relaties van pagina’s en hun hiërarchie.
