@@ -4,7 +4,7 @@ Dit verslag beschrijft het verloop van het project _'Revitalising Content Manage
 
 Binnen dit project wordt onderzocht of migratie naar een nieuw, modern CMS een duurzamer en kostenefficiënter alternatief biedt voor doorontwikkeling van de huidige systeem. Er wordt hierbij specifiek gekeken naar de beperkingen van het bestaande systeem, de vereisten voor een toekomstbestendig CMS, mogelijke alternatieven en de uitdagingen en voordelen van een migratieproces.
 ## Onderzoeksvraag
- Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaalbaarheid, onderhoudbaarheid en toekomstbestendigheid van haar webapplicaties te verbeteren?
+Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaalbaarheid, onderhoudbaarheid en toekomstbestendigheid van haar webapplicaties te verbeteren?
 ### Deelvragen
 
 1. **Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS van AllesOnline?**
@@ -38,21 +38,44 @@ Parallel aan het onderzoek heb ik de requirements opgesteld en een prototype-app
 
 Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden formuleren op enkele deelvragen.
  
-__Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?__
+1. __Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?__
 * **Beperkte Documentatie:** De documentatie is verouderd, waardoor ontwikkelaars onnodig lang bezig zijn bij het begrijpen van bepaalde functionaliteiten en parameters.
 * **Complexe Codestructuur:** Veel modules hebben te veel verantwoordelijkheden, wat onderhoud en uitbreiding bemoeilijkt.
-* **Sterke Afhankelijkheid:** Modules zijn te afhankelijk van elkaar, waardoor wijzigingen in één module andere modules kunnen beïnvloeden.
+* **Sterke Afhankelijkheid:** Modules en functionaliteiten zijn te afhankelijk van elkaar, waardoor wijzigingen in één module andere modules kunnen beïnvloeden.
 * **Niet-Naleven van SOLID-principes:** Het systeem voldoet niet aan de SOLID-principes, wat leidt tot hogere complexiteit en lagere testbaarheid en onderhoudbaarheid.
 
-__Aan welke criteria moet een gemoderniseerd CMS voldoen?__
-* **Uitgebreide Documentatie:** Het CMS moet beschikken over actuele documentatie die modules en parameters helder beschrijft.
+2. __Aan welke criteria moet een gemoderniseerd CMS voldoen?__
+* **Uitgebreide Documentatie:** Het CMS beschikt over actuele documentatie die modules en parameters helder beschrijft.
 * **Modulariteit:** Het systeem moet opgesplitst zijn in kleinere, onafhankelijke modules met specifieke verantwoordelijkheden zodat deze gemakkelijk uitgebreid kan worden als nodig.
 
-__Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
-* **Prestatieverschillen:** Het gebrek aan modulariteit en documentatie resulteert in hogere onderhoudskosten en meer bugs, wat de prestaties en stabiliteit beïnvloedt.
+5. __Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
+* **Prestatie:** Het gebrek aan modulariteit en documentatie resulteert in hogere onderhoudskosten en meer bugs, wat de prestaties en stabiliteit beïnvloedt.
 * **Kosten:** De investeringen in het opschonen en onderhouden van een eigen systeem moet goed worden afgewogen tegen de voordelen van een al bestaande oplossing, die doorgaans lagere onderhoudskosten met zich meebrengt.
 
+Om ervoor te zorgen dat mijn collega's de frontend en backend op hun eigen systeem kunnen draaien, heb ik ervoor gezorgd dat deze onderdelen middels Docker-containers opgestart kunnen worden. Hierbij maak ik gebruik van de standaardoplossing die we vanuit AllesOnline hebben gerealiseerd, met een aantal aanpassingen en uitbreidingen.
 # Opzetten van nulmeting en frontend tests met Cypress
 
-Om de betrouwbaarheid en consistentie van verschillende backends ten opzichte van het AllesOnline CMS te verifiëren, heb ik een Cypress-testsuite opgezet voor de frontend van het prototype. Deze tests controleren of de gegevensuitwisseling tussen backend en frontend juist verloopt, zodat de informatie correct wordt weergegeven. De Cypress-scripts evalueren specifiek of de frontend de gegevens accuraat ontvangt van de verschillende backend-implementaties. Hiermee kunnen, zodra een CMS-opzet met een van de onderzochte libraries is gerealiseerd, problemen met gegevensintegriteit vroegtijdig worden opgespoord. Dit zorgt voor een gestandaardiseerde basis om CMS-opties te vergelijken op functionaliteit en prestaties.
+Om de betrouwbaarheid en consistentie van verschillende backends ten opzichte van het AllesOnline CMS te verifiëren, heb ik een Cypress-testsuite opgezet voor de frontend van het prototype.
 
+De suite controleert of de gegevensuitwisseling tussen de backend en frontend correct verloopt en evalueert of de frontend de gegevens accuraat kan ontvangen. Hiermee kan, zodra een CMS-implementatie gerealiseerd is, door middel van gestandaardiseerde tests gevalideerd worden.
+
+* [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
+
+Omdat Cypress niet in onze standaard Docker-container kan draaien vanwege bepaalde dependencies die ontbreken in een Alpine-omgeving, heb ik het zo ingericht dat een externe container, specifiek opgezet voor Cypress, kan communiceren met de frontend-container om de tests uit te voeren. Het voordeel hiervan is dat de container voor de frontend niet onnodig groter wordt door de toevoeging van Cypress. Het nadeel is echter dat er een pauze moet worden ingebouwd tussen de requests, omdat de frontend-container anders te snel opeenvolgende verzoeken van hetzelfde adres ontvangt.
+# Onderzoek naar CMS met Filament
+
+Na het realiseren van het prototype met het AllesOnline CMS en het voorbereiden van de Cypress Test-suite, ben ik aan de gang gegaan met het onderzoeken van Filament. Filament is zoals ze het zelf zeggen  *"A collection of beautiful full-stack  components"*. Het biedt een verzameling componenten die ingezet kunnen worden om eenvoudig CRUD-functionaliteit op te zetten om gegevens te beheren. 
+
+* [Onderzoek naar CMS met Filament](AnalyseAdvies/OnderzoekNaarCMSMetFilament.md)
+* [SWOT: Filament](AnalyseAdvies/SwotFilamentCms.md)
+
+Tijdens het onderzoek ben ik ook begonnen met het ontwerpen en realiseren van een CMS met behulp van de Filament Library. Hierbij heb ik zowel de checklist voor CMS-criteria als de requirements in acht genomen. Daarnaast ben ik begonnen met het beschrijven van de vergelijking tussen hoe specifieke functionaliteiten gerealiseerd kunnen worden in verschillende frameworks en libraries.
+
+* [Design voor CMS functionaliteit in Filament](Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+* [Concepten voor CMS Prototype Realisaties](DesignRealisatie/CmsPrototypesRealisatie.md)
+* [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
+
+5. __Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
+* **Ondersteuning en ontwikkelkosten**: Filament heeft een groeiende community maar kan bij complexe functies extra ontwikkeltijd vergen vanwege het gebrek aan out-of-the-box oplossingen voor hiërarchische content. Dit kan leiden tot hogere onderhouds- en ontwikkelkosten in vergelijking met meer volwassen systemen.
+* **Laravel**: Filament maakt gebruik van Laravel’s Eloquent ORM, wat het beheer van resources vergemakkelijkt. Daarnaast biedt het het huidige developer-team een voordeel omdat ze al bekenend met Laravel zijn.
+* **Documentatie en schaalbaarheid**: De relatief nieuwe status van Filament betekent dat de ondersteuning en documentatie nog beperkt zijn, wat kan resulteren in hogere kosten om specifieke oplossingen te ontwikkelen en te onderhouden.

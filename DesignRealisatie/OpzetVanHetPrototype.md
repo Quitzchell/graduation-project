@@ -36,21 +36,22 @@ Een lijst met **requirements**, waarin de functionaliteiten van het huidige CMS 
 
 ### Pagina (Page)
 
-De pagina’s die beschikbaar zijn via XML-templates en dynamisch worden opgemaakt. Voor een 
-
+De **Pagina**-objecten vertegenwoordigen de webpagina's die worden weergegeven op de website. Ze zijn gebaseerd op `templates` en worden dynamisch opgemaakt. Dit maakt het mogelijk voor gebruikers om pagina’s te creëren en aan te passen. Deze templates vormen de basisstructuur voor het presenteren van verschillende soorten content.
 ### Actor
+Het **Actor**-object is bedoeld om informatie over acteurs vast te leggen, zoals naam, geboortedatum en de films waarin ze voorkomen. Dit object kan nuttig zijn om te koppelen aan bijvoorbeeld filmgerelateerde blogposts of recensies.
 
-|Attribuut|FormField type|
-|---|---|
-|name|text|
-|middle_name|text|
-|surname|text|
-|dob|date|
-|movies|tags|
-|movie_names|dynamic|
-|full_name|dynamic|
+| Attribuut   | FormField type |
+| ----------- | -------------- |
+| name        | text           |
+| middle_name | text           |
+| surname     | text           |
+| dob         | date           |
+| movies      | tags           |
+| movie_names | dynamic        |
+| full_name   | dynamic        |
 
 ### Author
+Het **Author**-object bevat gegevens over auteurs, vergelijkbaar met het Actor-object. Dit object kan worden gebruikt voor het beheren van informatie over auteurs van boeken die worden besproken in de blog of recensies.
 
 |Attribuut|FormField type|
 |---|---|
@@ -63,18 +64,20 @@ De pagina’s die beschikbaar zijn via XML-templates en dynamisch worden opgemaa
 |full_name|dynamic|
 
 ### BlogPost
+Het **BlogPost**-object is een essentieel onderdeel van de website en dient als opslagstructuur voor blogartikelen. Elk artikel kan categorieën, afbeeldingen en verschillende contentblokken bevatten.
 
-|Attribuut|FormField type|
-|---|---|
-|title|text|
-|excerpt|textarea|
-|image|media-item|
-|category_id|relation|
-|published_at|date|
-|published|select|
-|blocks|blocks|
+| Attribuut    | FormField type |
+| ------------ | -------------- |
+| title        | text           |
+| excerpt      | textarea       |
+| image        | media-item     |
+| category_id  | relation       |
+| published_at | date           |
+| published    | select         |
+| blocks       | blocks         |
 
 ### Book
+Het **Book**-object bevat informatie over boeken die relevant kunnen zijn voor de blog of recensies. Dit object biedt specifieke velden voor auteurs, publicatiejaar en beschrijving.
 
 |Attribuut|FormField type|
 |---|---|
@@ -87,13 +90,14 @@ De pagina’s die beschikbaar zijn via XML-templates en dynamisch worden opgemaa
 
 ### Category
 
-De categorieën waarin blogposts kunnen worden onderverdeeld. In de objectmanager van een categorie wordt een relatie-module toegevoegd, waarmee kan worden ingezien welke blogposts de geselecteerde categorie gebruiken.
+Het **Category**-object biedt een manier om blogposts te categoriseren, waardoor gebruikers eenvoudiger kunnen filteren en navigeren binnen verschillende soorten content.
 
 |Attribuut|FormField type|
 |---|---|
 |name|text|
 
 ### Director
+Het **Director**-object bevat gegevens over filmregisseurs. Dit object kan worden gekoppeld aan films in de blog of recensies.
 
 |Attribuut|FormField type|
 |---|---|
@@ -107,7 +111,7 @@ De categorieën waarin blogposts kunnen worden onderverdeeld. In de objectmanage
 
 ### FrontendUser
 
-Gebruikers die zich kunnen registreren op de website om reacties op blogposts en reviews achter te laten.
+Het **FrontendUser**-object representeert geregistreerde gebruikers van de website die reacties op blogposts of recensies kunnen achterlaten.
 
 |Attribuut|FormField type|
 |---|---|
@@ -116,6 +120,7 @@ Gebruikers die zich kunnen registreren op de website om reacties op blogposts en
 |Email|email|
 
 ### Movie
+Het **Movie**-object biedt de structuur om informatie over films op te slaan, inclusief de regisseur en acteurs.
 
 |Attribuut|FormField type|
 |---|---|
@@ -130,6 +135,7 @@ Gebruikers die zich kunnen registreren op de website om reacties op blogposts en
 |release_year_formatted|dynamic|
 
 ### Review
+Het **Review**-object is bedoeld voor recensies van boeken en films. Gebruikers kunnen beoordelingen en scores achterlaten.
 
 |Attribuut|FormField type|
 |---|---|
@@ -145,7 +151,7 @@ Gebruikers die zich kunnen registreren op de website om reacties op blogposts en
 
 ### User
 
-Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang tot het CMS en kunnen pagina’s, objecten en content beheren.
+Het **User**-object representeert beheerders die toegang hebben tot het CMS om de website te beheren.
 
 |Attribuut|FormField type|
 |---|---|
@@ -155,7 +161,11 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |Inloggen|submit|
 
 ## Templates
+
+Templates zijn vooraf gedefinieerde structuren die de lay-out en organisatie van verschillende soorten content op de website bepalen.
+
 ### Blog
+De **Blog**-template wordt gebruikt voor blogpagina’s en bevat de lay-out voor een header-afbeelding, een titel, en een verzameling van contentblokken.
 
 |Attribuut|FormField type|
 |---|---|
@@ -164,6 +174,7 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |blocks| blocks|
 
 ### Home
+De **Home**-template vormt de opmaak van de homepage. Deze template bevat velden voor een afbeelding, een titel, een over-sectie, en algemene contentblokken.
 
 |Attribuut|FormField type|
 |---|---|
@@ -173,6 +184,7 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |blocks|blocks|
 
 ### Review
+De **Review**-template biedt de lay-outstructuur voor recensiepagina's.
 
 |Attribuut|FormField type|
 |---|---|
@@ -181,8 +193,9 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |blocks|blocks|
 
 ## Blocks
-
+Blocks zijn herbruikbare elementen voor content in de templates. Ze zorgen voor modulariteit en flexibiliteit bij het opbouwen van pagina’s.
 ### Call to Action
+Een **Call to Action**-block is bedoeld om gebruikers aan te moedigen tot een actie, bijvoorbeeld een link volgen of een formulier invullen.
 
 |Attribuut|FormField type|
 |---|---|
@@ -192,12 +205,14 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |button_text|text|
 
 ### Image
+Het **Image**-block biedt de mogelijkheid om een afbeelding weer te geven in de content.
 
 |Attribuut|FormField type|
 |---|---|
 |image|media-item|
 
 ### Paragraph
+Het **Paragraph**-block biedt een sectie met tekst en een optionele titel voor algemene tekstinhoud.
 
 |Attribuut|FormField type|
 |---|---|
@@ -205,6 +220,7 @@ Gebruikers, ook wel beheerders (administrators) van de website, hebben toegang t
 |html|text|
 
 ### About
+Het **About**-block wordt vaak gebruikt om algemene informatie weer te geven, zoals op een "Over ons"-pagina.
 
 |Attribuut|FormField type|
 |---|---|
