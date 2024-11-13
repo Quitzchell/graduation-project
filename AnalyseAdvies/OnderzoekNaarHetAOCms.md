@@ -7,21 +7,11 @@ Dit document beschrijft de analyse van het AllesOnline CMS. Deze evaluatie is ui
 
 ## Systeemoverzicht: Beheren van content 
 
-Het AllesOnline CMS biedt uitgebreide mogelijkheden voor het beheren van de content op een website. Dit wordt gerealiseerd door verschillende modules en componenten die samenwerken om een gestructureerd en schaalbaar systeem te vormen.
+Het AllesOnline CMS is gebaseerd op **Laravel** biedt uitgebreide mogelijkheden voor het beheren van de content op een website. Dit wordt gerealiseerd door verschillende modules en componenten die samenwerken om een gestructureerd en schaalbaar systeem te vormen.
 
 ### ContentManagerController
 
-De **ContentManagerController** regisseert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's. De belangrijkste taken zijn: 
-
-1. **Contentbeheer**: 
-	* **Toevoegen/Bewerken**: Pagina's worden toegevoegd via `getAdd` en `postAdd`, en bewerkt via `getEdit` en `postEdit`.
-	* **Verwijderen**: `postDelete` verwijderd een pagina.
-	* **Kopiëren**: `getCopy` maakt een kopie van een pagina en zijn content.
-2. **Middleware en permissies:** Zorgt via `lang` en `can` middleware dat acties voorzien zijn van de juiste taal en gebruikersrechten.
-3. **Helpers**: 
-	* **Templates:** Verkrijgt beschikbare templates voor paginas.
-	* **URL-generatie**: Biedt methodes voor het genereren van URL's voor content.
-4. **Events en Models:** Werkt samen met modellen zoals `Page` en `ManagedContent` en gebruikt events zoals `PageWasUpdated` voor systeemreacties op wijzigingen.
+De **ContentManagerController** beheert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's, evenals het authenticeren van rechten van CMS-gebruikers om pagina's te beheren.
 
 ### ContentManagerModule
 
@@ -77,7 +67,7 @@ Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een solide basis b
 
 Een van de grootste obstakels in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is, zoals over de velden die in het CMS beschikbaar zijn via de XML-schema's, ontbreekt het aan meer gedetailleerde en up-to-date informatie over functionaliteiten verschillende functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars die niet goed kunnen achterhalen welke parameters voor welke FormModules geschikt zijn. 
 
-_Een voorbeeld van documentatie vind je in de bijlage: [voorbeeld documentatie AllesOnline CMS](Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCms.md)_
+_Een voorbeeld van documentatie vind je in de bijlage: [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCms.md)_
 
 **Aanbeveling**:
 - Een verbeteringsslag in de documentatie. Inclusief een up-to-date beschrijving van alle beschikbare modules en parameters met voorbeelden van gebruik in verschillende scenario’s voorkomt onduidelijkheid bij ontwikkelaars.
@@ -107,7 +97,6 @@ Een belangrijk probleem van het AllesOnline CMS is het niet naleven van de **SOL
      
 
 In de `FormTagsModule` worden deze SOLID-principes geschonden: het **Single Responsibility Principle (SRP)** door gecombineerde verantwoordelijkheden, het **Open/Closed Principle (OCP)** door noodzakelijke aanpassingen voor nieuwe functionaliteiten, en het **Dependency Inversion Principle (DIP)** door directe afhankelijkheden van concrete klassen, wat de onderhoudbaarheid en testbaarheid van de code vermindert.
-
 #### Gevolgen van niet naleven SOLID principes
 
 - **Verlies van herbruikbaarheid**: Functionaliteiten zijn ingebed in grote modules, waardoor hergebruik in andere delen van het CMS lastig is. Dit leidt tot duplicatie van code en inconsistenties in functionaliteit.
