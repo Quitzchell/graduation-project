@@ -34,6 +34,8 @@ Een lijst met **requirements**, met de functionaliteiten van het huidige CMS die
 
  In het prototype zijn verschillende objecten en contentblokken beschikbaar. Hieronder volgt een lijst met de objecten, blokken en de bijbehorende FormFields die worden gebruikt om de inhoud van deze objecten en content te beheren.
 
+*Voor een visuele weergave van de objecten en relaties in het prototype is er ook een [uml-diagram beschikaar](../Bijlagen/UmlEntiteitenDiagramPrototype.md)*
+
 ## Objecten
 
 ### Pagina (Page)
