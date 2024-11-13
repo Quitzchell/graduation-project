@@ -4,12 +4,15 @@
 Dit document beschrijft de analyse van het AllesOnline CMS. Deze evaluatie is uitgevoerd als een onderdeel van de *Available Product Analysis*, maar ook gericht op het identificeren van knelpunten binnen het huidige AllesOnline CMS. Het doel van dit onderzoek is niet alleen om een SWOT-analyse van het bestaande CMS te realiseren, maar ook om de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem. 
 
 *De belangrijkste sterke en zwakke punten van het AllesOnline CMS, evenals mogelijke kansen en bedreigingen, zijn in kaart gebracht in de SWOT-analyse, die je [hier kunt lezen](SwotAOCms).*
+
 ## Systeemoverzicht: Beheren van content 
 
 Het AllesOnline CMS biedt uitgebreide mogelijkheden voor het beheren van de content op een website. Dit wordt gerealiseerd door verschillende modules en componenten die samenwerken om een gestructureerd en schaalbaar systeem te vormen.
+
 ### ContentManagerController
 
 De **ContentManagerController** regisseert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's. De belangrijkste taken zijn: 
+
 1. **Contentbeheer**: 
 	* **Toevoegen/Bewerken**: Pagina's worden toegevoegd via `getAdd` en `postAdd`, en bewerkt via `getEdit` en `postEdit`.
 	* **Verwijderen**: `postDelete` verwijderd een pagina.
@@ -45,6 +48,7 @@ De weergave van de FormFields gebeurt via **blade**-templates, die de invoer en 
 ## Systeemoverzicht: Beheren van objecten
 
 Naast contentbeheer biedt het CMS ook mogelijkheden voor het beheren van objecten, zoals producten, transacties of andere entiteiten. Dit maakt het CMS veelzijdig inzetbaar binnen verschillende webapplicaties.
+
 ### ObjectManagerController
 
 De ObjectManagerController is verantwoordelijk voor het beheren van objecten. Deze controller extend de Laravel controller. Het dirigeert de mogelijkheden zoals het bewerken en verwijderen van objecten, het beheren van relaties tussen modellen, en het afhandelen van permissies en autorisatie. De controller maakt gebruik van middleware voor authenticatie en taalbeheer en bevat methoden voor het dynamisch ophalen van modellen, het verwerken van relaties en het uitvoeren van acties zoals sorteren, zoeken en ordenen van gegevens binnen het CMS. Eloquent maakt het mogelijk om relaties tussen modellen eenvoudig te definiëren en te beheren.
@@ -77,6 +81,7 @@ _Een voorbeeld van documentatie vind je in de bijlage: [voorbeeld documentatie A
 
 **Aanbeveling**:
 - Een verbeteringsslag in de documentatie. Inclusief een up-to-date beschrijving van alle beschikbare modules en parameters met voorbeelden van gebruik in verschillende scenario’s voorkomt onduidelijkheid bij ontwikkelaars.
+
 ### Complexe Codestructuur
 
 De huidige codestructuur van modules vormt ook een probleem. Deze modules bevatten vaak te veel verantwoordelijkheden, wat het onderhouden en uitbreiden ervan moeilijk maakt. De `FormTagsModule` bijvoorbeeld, verwerkt zowel de relatiebeheerfunctionaliteit als gegevensformattering, wat in strijd is met het **Single Responsibility Principle**.
@@ -87,9 +92,11 @@ De huidige codestructuur van modules vormt ook een probleem. Deze modules bevatt
 
 **Aanbeveling**:
 - Een grondige refactoring van de modules, waarbij de verantwoordelijkheden worden opgesplitst en er duidelijke interfaces worden gedefinieerd.
+
 ### Tight Coupling en SOLID principes
 
 Een belangrijk probleem van het AllesOnline CMS is het niet naleven van de **SOLID-principes**, wat de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van de code aanzienlijk belemmert.
+
 #### Kernprincipes
 
 1. **Single Responsibility Principle (SRP)**: Dit principe stelt dat een klasse slechts één reden tot verandering moet hebben. In het AllesOnline CMS zijn veel klassen verantwoordelijk voor meerdere functionaliteiten, wat leidt tot complexiteit en bemoeilijkt het isoleren en hergebruiken van functionaliteiten.
@@ -100,6 +107,7 @@ Een belangrijk probleem van het AllesOnline CMS is het niet naleven van de **SOL
      
 
 In de `FormTagsModule` worden deze SOLID-principes geschonden: het **Single Responsibility Principle (SRP)** door gecombineerde verantwoordelijkheden, het **Open/Closed Principle (OCP)** door noodzakelijke aanpassingen voor nieuwe functionaliteiten, en het **Dependency Inversion Principle (DIP)** door directe afhankelijkheden van concrete klassen, wat de onderhoudbaarheid en testbaarheid van de code vermindert.
+
 #### Gevolgen van niet naleven SOLID principes
 
 - **Verlies van herbruikbaarheid**: Functionaliteiten zijn ingebed in grote modules, waardoor hergebruik in andere delen van het CMS lastig is. Dit leidt tot duplicatie van code en inconsistenties in functionaliteit.
