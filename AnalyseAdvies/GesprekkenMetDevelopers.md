@@ -21,3 +21,13 @@ Wilco werkt al ongeveer acht jaar bij AllesOnline en is onze senior software dev
 ## Gesprek rondom realisatie van Filament CMS
 
 In een gesprek met Wilco, waarin ik kort uitlegde hoe pagina’s en blokken met CMS-content toegepast kunnen worden in een CMS met Filament, bespraken we een aantal onderwerpen. Wilco gaf aan dat hij het prettig vond dat de codebase van Filament grotendeels in PHP is geschreven, wat autocompletion mogelijk maakt — iets wat met XML beperkter en minder intuïtief is. Daarnaast vond hij het belangrijk dat de overhead voor developers wordt verminderd. In Filament zou dit bereikt kunnen worden door, in plaats van telkens een FormField te definiëren en dezelfde functies eraan te koppelen, een veelgebruikt FormField met deze specifieke functies in een factory te abstraheren. Zo kan een developer eenvoudiger dit veelgebruikte FormField definiëren.
+
+# Yoran van Driel
+
+## Algemene mening over het CMS
+
+Yoran, een van onze nieuwe medior developers met ervaring bij andere webbureaus, vindt het CMS verouderd. Hij waardeert echter de modulariteit van het systeem, zoals de mogelijkheid om bijvoorbeeld SEO-instellingen te configureren. Het inbouwen van maatwerk is naar zijn idee wel tijdrovend. Wanneer je alleen gebruikmaakt van de beschikbare functies in het CMS, werkt het systeem prettig, maar zodra specifieke aanpassingen nodig zijn, wordt het een uitdaging om dit goed te realiseren. Hij heeft zelf nog niet eerder aanpassingen in het CMS hoeven doorvoeren en werkt daarom in de meeste gevallen eromheen door een alternatieve oplossing te bedenken.
+
+In zijn ogen is het CMS op zichzelf een degelijk stuk maatwerk dat aangepast kan worden, maar we kiezen er volgens hem te vaak voor om dit niet te doen. Yoran denkt dat dit komt doordat wordt aangenomen dat bepaalde opties voor andere klanten niet nodig zijn. Hij is het hier echter niet mee eens, omdat hij ervan overtuigd is dat dit soort features juist als verkoopargumenten voor het CMS kunnen dienen en nuttige functionaliteiten bieden die verschillende klanten goed van pas kunnen komen.
+
+Wat betreft de developer experience zou hij het ook fijn vinden als er in het CMS minder tijdrovende taken waren om bijvoorbeeld een objectmanager, template of block beschikbaar te maken.
