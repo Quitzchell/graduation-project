@@ -1,19 +1,16 @@
 # Revitalising Content Management
 # Project Raport
----
 
 * ### [Voorpagina](ProjectRaport/Voorpagina.md)
 * ### [De opdracht](ProjectRaport/Opdracht.md)
 * ### [Leeswijzer](ProjectRaport/Leeswijzer.md)
 
 # Projectmanagement
----
 
 * ### [Projectplan](Projectmanagement/Projectplan.md)
 * ### [Logboek](Projectmanagement/Logboek.md)
 
 # Analyse & Advies
----
 
 * ### [Gesprekken met Developers](AnalyseAdvies/GesprekkenMetDevelopers.md)
 * ### [Requirements](AnalyseAdvies/Requirements.md)
@@ -24,7 +21,6 @@
 * ### [SWOT: CMS met Filament](AnalyseAdvies/SwotFilamentCms.md)
 
 # Design & Realisatie
----
 
 * ### [Opzet van het prototype](DesignRealisatie/OpzetVanHetPrototype.md)
 * ### [Concepten voor CMS Prototype Realisaties](DesignRealisatie/CmsPrototypesRealisatie.md)
@@ -33,7 +29,6 @@
 * ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
  
 # Bijlagen
----
 
 * #### [Voorbeeld van schema in AllesOnline CMS](Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
 * #### [Voorbeeld van documentatie AllesOnline CMS](Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
