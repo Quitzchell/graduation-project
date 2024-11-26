@@ -1,3 +1,3 @@
-<iframe width="960" height="551" src="https://www.youtube.com/embed/KPFFIOh_fAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="960" height="551" src="https://www.youtube.com/embed/GTFIFfygUhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-[Bekijk deze video op YouTube](https://www.youtube.com/watch?v=KPFFIOh_fAE) 
+[Bekijk deze video op YouTube](https://www.youtube.com/watch?v=GTFIFfygUhY) 
