@@ -35,4 +35,5 @@
 * #### [UML Entiteiten diagram voor Prototype](Bijlagen/UmlEntiteitenDiagramPrototype.md)
 * #### [UML Entiteiten diagram voor ContentManagement in Filament CMS](Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 * #### [Video Cypress Test AO CMS](Bijlagen/CypressTestsAOCms.md)
+* #### [Video Cypress Test Filament CMS](Bijlagen/CypressTestsFilamentCms.md)
 * #### [Evidence in verhouding tot leeruitkomsten](Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
