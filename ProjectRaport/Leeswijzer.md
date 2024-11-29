@@ -57,7 +57,7 @@ Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschi
 	* **Prestatie:** Het gebrek aan modulariteit en documentatie resulteert in hogere onderhoudskosten en meer bugs, wat de prestaties en stabiliteit beïnvloedt.
 	* **Kosten:** De investeringen in het opschonen en onderhouden van een eigen systeem moet goed worden afgewogen tegen de voordelen van een al bestaande oplossing, die doorgaans lagere onderhoudskosten met zich meebrengt.
 
-Om ervoor te zorgen dat mijn collega's de frontend en backend op hun eigen systeem kunnen draaien, heb ik ervoor gezorgd dat deze onderdelen middels Docker-containers opgestart kunnen worden. Hierbij maak ik gebruik van de standaardoplossing die we vanuit AllesOnline hebben gerealiseerd, met een aantal aanpassingen en uitbreidingen.
+Om ervoor te zorgen dat mijn collega's de frontend en backend op hun eigen systeem kunnen draaien, heb voor de losse onderdelen Docker-containers voorbereid. Hierbij maak ik voor de backends gebruik van de voorgedefineerde AllesOnline-container, met een aantal aanpassingen en uitbreidingen.
 # Opzetten van nulmeting en frontend tests met Cypress
 
 Om de betrouwbaarheid en consistentie van verschillende backends ten opzichte van het AllesOnline CMS te verifiëren, heb ik een Cypress-testsuite opgezet voor de frontend van het prototype.
