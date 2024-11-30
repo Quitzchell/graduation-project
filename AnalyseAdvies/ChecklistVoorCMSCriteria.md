@@ -11,7 +11,7 @@
 | Text Form Field            | 🟢          | 🟢       |          |     |
 | Textarea Form Field        | 🟢          | 🟢       |          |     |
 | URL Form Field             | 🟢          | 🟢       |          |     |
-| Media Item Form Field      | 🟢          | 🟡       |          |     |
+| Media Item Form Field      | 🟢          | 🟢       |          |     |
 | File Form Field            | 🟢          | 🟢       |          |     |
 | Relations Form Field       | 🟢          | 🟢       |          |     |
 | Video Form Field           | 🟢          | 🟢       |          |     |
