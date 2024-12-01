@@ -12,7 +12,7 @@
 
 # Analyse & Advies
 
-* ### [Gesprekken met Developers](AnalyseAdvies/GesprekkenMetDevelopers.md)
+* ### [Gesprekken en ervaringen met andere Developers](AnalyseAdvies/GesprekkenEnErvaringenMetDevelopers.md)
 * ### [Requirements](AnalyseAdvies/Requirements.md)
 * ### [Checklist voor CMS criteria](AnalyseAdvies/ChecklistVoorCMSCriteria)
 * ### [Onderzoek naar het AllesOnline CMS](AnalyseAdvies/OnderzoekNaarHetAOCms.md)

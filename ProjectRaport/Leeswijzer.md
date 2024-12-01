@@ -3,12 +3,11 @@
 
 # Inleiding
 
-Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_. Tijdens dit project wordt onderzocht hoe AllesOnline - een full-service bureau voor online en offline communicatie - haar huidige Content Management Systeem (CMS) kan moderniseren. Het CMS dat momenteel in gebruik is en sinds 2015 operationeel is, vormt de basis van de webapplicaties die het bedrijf ontwikkelt. Door veroudering en beperkt onderhoud is het systeem echter moeilijk uit te breiden en minder efficiënt geworden, wat de schaalbaarheid en toekomstbestendigheid belemmert.
+Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_, waarin wordt onderzocht hoe AllesOnline - een full-service bureau voor online en offline communicatie - haar huidige intern ontwikkelde Content Management Systeem (CMS) kan moderniseren. Het CMS, dat momenteel in gebruik is en sinds 2015 operationeel is, vormt de basis van de webapplicaties die het bedrijf ontwikkelt. Door een gebrek aan aandacht en onderhoud is het systeem echter verouderd. Dit maakt het moeilijk uit te breiden, wat het werken ermee steeds minder efficiënt maakt en zowel de schaalbaarheid als de toekomstbestendigheid belemmert.
 
 Concreet richt het onderzoek zich op het formuleren van een advies over twee mogelijke strategieën voor het CMS: het doorontwikkelen van het huidige systeem of het overstappen naar een door een derde partij ontwikkeld CMS. In het geval van de laatste strategie hoort daar ook de mogelijkheid bij om het CMS van de bestaande websites naar het nieuwe systeem te migreren.
 ## Onderzoeksvraag
 Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaalbaarheid, onderhoudbaarheid en toekomstbestendigheid van haar webapplicaties te verbeteren?
-
 ### Deelvragen
 
 1. **Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS van AllesOnline?**
@@ -24,11 +23,11 @@ Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaa
 
 # Onderzoek naar huidige CMS en opzet Prototype applicatie
 
-In de eerste weken van het project heb ik mij gericht op het analyseren van het huidige CMS. Om een gedegen beeld te krijgen, heb ik gesprekken gevoerd met de developers van AllesOnline over hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarnaast heb ik mijn eigen ervaringen met CMS-systemen meegenomen en een grondige analyse gedaan van de structuur en functionaliteiten binnen de codebase.
+In de eerste weken van het project heb ik mij gericht op het analyseren van het intern ontwikkelde CMS. Om een goed beeld van te krijgen, heb ik gesprekken gevoerd met mijn collega-developers van AllesOnline over hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarnaast heb ik mijn eigen ervaringen met CMS-systemen meegenomen en een analyse gedaan van de structuur en functionaliteiten binnen het CMS.
 
-Uit de gesprekken en analyses kwamen verschillende knelpunten naar voren die aantonen dat het huidige CMS niet volledig aan de verwachtingen voldoet. Hoewel pragmatische oplossingen vaak mogelijk zijn, botsen deze oplossingen met ontwikkelingsstandaarden, zoals de SOLID-principes.
+Uit de gesprekken en analyses kwamen verschillende wensen en valkuilen naar voren. Hieruit bleek dat de meeste developers op een pragmatische manier wel tot oplossingen kunnen komen, maar dat deze oplossingen regelmatig botsen met best practices. Zo is het bijvoorbeeld ingewikkeld om te werken met polymorfe relaties, en is het niet altijd mogelijk om waarden voor een selectieveld op meerdere criteria te filteren.
 
-> * [Gesprekken met Developers](../AnalyseAdvies/GesprekkenMetDevelopers.md)
+> * [Gesprekken met Developers](GesprekkenEnErvaringenMetDevelopers.md)
 > * [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 > * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 

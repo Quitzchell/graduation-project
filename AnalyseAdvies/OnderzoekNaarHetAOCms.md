@@ -1,22 +1,20 @@
 # Onderzoek naar het AllesOnline CMS
 # Inleiding
 
-Dit document beschrijft de analyse van het AllesOnline CMS. Deze evaluatie is uitgevoerd als een onderdeel van de *Available Product Analysis*, maar ook gericht op het identificeren van knelpunten binnen het huidige AllesOnline CMS. Het doel van dit onderzoek is niet alleen om een SWOT-analyse van het bestaande CMS te realiseren, maar ook om de uitdagingen te identificeren die voortkomen uit de huidige staat van het systeem. 
+Dit document beschrijft de analyse van het AllesOnline CMS. Deze is uitgevoerd als onderdeel van een *Available Product Analysis*, maar is ook gericht op het identificeren van knelpunten binnen het huidige AllesOnline CMS. 
 
-*De belangrijkste sterke en zwakke punten van het AllesOnline CMS, evenals mogelijke kansen en bedreigingen, zijn in kaart gebracht in de SWOT-analyse, die je [hier kunt lezen](SwotAOCms).*
+*De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse. [Deze lees je hier](AnalyseAdvies/SwotAOCms.md).*
 
 ## Systeemoverzicht: Beheren van content 
 
-Het AllesOnline CMS is gebaseerd op **Laravel** biedt uitgebreide mogelijkheden voor het beheren van de content op een website. Dit wordt gerealiseerd door verschillende modules en componenten die samenwerken om een gestructureerd en schaalbaar systeem te vormen.
-
+Het AllesOnline CMS is gebouwd op Laravel en maakt veelvuldig gebruik van de Eloquent ORM van dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontendcomponenten het opzetten van een CMS voor een website mogelijk maken. Hieronder staan een aantal van de onderdelen van het systeem die het contentbeheer beschrijven.
 ### ContentManagerController
 
-De **ContentManagerController** beheert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's, evenals het authenticeren van rechten van CMS-gebruikers om pagina's te beheren.
+De **ContentManagerController** beheert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's. Daarnaast biedt het de functionaliteit om de rechten van gebruikers te verifiëren voor het beheren van specifieke content en pagina's binnen het CMS.
 
 ### ContentManagerModule
 
-De **ContentManagerModule** en de bijbehorende view zijn verantwoordelijk voor het tonen en beheren van hiërarchisch georganiseerde pagina's binnen het CMS. Deze module biedt mogelijkheden om pagina's aan te maken, te bewerken, te verwijderen en te ordenen. De weergave van de module wordt verzorgd door een **blade**-template, waarin de pagina-items en hun hiërarchie (zoals paginagroepen) overzichtelijk worden weergegeven in een drag-en-drop-interface. Afhankelijk van de gebruikersrechten worden bewerkings- en verwijderopties getoond, evenals knoppen om pagina's te bekijken of te kopiëren.
-
+De **ContentManagerModule** en bijbehorende view zijn verantwoordelijk voor het tonen en beheren van hiërarchisch georganiseerde pagina's binnen het CMS. Deze module biedt mogelijkheden om pagina's aan te maken, bewerken, verwijderen en ordenen. De weergave van de module wordt verzorgd door een **blade**-template, waarin de pagina's en hun hiërarchie (zoals paginagroepen) overzichtelijk worden weergegeven in een drag-en-drop-interface. Afhankelijk van de gebruikersrechten worden de bewerkings- en verwijderopties getoond, naast de opties om pagina's te bekijken of te kopiëren.
 ### Page (model)
 
 Het **Page**-model vormt de kern van de contentstructuur van een website. Dit model vertegenwoordigt individuele pagina's en slaat informatie op, zoals de naam en het toegepaste template. Het **Page**-model bepaalt ook welke content aan specifieke pagina's is gekoppeld via relaties met andere tabellen, zoals het **ManagedContent**-model.
