@@ -1,8 +1,8 @@
 # SWOT: AllesOnline CMS
 
 ## Strengths (Sterktes)
-1. **Uitgebreide functionaliteit voor content- en objectbeheer**: Het AllesOnline CMS biedt een breed scala aan mogelijkheden voor contentbeheer, inclusief hiërarchisch gestructureerde contentpagina's en objectbeheer.
-2. **Flexibiliteit en schaalbaarheid**: Door de ondersteuning van meertalige content, aangepaste templates en dynamische URL's is het CMS flexibel en schaalbaar, wat het geschikt maakt voor verschillende webapplicaties.
+1. **Uitgebreide functionaliteit voor content- en objectbeheer**: Het AllesOnline CMS biedt veel mogelijkheden voor contentbeheer, inclusief het hiërarchisch indelen van contentpagina's.
+2. **Dynamische templates en meertalige content**: Door de ondersteuning voor meertalige content, aangepaste templates en dynamische URL's is het CMS - qua functionaliteit die op dit moment beschikbaar is - schaalbaar, wat gebruikers in staat stelt de content op een website zelf te beheren.
 3. **Gebruik van Laravel ORM (Eloquent)**: De inzet van Eloquent ORM vergemakkelijkt het databeheer en de interactie tussen objecten, wat de leesbaarheid van de code en het onderhoud vereenvoudigt.
 4. **Gebruiksvriendelijke interface met drag-en-drop-functionaliteit**: Dankzij de blade templates en drag-en-drop-interface kunnen gebruikers content eenvoudig beheren en ordenen.
 
