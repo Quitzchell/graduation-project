@@ -7,125 +7,115 @@ Dit document beschrijft de analyse van het AllesOnline CMS. Deze is uitgevoerd a
 
 ## Systeemoverzicht: Beheren van content 
 
-Het AllesOnline CMS is gebouwd op Laravel en maakt veelvuldig gebruik van de Eloquent ORM van dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontendcomponenten het opzetten van een CMS voor een website mogelijk maken. Hieronder staan een aantal van de onderdelen van het systeem die het contentbeheer beschrijven.
+Het AllesOnline CMS is gebouwd op Laravel en maakt veelvuldig gebruik van de Eloquent ORM van dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontend componenten het opzetten van een CMS voor een website mogelijk maken. Hieronder staan een aantal van de belangrijkste onderdelen van het systeem die het content beheer beschrijven.
 ### ContentManagerController
 
 De **ContentManagerController** beheert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's. Daarnaast biedt het de functionaliteit om de rechten van gebruikers te verifiëren voor het beheren van specifieke content en pagina's binnen het CMS.
 
 ### ContentManagerModule
 
-De **ContentManagerModule** en bijbehorende view zijn verantwoordelijk voor het tonen en beheren van hiërarchisch georganiseerde pagina's binnen het CMS. Deze module biedt mogelijkheden om pagina's aan te maken, bewerken, verwijderen en ordenen. De weergave van de module wordt verzorgd door een **blade**-template, waarin de pagina's en hun hiërarchie (zoals paginagroepen) overzichtelijk worden weergegeven in een drag-en-drop-interface. Afhankelijk van de gebruikersrechten worden de bewerkings- en verwijderopties getoond, naast de opties om pagina's te bekijken of te kopiëren.
+De `ContentManagerModule` en bijbehorende view zijn verantwoordelijk voor het tonen en beheren van de pagina's binnen het CMS. Deze module biedt mogelijkheden om pagina's aan te maken, bewerken, verwijderen en ordenen. De weergave van de module wordt verzorgd door een **blade**-template, waarin de pagina's en de pagina-structuur overzichtelijk worden weergegeven in een drag-en-drop-interface. Afhankelijk van de gebruikersrechten worden de bewerkings- en verwijder opties getoond, naast de opties om pagina's te bekijken of te kopiëren.
 ### Page (model)
 
-Het **Page**-model vormt de kern van de contentstructuur van een website. Dit model vertegenwoordigt individuele pagina's en slaat informatie op, zoals de naam en het toegepaste template. Het **Page**-model bepaalt ook welke content aan specifieke pagina's is gekoppeld via relaties met andere tabellen, zoals het **ManagedContent**-model.
-
-Het model maakt gebruik van **Eloquent**, het Object-Relational Mapping (ORM) systeem van **Laravel**, om met de database te communiceren. Met verschillende functies kan het **Page**-model pagina's genereren op basis van hun template en op basis van de structuur van de URI. Bovendien ondersteunt het model meertalige namen en dynamische URL-generatie die is gebaseerd op de hiërarchie van de content.
-
+De contentstructuur van een website die gebruikmaakt van het AllesOnline CMS begint bij het `Page`-model. Dit model vertegenwoordigt individuele pagina's en slaat basisinformatie op, zoals de naam en het toegepaste `Template`. Aan de hand van deze `Templates` wordt bepaald welke content aan een pagina kan worden toegevoegd. De content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. _Een ERD voor het `Page`-model vind je in [dit voorbeeld](ErdAoCmsPageModel.md)_.
 ### Templates
 
-In de codebase van de webapplicatie kunnen schema's voor pagina's worden aangemaakt op basis van xml-bestanden. Deze zogenoemde templates dienen als sjablonen om te bepalen op welke manier eindgebruikers informatie kunnen toevoegen die op een pagina weergegeven wordt. Hoe deze informatie ingevoerd kan worden, wordt bepaald door middel van **FormFields**.
+Binnen de repository van de websites die gebruikmaken van het AllesOnline CMS, kunnen de eerder genoemde `templates` dienen als een schema dat voorschrijft welke informatie op een pagina beschikbaar is. Deze templates kunnen worden gedefinieerd aan de hand van XML-bestanden. Binnen deze templates kunnen velden worden gedefinieerd die op hun beurt verwijzen naar `formfield`-modules.
 
-Binnen templates is het mogelijk om naar andere templates te verwijzen. In dit geval worden ze binnen het systeem geen _templates_ meer genoemd, maar _blocks_. Deze structuur vormt de basis voor de verschillende soorten content die gebruikers op een pagina kunnen definiëren en organiseren.
+Binnen templates is het ook mogelijk om te verwijzen naar andere schema's waarin een verzameling van `formfield`-modules beschikbaar is. Deze schema's worden binnen het CMS `blocks` genoemd. `Blocks` vormen de basis voor grotere, samengestelde elementen die regelmatig binnen een website worden hergebruikt.
 
 ### FormFields
 
-De **FormField**-modules en bijhorende views bieden een gebruikersinterface waarmee eindgebruikers content kunnen toevoegen of bewerken binnen het CMS. Denk hierbij aan gegevens zoals tekst, afbeeldingen en andere contenttypen.
-
-De weergave van de FormFields gebeurt via **blade**-templates, die de invoer en interactie faciliteren. De specifieke configuratie van een template bepaalt hoe de FormFields worden weergegeven. Elk template kan uit verschillende FormFields bestaan, zoals tekstvelden en keuzelijsten. Dit zorgt voor flexibiliteit die het mogelijk maakt dat pagina's aan de unieke vereisten van de eindgebruiker voldoen.
-
+De `FormField`-modules en bijbehorende views bieden een interface waarmee eindgebruikers content kunnen toevoegen of bewerken binnen het CMS. Denk hierbij aan invoervelden voor bijvoorbeeld tekst of bestanden. De weergave van de `FormFields` wordt gedefinieerd via `blade`-templates.
 ## Systeemoverzicht: Beheren van objecten
 
-Naast contentbeheer biedt het CMS ook mogelijkheden voor het beheren van objecten, zoals producten, transacties of andere entiteiten. Dit maakt het CMS veelzijdig inzetbaar binnen verschillende webapplicaties.
-
+Naast het beheren van content op pagina's biedt het CMS ook de mogelijkheid om objecten te beheren die binnen een website gebruikt kunnen worden. Denk hierbij aan producten in een webshop of workshops op een website die opleidingen aanbiedt. Hieronder staan een aantal van de belangrijkste onderdelen van het systeem die het contentbeheer beschrijven.
 ### ObjectManagerController
 
-De ObjectManagerController is verantwoordelijk voor het beheren van objecten. Deze controller extend de Laravel controller. Het dirigeert de mogelijkheden zoals het bewerken en verwijderen van objecten, het beheren van relaties tussen modellen, en het afhandelen van permissies en autorisatie. De controller maakt gebruik van middleware voor authenticatie en taalbeheer en bevat methoden voor het dynamisch ophalen van modellen, het verwerken van relaties en het uitvoeren van acties zoals sorteren, zoeken en ordenen van gegevens binnen het CMS. Eloquent maakt het mogelijk om relaties tussen modellen eenvoudig te definiëren en te beheren.
-
+De `ObjectManagerController` is verantwoordelijk voor het beheren van objecten. Deze controller breidt de standaard Laravel-controller uit en biedt functionaliteit voor acties zoals het bewerken en verwijderen van objecten, het beheren van relaties tussen modellen en het afhandelen van permissies en autorisatie. Daarnaast bevat de controller ook logica voor acties zoals het sorteren, zoeken en ordenen van objecten binnen het CMS.
 ### Eloquent models
 
-Voor de representatie van de objecten in het CMS wordt gebruikgemaakt van **Eloquent**-modellen. Eloquent is een krachtige objectgeoriënteerde tool die het werken met databasegegevens vereenvoudigt. Elk model komt overeen met een tabel in de database, waarbij elk record in die tabel de gegevens van een specifiek object bevat. Met Eloquent kun je eenvoudig gegevens ophalen, bijwerken, verwijderen en relaties tussen verschillende objecten beheren.
-
-Door Eloquent te gebruiken, kan het CMS op een flexibele manier omgaan met de objecten binnen een webapplicatie.
-
+Voor de representatie van objecten in het CMS wordt gebruikgemaakt van `Eloquent`-modellen. `Eloquent` is een ORM dat onderdeel is van Laravel en het mogelijk maakt om op een eenvoudige, objectgeoriënteerde manier met gegevens van objecten te werken. Denk hierbij aan het ophalen, bijwerken en verwijderen van gegevens, evenals het definiëren van relaties tussen verschillende objecten.
 ### CMS schema's
 
-In de codebase van de webapplicaties kunnen op basis xml-bestanden ook CMS-schema's voor objecten worden aangemaakt. Deze schema's dienen als sjabloon voor de weergave en het beheer van objecten in het CMS. Hieronder vallen weergaven voor het aanmaken, bewerken van objecten en het weergeven van een overzicht hiervan. Voor het aanmaken en bewerken van objecten worden, net als bij content-templates, **FormFields** gebruikt. 
+In de repositories van de websites die gebruikmaken van het AllesOnline CMS kunnen op basis van XML-bestanden ook CMS-schema's voor objecten worden aangemaakt. Deze schema's dienen als blauwdruk voor de weergave en het beheer van objecten in het CMS. Voor het definiëren van de invoervelden die door eindgebruikers kunnen worden gebruikt om objecten te beheren, worden, net als bij de templates voor content, `FormFields` gebruikt.
 
-In de templates kan ook worden vastgelegd hoe relaties tussen objecten beheerd moeten worden. Denk hierbij aan het toevoegen, bewerken of loskoppelen van gerelateerde objecten vanuit een ander object.
+In deze schema's kan ook worden gedefinieerd hoe relaties tussen objecten kunnen worden beheerd. Denk hierbij aan mogelijkheden om gerelateerde objecten toe te voegen, te bewerken of los te koppelen vanuit een object dat een eindgebruiker aan het aanmaken of bewerken is.
 
 ### FormFields
 
-De **FormField**-modules voor objecten biedt een interface voor het invoeren en beheren van gegevens binnen de object templates. Deze modules geven ontwikkelaars de mogelijkheid om verschillende gegevensvelden toe te voegen aan objecten. Dit is vergelijkbaar met hoe het werkt voor pagina's. Elk veld wordt gerepresenteerd doormiddel van een **blade**-template, die de invoeropties en de interactie mogelijk maakt. De configuratie van de FormFields in object templates bepaalt hoe gegevens kunnen worden ingevoerd en weergegeven, en kan variëren afhankelijk van de specifieke vereisten van het object.
-
+De `FormField`-modules en bijbehorende views bieden - net zoals bij contentbeheer - een interface waarmee eindgebruikers informatie van objecten kunnen ingeven of bewerken. 
 ## Evaluatie van het CMS
 
-Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een solide basis biedt voor webontwikkeling, kent het systeem aanzienlijke beperkingen op het gebied van ontwikkelaarsvriendelijkheid, onderhoudbaarheid en uitbreidbaarheid. Deze evaluatie richt zich op de architectuur, codestructuur en documentatie, en onderzoekt hoe het huidige CMS voldoet aan de basisprincipes van softwareontwikkeling, zoals de SOLID-principes.
+Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een goede basis biedt voor webontwikkeling, kent het systeem aanzienlijke beperkingen op het gebied van het bieden van een goede development experience, onderhoudbaarheid en uitbreidbaarheid. 
+
+Hieronder een evaluatie die zich onderandere richt op de architectuur, functionaliteiten, documentatie en hoe het voldoet aan de best practices binnen softwareontwikkeling.
 
 ### Gebrekkige Documentatie
 
-Een van de grootste obstakels in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is, zoals over de velden die in het CMS beschikbaar zijn via de XML-schema's, ontbreekt het aan meer gedetailleerde en up-to-date informatie over functionaliteiten verschillende functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars die niet goed kunnen achterhalen welke parameters voor welke FormModules geschikt zijn. 
+Een van de grootste gebreken in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel documentatie vaak wel beschikbaar is, ontbreekt gedetailleerde informatie over hoe bepaalde functionaliteiten moeten worden toegepast. In sommige gevallen ontbreekt zelfs volledig informatie over het bestaan van bepaalde functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars, die hierdoor niet goed kunnen achterhalen welke functionaliteiten beschikbaar zijn voor specifieke `FormField`-modules.
 
-_Een voorbeeld van documentatie vind je in de bijlage: [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCms.md)_
+_Een voorbeeld van documentatie vind je in deze bijlage: [voorbeeld documentatie AllesOnline CMS](Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCms.md)_
 
 **Aanbeveling**:
-- Een verbeteringsslag in de documentatie. Inclusief een up-to-date beschrijving van alle beschikbare modules en parameters met voorbeelden van gebruik in verschillende scenario’s voorkomt onduidelijkheid bij ontwikkelaars.
+- Een verbetering van de documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, attributen en parameters, met voorbeelden van hoe functionaliteiten in verschillende scenario’s kunnen worden gebruikt. Dit voorkomt onduidelijkheid en bespaart veel tijd die anders besteed zou worden aan het onderzoeken van implementaties tijdens het ontwikkelen van websites.
 
 ### Complexe Codestructuur
 
-De huidige codestructuur van modules vormt ook een probleem. Deze modules bevatten vaak te veel verantwoordelijkheden, wat het onderhouden en uitbreiden ervan moeilijk maakt. De `FormTagsModule` bijvoorbeeld, verwerkt zowel de relatiebeheerfunctionaliteit als gegevensformattering, wat in strijd is met het **Single Responsibility Principle**.
+De huidige codestructuur van modules is het volgende probleem waar een developer na onduidelijkheid in de documentatie tegenaan kan lopen. De modules bevatten vaak te veel verantwoordelijkheden, wat niet alleen het begrijpen van de werking bemoeilijkt, maar ook het onderhoud en de uitbreiding ervan ingewikkelder maakt. Een goed voorbeeld hiervan is de `FormTagsModule`, die zowel verantwoordelijk is voor dataverwerking, database-interactie en UI-configuratie. Dit is in strijd is met het **Single Responsibility Principle**.
 
-**Gevolgen van deze complexiteit**:
-- De kans op bugs neemt toe, aangezien wijzigingen in een deel van de module vaak onbedoeld andere delen beïnvloeden.
-- Het ontbreken van duidelijke interfaces tussen modules beperkt de mogelijkheid om de applicatie uit te breiden of om componenten opnieuw te gebruiken.
+**Gevolgen van deze complexiteit:**
+* De kans op bugs neemt toe, aangezien wijzigingen in een deel van de module vaak onbedoeld andere onderdelen kan beïnvloeden.
+* Het ontbreken van duidelijke interfaces tussen modules beperkt de mogelijkheid om de applicatie uit te breiden of om componenten opnieuw te gebruiken.
+* De onderhoudbaarheid en testbaarheid van de module worden belemmerd, wat leidt tot hogere ontwikkel-en beheerkosten.
 
-**Aanbeveling**:
-- Een grondige refactoring van de modules, waarbij de verantwoordelijkheden worden opgesplitst en er duidelijke interfaces worden gedefinieerd.
+**Aanbeveling:**
+* Een grondige refactoring van de modules, waarbij verantwoordelijkheden worden opgesplitst in afzonderlijke classes of componenten, bijvoorbeeld:
+	* Een service class voor dataverwerking.
+	* Een repository voor database-interactie.
+	* Een aparte module voor UI-gerelateerde configuratie.
+* Dit vereist het definiëren van duidelijke interfaces tussen deze onderdelen, wat zorgt voor betere herbruikbaarheid, testbaarheid en uitbreidbaarheid van de applicatie.
 
-### Tight Coupling en SOLID principes
+### SOLID principes
 
-Een belangrijk probleem van het AllesOnline CMS is het niet naleven van de **SOLID-principes**, wat de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van de code aanzienlijk belemmert.
-
+Waar in het vorige probleem al gehint werd naar SOLID principes, zien we op een grote schaal door het AllesOnline CMS dat de **SOLID-principes**, wat de onderhoudbaarheid, uitbreidbaarheid en testbaarheid niet toegepast is.
 #### Kernprincipes
 
-1. **Single Responsibility Principle (SRP)**: Dit principe stelt dat een klasse slechts één reden tot verandering moet hebben. In het AllesOnline CMS zijn veel klassen verantwoordelijk voor meerdere functionaliteiten, wat leidt tot complexiteit en bemoeilijkt het isoleren en hergebruiken van functionaliteiten.
+1. **Single Responsibility Principle (SRP)**: Dit principe stelt dat een class slechts één reden tot verandering moet hebben. In het AllesOnline CMS zijn veel classes verantwoordelijk voor meerdere functionaliteiten, wat leidt tot complexiteit en bemoeilijkt het isoleren en hergebruiken van functionaliteiten.
     
-2. **Open/Closed Principle (OCP)**: Software-entiteiten moeten open zijn voor uitbreiding, maar gesloten voor aanpassing. In de huidige architectuur vereisen nieuwe functionaliteiten vaak wijzigingen in bestaande code, wat de kans op bugs vergroot en de onderhoudbaarheid bemoeilijkt.
+2. **Open/Closed Principle (OCP)**: Classes moeten open zijn voor uitbreiding, maar gesloten voor aanpassing. In de huidige architectuur vereisen nieuwe functionaliteiten vaak wijzigingen in bestaande code, wat de kans op bugs vergroot en de onderhoudbaarheid bemoeilijkt.
     
-3. **Dependency Inversion Principle (DIP)**: Hogere niveau modules moeten afhankelijk zijn van abstracties in plaats van concrete implementaties. In het AllesOnline CMS worden veel afhankelijkheden direct binnen klassen aangeroepen.
+3. **Dependency Inversion Principle (DIP)**: Modules op een hoger niveau moeten afhankelijk zijn van abstracties in plaats van concrete implementaties. In het AllesOnline CMS worden veel functionaliteiten direct binnen classes aangeroepen, dit belemmert onafhankelijkheid.
      
-
-In de `FormTagsModule` worden deze SOLID-principes geschonden: het **Single Responsibility Principle (SRP)** door gecombineerde verantwoordelijkheden, het **Open/Closed Principle (OCP)** door noodzakelijke aanpassingen voor nieuwe functionaliteiten, en het **Dependency Inversion Principle (DIP)** door directe afhankelijkheden van concrete klassen, wat de onderhoudbaarheid en testbaarheid van de code vermindert.
 #### Gevolgen van niet naleven SOLID principes
 
-- **Verlies van herbruikbaarheid**: Functionaliteiten zijn ingebed in grote modules, waardoor hergebruik in andere delen van het CMS lastig is. Dit leidt tot duplicatie van code en inconsistenties in functionaliteit.
+- **Verlies van herbruikbaarheid**: Functionaliteiten zijn gedefineerd in modules, hierdoor is het niet mogelijk om bepaalde logica in andere delen van het CMS te hergebruiken. Dit leidt in eerste instantie tot duplicatie van code, wat een risico is voor het ontstaan van inconsistenties in functionaliteit.
     
-- **Slechte testbaarheid**: Omdat logica vaak in één module is ondergebracht, is het moeilijk om individuele functionaliteiten te testen zonder de hele module te laden. Dit maakt het schrijven van unit tests onpraktisch.
+- **Slechte testbaarheid**: Omdat logica vaak in één grotere functie in een module is ondergebracht, is het moeilijk om individuele functionaliteiten te testen zonder de gehele module te laden. Dit maakt het schrijven van unit tests lastig.
     
 - **Moeilijk onderhoudbaar**: Het onderhoud van een grote module met veel functionaliteiten is uitdagend. Wijzigingen kunnen andere delen van de module beïnvloeden, wat de stabiliteit van het systeem in gevaar brengt.
     
-- **Moeilijk uitbreidbaar**: Nieuwe functionaliteiten kunnen niet eenvoudig worden toegevoegd zonder bestaande code aan te passen, wat indruist tegen het OCP.
+- **Moeilijk uitbreidbaar**: Nieuwe functionaliteiten kunnen niet eenvoudig worden toegevoegd zonder bestaande code aan te passen.
     
 - **Tight coupling**: De huidige architectuur creëert sterke afhankelijkheden tussen verschillende delen van de applicatie, wat de kans op regressies vergroot bij wijzigingen.
     
 
 #### Aanbevelingen voor verbetering
 
-1. **Herziening van de architectuur**: Voer een grondige herziening uit om de SOLID-principes te waarborgen. Ontleed bestaande modules in kleinere, zelfstandige klassen met duidelijke verantwoordelijkheden.
+1. **Herziening van de architectuur**: Een grondige herziening om meer SOLID-principes toe te passen. Ontleed bestaande modules in kleinere, zelfstandige classes met duidelijke verantwoordelijkheden die testbaar zijn.
     
-2. **Implementatie van interface-gebaseerde ontwikkeling**: Verminder de afhankelijkheid van concrete implementaties door interface-gebaseerde ontwikkeling te introduceren. Dit maakt het systeem flexibeler en beter uitbreidbaar.
+2. **Implementatie van interface-gebaseerde ontwikkeling**: Verminder de afhankelijkheid van concrete implementaties door interfaces te gebruiken. Dit verhoogt de flexibiliteit van het systeem en maakt uitbreiding eenvoudiger. Bijvoorbeeld: laat de `FormTagsModule` via zijn constructor een class opvragen die de `TagLoader`-interface implementeert. Dit garandeert dat tags ingeladen kunnen worden, maar de manier waarop dit gebeurt bepaald wordt door de geïnjecteerde class.
     
-3. **Modularisatie van functionaliteiten**: Split modules op in kleinere, onafhankelijke eenheden om de herbruikbaarheid en testbaarheid te vergroten.
+3. **Unit Testing en Continuous Integration**: Ontwikkel een uitgebreide suite van unit- en integratietests en implementeer een Continuous Integration (CI)-ontwikkelstraat om regressies te minimaliseren.
     
-4. **Unit Testing en Continuous Integration**: Ontwikkel een uitgebreide suite van unit tests en implementeer een Continuous Integration (CI) proces om regressies te minimaliseren.
+4. **Documentatie en training**: Zorg voor documentatie van de nieuwe architectuur en richtlijnen, en organiseer trainingen voor ontwikkelaars over de SOLID-principes.
     
-5. **Documentatie en training**: Zorg voor documentatie van de nieuwe architecturale richtlijnen en organiseer training voor ontwikkelaars in de SOLID-principes.
-    
-6. **Iteratieve verbeteringen**: Voer veranderingen iteratief door en evalueer regelmatig de impact op de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van het systeem.
+5. **Iteratieve verbeteringen**: Voer veranderingen iteratief door en evalueer regelmatig de impact op de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van het systeem.
 
 ## Conclusie
 
-Het is evident dat het huidige AllesOnline CMS potentie heeft voor verbetering en refactoring. Ondanks de huidige tekortkomingen in de architectuur en de documentatie is het zeker mogelijk om de functionaliteiten van het systeem te optimaliseren. Het is echter belangrijk om te begrijpen dat het verbeteren van de codestructuur en het implementeren van de SOLID-principes ook aanzienlijke investeringen in tijd en middelen vereisen.
+Het is duidelijk dat het AllesOnline CMS ruimte heeft voor verbetering en refactoring. Ondanks de huidige tekortkomingen in de architectuur en de documentatie is het zeker mogelijk om de functionaliteiten van het systeem te optimaliseren. Het is echter belangrijk om te begrijpen dat het verbeteren van de codestructuur en het implementeren van de SOLID-principes wel een aanzienlijke investering in tijd en middelen vereist.
 
-Het is aan te raden om deze wijzigingen gefaseerd door te voeren. Dit is noodzakelijk omdat er niet alleen geïnvesteerd moet worden in de ontwikkeling van nieuwe modules, maar ook in het opstellen van uitgebreide documentatie, het aanmaken van geautomatiseerde tests en het trainen van ontwikkelaars in het begrijpen van de SOLID-principes.
+Mocht er gekozen worden om het AllesOnline CMS onder handen te nemen. Dan is het aan te raden om deze wijzigingen gefaseerd door te voeren. Dit is noodzakelijk omdat er niet alleen geïnvesteerd moet worden in de ontwikkeling van nieuwe modules, maar ook in het opstellen van uitgebreide documentatie, het doorvoeren van geautomatiseerde tests en het trainen van ontwikkelaars in het toepassen en begrijpen van de SOLID-principes.
 
-Hoewel de voordelen van refactoring aantoonbaar zijn, is het ook noodzakelijk dat AllesOnline, mocht het deze weg willen inslaan, zich voorbereidt op een aanzienlijke inspanning van het ontwikkelaarsteam. Het is dus belangrijk om een balans op te maken tussen de benodigde investeringen en de verwachte voordelen wanneer het project is afgerond. De belangrijkste vraag is: hoe belangrijk is het dat AllesOnline een eigen beheert CMS heeft, als het hoogstwaarschijnlijk voor een kleine investering gebruik kan maken van bestaande en goed onderhouden third-party CMS-pakketten?
+bij het refactoren van het AllesOnline CMS is het belangrijk om de balans te vinden tussen de investering die AllesOnline bereid is te maken en de voordelen van het moderniseren van het CMS. Daarnaast is het essentieel om te realiseren dat het proces van modernisering niet eindigt na de refactor, maar dat het CMS goed onderhouden moet blijven om het op niveau te houden.
