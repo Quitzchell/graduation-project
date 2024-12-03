@@ -19,7 +19,9 @@ De `ContentManagerModule` en bijbehorende view zijn verantwoordelijk voor het to
 
 ### Page (model)
 
-De contentstructuur van een website die gebruikmaakt van het AllesOnline CMS begint bij het `Page`-model. Dit model vertegenwoordigt individuele pagina's en slaat basisinformatie op, zoals de naam en het toegepaste `Template`. Aan de hand van deze `Templates` wordt bepaald welke content aan een pagina kan worden toegevoegd. De content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. _Een ERD voor het `Page`-model vind je in [dit voorbeeld](../Bijlagen/ErdAoCmsPageModel.md)_.
+De contentstructuur van een website die gebruikmaakt van het AllesOnline CMS begint bij het `Page`-model. Dit model vertegenwoordigt individuele pagina's en slaat basisinformatie op, zoals de naam en het toegepaste `Template`. Aan de hand van deze `Templates` wordt bepaald welke content aan een pagina kan worden toegevoegd. De content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
+
+_Een ERD voor het `Page`-model vind je in [dit voorbeeld](../Bijlagen/ErdAoCmsPageModel.md)_.
 
 ### Templates
 
