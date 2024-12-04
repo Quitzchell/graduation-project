@@ -6,7 +6,7 @@
 | [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)                                                               | Professional Duties, Future-Oriented Organisation                                |
 | [Requirements](../AnalyseAdvies/Requirements.md)                                                                     | Professional Duties                                                              |
 | [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)                                             |                                                                                  |
-| [Opzet van het prototype](../DesignRealisatie/OpzetVanHetPrototype.md)                                               | Professional Duties                                                              |
+| [Opzet van het prototype](../DesignRealisatie/OpzetVanDePrototypes.md)                                               | Professional Duties                                                              |
 | [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)                                  | Professional Duties                                                              |
 | [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)<br>                                   | Professional Duties                                                              |
 | [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress) | Professional Duties                                                              |

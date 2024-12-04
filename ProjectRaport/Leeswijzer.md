@@ -26,19 +26,28 @@ Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaa
 
 # Onderzoek naar huidige CMS en opzet Prototype applicatie
 
-In de eerste weken van het project heb ik mij gericht op het analyseren van het intern ontwikkelde CMS. Om een goed beeld van te krijgen, heb ik gesprekken gevoerd met mijn collega-developers van AllesOnline over hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarnaast heb ik mijn eigen ervaringen met CMS-systemen meegenomen en een analyse gedaan van de structuur en functionaliteiten binnen het CMS.
+In de eerste weken van dit project heb ik mij gericht op het analyseren van het AllesOnline CMS. Om een goed beeld te krijgen en hier gericht advies over uit te kunnen brengen, heb ik gesprekken gevoerd met mijn collega-developers van AllesOnline over hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarnaast heb ik mijn eigen ervaringen met het CMS meegenomen in deze analyse en ben ik de code van het CMS ingedoken om op een dieper niveau te begrijpen hoe het systeem is opgebouwd.
 
-Uit de gesprekken en analyses kwamen verschillende wensen en valkuilen naar voren. Hieruit bleek dat de meeste developers op een pragmatische manier wel tot oplossingen kunnen komen, maar dat deze oplossingen regelmatig botsen met best practices. Zo is het bijvoorbeeld ingewikkeld om te werken met polymorfe relaties, en is het niet altijd mogelijk om waarden voor een selectieveld op meerdere criteria te filteren.
+Uit de gesprekken en de analyse bleek dat de meeste developers tevreden zijn met het CMS. Hoewel niet alles volgens Best Practices verloopt en er onduidelijkheden bestaan over de werking van het CMS, slagen de meeste developers erin om op een pragmatische manier tot oplossingen te komen. Toch valt op dat de developers binnen AllesOnline graag een verbeterde developer experience zouden zien. Hierbij kan gedacht worden aan meer abstractie van functionaliteiten, waardoor complexiteit beter kan worden verborgen en herbruikbare oplossingen eenvoudiger te implementeren zijn. Dit kan bijdragen aan het sneller en eenvoudiger realiseren van specifieke klantwensen.
 
 > * [Gesprekken met Developers](GesprekkenEnErvaringenMetDevelopers.md)
 > * [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 > * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 
-Parallel aan het onderzoek heb ik de requirements opgesteld en een prototype-applicatie ontwikkeld, waardoor ik het CMS op praktische knelpunten kon evalueren. Dit prototype bestaat uit drie lagen: een frontend, verwisselbare backends gebaseerd op verschillende CMS-pakketten (waaronder het AllesOnline CMS), en een database gevuld met dummydata die gegenereerd wordt door seeders. Deze opzet creëert een gestandaardiseerde testomgeving waarin iedere CMS-implementatie onafhankelijk kan worden beoordeeld op functionaliteit en prestaties via end-to-end tests.
+Parallel aan het onderzoek heb ik requirements opgesteld voor wat het CMS moet bieden om te voldoen aan de eisen van een doorsnee AllesOnline-website. Op basis van deze requirements heb ik een DOT-frameworkesque `Multi-Criteria Decision Making`-analyse opgesteld, waarmee ik op een eenvoudige manier kan bijhouden hoe de te onderzoeken frameworks aan deze requirements voldoen.
 
 > * [Requirements](../AnalyseAdvies/Requirements.md)
 > * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
-> * [Opzet van het prototype](../DesignRealisatie/OpzetVanHetPrototype.md)
+
+Op basis van de requirements en een duidelijk beeld van wat er verwacht wordt van een doorsnee AllesOnline-website, ben ik begonnen met het opzetten van een eenvoudig prototype van een website. In eerste instantie was het de bedoeling om een stambomenwebapplicatie te ontwikkelen, gebaseerd op de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam en de complexiteit van het verwerken hiervan in een systeem duidelijk werd, heb ik ervoor gekozen om in plaats daarvan een eenvoudige blogwebsite te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
+
+Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsnee AllesOnline-website verwacht wordt, ben ik aan de slag gegaan met het realiseren van een prototype van een website. In eerste instantie was het de bedoeling om een stamboomapplicatie te ontwikkelen op basis van de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam – en de complexiteit van het verwerken hiervan in een systeem duidelijk werd – heb ik ervoor gekozen om in plaats daarvan een eenvoudige blog-website te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
+
+> * [Opzet van het prototype](OpzetVanDePrototypes.md)
+
+een prototype-applicatie ontwikkeld, waardoor ik het CMS op praktische knelpunten kon evalueren. Dit prototype bestaat uit drie lagen: een frontend, verwisselbare backends gebaseerd op verschillende CMS-pakketten (waaronder het AllesOnline CMS), en een database gevuld met dummydata die gegenereerd wordt door seeders. Deze opzet creëert een gestandaardiseerde testomgeving waarin iedere CMS-implementatie onafhankelijk kan worden beoordeeld op functionaliteit en prestaties via end-to-end tests.
+
+
 > * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 > * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
