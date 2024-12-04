@@ -41,12 +41,11 @@ Parallel aan het onderzoek heb ik requirements opgesteld voor wat het CMS moet b
 
 Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsnee AllesOnline-website verwacht wordt, ben ik aan de slag gegaan met het realiseren van een prototype van een website. In eerste instantie was het de bedoeling om een stamboom applicatie te ontwikkelen op basis van de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam – en de complexiteit van het verwerken hiervan in een systeem duidelijk werd – heb ik ervoor gekozen om in plaats daarvan een eenvoudige blog-website te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
 
-Meer over waarom ik van plan ben met prototypen te werken en hoe deze eruit gaan zien lees je in het onderstaande document. 
-
+> _Meer over waarom ik van plan ben met prototypen te werken en hoe deze eruit gaan zien lees je in het onderstaande document._ 
 > * [Opzet van de prototypes](OpzetVanDePrototypes.md)
 
-Repositories van de frontend en backend met het AllesOnline CMS zijn te vinden via onderstaande links.
 
+> _Repositories van de frontend en backend met het AllesOnline CMS zijn te vinden via onderstaande links._
 > * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 > * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
@@ -78,7 +77,7 @@ Rond het afronden van het prototype met het AllesOnline CMS ben ik aan de slag g
 
 Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik het mogelijk gemaakt dat Cypress vanuit zijn eigen container draait en kan communiceren met de frontend-applicatie. Het voordeel hiervan is dat de container voor de frontend niet onnodig groot wordt door de toevoeging en extra benodigdheden voor Cypress. Het nadeel is echter dat er een timeout tussen de requests nodig is, omdat de frontend een exception teruggeeft doordat het te snel opvolgende verzoeken van hetzelfde adres ontvangt.
 
-_Hieronder een kleine afwijking van het chronologische verhaal, met een aantal runs van de Cypress-testsuite waarin de verschillende CMS-oplossingen aan de frontend zijn gekoppeld.-
+> _Hieronder een kleine afwijking van het chronologische verhaal, met een aantal runs van de Cypress-testsuite waarin de verschillende CMS-oplossingen aan de frontend zijn gekoppeld._
 > * [Video: Cypress tests met AllesOnline CMS](../Bijlagen/CypressTestsAOCms.md)
 > * [Video: Cypress tests met Filament CMS](../Bijlagen/CypressTestsFilamentCms.md)
 

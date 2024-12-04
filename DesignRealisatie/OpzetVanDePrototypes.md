@@ -26,7 +26,7 @@ Het prototype zal uit verschillende systemen bestaan die met elkaar communiceren
 
 Globaal gezien zal een prototype aan de volgende eisen voldoen:
 
-- - **Content beheer**: De mogelijkheid om webpagina's en de bijbehorende content via het CMS te beheren.
+- **Content beheer**: De mogelijkheid om webpagina's en de bijbehorende content via het CMS te beheren.
 - **Objecten beheer**: De mogelijkheid om objecten en de bijbehorende inhoud via het CMS te beheren.
 - **API-integraties**: Integratie van API’s voor het uitwisselen van gegevens tussen de backend en frontend.
 
