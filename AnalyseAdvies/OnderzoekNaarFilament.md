@@ -1,4 +1,4 @@
-# Onderzoek naar CMS met Filament
+# Onderzoek naar Filament
 
 ## Inleiding
 

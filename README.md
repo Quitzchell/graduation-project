@@ -12,13 +12,13 @@
 
 # Analyse & Advies
 
-* ### [Gesprekken en ervaringen met andere Developers](AnalyseAdvies/GesprekkenEnErvaringenMetDevelopers.md)
-* ### [Requirements](AnalyseAdvies/Requirements.md)
-* ### [Checklist voor CMS criteria](AnalyseAdvies/ChecklistVoorCMSCriteria)
-* ### [Onderzoek naar het AllesOnline CMS](AnalyseAdvies/OnderzoekNaarHetAOCms.md)
-* ### [SWOT: AllesOnline CMS](AnalyseAdvies/SwotAOCms.md)
-* ### [Onderzoek naar CMS met Filament](AnalyseAdvies/OnderzoekNaarCMSMetFilament.md)
-* ### [SWOT: CMS met Filament](AnalyseAdvies/SwotFilamentCms.md)
+* ### [Gesprekken en ervaringen met andere Developers](./AnalyseAdvies/GesprekkenEnErvaringenMetDevelopers.md)
+* ### [Requirements](./AnalyseAdvies/Requirements.md)
+* ### [Checklist voor CMS criteria](./AnalyseAdvies/ChecklistVoorCMSCriteria)
+* ### [Onderzoek naar het AllesOnline CMS](./AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+* ### [SWOT: AllesOnline CMS](./AnalyseAdvies/SwotAOCms.md)
+* ### [Onderzoek naar CMS met Filament](./AnalyseAdvies/OnderzoekNaarFilament.md)
+* ### [SWOT: CMS met Filament](./AnalyseAdvies/SwotFilamentCms.md)
 
 # Design & Realisatie
 

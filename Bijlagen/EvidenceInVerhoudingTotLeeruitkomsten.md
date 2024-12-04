@@ -11,7 +11,7 @@
 | [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)<br>                                   | Professional Duties                                                              |
 | [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress) | Professional Duties                                                              |
 | [Video: Cypress test-suite](../Bijlagen/CypressTestsAOCms.md)                                                        | Professional Duties                                                              |
-| [Onderzoek naar CMS met Filament](../AnalyseAdvies/OnderzoekNaarCMSMetFilament.md)                                   | Professional Duties, Investigative Problem Solving, Future-Oriented Organisation |
+| [Onderzoek naar CMS met Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)                                   | Professional Duties, Investigative Problem Solving, Future-Oriented Organisation |
 | [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)                                                                | Professional Duties, Future-Oriented Organisation                                |
 | [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)          | Professional Duties                                                              |
 | [Concepten voor CMS Prototype Realisaties](../DesignRealisatie/CmsPrototypesRealisatie.md)                           | Professional Duties, Situation-Orientation                                       |
