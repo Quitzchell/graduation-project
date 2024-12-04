@@ -39,9 +39,7 @@ Parallel aan het onderzoek heb ik requirements opgesteld voor wat het CMS moet b
 > * [Requirements](../AnalyseAdvies/Requirements.md)
 > * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
 
-Op basis van de requirements en een duidelijk beeld van wat er verwacht wordt van een doorsnee AllesOnline-website, ben ik begonnen met het opzetten van een eenvoudig prototype van een website. In eerste instantie was het de bedoeling om een stambomenwebapplicatie te ontwikkelen, gebaseerd op de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam en de complexiteit van het verwerken hiervan in een systeem duidelijk werd, heb ik ervoor gekozen om in plaats daarvan een eenvoudige blogwebsite te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
-
-Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsnee AllesOnline-website verwacht wordt, ben ik aan de slag gegaan met het realiseren van een prototype van een website. In eerste instantie was het de bedoeling om een stamboomapplicatie te ontwikkelen op basis van de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam – en de complexiteit van het verwerken hiervan in een systeem duidelijk werd – heb ik ervoor gekozen om in plaats daarvan een eenvoudige blog-website te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
+Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsnee AllesOnline-website verwacht wordt, ben ik aan de slag gegaan met het realiseren van een prototype van een website. In eerste instantie was het de bedoeling om een stamboom applicatie te ontwikkelen op basis van de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam – en de complexiteit van het verwerken hiervan in een systeem duidelijk werd – heb ik ervoor gekozen om in plaats daarvan een eenvoudige blog-website te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
 
 > * [Opzet van het prototype](OpzetVanDePrototypes.md)
 
