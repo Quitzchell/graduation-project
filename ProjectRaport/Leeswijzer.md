@@ -78,7 +78,7 @@ Rond het afronden van het prototype met het AllesOnline CMS ben ik aan de slag g
 
 Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik het mogelijk gemaakt dat Cypress vanuit zijn eigen container draait en kan communiceren met de frontend-applicatie. Het voordeel hiervan is dat de container voor de frontend niet onnodig groot wordt door de toevoeging en extra benodigdheden voor Cypress. Het nadeel is echter dat er een timeout tussen de requests nodig is, omdat de frontend een exception teruggeeft doordat het te snel opvolgende verzoeken van hetzelfde adres ontvangt.
 
-Hieronder een aantal runs van de Cypress teststuite waarin de verschillende CMS oplossingen aan de frontend zijn gekoppeld. 
+_Hieronder een kleine afwijking van het chronologische verhaal, met een aantal runs van de Cypress-testsuite waarin de verschillende CMS-oplossingen aan de frontend zijn gekoppeld.-
 > * [Video: Cypress tests met AllesOnline CMS](../Bijlagen/CypressTestsAOCms.md)
 > * [Video: Cypress tests met Filament CMS](../Bijlagen/CypressTestsFilamentCms.md)
 
