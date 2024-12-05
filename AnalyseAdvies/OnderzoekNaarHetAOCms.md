@@ -58,7 +58,7 @@ In deze schema's kan ook worden gedefinieerd hoe relaties tussen objecten kunnen
 
 De `FormField`-modules en bijbehorende views bieden - net zoals bij contentbeheer - een interface waarmee eindgebruikers informatie van objecten kunnen ingeven of bewerken. 
 
-## Evaluatie van het CMS
+## Evaluatie van het AllesOnline CMS
 
 Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een goede basis biedt voor webontwikkeling, kent het systeem aanzienlijke beperkingen op het gebied van het bieden van een goede development experience, onderhoudbaarheid en uitbreidbaarheid. 
 

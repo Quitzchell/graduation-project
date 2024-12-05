@@ -28,6 +28,7 @@ Naast de standaardcomponenten biedt Filament ook de mogelijkheid om zelf compone
 > _De marketplace van Filament [vind je hier](https://filamentphp.com/plugins)_
 
 ## Beheren van content
+
 ### Resources
 
 Voor het beheren van content met Filament kunnen we gebruik maken van de `Resource`-modules waarmee gebruikers zowel objecten kunnen beheren in een interactieve en gebruiksvriendelijke gebruikersinterface. De belangrijkste facetten van de `Resources`  zijn: 
@@ -60,58 +61,44 @@ Binnen de templates is ook het, net zoals in het AllesOnline CMS, mogelijk om ve
 ### Resources
 
 Het beheren van objecten kan in Filament ook gerealiseerd worden aan de hand van de `Resources`. Sterker nog, ook het `Page`-model is een object dat door middel van een `Resource` beheerd kan worden. Deze genieten dus dezelfde functionaliteiten die eerder in het stuk over Resources voor het beheren van content benoemd zijn.
+
 ### Eloquent Models
 
 Filament maakt gebruik van `Eloquent`-modellen voor de representatie van objecten. Dit maakt het, net zoals in het AllesOnline CMS, gemakkelijk om  op een eenvoudige, objectgeoriënteerde manier met gegevens van objecten te werken. Denk hierbij aan het ophalen, bijwerken en verwijderen van gegevens, en het definiëren van relaties tussen verschillende objecten.
 
 ### CMS Schema's
 
---- 
-### FormFields voor Objecten
+In tegenstelling tot het AllesOnline CMS, worden de CMS-schema's voor objecten in Filament gedefinieerd in de `Resource` die bij de class van het object hoort. Dit betekent dat deze schema's, net zoals de `templates`, in PHP gedefinieerd kunnen worden. Dit zorgt er onder andere voor dat developers voorzien worden van autocompletions bij het definiëren van de schema's, maar ook dat bepaalde filters op bijvoorbeeld selectievelden gedefinieerd kunnen worden met behulp van Laravel zijn `Eloquent ORM` of `QueryBuilder`. Dit maakt het opstellen van een schema voor objecten een stuk flexibeler en meer uitbreidbaar.
 
-De **FormFields**-modules voor objecten in Filament maken het mogelijk om verschillende gegevensvelden (zoals tekst, datum of relatievelden) te gebruiken voor het invoeren en beheren van gegevens. Elke formfield biedt de mogelijkheid om gegevens invoeropties aan te passen aan de vereisten van een specifiek object.
+Zoals al eerder benoemt worden voor het definiëren van de velden in een schema gebruikt gemaakt van de door Filament beschikbaar gestelde componenten voor formulieren.
 
 ## Evaluatie van Filament
 
-Hoewel het Filament een solide basis biedt voor het opzetten van contentbeheer, heeft het systeem beperkingen in termen van uitbreidbaarheid en schaalbaarheid. De onderstaande analyse richt zich op de codestructuur, gebruiksvriendelijkheid en mogelijkheden voor aanpassing binnen het Filament CMS.
+Hoewel het Filament een solide basis biedt voor het realiseren van een CMS, heeft het systeem nog een aantal beperkingen.
 
-### Gebrekkige Documentatie en Ondersteuning
+### Documentatie en ondersteuning
 
-Filament is relatief nieuw en de community-ondersteuning is nog groeiend. Hoewel de documentatie uitgebreid is, kunnen ontwikkelaars soms problemen ondervinden bij complexere configuraties.
-
-**Aanbeveling**:
-- Verhoog de betrokkenheid van de gemeenschap en voeg meer gedetailleerde voorbeelden toe voor complexe configuraties.
-
-### Beperkingen in Complexe Structuren en Code-organisatie
-
-De structuur van resources binnen Filament maakt het instellen van zeer complexe hiërarchieën of relationele structuren uitdagend. Dit kan de uitbreidbaarheid van het systeem beperken.
-
-**Gevolgen van deze beperking**:
-- De kans op bugs neemt toe naarmate meer custom code wordt toegevoegd.
-- Mogelijkheden voor hergebruik en uitbreidbaarheid worden beperkt.
+Filament is relatief nieuw en de community-ondersteuning staat nog in kinderschoenen. Hoewel de documentatie uitgebreid is en qua basisinformatie compleet is, bestaat de kans dat er minder informatie beschikbaar is voor complexere oplossingen.
 
 **Aanbeveling**:
-- Overweeg om de code te modulariseren en aanvullende interfaces of abstracties te ontwikkelen voor complexere structuren.
+- Draag bij aan het versterken van Filament. Door actief te zijn in de community wordt niet alleen de open-source software die je professioneel gebruikt verbeterd, maar komen de ontwikkelaars van AllesOnline ook in contact met externe ontwikkelaars. Dit kan bijdragen aan het verbreden van perspectieven op het gebied van software- en webdevelopment.
+
+### Relatief onbekende technieken
+
+Van de tech-stack waar Filament gebruik van maakt, zijn de meeste AllesOnline-ontwikkelaars alleen bekend met Laravel en Tailwind. Dit betekent dat, als er op maat gemaakte componenten ontwikkeld moeten worden, de ontwikkelaars zich moeten verdiepen in Livewire en Alpine.js.
 
 ## SOLID-Principes in de Filament Resources
 
-Bij het analyseren van de Filament resources blijkt dat ze op sommige vlakken niet volledig voldoen aan de SOLID-principes, met name aan het **Single Responsibility Principle** (SRP) en het **Open/Closed Principle** (OCP).
+Bij het onderzoeken van Filament kwam naar voren dat de ontwikkelaars zich niet overal strikt aan de SOLID-principes houden. 
 
-* **Single Responsibility Principle (SRP)**:
-    
-    - De Filament resources zijn zodanig ontworpen dat ze vaak meerdere verantwoordelijkheden dragen, wat kan leiden tot verhoogde complexiteit en moeilijkheden bij onderhoud en debugging.
-    - Wanneer één resource meerdere functies vervult, kan het doorvoeren van wijzigingen in één aspect van de resource onbedoeld effect hebben op andere delen van de code.
-    
-* **Open/Closed Principle (OCP)**:
-    
-    - Naarmate resources uitgebreider worden en specifieke functionaliteiten moeten ondersteunen, kunnen er met regelmatig wijzigingen in bestaande code nodig zijn.
+In de `Resources` zien we dat het **Single Responsibility Principle (SRP)** niet volledig wordt nageleefd. Deze classes bevatten namelijk meerdere verantwoordelijkheden, zoals het definiëren van verschillende views en schema's. Dit betekent dat de class niet alleen verantwoordelijk is voor het beheren van gegevens, maar ook voor de structuur van de bijbehorende weergaven, wat leidt tot een hogere complexiteit in de class en verminderde modulariteit.
 
-Toch kan beargumenteerd worden dat deze overtredingen van de SOLID-principes in bepaalde situaties juist de developer-experience verbeteren. Hoewel er verschillende weergaves (views) in één resource worden gespecificeerd, zorgt dit ervoor dat alle views voor een bepaald objecttype op één plek geconcentreerd zijn, wat de overzichtelijkheid verhoogt.
+Het negeren van dit principe kan worden verdedigd door te stellen dat het combineren van verschillende schema's op één plek voordelen biedt. Het zorgt voor een centrale organisatie van alle informatie voor een bepaald objecttype, wat de overzichtelijkheid ten goede kan komen, vooral in kleinere of middelgrote applicaties. Dit kan de ontwikkelaar helpen door alle relevante informatie in één bestand te verzamelen, wat de leesbaarheid en toegankelijkheid verbetert, ondanks dat het niet strikt in lijn is met SRP.
 
-Een bijkomend voordeel van de Filament-bibliotheek is dat veel van de functionaliteiten al zijn geënncapsuleert in specifieke functies die door de library zelf worden getest. Wanneer maatwerkfunctionaliteiten worden toegevoegd, kunnen deze onafhankelijk worden getest doormiddel van unit-en componenttests.
+Deze keuze lijkt dus vooral pragmatisch, waarbij wordt gekozen voor praktische voordelen waarbij eenvoud en snelle toegang vaak vooropstaan, zelfs als dit ten koste gaat van de strikte naleving van principes zoals SRP.
 
 ## Conclusie
 
-Filament biedt een goed uitgangspunt voor het opzetten van een eenvoudig CMS, maar kent enkele beperkingen als het gaat om schaalbaarheid en uitbreidbaarheid. Het gebruik van Eloquent als ORM en de Laravel-resource-architectuur zorgt voor een solide basis, maar de mogelijkheden voor aanpassing zijn beperkter in vergelijking met meer volwassen CMS-oplossingen.
+Filament biedt een goed uitgangspunt voor het opzetten van een CMS. Niet alleen omdat het erop lijkt dat veel van de standaardcomponenten binnen de library al voldoen aan een groot deel van de vereisten voor een doorsnee AllesOnline-website, maar ook omdat het mogelijk is om zelf componenten en zelfs modules te ontwikkelen. Daarnaast is het voor de developers bij AllesOnline gunstig dat het gebaseerd is op Laravel en Tailwind, twee technieken waarmee het gehele team al bekend is. 
 
-Hoewel Filament aantrekkelijk is vanwege de integratie met Laravel, zullen organisaties die een complexe contentstructuur of uitgebreide functionaliteiten nodig hebben, mogelijk tegen grenzen aanlopen van Filament. Daarom moet een balans worden gevonden tussen het gebruiksgemak van Filament en de potentieel hoge kosten voor het aanpassen van het systeem.
+Wel is er de valkuil dat het AllesOnline team niet thuis is bij twee van de technieken die nuttig zijn bij het uitbreiden van het system met op maat gemaakte componenten. Mocht er voor Filament gekozen worden, dan is het verstandig voor het team om zich te verdiepen in de werking van Livewire en Alpine.js.
