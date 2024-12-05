@@ -10,7 +10,7 @@ Dit document beschrijft de analyse van het AllesOnline CMS. Deze is uitgevoerd a
 
 ## Systeemoverzicht: Beheren van content 
 
-Het AllesOnline CMS is gebouwd op Laravel en maakt veelvuldig gebruik van de Eloquent ORM van dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontend componenten het opzetten van een CMS voor een website mogelijk maken. Hieronder staan een aantal van de belangrijkste onderdelen van het systeem die het content beheer beschrijven.
+Het AllesOnline CMS is gebouwd op **Laravel** en maakt gebruik van de Eloquent ORM van dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontend componenten het opzetten van een CMS voor een website mogelijk maken. Hieronder staan een aantal van de belangrijkste onderdelen van het systeem die het content beheer beschrijven.
 
 ### ContentManagerController
 
@@ -22,7 +22,7 @@ De `ContentManagerModule` en bijbehorende view zijn verantwoordelijk voor het to
 
 ### Page (model)
 
-De contentstructuur van een website die gebruikmaakt van het AllesOnline CMS begint bij het `Page`-model. Dit model vertegenwoordigt individuele pagina's en slaat basisinformatie op, zoals de naam en het toegepaste `Template`. Aan de hand van deze `Templates` wordt bepaald welke content aan een pagina kan worden toegevoegd. De content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
+De structuur van een website die gebruikmaakt van het AllesOnline CMS begint bij het `Page`-model. Dit model vertegenwoordigt individuele pagina's en slaat basisinformatie op, zoals de naam van de pagina en het toegepaste `Template`. Aan de hand van deze `Templates` wordt bepaald welke content aan een pagina kan worden toegevoegd. De content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
 
 _Een ERD voor het `Page`-model vind je in [dit voorbeeld](../Bijlagen/ErdAoCmsPageModel.md)_.
 
@@ -36,7 +36,7 @@ Binnen templates is het ook mogelijk om te verwijzen naar andere schema's waarin
 
 De `FormField`-modules en bijbehorende views bieden een interface waarmee eindgebruikers content kunnen toevoegen of bewerken binnen het CMS. Denk hierbij aan invoervelden voor bijvoorbeeld tekst of bestanden. De weergave van de `FormFields` wordt gedefinieerd via `blade`-templates.
 
-## Systeemoverzicht: Beheren van objecten
+## Beheren van objecten
 
 Naast het beheren van content op pagina's biedt het CMS ook de mogelijkheid om objecten te beheren die binnen een website gebruikt kunnen worden. Denk hierbij aan producten in een webshop of workshops op een website die opleidingen aanbiedt. Hieronder staan een aantal van de belangrijkste onderdelen van het systeem die het contentbeheer beschrijven.
 
@@ -46,7 +46,7 @@ De `ObjectManagerController` is verantwoordelijk voor het beheren van objecten. 
 
 ### Eloquent models
 
-Voor de representatie van objecten in het CMS wordt gebruikgemaakt van `Eloquent`-modellen. `Eloquent` is een ORM dat onderdeel is van Laravel en het mogelijk maakt om op een eenvoudige, objectgeoriënteerde manier met gegevens van objecten te werken. Denk hierbij aan het ophalen, bijwerken en verwijderen van gegevens, evenals het definiëren van relaties tussen verschillende objecten.
+Voor de representatie van objecten in het CMS wordt gebruikgemaakt van `Eloquent`-modellen. `Eloquent` is een ORM dat onderdeel is van Laravel en het mogelijk maakt om op een eenvoudige, objectgeoriënteerde manier met gegevens van objecten te werken. Denk hierbij aan het ophalen, bijwerken en verwijderen van gegevens, en het definiëren van relaties tussen verschillende objecten.
 
 ### CMS schema's
 
