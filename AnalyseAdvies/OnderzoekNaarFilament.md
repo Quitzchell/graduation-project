@@ -2,51 +2,71 @@
 
 ## Inleiding
 
-Dit document beschrijft de analyse voor een CMS met **Filament**, een Laravel-package voor het opzetten van beheertools en content management systemen. Deze evaluatie is uitgevoerd als onderdeel van een breder onderzoek naar beschikbare productopties voor content management en focust op de sterke en zwakke punten, evenals de uitbreidbaarheid en gebruiksvriendelijkheid van het Filament CMS.
+Dit document beschrijft de analyse voor over Filament en hoe het eventueel gebruikt kan worden voor het opzetten van een CMS. Filament is Library met, zoals ze het zelf zeggen, _"a collection of beautiful full-stack components"_. Deze componenten zijn geschikt voor het opzetten van CRUD-applicaties en naar mijn idee geschikt voor het bouwen van een CMS. 
 
-*De belangrijkste sterke en zwakke punten van het Filament CMS, evenals mogelijke kansen en bedreigingen, zijn in kaart gebracht in de SWOT-analyse die je [hier kunt lezen](SwotFilamentCms).*
+> _Andere onderdelen van het Available Product Analysis:_
+> * _[Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)_
 
-## Systeemoverzicht: Beheren van content
+> *De belangrijkste bevindingen over het Filament zijn samengebracht in een SWOT-analyse. [hier kunt lezen](SwotFilamentCms).*
 
-Het Filament CMS is gebaseerd op **Laravel** en maakt gebruik van de Laravel Eloquent ORM. Filament biedt een intuïtieve interface en diverse componenten om content-en objectbeheer eenvoudig en schaalbaar te maken. Het systeem biedt standaardcomponenten zoals resource- en table-views, waarmee content kan worden geconfigureerd en beheerd zonder veel custom code.
+## Over Filament
 
+Ook Filament maakt net zoals het AllesOnline CMS gebruikt van **Laravel** en het Eloquent ORM dat dit framework biedt. 
+
+De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze packages omvatten verzamelingen van modules voor tabellen, formulieren, acties, notificaties en een container om alle modules samen te brengen. Volgens de documentatie bevat de basisinstallatie van Filament de volgende pakketten:
+
+>* Panel Builder
+>* Form Builder 
+>* Table Builder 
+>* Notifications
+>* Actions
+>* Infolists 
+>* Widgets
+
+Naast de standaardcomponenten biedt Filament ook de mogelijkheid om zelf componenten te ontwikkelen die binnen Filament gebruikt kunnen worden. Daarnaast is het zelfs mogelijk om deze oplossingen via een door Filament opgezette marketplace beschikbaar te stellen aan anderen, eventueel tegen betaling. Voor het ontwikkelen van de componenten is het wel aan te raden om gebruik te maken van de door Filament gehanteerde TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire).
+
+> _De marketplace van Filament [vind je hier](https://filamentphp.com/plugins)_
+
+## Beheren van content
 ### Resources
 
-Met Filament's **Resource** kunnen beheerders content en objecten beheren en structureren. Het stelt hen in staat om content-items en objecten toe te voegen, te wijzigen, te verwijderen en te organiseren binnen een heldere en gebruiksvriendelijke interface. Tot de belangrijkste functies behoren:
+Voor het beheren van content met Filament kunnen we gebruik maken van de `Resource`-modules waarmee gebruikers zowel objecten kunnen beheren in een interactieve en gebruiksvriendelijke gebruikersinterface. De belangrijkste facetten van de `Resources`  zijn: 
 
-1. **CRUD-operaties**: Gebruikt standaard Laravel-resource-controllers en Eloquent om objecten aan te maken, te lezen, bij te werken en te verwijderen.
-2. **Views**: De Resource biedt standaard view-opties (index, create, edit, view) die eenvoudig kunnen worden aangepast aan de specifieke eisen van het CMS.
-3. **FormFields**: Standaardonderdelen in Filament bieden de mogelijkheid om snel invoervelden toe te voegen en te configureren.
-4. **Permissions en Middleware**: Er is ondersteuning voor toegangscontrole en het toekennen van specifieke rollen en rechten binnen het CMS.
+1. **CRUD-operaties**: Resources maken gebruik van de standaard Laravel-controllers en Eloquent om objecten aan te maken, lezen, bewerken en verwijderen.
+2. **Views**: De Resource biedt standaard de weergaven `list`, `create`, `edit` en `view`. Deze kunnen eenvoudig via de Resource worden aangepast om te voldoen aan de specifieke eisen van de eindgebruikers.
+3. **Componenten**: Om te bepalen wat op de eerder genoemde views voor eindgebruikers zichtbaar is en waarmee zij kunnen interacteren, biedt Filament een breed scala aan componenten. Deze componenten definiëren bijvoorbeeld invoervelden op de `create`- en `edit`-views, of de kolommen van een tabel in een `list`-view.
+4. **Permissions en Middleware**: In Laravel kunnen rechten worden toegekend aan specifieke rollen voor het beheren van de Resources. Dit kan zowel met ingebouwde methoden zoals policies en gates als met externe pakketten zoals `spatie/laravel-permission` voor uitgebreide toegangscontrole.
 
-### Contentbeheer
+### Beheren van content 
 
-Filament biedt binnen de tabelweergave de mogelijkheid om content te ordenen met **drag-and-drop** functionaliteit, waardoor items eenvoudig herschikt kunnen worden. Echter, Filament biedt geen out-of-the-box ondersteuning om hiërarchische informatie mee te nemen. Hoewel het niet onmogelijk is om hiërarchie voor contentpagina's toe te passen, is voor het nabootsen van de hiërarchische drag-and-drop in het AllesOnline CMS relatief veel maatwerk nodig. 
+Filament biedt in de `list`-weergave de mogelijkheid om tabellen te definiëren. Deze kunnen zowel statisch als interactief zijn, bijvoorbeeld door de records in de tabel herschikbaar te maken via _drag-and-drop_, of door switches (voor booleans) of select-velden in de kolommen op te nemen om bepaalde gegevens van de objecten die ze vertegenwoordigen te bewerken.
 
-Mocht er voor Filament gekozen worden, dan wordt aanbevolen om te onderzoeken of de bestaande functionaliteiten van Filament benut kunnen worden om het beheer en de ordening van hiërarchische content op een andere manier te ondersteunen.
+Wat Filament niet biedt, is de ondersteuning voor het in een tabel weergeven van hiërarchische informatie doormiddel van nested records. Deze feature die wel het AllesOnline CMS te vinden is maakt het daar mogelijk voor gebruikers om in één weergave te zien welke pagina's beschikbaar zijn en in welk menu ze meegenomen worden (main menu, footer menu of hidden).  Dat deze feature niet aanwezig is, maakt het echter niet onmogelijk om eindgebruikers een soortgelijke functionaliteit aan te bieden. Mocht het echter een wens zijn om dit wel op dezelfde manier beschikbaar te stellen, dat is er relatief veel maatwerk nodig om dit in Filament te realiseren.
 
 ### Page (Model)
 
-Net zoals in het AllesOnline CMS kunnen we in een CMS met Filament gebruik maken van een **Page**-model. Ook hier vertegenwoordigt het afzonderlijke pagina's en dient als een interface naar CMS content. Dit model wordt beheerd met behulp van **Laravel Eloquent model** en biedt ondersteuning voor dynamische URL-generatie en meertalige content. Dankzij de Eloquent-relaties kunnen pagina’s hiërarchisch worden gekoppeld, wat bijdraagt aan de opbouw van een unieke URI-structuur en navigatie voor elke pagina.
+Net zoals in het AllesOnline CMS kunnen we in Filament een `Page`-model realiseren. Deze zal in dit systeem ook de basis zijn voor het opzetten van de structuur van een website. Het model vertegenwoordigd individuele pagina's en slaat de basisinformatie op, zoals de naam van de pagina en het `Template` dat toegepast wordt om content mee te persisteren. Ook in dit systeem is het dan mogelijk om de content via een polymorfe relatie te koppelen aan objecten die content aanbieden.
 
 ### Templates en FormFields
 
-**Templates** in Filament worden opgebouwd met behulp van resource-controllers waarin de lay-out en inhoudsvelden voor een specifieke pagina kunnen worden gedefinieerd. **FormFields** (zoals tekstvakken, datumvelden, keuzelijsten) worden gebruikt om de invoer en bewerking van content intuïtief te maken. Templates ondersteunen modulaire opbouw door middel van **blocks** en herbruikbare content secties, wat vooral handig is voor componenten die in verschillende delen van de website terugkomen.
+Ook in het systeem met Filament kunnen - net zoals in het AllesOnline CMS - `Templates` gedefinieerd worden. Het grote voordeel van Filament is echter dat een schema voor een `Template` gedefinieerd kan worden in PHP-bestanden. Dit maakt het niet alleen mogelijk om autocompletion te benutten, maar ook om gebruik te maken van interfaces om de abstractie van bepaalde functionaliteiten van een `Template`-class te definiëren. Denk hierbij aan het standaardiseren van het aanbieden van een vormschema of het ophalen van gepersisteerde gegevens.
 
-## Systeemoverzicht: Beheren van objecten
+De vormschema's voor `Templates` worden opgemaakt met de door Filament beschikbaar gestelde componenten voor formulieren. Denk hierbij aan invoervelden voor tekst, selecties, relaties of datums.
 
-Het Filament CMS biedt met de Resources ook de mogelijkheden voor het beheer van objecten zoals producten, transacties of andere entiteiten.
-### Resources voor Objectbeheer
+Binnen de templates is ook het, net zoals in het AllesOnline CMS, mogelijk om verder te verwijzen naar andere schema's om een verzameling van componenten voor formuleren aan te bieden als een `block`.
 
-Objectbeheer in Filament wordt uitgevoerd via resource-controllers die zijn uitgebreid voor specifieke soorten entiteiten. Hoewel een "ObjectManagerResource" niet formeel bestaat, kunnen resources worden ingesteld om objecten zoals producten of klantgegevens te beheren. Filament ondersteunt hierbij:
+## Beheren van objecten
 
-1. **Dynamische formulieren en velden**: De objectvelden kunnen eenvoudig worden aangepast om de unieke attributen van elk type object vast te leggen.
-2. **Relaties**: Eloquent-relaties kunnen worden gedefinieerd voor interactie tussen objecten. Dit maakt het mogelijk om bijvoorbeeld gerelateerde producten of gekoppelde klantgegevens te beheren.
-3. **Zoek- en filteropties**: Met de filter- en sorteeropties in Filament kunnen objecten worden beheerd, doorzocht, en gefilterd op basis van verschillende criteria.
+### Resources
 
-### Eloquent Models en CMS Schema's
+Het beheren van objecten kan in Filament ook gerealiseerd worden aan de hand van de `Resources`. Sterker nog, ook het `Page`-model is een object dat door middel van een `Resource` beheerd kan worden. Deze genieten dus dezelfde functionaliteiten die eerder in het stuk over Resources voor het beheren van content benoemd zijn.
+### Eloquent Models
 
-Filament maakt gebruik van **Eloquent-modellen** voor de representatie van objecten. Elk model komt overeen met een database-tabel en kan relaties tussen objecten definiëren. Het ophalen en verwerken van gegevens kan eenvoudig worden aangepast met dynamische query’s en filters, wat ontwikkelaars helpt om objecten efficiënt te beheren en te manipuleren.
+Filament maakt gebruik van `Eloquent`-modellen voor de representatie van objecten. Dit maakt het, net zoals in het AllesOnline CMS, gemakkelijk om  op een eenvoudige, objectgeoriënteerde manier met gegevens van objecten te werken. Denk hierbij aan het ophalen, bijwerken en verwijderen van gegevens, en het definiëren van relaties tussen verschillende objecten.
+
+### CMS Schema's
+
+--- 
 ### FormFields voor Objecten
 
 De **FormFields**-modules voor objecten in Filament maken het mogelijk om verschillende gegevensvelden (zoals tekst, datum of relatievelden) te gebruiken voor het invoeren en beheren van gegevens. Elke formfield biedt de mogelijkheid om gegevens invoeropties aan te passen aan de vereisten van een specifiek object.
