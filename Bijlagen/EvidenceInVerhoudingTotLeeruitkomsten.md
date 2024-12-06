@@ -14,5 +14,5 @@
 | [Onderzoek naar CMS met Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)                                   | Professional Duties, Investigative Problem Solving, Future-Oriented Organisation |
 | [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)                                                                | Professional Duties, Future-Oriented Organisation                                |
 | [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)          | Professional Duties                                                              |
-| [Concepten voor CMS Prototype Realisaties](../DesignRealisatie/CmsPrototypesRealisatie.md)                           | Professional Duties, Situation-Orientation                                       |
+| [Concepten voor CMS Prototype Realisaties](TechnischeDocumentatieCmsPrototypes.md)                           | Professional Duties, Situation-Orientation                                       |
 | [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)                            | Professional Duties                                                              |

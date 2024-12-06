@@ -1,7 +1,7 @@
-# CMS Prototypes Realisatie
+# Technische Documentatie CMS Prototypes
 
-Dit document geeft een overzicht van de basisfunctionaliteiten van een Content Management Systeem (CMS) en beschrijft hoe de prototypes kunnen worden opgebouwd.
-## Contentbeheer in AllesOnline CMS
+Dit document geeft een overzicht over de werking van de verschillende Content Management Systemen en beschrijft hoe de ze opgebouwd worden.
+## AllesOnline CMS
 
 ### ContentManagerController
 In het AllesOnline CMS worden pagina’s en hun content beheerd via de `ContentManagerController`. Deze controller wordt meestal zonder aanpassingen geïmporteerd vanuit het AllesOnline CMS-pakket en biedt toegang tot de `ManagedContent`, `Page`, en `CMSContent`-modellen voor de configuratie van content-elementen.
@@ -22,7 +22,7 @@ class ContentManagerController extends ContentManager
 ```
 
 ### XML-schema voor Templates met CMS-content
-Binnen de `ContentManager` worden `Page`-objecten dynamisch gegenereerd via XML-templates die specificeren welke velden (zoals tekst, afbeeldingen en blokken) kunnen worden toegevoegd. Dit stelt ontwikkelaars in staat om template-schema's te definiëren voor CMS-gebruikers.
+Binnen de `ContentManager` worden `Page`-objecten dynamisch gegenereerd via XML-templates die specificeren welke velden (zoals tekst, afbeeldingen en blokken) kunnen worden toegevoegd. Dit stelt developers in staat om template-schema's te definiëren voor CMS-gebruikers.
 
 **XML-schema voor Template in AO CMS**
 
@@ -52,9 +52,9 @@ Contentblokken kunnen ook worden gedefinieerd met XML en vervolgens in verschill
 
 Dit blok bevat een titel- en tekstveld met RichText-functionaliteit voor tekstopmaak.
 
-## Contentbeheer in CMS met Filament
+## CMS met Filament
 
-In Filament kan een soortgelijke functionaliteit worden gerealiseerd door gebruik te maken van Resources en een Eloquent-model gebaseerd op het `Page`-model van AllesOnline CMS. Dit model bevat de gegevens en relaties van pagina’s en hun hiërarchie.
+In Filament kan een soortgelijke functionaliteit worden gerealiseerd door gebruik te maken van Resources en een Eloquent-model geinspireerd op het `Page`-model van AllesOnline CMS. Dit model bevat de gegevens en relaties van pagina’s en hun hiërarchie.
 
 *Een UML class-diagram met het onderstaande concept voor content management kan je [hier bekijken](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)*
 
@@ -70,13 +70,13 @@ namespace App\Models;
 
 use App\Models\Interfaces\HasContent;
 use App\Models\Interfaces\HasUrl;
-use App\Models\Traits\ProvideContent;
+use App\Models\Traits\ProvidesContentTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Page extends Model implements HasContent, HasUrl
 {
-    use ProvideContent;
+    use ProvidesContentTrait;
 
     protected $table = 'pages';
 
@@ -156,7 +156,7 @@ interface HasUrl
 ### Traits
 
 #### ProvidesContentTrait
-Zoals eerder omschreven bevat de `ProvidesContentTrait` de logica voor de polymorfe relatie tussen het model dat `HasContent` implementeert en het Content-model.
+De `ProvidesContentTrait` bevat de logica voor de polymorfe relatie tussen het model dat `HasContent` implementeert en het Content-model. Door gebruik te maken van een **trait** kan deze logica op een eenvoudige manier worden hergebruikt. Als er andere functionaliteit nodig is, kan er een nieuwe trait worden gedefinieerd, of kunnen de functies uit de `HasContent`-interface direct in de betreffende class worden geïmplementeerd.
 
 ```php
 <?php
@@ -181,13 +181,15 @@ trait ProvidesContentTrait
 ```
 
 ### Filament PageResource en Dynamische Templates
-Met dit `Page`-model kan een Filament `PageResource` een formulier genereren voor het beheren van pagina’s. Een selectievak stelt de gebruiker in staat een template te kiezen, waarna het formulier dynamisch wordt aangepast op basis van de geselecteerde template.
+Met het `Page`-model kan een Filament `PageResource` een formulier genereren voor het beheren van pagina’s. Een select-veld stelt de gebruiker in staat om een template te kiezen, waarna het formulier dynamisch de velden van de bijbehorende template inlaadt.
 
 **Schema voor Content Management in CMS met Filament**
 
 ```php
 public static function form(Form $form): Form
     {
+        $templateFactory = app(TemplateFactory::class);
+
         return $form
             ->schema([
                 Forms\Components\Section::make()->schema([
@@ -203,18 +205,21 @@ public static function form(Form $form): Form
                         ->unique(ignoreRecord: true)
                         ->required(),
 
+					// Het select veld voor het selecteren van een template
                     Forms\Components\Select::make('template')
-                        ->options(TemplateFactory::getTemplateNames())
+                        ->options($templateFactory->getTemplateNames())
                         ->required()
                         ->live(),
 
+					// Het onderdeel van het formulier dat dynamisch wordt 
+					//  ingeladen nadat de gebruiker een template selecteert
                     Forms\Components\Section::make()
-                        ->schema(function (Get $get) {
+                        ->schema(function (Get $get) use ($templateFactory) {
                             if ($get('template')) {
                                 return 
-									TemplateFactory::loadTemplateSchema(
-										$get('template')
-									);
+	                                $templateFactory->loadTemplateSchema(
+		                                $get('template')
+		                            );
                             }
 
                             return [];
@@ -225,7 +230,7 @@ public static function form(Form $form): Form
 ```
 
 ### TemplateFactory voor Dynamische Template-selectie
-De `TemplateFactory`-class ondersteunt de selectie en dynamische weergave van velden op basis van het door de gebruiker gekozen template.
+De `TemplateFactory`-class ondersteunt de selectie en dynamische weergave van velden op basis van het door de gebruiker gekozen template in de `PageResource`.
 
 **TemplateFactory in CMS met Filament**
 
@@ -234,34 +239,18 @@ De `TemplateFactory`-class ondersteunt de selectie en dynamische weergave van ve
 
 namespace App\Cms;
 
-use App\Cms\Templates\Enums\Templates;
 use App\Cms\Templates\Interfaces\HasTemplateSchema;
 
-class TemplateFactory
+readonly class TemplateFactory
 {
-    public static function getTemplateNames(): array
+    public function __construct(private array $templates) {}
+
+    public function getTemplateFields(string $template): array
     {
-        return Templates::getFormattedNames();
+        return $this->extractFieldNames($this->loadTemplateSchema($template));
     }
 
-    public static function getTemplateFields(string $template): array
-    {
-        return self::extractFieldNames(self::loadTemplateSchema($template));
-    }
-
-    public static function loadTemplateSchema(string $template): array
-    {
-        if (! class_exists($template)) {
-            abort(404);
-        }
-
-        $templateClass = new $template;
-        return $templateClass instanceof HasTemplateSchema 
-        ? $templateClass->getForm() 
-        : [];
-    }
-
-    protected static function extractFieldNames(array $components): array
+    protected function extractFieldNames(array $components): array
     {
         $fields = [];
 
@@ -269,22 +258,41 @@ class TemplateFactory
             if (method_exists($component, 'getName')) {
                 $fields[] = $component->getName();
             }
-
-            if (method_exists($component, 'getSchema')) {
-                $fields = array_merge(
-	                $fields, 
-	                self::extractFieldNames($component->getSchema())
-                );
-            }
         }
 
         return $fields;
+    }
+
+    public function getTemplateNames(): array
+    {
+        $formattedNames = [];
+
+        foreach ($this->templates as $className => $templateClass) {
+            if ($templateClass instanceof HasTemplateSchema) {
+                $formattedNames[$className] = $templateClass->getName();
+            }
+        }
+
+        return $formattedNames;
+    }
+
+    public function loadTemplateSchema(string $template): array
+    {
+        if (! class_exists($template)) {
+            abort(404);
+        }
+
+        $templateClass = new $template;
+
+        return $templateClass instanceof HasTemplateSchema
+            ? $templateClass->getForm()
+            : [];
     }
 }
 ```
 
 ### Class voor Templates in CMS met Filament
-Template-velden worden beheerd in specifieke classes die een array met Filament FormField-componenten teruggeven aan de Resource.
+Een `Template` wordt beheerd in een specifieke class die een array met Filament FormField-componenten teruggeven aan een `Resource`.
 
 **Template-class in CMS met Filament**
 
@@ -302,14 +310,14 @@ use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 
-class Homepage implements HasTemplateSchema
+class HomeTemplate implements HasTemplateSchema
 {
-	public static function getName(): string
-	{
-		return 'Homepage';
-	}
+    public function getName(): string
+    {
+        return 'Homepage';
+    }
 
-    public static function getForm(): array
+    public function getForm(): array
     {
         return [
             TextInput::make('header_title')
@@ -333,12 +341,10 @@ class Homepage implements HasTemplateSchema
 }
 ```
 
-Het bovenstaande template bevat, net zoals het AO CMS-template, een veld voor een headerafbeelding en een titel. Gebruikers kunnen ook blokken selecteren om toe te voegen.
+Het bovenstaande sjabloon bevat een veld voor een headerafbeelding, een titel en biedt de mogelijkheid om contentblokken toe te voegen.
 
 ### Interfaces
-Alle templates implementeren de interface `HasTemplateSchema`. Deze interface vereist dat de classes die het implementeren een schema voor hun CMS content beschikbaar stelt. Door dit te implementeren, kunnen we garanderen dat een template - dat in de `TemplateFactory` wordt geïnjecteerd - over de functionaliteit beschikt om dit schema op te halen.
-
-Om het ophalen van het _FormSchema_ gemakkelijker te maken voor developers, is ervoor gekozen om de functie `static` te maken. Dit kan het DIP-principe van SOLID schenden en leiden tot een _tight coupling_. Echter, in gevallen waarin dit gebeurt, is het vanzelfsprekend dat er een sterke afhankelijkheid bestaat tussen het schema en de functie die het schema opvraagt. Neem bijvoorbeeld het `Review`-model, dat voor zijn CMS-content gebruik zal maken van de `ReviewTemplate`-class.
+Een `Template` implementeert de interface `HasTemplateSchema`. Deze interface vereist dat classes een schema voor hun CMS-content en een naam beschikbaar stellen. Het schema wordt verwacht in de `TemplateFactory`, terwijl de naam wordt gebruikt in het select-veld waarin gebruikers in de `Page`-resource een template kiezen.
 
 **HasTemplateSchema interface in het CMS met Filament**
 
@@ -349,45 +355,9 @@ namespace App\Cms\Templates\Interfaces;
 
 interface HasTemplateSchema
 {
-    public static function getForm(): array;
-}
-```
+    public function getName(): string;
 
-### Enums
-Alle templates die gebruikers kunnen selecteren binnen het `Page`-model worden centraal beheerd in `Templates`. Deze `enum` bevat verschillende cases, waarbij elke case de classname van een specifieke template vertegenwoordigt. Naast het eenvoudig bijhouden van deze classnames biedt de enum aanvullende functionaliteit om de cases op een voor de gebruiker leesbare manier te presenteren.
-
-```php
-<?php
-
-namespace App\Cms\Templates\Enums;
-
-use App\Cms\Templates\BlogTemplate;
-use App\Cms\Templates\HomeTemplate;
-use App\Cms\Templates\Interfaces\HasTemplateSchema;
-use App\Cms\Templates\ReviewTemplate;
-
-enum Templates: string
-{
-    case HOMEPAGE = HomeTemplate::class;
-    case BLOG = BlogTemplate::class;
-    case REVIEW = ReviewTemplate::class;
-
-    public static function getFormattedNames(): array
-    {
-        $cases = self::cases();
-        $formattedNames = [];
-
-        foreach ($cases as $case) {
-            $templateClass = new $case->value;
-            
-            if ($templateClass instanceof HasTemplateSchema) {
-                $formattedNames[$templateClass::class] 
-		            = $templateClass->getName();
-            }
-        }
-
-        return $formattedNames;
-    }
+    public function getForm(): array;
 }
 ```
 
@@ -411,10 +381,10 @@ trait MutateDataBeforeCreateTrait
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
+        $templateFactory = app(TemplateFactory::class);
         if (! empty($data['template'])) {
             $templateFields = 
-	            TemplateFactory::getTemplateFields($data['template']);
-	            
+	            $templateFactory->getTemplateFields($data['template']);
             $this->cmsContent = Arr::only($data, $templateFields);
         }
 
@@ -426,9 +396,9 @@ trait MutateDataBeforeCreateTrait
         if ($this->cmsContent) {
             foreach ($this->cmsContent as $name => $value) {
                 $this->record->contents()->create([
-	                'name' => $name,
-	                'value' => $value
-	            ]);
+		            'name' => $name,
+		            'value' => $value
+                ]);
             }
         }
     }
@@ -475,7 +445,8 @@ trait MutateDateBeforeSaveTrait
 {
     protected function mutateFormDataBeforeSave(array $data): array
     {
-        $templateFields = TemplateFactory::getTemplateFields($data['template']);
+        $templateFactory = app(TemplateFactory::class);
+        $templateFields = $templateFactory->getTemplateFields($data['template']);
         $cmsContent = Arr::only($data, $templateFields);
 
         foreach ($cmsContent as $name => $value) {
@@ -487,8 +458,7 @@ trait MutateDateBeforeSaveTrait
 
         return Arr::except($data, $templateFields);
     }
-}
-```
+}```
 
 Wanneer CMS-content wordt toegevoegd of bijgewerkt in een bestaand object, wordt het opslaan een stuk eenvoudiger. In dit geval hoeft alleen de relevante content uit de door de gebruiker ingevulde formuliergegevens te worden gehaald en via een Eloquent-relatie te worden opgeslagen. De gegevens die betrekking hebben op het hoofdmodel worden pas na deze handeling opgeslagen.
 ### Blockschema's voor Contentblokken in CMS met Filament
@@ -529,7 +499,7 @@ class Paragraph implements HasBlockSchema
             ]);
     }
 
-    public static function resolve(array $blockData): array
+    public function resolve(array $blockData): array
     {
         return [
             'title' => $blockData['title'],
@@ -555,6 +525,6 @@ interface HasBlockSchema
 {
     public static function getBlock(): Block;
 
-    public static function resolve(array $blockData): array;
+    public function resolve(array $blockData): array;
 }
 ```

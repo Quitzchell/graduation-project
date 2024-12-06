@@ -88,11 +88,11 @@ Het tweede prototype dat ik ben gaan realiseren, was een CMS met Filament. Filam
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 > * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
 
-Tijdens het onderzoek ben ik ook begonnen met het ontwerpen en realiseren van een CMS met behulp van de Filament Library. Hierbij heb ik zowel de checklist voor CMS-criteria als de requirements in acht genomen. Daarnaast ben ik begonnen met het beschrijven van de vergelijking tussen hoe specifieke functionaliteiten gerealiseerd kunnen worden in verschillende frameworks en libraries.
+Na het onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van een CMS gebaseerd op Filament. Voor het ontwerp van de CMS-functionaliteiten heb ik een iteratieve aanpak gehanteerd. Deze werkwijze stelde me in staat om tijdens elke ontwikkelstap te reflecteren op wat ik had gerealiseerd en wat de volgende logische stap zou zijn. Daarnaast ben ik begonnen met het documenteren van de werking van de verschillende systemen.
 
 > * [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
-> * [Concepten voor CMS Prototype Realisaties](../DesignRealisatie/CmsPrototypesRealisatie.md)
 > * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
+> * [Technische documentatie van CMS Prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
 	- **Filament**: Filament is dankzij zijn flexibiliteit en modulaire opbouw geschikt als basis voor een CMS voor organisaties die maatwerk nodig hebben bij het beheren van hun contentbehoeften. Daarnaast is de library populair binnen de Laravel-community ([State of Laravel, Administration Panel Results](https://stateoflaravel.com/results#question:administration+panel)). Vanwege de beperkte ondersteuning voor diepere hiërarchieën en relationele structuren is de library echter nog afhankelijk van externe of zelfontwikkelde oplossingen.

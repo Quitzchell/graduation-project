@@ -23,7 +23,7 @@
 # Design & Realisatie
 
 * ### [Opzet van het prototype](./DesignRealisatie/OpzetVanDePrototypes.md)
-* ### [Concepten voor CMS Prototype Realisaties](./DesignRealisatie/CmsPrototypesRealisatie.md)
+* ### [Concepten voor CMS Prototype Realisaties](TechnischeDocumentatieCmsPrototypes.md)
 * ### [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 * ### [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 * ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
