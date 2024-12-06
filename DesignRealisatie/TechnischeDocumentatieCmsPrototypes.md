@@ -1,9 +1,11 @@
 # Technische Documentatie CMS Prototypes
 
 Dit document geeft een overzicht over de werking van de verschillende Content Management Systemen en beschrijft hoe de ze opgebouwd worden.
+
 ## AllesOnline CMS
 
 ### ContentManagerController
+
 In het AllesOnline CMS worden pagina’s en hun content beheerd via de `ContentManagerController`. Deze controller wordt meestal zonder aanpassingen geïmporteerd vanuit het AllesOnline CMS-pakket en biedt toegang tot de `ManagedContent`, `Page`, en `CMSContent`-modellen voor de configuratie van content-elementen.
 
 **ContentManagerController in AO CMS**
@@ -22,6 +24,7 @@ class ContentManagerController extends ContentManager
 ```
 
 ### XML-schema voor Templates met CMS-content
+
 Binnen de `ContentManager` worden `Page`-objecten dynamisch gegenereerd via XML-templates die specificeren welke velden (zoals tekst, afbeeldingen en blokken) kunnen worden toegevoegd. Dit stelt developers in staat om template-schema's te definiëren voor CMS-gebruikers.
 
 **XML-schema voor Template in AO CMS**
@@ -38,6 +41,7 @@ Binnen de `ContentManager` worden `Page`-objecten dynamisch gegenereerd via XML-
 In het bovenstaande template zijn velden voor een headerafbeelding en een titel opgenomen. Gebruikers kunnen daarnaast blokken selecteren om toe te voegen, wat flexibiliteit biedt bij het vormgeven van de pagina.
 
 ### Blok-schema's voor Blokken met CMS-content
+
 Contentblokken kunnen ook worden gedefinieerd met XML en vervolgens in verschillende templates worden hergebruikt.
 
 **XML-schema voor Blok in AO CMS**
@@ -59,6 +63,7 @@ In Filament kan een soortgelijke functionaliteit worden gerealiseerd door gebrui
 *Een UML class-diagram met het onderstaande concept voor content management kan je [hier bekijken](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)*
 
 ### Eloquent Model: Page
+
 Het `Page`-model slaat paginagegevens in de database op en beheert relaties tussen pagina's.
 
 **Page-model in CMS met Filament**
@@ -113,9 +118,11 @@ class Page extends Model implements HasContent, HasUrl
 ```
 
 ### Interfaces
+
 Het Page model implementeert verschillende interfaces die voorschrijven waar het model aan moet voldoen. 
 
 #### HasContent
+
 De `HasContent`-interface schrijft voor dat het model een relatie heeft met het Content-model, waarin de daarvoor aangewezen CMS-content wordt opgeslagen. In het Filament CMS wordt deze interface gecombineerd met de `ProvidesContentTrait`.
 
 **HasContent interface in CMS met Filament**
@@ -136,6 +143,7 @@ interface HasContent
 ```
 
 #### HasUrl
+
 De `HasUrl`-interface schrijft voor dat het model functionaliteit moet implementeren waarmee een `uri` en een `url` worden gegenereerd voor de objecten die uit het model voortkomen.
 
 **HasUrl interface in het CMS met Filament**
@@ -156,6 +164,7 @@ interface HasUrl
 ### Traits
 
 #### ProvidesContentTrait
+
 De `ProvidesContentTrait` bevat de logica voor de polymorfe relatie tussen het model dat `HasContent` implementeert en het Content-model. Door gebruik te maken van een **trait** kan deze logica op een eenvoudige manier worden hergebruikt. Als er andere functionaliteit nodig is, kan er een nieuwe trait worden gedefinieerd, of kunnen de functies uit de `HasContent`-interface direct in de betreffende class worden geïmplementeerd.
 
 ```php
@@ -181,6 +190,7 @@ trait ProvidesContentTrait
 ```
 
 ### Filament PageResource en Dynamische Templates
+
 Met het `Page`-model kan een Filament `PageResource` een formulier genereren voor het beheren van pagina’s. Een select-veld stelt de gebruiker in staat om een template te kiezen, waarna het formulier dynamisch de velden van de bijbehorende template inlaadt.
 
 **Schema voor Content Management in CMS met Filament**
@@ -230,6 +240,7 @@ public static function form(Form $form): Form
 ```
 
 ### TemplateFactory voor Dynamische Template-selectie
+
 De `TemplateFactory`-class ondersteunt de selectie en dynamische weergave van velden op basis van het door de gebruiker gekozen template in de `PageResource`.
 
 **TemplateFactory in CMS met Filament**
@@ -292,6 +303,7 @@ readonly class TemplateFactory
 ```
 
 ### Class voor Templates in CMS met Filament
+
 Een `Template` wordt beheerd in een specifieke class die een array met Filament FormField-componenten teruggeven aan een `Resource`.
 
 **Template-class in CMS met Filament**
@@ -344,6 +356,7 @@ class HomeTemplate implements HasTemplateSchema
 Het bovenstaande sjabloon bevat een veld voor een headerafbeelding, een titel en biedt de mogelijkheid om contentblokken toe te voegen.
 
 ### Interfaces
+
 Een `Template` implementeert de interface `HasTemplateSchema`. Deze interface vereist dat classes een schema voor hun CMS-content en een naam beschikbaar stellen. Het schema wordt verwacht in de `TemplateFactory`, terwijl de naam wordt gebruikt in het select-veld waarin gebruikers in de `Page`-resource een template kiezen.
 
 **HasTemplateSchema interface in het CMS met Filament**
@@ -458,10 +471,13 @@ trait MutateDateBeforeSaveTrait
 
         return Arr::except($data, $templateFields);
     }
-}```
+}
+```
 
 Wanneer CMS-content wordt toegevoegd of bijgewerkt in een bestaand object, wordt het opslaan een stuk eenvoudiger. In dit geval hoeft alleen de relevante content uit de door de gebruiker ingevulde formuliergegevens te worden gehaald en via een Eloquent-relatie te worden opgeslagen. De gegevens die betrekking hebben op het hoofdmodel worden pas na deze handeling opgeslagen.
+
 ### Blockschema's voor Contentblokken in CMS met Filament
+
 In het CMS met Filament worden contentblokken gedefinieerd via PHP-classes. deze kunnen in verschillende templates hergebruikt worden. In de blokken wordt ook gespecificeerd hoe de informatie uit het blok moet worden opgehaald wanneer deze wordt opgevraagd.
 
 **Block-class in CMS met Filament**
@@ -510,6 +526,7 @@ class Paragraph implements HasBlockSchema
 ```
 
 ### Interfaces
+
 Ook voor de blocks is er een interface voorbereid, namelijk `HasBlockSchema`, die voorschrijft welke functionaliteiten een block moet bieden. Dit betreft het beschikbaar stellen van de formuliervelden die bij het block horen en een methode om de content van het block, die als JSON in het CMS wordt opgeslagen, op te halen.
 
 **HasBlockSchema interface in het CMS met Filament**

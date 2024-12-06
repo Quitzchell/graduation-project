@@ -21,11 +21,13 @@ Dit onderwerp kwam ook aan bod in een gesprek met Stefan naar aanleiding van de 
 Doordat ik dat eerder niet deed, heb ik binnen een aantal projecten van AllesOnline flink wat overuren gemaakt. Hierdoor heb ik de tijd die ik voor mijn examenproject had, niet goed benut. In het gesprek met Stefan heb ik aangegeven dat ik voortaan bewuster zal omgaan met mijn tijd. Ik wil het aantal overuren beperken en de beschikbare tijd voor mijn examenproject effectief gebruiken.
 
 Op deze manier hoop ik de verloren tijd in te halen en te voorkomen dat ik mezelf tijdens de werkweek overbelast. Zo behoud ik ook voldoende energie om buiten werktijd aan mijn examenproject te werken.
+
 ## Gesprek rond afronding van CMS met Filament
 
 Rond de afronding van het prototype CMS met Filament benadrukte Stefan opnieuw het belang van het onderzoeken of er een gemakkelijke manier is om van het AllesOnline CMS naar het Filament CMS te migreren. Naar aanleiding van deze opmerking besloot ik, voordat ik mijn onderzoek naar Statamic begin, eerst een spike te doen om dit onderzoek te verkennen.
 
 Tijdens de afronding van het CMS met Filament merkte Stefan bovendien op dat er mogelijk een nieuwe opdracht aan komt, waarbij hij Filament zou willen gebruiken in plaats van het AllesOnline CMS. Dit komt doordat de wens van de klant steeds meer gericht is op het aanbieden van een CRM in plaats van een CMS.
+
 # Wilco Kuijpers
 
 ## Algemene gesprekken
@@ -33,6 +35,7 @@ Tijdens de afronding van het CMS met Filament merkte Stefan bovendien op dat er 
 Wilco werkt al ongeveer acht jaar bij AllesOnline en is onze senior software developer. In de gesprekken die ik tijdens werktijd met hem voer, komt het CMS regelmatig ter sprake. Deze gesprekken vinden vooral plaats wanneer we samen in de wirwar van spaghetticode op zoek zijn naar een bug of een specifieke casus proberen mogelijk te maken binnen het CMS. Hij erkent dat het CMS, hoewel functioneel, erg ongestructureerd is. Volgens hem beperkt dit niet alleen onze flexibiliteit bij het realiseren van maatwerkoplossingen, maar ook de mogelijkheid om een grondige test-suite voor het systeem op te zetten.
 
 Een voorbeeld van deze gesprekken vond plaats tijdens een onderzoek naar hoe we de waarden die voor een gebruiker zichtbaar zijn in een selectieveld binnen het CMS kunnen filteren. Tijdens dit onderzoek ontdekten we dat er voor verschillende soorten selectievelden niet alleen verschillende syntaxis beschikbaar is, maar ook dat de mogelijkheden voor het filteren bij de ene beperkter zijn dan bij de andere. Wilco legde mij uit dat dit probleem in andere websites was opgelost door een nieuw model aan te maken met een global scope die voldoet aan de eisen van het filter dat we proberen op te zetten en de relatie voor het veld hierop te baseren. Naar mijn idee een omslachtige oplossing die indruist tegen best practices, maar wel een typische pragmatische oplossing die vaak door developers bij AllesOnline wordt gedaan om bepaalde cases te realiseren.
+
 ## Gesprek tijdens realisatie van Filament CMS
 
 In een gesprek met Wilco, waarin ik kort uitlegde hoe pagina’s en blokken met CMS-content toegepast kunnen worden in een CMS met Filament, bespraken we een aantal onderwerpen. Wilco gaf aan dat hij het prettig vond dat de codebase van Filament grotendeels in PHP is geschreven, wat autocompletion mogelijk maakt — iets wat met XML beperkter en minder intuïtief is. Daarnaast vond hij het belangrijk dat de overhead voor developers wordt verminderd. In Filament zou dit bereikt kunnen worden door, in plaats van telkens een FormField te definiëren en dezelfde functies eraan te koppelen, een veelgebruikt FormField met deze specifieke functies in een factory te abstraheren. Zo kan een developer eenvoudiger dit veelgebruikte FormField definiëren.

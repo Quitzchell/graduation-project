@@ -113,7 +113,6 @@ Waar in het vorige probleem al gehint werd naar SOLID principes, zien we op een 
     
 - **Tight coupling**: De huidige architectuur creëert sterke afhankelijkheden tussen verschillende delen van de applicatie, wat de kans op regressies vergroot bij wijzigingen.
     
-
 #### Aanbevelingen voor verbetering
 
 1. **Herziening van de architectuur**: Een grondige herziening om meer SOLID-principes toe te passen. Ontleed bestaande modules in kleinere, zelfstandige classes met duidelijke verantwoordelijkheden die testbaar zijn.
