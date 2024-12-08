@@ -19,6 +19,7 @@
 * ### [SWOT: AllesOnline CMS](./AnalyseAdvies/SwotAOCms.md)
 * ### [Onderzoek naar CMS met Filament](./AnalyseAdvies/OnderzoekNaarFilament.md)
 * ### [SWOT: CMS met Filament](./AnalyseAdvies/SwotFilamentCms.md)
+* ### [Onderzoek naar tool(s) voor migratie](./AnalyseAdvies/OnderzoekNaarToolsVoorMigratie.md)
 
 # Design & Realisatie
 
