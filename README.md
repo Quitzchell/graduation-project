@@ -1,14 +1,14 @@
 # Revitalising Content Management
 # Project Raport
 
-* ### [Voorpagina](ProjectRaport/Voorpagina.md)
-* ### [De opdracht](ProjectRaport/Opdracht.md)
-* ### [Leeswijzer](ProjectRaport/Leeswijzer.md)
+* ### [Voorpagina](./ProjectRaport/Voorpagina.md)
+* ### [De opdracht](./ProjectRaport/Opdracht.md)
+* ### [Leeswijzer](./ProjectRaport/Leeswijzer.md)
 
 # Projectmanagement
 
-* ### [Projectplan](Projectmanagement/Projectplan.md)
-* ### [Logboek](Projectmanagement/Logboek.md)
+* ### [Projectplan](./Projectmanagement/Projectplan.md)
+* ### [Logboek](./Projectmanagement/Logboek.md)
 
 # Analyse & Advies
 
@@ -24,17 +24,18 @@
 # Design & Realisatie
 
 * ### [Opzet van het prototype](./DesignRealisatie/OpzetVanDePrototypes.md)
-* ### [Concepten voor CMS Prototype Realisaties](TechnischeDocumentatieCmsPrototypes.md)
+* ### [Technische documentatie CMS prototypes](./DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 * ### [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 * ### [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 * ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
- 
+* ### [Repository PoC: Transcription (migratietool)](https://github.com/Quitzchell/poc-transcription)
+
 # Bijlagen
 
-* #### [Voorbeeld van schema in AllesOnline CMS](Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
-* #### [Voorbeeld van documentatie AllesOnline CMS](Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
-* #### [UML Entiteiten diagram voor Prototype](Bijlagen/UmlEntiteitenDiagramPrototype.md)
-* #### [UML Class diagram voor ContentManagement in Filament CMS](Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
-* #### [Video Cypress Test AO CMS](Bijlagen/CypressTestsAOCms.md)
-* #### [Video Cypress Test Filament CMS](Bijlagen/CypressTestsFilamentCms.md)
-* #### [Evidence in verhouding tot leeruitkomsten](Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
+* #### [Voorbeeld van schema in AllesOnline CMS](./Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
+* #### [Voorbeeld van documentatie AllesOnline CMS](./Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
+* #### [UML Entiteiten diagram voor Prototype](./Bijlagen/UmlEntiteitenDiagramPrototype.md)
+* #### [UML Class diagram voor ContentManagement in Filament CMS](./Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+* #### [Video Cypress Test AO CMS](./Bijlagen/CypressTestsAOCms.md)
+* #### [Video Cypress Test Filament CMS](./Bijlagen/CypressTestsFilamentCms.md)
+* #### [Evidence in verhouding tot leeruitkomsten](./Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
