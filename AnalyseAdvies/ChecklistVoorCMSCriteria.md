@@ -17,7 +17,7 @@
 | Video Form Field           | 🟢          | 🟢       |          |     |
 | Maps Form Field            | 🟢          | 🟡       |          |     |
 | OAuth2 Form Field          | 🟢          | 🟡       |          |     |
-| Relations Module           | 🟢          | 🟢<br>   |          |     |
+| Relations Module           | 🟢          | 🟢       |          |     |
 
 | **Legenda**                               |     |
 | ----------------------------------------- | --- |
