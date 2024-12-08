@@ -22,14 +22,14 @@ Het prototype zal uit verschillende systemen bestaan die met elkaar communiceren
 	  
 * **Docker**: Voor alle systemen zal een aparte Dockercontainer geconfigureerd worden waarin de applicaties kunnen draaien. 
 	  
-### Functioneel
+## Functioneel
 
 Globaal gezien zal een prototype aan de volgende eisen voldoen:
 
 - **Content beheer**: De mogelijkheid om webpagina's en de bijbehorende content via het CMS te beheren.
 - **Objecten beheer**: De mogelijkheid om objecten en de bijbehorende inhoud via het CMS te beheren.
 - **API-integraties**: Integratie van API’s voor het uitwisselen van gegevens tussen de backend en frontend.
-### Bijlagen
+# Bijlagen
 
 > _Volledige lijst met requirements voor een doorsnee AllesOnline-website:_
 >  * [Requirements](../AnalyseAdvies/Requirements.md)
