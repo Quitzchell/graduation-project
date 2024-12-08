@@ -112,11 +112,11 @@ Nadat ik zowel een AllesOnline-prototype als een Filament CMS-prototype had gere
 Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, maar een Proof of Concept (PoC) te realiseren. Het doel van de PoC is om aan te tonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's  omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor het realiseren van deze tool heb ik gekozen om gebruik te maken van Symfony CLI-componenten.
 
 > _Verantwoording voor de keuze om Symfony voor de tool gebruiken lees je hier_:
-> [Onderzoek naar Tool(s) voor Migratie](../AnalyseAdvies/OnderzoekNaarToolsVoorMigratie.md)
+> * [Onderzoek naar Tool(s) voor Migratie](../AnalyseAdvies/OnderzoekNaarToolsVoorMigratie.md)
 
 Met de tool is het in eerste opzet mogelijk om een XML-block om te zetten naar een PHP-class die gebruikt kan worden door het Filament CMS. 
 
-> [Repository PoC: Transcription (migratietool)](https://github.com/Quitzchell/poc-transcription)
+> * [Repository PoC: Transcription (migratietool)](https://github.com/Quitzchell/poc-transcription)
 
 ### Conclusies onderzoek migratie AllesOnline CMS naar Filament CMS
 
