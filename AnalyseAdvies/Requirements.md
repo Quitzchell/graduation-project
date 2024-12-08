@@ -15,10 +15,10 @@ Om vast te stellen aan welke eisen een CMS moet voldoen voor een doorsnee AllesO
 | **URL FormField**             | Ondersteuning voor URL-invoer met validatie.                                            | Must Have   |
 | **Media-item FormField**      | Ondersteuning voor het toevoegen van media (afbeeldingen).                              | Must Have   |
 | **File FormField**            | Ondersteuning voor het toevoegen van bestanden                                          | Must Have   |
-| **Video FormField**           | Ondersteuning voor het uploaden en beheren van embedded video's binnen het CMS.         | Should Have |
-| **Maps FormField**            | Ondersteuning voor het beheren van een google maps locatie                              | Must have   |
-| **OAuth2 FormField**          | Ondersteuning voor OAuth2.                                                              | Should have |
 | **Relations module**          | Ondersteuning voor het zichtbaar maken van relaties tussen verschillende objecten.      | Must Have   |
+| **Maps FormField**            | Ondersteuning voor het beheren van een google maps locatie                              | Must have   |
+| **Video FormField**           | Ondersteuning voor het uploaden en beheren van embedded video's binnen het CMS.         | Should Have |
+| **OAuth2 FormField**          | Ondersteuning voor OAuth2.                                                              | Should have |
 
 ### Niet-Functionele Vereisten:
 
