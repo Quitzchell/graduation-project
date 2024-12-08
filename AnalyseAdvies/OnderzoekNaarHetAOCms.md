@@ -99,11 +99,11 @@ Waar in het vorige probleem al gehint werd naar SOLID principes, zien we op een 
 
 #### Kernprincipes
 
-1. **Single Responsibility Principle (SRP)**: Dit principe stelt dat een class slechts één reden tot verandering moet hebben. In het AllesOnline CMS zijn veel classes verantwoordelijk voor meerdere functionaliteiten, wat leidt tot complexiteit en bemoeilijkt het isoleren en hergebruiken van functionaliteiten.
+* **Single Responsibility Principle (SRP)**: Dit principe stelt dat een class slechts één reden tot verandering moet hebben. In het AllesOnline CMS zijn veel classes verantwoordelijk voor meerdere functionaliteiten, wat leidt tot complexiteit en bemoeilijkt het isoleren en hergebruiken van functionaliteiten.
     
-2. **Open/Closed Principle (OCP)**: Classes moeten open zijn voor uitbreiding, maar gesloten voor aanpassing. In de huidige architectuur vereisen nieuwe functionaliteiten vaak wijzigingen in bestaande code, wat de kans op bugs vergroot en de onderhoudbaarheid bemoeilijkt.
+* **Open/Closed Principle (OCP)**: Classes moeten open zijn voor uitbreiding, maar gesloten voor aanpassing. In de huidige architectuur vereisen nieuwe functionaliteiten vaak wijzigingen in bestaande code, wat de kans op bugs vergroot en de onderhoudbaarheid bemoeilijkt.
     
-3. **Dependency Inversion Principle (DIP)**: Modules op een hoger niveau moeten afhankelijk zijn van abstracties in plaats van concrete implementaties. In het AllesOnline CMS worden veel functionaliteiten direct binnen classes aangeroepen, dit belemmert onafhankelijkheid.
+* **Dependency Inversion Principle (DIP)**: Modules op een hoger niveau moeten afhankelijk zijn van abstracties in plaats van concrete implementaties. In het AllesOnline CMS worden veel functionaliteiten direct binnen classes aangeroepen, dit belemmert onafhankelijkheid.
      
 #### Gevolgen van niet naleven SOLID principes
 
