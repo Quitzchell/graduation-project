@@ -2,6 +2,7 @@
 
 >_Voor meer informatie over het Filament:_
 > * [Onderzoeksdocument over Filament](./OnderzoekNaarFilament.md)
+
 ## Strengths (Sterktes)
 
 * **Intuïtieve gebruikersinterface**: Filament biedt met zijn standaard library aan componenten breed scala aan een gebruiksvriendelijke interface voor het beheren van content en objecten. Dit maakt het mogelijk om een eenvoudig te gebruiken CMS te faciliteren waarmee gebruikers hun websites kunnen beheren.
