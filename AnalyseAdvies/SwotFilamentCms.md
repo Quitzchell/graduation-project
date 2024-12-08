@@ -1,5 +1,7 @@
 # SWOT: Filament
 
+>_Voor meer informatie over het Filament:
+> * [Onderzoeksdocument over Filament](./OnderzoekNaarFilament.md)_
 ## Strengths (Sterktes)
 
 * **Intuïtieve gebruikersinterface**: Filament biedt met zijn standaard library aan componenten breed scala aan een gebruiksvriendelijke interface voor het beheren van content en objecten. Dit maakt het mogelijk om een eenvoudig te gebruiken CMS te faciliteren waarmee gebruikers hun websites kunnen beheren.

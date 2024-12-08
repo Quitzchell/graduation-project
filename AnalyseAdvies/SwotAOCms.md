@@ -1,6 +1,7 @@
 # SWOT: AllesOnline CMS
 
-_Voor meer informatie over het AllesOnline CMS, [lees hier het onderzoeksdocument over het systeem](./OnderzoekNaarHetAOCms.md)._
+>_Voor meer informatie over het AllesOnline CMS:
+> * [Onderzoeksdocument over het AllesOnline CMS](./OnderzoekNaarHetAOCms.md)_
 
 ## Strengths (Sterktes)
 

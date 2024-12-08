@@ -1,5 +1,7 @@
 Om vast te stellen aan welke eisen een CMS moet voldoen voor een doorsnee AllesOnline-website, heb ik op basis van gesprekken met developers en een analyse van het AllesOnline CMS de volgende lijst met requirements opgesteld. Deze requirements vormen de basis voor het ontwikkelen van een prototype, zowel met het AllesOnline CMS als met andere systemen.
 
+----
+
 | **Vereiste**                  | **Beschrijving**                                                                        | **MoSCoW**  |
 | ----------------------------- | --------------------------------------------------------------------------------------- | ----------- |
 | **Blocks FormField**          | Dynamische content blokken.                                                             | Must Have   |
@@ -20,7 +22,7 @@ Om vast te stellen aan welke eisen een CMS moet voldoen voor een doorsnee AllesO
 | **Video FormField**           | Ondersteuning voor het uploaden en beheren van embedded video's binnen het CMS.         | Should Have |
 | **OAuth2 FormField**          | Ondersteuning voor OAuth2.                                                              | Should have |
 
-### Niet-Functionele Vereisten:
+## Niet-Functionele Vereisten
 
 | **Vereiste**                | **Beschrijving**                                                                                              |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
