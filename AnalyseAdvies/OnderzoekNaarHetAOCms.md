@@ -6,7 +6,8 @@ Dit document beschrijft de analyse van het AllesOnline CMS. Deze is uitgevoerd a
 > _Andere onderdelen van het Available Product Analysis:_
 > * _[Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)_
 
-> *De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse. [Deze lees je hier](./SwotAOCms.md).*
+> *De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse. 
+> * [Deze lees je hier](./SwotAOCms.md).*
 
 ## Systeemoverzicht: Beheren van content 
 
