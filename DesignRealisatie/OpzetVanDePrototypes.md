@@ -29,6 +29,7 @@ Globaal gezien zal een prototype aan de volgende eisen voldoen:
 - **Content beheer**: De mogelijkheid om webpagina's en de bijbehorende content via het CMS te beheren.
 - **Objecten beheer**: De mogelijkheid om objecten en de bijbehorende inhoud via het CMS te beheren.
 - **API-integraties**: Integratie van API’s voor het uitwisselen van gegevens tussen de backend en frontend.
+
 # Bijlagen
 
 > _Volledige lijst met requirements voor een doorsnee AllesOnline-website:_
