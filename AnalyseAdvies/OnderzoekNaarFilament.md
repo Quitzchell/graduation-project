@@ -7,7 +7,8 @@ Dit document beschrijft de analyse voor over Filament en hoe het eventueel gebru
 > _Andere onderdelen van het Available Product Analysis:_
 > * _[Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)_
 
-> *De belangrijkste bevindingen over het Filament zijn samengebracht in een SWOT-analyse. [hier kunt lezen](SwotFilamentCms).*
+> *De belangrijkste bevindingen over het Filament zijn samengebracht in een SWOT-analyse.*
+>  * [SWOT: CMS met Filament](./SwotFilamentCms.md)
 
 ## Over Filament
 
