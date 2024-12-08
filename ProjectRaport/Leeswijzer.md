@@ -51,7 +51,7 @@ Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsn
 
 Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb voor alle prototypes Docker-containers voorbereid. Voor de backends maak ik gebruik van de voorgedefinieerde AllesOnline-container, met een uitbreiding die het mogelijk maakt om van SQLite gebruik te maken. Dit maakt het eenvoudiger om zowel tijdens het programmeren als binnen een pipeline feature tests uit te voeren, zonder de reguliere database te beïnvloeden.
 
-### Conclusies eerste fase
+### Conclusies onderzoek AllesOnline CMS en realisatie eerste Prototype
 
 Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden kunnen formuleren op enkele deelvragen.
  
@@ -94,15 +94,14 @@ Na het onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van e
 > * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
 > * [Technische documentatie van CMS Prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
-### Conclusies tweede fase
+### Conclusies onderzoek Filament en realisatie Filament CMS
 
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
-	- Omdat Filament flexibel en modulair opgebouwd is, is het zeer geschikt als basis voor het realiseren van een CMS die gebruikt kan worden voor AllesOnline websites.
-	- Filament is in de basis ook geschikt om webapplicaties op te zetten zoals een CRM of andere SaaS-oplossingen die eventueel naast een CMS voor klanten ontwikkeld kan worden. 
-
+	- Omdat Filament flexibel en modulair is te gebruiken, is het zeer geschikt als basis voor het realiseren van een CMS die gebruikt kan worden voor AllesOnline websites.
 
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
-	* Filament is open-source en wordt aangeboden onder de MIT-licentie. Dit betekent dat er geen directe licentiekosten zijn verbonden aan het gebruik ervan
+	* Met Filament is het eenvoudiger om een CRM of andere SaaS-oplossing voor klanten te realiseren. Hierdoor wordt het mogelijk om naast een CMS ook aanvullende oplossingen aan te bieden aan klanten die hierom vragen. Dit is aanzienlijk eenvoudiger dan het AllesOnline CMS in bochten te wringen om te voldoen aan vereisten waarvoor het praktisch gezien niet is ontworpen.
+	* Filament is open-source en wordt aangeboden onder de MIT-licentie. Dit betekent dat er geen directe licentiekosten zijn verbonden aan het gebruik ervan.
 	* Filament heeft relatief uitgebreide documentatie en een snel groeiende community. Dit maakt het eenvoudiger voor ontwikkelaars om ondersteuning en voorbeelden te vinden. Aangezien Filament nog relatief nieuw is, zijn er toch nog wat beperkingen. Hierdoor kan de documentatie op sommige vlakken beperkt zijn, wat ertoe kan leiden dat developers meer tijd kwijt zijn aan het onderzoeken van specifieke functionaliteiten in edgecases.
 	* Filament is gebaseerd op Laravel, een framework waarmee het huidige development-team van AllesOnline al goed bekend is.
 
@@ -112,10 +111,16 @@ Nadat ik zowel een AllesOnline-prototype als een Filament CMS-prototype had gere
 
 Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, maar een Proof of Concept (PoC) te realiseren. Het doel van de PoC is om aan te tonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's  omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor het realiseren van deze tool heb ik gekozen om gebruik te maken van Symfony CLI-componenten.
 
-> Verantwoording voor de keuze om Symfony voor de tool gebruiken lees je hier_:
+> _Verantwoording voor de keuze om Symfony voor de tool gebruiken lees je hier_:
 > [Onderzoek naar Tool(s) voor Migratie](../AnalyseAdvies/OnderzoekNaarToolsVoorMigratie.md)
 
 Met de tool is het in eerste opzet mogelijk om een XML-block om te zetten naar een PHP-class die gebruikt kan worden door het Filament CMS. 
 
 > [Repository PoC: Transcription (migratietool)](https://github.com/Quitzchell/poc-transcription)
 
+### Conclusies onderzoek migratie AllesOnline CMS naar Filament CMS
+
+* **Hoe verloopt de migratie van de bestaande webapplicaties naar een nieuw CMS, en welke technische uitdagingen komen hierbij kijken?**
+	* Voor een migratie van een bestaande website die gebruik maakt van het AllesOnline CMS is goede planning en vooronderzoek nodig. Mocht er buiten de standaard AllesOnline CMS werking ook maatwerk voor de website zijn ingebouwd, dan moet eerst onderzocht worden hoe deze gemigreerd kan worden. 
+	* De migratie van bestaande website naar een nieuw CMS kan verlopen via een op maat gebouwde CLI-tool, bijvoorbeeld met Symfony. Dit maakt het mogelijk om bestanden te lezen, aan te passen en over te zetten naar een nieuw CMS. 
+	* Technische uitdagingen omvatten de verschillen in gegevensstructuur tussen de nieuwe en oude systemen. In het voorbeeld van het AllesOnline CMS en het Filament CMS vindt de validatie van input door gebruikers in andere bestanden plaats. Dit betekent dat het overzetten van schema's voor objecten relatief intensiever is dan het omzetten van contentschema's. Dit komt doordat contentschema's in het AllesOnline CMS geen mogelijkheid tot input validatie bieden.
