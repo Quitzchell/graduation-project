@@ -1,5 +1,6 @@
 # Voorbeeld Documentatie voor het huidige AO CMS
 
+```markdown
 ### type="tags"
 ### Module::FormTags()
 
@@ -27,4 +28,4 @@
 
 File:
 - /src/FormFields/FormTags/FormTagsModule.php
-
+```
