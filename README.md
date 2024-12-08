@@ -28,7 +28,7 @@
 * ### [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 * ### [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 * ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
-* ### [Repository PoC: Transcription (migratietool)](https://github.com/Quitzchell/poc-transcription)
+* ### [Repository: PoC Transcription migratietool](https://github.com/Quitzchell/poc-transcription)
 
 # Bijlagen
 
