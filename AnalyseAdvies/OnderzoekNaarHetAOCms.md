@@ -4,10 +4,10 @@
 Dit document beschrijft de analyse van het AllesOnline CMS. Deze is uitgevoerd als onderdeel van een *Available Product Analysis*, maar is ook gericht op het identificeren van knelpunten binnen het huidige AllesOnline CMS. 
 
 > _Andere onderdelen van het Available Product Analysis:_
-> * _[Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)_
+> * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 
-> *De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse. 
-> * [Deze lees je hier](./SwotAOCms.md).*
+> *De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse.* 
+> * [SWOT: AllesOnline CMS ](./SwotAOCms.md)
 
 ## Systeemoverzicht: Beheren van content 
 
@@ -15,7 +15,7 @@ Het AllesOnline CMS is gebouwd op **Laravel** en maakt gebruik van de Eloquent O
 
 ### ContentManagerController
 
-De **ContentManagerController** beheert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's. Daarnaast biedt het de functionaliteit om de rechten van gebruikers te verifiëren voor het beheren van specifieke content en pagina's binnen het CMS.
+De `ContentManagerController` beheert de content binnen het CMS en biedt functionaliteiten voor het toevoegen, bewerken, verwijderen en kopiëren van pagina's. Daarnaast biedt het de functionaliteit om de rechten van gebruikers te verifiëren voor het beheren van specifieke content en pagina's binnen het CMS.
 
 ### ContentManagerModule
 
