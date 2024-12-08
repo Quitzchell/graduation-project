@@ -25,7 +25,8 @@ De `ContentManagerModule` en bijbehorende view zijn verantwoordelijk voor het to
 
 De structuur van een website die gebruikmaakt van het AllesOnline CMS begint bij het `Page`-model. Dit model vertegenwoordigt individuele pagina's en slaat basisinformatie op, zoals de naam van de pagina en het toegepaste `Template`. Aan de hand van deze `Templates` wordt bepaald welke content aan een pagina kan worden toegevoegd. De content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
 
-_Een ERD voor het `Page`-model vind je in [dit voorbeeld](../Bijlagen/ErdAoCmsPageModel.md)_.
+> _Een ERD met betrekking tot het `Page`-model en CMS content_:
+> * [ERD AllesOnline CMS page model](../Bijlagen/ErdAoCmsPageModel.md).
 
 ### Templates
 
@@ -69,7 +70,8 @@ Hieronder een evaluatie die zich onderandere richt op de architectuur, functiona
 
 Een van de grootste gebreken in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel documentatie vaak wel beschikbaar is, ontbreekt gedetailleerde informatie over hoe bepaalde functionaliteiten moeten worden toegepast. In sommige gevallen ontbreekt zelfs volledig informatie over het bestaan van bepaalde functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars, die hierdoor niet goed kunnen achterhalen welke functionaliteiten beschikbaar zijn voor specifieke `FormField`-modules.
 
-_Een voorbeeld van documentatie vind je in deze bijlage: [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)_.
+> _Een voorbeeld van documentatie vind je in deze bijlage:
+>  * [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)_.
 
 **Aanbeveling**:
 - Een verbetering van de documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, attributen en parameters, met voorbeelden van hoe functionaliteiten in verschillende scenario’s kunnen worden gebruikt. Dit voorkomt onduidelijkheid en bespaart veel tijd die anders besteed zou worden aan het onderzoeken van implementaties tijdens het ontwikkelen van websites.
