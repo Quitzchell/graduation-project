@@ -15,14 +15,13 @@ Dit document beschrijft de analyse voor over Filament en hoe het eventueel gebru
 Ook Filament maakt net zoals het AllesOnline CMS gebruikt van **Laravel** en het Eloquent ORM dat dit framework biedt. 
 
 De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze packages omvatten verzamelingen van modules voor tabellen, formulieren, acties, notificaties en een container om alle modules samen te brengen. Volgens de documentatie bevat de basisinstallatie van Filament de volgende pakketten:
-
->* Panel Builder
->* Form Builder 
->* Table Builder 
->* Notifications
->* Actions
->* Infolists 
->* Widgets
+* Panel Builder
+* Form Builder 
+* Table Builder 
+* Notifications
+* Actions
+* Infolists 
+* Widgets
 
 Naast de standaardcomponenten biedt Filament ook de mogelijkheid om zelf componenten te ontwikkelen die binnen Filament gebruikt kunnen worden. Daarnaast is het zelfs mogelijk om deze oplossingen via een door Filament opgezette marketplace beschikbaar te stellen aan anderen, eventueel tegen betaling. Voor het ontwikkelen van de componenten is het wel aan te raden om gebruik te maken van de door Filament gehanteerde TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire).
 
