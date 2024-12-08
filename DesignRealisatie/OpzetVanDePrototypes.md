@@ -30,8 +30,9 @@ Globaal gezien zal een prototype aan de volgende eisen voldoen:
 - **Objecten beheer**: De mogelijkheid om objecten en de bijbehorende inhoud via het CMS te beheren.
 - **API-integraties**: Integratie van API’s voor het uitwisselen van gegevens tussen de backend en frontend.
 
-De volledige lijst met requirements voor een doorsnee AllesOnline-website vind je in het document: [Requirements](../AnalyseAdvies/Requirements.md).
+> _Volledige lijst met requirements voor een doorsnee AllesOnline-website:_
+>  * [Requirements](../AnalyseAdvies/Requirements.md)
 
-# Beschrijving van Objecten en Contentblokken
 
-In het prototype zullen verschillende objecten en contentblokken beschikbaar zijn. Voor een visuele weergave van de objecten en de relaties hiertussen is een eenvoudig [UML diagram](../Bijlagen/UmlEntiteitenDiagramPrototype.md) opgemaakt.
+> _UML entiteiten diagram voor opzet prototype:_
+> * [UML entiteiten diagram](../Bijlagen/UmlEntiteitenDiagramPrototype.md)
