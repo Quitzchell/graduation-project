@@ -119,15 +119,15 @@ Waar in het vorige probleem al gehint werd naar SOLID principes, zien we op een 
     
 #### Aanbevelingen voor verbetering
 
-1. **Herziening van de architectuur**: Een grondige herziening om meer SOLID-principes toe te passen. Ontleed bestaande modules in kleinere, zelfstandige classes met duidelijke verantwoordelijkheden die testbaar zijn.
+* **Herziening van de architectuur**: Een grondige herziening om de SOLID-principes beter toe te passen. Ontleed bestaande modules in kleinere, zelfstandige classes met duidelijke verantwoordelijkheden die testbaar zijn.
     
-2. **Implementatie van interface-gebaseerde ontwikkeling**: Verminder de afhankelijkheid van concrete implementaties door interfaces te gebruiken. Dit verhoogt de flexibiliteit van het systeem en maakt uitbreiding eenvoudiger. Bijvoorbeeld: laat de `FormTagsModule` via zijn constructor een class opvragen die de `TagLoader`-interface implementeert. Dit garandeert dat tags ingeladen kunnen worden, maar de manier waarop dit gebeurt bepaald wordt door de geïnjecteerde class.
+* **Implementatie van interface-gebaseerde ontwikkeling**: Verminder de afhankelijkheid van concrete implementaties door interfaces te gebruiken. Dit verhoogt de flexibiliteit van het systeem en maakt uitbreiding eenvoudiger. Bijvoorbeeld: laat de `FormTagsModule` via zijn constructor een class opvragen die de `TagLoader`-interface implementeert. Dit garandeert dat tags ingeladen kunnen worden, maar de manier waarop dit gebeurt bepaald wordt door de geïnjecteerde class.
     
-3. **Unit Testing en Continuous Integration**: Ontwikkel een uitgebreide suite van unit- en integratietests en implementeer een Continuous Integration (CI)-ontwikkelstraat om regressies te minimaliseren.
+* **Unit Testing en Continuous Integration**: Ontwikkel een uitgebreide suite van unit- en integratietests en implementeer een Continuous Integration (CI)-ontwikkelstraat om regressies te minimaliseren.
     
-4. **Documentatie en training**: Zorg voor documentatie van de nieuwe architectuur en richtlijnen, en organiseer trainingen voor ontwikkelaars over de SOLID-principes.
+* **Documentatie en training**: Zorg voor documentatie van de nieuwe architectuur en richtlijnen, en organiseer trainingen voor ontwikkelaars over de SOLID-principes.
     
-5. **Iteratieve verbeteringen**: Voer veranderingen iteratief door en evalueer regelmatig de impact op de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van het systeem.
+* **Iteratieve verbeteringen**: Voer veranderingen iteratief door en evalueer regelmatig de impact op de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van het systeem.
 
 ## Conclusie
 
