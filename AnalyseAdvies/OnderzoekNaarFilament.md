@@ -2,7 +2,7 @@
 
 ## Inleiding
 
-Dit document beschrijft de analyse voor over Filament en hoe het eventueel gebruikt kan worden voor het opzetten van een CMS. Filament is Library met, zoals ze het zelf zeggen, _"a collection of beautiful full-stack components"_. Deze componenten zijn geschikt voor het opzetten van CRUD-applicaties en naar mijn idee geschikt voor het bouwen van een CMS. 
+Dit document beschrijft de analyse over Filament en hoe het eventueel gebruikt kan worden voor het opzetten van een CMS. Filament is Library met, zoals ze het zelf zeggen, _"a collection of beautiful full-stack components"_. Deze componenten zijn geschikt voor het opzetten van CRUD-applicaties en naar mijn idee geschikt voor het bouwen van een CMS. 
 
 > _Andere onderdelen van het Available Product Analysis:_
 > * _[Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)_
@@ -23,7 +23,7 @@ De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze pa
 * Infolists 
 * Widgets
 
-Naast de standaardcomponenten biedt Filament ook de mogelijkheid om zelf componenten te ontwikkelen die binnen Filament gebruikt kunnen worden. Daarnaast is het zelfs mogelijk om deze oplossingen via een door Filament opgezette marketplace beschikbaar te stellen aan anderen, eventueel tegen betaling. Voor het ontwikkelen van de componenten is het wel aan te raden om gebruik te maken van de door Filament gehanteerde TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire).
+Naast de standaardcomponenten vanuit Filament zelft is het ook mogelijk om zelf componenten te ontwikkelen die binnen Filament kunnen worden gebruikt. Het is zelfs mogelijk om deze custom componenten via een door Filament opgezette marketplace beschikbaar te stellen aan anderen, eventueel tegen betaling. Voor het ontwikkelen van de componenten is het wel aan te raden om gebruik te maken van de door Filament gebruikte TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire).
 
 > _De marketplace van Filament [vind je hier](https://filamentphp.com/plugins)_
 
