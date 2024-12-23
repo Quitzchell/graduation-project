@@ -81,11 +81,13 @@ Hoewel het Filament een solide basis biedt voor het realiseren van een CMS, heef
 Filament is relatief nieuw en de community-ondersteuning staat nog in kinderschoenen. Hoewel de documentatie uitgebreid is en qua basisinformatie compleet is, bestaat de kans dat er minder informatie beschikbaar is voor complexere oplossingen.
 
 **Aanbeveling**:
-- Draag bij aan het versterken van Filament. Door actief te zijn in de community wordt niet alleen de open-source software die je professioneel gebruikt verbeterd, maar komen de ontwikkelaars van AllesOnline ook in contact met externe ontwikkelaars. Dit kan bijdragen aan het verbreden van perspectieven op het gebied van software- en webdevelopment.
+- Draag bij aan het versterken van Filament. Door actief te zijn in de community wordt niet alleen de open-source software die je professioneel gebruikt verbeterd, maar komen de ontwikkelaars van AllesOnline ook in contact met externe ontwikkelaars. Dit kan bijdragen aan het verbreden van kennis over Statamic, maar ook het verbreden van inzichten op het gebied van software- en webdevelopment.
 
 ### Relatief onbekende technieken
 
-Van de tech-stack waar Filament gebruik van maakt, zijn de meeste AllesOnline-ontwikkelaars alleen bekend met Laravel en Tailwind. Dit betekent dat, als er op maat gemaakte componenten ontwikkeld moeten worden, de ontwikkelaars zich moeten verdiepen in Livewire en Alpine.js.
+Van de tech-stack waar Filament gebruik van maakt, zijn de meeste AllesOnline-ontwikkelaars alleen bekend met Laravel en Tailwind. 
+
+**aanbevelingen**: Bied ontwikkelaars de gelegenheid om ervaring en kennis op te doen met Livewire en Alpine.js.
 
 ## SOLID-Principes in de Filament Resources
 
