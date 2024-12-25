@@ -31,6 +31,12 @@ De basisinstallatie van Statamic komt met een volledig CMS waarin een overvloed 
 
 Net zoals bij Filament heeft Statamic een marketplace waar oplossingen aangeboden worden die niet standaard in Statamic zijn geïmplementeerd. Deze in Statamic genoemde `Addons`, die zowel gratis als tegen betaling beschickbaar zijn, zijn ook hier ontwikkeld door het Statamic-team of door externe partijen. Ook binnen Statamic is het mogelijk om eigen componenten via de marketplace aan te bieden. Voor de ontwikkeling van deze Addons is het aan te raden om gebruik te maken van Vue, Laravel, Tailwind en Vite. 
 
+> _Documentatie voor het realiseren van Addons voor Statamic_
+> * [Addons documentatie](https://statamic.dev/extending/addons)
+
+> _Laracast video over het realiseren van een Statamic Addon_
+> * [Laracast video](https://laracasts.com/series/learn-statamic-with-jack/episodes/15)
+
 ## Beheren van content en objecten
 
 Statamic biedt flexibiliteit rondom het persisteren en beheren van content en objecten. Standaard maakt het systeem gebruik van een `flat-file` architectuur, maar er kan gekozen worden om Statamic te configuereren om gebruik te maken van databases zoals MySQL of MongoDB. 

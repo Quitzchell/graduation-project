@@ -37,8 +37,10 @@ Naast de standaardcomponenten die Filament aanbiedt, heeft het platform ook een 
 
 > _De marketplace van Filament [vind je hier](https://filamentphp.com/plugins)_
 
->Filament biedt zowel documentatie als een Laracast-video aan waarin wordt uitgelegd hoe je een plugin kunt ontwikkelen.
+> _Documentatie voor het realiseren van een Filament Plugin_
 > * [Plugin documentatie](https://filamentphp.com/docs/3.x/support/plugins/getting-started)
+
+> _Er is ook een Laracast video beschikbaar waarin het realiseren van een plugin uitgelegd wordt_
 > * [Laracast video](https://laracasts.com/series/build-advanced-components-for-filament/episodes/12)
 
 ## Beheren van content
