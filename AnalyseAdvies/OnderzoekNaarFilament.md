@@ -5,9 +5,10 @@
 Dit document beschrijft de analyse over Filament en hoe het eventueel gebruikt kan worden voor het opzetten van een CMS. Filament is Library met, zoals ze het zelf zeggen, _"a collection of beautiful full-stack components"_. Deze componenten zijn geschikt voor het opzetten van CRUD-applicaties en naar mijn idee geschikt voor het bouwen van een CMS. 
 
 > _Andere onderdelen van het Available Product Analysis:_
-> * _[Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)_
+> * [Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+> * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 
-> *De belangrijkste bevindingen over het Filament zijn samengebracht in een SWOT-analyse.*
+> _De belangrijkste bevindingen over het Filament zijn samengebracht in een SWOT-analyse._
 >  * [SWOT: CMS met Filament](./SwotFilamentCms.md)
 
 ## Over Filament
@@ -15,6 +16,7 @@ Dit document beschrijft de analyse over Filament en hoe het eventueel gebruikt k
 Ook Filament maakt net zoals het AllesOnline CMS gebruikt van **Laravel** en het Eloquent ORM dat dit framework biedt. 
 
 De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze packages omvatten verzamelingen van modules voor tabellen, formulieren, acties, notificaties en een container om alle modules samen te brengen. Volgens de documentatie bevat de basisinstallatie van Filament de volgende pakketten:
+
 * Panel Builder
 * Form Builder 
 * Table Builder 
@@ -23,9 +25,21 @@ De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze pa
 * Infolists 
 * Widgets
 
-Naast de standaardcomponenten vanuit Filament zelft is het ook mogelijk om zelf componenten te ontwikkelen die binnen Filament kunnen worden gebruikt. Het is zelfs mogelijk om deze custom componenten via een door Filament opgezette marketplace beschikbaar te stellen aan anderen, eventueel tegen betaling. Voor het ontwikkelen van de componenten is het wel aan te raden om gebruik te maken van de door Filament gebruikte TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire).
+> _Voor uitgebreide informatie over het ontwikkelen met Filament kan de officiele documentatie geraadpleegd worden._ 
+> * [Filament Documentatie](https://filamentphp.com/docs)
+
+> _Ook zijn er twee videocursussen, waarvan een met de maker Dan Harrin, beschikbaar via Laracast._ 
+> * [Laracast cursussen](https://laracasts.com/topics/filament)
+
+## Uitbreidbaarheid van Filament
+
+Naast de standaardcomponenten die Filament aanbiedt, heeft het platform ook een marketplace opgezet waar oplossingen aangeboden die niet standaard in Filament zijn geïmplementeerd. Deze in Filament genoemde `Plugins`, die zowel gratis als tegen betaling beschikbaar zijn, zijn ontwikkeld door het Filament-team of door externe partijen. Ook AllesOnline kan eigen componenten via de marketplace aanbieden. Voor de ontwikkeling van deze plugins wordt echter aangeraden om de TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire) te gebruiken, die door Filament zelf wordt gehanteerd.
 
 > _De marketplace van Filament [vind je hier](https://filamentphp.com/plugins)_
+
+>Filament biedt zowel documentatie als een Laracast-video aan waarin wordt uitgelegd hoe je een plugin kunt ontwikkelen.
+> * [Plugin documentatie](https://filamentphp.com/docs/3.x/support/plugins/getting-started)
+> * [Laracast video](https://laracasts.com/series/build-advanced-components-for-filament/episodes/12)
 
 ## Beheren van content
 
