@@ -62,20 +62,33 @@ Zoals bij collections al is benoemd, worden `Blueprints` gebruikt om te definië
 
 ### Entries
 
+In de standaard flat-file configuratie voor Statamic worden `Entries` gebruikt om content als Markdown-bestand te beheren en persisteren binnen de bijhorende collection.  
+
+> _Voorbeeld van entry binnen Page collection voor de hoempage_
+> * [Markdown voor homepage](../Bijlagen/VoorbeeldStatamicFlatFile.md)
 
 
-### flat-files
+### Meer over flat-file 
 
-De standaard confugiratie voor Statamic maakt gebruik van `flat-file`. Dit houdt in dat, inplaats van dat gegevens opgeslagen worden in een databse, gegevens gepersisteert worden in de codebase binnen markdown bestanden. 
+In de standaard flat-file configuratie van Statamic worden `Entries` opgeslagen als Markdown-bestanden binnen de bijbehorende collecties. Deze configuratie biedt enkele voordelen:
 
-> _voorbeeld van een flat-file markdown bestand_
-> [Flat-file voor homepage](../Bijlagen/VoorbeeldStatamicFlatFile.md)
+* **Geen database**: een vereenvoudigde infrastructuur zonder afhankelijkheid van een database.
+* **Snelheid**: directe toegang tot bestanden zorgt voor snellere laadtijden, aangezien er geen database-queries nodig zijn.
+* **Versiebeheer**: omdat de bestanden worden meegenomen in de Git-repository, zijn wijzigingen eenvoudig te traceren en terug te draaien.
 
-Wanneer wordt gekozen voor de `flat-file` architectuur, is het de bedoeling dat deze bestanden met behulp van Git worden beheerd. Door de flat-files op te nemen in een Git-repository kunnen wijzigingen worden bijgehouden en kunnen anderen eenvoudig terugkeren naar eerdere versies van de content.
+Uiteraard kent de flat-file configuratie ook enkele nadelen die in overweging moeten worden genomen:
+
+**Beperkte schaalbaarheid**: bij grotere projecten met veel data of complexe queries blijven de prestaties van de flat-file architectuur achter bij die van een geoptimaliseerde database.
+* **Conflicten**: als meerdere gebruikers tegelijkertijd bestanden bewerken, kan dit leiden tot mergeconflicten in het versiebeheer.
+**Beperktere mogelijkheden voor complexe relaties**: objecten met complexere relaties, zoals many-to-many-relaties, kunnen momenteel niet goed worden ondersteund in de flat-file architectuur van Statamic. Het is mogelijk om via een Observer wijzigingen in beide objecten bij te houden om een many-to-many-relatie te realiseren, maar dat vrij omslachtig.
+
+Voor projecten die een hogere schaalbaarheid vereisen, complexere relaties hebben, of waarbij gelijktijdige bewerkingen door meerdere gebruikers vaker voorkomen, biedt Statamic de mogelijkheid om een configuratie te gebruiken waarin een database wordt ingezet.
 
 ### Via database en Eloquent
 
-Het is ook mogelijk om de 
+Statamic kan worden geconfigureerd om databases te gebruiken via Laravel's Eloquent ORM. Deze aanpak is schaalbaarder en flexibeler, vooral voor projecten met complexere datastructuren of wanneer de beperkingen van de flat-file-architectuur de ontwikkeling van de website belemmeren.
+
+In het geval dat er gekozen wordt voor het gebruiken van Eloquent ORM is het aan te raden om binnen het CMS en Statamic gebruik te blijven maken van het `Entry` model dat Statamic biedt, maar kan in het geval dat informatie doorgestuurd dient te worden naar een frontend de gegevens op gehaald kunnen worden via hun eigen Eloquent modellen. 
 
 ## Evaluatie van Statamic
 
