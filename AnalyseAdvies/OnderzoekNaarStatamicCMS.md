@@ -86,9 +86,13 @@ Voor projecten die een hogere schaalbaarheid vereisen, complexere relaties hebbe
 
 ### Via database en Eloquent
 
-Statamic kan worden geconfigureerd om databases te gebruiken via Laravel's Eloquent ORM. Deze aanpak is schaalbaarder en flexibeler, vooral voor projecten met complexere datastructuren of wanneer de beperkingen van de flat-file-architectuur de ontwikkeling van de website belemmeren.
+Statamic kan met behulp van de officiële `eloquent-driver` worden geconfigureerd om een database te gebruiken via Laravel's Eloquent ORM. Deze aanpak biedt verbeterde schaalbaarheid en flexibiliteit. Hoewel Eloquent in deze configuratie wordt gebruikt, worden niet alle entiteiten binnen je systeem volledig als Eloquent-modellen geïmplementeerd. In plaats daarvan worden gegevens die voorheen als flat-files in Statamic werden opgeslagen, nu in de database bewaard, waarbij veel inhoud van Entries of instellingen voor een Collection als JSON wordt opgeslagen. 
 
-In het geval dat er gekozen wordt voor het gebruiken van Eloquent ORM is het aan te raden om binnen het CMS en Statamic gebruik te blijven maken van het `Entry` model dat Statamic biedt, maar kan in het geval dat informatie doorgestuurd dient te worden naar een frontend de gegevens op gehaald kunnen worden via hun eigen Eloquent modellen. 
+Mocht je wel specifieke modellen en databasetabellen willen gebruikenb, dan is er de Runway addon, ontwikkeld door The Rad Pack, een groep ontwikkelaars die nauw samenwerken met het Statamic-team. Met Runway kun je Eloquent-modellen in Statamic weergeven en beheren, waardoor je meer flexibiliteit hebt bij het beheren van je inhoud. 
+
+> _Runaway addon documentatie_
+> [Offiële Runaway addon documentatie](https://runway.duncanmcclean.com/)
+
 
 ## Evaluatie van Statamic
 
