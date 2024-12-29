@@ -86,13 +86,30 @@ Voor projecten die een hogere schaalbaarheid vereisen, complexere relaties hebbe
 
 ### Via database en Eloquent
 
-Statamic kan met behulp van de officiële `eloquent-driver` worden geconfigureerd om een database te gebruiken via Laravel's Eloquent ORM. Deze aanpak biedt verbeterde schaalbaarheid en flexibiliteit. Hoewel Eloquent in deze configuratie wordt gebruikt, worden niet alle entiteiten binnen je systeem volledig als Eloquent-modellen geïmplementeerd. In plaats daarvan worden gegevens die voorheen als flat-files in Statamic werden opgeslagen, nu in de database bewaard, waarbij veel inhoud van Entries of instellingen voor een Collection als JSON wordt opgeslagen. 
+Statamic kan, met behulp van de officiële `eloquent-driver`, worden geconfigureerd om een database te gebruiken via Laravel's Eloquent ORM. Deze aanpak biedt verbeterde schaalbaarheid en flexibiliteit. Hoewel Eloquent in deze configuratie wordt gebruikt, worden de entiteiten binnen je systeem alsnog niet als Eloquent-modellen geïmplementeerd. In plaats daarvan worden gegevens die voorheen als flat-files in Statamic werden opgeslagen, nu in de database gepersiteerd, waarbij bijvoorbeeld de gegevens van entries of configuraties voor een collections als JSON wordt opgeslagen.
 
-Mocht je wel specifieke modellen en databasetabellen willen gebruikenb, dan is er de Runway addon, ontwikkeld door The Rad Pack, een groep ontwikkelaars die nauw samenwerken met het Statamic-team. Met Runway kun je Eloquent-modellen in Statamic weergeven en beheren, waardoor je meer flexibiliteit hebt bij het beheren van je inhoud. 
+Mocht het nodig zijn om specifieke modellen en databasetabellen te gebruiken, dan kan de **Runway** addon gebruikt worden. Deze addon is ontwikkeld door *The Rad Pack*, een groep ontwikkelaars die nauw samenwerken met het Statamic-team. Met Runway kun je Eloquent-modellen in Statamic weergeven en beheren.
 
-> _Runaway addon documentatie_
+> _Runway addon documentatie_
 > [Offiële Runaway addon documentatie](https://runway.duncanmcclean.com/)
 
+Ondanks de mogelijkheid om gebruik te maken van databases doormiddeln van de `eloquent-driver` of de **Runway** addon, ontbreken er nog steeds out-of-the-box oplossingen voor bepaalde use-cases en zijn er andere nadelen.
+
+#### Beperkingen Eloquent-driver
+
+* **Geen ondersteuning voor eager loading**: De Eloquent Driver ondersteunt (nog) geen eager loading van relaties. Er is vanuit het team ook geen plan om dit te realiseren. 
+* **Complexiteit bij migraties**: Het beheren van database-migraties kan complexer worden, vooral bij wijzigingen in de structuur en/of naamgeving van content(types).
+* **Bi-directionele many-to-many-relaties**: Many-to-many-relaties worden enkel gepersisteerd aan het object dat bewerkt wordt. Eventuele oplossingen hiervoor zijn externe addons of het realiseren van observers die beide objecten voorzien van gegevens over hun relatie.
+* **Geen specifieke modellen**: De `Eloquent-driver` slaat alle gegevens op in een enkele data-kolom als JSON. Hoewel het mogelijk is om velden in afzonderlijke kolommen op te slaan, is er geen mogelijkheid om eigen tabellen te creëren die door middel van Eloquent-modellen verantwoordelijk zijn voor het persisteren van de gegevens.
+
+> [Github-issue aangaande eager loading](https://github.com/statamic/eloquent-driver/issues/119)
+
+#### Beperkingen Runway
+
+* **Beperkte ondersteuning voor bepaalde veldtypen**: niet alle veldtypen die beschikbaar zijn in Statamic, wat inhoudt dat er naast de documenatie van Statamic ook goed naar de documentatie van Runway gekeken moet worden. 
+* **Geen ondersteuning voor pivot-gegevens in many-to-many-relaties**: Bij het werken met many-to-many-relaties biedt Runway geen mogelijkheid om pivot-gegevens mee te geven.
+* **Ontbreken van ondersteuning voor polymorfe relaties**: Geen ondersteuning voor polymorfe relaties, wat inhoudt dat het niet mogelijk is om relaties te definiëren waarbij een model meerdere andere modellen kan associëren. 
+* **Afhankelijkheid van externe ontwikkelaars**: Runway is ontwikkeld door een groep externe ontwikkelaars. Hoewel een groot deel van deze ontwikkelaars ook deel uitmaakt van het Statamic-team, geniet dit project toch minder prioriteit. Dit betekent dat men bij problemen of de behoefte aan nieuwe functies afhankelijk is van de beschikbaarheid en bereidheid van The Rad Pack om updates of ondersteuning te bieden.
 
 ## Evaluatie van Statamic
 
