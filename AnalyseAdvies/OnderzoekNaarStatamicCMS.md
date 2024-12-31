@@ -109,6 +109,7 @@ Ondanks de mogelijkheid om gebruik te maken van databases doormiddeln van de `el
 * **Beperkte ondersteuning voor bepaalde veldtypen**: niet alle veldtypen die beschikbaar zijn in Statamic, wat inhoudt dat er naast de documenatie van Statamic ook goed naar de documentatie van Runway gekeken moet worden. 
 * **Geen ondersteuning voor pivot-gegevens in many-to-many-relaties**: Bij het werken met many-to-many-relaties biedt Runway geen mogelijkheid om pivot-gegevens mee te geven.
 * **Ontbreken van ondersteuning voor polymorfe relaties**: Geen ondersteuning voor polymorfe relaties, wat inhoudt dat het niet mogelijk is om relaties te definiëren waarbij een model meerdere andere modellen kan associëren. 
+* **Out-of-the-box navigation functionaliteit vervalt**: De navigation die Statamic aanbied kan enkel gebruik maken van entries in Collections. Dit betekend dat alle gegevens die via Runway worden gepersisteerd niet meegenomen kunnen worden in de standaard navigation funcionaliteit van Statamic.
 * **Afhankelijkheid van externe ontwikkelaars**: Runway is ontwikkeld door een groep externe ontwikkelaars. Hoewel een groot deel van deze ontwikkelaars ook deel uitmaakt van het Statamic-team, geniet dit project toch minder prioriteit. Dit betekent dat men bij problemen of de behoefte aan nieuwe functies afhankelijk is van de beschikbaarheid en bereidheid van The Rad Pack om updates of ondersteuning te bieden.
 
 ## Evaluatie van Statamic
