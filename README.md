@@ -12,6 +12,7 @@
 
 # Analyse & Advies
 
+* ### [Gesprek met de vormgevers](./AnalyseAdvies/GesprekMetDeVormgevers.md)
 * ### [Gesprekken en ervaringen met andere Developers](./AnalyseAdvies/GesprekkenEnErvaringenMetDevelopers.md)
 * ### [Requirements](./AnalyseAdvies/Requirements.md)
 * ### [Checklist voor CMS criteria](./AnalyseAdvies/ChecklistVoorCMSCriteria)

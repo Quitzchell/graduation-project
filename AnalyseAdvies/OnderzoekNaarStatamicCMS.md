@@ -84,16 +84,19 @@ Uiteraard kent de flat-file configuratie ook enkele nadelen die in overweging mo
 
 Voor projecten die een hogere schaalbaarheid vereisen, complexere relaties hebben, of waarbij gelijktijdige bewerkingen door meerdere gebruikers vaker voorkomen, biedt Statamic de mogelijkheid om een configuratie te gebruiken waarin een database wordt ingezet.
 
-### Via database en Eloquent
+### Met Eloquent-driver of Runway
 
-Statamic kan, met behulp van de officiële `eloquent-driver`, worden geconfigureerd om een database te gebruiken via Laravel's Eloquent ORM. Deze aanpak biedt verbeterde schaalbaarheid en flexibiliteit. Hoewel Eloquent in deze configuratie wordt gebruikt, worden de entiteiten binnen je systeem alsnog niet als Eloquent-modellen geïmplementeerd. In plaats daarvan worden gegevens die voorheen als flat-files in Statamic werden opgeslagen, nu in de database gepersiteerd, waarbij bijvoorbeeld de gegevens van entries of configuraties voor een collections als JSON wordt opgeslagen.
+Met de officiële `eloquent-driver` kan Statamic worden geconfigureerd om gegevens via Laravel's Eloquent ORM in een database op te slaan. In deze configuratie is het niet de bedoeling om voor de entiteiten Eloquent-modellen te gebruiken. In plaats daarvan worden de gegevens voor entries, die eerder in Markdown-bestanden werden opgeslagen, nu als JSON in de database gepersisteerd.
 
-Mocht het nodig zijn om specifieke modellen en databasetabellen te gebruiken, dan kan de **Runway** addon gebruikt worden. Deze addon is ontwikkeld door *The Rad Pack*, een groep ontwikkelaars die nauw samenwerken met het Statamic-team. Met Runway kun je Eloquent-modellen in Statamic weergeven en beheren.
+Mocht het nodig zijn om specifieke eloquent-modellen en databasetabellen te gebruiken, dan kan de **Runway** addon gebruikt worden. Deze addon is ontwikkeld door *The Rad Pack*, een groep ontwikkelaars die nauw samenwerken met het Statamic-team. Met Runway kun je Eloquent-modellen in Statamic weergeven en beheren.
 
-> _Runway addon documentatie_
-> [Offiële Runaway addon documentatie](https://runway.duncanmcclean.com/)
+### Eloquent-driver
 
-Ondanks de mogelijkheid om gebruik te maken van databases doormiddeln van de `eloquent-driver` of de **Runway** addon, ontbreken er nog steeds out-of-the-box oplossingen voor bepaalde use-cases en zijn er andere nadelen.
+Het omzetten van de reguliere Statamic configuratie naar de `eloquent-driver` is relatief eenvoudig. Het installeren van de pakketten en het volgen van de documentatie is voldoende om tot een werkbare oplossing te komen. De pakketten bevatten ook functionaliteit die het eenvoudig maakt om gegevens van flat-files om te zetten naar database-records (en eventueel zelfs weer terug naar flat-files). De manier waarop de eloquent-driver binnen het systeem gebruikt dient te worden, kan geconfigureerd worden in het configuratiebestand voor de eloquent-driver. Het grootste voordeel van de eloquent-driver configuratie is dat deze de schaalbaarheid aanzienlijk verbetert.
+
+> [Eloquent-driver configuratie](https://github.com/Quitzchell/graduation-statamic-cms/blob/eloquent/config/statamic/eloquent-driver.php)
+
+> [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
 
 #### Beperkingen Eloquent-driver
 
@@ -102,7 +105,15 @@ Ondanks de mogelijkheid om gebruik te maken van databases doormiddeln van de `el
 * **Bi-directionele many-to-many-relaties**: Many-to-many-relaties worden enkel gepersisteerd aan het object dat bewerkt wordt. Eventuele oplossingen hiervoor zijn externe addons of het realiseren van observers die beide objecten voorzien van gegevens over hun relatie.
 * **Geen specifieke modellen**: De `Eloquent-driver` slaat alle gegevens op in een enkele data-kolom als JSON. Hoewel het mogelijk is om velden in afzonderlijke kolommen op te slaan, is er geen mogelijkheid om eigen tabellen te creëren die door middel van Eloquent-modellen verantwoordelijk zijn voor het persisteren van de gegevens.
 
-> [Github-issue aangaande eager loading](https://github.com/statamic/eloquent-driver/issues/119)
+> [Github-issue: eager loading](https://github.com/statamic/eloquent-driver/issues/119)
+
+### Runway
+
+Het omzetten van de reguliere Statamic-configuratie naar Runway vergt, in tegenstelling tot de eloquent-driver, meer wijzigingen. Naast het configuratiebestand dat opgezet moet worden, is het ook nodig om voor alle entiteiten die je als specifieke Eloquent-modellen wilt beheren, Eloquent-modellen aan te maken, Runway-resources te definiëren en databasemigraties op te zetten. Daarnaast is het nodig om een workaround te implementeren om een functionaliteit te realiseren waarmee je gebruik kunt maken van pagina-templates. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
+
+> [Runway configuratie](https://github.com/Quitzchell/graduation-statamic-cms/blob/runway/config/runway.php)
+
+> [Runway addon documentatie](https://runway.duncanmcclean.com/)
 
 #### Beperkingen Runway
 
@@ -127,4 +138,9 @@ Statamic maakt gebruik van Vue 2 voor de views in het control panel. Dit is rela
 
 Daarnaast heeft momenteel slechts één van de ontwikkelaars bij AllesOnline ervaring met het werken met Vue.
 
-**aanbevelingen**: Bied ontwikkelaars de gelegenheid om ervaring en kennis op te doen met Vue.
+**aanbevelingen**:
+- Bied ontwikkelaars de gelegenheid om ervaring en kennis op te doen met Vue.
+
+### Groot verschil tussen werking Runway en flat-file/eloquent-driver
+
+het tussen Runway en de flat-file/eloquent-driver 
