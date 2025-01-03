@@ -173,6 +173,6 @@ Statamic is in eerste instantie een veelzijdig en gebruiksvriendelijk CMS dat go
 
 Omdat veel van de werking van Statamic niet goed gedocumenteerd is, is de leercurve voor het opzetten van of migreren naar Statamic stijl. Daarnaast moet er rekening mee worden gehouden dat het team nog onbekend is met het door Statamic aanbevolen **Vue**, waarvan momenteel zelfs nog de EOL-versie Vue 2 wordt gebruikt. Wanneer Statamic  in het voorjaar migreert naar Vue 3, kan dit extra werk opleveren.
 
-De kostenstructuur van Statamic is redelijk, met verschillende licentie-opties die kunnen worden aangepast aan de grootte en behoefte van de organisatie.
+De kostenstructuur van Statamic is redelijk, met verschillende licentie-opties die ervoor ervoor zorgen dat de kosten per website daalt naarmate er meer websites gebruik van Statamic gaan maken. 
 
 Statamic biedt dus een flexibele oplossing voor de websites van AllesOnline, maar vereist wel enige voorbereiding met betrekking tot de technische werking. Dit betreft voornamelijk het gebied van persistentie, relaties en de migratie van gegevens. Het is daarom belangrijk om de beperkingen en kosten in overweging te nemen bij het implementeren van dit systeem in alle AllesOnline-projecten.

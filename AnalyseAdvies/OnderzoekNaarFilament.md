@@ -90,7 +90,9 @@ Zoals al eerder benoemt worden voor het definiëren van de velden in een schema 
 
 ## Evaluatie van Filament
 
-Hoewel het Filament een solide basis biedt voor het realiseren van een CMS, heeft het systeem nog een aantal beperkingen.
+### Flexibiliteit
+
+Een van de belangrijkste voordelen van Filament is de flexibiliteit die het biedt bij het aanpassen van schema's, invoervelden en tabellen binnen het systeem. Omdat alles binnen Filament is gedefinieerd met PHP, kan je heel eenvoudig eigen code integreren om de standaardfunctionaliteit uit te breiden of aan te passen aan specifieke behoeften.
 
 ### Documentatie en ondersteuning
 
@@ -114,8 +116,12 @@ Het negeren van dit principe kan worden verdedigd door te stellen dat het combin
 
 Deze keuze lijkt dus vooral pragmatisch, waarbij wordt gekozen voor praktische voordelen waarbij eenvoud en snelle toegang vaak vooropstaan, zelfs als dit ten koste gaat van de strikte naleving van principes zoals SRP.
 
-## Conclusie
+### Conclusie
 
-Filament biedt een goed uitgangspunt voor het opzetten van een CMS. Niet alleen omdat het erop lijkt dat veel van de standaardcomponenten binnen de library al voldoen aan een groot deel van de vereisten voor een doorsnee AllesOnline-website, maar ook omdat het mogelijk is om zelf componenten en zelfs modules te ontwikkelen. Daarnaast is het voor de developers bij AllesOnline gunstig dat het gebaseerd is op Laravel en Tailwind, twee technieken waarmee het gehele team al bekend is. 
+Filament biedt een solide basis voor het opzetten van een CMS, vooral vanwege de vele standaardcomponenten in de library die al voldoen aan de meeste vereisten van een typische AllesOnline-website. Daarnaast maakt de flexibiliteit van Filament, door het gebruik van PHP, het mogelijk om het systeem naar wens aan te passen en uit te breiden.
 
-Wel is er de valkuil dat het AllesOnline team niet thuis is bij twee van de technieken die nuttig zijn bij het uitbreiden van het system met op maat gemaakte componenten. Mocht er voor Filament gekozen worden, dan is het verstandig voor het team om zich te verdiepen in de werking van Livewire en Alpine.js.
+Deze flexibiliteit stelt de ontwikkelaars in staat om bestaande functionaliteiten eenvoudig te modifiëren of nieuwe componenten en modules te ontwikkelen. Aangezien Filament is opgebouwd op Laravel en Tailwind, twee technologieën waarmee het AllesOnline-team al goed bekend is, biedt het bovendien een vertrouwde werkomgeving.
+
+Een bijkomend voordeel is dat het gebruik van Statamic gratis is, wat een belangrijke overweging is voor de kostenbeheersing bij de implementatie van het CMS.
+
+Een potentieel aandachtspunt is echter dat het team niet veel ervaring heeft met twee aanvullende technieken die belangrijk kunnen zijn voor het uitbreiden van het systeem met op maat gemaakte componenten: Livewire en Alpine.js. Als er voor Filament wordt gekozen, zou het raadzaam zijn voor het team om zich hierin verder te verdiepen.
