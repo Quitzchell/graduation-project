@@ -127,10 +127,10 @@ Het omzetten van de reguliere Statamic-configuratie naar Runway vergt, in tegens
 
 ### Documenatie en ondersteuning
 
-Hoewel Statamic vrijwel al zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig of simpelweg incompleet. Tijdens de ontwikkeling van het prototype is veel informatie over de functionaliteiten uit GitHub-issues gehaald of is de door Statamic opgezette Discord-server geraapleegd. 
+Hoewel Statamic veel van zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig en soms zelfs incompleet. Dit wordt vooral duidelijk wanneer je via code schema's wilt opzetten voor het CMS. In de documentatie worden geen velden gedefinieerd die gebruikt kunnen worden, wat de indruk wekt dat Statamic verwacht dat je hun UI gebruikt voor het beheren van schema's. Echter, bepaalde opties ontbreken, waardoor het alsnog nodig is om via code variabelen voor je schema's mee te geven. Tijdens de ontwikkeling van het prototype heb ik daarom veel informatie over de functionaliteiten uit GitHub-issues moeten halen of heb ik de Discord-server van Statamic geraadpleegd.
 
 **aanbevelingen**:
-- Ook voor Statamic is het nuttig om bij te dragen aan de community. Neem samen met het team deel aan de Discord-community, waar de ontwikkelaars van AllesOnline in contact komen met externe ontwikkelaars. Dit kan bijdragen aan het verbreden van kennis over Statamic, maar ook aan het verbreden van inzichten op het gebied van software- en webdevelopment.
+- Het is nuttig om actief deel te nemen aan de community van Statamic. Dit kan bijdragen aan het verbreden van kennis over Statamic, maar ook het initieren van wijzigingen voor het platform.
 
 ### Gebruik van Vue 2
 
@@ -143,4 +143,36 @@ Daarnaast heeft momenteel slechts één van de ontwikkelaars bij AllesOnline erv
 
 ### Groot verschil tussen werking Runway en flat-file/eloquent-driver
 
-het tussen Runway en de flat-file/eloquent-driver 
+Het verschil tussen de standaard/eloquent-driverconfiguratie en Runway is vrij groot. Je zou zelfs kunnen stellen dat dit twee verschillende CMS'en zijn, die bepaalde functionaliteiten en een frontend met elkaar delen. Dit heeft zowel voordelen als nadelen. Want ondanks dat het systeem hierdoor erg flexibel is, heeft elke configuratie een afwijkende structuur, zowel in de manier waarop het CMS achter de schermen werkt als in de manier waarop gegevens voor de frontend opgehaald moeten worden. Het migreren van gegevens tussen de configuraties kan hierdoor erg ingewikkeld zijn, zelfs als je binnen het Statamic-ecosysteem wilt migreren.
+
+### Kosten van Statamic CMS
+
+Om gebruik te mogen van Statamic voor de websites die AllesOnline ontwikkeld, moet een licensie aangeschaft worden. Statamic biedt verschillende pakketen aan die afgenomen kunnen worden. Hieronder vallen:
+* **Statamic Core**: Deze versie is volledig gratis en geschikt voor persoonlijke projecten, hobbyisten of kleine websites. 
+* **Statamic Pro**: Voor professionele toepassingen is Statamic Pro beschikbaar voor $259 per jaar per site. 
+* **Master License**: Voor organisaties die meerdere sites beheren, biedt Statamic de Master License aan voor $1250. Dit pakket omvat vijf Statamic Pro-licenties met een korting van 10% en een korting van 25% op alle extra licenties gedurende één jaar. 
+* **Platform Subscription**: Voor grotere aantallen sites is er een abonnementsmodel beschikbaar, waarbij de kosten per site per maand variëren op basis van het aantal sites. De eerste 25 sites kosten $175 per maand (vast tarief), de volgende 75 sites kosten $7 per maand per site, de volgende 400 sites kosten $6 per maand per site, etc.
+
+Voor AllesOnline is op zijn minst de **Statamic Pro** licensie nodig aangezien websites voor commenerciele doeleinden gearliseerd worden. Uiteraard zou **Statamic Pro** niet voldoen voor AllesOnline. Men kan ervan uit gaan dat er meer dan een website gebruik zou gaan maken van de Statamic backend. In eerste instantie zou het interessant zijn om te beginnen met de **Master License** en Statamic eerst te implementeren eerste vijf websites. Na vijf websites is het voordeliger om over te gaan op **Platform Subscription**, hier ben je tot 25 websites met Statamic $2100 per jaar kwijt en betaal je na de eerste 25 een kleine prijs per extra website. Meer over deze staffel is te lezen op de website van Statamic. Op het moment dat er 25 websites zijn die Statamic gebruiken, kost dit per jaar per website $84. 
+
+### Kosten van Statamic CMS
+Om gebruik te maken van Statamic voor de websites die AllesOnline ontwikkelt, moet een licentie aangeschaft worden. Statamic biedt verschillende pakketten aan die gekozen kunnen worden. Hieronder een overzicht:
+
+* **Statamic Core**: Deze versie is volledig gratis en geschikt voor persoonlijke projecten, hobbyisten of kleine websites.
+* **Statamic Pro**: Voor professionele toepassingen is Statamic Pro beschikbaar voor $259 per jaar per site.
+* **Master License**: Voor organisaties die meerdere websites beheren, biedt Statamic de Master License aan voor $1250. Dit pakket omvat vijf Statamic Pro-licenties met een korting van 10% en 25% korting op alle extra licenties gedurende één jaar.
+* **Platform Subscription**: Voor een groter aantal websites is er een abonnementsmodel beschikbaar, waarbij de kosten per site per maand variëren op basis van het aantal sites. De eerste 25 sites kosten $175 per maand (vast tarief), de volgende 75 sites kosten $7 per maand per site, de volgende 400 sites kosten $6 per maand per site, enzovoorts.
+
+Voor AllesOnline is minimaal de **Statamic Pro** licentie nodig, aangezien de websites voor commerciële doeleinden worden gerealiseerd. Het is waarschijnlijk dat meerdere websites gebruik gaan maken van Statamic. Het is daarom interessant om te starten met de **Master License** en Statamic te implementeren voor de eerste tien websites. Na tien website is het voordeliger om over te schakelen naar de **Platform Subscription**. In dit geval betaal je $2100 per jaar voor de eerste 25 websites, en voor elke extra website daarna een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic. Wanneer er 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar.
+
+> [Prijs informatie Platform Subscription](https://statamic.com/pricing/platform)
+
+### Conclusie 
+
+Statamic is in eerste instantie een veelzijdig en gebruiksvriendelijk CMS dat goed integreert met Laravel en nuttige out-of-the-box functionaliteiten biedt. Hoewel de flat-file configuratie interessant kan zijn voor kleinere websites, kunnen we voor AllesOnline ervan uitgaan dat er voornamelijk gebruik zal worden gemaakt van een setup met de Runway-addon. Dit betekent dat de `Navigation` functionaliteit van Statamic vervalt, tenzij deze alsnog als flat-files of entries via de eloquent-driver worden gepersisteerd.
+
+Omdat veel van de werking van Statamic niet goed gedocumenteerd is, is de leercurve voor het opzetten van of migreren naar Statamic stijl. Daarnaast moet er rekening mee worden gehouden dat het team nog onbekend is met het door Statamic aanbevolen **Vue**, waarvan momenteel zelfs nog de EOL-versie Vue 2 wordt gebruikt. Wanneer Statamic  in het voorjaar migreert naar Vue 3, kan dit extra werk opleveren.
+
+De kostenstructuur van Statamic is redelijk, met verschillende licentie-opties die kunnen worden aangepast aan de grootte en behoefte van de organisatie.
+
+Statamic biedt dus een flexibele oplossing voor de websites van AllesOnline, maar vereist wel enige voorbereiding met betrekking tot de technische werking. Dit betreft voornamelijk het gebied van persistentie, relaties en de migratie van gegevens. Het is daarom belangrijk om de beperkingen en kosten in overweging te nemen bij het implementeren van dit systeem in alle AllesOnline-projecten.

@@ -96,8 +96,7 @@ Hoewel het Filament een solide basis biedt voor het realiseren van een CMS, heef
 
 Filament is relatief nieuw en de community-ondersteuning staat nog in kinderschoenen. Hoewel de documentatie uitgebreid is en qua basisinformatie compleet is, bestaat de kans dat er minder informatie beschikbaar is voor complexere oplossingen.
 
-**Aanbeveling**:
-- Draag bij aan het versterken van Filament. Door actief te zijn in de community wordt niet alleen de open-source software die je professioneel gebruikt verbeterd, maar komen de ontwikkelaars van AllesOnline ook in contact met externe ontwikkelaars. Dit kan bijdragen aan het verbreden van kennis over Statamic, maar ook het verbreden van inzichten op het gebied van software- en webdevelopment.
+**Aanbeveling**: Draag bij aan het versterken van Filament. Door actief te zijn in de community wordt niet alleen de open-source software die je professioneel gebruikt verbeterd, maar komen de ontwikkelaars van AllesOnline ook in contact met externe ontwikkelaars. Dit kan bijdragen aan het verbreden van kennis over Statamic, maar ook het verbreden van inzichten op het gebied van software- en webdevelopment.
 
 ### Relatief onbekende technieken
 
