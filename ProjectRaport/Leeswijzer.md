@@ -124,3 +124,12 @@ Met de tool is het in eerste opzet mogelijk om een XML-block om te zetten naar e
 	* Voor een migratie van een bestaande website die gebruik maakt van het AllesOnline CMS is goede planning en vooronderzoek nodig. Mocht er buiten de standaard AllesOnline CMS werking ook maatwerk voor de website zijn ingebouwd, dan moet eerst onderzocht worden hoe deze gemigreerd kan worden. 
 	* De migratie van bestaande website naar een nieuw CMS kan verlopen via een op maat gebouwde CLI-tool, bijvoorbeeld met Symfony. Dit maakt het mogelijk om bestanden te lezen, aan te passen en over te zetten naar een nieuw CMS. 
 	* Technische uitdagingen omvatten de verschillen in gegevensstructuur tussen de nieuwe en oude systemen. In het voorbeeld van het AllesOnline CMS en het Filament CMS vindt de validatie van input door gebruikers in andere bestanden plaats. Dit betekent dat het overzetten van schema's voor objecten relatief intensiever is dan het omzetten van contentschema's. Dit komt doordat contentschema's in het AllesOnline CMS geen mogelijkheid tot input validatie bieden.
+
+# Onderzoek naar Statamic CMS
+
+Na het afronden van de Proof of Concept (PoC) voor een migratietool om het AllesOnline CMS om te zetten naar een Filament CMS, ben ik begonnen met het ontwikkelen van een prototype voor het CMS met Statamic. In tegenstelling tot Filament is Statamic specifiek ontworpen om als CMS te fungeren. Bovendien is het een commercieel product waarvoor een licentie moet worden aangeschaft bij commercieel gebruik.
+
+Hoewel de standaardconfiguratie van Statamic zeer snel kan worden opgezet, is dit waarschijnlijk niet de meest geschikte configuratie voor een AllesOnline-website. Voor deze toepassing is een combinatie van flat-file, de Eloquent-driver en Runway waarschijnlijk de beste keuze.
+
+> * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
+> * [SWOT: Statamic](../AnalyseAdvies/SwotStatamicCms.md)

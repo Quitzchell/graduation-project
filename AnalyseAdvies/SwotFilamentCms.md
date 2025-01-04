@@ -17,7 +17,6 @@
 
 ## Opportunities (Kansen)
 
-* **Uitbreiding van community-ondersteuning**: Naarmate de community rondom Filament groeit, zal waarschijnlijk ook de library en de documentatie verbeteren. Uit een recente enquête, de **State of Laravel**, blijkt dat Filament erg populair is onder de 4568 ondervraagden. _De resultaten van de enquete lees je hier: [State of Laravel, Administration Panel Results](https://stateoflaravel.com/results#question:administration+panel)_
 * **Vergroting van de flexibiliteit met plugins**: Filament heeft een speciale marktplaats beschikbaar gesteld waar plugins van derden beschikbaar zijn en eventueel oplossingen door AllesOnline - eventueel tegen betaling - aangeboden kunnen worden. 
 
 ## Threats (Bedreigingen)
