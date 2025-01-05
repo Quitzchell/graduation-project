@@ -124,10 +124,8 @@ Met de tool is het in eerste opzet mogelijk om een XML-block om te zetten naar e
 ### Conclusies onderzoek migratie AllesOnline CMS naar Filament CMS
 
 * **Hoe verloopt de migratie van de bestaande webapplicaties naar een nieuw CMS, en welke technische uitdagingen komen hierbij kijken?**
-	* Voor een migratie van een bestaande website die gebruik maakt van het AllesOnline CMS is goede planning en vooronderzoek nodig. Bij maatwerk binnen het AllesOnline CMS moet vooraf worden onderzocht hoe dit kan worden gemigreerd.. 
-	* De migratie van bestaande website naar een nieuw CMS kan verlopen via een op maat gebouwde CLI-tool, bijvoorbeeld met Symfony. Dit maakt het mogelijk om bestanden te lezen, aan te passen en over te zetten naar een nieuw CMS. 
-	* Technische uitdagingen omvatten de verschillen in gegevensstructuur tussen de nieuwe en oude systemen. In het voorbeeld van het AllesOnline CMS en het Filament CMS vindt de validatie van input door gebruikers in andere bestanden plaats. Dit betekent dat het overzetten van schema's voor objecten relatief intensiever is dan het omzetten van contentschema's. Dit komt doordat contentschema's in het AllesOnline CMS geen mogelijkheid tot input validatie bieden.
-
+	* De migratie tussen systemen kan plaatsvinden via een op maat gemaakte CLI-tool, bijvoorbeeld met Symfony. Deze tool kan bestanden uitlezen en op basis van regels nieuwe bestanden genereren voor het nieuwe CMS.
+	* De grootste uitdagingen zijn vooral te vinden in de verschillen architecturen en functionaliteiten tussen het originele en de nieuwe systemen. Dit betekend dat dat het belangrijk is dat er een goede planning en zorgvuldig vooronderzoek gedaan wordt voordat de migratie wordt uitgevoerd. 
 # Onderzoek naar Statamic CMS
 
 Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben ik begonnen met het opzetten van een prototype met Statamic. Dit is een commercieel CMS waarvoor een licentie vereist is bij commercieel gebruik. In tegenstelling tot Filament is Statamic specifiek ontworpen om als CMS te fungeren.
@@ -156,7 +154,9 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 
 # Verder onderzoek van Migratie naar nieuw CMS
 
-Omwille van het gebrek aan tijd om een praktisch onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten.
+Omwille van het gebrek aan tijd om een zorgvuldig onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten.
+
+// todo: document terugkomend op migratietool
 
 Desondanks durf ik met zekerheid te stellen dat het mogelijk is om, net zoals bij het Filament-project, een project te migreren naar een Statamic-project, ongeacht de gekozen configuratie. Het is echter belangrijk te concluderen dat er, zowel voor Filament als voor Statamic, geen one-size-fits-all-aanpak bestaat. 
 
