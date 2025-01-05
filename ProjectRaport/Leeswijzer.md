@@ -164,3 +164,6 @@ Dit komt voornamelijk doordat er in de loop der tijd voor AllesOnline projecten 
 
 Hierdoor zou je kunnen stellen dat het migreren van een bestaand AllesOnline-project goed voorbereid moet worden. Hierbij moet gekeken worden naar hoe de architectuur is opgesteld, welke technieken er zijn gebruikt, welke custom inputvelden zijn gedefinieerd, of er validatie op de inputvelden toegevoegd moet worden en of bepaalde relaties anders gedefinieerd kunnen of moeten worden.
 
+// todo advies
+
+// todo reflectie 

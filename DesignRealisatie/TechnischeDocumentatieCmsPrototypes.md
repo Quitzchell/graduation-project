@@ -546,7 +546,6 @@ interface HasBlockSchema
 }
 ```
 
-
 ## Statamic CMS met flat-file / eloquent-driver
 
 In de flat-file en eloquent-driver configuratie van Statamic wordt het CMS anders opgezet dan bij traditionele CMS-systemen. Een belangrijk verschil is dat Statamic geen specifieke Eloquent-modellen per entiteit gebruikt, zoals bij veel andere Laravel-gebaseerde applicaties. In plaats daarvan maakt Statamic gebruik van `Collection`-modellen, die objecten zoals `Entry`-modellen beheren. Dit zorgt voor een structuur die geen complexe databasetabellen of acties vereist.

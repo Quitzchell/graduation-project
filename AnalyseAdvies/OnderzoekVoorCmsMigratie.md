@@ -1,4 +1,4 @@
-# Onderzoek naar tool(s) voor migratie
+# Onderzoek voor CMS migratie
 
 ## Inleiding
 
