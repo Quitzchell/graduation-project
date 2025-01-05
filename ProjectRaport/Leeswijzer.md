@@ -80,11 +80,11 @@ Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik het mogelij
 > _Hieronder een kleine afwijking van het chronologische verhaal, met een aantal runs van de Cypress-testsuite waarin de verschillende CMS-oplossingen aan de frontend zijn gekoppeld._
 > * [Video: Cypress tests met AllesOnline CMS](../Bijlagen/CypressTestsAOCms.md)
 > * [Video: Cypress tests met Filament CMS](../Bijlagen/CypressTestsFilamentCms.md)
-
-
 > * [Video: Cypress tests met Statamic CMS flat-file](../Bijlagen/CypressTestsStatamicFlatFileCms.md)
-> * [Video: Cypress tests met Statamic CMS eloquent-driver]()
-> * [Video: Cypress tests met Statami CMS Runway-addon]()
+
+> * [Video: Cypress tests met Statamic CMS eloquent-driver](../Bijlagen/CypressTestsStatamicEloquentDriverCms.md)
+
+> * [Video: Cypress tests met Statami CMS Runway-addon](../Bijlagen/CypressTestsStatamicRunwayCms.md)
 
 # Onderzoek naar CMS met Filament
 
