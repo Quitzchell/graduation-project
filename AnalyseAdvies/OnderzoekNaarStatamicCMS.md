@@ -77,9 +77,9 @@ In de standaard flat-file configuratie van Statamic worden `Entries` opgeslagen 
 
 Uiteraard kent de flat-file configuratie ook enkele nadelen die in overweging moeten worden genomen:
 
-**Beperkte schaalbaarheid**: bij grotere projecten met veel data of complexe queries blijven de prestaties van de flat-file architectuur achter bij die van een geoptimaliseerde database.
+* **Beperkte schaalbaarheid**: bij grotere projecten met veel data of complexe queries blijven de prestaties van de flat-file architectuur achter bij die van een geoptimaliseerde database.
 * **Conflicten**: als meerdere gebruikers tegelijkertijd bestanden bewerken, kan dit leiden tot mergeconflicten in het versiebeheer.
-**Beperktere mogelijkheden voor complexe relaties**: objecten met complexere relaties, zoals many-to-many-relaties, kunnen momenteel niet goed worden ondersteund in de flat-file architectuur van Statamic. Het is mogelijk om via een Observer wijzigingen in beide objecten bij te houden om een many-to-many-relatie te realiseren, maar dat vrij omslachtig.
+* **Beperktere mogelijkheden voor complexe relaties**: objecten met complexere relaties, zoals bi-directionele many-to-many-relaties, worden niet automatisch gesynchroniseerd. Het is mogelijk om via een Observer wijzigingen in beide objecten bij te houden om deze automatische synchronisatie te realiseren, maar dit is vrij omslachtig.
 
 Voor projecten die een hogere schaalbaarheid vereisen, complexere relaties hebben, of waarbij gelijktijdige bewerkingen door meerdere gebruikers vaker voorkomen, biedt Statamic de mogelijkheid om een configuratie te gebruiken waarin een database wordt ingezet.
 

@@ -81,6 +81,11 @@ Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik het mogelij
 > * [Video: Cypress tests met AllesOnline CMS](../Bijlagen/CypressTestsAOCms.md)
 > * [Video: Cypress tests met Filament CMS](../Bijlagen/CypressTestsFilamentCms.md)
 
+// todo: add videos
+> * [Video: Cypress tests met Statamic CMS flat-file]()
+> * [Video: Cypress tests met Statamic CMS eloquent-driver]()
+> * [Video: Cypress tests met Statami CMS Runway-addon]()
+
 # Onderzoek naar CMS met Filament
 
 Het tweede prototype dat ik ben gaan realiseren, was een CMS met Filament. Filament is niet per se een CMS-pakket, maar eerder een library met _"a collection of beautiful full-stack components"_, althans, als we hun eigen website moeten geloven. Met de componenten die het biedt, is het relatief eenvoudig om een CRUD-applicatie op te zetten en met een beetje creativiteit ook een CMS.
@@ -88,7 +93,7 @@ Het tweede prototype dat ik ben gaan realiseren, was een CMS met Filament. Filam
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 > * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
 
-Na het onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van een CMS gebaseerd op Filament. Voor het ontwerp van de CMS-functionaliteiten heb ik een iteratieve aanpak gehanteerd. Deze werkwijze stelde me in staat om tijdens elke ontwikkelstap te reflecteren op wat ik had gerealiseerd en wat de volgende logische stap zou zijn. Daarnaast ben ik begonnen met het documenteren van de werking van de verschillende systemen.
+Tijdens het onderzoek ben ik ook aan de slag gegaan met het ontwerpen en realiseren van het CMS gebaseerd op Filament. Voor het ontwerp van de CMS-functionaliteiten heb ik een iteratieve aanpak gehanteerd. Deze werkwijze stelde me in staat om tijdens elke ontwikkelstap te reflecteren op wat ik had gerealiseerd en wat de volgende logische stap zou zijn. Daarnaast ben ik begonnen met het documenteren van de werking van de verschillende systemen.
 
 > * [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 > * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
@@ -121,15 +126,43 @@ Met de tool is het in eerste opzet mogelijk om een XML-block om te zetten naar e
 ### Conclusies onderzoek migratie AllesOnline CMS naar Filament CMS
 
 * **Hoe verloopt de migratie van de bestaande webapplicaties naar een nieuw CMS, en welke technische uitdagingen komen hierbij kijken?**
-	* Voor een migratie van een bestaande website die gebruik maakt van het AllesOnline CMS is goede planning en vooronderzoek nodig. Mocht er buiten de standaard AllesOnline CMS werking ook maatwerk voor de website zijn ingebouwd, dan moet eerst onderzocht worden hoe deze gemigreerd kan worden. 
+	* Voor een migratie van een bestaande website die gebruik maakt van het AllesOnline CMS is goede planning en vooronderzoek nodig. Bij maatwerk binnen het AllesOnline CMS moet vooraf worden onderzocht hoe dit kan worden gemigreerd.. 
 	* De migratie van bestaande website naar een nieuw CMS kan verlopen via een op maat gebouwde CLI-tool, bijvoorbeeld met Symfony. Dit maakt het mogelijk om bestanden te lezen, aan te passen en over te zetten naar een nieuw CMS. 
 	* Technische uitdagingen omvatten de verschillen in gegevensstructuur tussen de nieuwe en oude systemen. In het voorbeeld van het AllesOnline CMS en het Filament CMS vindt de validatie van input door gebruikers in andere bestanden plaats. Dit betekent dat het overzetten van schema's voor objecten relatief intensiever is dan het omzetten van contentschema's. Dit komt doordat contentschema's in het AllesOnline CMS geen mogelijkheid tot input validatie bieden.
 
 # Onderzoek naar Statamic CMS
 
-Na het afronden van de Proof of Concept (PoC) voor een migratietool om het AllesOnline CMS om te zetten naar een Filament CMS, ben ik begonnen met het ontwikkelen van een prototype voor het CMS met Statamic. In tegenstelling tot Filament is Statamic specifiek ontworpen om als CMS te fungeren. Bovendien is het een commercieel product waarvoor een licentie moet worden aangeschaft bij commercieel gebruik.
-
-Hoewel de standaardconfiguratie van Statamic zeer snel kan worden opgezet, is dit waarschijnlijk niet de meest geschikte configuratie voor een AllesOnline-website. Voor deze toepassing is een combinatie van flat-file, de Eloquent-driver en Runway waarschijnlijk de beste keuze.
+Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben ik begonnen met het opzetten van een prototype met Statamic. Dit is een commercieel CMS waarvoor een licentie vereist is bij commercieel gebruik. In tegenstelling tot Filament is Statamic specifiek ontworpen om als CMS te fungeren.
 
 > * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 > * [SWOT: Statamic](../AnalyseAdvies/SwotStatamicCms.md)
+
+Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van een ontwerpen en realiseren van het prototype met Statamic. Omdat Statamic in meerdere verschillende configuraties kan worden gebruikt, heb ik ook meerdere Designs gerealiseerd. Echter zijn deze wel allemaal vrij strict in het gebruik van een van de configuraties, terwijl het ook mogelijk is om de configuraties te combineren. Uiteindelijk verwacht ik dat dit voor AllesOnline de beste oplossing zou zijn als er gekozen wordt om met Statamic te werken. 
+
+* Design voor Statamic CMS met flat-file
+* Design voor Statamic met eloquent-driver
+* Design voor Statamic met Runway-addon
+* [Technische documentatie van CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
+### Conclusies onderzoek naar Statamic CMS
+
+* **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
+	- De standaardconfiguratie met flat-files van Statamic is snel op te zetten, maar voor de meeste projecten van AllesOnline zal een combinatie van flat-file, Eloquent-driver en Runway nodig zijn. Dit maakt het opzetten van een CMS een stuk complexer.
+	- Hoewel Statamic een breed scala aan functionaliteiten biedt, zullen voor sommige oplossingen die in het AllesOnline CMS zijn ingebouwd, aangepaste componenten of extra logica toegepast moeten worden.
+
+* **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
+	* Qua prestaties kun je met Statamic meerdere kanten op. Bij een kleine website met alleen content is de flat-file architectuur ideaal en vaak aanzienlijk sneller, omdat er geen database-query's uitgevoerd hoeven te worden. Als je echter een database configuratie gebruikt, zal het verschil in prestaties eerder te maken hebben met de kwaliteit van de code die de developer schrijft dan met de keuze voor een framework zelf.
+	* De kosten voor Statamic kunnen variëren, afhankelijk van de gekozen licentie:
+		- **Statamic Pro**: $259 per jaar per site voor commerciële toepassingen.
+		- **Master License**: $1250 voor vijf websites, voordelig voor organisaties die meerdere sites beheren.
+		- **Platform Subscription**: Een abonnementsmodel waarbij de kosten per website dalen naarmate het aantal websites toeneemt.
+
+# Verder onderzoek van Migratie naar nieuw CMS
+
+Omwille van het gebrek aan tijd om een praktisch onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten.
+
+Desondanks durf ik met zekerheid te stellen dat het mogelijk is om, net zoals bij het Filament-project, een project te migreren naar een Statamic-project, ongeacht de gekozen configuratie. Het is echter belangrijk te concluderen dat er, zowel voor Filament als voor Statamic, geen one-size-fits-all-aanpak bestaat. 
+
+Dit komt voornamelijk doordat er in de loop der tijd voor AllesOnline projecten verschillende architecturen en technieken zijn toegepast. Deze variëren van monolithische Laravel projecten met Blade-templates, al dan niet in combinatie met Inertia om modernere frontend-frameworks binnen een monolithische repository te integreren, tot projecten waarin het AllesOnline CMS daadwerkelijk headless wordt ingezet in combinatie met een modern frontend-framework.
+
+Hierdoor zou je kunnen stellen dat het migreren van een bestaand AllesOnline-project goed voorbereid moet worden. Hierbij moet gekeken worden naar hoe de architectuur is opgesteld, welke technieken er zijn gebruikt, welke custom inputvelden zijn gedefinieerd, of er validatie op de inputvelden toegevoegd moet worden en of bepaalde relaties anders gedefinieerd kunnen of moeten worden.
+

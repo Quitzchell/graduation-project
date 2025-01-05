@@ -58,7 +58,7 @@ Dit blok bevat een titel- en tekstveld met RichText-functionaliteit voor tekstop
 
 ## CMS met Filament
 
-In Filament kan een soortgelijke functionaliteit worden gerealiseerd door gebruik te maken van Resources en een Eloquent-model geinspireerd op het `Page`-model van AllesOnline CMS. Dit model bevat de gegevens en relaties van pagina’s en hun hiërarchie.
+In Filament kan op een soortgelijke manier een CMS worden gerealiseerd door gebruik te maken van Resources en een Eloquent-model geinspireerd op het `Page`-model van AllesOnline CMS. Dit model bevat de gegevens en relaties van pagina’s en hun hiërarchie.
 
 *Een UML class-diagram met het onderstaande concept voor content management kan je [hier bekijken](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)*
 
@@ -543,5 +543,224 @@ interface HasBlockSchema
     public static function getBlock(): Block;
 
     public function resolve(array $blockData): array;
+}
+```
+
+
+## Statamic CMS met flat-file / eloquent-driver
+
+In de flat-file en eloquent-driver configuratie van Statamic wordt het CMS anders opgezet dan bij traditionele CMS-systemen. Een belangrijk verschil is dat Statamic geen specifieke Eloquent-modellen per entiteit gebruikt, zoals bij veel andere Laravel-gebaseerde applicaties. In plaats daarvan maakt Statamic gebruik van `Collection`-modellen, die objecten zoals `Entry`-modellen beheren. Dit zorgt voor een structuur die geen complexe databasetabellen of acties vereist.
+
+### Collections
+
+In de huidige configuratie worden pagina's beheerd binnen een `Collection`. Deze collecties bepalen de globale instellingen voor de entries die tot de collectie behoren. Denk hierbij aan zaken zoals de manier waarop de overzichtspagina gesorteerd moet worden, of entries genest kunnen worden, en het definiëren van de route die aangeroepen moet worden om een specifieke entry uit de collectie op te halen. Je kunt een collectie vergelijken met een Eloquent-model dat communiceert met de databasetabel van een bepaalde entiteit. Dit kunnen naast pagina's ook andere entiteiten zijn, zoals blogposts of reviews.
+
+Hieronder een voorbeeld van de configuratie van de `Pages`-collectie:
+
+```yaml
+title: Pages  
+revisions: false  
+route: '/{slug}'  
+sort_dir: asc  
+date_behavior:  
+  past: public  
+  future: private  
+structure:  
+  root: true  
+  max_depth: 1
+```
+
+### Blueprints
+
+In de huidige configuratie worden de templates die gebruikt worden voor het beheren van de dynamische content op de pagina's gedefinieerd in een `Blueprint`. In het geval van pagina's waarvoor we meerdere templates gebruiken, kunnen we voor de `Pages`-collectie meerdere Blueprints aanmaken. Dit maakt het mogelijk om per template verschillende soorten velden te definiëren die aan een pagina meegegeven kunnen worden. Voor objecten waarvoor maar één soort beschikbaar is, maak je dus slechts één Blueprint aan.
+
+Een Blueprint definieert niet alleen het schema voor de invoervelden, maar bepaalt ook de validatie-regels, standaardwaarden en de zichtbaarheid van velden in de gebruikersinterface.
+
+Hier is een voorbeeld van een `Blueprint` die de velden voor een homepage definieert:
+
+```yaml
+order: 1  
+tabs:  
+  main:  
+    display: Main  
+    sections:  
+      -  
+        display: 'General information'  
+        fields:  
+          -  
+            handle: template  
+            field:  
+              dictionary: templates  
+              default: homepage  
+              type: dictionary  
+              display: Template  
+              listable: false  
+              visibility: hidden  
+          -  
+            handle: title  
+            field:  
+              type: text  
+              required: true  
+              validate:  
+                - required  
+              display: 'Page title'  
+              listable: true  
+          -  
+            handle: slug  
+            field:  
+              type: slug  
+              localizable: true  
+              validate: 'max:200'  
+              display: 'Page uri'  
+              show_regenerate: true  
+      -  
+        display: Content  
+        fields:  
+          -  
+            handle: header_title  
+            field:  
+              type: text  
+              display: 'Header title'  
+              listable: false  
+          -  
+            handle: header_image  
+            field:  
+              container: default  
+              type: assets  
+              display: 'Header image'  
+          -  
+            handle: blocks  
+            field:  
+              type: replicator  
+              display: Blocks  
+              listable: false  
+              sets:  
+                cms_content:  
+                  display: 'CMS content'  
+                  sets:  
+                    paragraph:  
+                      display: Paragraph  
+                      fields:  
+                        -  
+                          import: common.paragraph  
+                    image:  
+                      display: Image  
+                      fields:  
+                        -  
+                          import: common.image  
+                    map:  
+                      display: Map  
+                      fields:  
+                        -  
+                          import: common.map  
+                    call_to_action:  
+                      display: 'Call to Action'  
+                      fields:  
+                        -  
+                          import: common.call_to_action  
+title: Homepage
+```
+
+### Fieldsets
+
+Wellicht is het je al opgevallen dat er in de home-blueprint een `replicator`-veld is gedefinieerd met de handle `blocks`. Hieronder kunnen voorgedefinieerde sets van invoervelden worden meegegeven, die op hun beurt weer als contentblokken gebruikt kunnen worden. Om te voorkomen dat deze voorgedefinieerde sets elke keer dat ze gebruikt worden opnieuw gedefinieerd moeten worden, is het mogelijk om ze vooraf te definiëren in `Fieldsets`. Binnen de `replicator` op de pagina geef je vervolgens aan welke `Fieldsets` je wilt gebruiken.
+
+Hier een voorbeeld van een fieldset voor een paragraph block:
+
+```yaml
+title: Paragraph  
+fields:  
+  -  
+    handle: title  
+    field:  
+      type: text  
+      display: Title  
+  -  
+    handle: text  
+    field:  
+      buttons:  
+        - h1  
+        - h2  
+        - h3  
+        - h4  
+        - h5  
+        - h6  
+        - bold  
+        - italic  
+        - underline  
+        - unorderedlist  
+        - orderedlist  
+        - removeformat  
+        - quote  
+        - anchor  
+        - image  
+        - table  
+      save_html: true  
+      remove_empty_nodes: trim  
+      type: bard  
+      display: Text  
+      listable: false  
+  - handle: namespace  
+    field:  
+      default: common  
+      type: text  
+      display: Namespace  
+      sortable: false  
+      visibility: hidden  
+      replicator_preview: false  
+      duplicate: false
+```
+
+### Entries
+
+De daadwerkelijke pagina's en objecten worden beheerd als `Entries` binnen de gedefinieerde collecties. Een `Entry` is in feite de representatie van een individueel item binnen een collectie, zoals een pagina of blogpost. Elke `Entry` bevat specifieke gegevens voor de velden die zijn gedefinieerd in de bijbehorende `Blueprint`. `Entries` worden in de flat-file configuratie opgeslagen als markdown-bestanden in de `content`-directory van de repository. Wanneer je gebruik maakt van de Eloquent-driver (en aangeeft dat `Entries` in de database opgeslagen moeten worden), wordt een `Entry` in de `entries`-databasetabel opgeslagen.
+
+Hier is een voorbeeld van een entry in de `Pages`-collectie, gebaseerd op de eerder gedefinieerde `Homepage`-blueprint. 
+```markdown
+---  
+id: 78f550f5-b9a4-404a-86e5-fc684b3e3b77  
+blueprint: home  
+title: Home  
+header_title: "La gloire est éphémère, mais l'oubli est éternel."  
+blocks:  
+  -    id: m4szm60u    title: 'Bonjour à tous,'    text: '<p>I am Napoleon Bonaparte, exiled here on the remote island of Saint Helena. Once, I commanded vast armies, reshaped nations, and navigated the turbulent waters of European politics. Today, however, I find myself in the serene isolation of this distant land, where the ocean whispers tales of glory and defeat.</p><p>As I pen my thoughts for you, dear readers, I invite you into my world—a realm of ambition, strategy, and, yes, introspection. Here, I shall share my reflections on leadership, the nature of power, and the lessons learned from both triumphs and trials.</p><p>Join me as I explore the intricate tapestry of history, the weight of legacy, and the fleeting nature of fame. Whether you seek inspiration, knowledge, or simply the musings of a man who once stood at the pinnacle of power, I welcome you to my journey.</p><p>À bientôt,<br>Napoleon</p>'    namespace: common    type: paragraph    enabled: true  -    id: m4ua63d6    title: 'A new conquest'    text: '<p>I invite you to join me on a new conquest, not of nations but of cinema and literature! Much as I once sought to reshape Europe, I now seek to navigate the vast empire of film, and I need you by my side. Do you dare follow me, loyal subjects, in this new adventure? Then visit my reviews page into the world of film and literature!</p>'    urlable_id: 8a254262-90b1-4eb7-918a-e7d60d81a683    button_text: 'Read more'    namespace: common    type: call_to_action    enabled: true  -    id: m4udna2o    namespace: common    type: map    enabled: true    google_maps:      formatted_address: '129 Rue de Grenelle, 75007 Paris, France'      coordinates:        lat: 48.8581983        lng: 2.3130361    title: 'I await your visit'    text: '<p>Visit me at Les Invalides, where I, Napoleon Bonaparte, rest. Stand before me, and discuss the ambition, triumphs, and sacrifices that shaped our history.</p>'updated_by: 1  
+updated_at: 1735046888  
+template: homepage  
+---
+```
+
+### Synchronisatie van relaties
+
+In de flat-file configuratie van Statamic is er geen automatische synchronisatie van bi-directionele relaties tussen objecten. Dit kan leiden tot inconsistenties binnen een project wanneer een bepaalde relatie aan de ene kant van het object wordt verwijderd, maar in het andere object nog steeds bestaat. Een mogelijke oplossing is om een Listener te maken voor modellen met bi-directionale relaties, die ervoor zorgt dat wanneer deze Entries de `saved` actie aanroepen, het gerelateerde object van de relatie ook wordt aangepast. Hierbij moet worden meegenomen dat de Listener geactiveerd wordt op het `Entry`-model. Dit betekent dus dat we bij elke `saved`-actie door alle mogelijke relaties van alle entiteiten moeten, moeten voorkomen dat we een infinite-loop veroorzaken, rekening houden met race conditions en wanneer een er in de Listener-actie nogmaals een `saved`-actie geactiveerd wordt terwijl we er ook voor zorgen dat alle acties zoals het assicioeren als loskoppelen goed uitgevoerd wordt. Daarnaast moeten wijzigingen in de blueprints - zoals de naam van een veld - ook worden doorgevoerd in de Listener. Kortom, veel bloating voor functionaliteit die wanneer je van Eloquent-modellen gebruikt maakt geen last hebt. 
+
+Dit is het moment waarop de marketplace en de community rondom een tool of library zich van hun beste kant laten zien. Je bent immers niet de eerste developer die dit probleem tegenkomt; vaak zijn anderen je al voor geweest, en soms hebben zij een kant-en-klare oplossing beschikbaar gesteld. Dit geldt ook voor dit specifieke issue: in de marketplace vinden we de addon **Entry Relationships**.
+
+Om deze addon, die bi-directionale relaties verwerkt, te configureren, hoef je enkel de package te importeren en binnen een serviceprovider een functie aan te roepen die de gerelateerde velden met elkaar verbindt.
+
+Een kleine kanttekening bij dit soort addons is dat ze vaak onderhouden worden door een enkele developer. Wanneer er problemen optreden, kan het zijn dat deze niet direct binnen het package opgelost worden.
+
+> [Entry Relationship addon in de Statamic Marketplate](https://statamic.com/addons/stillat/entry-relationships)
+
+Hieronder een voorbeeld van de serviceProvider
+```php
+<?php  
+  
+namespace App\Providers;  
+  
+use Illuminate\Support\ServiceProvider;  
+use Stillat\Relationships\Support\Facades\Relate;  
+  
+class RelationshipServiceProvider extends ServiceProvider  
+{  
+    public function boot(): void  
+    {  
+        Relate::manyToMany(  
+            'actors.movies',  
+            'movies.actors',  
+        );  
+    }  
+  
+    public function register(): void  
+    {}  
 }
 ```
