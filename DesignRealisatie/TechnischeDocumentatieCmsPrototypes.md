@@ -555,7 +555,7 @@ In de flat-file en eloquent-driver configuratie van Statamic wordt het CMS ander
 
 In de huidige configuratie worden pagina's beheerd binnen een `Collection`. Deze collecties bepalen de globale instellingen voor de entries die tot de collectie behoren. Denk hierbij aan zaken zoals de manier waarop de overzichtspagina gesorteerd moet worden, of entries genest kunnen worden, en het definiëren van de route die aangeroepen moet worden om een specifieke entry uit de collectie op te halen. Je kunt een collectie vergelijken met een Eloquent-model dat communiceert met de databasetabel van een bepaalde entiteit. Dit kunnen naast pagina's ook andere entiteiten zijn, zoals blogposts of reviews.
 
-Hieronder een voorbeeld van de configuratie van de `Pages`-collectie:
+**configuratie voor de `Pages`-collection**
 
 ```yaml
 title: Pages  
@@ -576,7 +576,7 @@ In de huidige configuratie worden de templates die gebruikt worden voor het behe
 
 Een Blueprint definieert niet alleen het schema voor de invoervelden, maar bepaalt ook de validatie-regels, standaardwaarden en de zichtbaarheid van velden in de gebruikersinterface.
 
-Hier is een voorbeeld van een `Blueprint` die de velden voor een homepage definieert:
+**Blueprint voor het homepage-template**
 
 ```yaml
 order: 1  
@@ -665,7 +665,7 @@ title: Homepage
 
 Wellicht is het je al opgevallen dat er in de home-blueprint een `replicator`-veld is gedefinieerd met de handle `blocks`. Hieronder kunnen voorgedefinieerde sets van invoervelden worden meegegeven, die op hun beurt weer als contentblokken gebruikt kunnen worden. Om te voorkomen dat deze voorgedefinieerde sets elke keer dat ze gebruikt worden opnieuw gedefinieerd moeten worden, is het mogelijk om ze vooraf te definiëren in `Fieldsets`. Binnen de `replicator` op de pagina geef je vervolgens aan welke `Fieldsets` je wilt gebruiken.
 
-Hier een voorbeeld van een fieldset voor een paragraph block:
+**Fieldset voor het Paragraph block**
 
 ```yaml
 title: Paragraph  
@@ -715,7 +715,7 @@ fields:
 
 De daadwerkelijke pagina's en objecten worden beheerd als `Entries` binnen de gedefinieerde collecties. Een `Entry` is in feite de representatie van een individueel item binnen een collectie, zoals een pagina of blogpost. Elke `Entry` bevat specifieke gegevens voor de velden die zijn gedefinieerd in de bijbehorende `Blueprint`. `Entries` worden in de flat-file configuratie opgeslagen als markdown-bestanden in de `content`-directory van de repository. Wanneer je gebruik maakt van de Eloquent-driver (en aangeeft dat `Entries` in de database opgeslagen moeten worden), wordt een `Entry` in de `entries`-databasetabel opgeslagen.
 
-Hier is een voorbeeld van een entry in de `Pages`-collectie, gebaseerd op de eerder gedefinieerde `Homepage`-blueprint. 
+ **Entry in de `Pages`-collection, gebaseerd op de `Homepage`-blueprint.** 
 ```markdown
 ---  
 id: 78f550f5-b9a4-404a-86e5-fc684b3e3b77  
@@ -741,7 +741,7 @@ Een kleine kanttekening bij dit soort addons is dat ze vaak onderhouden worden d
 
 > [Entry Relationship addon in de Statamic Marketplate](https://statamic.com/addons/stillat/entry-relationships)
 
-Hieronder een voorbeeld van de serviceProvider
+**Voorbeeld van de serviceProvider**
 ```php
 <?php  
   
