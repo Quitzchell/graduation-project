@@ -1,16 +1,18 @@
-# Opdracht
+# **Opdracht**
 
-## Inleiding
+# Inleiding
 
 De opdracht richt zich op de modernisering van het Content Management Systeem (CMS) van AllesOnline, een full-service bureau dat gespecialiseerd is in zowel online als offline communicatie. Het bestaande CMS, dat een centrale rol speelt binnen de door het bedrijf ontwikkelde webapplicaties, is sinds de eerste versie in 2015 weinig onderhouden. Dit heeft geleid tot een verouderde, moeilijk uitbreidbare codebasis die verdere ontwikkeling bemoeilijkt. Het doel van deze opdracht is om te onderzoeken of migratie naar een nieuw, modern CMS een duurzamere en kostenefficiëntere oplossing kan bieden dan het doorontwikkelen van het bestaande systeem.
 
-## Probleem of Kans
+# Probleem of Kans
 
-Het huidige CMS van AllesOnline vertoont meerdere technische beperkingen door de jarenlange uitbreiding zonder bijbehorende onderhoudswerkzaamheden, zoals refactoring en het implementeren van geautomatiseerde tests. Hierdoor is het systeem complex geworden en kost het veel tijd om wijzigingen aan te brengen zonder de stabiliteit in gevaar te brengen. Omdat de doorontwikkeling van het CMS geen directe inkomsten oplevert, is het moeilijk om investeringen te rechtvaardigen. Tegelijkertijd beperken de technische tekortkomingen de schaalbaarheid en flexibiliteit van de webapplicaties die op het CMS zijn gebouwd, waardoor innovatie moeilijk wordt.
+Het huidige CMS van AllesOnline kent meerdere technische beperkingen door de jarenlange uitbreiding zonder bijbehorende onderhoudswerkzaamheden, zoals refactoring en het implementeren van geautomatiseerde tests.
+
+ Hierdoor is het systeem complex geworden en kost het veel tijd om wijzigingen aan te brengen zonder de stabiliteit in gevaar te brengen. Het doorontwikkelen van het CMS is daarom ook een kostbare aangelegenheid, voornamelijk omdat dit geen directe inkomstenbron is. Tegelijkertijd beperken de technische tekortkomingen de schaalbaarheid en flexibiliteit van de webapplicaties die AllesOnline met het CMS bouwt.
 
 Dit vormt een belangrijke aanleiding voor het project, omdat AllesOnline een duurzaam fundament nodig heeft voor haar digitale producten en diensten. De situatie biedt de kans om na te denken over modernisering en de mogelijke migratie naar een extern CMS pakket dat voldoet aan moderne standaarden en toekomstbestendigheid biedt.
 
-## Doelstellingen
+# Doelstellingen
 
 Het voornaamste doel van deze opdracht is om een weloverwogen advies te geven over de toekomst van het CMS bij AllesOnline. Dit wordt gedaan door te onderzoeken of het huidige CMS kan worden doorontwikkeld of dat een migratie naar een ander CMS een meer schaalbare en onderhoudbare oplossing biedt. Specifieke doelen zijn:
 
@@ -20,7 +22,7 @@ Het voornaamste doel van deze opdracht is om een weloverwogen advies te geven ov
 4. **Analyseren van de migratie-uitdagingen** van het huidige CMS naar een nieuw systeem.
 5. **Vergelijken van de prestaties en kosten** van het huidige CMS met potentiële alternatieven.
 
-## Context van de Opdracht
+# Context van de Opdracht
 
 De context van de opdracht ligt in de kernactiviteit van AllesOnline: het leveren van op maat gemaakte webapplicaties aan een divers klantenbestand. Het huidige CMS is het centrale platform waarop deze applicaties draaien, maar de verouderde staat ervan vormt een risico voor verdere groei en innovatie. Om concurrerend te blijven en te voldoen aan moderne ontwikkelpraktijken, moet AllesOnline een keuze maken tussen doorontwikkeling van het bestaande systeem of migratie naar een nieuw, toekomstbestendig CMS.
 
