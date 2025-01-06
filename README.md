@@ -31,6 +31,9 @@
 * ### [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 * ### [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 * ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
+* ### [Repository: Backend Statamic Flat File](https://github.com/Quitzchell/graduation-statamic-cms)
+* ### [Repository: Backend Statamic Eloquent-driver](https://github.com/Quitzchell/graduation-statamic-ed-cms)
+* ### [Repository: Backend Statamic Runway-addon](https://github.com/Quitzchell/graduation-statamic-runway-cms)
 * ### [Repository: PoC Transcription](https://github.com/Quitzchell/poc-transcription)
 
 # Bijlagen
