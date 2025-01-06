@@ -1,4 +1,4 @@
-# Leeswijzer
+# **Leeswijzer**
 ---
 
 > * [Evidence in verhouding tot leeruitkomsten](../Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
@@ -26,7 +26,7 @@ Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaa
 5. **Welke prestatieverschillen en kosten zijn er tussen het huidige CMS en een nieuw systeem?**
      
 
-# Onderzoek naar huidige CMS en opzet eerste Prototype
+# Onderzoek naar huidige CMS en opzet eerste prototype
 
 In de eerste weken van dit project heb ik mij gericht op het analyseren van het AllesOnline CMS. Om een goed beeld te krijgen en hier gericht advies over uit te kunnen brengen, heb ik gesprekken gevoerd met mijn collega-developers van AllesOnline over hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarnaast heb ik mijn eigen ervaringen met het CMS meegenomen in deze analyse en ben ik de code van het CMS ingedoken om op een dieper niveau te begrijpen hoe het systeem is opgebouwd.
 
@@ -53,7 +53,7 @@ Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsn
 
 Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb voor alle prototypes Docker-containers voorbereid. Voor de backends maak ik gebruik van de voorgedefinieerde AllesOnline-container, met een uitbreiding die het mogelijk maakt om van SQLite gebruik te maken. Dit maakt het eenvoudiger om zowel tijdens het programmeren als binnen een pipeline feature tests uit te voeren, zonder de reguliere database te beïnvloeden.
 
-### Conclusies onderzoek AllesOnline CMS en realisatie eerste Prototype
+### Conclusies onderzoek AllesOnline CMS en realisatie eerste prototype
 
 Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden kunnen formuleren op enkele deelvragen.
  
