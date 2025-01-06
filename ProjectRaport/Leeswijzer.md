@@ -151,7 +151,7 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
 	* Qua prestaties kun je met Statamic meerdere kanten op. Bij een kleine website met alleen content is de flat-file architectuur ideaal en vaak aanzienlijk sneller, omdat er geen database-query's uitgevoerd hoeven te worden. Als je echter een database configuratie gebruikt, zal het verschil in prestaties eerder te maken hebben met de kwaliteit van de code die de developer schrijft dan met de keuze voor een framework zelf.
 	* De kosten voor Statamic kunnen variëren, afhankelijk van de gekozen licentie:
-		- **Statamic Pro**: $259 per jaar per site voor commerciële toepassingen.
+		- **Statamic Pro**: $275 per jaar per site voor commerciële toepassingen.
 		- **Master License**: $1250 voor vijf websites, voordelig voor organisaties die meerdere sites beheren.
 		- **Platform Subscription**: Een abonnementsmodel waarbij de kosten per website dalen naarmate het aantal websites toeneemt.
 
