@@ -98,7 +98,7 @@ Tijdens het onderzoek ben ik ook aan de slag gegaan met het ontwerpen en realise
 > * [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 > * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
 > * [Technische documentatie van CMS Prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
-
+ 
 ### Conclusies onderzoek Filament en realisatie Filament CMS
 
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
