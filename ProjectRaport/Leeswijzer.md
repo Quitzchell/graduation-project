@@ -5,7 +5,7 @@
 
 # Inleiding
 
-Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_, waarin wordt onderzocht hoe AllesOnline - een full-service bureau voor online en offline communicatie - haar huidige intern ontwikkelde Content Management Systeem (CMS) kan moderniseren. Het CMS, dat momenteel in gebruik is en sinds 2015 operationeel is, vormt de basis van de webapplicaties die het bedrijf ontwikkelt. Door een gebrek aan aandacht en onderhoud is het systeem echter verouderd. Dit maakt het moeilijk uit te breiden, wat het werken ermee steeds minder efficiënt maakt en zowel de schaalbaarheid als de toekomstbestendigheid belemmert.
+Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_, waarin wordt onderzocht hoe AllesOnline - een full-service bureau voor online en offline communicatie - haar huidige intern ontwikkelde Content Management Systeem (CMS) kan moderniseren. Het CMS, dat momenteel in gebruik is en sinds 2015 operationeel is, vormt de basis van de webapplicaties die het bedrijf ontwikkelt. Door een gebrek aan aandacht en onderhoud is het systeem echter verouderd. Dit maakt het moeilijk uit te breiden, waardoor het werken met het systeem steeds minder efficiënt wordt.
 
 Concreet richt het onderzoek zich op het formuleren van een advies over twee mogelijke strategieën voor het CMS: het doorontwikkelen van het huidige systeem of het overstappen naar een door een derde partij ontwikkeld CMS. In het geval van de laatste strategie hoort daar ook de mogelijkheid bij om het CMS van de bestaande websites naar het nieuwe systeem te migreren.
 
@@ -154,17 +154,17 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 		- **Master License**: $1250 voor vijf websites, voordelig voor organisaties die meerdere sites beheren.
 		- **Platform Subscription**: Een abonnementsmodel waarbij de kosten per website dalen naarmate het aantal websites toeneemt.
 
-# Verder onderzoek van Migratie naar nieuw CMS
+# Verder onderzoek van migratie naar nieuw CMS
 
 Omwille van het gebrek aan tijd om een zorgvuldig onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten.
 
-// todo: document terugkomend op migratietool
-
+> * [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
+<!-- 
 Desondanks durf ik met zekerheid te stellen dat het mogelijk is om, net zoals bij het Filament-project, een project te migreren naar een Statamic-project, ongeacht de gekozen configuratie. Het is echter belangrijk te concluderen dat er, zowel voor Filament als voor Statamic, geen one-size-fits-all-aanpak bestaat. 
 
 Dit komt voornamelijk doordat er in de loop der tijd voor AllesOnline projecten verschillende architecturen en technieken zijn toegepast. Deze variëren van monolithische Laravel projecten met Blade-templates, al dan niet in combinatie met Inertia om modernere frontend-frameworks binnen een monolithische repository te integreren, tot projecten waarin het AllesOnline CMS daadwerkelijk headless wordt ingezet in combinatie met een modern frontend-framework.
 
-Hierdoor zou je kunnen stellen dat het migreren van een bestaand AllesOnline-project goed voorbereid moet worden. Hierbij moet gekeken worden naar hoe de architectuur is opgesteld, welke technieken er zijn gebruikt, welke custom inputvelden zijn gedefinieerd, of er validatie op de inputvelden toegevoegd moet worden en of bepaalde relaties anders gedefinieerd kunnen of moeten worden.
+Hierdoor zou je kunnen stellen dat het migreren van een bestaand AllesOnline-project goed voorbereid moet worden. Hierbij moet gekeken worden naar hoe de architectuur is opgesteld, welke technieken er zijn gebruikt, welke custom inputvelden zijn gedefinieerd, of er validatie op de inputvelden toegevoegd moet worden en of bepaalde relaties anders gedefinieerd kunnen of moeten worden. -->
 
 // todo advies
 
