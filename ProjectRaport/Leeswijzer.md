@@ -41,7 +41,7 @@ Parallel aan het onderzoek heb ik de requirements opgesteld waaraan een CMS moet
 > * [Requirements](../AnalyseAdvies/Requirements.md)
 > * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
 
-Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsnee AllesOnline-website verwacht wordt, ben ik aan de slag gegaan met het realiseren van een prototype van een website. In eerste instantie was het de bedoeling om een stamboom applicatie te ontwikkelen op basis van de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam – en de complexiteit van het verwerken hiervan in een systeem duidelijk werd – heb ik ervoor gekozen om in plaats daarvan een eenvoudige blog-website te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
+Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsnee AllesOnline-website verwacht wordt, ben ik aan de slag gegaan met het realiseren van een prototype van een website. In eerste instantie was het de bedoeling om een stamboomapplicatie te ontwikkelen op basis van de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam – en de complexiteit van het verwerken hiervan in een systeem duidelijk werd – heb ik ervoor gekozen om in plaats daarvan een eenvoudige blog-website te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
 
 > _Meer over waarom ik van plan ben met prototypen te werken en hoe deze eruit gaan zien lees je in het onderstaande document._ 
 > * [Opzet van de prototypes](../DesignRealisatie/OpzetVanDePrototypes.md)
@@ -55,7 +55,7 @@ Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen
 
 ### Conclusies onderzoek AllesOnline CMS en realisatie eerste prototype
 
-Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden kunnen formuleren op enkele deelvragen.
+Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden formuleren op enkele deelvragen.
  
 * __Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?__
 	* **Beperkte documentatie:** De documentatie is verouderd, waardoor ontwikkelaars onnodig lang bezig zijn met het begrijpen van bepaalde functionaliteiten en parameters.
@@ -102,7 +102,7 @@ Tijdens het onderzoek ben ik ook aan de slag gegaan met het ontwerpen en realise
 ### Conclusies onderzoek Filament en realisatie Filament CMS
 
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
-	- Omdat Filament flexibel en modulair is te gebruiken, is het zeer geschikt als basis voor het realiseren van een CMS die gebruikt kan worden voor AllesOnline websites.
+	- Omdat Filament flexibel en modulair te gebruiken is, is het zeer geschikt als basis voor het realiseren van een CMS die gebruikt kan worden voor AllesOnline websites.
 
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
 	* Met Filament is het eenvoudiger om een CRM of andere SaaS-oplossing voor klanten te realiseren. Hierdoor wordt het mogelijk om naast een CMS ook aanvullende oplossingen aan te bieden aan klanten die hierom vragen. Dit is aanzienlijk eenvoudiger dan het AllesOnline CMS in bochten te wringen om te voldoen aan vereisten waarvoor het praktisch gezien niet is ontworpen.
