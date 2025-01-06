@@ -157,7 +157,7 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 
 # Verder onderzoek van migratie naar nieuw CMS
 
-Omwille van het gebrek aan tijd om een zorgvuldig onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten.
+Omwille van het gebrek aan tijd om een zorgvuldig onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten. Wel heb ik nog een advies doucment geschreven over het migreren van de bestaande CMS'en.
 
 > * [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
 
