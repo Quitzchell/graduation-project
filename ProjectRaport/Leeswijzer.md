@@ -65,7 +65,7 @@ Tijdens dit onderzoek en de ontwikkeling van het prototype kan ik vanuit verschi
 
 * __Aan welke criteria moet een gemoderniseerd CMS voldoen?__
 	* **Uitgebreide documentatie:** Het CMS beschikt over actuele documentatie die modules en functionaliteiten helder beschrijft.
-	* **Modulariteit:** Het systeem moet opgesplitst zijn in kleinere, onafhankelijke modules met specifieke verantwoordelijkheden zodat deze gemakkelijk uitgebreid kan worden indien nodig.
+	* **Modulariteit:** Het systeem moet bestaan uit goed afgebakende modules met specifieke verantwoordelijkheden, waarbij deze modules loosely-coupled zijn en onafhankelijk kunnen functioneren. Dit maakt het systeem gemakkelijker uit te breiden, aan te passen en te onderhouden.
 
 * __Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
 	* **Prestatie:** Het gebrek aan modulariteit en documentatie resulteert in hogere onderhoudskosten en meer bugs, wat de prestaties en stabiliteit beïnvloedt.
