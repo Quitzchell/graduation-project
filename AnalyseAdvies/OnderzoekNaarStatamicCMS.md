@@ -49,7 +49,7 @@ In het geval dat er gebruik gemaakt wordt van de flat-file architectuur, worden 
 Collections kunnen via het Control Panel van Statamic of aan de hand van YAML-bestanden in de repository gedefinieerd worden.
 
 > _Voorbeeld van een Collections YAML_
-> [Collections yaml voor Pages collection](../Bijlagen/VoorbeeldStatamicCollectionsFile.md)
+> * [Collections yaml voor Pages collection](../Bijlagen/VoorbeeldStatamicCollectionsFile.md)
 
 ### Blueprints
 
@@ -65,7 +65,6 @@ In de standaard flat-file configuratie voor Statamic worden `Entries` gebruikt o
 
 > _Voorbeeld van entry binnen Page collection voor de hoempage_
 > * [Markdown voor homepage](../Bijlagen/VoorbeeldStatamicFlatFile.md)
-
 
 ### Meer over flat-file 
 
@@ -93,9 +92,8 @@ Mocht het nodig zijn om specifieke eloquent-modellen en databasetabellen te gebr
 
 Het omzetten van de reguliere Statamic configuratie naar de `eloquent-driver` is relatief eenvoudig. Het installeren van de pakketten en het volgen van de documentatie is voldoende om tot een werkbare oplossing te komen. De pakketten bevatten ook functionaliteit die het eenvoudig maakt om gegevens van flat-files om te zetten naar database-records (en eventueel zelfs weer terug naar flat-files). De manier waarop de eloquent-driver binnen het systeem gebruikt dient te worden, kan geconfigureerd worden in het configuratiebestand voor de eloquent-driver. Het grootste voordeel van de eloquent-driver configuratie is dat deze de schaalbaarheid aanzienlijk verbetert.
 
-> [Eloquent-driver configuratie](https://github.com/Quitzchell/graduation-statamic-cms/blob/eloquent/config/statamic/eloquent-driver.php)
-
-> [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
+> * [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
+> * [Eloquent-driver config-file](../Bijlagen/eloquent-driver-config.md)
 
 #### Beperkingen Eloquent-driver
 
@@ -104,15 +102,15 @@ Het omzetten van de reguliere Statamic configuratie naar de `eloquent-driver` is
 * **Bi-directionele many-to-many-relaties**: Many-to-many-relaties worden enkel gepersisteerd aan het object dat bewerkt wordt. Eventuele oplossingen hiervoor zijn externe addons of het realiseren van observers die beide objecten voorzien van gegevens over hun relatie.
 * **Geen specifieke modellen**: De `Eloquent-driver` slaat alle gegevens op in een enkele data-kolom als JSON. Hoewel het mogelijk is om velden in afzonderlijke kolommen op te slaan, is er geen mogelijkheid om eigen tabellen te creëren die door middel van Eloquent-modellen verantwoordelijk zijn voor het persisteren van de gegevens.
 
-> [Github-issue: eager loading](https://github.com/statamic/eloquent-driver/issues/119)
+> * [Github-issue: eager loading](https://github.com/statamic/eloquent-driver/issues/119)
 
 ### Runway
 
 Het omzetten van de reguliere Statamic-configuratie naar Runway vergt, in tegenstelling tot de eloquent-driver, meer wijzigingen. Naast het configuratiebestand dat opgezet moet worden, is het ook nodig om voor alle entiteiten die je als specifieke Eloquent-modellen wilt beheren, Eloquent-modellen aan te maken, Runway-resources te definiëren en databasemigraties op te zetten. Daarnaast is het nodig om een workaround te implementeren om een functionaliteit te realiseren waarmee je gebruik kunt maken van pagina-templates. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
 
-> [Runway configuratie](https://github.com/Quitzchell/graduation-statamic-cms/blob/runway/config/runway.php)
 
-> [Runway addon documentatie](https://runway.duncanmcclean.com/)
+> * [Runway addon documentatie](https://runway.duncanmcclean.com/)
+> * [Runway configuratie](../Bijlagen/RunwayConfigFile.md)
 
 #### Beperkingen Runway
 
@@ -164,7 +162,7 @@ Om gebruik te maken van Statamic voor de websites die AllesOnline ontwikkelt, mo
 
 Voor AllesOnline is minimaal de **Statamic Pro** licentie nodig, aangezien de websites voor commerciële doeleinden worden gerealiseerd. Het is waarschijnlijk dat meerdere websites gebruik gaan maken van Statamic. Het is daarom interessant om te starten met de **Master License** en Statamic te implementeren voor de eerste tien websites. Na tien website is het voordeliger om over te schakelen naar de **Platform Subscription**. In dit geval betaal je $2100 per jaar voor de eerste 25 websites, en voor elke extra website daarna een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic. Wanneer er 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar.
 
-> [Prijs informatie Platform Subscription](https://statamic.com/pricing/platform)
+> * [Informatie over kosten van Platform Subscription](https://statamic.com/pricing/platform)
 
 ### Conclusie 
 

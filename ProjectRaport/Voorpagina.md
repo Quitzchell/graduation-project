@@ -1,4 +1,3 @@
-!! _Officiële document te vinden in ingeleverde Portfolio_ !!
 # GRADUATION-INTERNSHIP PORTFOLIO BACHELOR-ICT
 ## FONTYS UNIVERSITY OF APPLIED SCIENCES
 
