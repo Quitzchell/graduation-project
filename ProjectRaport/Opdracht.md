@@ -10,7 +10,7 @@ Het huidige CMS van AllesOnline kent meerdere technische beperkingen door de jar
 
 Hierdoor is het systeem complex geworden, waardoor het veel tijd kost om wijzigingen aan te brengen zonder de stabiliteit in gevaar te brengen. Het verder ontwikkelen van het CMS is daarom een kostbare aangelegenheid, vooral omdat het geen directe inkomsten oplevert. Tegelijkertijd beperken de technische tekortkomingen de schaalbaarheid en flexibiliteit van de webapplicaties die AllesOnline met het CMS bouwt.
 
-Dit vormt een belangrijke aanleiding voor het project, omdat AllesOnline een duurzaam fundament nodig heeft voor haar digitale producten en diensten. De situatie biedt de kans om na te denken over modernisering en de mogelijke migratie naar een extern CMS pakket dat voldoet aan moderne standaarden en toekomstbestendigheid biedt.
+Dit vormt een belangrijke aanleiding voor deze opdracht, omdat AllesOnline een duurzaam fundament nodig heeft voor haar producten en diensten. De huidige situatie biedt de kans om na te denken over modernisering of een mogelijke migratie naar een CMS door een externe partij dat voldoet aan moderne standaarden en toekomstbestendigheid biedt.
 
 # Doelstellingen
 
