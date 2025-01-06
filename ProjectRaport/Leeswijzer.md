@@ -105,9 +105,10 @@ Tijdens het onderzoek ben ik ook aan de slag gegaan met het ontwerpen en realise
 	- Omdat Filament flexibel en modulair te gebruiken is, is het zeer geschikt als basis voor het realiseren van een CMS die gebruikt kan worden voor AllesOnline websites.
 
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
-	* Met Filament is het eenvoudiger om een CRM of andere SaaS-oplossing voor klanten te realiseren. Hierdoor wordt het mogelijk om naast een CMS ook aanvullende oplossingen aan te bieden aan klanten die hierom vragen. Dit is aanzienlijk eenvoudiger dan het AllesOnline CMS in bochten te wringen om te voldoen aan vereisten waarvoor het praktisch gezien niet is ontworpen.
+	* Met Filament is het eenvoudiger om een CRM of andere SaaS-oplossing voor klanten te realiseren. Dit is aanzienlijk eenvoudiger dan het AllesOnline CMS in bochten te wringen om te voldoen aan vereisten waarvoor het praktisch gezien niet is ontworpen.
 	* Filament is open-source en wordt aangeboden onder de MIT-licentie. Dit betekent dat er geen directe licentiekosten zijn verbonden aan het gebruik ervan.
-	* Filament heeft relatief uitgebreide documentatie en een snel groeiende community. Dit maakt het eenvoudiger voor ontwikkelaars om ondersteuning en voorbeelden te vinden. Aangezien Filament nog relatief nieuw is, zijn er toch nog wat beperkingen. Hierdoor kan de documentatie op sommige vlakken beperkt zijn, wat ertoe kan leiden dat developers meer tijd kwijt zijn aan het onderzoeken van specifieke functionaliteiten in edgecases.
+	* Filament heeft relatief uitgebreide documentatie en een snel groeiende community. Dit maakt het eenvoudiger voor ontwikkelaars om ondersteuning en voorbeelden te vinden.
+	* Omdat Filament nog relatief nieuw is, zijn er nog wel enkele kinderziektes in het geval van edgecases.
 	* Filament is gebaseerd op Laravel, een framework waarmee het huidige development-team van AllesOnline al goed bekend is.
 
 # Onderzoek migratie van AllesOnline naar Filament CMS
@@ -159,12 +160,6 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 Omwille van het gebrek aan tijd om een zorgvuldig onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten.
 
 > * [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
-<!-- 
-Desondanks durf ik met zekerheid te stellen dat het mogelijk is om, net zoals bij het Filament-project, een project te migreren naar een Statamic-project, ongeacht de gekozen configuratie. Het is echter belangrijk te concluderen dat er, zowel voor Filament als voor Statamic, geen one-size-fits-all-aanpak bestaat. 
-
-Dit komt voornamelijk doordat er in de loop der tijd voor AllesOnline projecten verschillende architecturen en technieken zijn toegepast. Deze variëren van monolithische Laravel projecten met Blade-templates, al dan niet in combinatie met Inertia om modernere frontend-frameworks binnen een monolithische repository te integreren, tot projecten waarin het AllesOnline CMS daadwerkelijk headless wordt ingezet in combinatie met een modern frontend-framework.
-
-Hierdoor zou je kunnen stellen dat het migreren van een bestaand AllesOnline-project goed voorbereid moet worden. Hierbij moet gekeken worden naar hoe de architectuur is opgesteld, welke technieken er zijn gebruikt, welke custom inputvelden zijn gedefinieerd, of er validatie op de inputvelden toegevoegd moet worden en of bepaalde relaties anders gedefinieerd kunnen of moeten worden. -->
 
 // todo advies
 
