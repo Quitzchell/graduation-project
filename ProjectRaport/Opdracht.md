@@ -6,9 +6,9 @@ De opdracht richt zich op de modernisering van het Content Management Systeem (C
 
 # Probleem of Kans
 
-Het huidige CMS van AllesOnline kent meerdere technische beperkingen door de jarenlange uitbreiding zonder bijbehorende onderhoudswerkzaamheden, zoals refactoring en het implementeren van geautomatiseerde tests.
+Het huidige CMS van AllesOnline kent meerdere technische beperkingen door de jarenlange uitbreiding zonder bijbehorende onderhoudswerkzaamheden, zoals refactoring en het implementeren van geautomatiseerde tests. 
 
- Hierdoor is het systeem complex geworden en kost het veel tijd om wijzigingen aan te brengen zonder de stabiliteit in gevaar te brengen. Het doorontwikkelen van het CMS is daarom ook een kostbare aangelegenheid, voornamelijk omdat dit geen directe inkomstenbron is. Tegelijkertijd beperken de technische tekortkomingen de schaalbaarheid en flexibiliteit van de webapplicaties die AllesOnline met het CMS bouwt.
+Hierdoor is het systeem complex geworden en kost het veel tijd om wijzigingen aan te brengen zonder de stabiliteit in gevaar te brengen. Het doorontwikkelen van het CMS is daarom ook een kostbare aangelegenheid, voornamelijk omdat dit geen directe inkomstenbron is. Tegelijkertijd beperken de technische tekortkomingen de schaalbaarheid en flexibiliteit van de webapplicaties die AllesOnline met het CMS bouwt.
 
 Dit vormt een belangrijke aanleiding voor het project, omdat AllesOnline een duurzaam fundament nodig heeft voor haar digitale producten en diensten. De situatie biedt de kans om na te denken over modernisering en de mogelijke migratie naar een extern CMS pakket dat voldoet aan moderne standaarden en toekomstbestendigheid biedt.
 
