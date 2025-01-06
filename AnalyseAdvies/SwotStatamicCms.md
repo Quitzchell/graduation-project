@@ -25,6 +25,7 @@
 ## Opportunities (Kansen)
 
 * **Vergroting van de flexibiliteit met addons**: Statamic heeft een speciale marktplaats beschikbaar gesteld waar plugins van derden beschikbaar zijn en eventueel oplossingen door AllesOnline - eventueel tegen betaling - aangeboden kunnen worden. 
+
 ## Threats (Bedreigingen)
 
 * **Onbekende technieken voor AllesOnline developers**: Een risico voor AllesOnline is dat Statamic voor de views binnen het CMS gebruik maakt van Vue. Dit framework is voor vrijwel alle developers binnen AllesOnline onbekend.
