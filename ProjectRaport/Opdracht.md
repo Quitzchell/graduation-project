@@ -1,4 +1,4 @@
-# **Opdracht**
+# **De opdracht**
 
 # Inleiding
 
@@ -8,9 +8,9 @@ De opdracht richt zich op de modernisering van het Content Management Systeem (C
 
 Het huidige CMS van AllesOnline kent meerdere technische beperkingen door de jarenlange uitbreiding zonder bijbehorende onderhoudswerkzaamheden, zoals refactoring en het implementeren van geautomatiseerde tests. 
 
-Hierdoor is het systeem complex geworden, waardoor het veel tijd kost om wijzigingen aan te brengen zonder de stabiliteit in gevaar te brengen. Het verder ontwikkelen van het CMS is daarom een kostbare aangelegenheid, vooral omdat het geen directe inkomsten oplevert. Tegelijkertijd beperken de technische tekortkomingen de schaalbaarheid en flexibiliteit van de webapplicaties die AllesOnline met het CMS bouwt.
+Hierdoor is het systeem complex geworden, waardoor het veel tijd kost om wijzigingen aan te brengen zonder de stabiliteit in gevaar te brengen. Het doorontwikkelen van het CMS is dan ook een groot klus en kostbare aangelegenheid, vooral omdat het geen directe inkomsten oplevert. Tegelijkertijd beperken de technische tekortkomingen de schaalbaarheid en flexibiliteit van de webapplicaties die AllesOnline met het CMS bouwt.
 
-Dit vormt een belangrijke aanleiding voor deze opdracht, omdat AllesOnline een duurzaam fundament nodig heeft voor haar producten en diensten. De huidige situatie biedt de kans om na te denken over modernisering of een mogelijke migratie naar een CMS door een externe partij dat voldoet aan moderne standaarden en toekomstbestendigheid biedt.
+Dit vormt een belangrijke aanleiding voor deze opdracht, omdat AllesOnline een duurzaam fundament nodig heeft voor haar producten en diensten. De huidige situatie biedt de kans om na te denken over modernisering of een mogelijke migratie naar een CMS van een externe partij dat aan moderne standaarden voldoet en meer toekomstbestendig is
 
 # Doelstellingen
 
