@@ -546,16 +546,14 @@ interface HasBlockSchema
 }
 ```
 
-
 ## Statamic CMS met flat-file / eloquent-driver
 
 In de flat-file en eloquent-driver configuratie van Statamic wordt het CMS anders opgezet dan bij traditionele CMS-systemen. Een belangrijk verschil is dat Statamic geen specifieke Eloquent-modellen per entiteit gebruikt, zoals bij veel andere Laravel-gebaseerde applicaties. In plaats daarvan maakt Statamic gebruik van `Collection`-modellen, die objecten zoals `Entry`-modellen beheren. Dit zorgt voor een structuur die geen complexe databasetabellen of acties vereist.
-
 ### Collections
 
 In de huidige configuratie worden pagina's beheerd binnen een `Collection`. Deze collecties bepalen de globale instellingen voor de entries die tot de collectie behoren. Denk hierbij aan zaken zoals de manier waarop de overzichtspagina gesorteerd moet worden, of entries genest kunnen worden, en het definiëren van de route die aangeroepen moet worden om een specifieke entry uit de collectie op te halen. Je kunt een collectie vergelijken met een Eloquent-model dat communiceert met de databasetabel van een bepaalde entiteit. Dit kunnen naast pagina's ook andere entiteiten zijn, zoals blogposts of reviews.
 
-Hieronder een voorbeeld van de configuratie van de `Pages`-collectie:
+**configuratie voor de `Pages`-collection**
 
 ```yaml
 title: Pages  
@@ -576,7 +574,7 @@ In de huidige configuratie worden de templates die gebruikt worden voor het behe
 
 Een Blueprint definieert niet alleen het schema voor de invoervelden, maar bepaalt ook de validatie-regels, standaardwaarden en de zichtbaarheid van velden in de gebruikersinterface.
 
-Hier is een voorbeeld van een `Blueprint` die de velden voor een homepage definieert:
+**Blueprint voor het homepage-template**
 
 ```yaml
 order: 1  
@@ -665,7 +663,7 @@ title: Homepage
 
 Wellicht is het je al opgevallen dat er in de home-blueprint een `replicator`-veld is gedefinieerd met de handle `blocks`. Hieronder kunnen voorgedefinieerde sets van invoervelden worden meegegeven, die op hun beurt weer als contentblokken gebruikt kunnen worden. Om te voorkomen dat deze voorgedefinieerde sets elke keer dat ze gebruikt worden opnieuw gedefinieerd moeten worden, is het mogelijk om ze vooraf te definiëren in `Fieldsets`. Binnen de `replicator` op de pagina geef je vervolgens aan welke `Fieldsets` je wilt gebruiken.
 
-Hier een voorbeeld van een fieldset voor een paragraph block:
+**Fieldset voor het Paragraph block**
 
 ```yaml
 title: Paragraph  
@@ -715,7 +713,7 @@ fields:
 
 De daadwerkelijke pagina's en objecten worden beheerd als `Entries` binnen de gedefinieerde collecties. Een `Entry` is in feite de representatie van een individueel item binnen een collectie, zoals een pagina of blogpost. Elke `Entry` bevat specifieke gegevens voor de velden die zijn gedefinieerd in de bijbehorende `Blueprint`. `Entries` worden in de flat-file configuratie opgeslagen als markdown-bestanden in de `content`-directory van de repository. Wanneer je gebruik maakt van de Eloquent-driver (en aangeeft dat `Entries` in de database opgeslagen moeten worden), wordt een `Entry` in de `entries`-databasetabel opgeslagen.
 
-Hier is een voorbeeld van een entry in de `Pages`-collectie, gebaseerd op de eerder gedefinieerde `Homepage`-blueprint. 
+ **Entry in de `Pages`-collection, gebaseerd op de `Homepage`-blueprint.** 
 ```markdown
 ---  
 id: 78f550f5-b9a4-404a-86e5-fc684b3e3b77  
@@ -731,17 +729,18 @@ template: homepage
 
 ### Synchronisatie van relaties
 
-In de flat-file configuratie van Statamic is er geen automatische synchronisatie van bi-directionele relaties tussen objecten. Dit kan leiden tot inconsistenties binnen een project wanneer een bepaalde relatie aan de ene kant van het object wordt verwijderd, maar in het andere object nog steeds bestaat. Een mogelijke oplossing is om een Listener te maken voor modellen met bi-directionale relaties, die ervoor zorgt dat wanneer deze Entries de `saved` actie aanroepen, het gerelateerde object van de relatie ook wordt aangepast. Hierbij moet worden meegenomen dat de Listener geactiveerd wordt op het `Entry`-model. Dit betekent dus dat we bij elke `saved`-actie door alle mogelijke relaties van alle entiteiten moeten, moeten voorkomen dat we een infinite-loop veroorzaken, rekening houden met race conditions en wanneer een er in de Listener-actie nogmaals een `saved`-actie geactiveerd wordt terwijl we er ook voor zorgen dat alle acties zoals het assicioeren als loskoppelen goed uitgevoerd wordt. Daarnaast moeten wijzigingen in de blueprints - zoals de naam van een veld - ook worden doorgevoerd in de Listener. Kortom, veel bloating voor functionaliteit die wanneer je van Eloquent-modellen gebruikt maakt geen last hebt. 
+In de flat-file configuratie van **Statamic** is er geen automatische synchronisatie van bi-directionele relaties, wat kan leiden tot inconsistenties wanneer een relatie aan de ene kant van het object wordt verwijderd, maar aan de andere kant blijft bestaan.
 
-Dit is het moment waarop de marketplace en de community rondom een tool of library zich van hun beste kant laten zien. Je bent immers niet de eerste developer die dit probleem tegenkomt; vaak zijn anderen je al voor geweest, en soms hebben zij een kant-en-klare oplossing beschikbaar gesteld. Dit geldt ook voor dit specifieke issue: in de marketplace vinden we de addon **Entry Relationships**.
+Een oplossing is het maken van een **Listener** voor modellen met bi-directionele relaties, die bij de `saved`-actie ook het gerelateerde object aanpast. Dit vereist aandacht voor infinite loops, race conditions en onbedoelde meerdere `saved`-acties. Wijzigingen in de blueprints, zoals veldnamen, moeten ook in de Listener worden verwerkt, wat de complexiteit verhoogt vergeleken met **Eloquent**-modellen.
 
-Om deze addon, die bi-directionale relaties verwerkt, te configureren, hoef je enkel de package te importeren en binnen een serviceprovider een functie aan te roepen die de gerelateerde velden met elkaar verbindt.
+In de marketplace is er een oplossing in de vorm van de addon **Entry Relationships**, die bi-directionele relaties beheert. Door de package te importeren en een functie in een serviceprovider aan te roepen, worden de velden met elkaar verbonden. Dit neemt nog niet weg dat de naam van de velden zowel in de blueprint als in de RelationServiceProvider aangepast moet worden.
 
-Een kleine kanttekening bij dit soort addons is dat ze vaak onderhouden worden door een enkele developer. Wanneer er problemen optreden, kan het zijn dat deze niet direct binnen het package opgelost worden.
+Een ander nadeel is dat dergelijke addons ontwikkeld worden door derde partijen die niet altijd dezelfde urgentie voelen om hun packages goed te onderhouden.
 
 > [Entry Relationship addon in de Statamic Marketplate](https://statamic.com/addons/stillat/entry-relationships)
 
-Hieronder een voorbeeld van de serviceProvider
+**Voorbeeld van de RelationShipServiceProvider**
+
 ```php
 <?php  
   
@@ -763,4 +762,222 @@ class RelationshipServiceProvider extends ServiceProvider
     public function register(): void  
     {}  
 }
+```
+
+## Statamic CMS met Runway
+
+In de configuratie waarbij gebruik wordt gemaakt van de Runway-addon verandert de architectuur vrij drastisch. In tegenstelling tot `Collections` maken we nu gebruik van `Eloquent`-modellen en specifieke databasetabellen voor alle entiteiten binnen het systeem. Hierdoor verliezen we helaas de standaard `navigation`- en `navigation-tree`-functionaliteiten van Statamic, inclusief de drag-and-drop functionaliteit om een menustructuur te definiëren. Om dit op te vangen is er in deze configuratie gekozen om een `menu manager` te gebruiken, zoals ook in het **Filament** CMS het geval is.
+## Eloquent models
+
+In principe zijn er weinig verschillen zichtbaar tussen het `Eloquent`-model voor **Statamic** die van **Filament**. Wat opvalt is een andere Trait: `HasRunwayResource`. Deze maak het mogelijk om onze gegevens in `Statamic` weer te geven.
+
+Daarnaast zien we dat de `template`-attribute naar een `array` wordt gecast. Dit hint naar de eerste crux binnen deze configuratie, want alle gegevens die via een `replicator` worden meegegeven – dus de dynamische content voor een website – kunnen niet worden opgeslagen in een aparte tabel. In tegenstelling tot het AllesOnline CMS, wordt alle content onder het bijbehorende model als JSON opgeslagen.
+
+**Eloquent model in Statamic met Runway-addon**
+
+```php
+<?php  
+  
+namespace App\Models;  
+  
+use App\Models\Interfaces\HasUrl;  
+use Illuminate\Database\Eloquent\Model;  
+use StatamicRadPack\Runway\Traits\HasRunwayResource;  
+  
+class Page extends Model implements hasUrl  
+{  
+    use HasRunwayResource;  
+  
+    protected $table = 'pages';  
+  
+    protected $casts = [  
+        'template' => 'array',  
+    ];  
+  
+    protected $fillable = [  
+        'name',  
+        'uri',  
+        'template',  
+        'blocks',  
+    ];  
+  
+    /* HasUrl */  
+    public function uri($lang = null): string  
+    {  
+        return strtolower($this->name);  
+    }  
+  
+    public function url($lang = null): string  
+    {  
+        return url($this->uri($lang));  
+    }  
+}
+```
+
+
+## Runway Resources
+
+Als we gebruik maken van de Runway configuratie is het niet meer mogelijk om gebruik te maken van `blueprints`. Dit omdat Runway gebruikt maakt van Runway Resources die eigenlijk op het zelfde niveau als `blueprints` zitten. Dit zijn dus dus de bestanden waarin de CMS schemas voor de entiteiten gedefineerd worden. 
+
+**Runway resource voor het schema van het page-model**
+
+```yaml 
+tabs:  
+  main:  
+    display: Main  
+    sections:  
+      -  
+        fields:  
+          -  
+            handle: name  
+            field:  
+              type: text  
+              display: Name  
+          -  
+            handle: slug  
+            field:  
+              type: slug  
+              localizable: true  
+              validate: 'max:200'  
+              display: 'Page uri'  
+              show_regenerate: true  
+              listable: false  
+              sortable: false  
+              replicator_preview: false  
+              duplicate: false  
+              from: name  
+          -  
+            handle: template  
+            field:  
+              previews: false  
+              max_sets: 1  
+              type: replicator  
+              display: Template  
+              listable: false  
+              sortable: false  
+              replicator_preview: false  
+              duplicate: false  
+              sets:  
+                new_set_group:  
+                  display: Template  
+                  sets:  
+                    homepage:  
+                      display: Homepage  
+                      fields:  
+                        -  
+                          import: template.home  
+                    blog:  
+                      display: Blog  
+                      fields:  
+                        -  
+                          import: template.blog  
+                    review:  
+                      display: Review  
+                      fields:  
+                        -  
+                          import: template.review  
+title: Page
+```
+## Formfields voor templates
+
+Omdat we met Runway de `collections` en daarmee een laag abstractie verliezen, is het niet meer mogelijk om de verschillende templates voor een page als blueprint op te geven. Daarom is het nodig om de templates een laag dieper te defineren, namelijk als `FieldSet`. In het voorbeeld hierboven zie je dat gebruikers een template via een `replicator` kunnen selecteren, in de `replicator` zelf zitten weer de velden die tot de template toe behoren. 
+
+**FieldSet voor Homepage template**
+
+```yaml 
+title: Homepage  
+fields:  
+  -  
+    handle: header_title  
+    field:  
+      type: text  
+      display: 'Header title'  
+      listable: false  
+  -  
+    handle: header_image  
+    field:  
+      container: default  
+      type: assets  
+      display: 'Header image'  
+      max_files: 1  
+      min_files: 1  
+  -  
+    handle: blocks  
+    field:  
+      type: replicator  
+      display: Blocks  
+      listable: false  
+      sets:  
+        cms_content:  
+          display: 'CMS content'  
+          sets:  
+            paragraph:  
+              display: Paragraph  
+              fields:  
+                -  
+                  import: common.paragraph  
+            image:  
+              display: Image  
+              fields:  
+                -  
+                  import: common.image  
+            map:  
+              display: Map  
+              fields:  
+                -  
+                  import: common.map  
+            call_to_action:  
+              display: 'Call to Action'  
+              fields:  
+                -  
+                  import: common.call_to_action
+```
+
+## Formfields voor contentblokken
+
+Binnen de `fieldSets` voor de templates is het mogelijk om weer verder te verwijzen naar een `replicator` met fieldSets voor content blokken. Deze blijven in principe onveranderd
+
+**Nogmaals FieldSet voor het Paragraph block**
+```php
+title: Paragraph  
+fields:  
+  -  
+    handle: title  
+    field:  
+      type: text  
+      display: Title  
+  -  
+    handle: text  
+    field:  
+      buttons:  
+        - h1  
+        - h2  
+        - h3  
+        - h4  
+        - h5  
+        - h6  
+        - bold  
+        - italic  
+        - underline  
+        - unorderedlist  
+        - orderedlist  
+        - removeformat  
+        - quote  
+        - anchor  
+        - image  
+        - table  
+      save_html: true  
+      remove_empty_nodes: trim  
+      type: bard  
+      display: Text  
+      listable: false  
+  - handle: namespace  
+    field:  
+      default: common  
+      type: text  
+      display: Namespace  
+      sortable: false  
+      visibility: hidden  
+      replicator_preview: false  
+      duplicate: false
 ```

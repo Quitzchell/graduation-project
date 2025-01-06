@@ -1,4 +1,4 @@
-# Onderzoek naar tool(s) voor migratie
+# Onderzoek voor CMS migratie
 
 ## Inleiding
 
@@ -24,14 +24,15 @@ Met Laravel zou het mogelijk zijn om bestanden uit een bestaande directory te le
 
 Omdat het gebruik van het Laravel Framework naar mijn mening overkill is voor een CLI-tool die uitsluitend lokaal nodig is voor het omzetten van een AllesOnline CMS-project naar een project met een nieuw CMS, heb ik besloten om te onderzoeken of er alternatieve frameworks bestaan waarmee je eenvoudiger een CLI-tool kunt realiseren zonder onnodige boilerplate.
 
-Na wat onderzoek kwam ik uit bij Symfony, een van de frameworks waarvan Taylor Otwell (de bedenker van Laravel) componenten gebruikt om de CLI-functionaliteit in Laravel te implementeren. Om die reden zou een CLI-applicatie met Symfony waarschijnlijk snel herkenbaar en begrijpelijk zijn voor iemand met ervaring in Laravel.\
+Na wat onderzoek kwam ik uit bij Symfony, een van de frameworks waarvan Taylor Otwell (de bedenker van Laravel) componenten gebruikt om de CLI-functionaliteit in Laravel te implementeren. Om die reden zou een CLI-applicatie met Symfony waarschijnlijk snel herkenbaar en begrijpelijk zijn voor iemand met ervaring in Laravel.
 
-Omdat Symfony minder "opinionated" is dan Laravel, maakt het de mogelijkheid om losse componenten van het framework te gebruiken zonder de volledige boilerplate mee te nemen. Dit zorgt ervoor dat het project relatief klein en flexibel kan worden opgebouwd.
+Omdat Symfony minder **opinionated** is dan Laravel, maakt het de mogelijkheid om losse componenten van het framework te gebruiken zonder de volledige boilerplate mee te nemen. Dit zorgt ervoor dat het project relatief klein en flexibel kan worden opgebouwd.
 
 ## Conclusie
 
-Na onderzoek en afweging van de verschillende opties heb ik besloten om voor Symfony te kiezen als migratietool. De keuze is voornamelijk gebaseerd op de behoefte aan een lichte, flexibele oplossing voor het bouwen van een CLI-tool, zonder de uitgebreide boilerplate die bij Laravel hoort.
+Na onderzoek en het afwegen van de verschillende opties heb ik besloten om Symfony te gebruiken voor het opzetten van een PoC voor de migratietool. Deze keuze is voornamelijk gebaseerd op de behoefte aan een lichte en flexibele oplossing voor het bouwen, zonder een uitgebreide boilerplate zoals bijvoorbeeld bij Laravel.
 
-Symfony biedt de mogelijkheid om specifieke componenten te gebruiken zonder het volledige framework te implementeren. Dit maakt het ideaal voor het realiseren van een eenvoudige CLI-applicatie die uitsluitend lokaal nodig is. De modulaire opzet van Symfony zorgt voor een efficiënte aanpak, wat de ontwikkelingstijd ten goede komt. Daarnaast zorgt de bekendheid van de componenten bij ontwikkelaars met ervaring in Laravel ervoor dat de leercurve relatief klein blijft, terwijl de flexibiliteit en schaalbaarheid van Symfony de mogelijkheid bieden om het project eenvoudig uit te breiden indien nodig.
+Symfony biedt de mogelijkheid om specifieke componenten te gebruiken zonder het volledige framework te hoeven implementeren. Dit maakt het ideaal voor het ontwikkelen van een compacte en overzichtelijke CLI-applicatie. Daarnaast zorgt de bekendheid van deze componenten bij ontwikkelaars met ervaring in Laravel ervoor dat de leercurve relatief klein blijft.
 
-Los daarvan zie ik wel een rol voor het gebruik van PHP-Rector in het automatiseren van PHP- en Laravel-versie-updates. Dit zou eventueel vóór of na het migreren van een AllesOnline CMS-project kunnen worden uitgevoerd, om naast het migreren van het CMS-systeem ook de PHP- en Laravel-versies up-to-date te brengen.
+Naast de migratietool zie ik ook een rol voor het gebruiken van PHP-Rector in het automatiseren van PHP- en Laravel-versie-updates. Dit zou eventueel vóór of na het migreren van een AllesOnline CMS-project kunnen worden uitgevoerd, om naast het migreren van het CMS-systeem ook de PHP- en Laravel-versies up-to-date te brengen. 
+
