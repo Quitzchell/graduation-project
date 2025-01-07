@@ -8,9 +8,9 @@ Volgens Stefan was er op dat moment naar zijn idee geen kwalitatief, breed besch
 
 Vandaag de dag blijft het CMS een belangrijk onderscheidend kenmerk van AllesOnline, waarmee het bedrijf zich weet te positioneren in een concurrerende markt. Stefan kijkt tevreden terug op zijn keuze, die zijn bedrijf niet alleen een uniek product en daarmee een voorsprong opleverde, maar ook de mogelijkheid bood om klanten op een flexibele en efficiënte manier te bedienen. 
 
-Echter, is Stefan zich er ook van bewust dat het onderhouden van een eigen CMS een kostbare en intensieve bezigheid is. Dit besef heeft ertoe geleid dat hij wilt laten onderzoekt wat de mogelijkheden zijn om over te stappen naar een CMS van derde partijen. Door gebruik te maken van een extern CMS zou hij niet alleen de onderhoudskosten kunnen verlagen, maar mogelijk ook profiteren van de doorontwikkeling en ondersteuning die deze systemen genieten. Dit zou AllesOnline in staat stellen om zich nog sterker te richten op haar kernactiviteiten en de klantbehoeften, zonder de operationele lasten van het onderhouden van een eigen systeem.
+Echter, is Stefan zich er ook van bewust dat het onderhouden van een eigen CMS een kostbare en intensieve bezigheid is. Dit besef heeft ertoe geleid dat hij wilt laten onderzoeken wat de mogelijkheden zijn om over te stappen naar een CMS van derde partijen. Door gebruik te maken van een extern CMS zou hij niet alleen de onderhoudskosten kunnen verlagen, maar mogelijk ook profiteren van de doorontwikkeling en ondersteuning die deze systemen genieten. Dit zou AllesOnline in staat stellen om zich nog sterker te richten op haar kernactiviteiten en de klantbehoeften, zonder de operationele lasten van het onderhouden van een eigen systeem.
 
-Een belangrijke wens van Stefan is om het mogelijk te maken voor klanten om niet een volledig nieuw development-traject te hoeven doorlopen bij de overstap van het huidige CMS naar een nieuw CMS. Voor zover het haalbaar is, zou hij in het onderzoek graag willen zien of het mogelijk is om een migratie van het AllesOnline CMS naar een nieuw CMS te realiseren.
+Een belangrijke wens van Stefan is om het mogelijk te maken voor klanten om niet een volledig nieuw developmenttraject te hoeven doorlopen bij de overstap van het huidige CMS naar een nieuw CMS. Voor zover het haalbaar is, zou hij in het onderzoek graag willen zien of het mogelijk is om een migratie van het AllesOnline CMS naar een nieuw CMS te realiseren.
 
 ## Gesprek rond mid-term review
 
@@ -19,6 +19,7 @@ Tijdens de midterm reviews werd duidelijk dat ik met mijn examenproject niet goe
 Dit onderwerp kwam ook aan bod in een gesprek met Stefan naar aanleiding van de mid-term review. Hij bevestigde dat er niet van mij wordt verwacht dat ik problemen oplos waarvoor ik oorspronkelijk niet verantwoordelijk ben. Een betere aanpak zou zijn om bijvoorbeeld hem op de hoogte te brengen van de gevonden issues, of de verantwoordelijke developer direct aan te spreken op de bottlenecks die zij veroorzaken.
 
 Doordat ik dit eerder niet deed, heb ik binnen een aantal projecten van AllesOnline flink wat overuren gemaakt. Hierdoor heb ik de tijd die ik voor mijn examenproject had, niet optimaal benut. In het gesprek met Stefan heb ik dan ook aangegeven dat ik bewuster met mijn tijd zal omgaan, het aantal overuren zal beperken en de beschikbare tijd voor mijn examenproject effectief zal inzetten. Dit zodat ik de verloren tijd in kan halen en kan voorkomen dat ik mezelf tijdens een werkweek overbelast.
+
 ## Gesprek rond afronding van CMS met Filament
 
 Rond de afronding van het prototype CMS met Filament benadrukte Stefan opnieuw het belang van het onderzoeken of er een gemakkelijke manier is om van het AllesOnline CMS naar het Filament CMS te migreren. Naar aanleiding van deze opmerking besloot ik, voordat ik mijn onderzoek naar Statamic begin, eerst een spike te doen om de mogelijkheden tot migratie te verkennen.
