@@ -88,7 +88,7 @@ Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik het mogelij
 
 # Onderzoek naar CMS met Filament
 
-Het tweede prototype dat ik ben gaan realiseren, was een CMS met Filament. Filament is niet per se een CMS-pakket, maar eerder een library met _"a collection of beautiful full-stack components"_, althans, als we hun eigen website moeten geloven. Met de componenten die het biedt, is het relatief eenvoudig om een CRUD-applicatie op te zetten en met een beetje creativiteit ook een CMS.
+Het tweede prototype dat ik ben gaan realiseren, was een CMS met Filament. Filament is niet perse een CMS, maar eerder een library met _"a collection of beautiful full-stack components"_, althans, als we hun eigen website moeten geloven. Met de componenten die het biedt, is het relatief eenvoudig om een CRUD-applicatie op te zetten en met een beetje creativiteit ook een CMS.
 
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 > * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
