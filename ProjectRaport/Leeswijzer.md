@@ -128,7 +128,8 @@ Met de tool is het in eerste opzet mogelijk om een XML-block om te zetten naar e
 
 * **Hoe verloopt de migratie van de bestaande webapplicaties naar een nieuw CMS, en welke technische uitdagingen komen hierbij kijken?**
 	* De migratie tussen systemen kan plaatsvinden via een op maat gemaakte CLI-tool, bijvoorbeeld met Symfony. Deze tool kan bestanden uitlezen en op basis van regels nieuwe bestanden genereren voor het nieuwe CMS.
-	* De grootste uitdagingen zijn vooral te vinden in de verschillen architecturen en functionaliteiten tussen het originele en de nieuwe systemen. Dit betekend dat dat het belangrijk is dat er een goede planning en zorgvuldig vooronderzoek gedaan wordt voordat de migratie wordt uitgevoerd. 
+	* De grootste uitdagingen zijn vooral te vinden in de verschillende architecturen en functionaliteiten tussen het originele en de nieuwe systemen. Dit betekend dat dat het belangrijk is dat er een goede planning en zorgvuldig vooronderzoek gedaan wordt voordat de migratie wordt uitgevoerd. 
+	
 # Onderzoek naar Statamic CMS
 
 Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben ik begonnen met het opzetten van een prototype met Statamic. Dit is een commercieel CMS waarvoor een licentie vereist is bij commercieel gebruik. In tegenstelling tot Filament is Statamic specifiek ontworpen om als CMS te fungeren.
@@ -136,11 +137,11 @@ Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben i
 > * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 > * [SWOT: Statamic](../AnalyseAdvies/SwotStatamicCms.md)
 
-Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van een ontwerpen en realiseren van het prototype met Statamic. Omdat Statamic in meerdere verschillende configuraties kan worden gebruikt, heb ik ook meerdere Designs gerealiseerd. Echter zijn deze wel allemaal vrij strict in het gebruik van een van de configuraties, terwijl het ook mogelijk is om de configuraties te combineren. Uiteindelijk verwacht ik dat dit voor AllesOnline de beste oplossing zou zijn als er gekozen wordt om met Statamic te werken. 
+Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van het prototype met Statamic. Omdat Statamic in meerdere verschillende configuraties kan worden gebruikt, heb ik ook meerdere Designs gerealiseerd. Echter zijn deze wel allemaal vrij strict in het gebruik van een van de configuraties, terwijl het ook mogelijk is om de configuraties te combineren. Uiteindelijk verwacht ik dat dit voor AllesOnline de beste oplossing zou zijn als er gekozen wordt om met Statamic te werken. 
 
-* Design voor Statamic CMS met flat-file
-* Design voor Statamic met eloquent-driver
-* Design voor Statamic met Runway-addon
+* Design voor Statamic CMS met flat-file //todo
+* Design voor Statamic met eloquent-driver //todo
+* Design voor Statamic met Runway-addon //todo
 * [Technische documentatie van CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 ### Conclusies onderzoek naar Statamic CMS
 
@@ -155,12 +156,16 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 		- **Master License**: $1250 voor vijf websites, voordelig voor organisaties die meerdere sites beheren.
 		- **Platform Subscription**: Een abonnementsmodel waarbij de kosten per website dalen naarmate het aantal websites toeneemt.
 
-# Verder onderzoek van migratie naar nieuw CMS
+# Terugkoppeling migratie naar nieuw CMS
 
 Omwille van het gebrek aan tijd om een zorgvuldig onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten. Wel heb ik nog een advies doucment geschreven over het migreren van de bestaande CMS'en.
 
 > * [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
 
-// todo advies
+# Advies
 
-// todo reflectie 
+> * [Adviesdocument](../AnalyseAdvies/AdviesDocument.md)
+
+# Reflectie 
+
+> * [Reflectie]()
