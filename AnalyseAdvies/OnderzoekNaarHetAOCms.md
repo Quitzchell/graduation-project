@@ -79,7 +79,7 @@ Eén van de grootste gebreken in het AllesOnline CMS is de beperkte en verouderd
 
 ### Complexe Codestructuur
 
-De huidige codestructuur van modules is het volgende probleem waar een developer na onduidelijkheid in de documentatie tegenaan kan lopen. De modules bevatten vaak te veel verantwoordelijkheden, wat niet alleen het begrijpen van de werking bemoeilijkt, maar ook het onderhoud en de uitbreiding ervan ingewikkelder maakt. Een goed voorbeeld hiervan is de `FormTagsModule`, die zowel verantwoordelijk is voor dataverwerking, database-interactie en UI-configuratie. Dit is in strijd met het **Single Responsibility Principle**.
+Een ander probleem is de huidige codestructuur van de modules, waar een developer tegenaan kan lopen door onduidelijkheid in de documentatie. De modules bevatten vaak te veel verantwoordelijkheden, wat niet alleen het begrijpen van de werking bemoeilijkt, maar ook het onderhoud en de uitbreiding ervan ingewikkelder maakt. Een goed voorbeeld hiervan is de `FormTagsModule`, die zowel verantwoordelijk is voor dataverwerking, database-interactie en UI-configuratie. Dit is in strijd met het **Single Responsibility Principle**.
 
 **Gevolgen van deze complexiteit:**
 * De kans op bugs neemt toe, aangezien wijzigingen in een deel van de module vaak onbedoeld andere onderdelen kan beïnvloeden.
@@ -107,7 +107,7 @@ Hoewel in het vorige probleem al werd verwezen naar de **SOLID-principes**, blij
      
 #### Gevolgen van niet naleven SOLID principes
 
-- **Verlies van herbruikbaarheid**: Functionaliteiten zijn gedefineerd in modules, hierdoor is het niet mogelijk om bepaalde logica in andere delen van het CMS te hergebruiken. Dit leidt in eerste instantie tot duplicatie van code, wat een risico is voor het ontstaan van inconsistenties in functionaliteit.
+- **Verlies van herbruikbaarheid**: Functionaliteiten zijn gedefinieerd in modules, hierdoor is het niet mogelijk om bepaalde logica in andere delen van het CMS te hergebruiken. Dit leidt in eerste instantie tot duplicatie van code, wat een risico is voor het ontstaan van inconsistenties in functionaliteit.
     
 - **Slechte testbaarheid**: Omdat logica vaak in één grotere functie in een module is ondergebracht, is het moeilijk om individuele functionaliteiten te testen zonder de gehele module te laden. Dit maakt het schrijven van unit tests lastig.
     
