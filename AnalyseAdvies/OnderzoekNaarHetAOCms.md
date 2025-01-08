@@ -67,7 +67,7 @@ Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een goede basis bi
 
 Hieronder een evaluatie die zich onder andere richt op de architectuur, functionaliteiten, documentatie en hoe het voldoet aan de best practices binnen softwareontwikkeling.
 
-### Gebrekkige Documentatie
+### Gebrekkige documentatie
 
 Eén van de grootste gebreken in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel documentatie vaak wel beschikbaar is, ontbreekt gedetailleerde informatie over hoe bepaalde functionaliteiten moeten worden toegepast. In sommige gevallen ontbreekt zelfs alle informatie over het bestaan van bepaalde functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars, die hierdoor niet goed kunnen achterhalen welke functionaliteiten beschikbaar zijn voor specifieke `FormField`-modules.
 
@@ -77,7 +77,7 @@ Eén van de grootste gebreken in het AllesOnline CMS is de beperkte en verouderd
 **Aanbeveling**:
 - Een verbetering van de documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, attributen en parameters, met voorbeelden van hoe functionaliteiten in verschillende scenario’s kunnen worden gebruikt. Dit voorkomt onduidelijkheid en zorgt ervoor dat developers zich kunnen focussen op het daadwerkelijk realiseren van een website of applicatie voor een klant.
 
-### Complexe Codestructuur
+### Complexe codestructuur
 
 Een ander probleem is de huidige codestructuur van de modules, waar een developer tegenaan kan lopen door onduidelijkheid in de documentatie. De modules bevatten vaak te veel verantwoordelijkheden, wat niet alleen het begrijpen van de werking bemoeilijkt, maar ook het onderhoud en de uitbreiding ervan ingewikkelder maakt. Een goed voorbeeld hiervan is de `FormTagsModule`, die zowel verantwoordelijk is voor dataverwerking, database-interactie en UI-configuratie. Dit is in strijd met het **Single Responsibility Principle**.
 
