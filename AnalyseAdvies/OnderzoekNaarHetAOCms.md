@@ -121,7 +121,7 @@ Hoewel in het vorige probleem al werd verwezen naar de **SOLID-principes**, blij
 
 * **Herziening van de architectuur**: Een grondige herziening om de SOLID-principes beter toe te passen. Ontleed bestaande modules in kleinere, zelfstandige classes met duidelijke verantwoordelijkheden die testbaar zijn.
     
-* **Implementatie van interface-gebaseerde ontwikkeling**: Verminder de afhankelijkheid van concrete implementaties door interfaces te gebruiken. Dit verhoogt de flexibiliteit van het systeem en maakt uitbreiding eenvoudiger. Bijvoorbeeld: laat de `FormTagsModule` via zijn constructor een class opvragen die de `TagLoader`-interface implementeert. Dit garandeert dat tags ingeladen kunnen worden, maar de manier waarop dit gebeurt bepaald wordt door de geïnjecteerde class.
+* **Implementatie van interface-gebaseerde ontwikkeling**: Verminder de afhankelijkheid van concrete implementaties door interfaces te gebruiken. Dit verhoogt de flexibiliteit van het systeem en maakt uitbreiding eenvoudiger. Bijvoorbeeld: laat de `FormTagsModule` via zijn constructor een class opvragen die de `TagLoader`-interface implementeert. Dit garandeert dat tags kunnen worden ingeladen, maar dat de manier waarop dit gebeurt bepaald wordt door de geïnjecteerde class die de `TagLoader` implementeert.
     
 * **Unit Testing en Continuous Integration**: Ontwikkel een uitgebreide suite van unit- en integratietests en implementeer een Continuous Integration (CI)-ontwikkelstraat om regressies te minimaliseren.
     
