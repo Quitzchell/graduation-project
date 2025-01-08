@@ -143,24 +143,16 @@ Daarnaast heeft momenteel slechts één van de ontwikkelaars bij AllesOnline erv
 Het verschil tussen de standaard/eloquent-driverconfiguratie en Runway is vrij groot. Je zou zelfs kunnen stellen dat dit twee verschillende CMS'en zijn, die bepaalde functionaliteiten en een frontend met elkaar delen. Dit heeft zowel voordelen als nadelen. Want ondanks dat het systeem hierdoor erg flexibel is, heeft elke configuratie een afwijkende structuur, zowel in de manier waarop het CMS achter de schermen werkt als in de manier waarop gegevens voor de frontend opgehaald moeten worden. Het migreren van gegevens tussen de configuraties kan hierdoor erg ingewikkeld zijn, zelfs als je binnen het Statamic-ecosysteem wilt migreren.
 
 ### Kosten van Statamic CMS
-
-Om gebruik te mogen van Statamic voor de websites die AllesOnline ontwikkeld, moet een licensie aangeschaft worden. Statamic biedt verschillende pakketen aan die afgenomen kunnen worden. Hieronder vallen:
-* **Statamic Core**: Deze versie is volledig gratis en geschikt voor persoonlijke projecten, hobbyisten of kleine websites. 
-* **Statamic Pro**: Voor professionele toepassingen is Statamic Pro beschikbaar voor $259 per jaar per site. 
-* **Master License**: Voor organisaties die meerdere sites beheren, biedt Statamic de Master License aan voor $1250. Dit pakket omvat vijf Statamic Pro-licenties met een korting van 10% en een korting van 25% op alle extra licenties gedurende één jaar. 
-* **Platform Subscription**: Voor grotere aantallen sites is er een abonnementsmodel beschikbaar, waarbij de kosten per site per maand variëren op basis van het aantal sites. De eerste 25 sites kosten $175 per maand (vast tarief), de volgende 75 sites kosten $7 per maand per site, de volgende 400 sites kosten $6 per maand per site, etc.
-
-Voor AllesOnline is op zijn minst de **Statamic Pro** licensie nodig aangezien websites voor commenerciele doeleinden gearliseerd worden. Uiteraard zou **Statamic Pro** niet voldoen voor AllesOnline. Men kan ervan uit gaan dat er meer dan een website gebruik zou gaan maken van de Statamic backend. In eerste instantie zou het interessant zijn om te beginnen met de **Master License** en Statamic eerst te implementeren eerste vijf websites. Na vijf websites is het voordeliger om over te gaan op **Platform Subscription**, hier ben je tot 25 websites met Statamic $2100 per jaar kwijt en betaal je na de eerste 25 een kleine prijs per extra website. Meer over deze staffel is te lezen op de website van Statamic. Op het moment dat er 25 websites zijn die Statamic gebruiken, kost dit per jaar per website $84. 
-
-### Kosten van Statamic CMS
 Om gebruik te maken van Statamic voor de websites die AllesOnline ontwikkelt, moet een licentie aangeschaft worden. Statamic biedt verschillende pakketten aan die gekozen kunnen worden. Hieronder een overzicht:
 
-* **Statamic Core**: Deze versie is volledig gratis en geschikt voor persoonlijke projecten, hobbyisten of kleine websites.
+* **Statamic Core**: Deze versie is volledig gratis en geschikt voor persoonlijke projecten.
 * **Statamic Pro**: Voor professionele toepassingen is Statamic Pro beschikbaar voor $259 per jaar per site.
 * **Master License**: Voor organisaties die meerdere websites beheren, biedt Statamic de Master License aan voor $1250. Dit pakket omvat vijf Statamic Pro-licenties met een korting van 10% en 25% korting op alle extra licenties gedurende één jaar.
 * **Platform Subscription**: Voor een groter aantal websites is er een abonnementsmodel beschikbaar, waarbij de kosten per site per maand variëren op basis van het aantal sites. De eerste 25 sites kosten $175 per maand (vast tarief), de volgende 75 sites kosten $7 per maand per site, de volgende 400 sites kosten $6 per maand per site, enzovoorts.
 
-Voor AllesOnline is minimaal de **Statamic Pro** licentie nodig, aangezien de websites voor commerciële doeleinden worden gerealiseerd. Het is waarschijnlijk dat meerdere websites gebruik gaan maken van Statamic. Het is daarom interessant om te starten met de **Master License** en Statamic te implementeren voor de eerste tien websites. Na tien website is het voordeliger om over te schakelen naar de **Platform Subscription**. In dit geval betaal je $2100 per jaar voor de eerste 25 websites, en voor elke extra website daarna een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic. Wanneer er 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar.
+Voor AllesOnline is minimaal de **Statamic Pro** licentie nodig, aangezien de websites voor commerciële doeleinden worden gerealiseerd.
+
+In alle waarschijnlijkheid zullen er, wanneer er voor Statamic gekozen wordt, meerdere websites gebruik van maken. Het is daarom interessant om te starten met de **Master License** en Statamic te implementeren voor de eerste tien websites. Na tien website is het voordeliger om over te schakelen naar de **Platform Subscription**. In dit geval betaal je $2100 per jaar voor de eerste 25 websites, en voor elke extra website daarna een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic. Wanneer er 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar.
 
 > * [Informatie over kosten van Platform Subscription](https://statamic.com/pricing/platform)
 
