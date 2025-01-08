@@ -12,7 +12,7 @@ Dit document beschrijft de analyse van het AllesOnline CMS. Deze is uitgevoerd a
 
 ## Systeemoverzicht: Beheren van content 
 
-Het AllesOnline CMS is gebouwd op **Laravel** en maakt gebruik van de Eloquent ORM van dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontend componenten het opzetten van een CMS voor een website mogelijk maken. Hieronder staan een aantal van de belangrijkste onderdelen van het systeem die het content beheer beschrijven.
+Het AllesOnline CMS is gebouwd op **Laravel** en maakt gebruik van de Eloquent ORM van dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontend componenten het opzetten van een CMS voor een website mogelijk maken. Hieronder staan een aantal van de belangrijkste onderdelen van het systeem die het contentbeheer beschrijven.
 
 ### ContentManagerController
 
@@ -20,7 +20,7 @@ De `ContentManagerController` beheert de content binnen het CMS en biedt functio
 
 ### ContentManagerModule
 
-De `ContentManagerModule` en bijbehorende view zijn verantwoordelijk voor het tonen en beheren van de pagina's binnen het CMS. Deze module biedt mogelijkheden om pagina's aan te maken, bewerken, verwijderen en ordenen. De weergave van de module wordt verzorgd door een **blade**-template, waarin de pagina's en de pagina-structuur overzichtelijk worden weergegeven in een drag-en-drop-interface. Afhankelijk van de gebruikersrechten worden de bewerkings- en verwijder opties getoond, naast de opties om pagina's te bekijken of te kopiëren.
+De `ContentManagerModule` en bijbehorende view zijn verantwoordelijk voor het tonen en beheren van de pagina's binnen het CMS. Deze module biedt mogelijkheden om pagina's aan te maken, bewerken, verwijderen en ordenen. De weergave van de module wordt verzorgd door een **blade**-template, waarin de pagina's en de pagina-structuur overzichtelijk worden weergegeven in een drag-en-drop-interface. Afhankelijk van de gebruikersrechten worden de bewerkings- en verwijderopties getoond, naast de opties om pagina's te bekijken of te kopiëren.
 
 ### Page (model)
 
@@ -59,32 +59,32 @@ In deze schema's kan ook worden gedefinieerd hoe relaties tussen objecten kunnen
 
 ### FormFields
 
-De `FormField`-modules en bijbehorende views bieden - net zoals bij contentbeheer - een interface waarmee eindgebruikers informatie van objecten kunnen ingeven of bewerken. 
+De `FormField`-modules en bijbehorende views bieden, net zoals bij contentbeheer, een interface waarmee eindgebruikers informatie van objecten kunnen ingeven of bewerken. 
 
 ## Evaluatie van het AllesOnline CMS
 
 Hoewel het door AllesOnline ontwikkelde CMS functioneel is en een goede basis biedt voor webontwikkeling, kent het systeem aanzienlijke beperkingen op het gebied van het bieden van een goede development experience, onderhoudbaarheid en uitbreidbaarheid. 
 
-Hieronder een evaluatie die zich onderandere richt op de architectuur, functionaliteiten, documentatie en hoe het voldoet aan de best practices binnen softwareontwikkeling.
+Hieronder een evaluatie die zich onder andere richt op de architectuur, functionaliteiten, documentatie en hoe het voldoet aan de best practices binnen softwareontwikkeling.
 
 ### Gebrekkige Documentatie
 
-Een van de grootste gebreken in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel documentatie vaak wel beschikbaar is, ontbreekt gedetailleerde informatie over hoe bepaalde functionaliteiten moeten worden toegepast. In sommige gevallen ontbreekt zelfs volledig informatie over het bestaan van bepaalde functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars, die hierdoor niet goed kunnen achterhalen welke functionaliteiten beschikbaar zijn voor specifieke `FormField`-modules.
+Eén van de grootste gebreken in het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel documentatie vaak wel beschikbaar is, ontbreekt gedetailleerde informatie over hoe bepaalde functionaliteiten moeten worden toegepast. In sommige gevallen ontbreekt zelfs alle informatie over het bestaan van bepaalde functionaliteiten. Dit zorgt voor onduidelijkheid bij ontwikkelaars, die hierdoor niet goed kunnen achterhalen welke functionaliteiten beschikbaar zijn voor specifieke `FormField`-modules.
 
 > _Een voorbeeld van documentatie vind je in deze bijlage:_
 >  * [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldAllesOnlineCmsSchema.md).
 
 **Aanbeveling**:
-- Een verbetering van de documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, attributen en parameters, met voorbeelden van hoe functionaliteiten in verschillende scenario’s kunnen worden gebruikt. Dit voorkomt onduidelijkheid en bespaart veel tijd die anders besteed zou worden aan het onderzoeken van implementaties tijdens het ontwikkelen van websites.
+- Een verbetering van de documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, attributen en parameters, met voorbeelden van hoe functionaliteiten in verschillende scenario’s kunnen worden gebruikt. Dit voorkomt onduidelijkheid en zorgt ervoor dat developers zich kunnen focussen op het daadwerkelijk realiseren van een website of applicatie voor een klant.
 
 ### Complexe Codestructuur
 
-De huidige codestructuur van modules is het volgende probleem waar een developer na onduidelijkheid in de documentatie tegenaan kan lopen. De modules bevatten vaak te veel verantwoordelijkheden, wat niet alleen het begrijpen van de werking bemoeilijkt, maar ook het onderhoud en de uitbreiding ervan ingewikkelder maakt. Een goed voorbeeld hiervan is de `FormTagsModule`, die zowel verantwoordelijk is voor dataverwerking, database-interactie en UI-configuratie. Dit is in strijd is met het **Single Responsibility Principle**.
+De huidige codestructuur van modules is het volgende probleem waar een developer na onduidelijkheid in de documentatie tegenaan kan lopen. De modules bevatten vaak te veel verantwoordelijkheden, wat niet alleen het begrijpen van de werking bemoeilijkt, maar ook het onderhoud en de uitbreiding ervan ingewikkelder maakt. Een goed voorbeeld hiervan is de `FormTagsModule`, die zowel verantwoordelijk is voor dataverwerking, database-interactie en UI-configuratie. Dit is in strijd met het **Single Responsibility Principle**.
 
 **Gevolgen van deze complexiteit:**
 * De kans op bugs neemt toe, aangezien wijzigingen in een deel van de module vaak onbedoeld andere onderdelen kan beïnvloeden.
 * Het ontbreken van duidelijke interfaces tussen modules beperkt de mogelijkheid om de applicatie uit te breiden of om componenten opnieuw te gebruiken.
-* De onderhoudbaarheid en testbaarheid van de module worden belemmerd, wat leidt tot hogere ontwikkel-en beheerkosten.
+* De onderhoudbaarheid en testbaarheid van de module worden belemmerd, wat leidt tot hogere ontwikkelings- en beheerkosten.
 
 **Aanbeveling:**
 * Een grondige refactoring van de modules, waarbij verantwoordelijkheden worden opgesplitst in afzonderlijke classes of componenten, bijvoorbeeld:
@@ -95,7 +95,7 @@ De huidige codestructuur van modules is het volgende probleem waar een developer
 
 ### SOLID principes
 
-Waar in het vorige probleem al gehint werd naar SOLID principes, zien we op een grote schaal door het AllesOnline CMS dat de **SOLID-principes**, wat de onderhoudbaarheid, uitbreidbaarheid en testbaarheid niet toegepast is.
+Hoewel in het vorige probleem al werd verwezen naar de **SOLID-principes**, blijkt uit de codebase van het AllesOnline CMS dat deze principes niet goed zijn toegepast, wat de onderhoudbaarheid, uitbreidbaarheid en testbaarheid belemmert.
 
 #### Kernprincipes
 
