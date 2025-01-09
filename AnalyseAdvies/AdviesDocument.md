@@ -101,19 +101,27 @@ Mijn advies aan AllesOnline is om zijn horizon te verbreden en gebruik te maken 
 Voordat ik verder inga op welke externe oplossing de beste keuze is, wil ik eerst de belangrijkste les benoemen die ik tijdens mijn HBO-ICT-opleiding van docent Marco Meulenbroeks heb meegekregen: 'It depends'. In het laatste gesprek dat ik over mijn onderzoek met onze senior developer Wilco Kuijper had, benoemde hij, net zoals Meulenbroeks, dat we ons niet moeten vastbijten in een oplossing. Naar mijn idee heeft hij hier helemaal gelijk in, het is namelijk belangrijk om te kijken welke oplossing het beste past bij de wensen van de klant. Als we kijken naar de twee systemen die ik in dit onderzoek heb bekeken, zien we twee heel verschillende systemen die elk op hun eigen manier voor- en nadelen kennen voor verschillende projecten.
 
 ## Filament
-De vrijheid om op maat gemaakte logica toe te passen in Filament maakt het een uitstekende keuze wanneer een klant complexere relaties en logica voor zijn systeem nodig heeft. Dit geldt bijvoorbeeld voor webapplicaties met een uitgebreid winkelassortiment, grote hoeveelheden data of complexe ticketingsystemen. Voorbeelden van AllesOnline-projecten die hiervan zouden kunnen profiteren, zijn onder andere Provimi Body Condition Score, Ingrado, HVA en Klinger.
+De vrijheid om op maat gemaakte logica toe te passen in Filament maakt het een uitstekende keuze wanneer een klant complexere relaties en logica voor zijn systeem nodig heeft. Dit geldt bijvoorbeeld voor webapplicaties met een uitgebreid winkelassortiment, grote hoeveelheden data of complexe klantenservicesystemen. Voorbeelden van AllesOnline-projecten die hiervan zouden kunnen profiteren, zijn onder andere Provimi Body Condition Score, Ingrado, HVA en Klinger.
 
 ## Statamic
-Statamic zou daarentegen een geschikte keuze kunnen zijn voor klanten die slechts een marketingwebsite nodig hebben waar de content dynamisch beheerd wordt, maar geen grote hoeveelheden data of complexe logica wordt verwacht. Een CMS voor dit soort websites is met Statamic relatief sneller gerealiseert dan met Filament. Denk hierbij aan klanten zoals DPD, Vierstroom of zelfs Westfalia. 
+Statamic zou daarentegen een geschikte keuze kunnen zijn voor klanten die slechts een marketingwebsite nodig hebben, waarbij de content dynamisch beheerd wordt, maar waar geen grote hoeveelheden data of complexe logica worden verwacht. Een CMS voor dit soort websites kan met Statamic relatief sneller gerealiseerd worden dan met Filament. Denk hierbij aan klanten zoals DPD, Vierstroom of zelfs Westfalia.
 
-Daarnaast zou het mogelijk zijn om voor Statamic een boilerplate te ontwikkelen met gestandaardiseerde componenten. Dit zou onze vormgevers in staat stellen om via Statamic zelfstandig een white-label websites te creëren, terwijl onze developers direct bij de code kunnen wanneer dat nodig is. 
+Daarnaast zou het mogelijk zijn om voor Statamic een boilerplate te ontwikkelen met gestandaardiseerde componenten. Dit zou onze vormgevers in staat stellen om via Statamic zelfstandig whitelabel websites te creëren, terwijl onze developers direct bij de code kunnen wanneer dat nodig is. 
 
-Het enige nadeel in dit geval is dat de kosten voor een licentie in eerste instantie hoger zijn. Echter, naarmate meer websites gebruikmaken van Statamic, zullen de kosten per website dalen door de kwantumkorting binnen het abonnementsmodel van de **Platform Subscription**.
+Het enige nadeel voor Statamic is dat de kosten voor een licentie in eerste instantie hoger zijn. Echter, naarmate meer websites gebruikmaken van Statamic, zullen de kosten per website dalen door de kwantumkorting binnen het abonnementsmodel van de **Platform Subscription**.
 
 ## Combineren
-Voor klanten waar waar zowel complexiteit als een marketingwebsites verwacht wordt, zou gesteld kunnen worden dat het inzetten van beide oplossingen een realistische keuze is. In dit geval zou bijvoorbeeld een adminpaneel voor stakeholders in Filament gerealiseerd kunnen worden, terwijl de marketingwebsite of wellicht zelfs white-labels websites in Statamic beheert kunnen worden. Dit zou bijvoorbeeld nuttig zijn voor projecten zoals OpleidingVinden of ScamAdviser. 
+Voor klanten waar zowel complexiteit als een marketingwebsite wordt verwacht, zou gesteld kunnen worden dat het inzetten van beide oplossingen een realistische keuze is. In dit geval zou bijvoorbeeld een adminpaneel voor stakeholders in Filament gerealiseerd kunnen worden, terwijl de marketingwebsite, of wellicht zelfs whitelabel-websites, in Statamic beheerd kunnen worden. Dit zou bijvoorbeeld nuttig zijn voor projecten zoals OpleidingVinden of ScamAdviser
 
--> Langetermijneffecten
+
+## Langetermijneffecten
+De keuze voor het integeren van externe oplossingen voor de websites en applicaties die allesOnline ontwikkeld kan op de lange termijn zowel opterationeel, financieel als strategisch aanzienlijke voordelen hebben. 
+
+Het verder ontwikkelen van het interne AllesOnline CMS zal aanzienlijke middelen vereisen. Door te kiezen voor een extern systeem wordt de noodzaak voor constant onderhoudm bugfixes en het aflossen van technical debt aanzienlijk verminderd. Externe systemen worden actief onderhouden door de hun eigen developers, waardoor het team van AllesOnline zich kan richten op het leveren van waarde voor zijn eigen klanten, in plaats van het oplossen van technische problemen binnen het CMS.
+
+
+ // todo
+ --> finish
 
 # Roadmap
 
