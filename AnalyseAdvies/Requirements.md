@@ -20,7 +20,7 @@ Om vast te stellen aan welke eisen een CMS moet voldoen voor een doorsnee AllesO
 | **Media-item FormField**      | Ondersteuning voor het toevoegen van media (afbeeldingen).                              | Must Have   |
 | **File FormField**            | Ondersteuning voor het toevoegen van bestanden                                          | Must Have   |
 | **Relations module**          | Ondersteuning voor het zichtbaar maken van relaties tussen verschillende objecten.      | Must Have   |
-| **Maps FormField**            | Ondersteuning voor het beheren van een google maps locatie                              | Must have   |
+| **Maps FormField**            | Ondersteuning voor het beheren van een Google Maps functionaliteiten                              | Must have   |
 | **Video FormField**           | Ondersteuning voor het uploaden en beheren van embedded video's binnen het CMS.         | Should Have |
 | **OAuth2 FormField**          | Ondersteuning voor OAuth2.                                                              | Should have |
 
@@ -29,7 +29,7 @@ Om vast te stellen aan welke eisen een CMS moet voldoen voor een doorsnee AllesO
 | **Vereiste**                | **Beschrijving**                                                                                              |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | **Gebruiksvriendelijkheid** | Het systeem moet intuïtief en eenvoudig te bedienen zijn, ook voor niet-technische gebruikers.                |
-| **Developer experience**    | Het systeem moet intuitief en gemakkelijk te developen zijn.                                                  |
+| **Developer experience**    | Het systeem moet intuïtief en gemakkelijk te developen zijn.                                                  |
 | **Flexibiliteit**           | Het CMS moet uitbreidbaar zijn met nieuwe velden en modules op basis van toekomstige of specifieke behoeften. |
 | **Schaalbaarheid**          | Het CMS moet grote hoeveelheden content en gebruikersverzoeken aankunnen zonder prestatieproblemen.           |
 | **Integraties**             | Ondersteuning voor integraties met externe systemen of API's die nodig zijn voor de AllesOnline-website.      |

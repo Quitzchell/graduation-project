@@ -2,7 +2,7 @@
 
 ## Inleiding
 
-Dit document beschrijft de analyse over Filament en hoe het eventueel gebruikt kan worden voor het opzetten van een CMS. Filament is Library met, zoals ze het zelf zeggen, _"a collection of beautiful full-stack components"_. Deze componenten zijn geschikt voor het opzetten van CRUD-applicaties en naar mijn idee geschikt voor het bouwen van een CMS. 
+Dit document beschrijft de analyse over Filament en hoe het eventueel gebruikt kan worden voor het opzetten van een CMS. Filament is een Library met, zoals ze het zelf zeggen, _"a collection of beautiful full-stack components"_. Deze componenten zijn geschikt voor het opzetten van CRUD-applicaties en naar mijn idee geschikt voor het bouwen van een CMS. 
 
 > _Andere onderdelen van het Available Product Analysis:_
 > * [Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
@@ -13,7 +13,7 @@ Dit document beschrijft de analyse over Filament en hoe het eventueel gebruikt k
 
 ## Over Filament
 
-Ook Filament maakt net zoals het AllesOnline CMS gebruikt van **Laravel** en het Eloquent ORM dat dit framework biedt. 
+Ook Filament maakt net zoals het AllesOnline CMS gebruik van **Laravel** en het Eloquent ORM dat dit framework biedt.
 
 De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze packages omvatten verzamelingen van modules voor tabellen, formulieren, acties, notificaties en een container om alle modules samen te brengen. Volgens de documentatie bevat de basisinstallatie van Filament de volgende pakketten:
 
@@ -25,15 +25,15 @@ De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze pa
 * Infolists 
 * Widgets
 
-> _Voor uitgebreide informatie over het ontwikkelen met Filament kan de officiele documentatie geraadpleegd worden._ 
+> _Voor uitgebreide informatie over het ontwikkelen met Filament kan de officiële documentatie geraadpleegd worden._ 
 > * [Filament Documentatie](https://filamentphp.com/docs)
 
-> _Ook zijn er twee videocursussen, waarvan een met de maker Dan Harrin, beschikbaar via Laracast._ 
+> _Ook zijn er twee videocursussen, waarvan één met de maker Dan Harrin, beschikbaar via Laracast._ 
 > * [Laracast cursussen](https://laracasts.com/topics/filament)
 
 ## Uitbreidbaarheid van Filament
 
-Naast de standaardcomponenten die Filament aanbiedt, heeft het platform ook een marketplace opgezet waar oplossingen aangeboden die niet standaard in Filament zijn geïmplementeerd. Deze in Filament genoemde `Plugins`, die zowel gratis als tegen betaling beschikbaar zijn, zijn ontwikkeld door het Filament-team of door externe partijen. Ook AllesOnline kan eigen componenten via de marketplace aanbieden. Voor de ontwikkeling van deze plugins wordt echter aangeraden om de TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire) te gebruiken, die door Filament zelf wordt gehanteerd.
+Naast de standaardcomponenten die Filament aanbiedt, heeft het platform ook een marketplace opgezet waar oplossingen aangeboden worden die niet standaard in Filament zijn geïmplementeerd. Deze in Filament genoemde `Plugins`, die zowel gratis als tegen betaling beschikbaar zijn, zijn ontwikkeld door het Filament-team of door externe partijen. Ook AllesOnline kan eigen componenten via de marketplace aanbieden. Voor de ontwikkeling van deze plugins wordt echter aangeraden om de TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire) te gebruiken, die door Filament zelf wordt gehanteerd.
 
 > _De marketplace van Filament [vind je hier](https://filamentphp.com/plugins)_
 
@@ -47,12 +47,12 @@ Naast de standaardcomponenten die Filament aanbiedt, heeft het platform ook een 
 
 ### Resources
 
-Voor het beheren van content met Filament kunnen we gebruik maken van de `Resource`-modules waarmee gebruikers zowel objecten kunnen beheren in een interactieve en gebruiksvriendelijke gebruikersinterface. De belangrijkste facetten van de `Resources`  zijn: 
+Voor het beheren van gegevens kunnen we met Filament gebruik maken van de `Resource`-modules, die de gebruikers in staat stelt objecten en content te beheren via een interactieve en gebruiksvriendelijke interface. De belangrijkste elementen van de `Resource`-modules zijn: 
 
-1. **CRUD-operaties**: Resources maken gebruik van de standaard Laravel-controllers en Eloquent om objecten aan te maken, lezen, bewerken en verwijderen.
-2. **Views**: De Resource biedt standaard de weergaven `list`, `create`, `edit` en `view`. Deze kunnen eenvoudig via de Resource worden aangepast om te voldoen aan de specifieke eisen van de eindgebruikers.
-3. **Componenten**: Om te bepalen wat op de eerder genoemde views voor eindgebruikers zichtbaar is en waarmee zij kunnen interacteren, biedt Filament een breed scala aan componenten. Deze componenten definiëren bijvoorbeeld invoervelden op de `create`- en `edit`-views, of de kolommen van een tabel in een `list`-view.
-4. **Permissions en Middleware**: In Laravel kunnen rechten worden toegekend aan specifieke rollen voor het beheren van de Resources. Dit kan zowel met ingebouwde methoden zoals policies en gates als met externe pakketten zoals `spatie/laravel-permission` voor uitgebreide toegangscontrole.
+1. **CRUD-operaties**: `Resources` maken gebruik van Laravel's Eloquent ORM voor het uitvoeren van CRUD-operaties.
+2. **Views**: Standaard voorziet een `Resource` in de weergaven index (voor een overview), create, edit en view (detailweergave). Deze views kunnen worden aangepast om te voldoen aan specifieke eisen van de eindgebruikers.
+3. **Componenten**: Binnen de `Resources` kunnen componenten gedefinieerd worden om de inhoud van de eerder genoemde views te definiëren. Deze componenten bepalen welke invoervelden en/of gegevens zichtbaar zijn voor de eindgebruiker en hoe ze hiermee kunnen interacteren.
+4. **Permissions en Middleware**: Filament integreert met Laravel's ingebouwde autorisatiesysteem, waardoor het mogelijk is om `policies` en `gates` te gebruiken voor autorisatie. Daarnaast kan het pakket spatie/laravel-permission worden geïntegreerd voor een uitgebreidere rolgebaseerde autorisatie. 
 
 ### Beheren van content 
 

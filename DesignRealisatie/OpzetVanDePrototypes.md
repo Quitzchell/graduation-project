@@ -8,11 +8,11 @@ Uiteindelijk zal dit alles een nuttig inzicht geven in andere CMS oplossingen en
 
 # Prototype Omschrijving
 
-Aangezien het prototype moet voldoen aan wat van doorsnee AllesOnline-website verwacht wordt, hoeven we voor het prototype niet diep in de buidel te tasten qua vooruitstrevende innovaties en dergelijke. Daarom zal het prototype een vrij simpele blog-website vanuit het oogpunt van Napoleon Bonaparte zijn. Dit concept biedt namelijk de mogelijkheid om alle requirements voor wat een doorsnee AllesOnline-website moet kunnen, te realiseren.  
+Omdat het prototype moet voldoen aan de vereisten voor een doorsnee AllesOnline-website, is het niet nodig om voor het prototype uiterst complex te zijn. Daarom zal het prototype een vrij simpele blog-website vanuit het oogpunt van Napoleon Bonaparte zijn. Dit concept biedt namelijk de mogelijkheid om alle requirements voor wat een doorsnee AllesOnline-website moet kunnen, te realiseren.  
 
 Het prototype zal uit verschillende systemen bestaan die met elkaar communiceren:
 
-- **Frontend**: Een web-interface gerealiseerd met Nextjs die via API-requests kan communiceren met de te realiseren Backends / CMS-oplossingen.
+- **Frontend**: Een webinterface gerealiseerd met Next.js, die via API-requests kan communiceren met de te realiseren backends.
     
 - **Backend(s)**: Een backend met CMS die gebruikers in staat stelt de content van een website te beheren en communiceert met zowel de frontend als de database. 
     
@@ -24,11 +24,11 @@ Het prototype zal uit verschillende systemen bestaan die met elkaar communiceren
 	  
 ## Functioneel
 
-Globaal gezien zal een prototype aan de volgende eisen voldoen:
+De prototypes zullen aan de volgende eisen moeten voldoen:
 
-- **Content beheer**: De mogelijkheid om webpagina's en de bijbehorende content via het CMS te beheren.
-- **Objecten beheer**: De mogelijkheid om objecten en de bijbehorende inhoud via het CMS te beheren.
-- **API-integraties**: Integratie van API’s voor het uitwisselen van gegevens tussen de backend en frontend.
+- **Contentbeheer**: De mogelijkheid om webpagina's en de bijbehorende content via het CMS te beheren.
+- **Objectenbeheer**: De mogelijkheid om objecten en de bijbehorende inhoud via het CMS te beheren.
+- **API-integraties**: Integratie van API’s voor het uitwisselen van gegevens tussen de backend en de frontend.
 
 # Bijlagen
 
