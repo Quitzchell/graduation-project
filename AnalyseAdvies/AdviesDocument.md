@@ -96,9 +96,9 @@ Omdat Statamic gebruik maakt van YAML-bestanden voor de configuratie van schemaâ
 
 # Advies en aanbevelingen
 
-Mijn advies aan AllesOnline is om zijn horizon te verbreden en gebruik te maken van oplossingen die door derden zijn ontwikkeld. Hoewel AllesOnline trots mag zijn op het eigen CMS, dat lange tijd het fundament van zijn webapplicaties vormde, is het belangrijk te erkennen dat dit systeem in diezelfde tijd onvoldoende is onderhouden. De investering die nodig is om het CMS te refactoren en te moderniseren, weegt niet op tot de kosten en voordelen van het inzetten van een bestaand product. Het is daarom niet realistisch om het huidige systeem verder te ontwikkelen.
+Mijn advies aan AllesOnline is om zijn horizon te verbreden en gebruik te maken van oplossingen die door externe partijen zijn ontwikkeld. Hoewel AllesOnline trots mag zijn op het eigen CMS, dat lange tijd het fundament van zijn webapplicaties vormde, is het belangrijk te erkennen dat dit systeem in diezelfde tijd onvoldoende is onderhouden. De investering die nodig is om het CMS te refactoren en te moderniseren, weegt niet op tot de kosten en voordelen van het inzetten van een bestaand product. Vooral omdat AllesOnline, met een systeem van externe partijen, in plaats van tijd en middelen te besteden aan het onderhouden van het eigen CMS, meer focus kan leggen op zijn kerntaak: het realiseren van oplossingen voor klanten. Het is daarom niet realistisch om het huidige systeem verder te ontwikkelen.
 
-Voor ik verder uitwijd over welke externe oplossing de beste keuze is, wil ik eerst belangrijkste les benoemen die ik tijdens mijn HBO-ICT-opleiding van softwaredocent Marco Meulenbroeks heb geleerd: "It depends". In het laatste gesprek dat ik over dit onderzoek met Wilco Kuijper, Senior Developer van AllesOnline, had benoemde hij in iets meer woorden dan Meulenbroeks dat we ons niet moeten vastbijten in een oplossing. Hier heeft hij volstrekt gelijk in, het is belangrijker om te kijken welke oplossing het beste past bij de wensen van de klant. Als we kijken naar de twee systemen die ik in dit onderzoek bekeken heb zien we twee heel verschillende systemen die elk op hun eigen manier voor-en-nadelen kent. 
+Voordat ik verder inga op welke externe oplossing de beste keuze is, wil ik eerst de belangrijkste les benoemen die ik tijdens mijn HBO-ICT-opleiding van docent Marco Meulenbroeks heb meegekregen: 'It depends'. In het laatste gesprek dat ik over mijn onderzoek met onze senior developer Wilco Kuijper had, benoemde hij, net zoals Meulenbroeks, dat we ons niet moeten vastbijten in een oplossing. Naar mijn idee heeft hij hier helemaal gelijk in, het is namelijk belangrijk om te kijken welke oplossing het beste past bij de wensen van de klant. Als we kijken naar de twee systemen die ik in dit onderzoek heb bekeken, zien we twee heel verschillende systemen die elk op hun eigen manier voor- en nadelen kennen voor verschillende projecten.
 
 ## Filament
 De vrijheid om op maat gemaakte logica toe te passen in Filament maakt het een uitstekende keuze wanneer een klant complexere relaties en logica voor zijn systeem nodig heeft. Dit geldt bijvoorbeeld voor webapplicaties met een uitgebreid winkelassortiment, grote hoeveelheden data of complexe ticketingsystemen. Voorbeelden van AllesOnline-projecten die hiervan zouden kunnen profiteren, zijn onder andere Provimi Body Condition Score, Ingrado, HVA en Klinger.
@@ -116,6 +116,7 @@ Voor klanten waar waar zowel complexiteit als een marketingwebsites verwacht wor
 -> Langetermijneffecten
 
 # Roadmap
+
 
 # Conclusie
 
