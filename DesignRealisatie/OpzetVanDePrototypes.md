@@ -24,7 +24,7 @@ Het prototype zal uit verschillende systemen bestaan die met elkaar communiceren
 	  
 * **Docker**: Voor alle systemen zal een aparte Docker-container geconfigureerd worden waarin de applicaties kunnen draaien.
 	  
-## Functioneel
+# Functioneel
 
 De prototypes zullen aan de volgende eisen moeten voldoen:
 
@@ -36,7 +36,6 @@ De prototypes zullen aan de volgende eisen moeten voldoen:
 
 > _Volledige lijst met requirements voor een doorsnee AllesOnline-website:_
 >  * [Requirements](../AnalyseAdvies/Requirements.md)
-
 
 > _UML entiteiten diagram voor opzet prototype:_
 > * [UML entiteiten diagram](../Bijlagen/UmlEntiteitenDiagramPrototype.md)
