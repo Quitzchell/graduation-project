@@ -120,15 +120,14 @@ Het vorige punt stipte dit onderwerp al aan. Als we naar de  **SOLID-principes**
 * **Iteratieve verbeteringen**: Voer veranderingen iteratief door en evalueer regelmatig de impact op de onderhoudbaarheid, uitbreidbaarheid en testbaarheid van het systeem.
 * **Documentatie en training**: Zorg voor documentatie van de nieuwe architectuur en richtlijnen, en moedig developers aan zich te verdiepen in de SOLID-principes.
 
-
 # Conclusie
 
 Het is duidelijk dat het AllesOnline CMS voldoende punten heeft die aangepakt moeten worden om het systeem te verbeteren. Het is echter belangrijk te begrijpen dat het verbeteren van de codebase en het introduceren van de SOLID-principes een langlopend project is, dat een aanzienlijke investering in tijd en middelen vereist.
 
 Mocht er gekozen worden om het AllesOnline CMS te verbeteren, dan is het aan te raden deze wijzigingen gefaseerd door te voeren. Dit is noodzakelijk omdat er niet alleen geïnvesteerd moet worden in de ontwikkeling van nieuwe modules, maar ook in het opstellen van uitgebreide documentatie, het implementeren van geautomatiseerde tests en het trainen van het developmentteam in het toepassen en begrijpen van de SOLID-principes.
 
-Bij de keuze voor het refactoren van het AllesOnline CMS is het belangrijk de balans te vinden tussen de investering die AllesOnline bereid is te maken en de voordelen van een eventueel uitwijken naar een systeem van een externe partij. Hierbij moet ook gerealiseerd worden dat het proces niet eindigt na de refactor, maar dat het CMS goed onderhouden moet blijven worden om het op niveau te houden.
+Bij de keuze voor het refactoren van het AllesOnline CMS is het belangrijk de balans te vinden tussen de investering die AllesOnline bereid is te doen en de voordelen van het uitwijken naar een systeem van een externe partij. Hierbij moet ook gerealiseerd worden dat het proces niet eindigt na het refactoren van het AllesOnline CMS, maar dat deze ook goed onderhouden worden.
 
 ### Literatuurlijst
->DigitalOcean. (z.d.). SOLID: The First 5 Principles of Object Oriented Design. https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design
+>DigitalOcean. (z.d.). SOLID: The First 5 Principles of Object Oriented Design. [https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 
