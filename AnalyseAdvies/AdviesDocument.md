@@ -58,13 +58,13 @@ Het gebruik van Filament is gratis. Het Filament-team biedt echter de mogelijkhe
 
 ## Beperkingen en overwegingen
 
-Het is belangrijk op te merken dat Filament geen kant-en-klare CMS-oplossing biedt. Hoewel het voldoende flexibiliteit biedt om CMS-functionaliteiten te implementeren, vereist dit extra ontwikkeltijd in vergelijking met systemen die deze functionaliteiten standaard aanbieden. Bovendien ontbreekt een drag-and-drop-interface voor het beheren van de menu-structuur. Dit kan voor sommige klanten mogelijk als minder intuïtief kan worden ervaren. Een eenvoudige oplossing is het implementeren van een aparte menu-manager. Een complexere benadering is het ontwikkelen van een custom drag-and-dropcomponent dat vergelijkbaar is met de functionaliteiten van AllesOnline CMS.
+Het is belangrijk op te merken dat Filament geen kant-en-klare CMS-oplossing biedt. Hoewel het voldoende flexibiliteit biedt om CMS-functionaliteiten te implementeren, vereist dit extra ontwikkeltijd in vergelijking met systemen die deze functionaliteiten standaard aanbieden. Bovendien ontbreekt een drag-and-drop-interface voor het beheren van de menu-structuur. Dit kan voor sommige klanten mogelijk als minder intuïtief kan worden ervaren. Een eenvoudige oplossing is het implementeren van een aparte menu-manager. Een complexere benadering is het ontwikkelen van een custom drag-and-dropcomponent dat vergelijkbaar is met de functionaliteiten van het AllesOnline CMS.
 
 Filament is afhankelijk van Livewire en Alpine.js, twee technologieën die mogelijk nog niet volledig beheerst worden door het AllesOnline-team, wat extra training en educatie kan vereisen.
 
 # Statamic
 
-**Statamic** is een ander potentieel CMS voor AllesOnline, dat vooral geschikt is voor klanten die zich richten op marketingwebsite, zonder de noodzaak voor complexe logica of datastructuren. Het biedt veel kant-en-klare functionaliteiten die de implementatie van een CMS aanzienlijk kunnen versnellen. Dit maakt Statamic een aantrekkelijke keuze voor klanten die snel willen schakelen.
+**Statamic** is een ander potentieel CMS voor AllesOnline, dat vooral geschikt is voor klanten die zich richten op marketingwebsites, zonder de noodzaak voor complexe logica of datastructuren. Het biedt veel kant-en-klare functionaliteiten die de implementatie van een CMS aanzienlijk kunnen versnellen. Dit maakt Statamic een aantrekkelijke keuze voor klanten die snel willen schakelen.
 
 ## Laravel-ish
 
