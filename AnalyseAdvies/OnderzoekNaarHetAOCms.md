@@ -2,10 +2,11 @@
 
 # Inleiding
 
-Dit document beschrijft de analyse van het AllesOnline CMS. Deze is uitgevoerd als onderdeel van een *Available Product Analysis*, maar is ook gericht op het identificeren van knelpunten binnen het huidige AllesOnline CMS. 
+Dit document beschrijft de analyse van het AllesOnline CMS en is gericht op het identificeren van knelpunten binnen het huidige systeem, evenals het doen van aanbevelingen. Het onderzoek is uitgevoerd als onderdeel van een *Available Product Analysis*.
 
 > _Andere onderdelen van het Available Product Analysis:_
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
+> * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 
 > *De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse.* 
 > * [SWOT: AllesOnline CMS ](./SwotAOCms.md)
