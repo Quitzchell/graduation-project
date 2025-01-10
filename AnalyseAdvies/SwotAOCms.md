@@ -6,9 +6,9 @@
 ## Strengths (Sterktes)
 
 * **Uitgebreide functionaliteit voor content- en objectbeheer**: Het AllesOnline CMS biedt veel mogelijkheden voor content- en objectenbeheer, inclusief het hiërarchisch indelen van webpagina's.
-* **Dynamische websitebeheer**: Het CMS stelt eindgebruikers in staat  om de content op een website zelf tot in detail te beheren.
+* **Dynamische websitebeheer**: Het CMS stelt eindgebruikers in staat om de content op een website zelf tot in detail te beheren.
 * **Integratie met Laravel**: Het AllesOnline CMS is geïntegreerd met het Laravel-Framework en maakt gebruik van de Eloquent ORM. Dit vereenvoudigt gegevensbeheer door middel van objectgeoriënteerde technieken. Bovendien profiteren developers van de uitgebreide en heldere documentatie van Laravel.
-* **Gebruiksvriendelijke interface voor het ordenen van websitestructuur met drag-en-drop-functionaliteit**: Dankzij de voorgedefinieerde templates en de drag-en-drop-interface kunnen gebruikers hun websitestructuur eenvoudig beheren en ordenen.
+* **Gebruiksvriendelijke interface voor het ordenen van websitestructuur met drag-and-drop-functionaliteit**: Dankzij de voorgedefinieerde templates en de drag-and-drop-interface kunnen gebruikers hun websitestructuur eenvoudig beheren en ordenen.
 
 ## Weaknesses (Zwaktes)
 
