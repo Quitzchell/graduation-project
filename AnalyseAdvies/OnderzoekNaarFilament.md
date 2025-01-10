@@ -109,9 +109,7 @@ Van de tech-stack waar Filament gebruikt van maakt, de TALL-stack (Tailwind CSS,
 
 Hoewel Filament voldoet aan de SOLID-principes, zien we in de `Resources` toch veel verantwoordelijkheden bij elkaar komen. Je zou kunnen stellen dat in dit geval het **Single Responsibility Principle (SRP)** niet wordt nageleefd. Deze classes bevatten namelijk meerdere verantwoordelijkheden, zoals het definiëren van verschillende views binnen het CMS.
 
-Het negeren van dit principe kan worden verdedigd door te stellen dat het combineren van deze verschillende schema's op één plek voordelen biedt. Het zorgt voor een centrale organisatie van alle informatie voor een bepaald object. Dit kan de developers helpen door alle relevante informatie in één bestand te verzamelen, wat een repository minder groot en toegankelijker maakt. Daarnaast is het altijd nog mogelijk om de schema's te extraheren en in de `Resource`-classes te importeren.
-
-Deze keuze lijkt dus vooral pragmatisch, waarbij wordt gekozen voor praktische voordelen, waarbij eenvoud de voorkeur heeft gekregen.
+Het negeren van dit principe kan worden verdedigd door te stellen dat het combineren van deze verschillende schema's op één plek voordelen biedt. Het zorgt voor een centrale organisatie van alle informatie voor een bepaald object. Dit kan de developers helpen door alle relevante informatie in één bestand te verzamelen, wat een repository minder groot en toegankelijker maakt. Daarnaast is het altijd nog mogelijk om de schema's te extraheren en in de `Resource`-classes te importeren. Deze keuze lijkt dus vooral pragmatisch.
 
 # Conclusie
 
