@@ -11,11 +11,11 @@ Dit document beschrijft de analyse van het AllesOnline CMS en is gericht op het 
 > *De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse.* 
 > * [SWOT: AllesOnline CMS ](./SwotAOCms.md)
 
-## Beheren van content 
+# Beheren van content 
 
 Het AllesOnline CMS is geïntegreerd met **Laravel** en maakt gebruik van het **Eloquent ORM** binnen dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontend componenten het opzetten van een CMS.
 
-### ContentManagerController
+## ContentManagerController
 
 De `ContentManagerController` beheert de pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties van pagina's. Daarnaast biedt het de functionaliteit om de rechten van gebruikers te verifiëren voor het beheren van specifieke content en pagina's binnen het CMS.
 
@@ -28,19 +28,19 @@ Naast deze basisfunctionaliteiten biedt de controller ook de volgende functional
 * **Templatebeheer:** De controller beheert beschikbare `pagina`-templates, inclusief filtering en sortering, en biedt integratie met specifieke resolvers.
 * **Menu-integratie:** Pagina's kunnen worden gekoppeld aan menu's, waarbij ook de structuur van de menu's beheerd kan worden.
 
-### ContentManagerModule
+## ContentManagerModule
 
 De `ContentManagerModule` en de bijbehorende view voorzien het CMS van de gebruikersinterface voor het beheren van de pagina's binnen het CMS. Binnen deze interface is het mogelijk om CRUD-operaties voor pagina's uit te voeren.
 De weergave van de module is gedefinieerd in een **blade**-template, waarin de pagina's en de paginastructuur beheerd kunnen worden aan de hand van een drag-and-drop-interface. Afhankelijk van de gebruikersrechten worden de bewerkings- en verwijderopties getoond, naast de opties om pagina's te bekijken of te kopiëren.
 
-### Page (Eloquent model)
+## Page (Eloquent model)
 
 Het `Page`-model kan gezien worden als het belangrijkste model binnen de websites die gebruik maken van het AllesOnline CMS. Dit model is verantwoordelijk voor het persisteren van de pagina's binnen een website en fungeert als de basisstructuur waarop de inhoud van de website wordt opgebouwd. Binnen het model worden belangrijke gegevens zoals de naam van de pagina, de URL en het toegepaste `Template` opgeslagen. Aan de hand van een `Template` wordt bepaald welke content aan een pagina kan worden toegevoegd. Deze content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
 
 > _Een ERD met betrekking tot het `Page`-model en CMS content_:
 > * [ERD AllesOnline CMS page model](../Bijlagen/ErdAoCmsPageModel.md).
 
-### Templates
+## Templates
 
 Binnen de repository van een project dient een eerder genoemde `Template` als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kunnen worden. Een `Template` wordt gedefinieerd aan de hand van een XML-bestand. Binnen een `Template` worden velden gedefinieerd die op hun beurt verwijzen naar `FormField`-modules.
 
@@ -48,35 +48,35 @@ Binnen templates is het ook mogelijk om te verwijzen naar andere schema's waarin
 
 Binnen een `Template` is het ook mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `FormField`-modules beschikbaar wordt gesteld. Deze schema's worden binnen het CMS `Blocks` genoemd. Aan de hand van een `Block` kunnen gegevens voor complexere elementen binnen een website op een gemakkelijke manier herhaaldelijk beschikbaar worden gesteld. Daarnaast is het ook mogelijk om de volgorde van de `Blocks` en daarmee de elementen op de website te ordenen.
 
-### FormFields
+## FormFields
 
 De `FormField`-modules en bijbehorende views voorzien het CMS van interfaces waarmee eindgebruikers gegevens kunnen invoeren of bewerken. Denk hierbij aan invoervelden voor tekst, selectievelden voor selecteren van opties of een uploadveld voor bestanden. Ook de weergave van de `FormFields` wordt gedefinieerd aan de hand van **blade**-templates.
 
-## Beheren van objecten
+# Beheren van objecten
 
 Naast het beheren van pagina's met content, biedt het AllesOnline CMS ook de mogelijkheid om, naast `Page`-objecten, andere objecten te beheren die binnen een website worden gebruikt. Denk hierbij aan producten in een webshop of workshops op een website die opleidingen aanbiedt.
 
-### ObjectManagerController
+## ObjectManagerController
 
 De `ObjectManagerController` is verantwoordelijk voor het beheren van objecten. Deze controller breidt de standaard Laravel-controller uit en biedt functionaliteit voor acties zoals het bewerken en verwijderen van objecten, het beheren van relaties tussen modellen en het afhandelen van permissies en autorisatie. Daarnaast bevat de controller ook logica voor acties zoals het sorteren, zoeken en ordenen van objecten binnen het CMS.
 
 De `ObjectManagerController` is een uitgebreide controller die de basis vormt voor objectbeheer in het CMS. Deze breidt de basis Laravel-controller uit met functionaliteit voor CRUD-operaties, beheer van relaties, permissies, zoek- en sorteerfuncties, Excel-exports en het renderen van `Templates`. De controller biedt een flexibel fundament voor zowel synchrone als asynchrone (AJAX) interacties met objecten in het systeem.
 
-### Eloquent modellen
+## Eloquent modellen
 
 Voor de representatie van objecten in het CMS wordt gebruikgemaakt van `Eloquent`-modellen. `Eloquent` is een ORM dat onderdeel is van Laravel en het mogelijk maakt om op een eenvoudige, objectgeoriënteerde manier met gegevens van objecten te werken.
 
-### Schema's
+## Schema's
 
 Binnen de repository van een project worden aan de hand van XML-bestanden schema's voor objecten gedefinieerd. Deze schema's dienen als blauwdruk voor de weergave en het beheer van objecten in het CMS. Binnen deze schema's worden velden gedefinieerd die, net zoals bij een `Template`, verwijzen naar `FormField`-modules. Net zoals in een `Template` kunnen objecten ook `Blocks` toevoegen. Deze worden met een polymorfe relatie gepersisteerd onder het `CmsContent`-model.
 
 In een objectschema kunnen ook relaties tussen objecten gedefinieerd worden, die op een detailweergave van een object informatie van gerelateerde objecten in een tabel weergeven.
 
-## Evaluatie van het AllesOnline CMS
+# Evaluatie van het AllesOnline CMS
 
 Hoewel het AllesOnline CMS een goed fundament biedt voor het ontwikkelen van websites en webapplicaties, heeft het systeem ook zijn beperkingen op het gebied van een goede developer experience, onderhoudbaarheid en uitbreidbaarheid.
 
-### Gebrekkige documentatie
+## Gebrekkige documentatie
 
 Een van de grootste gebreken van het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is, ontbreekt het vaak aan concrete informatie over de werking van bepaalde modules en functionaliteiten. In sommige gevallen is er zelfs helemaal geen informatie beschikbaar over specifieke functionaliteiten.
 
@@ -86,7 +86,7 @@ Een van de grootste gebreken van het AllesOnline CMS is de beperkte en verouderd
 **Aanbeveling**:
 * RZorg voor correcte documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, met voorbeelden van hoe functionaliteiten in verschillende scenario’s gebruikt kunnen worden. Dit voorkomt onduidelijkheid en zorgt ervoor dat developers zich kunnen concentreren op het realiseren van de requirements van klanten.
 
-### Complexe codestructuur
+## Complexe codestructuur
 
 De huidige codestructuur van de modules is vaak onnodig complex. Dit komt onder andere door inconsistentie in naming conventions, methoden die te veel proberen te doen en relatief lang zijn, hardcoded strings die worden gebruikt voor flags, te vaak nieuwe objecten die worden geïnstantieerd in plaats van deze te injecteren via dependency injection, en het gebruik van magic methods die de leesbaarheid verminderen.
 
@@ -102,7 +102,7 @@ De huidige codestructuur van de modules is vaak onnodig complex. Dit komt onder 
 	* Een aparte module voor UI-gerelateerde configuratie.
 * Dit vereist het definiëren van duidelijke interfaces tussen deze onderdelen, wat zorgt voor betere herbruikbaarheid, testbaarheid en uitbreidbaarheid van de applicatie.
 
-### SOLID principes
+## SOLID principes
 
 In het vorige punt al ging het er eigenlijk al over. Maar als we naar de  **SOLID-principes** kijken, blijkt uit de codebase dat deze principes niet zijn toegepast. Ondanks het niet verplicht is om strict aan deze principes vast te houden, zijn het sterke concepten om een codebase onderhoudbaar, uitbreidbaar en testbaar te maken (DigitalOcean, z.d.). 
 
@@ -124,7 +124,7 @@ In het vorige punt al ging het er eigenlijk al over. Maar als we naar de  **SOLI
 * **Documentatie en training**: Zorg voor documentatie van de nieuwe architectuur en richtlijnen, en moedig developers aan zich te verdiepen in de SOLID-principes.
 
 
-## Conclusie
+# Conclusie
 
 Het is duidelijk dat het AllesOnline CMS voldoende punten heeft die aangepakt moeten worden om het systeem te verbeteren. Het is echter belangrijk te begrijpen dat het verbeteren van de codebase en het introduceren van de SOLID-principes een langlopend project is, dat een aanzienlijke investering in tijd en middelen vereist.
 
