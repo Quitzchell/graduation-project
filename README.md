@@ -48,3 +48,4 @@
 * #### [Voorbeeld van documentatie AllesOnline CMS](./Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
 * #### [Voorbeeld Statamic eloquent-driver config-file](./Bijlagen/eloquent-driver-config.md)
 * #### [Voorbeeld statamic runway config-file](./Bijlagen/RunwayConfigFile.md)
+* #### [Hackathon: Bouw van CMS met Filament en Statamic](./Bijlagen/OpzetHackatonBouwCMS.md)

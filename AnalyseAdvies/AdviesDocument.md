@@ -106,24 +106,23 @@ Statamic maakt in al zijn configuraties gebruik van een afwijkende datasctructuu
 
 Mijn advies aan AllesOnline is om zijn horizon te verbreden en gebruik te maken van oplossingen die door externe partijen zijn ontwikkeld. Hoewel AllesOnline trots mag zijn op het eigen CMS, dat lange tijd het fundament van zijn webapplicaties vormde, is het belangrijk te erkennen dat dit systeem in diezelfde tijd onvoldoende is onderhouden. De investering die nodig is om het CMS te refactoren en te moderniseren, weegt niet op tot de kosten en voordelen van het inzetten van een bestaand product. Vooral omdat AllesOnline, met een systeem van externe partijen, in plaats van tijd en middelen te besteden aan het onderhouden van het eigen CMS, meer focus kan leggen op zijn kerntaak: het realiseren van oplossingen voor klanten. Het is daarom niet realistisch om het huidige systeem verder te ontwikkelen.
 
-Voordat ik verder inga op welke externe oplossing de beste keuze is, wil ik eerst de belangrijkste les benoemen die ik tijdens mijn HBO-ICT-opleiding van docent Marco Meulenbroeks heb meegekregen: 'It depends'. In het laatste gesprek dat ik over mijn onderzoek met onze senior developer Wilco Kuijper had, benoemde hij, net zoals Meulenbroeks, dat we ons niet moeten vastbijten in een oplossing. Naar mijn idee heeft hij hier helemaal gelijk in, het is namelijk belangrijk om te kijken welke oplossing het beste past bij de wensen van de klant. Als we kijken naar de twee systemen die ik in dit onderzoek heb bekeken, zien we twee heel verschillende systemen die elk op hun eigen manier voor- en nadelen kennen voor verschillende projecten.
+Voordat ik verder inga op welke externe oplossing de beste keuze is, wil ik eerst de belangrijkste les benoemen die ik tijdens mijn HBO-ICT-opleiding van docent Marco Meulenbroeks heb meegekregen: 'It depends'. In het laatste gesprek dat ik over mijn onderzoek met onze senior developer Wilco Kuijper had, benoemde hij, net zoals Meulenbroeks, dat we ons niet moeten vastbijten in één enkele oplossing. Naar mijn idee heeft hij hier helemaal gelijk in, het is namelijk belangrijk om te kijken welke oplossing het beste past bij de wensen van de klant. Als we kijken naar de twee systemen die in dit onderzoek zijn bekeken, zien we twee heel verschillende systemen die elk op hun eigen manier voor- en nadelen kennen voor verschillende projecten.
 
 ## Filament
 
-De vrijheid om op maat gemaakte logica toe te passen in Filament maakt het een uitstekende keuze wanneer een klant complexere relaties en logica voor zijn systeem nodig heeft. Dit geldt bijvoorbeeld voor webapplicaties met een uitgebreid winkelassortiment, grote hoeveelheden data of complexe klantenservicesystemen. Voorbeelden van AllesOnline-projecten die hiervan zouden kunnen profiteren, zijn onder andere Provimi Body Condition Score, Ingrado, HVA en Klinger.
+De mogelijkheid om bestaande componenten direct via PHP aan te passen in Filament biedt veel flexibiliteit en maakt het een uitstekende keuze voor klanten die een complex, op maat gemaakt systeem nodig hebben. Dit geldt bijvoorbeeld voor webapplicaties met een uitgebreid assortiment, grote hoeveelheden data of complexe klantenservicesystemen. Voorbeelden van AllesOnline-projecten die hiervan zouden kunnen profiteren, zijn onder andere Provimi Body Condition Score, Ingrado, HVA en Klinger.
 
 ## Statamic
 
-Statamic zou daarentegen een geschikte keuze kunnen zijn voor klanten die slechts een marketingwebsite nodig hebben, waarbij de content dynamisch beheerd wordt, maar waar geen grote hoeveelheden data of complexe logica worden verwacht. Een CMS voor dit soort websites kan met Statamic relatief sneller gerealiseerd worden dan met Filament. Denk hierbij aan klanten zoals DPD, Vierstroom of zelfs Westfalia.
+Statamic zou daarentegen een geschikte keuze kunnen zijn voor klanten die slechts een marketingwebsite nodig hebben, waarbij de content dynamisch beheerd wordt, maar waar geen complexe relaties en datastructuren worden verwacht. Een CMS voor dit soort websites kan met Statamic relatief sneller gerealiseerd worden dan met Filament. Denk hierbij aan klanten zoals DPD, Vierstroom of zelfs Westfalia.
 
-Daarnaast zou het mogelijk zijn om voor Statamic een boilerplate te ontwikkelen met gestandaardiseerde componenten. Dit zou onze vormgevers in staat stellen om via Statamic zelfstandig whitelabel websites te creëren, terwijl onze developers direct bij de code kunnen wanneer dat nodig is. 
+Daarnaast zou het mogelijk zijn om een boilerplate voor Statamic te ontwikkelen met gestandaardiseerde componenten. Dit zou de vormgevers bij AllesOnline in staat stellen om zelfstandig whitelabel-websites te creëren via Statamic, terwijl de developers directe technische ondersteuning kunnen bieden wanneer dat nodig is.
 
 Het enige nadeel voor Statamic is dat de kosten voor een licentie in eerste instantie hoger zijn. Echter, naarmate meer websites gebruikmaken van Statamic, zullen de kosten per website dalen door de kwantumkorting binnen het abonnementsmodel van de **Platform Subscription**.
 
 ## Combineren
 
-Voor klanten waar zowel complexiteit als een marketingwebsite wordt verwacht, zou gesteld kunnen worden dat het inzetten van beide oplossingen een realistische keuze is. In dit geval zou bijvoorbeeld een adminpaneel voor stakeholders in Filament gerealiseerd kunnen worden, terwijl de marketingwebsite, of wellicht zelfs whitelabel-websites, in Statamic beheerd kunnen worden. Dit zou bijvoorbeeld nuttig zijn voor projecten zoals OpleidingVinden of ScamAdviser.
-
+Voor klanten die zowel complexiteit als een marketingwebsite verwachten, kan gesteld worden dat het inzetten van beide oplossingen een realistische keuze is. In dit geval zou bijvoorbeeld een adminpaneel voor stakeholders in Filament gerealiseerd kunnen worden, terwijl de marketingwebsite – of mogelijk zelfs whitelabel-websites – in Statamic beheerd kunnen worden. Op deze manier kan een diverse verzameling systemen worden opgeleverd, die elk afgestemd zijn op hun specifieke use cases. Dit zou bijvoorbeeld nuttig kunnen zijn voor projecten zoals OpleidingVinden of ScamAdviser.
 
 ## Voor migratie van bestaande projecten
 --> gebruik Filament
@@ -132,7 +131,7 @@ Voor klanten waar zowel complexiteit als een marketingwebsite wordt verwacht, zo
 
 Hoewel de keuze om externe systemen te integreren nog steeds een investering is, kan het AllesOnline in de toekomst veel voordelen opleveren. Door te vertrouwen op doorontwikkelde oplossingen van externe partijen kan AllesOnline zich blijven aanpassen aan technologische innovaties, zonder de last van veroudering van een eigen systeem. Dit bevordert de duurzaamheid van de bedrijfsvoering en voorkomt dat technologische achterstanden de groei belemmeren. 
 
-Bovendien positioneert het bedrijf zich als een flexibele en toekomstgerichte speler in de markt, waardoor het aantrekkelijk blijft voor zowel klanten als talentvolle medewerkers. Op strategisch niveau kan deze keuze bijdragen aan stabiele groei en een concurrentievoordeel op de lange termijn, omdat de focus van het bedrijf optimaal kan worden benut voor klantgerichte innovatie en creatie.
+Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toekomstgerichte speler in de markt, waardoor het aantrekkelijk blijft voor zowel klanten als talentvolle toekomstige medewerkers. Op strategisch niveau kan deze keuze bijdragen aan stabiele groei en een concurrentievoordeel op de lange termijn, omdat de focus van het bedrijf optimaal kan worden benut voor klantgerichte innovatie en creatie.
 
 # Roadmap
 
@@ -142,7 +141,7 @@ Bovendien positioneert het bedrijf zich als een flexibele en toekomstgerichte sp
 ### **Maand 1: Introductie en versneld leren**
 * **Week 1-2: Introductie van de systemen**
     * Presentatie aan het team: Waarom Filament en Statamic?
-    * Toewijzing van **Laracast-workshops** voor Filament en Statamic.
+    * Kijken van **Laracast-workshops** over Filament en Statamic.
     * Bespreken van eerste indrukken door het development-team.
   
 * **Week 3-4: Hands-on kennismaking**
@@ -162,12 +161,12 @@ Bovendien positioneert het bedrijf zich als een flexibele en toekomstgerichte sp
         * Contentblocks
         * Menustructuur
         * Persisteren van CMS content
-    * Focus op modulariteit en opzet.
+    * Focus op modulaire opzet.
     * Stel documentatie op voor gebruik binnen het team.
 
 * **Week 4-6: Validatie van plugin**
   * Koppel het CMS aan een bestaand project met een *decoupled architectuur*.
-  * Realiseer dat een deel van de templates, blokken en menustructuren goed gerenderd kunnen worden met de Filament-plugin.
+  * Realiseer dat een deel van de templates, blokken en menustructuren goed gerenderd kunnen worden met de Filament-plugin. //todo
 
 **Deliverables**:
 * Gevalideerde CMS-plugin voor Filament.
@@ -177,14 +176,12 @@ Bovendien positioneert het bedrijf zich als een flexibele en toekomstgerichte sp
 **Doel: Start met concrete projecten en verder ontwikkelen van systemen.**
 
 ### **Maand 4-6: Start ontwikkeling greenfield project**
-* **Identificeer nieuwe projecten** die geschikt zijn voor Filament en Statamic.
+* **Identificeer nieuwe projecten** die geschikt zijn voor Filament en/of Statamic.
 * Begin met een **agile aanpak**: Start met het ontwikkelen van de CMS-functionaliteiten voor het eerste greenfield project.
 * Werk met een minimal viable product (MVP): Begin met de basisfunctionaliteit van het CMS en breid deze iteratief uit.
 
-  **Tijdwinst**: Door snel te starten met een MVP kunnen features op klantbehoeften worden getest en aangepast, zonder onnodige vertraging.
-
 ### **Maand 6: Eerste project live en optimalisatie**
-* **Launch het eerste Filament- en Statamic-project**.
+* **Launch het eerste Filament- en/of Statamic-project**.
 * Verzamel feedback van klanten en gebruikers.
 * Begin met de **optimalisatie** van de systemen en tools op basis van deze feedback.
 
@@ -212,16 +209,16 @@ Bovendien positioneert het bedrijf zich als een flexibele en toekomstgerichte sp
 ## **Fase 4: Opschaling en optimalisatie (2-3 maanden)**
 **Doel: Brede adoptie en verdere verfijning van systemen en processen.**
 
-### **Maand 12-15: Verbeteren en opschalen**
-* Optimaliseer **ontwikkelde tools en plugins** voor meer efficiëntie.
+### **Maand 13-15: Verbeteren en opschalen**
+* Optimaliseer **ontwikkelde tools en plugin** voor meer efficiëntie.
 * **Brede adoptie** van de nieuwe systemen voor andere projecten binnen het bedrijf.
 
 
 ### **Maand 16-18: Afronden en verdere verfijning**
-* Zorg ervoor dat **alle bestaande projecten** succesvol zijn overgezet naar Filament.
-* Werk aan **lange termijn strategieën** om de systemen toekomstbestendig te houden.
+* Zorg ervoor dat **alle bestaande projecten** succesvol zijn overgezet naar Filament. 
+* Werk aan **lange termijnstrategie** om de systemen toekomstbestendig te houden.
 
-  **Deliverables**:
+**Deliverables**:
   * AllesOnline volledig over op Filament en Statamic.
   * Geoptimaliseerde tools en systemen voor toekomstig gebruik.
 
