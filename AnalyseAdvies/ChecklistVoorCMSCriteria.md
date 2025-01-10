@@ -1,4 +1,4 @@
-# Checklist voor CMS criteria
+# **Checklist voor CMS criteria**
 
 | Criteria                   | AllesOnline | Filament | Statamic |
 | -------------------------- | ----------- | -------- | -------- |
