@@ -8,13 +8,13 @@ In dit onderzoek worden de sterke en zwakke punten van het huidige AllesOnline C
 
 ## Context
 
-AllesOnline, een full-service bureau voor online en offline communicatie, maakt gebruik van een intern ontwikkeld Content Management Systeem (CMS) dat sinds 2015 de basis vormt voor de webapplicaties van het bedrijf. Door een gebrek aan regelmatig onderhoud en updates is het systeem echter verouderd geraakt. Dit beperkt de uitbreidbaarheid en vermindert de efficiëntie van het gebruik ervan.
+AllesOnline, een full-service bureau voor online en offline communicatie, maakt gebruik van een intern ontwikkeld Content Management Systeem (CMS) dat sinds 2015 de basis vormt voor de webapplicaties van het bedrijf. Door een gebrek aan regelmatig onderhoud en het doorvoeren van updates is het systeem echter verouderd geraakt. Dit beperkt de uitbreidbaarheid en vermindert de efficiëntie van het CMS.
 
 # AllesOnline CMS
 
 ## Voor eindgebruikers
 
-Het AllesOnline CMS is een gebruiksvriendelijk systeem dat goed aansluit bij de behoeften van de eindgebruikers. Het biedt hen de mogelijkheid om de content en objecten op een website op flexibele wijze te beheren. Een van de sterkste punten van het CMS is de drag-and-drop-functionaliteit, waarmee pagina's snel en eenvoudig binnen één weergave kunnen worden gerangschikt.
+Het AllesOnline CMS is een gebruiksvriendelijk systeem dat goed aansluit bij de behoeften van de eindgebruikers. Het biedt hen de mogelijkheid om de content en objecten op een website op flexibele wijze te beheren. Eén van de sterkste punten van het CMS is de drag-and-drop-functionaliteit, waarmee pagina's snel en eenvoudig binnen één weergave kunnen worden gerangschikt.
 
 ## Voor developers
 
@@ -22,11 +22,11 @@ Hoewel het systeem voor de developers vertrouwd is, zijn er in het huidige Alles
 
 Daarnaast ontbreken geautomatiseerde tests die garanderen dat functionaliteiten blijven werken na het debuggen, refactoren of doorontwikkelen. Het opzetten van deze geautomatiseerde tests wordt bemoeilijkt door het gebrek aan naleving van de SOLID-principes. Veel functies binnen het CMS hebben meerdere verantwoordelijkheden, waardoor bepaalde use cases niet geïsoleerd getest kunnen worden.
 
-Bovendien zijn er inconsistenties tussen bepaalde inputvelden, die ondanks gelijke functionaliteit verschillende syntaxis vereisen, wat ook zonder duidelijk documentatie tot verwarring leidt. De inputvelden die zijn ontworpen om relaties tussen objecten te definiëren, bieden geen ondersteuning voor complexe relaties zoals polymorfe relaties. Dit beperkt het gebruiksgemak voor eindgebruikers, omdat zij meerdere inputvelden moeten hanteren om dergelijke relaties vast te leggen, wat ten koste gaat van het overzicht.
+Bovendien zijn er inconsistenties tussen bepaalde inputvelden, die ondanks gelijke functionaliteit verschillende syntaxis vereisen, wat zonder duidelijke documentatie tot verwarring leidt. De inputvelden die zijn ontworpen om relaties tussen objecten te definiëren, bieden geen ondersteuning voor complexe relaties zoals polymorfe relaties. Dit beperkt het gebruiksgemak voor eindgebruikers, omdat zij meerdere inputvelden moeten hanteren om dergelijke relaties vast te leggen, wat ten koste gaat van het overzicht.
 
 ## Hoe te verbeteren 
 
-De doorontwikkeling zou in eerste instantie moeten focussen op het modulair en testbaar maken van de `FormModules`. Deze modules functioneren op het hoogste niveau binnen het systeem en zijn relatief onafhankelijk van andere onderdelen. Door ze modulairder en meer single-responsible te ontwerpen, wordt het mogelijk om geautomatiseerde tests te implementeren. Deze tests waarborgen dat bestaande functionaliteiten intact blijven bij wijzigingen of verdere ontwikkeling. Dit creëert een solide basis waarmee stapsgewijs naar lagere niveaus kan worden gewerkt, zoals de code die verantwoordelijk is voor het persisteren van objecten en content.
+De doorontwikkeling zou zich in eerste instantie moeten focussen op het modulair en testbaar maken van de `FormModules`. Deze modules functioneren op het hoogste niveau binnen het systeem en zijn relatief onafhankelijk van andere onderdelen. Door ze modulairder en meer single-responsible te ontwerpen, wordt het mogelijk om geautomatiseerde tests te implementeren. Deze tests waarborgen dat bestaande functionaliteiten intact blijven bij wijzigingen of verdere ontwikkeling. Dit creëert een solide basis waarmee stapsgewijs naar lagere niveaus kan worden gewerkt, zoals de code die verantwoordelijk is voor het persisteren van objecten en content.
 
 Op deze manier kunnen developers de scope van de doorontwikkeling stapsgewijs uitbreiden, terwijl ze tegelijkertijd werken aan een stevig fundament.
 
@@ -40,9 +40,9 @@ Filament is volledig geïntegreerd met Laravel en maakt gebruik van de Eloquent 
 
 ## Gegevensbeheer
 
-In Filament zijn `Resource`-classes verantwoordelijk voor het definiëren van hoe een `Eloquent`-model wordt beheerd in de gebruikersinterface. Deze klassen bepalen hoe gegevens worden weergegeven, ingevoerd en bewerkt. Daarnaast bieden ze tools voor het beheren van de gegevenslevenscyclus, waardoor vergelijkbare datastructuren zoals die in het AllesOnline CMS, kunnen worden gerealiseerd. Aangezien deze classes volledig in PHP zijn gedefinieerd, kunnen developers eenvoudig extra logica toevoegen en profiteren van autocompletion.
+In Filament zijn `Resource`-classes verantwoordelijk voor het definiëren hoe een `Eloquent`-model wordt beheerd in de gebruikersinterface. Deze klassen bepalen hoe gegevens worden weergegeven, ingevoerd en bewerkt. Daarnaast bieden ze tools voor het beheren van de gegevenslevenscyclus, waardoor vergelijkbare datastructuren, zoals die in het AllesOnline CMS, kunnen worden gerealiseerd. Aangezien deze classes volledig in PHP zijn gedefinieerd, kunnen developers eenvoudig extra logica toevoegen en profiteren van autocompletion.
 
-Ook ondersteunen de inputvelden omtrent relationships polymorfe relaties, wat het mogelijk maakt om een overzichtelijkere weergave voor eindgebruikers te realiseren.
+Daarnaast ondersteunen de inputvelden waarin relationships worden gedefinieerd in Filament wel polymorfe relaties, wat het mogelijk maakt om een overzichtelijkere weergave voor eindgebruikers te realiseren.
 
 ## Marketplace
 
