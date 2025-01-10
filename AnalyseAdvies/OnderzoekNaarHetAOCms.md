@@ -2,7 +2,7 @@
 
 # Inleiding
 
-Dit document beschrijft de analyse van het AllesOnline CMS en is gericht op het identificeren van knelpunten binnen het huidige systeem, evenals het doen van aanbevelingen. Het onderzoek is uitgevoerd als onderdeel van een *Available Product Analysis*.
+Dit document beschrijft de analyse van het AllesOnline CMS en is gericht op het identificeren van knelpunten binnen het huidige systeem, evenals het doen van aanbevelingen. Deze analyse is uitgevoerd als onderdeel van een *Available Product Analysis*.
 
 >**Andere onderdelen van het Available Product Analysis:**
 >* [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md) 
@@ -34,14 +34,14 @@ De weergave van de module is gedefinieerd in een **blade**-template, waarin de p
 
 ## Page (Eloquent model)
 
-Het `Page`-model kan gezien worden als het belangrijkste model binnen de websites die gebruik maken van het AllesOnline CMS. Dit model is verantwoordelijk voor het persisteren van de pagina's binnen een website en fungeert als de basisstructuur waarop de inhoud van de website wordt opgebouwd. Binnen het model worden belangrijke gegevens zoals de naam van de pagina, de URL en het toegepaste `Template` opgeslagen. Aan de hand van een `Template` wordt bepaald welke content aan een pagina kan worden toegevoegd. Deze content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden via het `CmsContent`-model. 
+Het `Page`-model kan gezien worden als het belangrijkste model binnen de websites die gebruik maken van het AllesOnline CMS. Dit model is verantwoordelijk voor het persisteren van de pagina's binnen een website en fungeert als de basisstructuur waarop de inhoud van de website wordt opgebouwd. Binnen het model worden belangrijke gegevens zoals de naam van de pagina, de URL en het toegepaste `Template` opgeslagen. Aan de hand van een `Template` wordt bepaald welke content aan een pagina kan worden toegevoegd. Deze content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
 
 > _Een ERD met betrekking tot het `Page`-model en CMS content_:
 > * [ERD AllesOnline CMS page model](../Bijlagen/ErdAoCmsPageModel.md).
 
 ## Templates
 
-Binnen de repository van een project dient een eerder genoemde `Template` als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kunnen worden. Een `Template` wordt gedefinieerd aan de hand van een XML-bestand. Binnen een `Template` worden velden gedefinieerd die op hun beurt verwijzen naar `FormField`-modules.
+Binnen een project dient een eerder genoemde `Template` als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kunnen worden. Een `Template` wordt gedefinieerd aan de hand van een XML-bestand. Binnen een `Template` worden velden gedefinieerd die op hun beurt verwijzen naar `FormField`-modules.
 
 Binnen een `Template` is het ook mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `FormField`-modules beschikbaar wordt gesteld. Deze schema's worden binnen het CMS `Blocks` genoemd. Aan de hand van een `Block`,kunnen gegevens voor complexere elementen binnen een website op een gemakkelijke manier herhaaldelijk beschikbaar worden gesteld. Daarnaast is het ook mogelijk om de volgorde van de `Blocks` en daarmee de elementen op de website te ordenen.
 
