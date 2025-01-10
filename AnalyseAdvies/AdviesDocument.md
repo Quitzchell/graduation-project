@@ -118,7 +118,7 @@ Statamic zou daarentegen een geschikte keuze kunnen zijn voor klanten die slecht
 
 Daarnaast zou het mogelijk zijn om een boilerplate voor Statamic te ontwikkelen met gestandaardiseerde componenten. Dit zou de vormgevers bij AllesOnline in staat stellen om zelfstandig whitelabel-websites te creëren via Statamic, terwijl de developers directe technische ondersteuning kunnen bieden wanneer dat nodig is.
 
-Het enige nadeel voor Statamic is dat de kosten voor een licentie in eerste instantie hoger zijn. Echter, naarmate meer websites gebruikmaken van Statamic, zullen de kosten per website dalen door de kwantumkorting binnen het abonnementsmodel van de **Platform Subscription**.
+Het enige nadeel van Statamic is dat de kosten voor een licentie in eerste instantie hoger zijn. Echter, naarmate meer websites gebruikmaken van Statamic, zullen de kosten per website dalen door de kwantumkorting binnen het abonnementsmodel van de **Platform Subscription**. In dit model betaal je voor de eerste 25 websites een vast bedrag van $175. Voor de volgende 75 websites betaal je $7 per website per maand, en voor de volgende 400 websites $6 per website per maand. Dit betekent dat de prijs per website daalt naarmate je meer websites toevoegt. Als er bijvoorbeeld 25 websites met Statamic actief zijn, zullen de kosten voor een licentie niet meer dan $7 per website bedragen.
 
 ## Combineren
 
@@ -240,4 +240,3 @@ Filament is een uitstekende keuze voor projecten die complexe, op maat gemaakte 
 Statamic, aan de andere kant, biedt een uitstekende oplossing voor marketingwebsites met dynamische contentbehoeften en kan snel en efficiënt worden geïmplementeerd voor deze minder complexe projecten. Het is een gebruiksvriendelijke keuze voor klanten die behoefte hebben aan een gestandaardiseerde websiteoplossing zonder veel technische diepgang.
 
 Op basis van de analyse en de verschillende voordelen van Filament en Statamic wordt het aanbevolen om voor de migratie van bestaande projecten en nieuwe ontwikkelingen te kiezen voor Filament als de primaire oplossing. De compatibiliteit met het huidige AllesOnline CMS, de mogelijkheid om geautomatiseerde migraties te ontwikkelen en de relatief vergelijkbare datastructuren maken Filament de beste keuze. Statamic kan echter worden ingezet voor eenvoudigere marketingwebsites of als een alternatief voor specifieke klantbehoeften.
-
