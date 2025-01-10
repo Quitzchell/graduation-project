@@ -20,5 +20,5 @@
 | Family name, initials:        | Groeneweg, A                       |
 |                               |                                    |
 | **Final portfolio**           |                                    |
-| Title:                        |                                    |
+| Title:                        | Revitalizing Content Managment     |
 | Date:                         |                                    |
