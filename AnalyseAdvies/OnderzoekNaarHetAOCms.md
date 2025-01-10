@@ -13,29 +13,28 @@ Dit document beschrijft de analyse van het AllesOnline CMS en is gericht op het 
 
 # Beheren van content 
 
-Het AllesOnline CMS is geïntegreerd met **Laravel** en maakt gebruik van het **Eloquent ORM** binnen dit framework. In het CMS zijn verschillende modules beschikbaar, die samen met de bijbehorende frontend componenten het opzetten van een CMS.
+Het AllesOnline CMS is geïntegreerd met **Laravel** en maakt gebruik van het **Eloquent ORM** binnen dit framework. Het CMS bevat verschillende modules, die samen met de bijbehorende frontendcomponenten het opzetten van een CMS mogelijk maken
 
 ## ContentManagerController
 
-De `ContentManagerController` beheert de pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties van pagina's. Daarnaast biedt het de functionaliteit om de rechten van gebruikers te verifiëren voor het beheren van specifieke content en pagina's binnen het CMS.
+De `ContentManagerController` beheert de pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties van pagina's. Daarnaast biedt het de functionaliteit om de rechten van gebruikers te verifiëren.
 
 **Naast deze basisfunctionaliteiten biedt de controller ook de volgende functionaliteiten:**
-
 * **Content hiërarchie en volgorde:** Het beheren van de hiërarchie en volgorde van pagina-items in de database via methoden zoals `updateManagedContent`.
-* **Autorisatie:** Door middel van methoden zoals can en `methodPermission` wordt gecontroleerd of gebruikers de juiste rechten hebben om specifieke acties uit te voeren. Dit wordt ondersteund door middleware en specifieke permissies die in een configuratiebestand gedefinieerd kunnen worden.
+* **Autorisatie:** Door middel van methoden zoals `can` en `methodPermission` wordt gecontroleerd of gebruikers de juiste rechten hebben om specifieke acties uit te voeren. Dit wordt ondersteund door middleware en specifieke permissies die in een configuratiebestand gedefinieerd kunnen worden.
 * **Pagina-vergrendeling:** De controller maakt het mogelijk om pagina's te vergrendelen en te ontgrendelen, zodat beheerders kunnen voorkomen dat ongewenste wijzigingen worden aangebracht.
-* **Replicatie van pagina's:** Met de `getCopy`-methode kunnen pagina's en hun gekoppelde content eenvoudig worden gedupliceerd, inclusief de ondersteuning voor multisite-functionaliteit.
+* **Replicatie van pagina's:** Met de `getCopy`-methode kunnen pagina's en hun gekoppelde content eenvoudig worden gedupliceerd.
 * **Templatebeheer:** De controller beheert beschikbare `pagina`-templates, inclusief filtering en sortering, en biedt integratie met specifieke resolvers.
 * **Menu-integratie:** Pagina's kunnen worden gekoppeld aan menu's, waarbij ook de structuur van de menu's beheerd kan worden.
 
 ## ContentManagerModule
 
-De `ContentManagerModule` en de bijbehorende view voorzien het CMS van de gebruikersinterface voor het beheren van de pagina's binnen het CMS. Binnen deze interface is het mogelijk om CRUD-operaties voor pagina's uit te voeren.
+De `ContentManagerModule` en de bijbehorende view, voorzien het CMS van de gebruikersinterface voor het beheren van de pagina's binnen het CMS. Binnen deze interface is het mogelijk om CRUD-operaties voor pagina's uit te voeren.
 De weergave van de module is gedefinieerd in een **blade**-template, waarin de pagina's en de paginastructuur beheerd kunnen worden aan de hand van een drag-and-drop-interface. Afhankelijk van de gebruikersrechten worden de bewerkings- en verwijderopties getoond, naast de opties om pagina's te bekijken of te kopiëren.
 
 ## Page (Eloquent model)
 
-Het `Page`-model kan gezien worden als het belangrijkste model binnen de websites die gebruik maken van het AllesOnline CMS. Dit model is verantwoordelijk voor het persisteren van de pagina's binnen een website en fungeert als de basisstructuur waarop de inhoud van de website wordt opgebouwd. Binnen het model worden belangrijke gegevens zoals de naam van de pagina, de URL en het toegepaste `Template` opgeslagen. Aan de hand van een `Template` wordt bepaald welke content aan een pagina kan worden toegevoegd. Deze content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
+Het `Page`-model kan gezien worden als het belangrijkste model binnen de websites die gebruik maken van het AllesOnline CMS. Dit model is verantwoordelijk voor het persisteren van de pagina's binnen een website en fungeert als de basisstructuur waarop de inhoud van de website wordt opgebouwd. Binnen het model worden belangrijke gegevens zoals de naam van de pagina, de URL en het toegepaste `Template` opgeslagen. Aan de hand van een `Template` wordt bepaald welke content aan een pagina kan worden toegevoegd. Deze content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden via het `CmsContent`-model. 
 
 > _Een ERD met betrekking tot het `Page`-model en CMS content_:
 > * [ERD AllesOnline CMS page model](../Bijlagen/ErdAoCmsPageModel.md).
@@ -44,9 +43,7 @@ Het `Page`-model kan gezien worden als het belangrijkste model binnen de website
 
 Binnen de repository van een project dient een eerder genoemde `Template` als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kunnen worden. Een `Template` wordt gedefinieerd aan de hand van een XML-bestand. Binnen een `Template` worden velden gedefinieerd die op hun beurt verwijzen naar `FormField`-modules.
 
-Binnen templates is het ook mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `FormField`-modules beschikbaar gesteld wordt. Deze schema's worden binnen het CMS `Block` genoemd. Aan de hand van een `Block` kunnen gegevens voor complexere elementen binnen een website op een gemakkelijke beschikbaar gesteld worden. Daarnaast is het ook mogelijk om deze elementen te ordenen.  
-
-Binnen een `Template` is het ook mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `FormField`-modules beschikbaar wordt gesteld. Deze schema's worden binnen het CMS `Blocks` genoemd. Aan de hand van een `Block` kunnen gegevens voor complexere elementen binnen een website op een gemakkelijke manier herhaaldelijk beschikbaar worden gesteld. Daarnaast is het ook mogelijk om de volgorde van de `Blocks` en daarmee de elementen op de website te ordenen.
+Binnen een `Template` is het ook mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `FormField`-modules beschikbaar wordt gesteld. Deze schema's worden binnen het CMS `Blocks` genoemd. Aan de hand van een `Block`,kunnen gegevens voor complexere elementen binnen een website op een gemakkelijke manier herhaaldelijk beschikbaar worden gesteld. Daarnaast is het ook mogelijk om de volgorde van de `Blocks` en daarmee de elementen op de website te ordenen.
 
 ## FormFields
 
@@ -88,12 +85,12 @@ Een van de grootste gebreken van het AllesOnline CMS is de beperkte en verouderd
 
 ## Complexe codestructuur
 
-De huidige codestructuur van de modules is vaak onnodig complex. Dit komt onder andere door inconsistentie in naming conventions, methoden die te veel proberen te doen en relatief lang zijn, hardcoded strings die worden gebruikt voor flags, te vaak nieuwe objecten die worden geïnstantieerd in plaats van deze te injecteren via dependency injection, en het gebruik van magic methods die de leesbaarheid verminderen.
+De huidige codestructuur van de modules is vaak onnodig complex. Dit komt onder andere door inconsistentie in naming conventions, relatief lange methoden met teveel verantwoordelijkheden, hardcoded strings die worden gebruikt als flag en te veel objecten die worden geïnstantieerd in plaats van geïnjecteerd.
 
 **Gevolgen van deze complexiteit:**
 * De kans op bugs neemt toe, omdat wijzigingen in een deel van de module vaak onbedoeld andere onderdelen kunnen beïnvloeden.
 * Het ontbreken van duidelijke interfaces tussen modules beperkt de mogelijkheid om de applicatie uit te breiden of componenten opnieuw te gebruiken.
-* De onderhoudbaarheid en testbaarheid van de module worden belemmerd, wat leidt tot hogere ontwikkelings- en beheerkosten.
+* De onderhoudbaarheid en testbaarheid van de modules worden belemmerd, wat leidt tot hogere ontwikkelings- en beheerkosten.
 
 **Aanbeveling:**
 * Een grondige refactoring van de modules, waarbij verantwoordelijkheden worden opgesplitst in afzonderlijke classes of componenten, bijvoorbeeld:
@@ -104,17 +101,17 @@ De huidige codestructuur van de modules is vaak onnodig complex. Dit komt onder 
 
 ## SOLID principes
 
-In het vorige punt al ging het er eigenlijk al over. Maar als we naar de  **SOLID-principes** kijken, blijkt uit de codebase dat deze principes niet zijn toegepast. Ondanks het niet verplicht is om strict aan deze principes vast te houden, zijn het sterke concepten om een codebase onderhoudbaar, uitbreidbaar en testbaar te maken (DigitalOcean, z.d.). 
+Het vorige punt stipte dit onderwerp al aan. Als we naar de  **SOLID-principes** kijken, blijkt uit de codebase dat deze principes niet zijn toegepast. Ondanks het niet verplicht is om strict aan deze principes vast te houden, zijn het sterke concepten om een codebase onderhoudbaar, uitbreidbaar en testbaar te maken (DigitalOcean, z.d.). 
 
 * **Single Responsibility Principle (SRP)**: Dit principe stelt dat een class slechts één reden tot verandering mag hebben. In het AllesOnline CMS zijn er veel classes waarvan de methoden verantwoordelijk zijn voor meerdere functionaliteiten. Dit verhoogt de complexiteit en maakt het moeilijker om methoden te isoleren, te testen en opnieuw te gebruiken.
     
-* **Open/Closed Principle (OCP)**: Dit principe stelt dat classes open moeten zijn voor uitbreiding, maar gesloten voor aanpassing. Dit betekent dat de functionaliteit van een class uitgebreid kan worden zonder de bestaande code te wijzigen. In de huidige codebase vereisen nieuwe functionaliteiten echter vaak wijzigingen in de bestaande code, wat de kans op bugs vergroot en verminderd de onderhoudbaarheid.
+* **Open/Closed Principle (OCP)**: Dit principe stelt dat classes open moeten zijn voor uitbreiding, maar gesloten voor aanpassing. Dit betekent dat de functionaliteit van een class uitgebreid kan worden zonder de bestaande code te wijzigen. In de huidige codebase vereisen nieuwe functionaliteiten echter vaak wijzigingen in de bestaande code, wat de kans op bugs vergroot en de onderhoudbaarheid verminderd.
 
 * **Liskov Substitution Principle (LSP):** Dit principe stelt dat objecten van een afgeleide class zonder problemen kunnen worden vervangen door objecten van de parent class.
 
 * **Interface Segregation Principle (ISP):** Dit principe stelt dat een class niet gedwongen moet worden om afhankelijk te zijn van interfaces die het niet gebruikt.
     
-* **Dependency Inversion Principle (DIP)**: Dit principe stelt dat hogere-niveau modules afhankelijk moeten zijn van abstracties (bijvoorbeeld interfaces), in plaats van van concrete implementaties. In het AllesOnline CMS worden veel functionaliteiten direct afhankelijk gemaakt van concrete implementaties binnen classes. Dit belemmert de flexibiliteit en maakt het moeilijker om componenten te vervangen of aan te passen zonder invloed op andere delen van het systeem. Door gebruik te maken van abstracties kunnen hogere modules onafhankelijker werken van lagere, concrete modules, wat de onderhoudbaarheid en uitbreidbaarheid van het systeem verbetert.
+* **Dependency Inversion Principle (DIP)**: Dit principe stelt dat modules op een hoger niveau afhankelijk moeten zijn van abstracties zoals bijvoorbeeld interfaces, in plaats van van concrete implementaties. In het AllesOnline CMS worden veel functionaliteiten direct afhankelijk gemaakt van concrete implementaties. Dit belemmert de flexibiliteit en maakt het moeilijker om componenten te vervangen of aan te passen zonder invloed op andere delen van het systeem te hebben. Door gebruik te maken van abstracties kunnen modules op een hoger niveau onafhankelijk werken van lagere, concrete modules, wat de onderhoudbaarheid en uitbreidbaarheid van het systeem verbetert.
     
 **Aanbevelingen** 
 * **Refactoring van de codebase**: Refactor de codebase stapsgewijs om de SOLID-principes te introduceren. Begin op een hoog niveau en werk stapsgewijs naar lagere niveaus.
