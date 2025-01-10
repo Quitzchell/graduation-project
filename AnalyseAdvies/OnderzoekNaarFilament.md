@@ -15,7 +15,7 @@ Dit document beschrijft de analyse over Filament en hoe het eventueel gebruikt k
 
 Ook Filament maakt net zoals het AllesOnline CMS gebruik van **Laravel** en het Eloquent ORM dat dit framework biedt.
 
-De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze packages omvatten verzamelingen van modules voor tabellen, formulieren, acties, notificaties en een container om alle modules samen te brengen. Volgens de documentatie bevat de basisinstallatie van Filament de volgende pakketten:
+De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze packages omvatten verzamelingen van modules voor tabellen, formulieren, acties, notificaties en een container om alle modules samen te brengen. Volgens de documentatie bevat de basisinstallatie van Filament de volgende packages:
 
 * Panel Builder
 * Form Builder 
@@ -52,7 +52,7 @@ Voor het beheren van gegevens kunnen we met Filament gebruik maken van de `Resou
 1. **CRUD-operaties**: `Resources` maken gebruik van Laravel's Eloquent ORM voor het uitvoeren van CRUD-operaties.
 2. **Views**: Standaard voorziet een `Resource` in de weergaven index (voor een overview), create, edit en view (detailweergave). Deze views kunnen worden aangepast om te voldoen aan specifieke eisen van de eindgebruikers.
 3. **Componenten**: Binnen de `Resources` kunnen componenten gedefinieerd worden om de inhoud van de eerder genoemde views te definiëren. Deze componenten bepalen welke invoervelden en/of gegevens zichtbaar zijn voor de eindgebruiker en hoe ze hiermee kunnen interacteren.
-4. **Permissions en Middleware**: Filament integreert met Laravel's ingebouwde autorisatiesysteem, waardoor het mogelijk is om `policies` en `gates` te gebruiken voor autorisatie. Daarnaast kan het pakket spatie/laravel-permission worden geïntegreerd voor een uitgebreidere rolgebaseerde autorisatie. 
+4. **Permissions en Middleware**: Filament integreert met Laravel's ingebouwde autorisatiesysteem, waardoor het mogelijk is om `policies` en `gates` te gebruiken voor autorisatie. Daarnaast kan het package `spatie/laravel-permission` worden geïntegreerd voor een uitgebreidere rolgebaseerde autorisatie. 
 
 ### Beheren van content 
 
