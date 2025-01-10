@@ -46,19 +46,19 @@ Daarnaast ondersteunen de inputvelden waarin relationships worden gedefinieerd i
 
 ## Marketplace
 
-De Filament Marketplace benadrukt de uitbreidbaarheid van Filament, doordat het zowel gratis als betaalde externe plugins en componenten aanbiedt. Dit maakt het eenvoudig om bestaande oplossingen snel te integreren. Daarnaast stelt AllesOnline in staat om eigen componenten te ontwikkelen en toe te voegen aan de marketplace, wat ruimte biedt voor maatwerk en continue groei.
+De Filament Marketplace benadrukt de uitbreidbaarheid van Filament, doordat het zowel gratis als betaalde externe plugins en componenten aanbiedt. Dit maakt het eenvoudig om bestaande oplossingen snel te integreren. Daarnaast stelt het AllesOnline in staat om eigen componenten te ontwikkelen en toe te voegen aan de marketplace, wat ruimte biedt voor maatwerk en continue groei.
 
 ## Geavanceerde toegangscontrole
 
-Dankzij de ingebouwde Laravel-permissions biedt Filament geavanceerde mogelijkheden voor toegangscontrole, waarmee rollen kunnen worden toegewezen aan gebruikers, en aan deze rollen specifieke rechten of permissies kunnen worden gekoppeld.
+Dankzij de ingebouwde Laravel-permissions biedt Filament geavanceerde mogelijkheden voor toegangscontrole, waarmee rollen kunnen worden toegewezen aan gebruikers, en aan deze rollen kunnen specifieke rechten of permissies worden gekoppeld.
 
 ## Kosten
 
-Het gebruik van Filament is gratis. Het Filament-team biedt echter wel de mogelijkheid om bepaalde features of bugs, die vermeld staan in de GitHub-issues, financieel te ondersteunen door middel van een donatie.
+Het gebruik van Filament is gratis. Het Filament-team biedt echter de mogelijkheid om bepaalde features of bugs, die vermeld staan in de GitHub-issues, financieel te ondersteunen door middel van een donatie.
 
 ## Beperkingen en overwegingen
 
-Het is belangrijk op te merken dat Filament geen kant-en-klare CMS-oplossing biedt. Hoewel het voldoende flexibiliteit biedt om CMS-functionaliteiten te implementeren, vereist dit extra ontwikkeltijd in vergelijking met systemen die deze functionaliteiten standaard aanbieden. Bovendien ontbreekt een drag-and-drop-interface, wat voor sommige klanten mogelijk als minder intuïtief kan worden ervaren. Een eenvoudige oplossing is het implementeren van een aparte menu-manager, terwijl een complexere benadering het ontwikkelen van een nieuw drag-and-dropcomponent zou zijn, dat specifiek aansluit bij de verwachte functionaliteiten van AllesOnline.
+Het is belangrijk op te merken dat Filament geen kant-en-klare CMS-oplossing biedt. Hoewel het voldoende flexibiliteit biedt om CMS-functionaliteiten te implementeren, vereist dit extra ontwikkeltijd in vergelijking met systemen die deze functionaliteiten standaard aanbieden. Bovendien ontbreekt een drag-and-drop-interface voor het beheren van de menu-structuur. Dit kan voor sommige klanten mogelijk als minder intuïtief kan worden ervaren. Een eenvoudige oplossing is het implementeren van een aparte menu-manager. Een complexere benadering is het ontwikkelen van een custom drag-and-dropcomponent dat vergelijkbaar is met de functionaliteiten van AllesOnline CMS.
 
 Filament is afhankelijk van Livewire en Alpine.js, twee technologieën die mogelijk nog niet volledig beheerst worden door het AllesOnline-team, wat extra training en educatie kan vereisen.
 
