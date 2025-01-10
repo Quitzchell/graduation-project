@@ -68,7 +68,7 @@ Filament is afhankelijk van Livewire en Alpine.js, twee technologieën die mogel
 
 ## Laravel-ish
 
-In tegenstelling tot Filament is Statamic niet volledig geïntegreerd met Laravel, vooral in de flat-file en Eloquent-driver configuraties, waarbij gegevens als documenten in een repository of JSON in een database worden opgeslagen. Pas wanneer gekozen wordt voor de Runway-configuratie, wordt het mogelijk om voor elke entiteit specifieke Eloquent-modellen en databasetabellen te creëren. Het opzetten van deze configuratie is echter relatief complexer.
+In tegenstelling tot Filament is Statamic niet volledig geïntegreerd met Laravel. Dit zie je vooral in de flat-file en Eloquent-driver configuraties,  waarbij gegevens als documenten binnen de repository of als JSON in een database worden opgeslagen. Pas wanneer gekozen wordt voor de Runway-configuratie, wordt het mogelijk om voor elke entiteit specifieke Eloquent-modellen en databasetabellen te creëren. Het opzetten van deze configuratie is echter relatief complexer.
 
 ## Flat-file versus Database
 
