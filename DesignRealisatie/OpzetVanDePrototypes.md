@@ -2,11 +2,11 @@
 
 # Inleiding
 
-Om te valideren of de Content Management Systemen die in dit onderzoek worden ontwikkeld daadwerkelijk functioneel zijn, zal ik in dit project een praktisch onderzoek uitvoeren door een full-stack prototype te ontwikkelen.
+Om te valideren of de Content Management Systemen die in dit onderzoek worden onderzocht daadwerkelijk functioneel zijn, zal ik in dit project een praktisch onderzoek uitvoeren door een full-stack prototype te ontwikkelen.
 
 Dit prototype zal een frontend, gebouwd met een modern framework, koppelen aan verschillende backends met een CMS. Hierbij wordt gebruik gemaakt van een *decoupled architectuur*, waarbij de frontend en backend gescheiden zijn en via API's communiceren. Dit maakt het gemakkelijk om te beoordelen of de functionaliteiten die voor een typische AllesOnline-website worden verwacht, aanwezig zijn in de te onderzoeken CMS'en. 
 
-Bovendien biedt dit producten om te onderzoeken of er een tool ontwikkeld kan worden voor de migratie van het AllesOnline CMS naar een andere CMS. Aan de hand van een gevalideerd prototype dat een extern systeem gebruikt, kunnen we bepalen hoe bepaalde bestanden er in deze systemen uit moeten zien.
+Bovendien biedt het opzetten van deze prototypes de mogelijkheid om te onderzoeken of er een tool ontwikkeld kan worden voor de migratie van het AllesOnline CMS naar een andere CMS. Aan de hand van een gevalideerd prototype dat een extern systeem gebruikt, kunnen we bepalen hoe bepaalde bestanden er in deze systemen uit moeten zien.
 
 # Prototype Omschrijving
 
