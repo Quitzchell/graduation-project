@@ -1,4 +1,4 @@
-# Onderzoek naar het AllesOnline CMS
+# **Onderzoek naar het AllesOnline CMS**
 
 # Inleiding
 
