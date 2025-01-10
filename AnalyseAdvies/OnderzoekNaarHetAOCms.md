@@ -4,12 +4,12 @@
 
 Dit document beschrijft de analyse van het AllesOnline CMS en is gericht op het identificeren van knelpunten binnen het huidige systeem, evenals het doen van aanbevelingen. Het onderzoek is uitgevoerd als onderdeel van een *Available Product Analysis*.
 
-> _Andere onderdelen van het Available Product Analysis:_
-> * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
-> * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
-
-> *De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse.* 
-> * [SWOT: AllesOnline CMS ](./SwotAOCms.md)
+>**Andere onderdelen van het Available Product Analysis:**
+>* [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md) 
+>* [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
+>
+>**De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse:** 
+>* [SWOT: AllesOnline CMS ](./SwotAOCms.md)
 
 # Beheren van content 
 
@@ -19,7 +19,7 @@ Het AllesOnline CMS is geïntegreerd met **Laravel** en maakt gebruik van het **
 
 De `ContentManagerController` beheert de pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties van pagina's. Daarnaast biedt het de functionaliteit om de rechten van gebruikers te verifiëren voor het beheren van specifieke content en pagina's binnen het CMS.
 
-Naast deze basisfunctionaliteiten biedt de controller ook de volgende functionaliteiten:
+**Naast deze basisfunctionaliteiten biedt de controller ook de volgende functionaliteiten:**
 
 * **Content hiërarchie en volgorde:** Het beheren van de hiërarchie en volgorde van pagina-items in de database via methoden zoals `updateManagedContent`.
 * **Autorisatie:** Door middel van methoden zoals can en `methodPermission` wordt gecontroleerd of gebruikers de juiste rechten hebben om specifieke acties uit te voeren. Dit wordt ondersteund door middleware en specifieke permissies die in een configuratiebestand gedefinieerd kunnen worden.
@@ -84,7 +84,7 @@ Een van de grootste gebreken van het AllesOnline CMS is de beperkte en verouderd
 >  * [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldAllesOnlineCmsSchema.md).
 
 **Aanbeveling**:
-* RZorg voor correcte documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, met voorbeelden van hoe functionaliteiten in verschillende scenario’s gebruikt kunnen worden. Dit voorkomt onduidelijkheid en zorgt ervoor dat developers zich kunnen concentreren op het realiseren van de requirements van klanten.
+* Zorg voor correcte documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, met voorbeelden van hoe functionaliteiten in verschillende scenario’s gebruikt kunnen worden. Dit voorkomt onduidelijkheid en zorgt ervoor dat developers zich kunnen concentreren op het realiseren van de requirements van klanten.
 
 ## Complexe codestructuur
 
