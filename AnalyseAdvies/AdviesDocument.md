@@ -72,7 +72,7 @@ In tegenstelling tot Filament is Statamic niet volledig geïntegreerd met Larave
 
 ## Flat-file versus Database
 
-Met Statamic is het mogelijk om eenvoudig te kiezen tussen een flat-file of een databasegebaseerde datalaag. De flat-filearchitectuur is eenvoudig, snel en geschikt voor kleine tot middelgrote websites. Echter, bij grotere hoeveelheden data of meerdere gelijktijdige bewerkingen, is een van de databaseconfiguraties de betere keuze. Deze bieden namelijk betere schaalbaarheid en geavanceerder gegevensbeheer door het gebruik van een database.
+Met Statamic is het mogelijk om eenvoudig te kiezen tussen een flat-file of een database-gebaseerde architectuur. De flat-filearchitectuur is eenvoudig, snel en geschikt voor kleine tot middelgrote websites. Echter, bij grotere hoeveelheden data of meerdere gelijktijdige bewerkingen, is één van de databaseconfiguraties een betere keuze. Deze bieden namelijk betere schaalbaarheid en geavanceerder gegevensbeheer door het gebruik van een database.
 
 ## Gegevensbeheer
 
@@ -82,7 +82,7 @@ Het wisselen tussen de flat-file- en eloquent-driverconfiguratie is volledig gea
 
 ## Multi-site
 
-Statamic biedt ondersteuning voor multisite-configuraties, wat nuttig is wanneer meerdere websites of subdomeinen voor klanten binnen één installatie beheerd moeten worden. Dit kan echter de flexibiliteit en schaalbaarheid van de website beperken.
+Statamic biedt ondersteuning voor multisite-configuraties, wat nuttig kan zijn wanneer meerdere websites of subdomeinen voor klanten binnen één installatie beheerd moeten worden. Dit kan echter de flexibiliteit en schaalbaarheid van de website beperken.
 
 ## DIY
 
@@ -90,7 +90,7 @@ De gebruiksvriendelijke interface stelt niet-technische gebruikers in staat om g
 
 ## Kosten 
 
-De kosten voor Statamic zijn relatief flexibel en biedt verschillende licentieopties op basis van het aantal websites. De keuze voor de **Statamic Pro** licentie is noodzakelijk voor commerciële toepassingen, maar de **Master License** biedt een goede mogelijkheid om meerdere websites te beheren tegen een gereduceerde prijs. Bij verdere groei kan het abonnementsmodel van de **Platform Subscription** voordeliger zijn.
+Afhankelijk van het aantal websites dat met Statamic in productie wordt genomen, biedt Statamic verschillende licentieopties. De keuze voor de **Statamic Pro** licentie is noodzakelijk voor commerciële toepassingen, maar de **Master License** biedt een goede mogelijkheid om meerdere websites te beheren tegen een gereduceerde prijs. Bij verdere groei kan het abonnementsmodel van de **Platform Subscription** voordeliger zijn.
 
 ## Beperkingen en overwegingen
 
