@@ -125,13 +125,21 @@ Het enige nadeel voor Statamic is dat de kosten voor een licentie in eerste inst
 Voor klanten die zowel complexiteit als een marketingwebsite verwachten, kan gesteld worden dat het inzetten van beide oplossingen een realistische keuze is. In dit geval zou bijvoorbeeld een adminpaneel voor stakeholders in Filament gerealiseerd kunnen worden, terwijl de marketingwebsite – of mogelijk zelfs whitelabel-websites – in Statamic beheerd kunnen worden. Op deze manier kan een diverse verzameling systemen worden opgeleverd, die elk afgestemd zijn op hun specifieke use cases. Dit zou bijvoorbeeld nuttig kunnen zijn voor projecten zoals OpleidingVinden of ScamAdviser.
 
 ## Voor migratie van bestaande projecten
---> gebruik Filament
+
+Voor de migratie van bestaande projecten is het raadzaam om te migreren naar **Filament**. Dit komt doordat Filament in staat is om relatief dicht bij de datastructuur van het AllesOnline CMS te blijven. De benodigde aanpassingen zijn minimaal en kunnen in grote lijnen geautomatiseerd worden met behulp van een op maat gemaakte migratietool.
+
+Omdat Filament volledig compatibel is met **Eloquent ORM**, kunnen modellen en gegevens uit het huidige systeem vrijwel direct worden hergebruikt. Deze compatibiliteit zorgt ervoor dat de overgang naar Filament soepel kan verlopen, zonder dat er ingrijpende wijzigingen nodig zijn in de onderliggende entiteitslaag. 
+
+Er zijn ook risico's voor de migratie naar Filament. Dit geldt vooral voor de diversiteit aan architectuurkeuzes en custom componenten die in de loop der jaren voor projecten van het AllesOnline CMS zijn gemaakt. Omdat dit per project drastisch kan verschillen, is het mogelijk dat er tussen de verschillende projectmigraties edgecases naar voren komen. Dit maakt de ontwikkeling van een volledig geautomatiseerde tool complexer en brengt dus extra tijd met zich mee.
+
+Het migreren naar **Statamic** is, vooral voor grotere projecten, minder geschikt vanwege de afwijkende datastructuren. Bij Statamic is een aanzienlijke herstructurering van de data vereist, wat voor complexe projecten een tijdrovende en kostbare operatie kan zijn.
+
 
 ## Langetermijneffecten
 
-Hoewel de keuze om externe systemen te integreren nog steeds een investering is, kan het AllesOnline in de toekomst veel voordelen opleveren. Door te vertrouwen op doorontwikkelde oplossingen van externe partijen kan AllesOnline zich blijven aanpassen aan technologische innovaties, zonder de last van veroudering van een eigen systeem. Dit bevordert de duurzaamheid van de bedrijfsvoering en voorkomt dat technologische achterstanden de groei belemmeren. 
+Hoewel de keuze om externe systemen te integreren nog steeds een investering is, kan het AllesOnline in de toekomst veel voordelen opleveren. Door te vertrouwen op doorontwikkelde oplossingen van externe partijen kan AllesOnline zich blijven aanpassen aan technologische innovaties, zonder de last van veroudering van een eigen systeem. Dit bevordert de duurzaamheid van de bedrijfsvoering en voorziet dat de focus kan liggen op het voldoen aan klantbehoeften in plaats van het onderhouden van verouderde systemen.
 
-Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toekomstgerichte speler in de markt, waardoor het aantrekkelijk blijft voor zowel klanten als talentvolle toekomstige medewerkers. Op strategisch niveau kan deze keuze bijdragen aan stabiele groei en een concurrentievoordeel op de lange termijn, omdat de focus van het bedrijf optimaal kan worden benut voor klantgerichte innovatie en creatie.
+Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toekomstgerichte speler in de markt, waardoor het aantrekkelijk blijft voor zowel klanten als talentvolle, toekomstige medewerkers. Strategisch gezien kan deze beslissing bijdragen aan stabiele groei en biedt het een concurrentievoordeel, doordat de bedrijfsfocus volledig gericht blijft op klantgerichte innovatie en creatieve oplossingen.
 
 # Roadmap
 
@@ -224,4 +232,12 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 
 
 # Conclusie
+
+In dit adviesdocument zijn, op basis van het uitgevoerde onderzoek, de mogelijkheden voor AllesOnline om van het interne CMS over te stappen naar **Filament** en **Statamic** geformuleerd. Het onderzoek onderbouwd dat het huidige AllesOnline CMS, hoewel het enkele voordelen biedt, beperkingen vertoont op het gebied van veroudering, onderhoud en uitbreidbaarheid. Het is daarom niet verantwoord om de capaciteit van het developmentteam te benutten voor het onderhouden en doorontwikkelen van dit systeem.
+
+Filament is een uitstekende keuze voor projecten die complexe, op maat gemaakte systemen vereisen, zoals webapplicaties met een uitgebreid assortiment, grote hoeveelheden data of complexe klantenservicesystemen. Dit mede omdat de componenten vna Filament eenvoudig kunnen worden aangepast via PHP. Ook de sterke integratie met Laravel is een voordeel voor het developmentteam van AllesOnline.
+
+Statamic, aan de andere kant, biedt een uitstekende oplossing voor marketingwebsites met dynamische contentbehoeften en kan snel en efficiënt worden geïmplementeerd voor deze minder complexe projecten. Het is een gebruiksvriendelijke keuze voor klanten die behoefte hebben aan een gestandaardiseerde websiteoplossing zonder veel technische diepgang.
+
+Op basis van de analyse en de verschillende voordelen van Filament en Statamic wordt het aanbevolen om voor de migratie van bestaande projecten en nieuwe ontwikkelingen te kiezen voor Filament als de primaire oplossing. De compatibiliteit met het huidige AllesOnline CMS, de mogelijkheid om geautomatiseerde migraties te ontwikkelen en de relatief vergelijkbare datastructuren maken Filament de beste keuze. Statamic kan echter worden ingezet voor eenvoudigere marketingwebsites of als een alternatief voor specifieke klantbehoeften.
 
