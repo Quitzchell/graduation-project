@@ -51,11 +51,11 @@ Filament biedt standaard geen module die het mogelijk maakt om objecten hiërarc
 
 Net zoals in het AllesOnline CMS, kan in Filament een `Page`-model worden gerealiseerd. Ook hier is dit model verantwoordelijk voor het persisteren van de pagina's binnen een website. Binnen het model worden belangrijke gegevens, zoals de naam van de pagina, de URL en het toegepaste `Template` opgeslagen. Net zoals in het AllesOnline CMS wordt aan de hand van een `Template` bepaald welke content aan een pagina kan worden toegevoegd. Deze content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `Content`-model.
 
-## Templates, Blocks en FormComponents
+## Templates, Blocks en Form-components
 
-Ook in Filament dient een `Template`, net zoals in het AllesOnline CMS, als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kan worden. Echter, kan een `Template` binnen Filament aan de hand van PHP-classes worden gedefineerd. Dit maakt het mogelijk om gebruik te maken van interfaces om bepaalde functionaliteiten van een `Template`-class te abstracteren. Denk hierbij aan het verplichten van het beschikbaar stellen van het `Template`-schema. 
+Ook in Filament dient een `Template`, net zoals in het AllesOnline CMS, als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kunnen worden. Echter, kan een `Template` binnen Filament aan de hand van PHP-classes worden gedefineerd. Dit maakt het mogelijk om gebruik te maken van interfaces om bepaalde functionaliteiten van een `Template`-class te abstracteren. Denk hierbij aan het verplichten van het beschikbaar stellen van het `Template`-schema. 
 
-De schema's voor `Templates` worden opgemaakt met de door Filament beschikbaar gestelde FormComponents. Denk hierbij aan invoervelden voor tekst, selecties, relaties of datums. Binnen een `Template` is het ook weer mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van FormComponents beschikbaar wordt gesteld. Deze schema's noemen we binnen dit systeem ook weer `Blocks`, en ook deze kunnen geordend worden.
+De schema's voor `Templates` worden opgemaakt met de door Filament beschikbaar gestelde `Form`-components. Denk hierbij aan invoervelden voor tekst, selecties, relaties of datums. Binnen een `Template` is het ook weer mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `Form`-components beschikbaar wordt gesteld. Deze schema's noemen we binnen dit systeem ook weer `Blocks`, en ook deze kunnen geordend worden.
 
 # Beheren van objecten
 
@@ -71,7 +71,7 @@ Filament maakt gebruik van `Eloquent`-modellen voor de representatie van objecte
 
 In tegenstelling tot het AllesOnline CMS, worden de CMS-schema's voor objecten in Filament gedefinieerd in de `Resource` die bij de class van het object hoort. Dit betekent dat deze schema's, net zoals een `Templates`, in PHP gedefinieerd worden. Dit biedt verschillende voordelen. Zo kunnen developers onder andere inline de queries voor relatievelden uitbreiden, validaties toevoegen of velden reactief maken. Daarnaast profiteren ze ook van autocompletion.
 
-Zoals al eerder benoemt wordt voor het definiëren van de velden in een schema gebruikt gemaakt van de door Filament beschikbaar gestelde `FormComponents`.
+Zoals al eerder benoemt wordt voor het definiëren van de velden in een schema gebruikt gemaakt van de door Filament beschikbaar gestelde `Form`-components.
 
 # Evaluatie van Filament
 
