@@ -96,7 +96,7 @@ Indien het nodig is om voor entiteiten binnen een systeem specifieke Eloquent-mo
 
 Het omzetten van de flat-file of eloquent-driver configuratie naar Runway vergt meer werk. Allereerst moeten alle entiteiten die als Eloquent-model beheerd moeten worden, worden aangemaakt. Deze moeten vervolgens binnen het configuratiebestand worden meegegeven. Daarna is het belangrijk om databasemigraties op te zetten, waarbij rekening gehouden moet worden met de door Runway geaccepteerde datatypes voor de `FieldTypes` die in de `Blueprint` zijn gedefinieerd. In het geval dat er gebruik gemaakt is van relaties tussen objecten, moet de `FieldTypes` voor het beheren hiervan in de `Blueprint` worden vervangen door specifieke `Runway FieldTypes`.
 
-Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionaliteit voor het beheren van pagina te behouden. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
+Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionaliteit voor het beheren van templates te behouden. Bijvoorbeeld door de `Blueprints` van de templates om te zetten naar `FieldSets`. Deze kunnen dan doormiddel van een `replicator` geselecteerd worden.
 
 > * [Runway addon documentatie](https://runway.duncanmcclean.com/)
 > * [Runway configuratie](../Bijlagen/RunwayConfigFile.md)
