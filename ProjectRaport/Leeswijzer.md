@@ -118,7 +118,7 @@ Nadat ik zowel een AllesOnline-prototype als een Filament CMS-prototype had gere
 Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, maar een Proof of Concept (PoC) te realiseren. Het doel van de PoC is om aan te tonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's  omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor het realiseren van deze tool heb ik gekozen om gebruik te maken van Symfony CLI-componenten.
 
 > _Verantwoording voor de keuze om Symfony voor de tool gebruiken lees je hier_:
-> * [Onderzoek naar Tool(s) voor Migratie](../AnalyseAdvies/OnderzoekNaarToolsVoorMigratie.md)
+> * [Onderzoek naar Tool(s) voor Migratie](../AnalyseAdvies/OnderzoekVoorCmsMigratie.md)
 
 Met de tool is het in eerste opzet mogelijk om een XML-block om te zetten naar een PHP-class die gebruikt kan worden door het Filament CMS. 
 
@@ -139,10 +139,12 @@ Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben i
 
 Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van het prototype met Statamic. Omdat Statamic in meerdere verschillende configuraties kan worden gebruikt, heb ik ook meerdere Designs gerealiseerd. Echter zijn deze wel allemaal vrij strict in het gebruik van een van de configuraties, terwijl het ook mogelijk is om de configuraties te combineren. Uiteindelijk verwacht ik dat dit voor AllesOnline de beste oplossing zou zijn als er gekozen wordt om met Statamic te werken. 
 
+// todo: add repos
 * Design voor Statamic CMS met flat-file //todo
 * Design voor Statamic met eloquent-driver //todo
 * Design voor Statamic met Runway-addon //todo
 * [Technische documentatie van CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
+
 ### Conclusies onderzoek naar Statamic CMS
 
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
