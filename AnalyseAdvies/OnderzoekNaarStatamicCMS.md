@@ -114,7 +114,7 @@ Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionali
 
 Hoewel Statamic veel van zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig en soms zelfs incompleet. Dit wordt vooral duidelijk wanneer je schema's via de codebase voor het CMS wilt definiëren. In de documentatie worden de velden die gebruikt kunnen worden niet gedefinieerd, wat de indruk wekt dat Statamic verwacht dat je hun UI gebruikt voor het beheren van schema's. Echter, ontbreken bepaalde opties in de UI, waardoor het alsnog nodig is om variabelen via de codebase aan je schema's mee te geven. 
 
-**aanbevelingen**: Moedig developers aan om actief deel te nemen aan de community van Statamic. Er is een actieve community en er zijn vaak gedetailleerde voorbeelden te vinden via GitHub of de Discord-community.
+**Aanbeveling**: Moedig developers aan om actief deel te nemen aan de community van Statamic. Er is een actieve community en er zijn vaak gedetailleerde voorbeelden te vinden via GitHub of de Discord-community.
 
 ## Gebruik van Vue 2
 
@@ -122,7 +122,7 @@ Statamic maakt gebruik van Vue 2 voor de weergave in het control panel. Dit is o
 
 Daarnaast heeft momenteel slechts één van de developers bij AllesOnline ervaring met Vue.
 
-**aanbevelingen**: Faciliteer training en kennisdeling om ontwikkelaars in staat te stellen ervaring op te doen met Vue.
+**Aanbeveling**: Faciliteer training en kennisdeling om ontwikkelaars in staat te stellen ervaring op te doen met Vue.
 
 ## Verschillen tussen werking Runway en andere configuraties
 
@@ -130,7 +130,9 @@ Het verschil tussen de flat-file en eloquent-driver configuraties in Runway is a
 
 ## Afwijkende datastructuren tussen Statamic en AllesOnline
 
-In alle verschillende configuraties wijkt de datastructuur van Statamic af van die van het AllesOnline CMS. Deze variaties maken niet alleen het migreren van AllesOnline naar Statamic aanziek complexer dan een migratie naar **Filament**. 
+In alle verschillende configuraties wijkt de datastructuur van Statamic af van die van het AllesOnline CMS. Deze variaties maken niet alleen het migreren van AllesOnline naar Statamic aanziek complexer dan een migratie naar **Filament**.
+
+**Aanbeveling**: Voor migraties van projecten met het AllesOnline CMS is het verstandiger om te migreren naar een CMS met Filament.
 
 ## Uitbreidbaarheid van Statamic
 
