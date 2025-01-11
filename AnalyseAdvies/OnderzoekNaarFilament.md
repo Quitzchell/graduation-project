@@ -71,7 +71,7 @@ Filament maakt gebruik van `Eloquent`-modellen voor de representatie van objecte
 
 In tegenstelling tot het AllesOnline CMS, worden de CMS-schema's voor objecten in Filament gedefinieerd in de `Resource` die bij de class van het object hoort. Dit betekent dat deze schema's, net zoals een `Template`, in PHP gedefinieerd worden. Dit biedt verschillende voordelen. Zo kunnen developers onder andere inline de queries voor relatievelden uitbreiden, validaties toevoegen of velden reactief maken. Daarnaast profiteren ze ook van autocompletion.
 
-Zoals al eerder benoemt wordt voor het definiëren van de velden in een schema gebruikt gemaakt van de door Filament beschikbaar gestelde `Form`-components.
+Zoals al eerder benoemd wordt voor het definiëren van de velden in een schema gebruik gemaakt van de door Filament beschikbaar gestelde `Form`-components.
 
 # Evaluatie van Filament
 
