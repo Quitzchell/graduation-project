@@ -2,17 +2,17 @@
 
 # Inleiding
 
-Dit document bevat de inzichten en aanbevelingen die zijn verkregen tijdens het onderzoek naar beschikbare tools voor de migratie van het AllesOnline CMS naar een nieuwe CMS-oplossing. Bij het kiezen van een tool of framework voor de migratie zijn verschillende opties onderzocht, waaronder **PHP-Rector**, **Laravel** en **Symfony**.
+Dit document bevat inzichten en aanbevelingen, die zijn verkregen tijdens het onderzoek naar beschikbare tools voor de migratie van het AllesOnline CMS naar een nieuw CMS. Bij het kiezen van een tool of framework voor de migratie zijn verschillende opties onderzocht, waaronder **PHP-Rector**, **Laravel** en **Symfony**.
 
 # PHP-Rector
 
 Binnen AllesOnline is **PHP-Rector** meerdere keren genoemd als tool voor het automatiseren van versie-updates van Laravel en/of PHP. PHP-Rector is een tool die het proces van refactoren en upgraden van PHP-code automatiseert, met als doel developers tijd en moeite te besparen door repetitieve taken over te nemen. Dit wordt bereikt door middel van regels die via een configuratie in specifieke sets kunnen worden gedefinieerd.
 
-Hoewel het mogelijk is om op maat gemaakte regels voor deze tool te maken, is het belangrijk op te merken dat PHP-Rector niet specifiek is ontworpen om bestanden te transformeren (bijvoorbeeld van een XML-bestand naar een PHP-class). Het gebruik van PHP-Rector voor dergelijke complexe taken kan daarom uitdagend zijn. Het advies is om PHP-Rector vooral te gebruiken voor het doel waarvoor het oorspronkelijk is ontworpen: het updaten van PHP- en/of Laravel-versies.
+Hoewel het mogelijk is om op maat gemaakte regels voor deze tool te maken, is het belangrijk op te merken dat PHP-Rector niet specifiek is ontworpen om bestanden te transformeren (bijvoorbeeld van een XML-bestand naar een PHP-class). Het gebruik van PHP-Rector voor dergelijke complexe taken is daarom niet de eerste keus. Het advies is om PHP-Rector vooral te gebruiken voor het doel waarvoor het oorspronkelijk is ontworpen: het updaten van PHP- en/of Laravel-versies.
 
 # Maatwerk
 
-Voor de migratie van het AllesOnline CMS naar een nieuw systeem is het ook de optie om gebruik te maken van een op maat gemaakte CLI-applicatie. Voor deze opties is gekeken naar Laravel en Symfony. 
+Voor de migratie van het AllesOnline CMS naar een nieuw systeem is het beter om gebruik te maken van een op maat gemaakte CLI-applicatie. Voor deze opties is gekeken naar Laravel en Symfony.
 
 ## Laravel
 

@@ -55,7 +55,7 @@ Net zoals in het AllesOnline CMS, kan in Filament een `Page`-model worden gereal
 
 Ook in Filament dient een `Template`, net zoals in het AllesOnline CMS, als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kunnen worden. Echter, kan een `Template` binnen Filament aan de hand van PHP-classes worden gedefineerd. Dit maakt het mogelijk om gebruik te maken van interfaces om bepaalde functionaliteiten van een `Template`-class te abstracteren. Denk hierbij aan het verplichten van het beschikbaar stellen van het `Template`-schema. 
 
-De schema's voor `Templates` worden opgemaakt met de door Filament beschikbaar gestelde `Form`-components. Denk hierbij aan invoervelden voor tekst, selecties, relaties of datums. Binnen een `Template` is het ook weer mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `Form`-components beschikbaar wordt gesteld. Deze schema's noemen we binnen dit systeem ook weer `Blocks`, en ook deze kunnen geordend worden.
+De schema's voor `Templates` worden opgemaakt met de door Filament beschikbaar gestelde `Form`-components (invoervelden). Binnen een `Template` is het ook weer mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `Form`-components beschikbaar wordt gesteld. Deze schema's noemen we binnen dit systeem ook weer `Blocks`, en ook deze kunnen geordend worden.
 
 # Beheren van objecten
 
