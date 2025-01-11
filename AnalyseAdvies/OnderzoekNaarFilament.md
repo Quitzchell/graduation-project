@@ -40,7 +40,7 @@ Voor het beheren van gegevens maakt Filament gebruik van de `Resource`-classes. 
 
 1. **CRUD-operaties**: `Resources` maken gebruik van Laravel's Eloquent ORM voor het uitvoeren van CRUD-operaties.
 2. **Views**: Standaard voorziet een `Resource` in een info-, create-, edit- en overview-weergave. Deze views kunnen worden aangepast om te voldoen aan specifieke eisen van de eindgebruikers.
-3. **Componenten**: Binnen de `Resources` kunnen componenten gedefinieerd worden om de inhoud van de eerder genoemde views te definiëren. Deze componenten bepalen welke invoervelden en/of gegevens zichtbaar zijn voor de eindgebruiker en hoe ze hiermee kunnen interacteren.
+3. **Componenten**: Binnen de `Resources` kunnen componenten gedefinieerd worden om de eerder genoemde views van hun gebruikersinterface te voorzien. Denk hierbij onderandere aan invoervelden en/of gegevens zichtbaar zijn voor de eindgebruiker en hoe ze hiermee kunnen interacteren.
 4. **Permissions en Middleware**: Filament integreert met Laravel's ingebouwde autorisatiesysteem, waardoor het mogelijk is om `policies` en `gates` te gebruiken voor autorisatie. Daarnaast kan het package `spatie/laravel-permission` worden geïntegreerd voor een uitgebreidere rolgebaseerde autorisatie. 
 
 ## Menu managent
