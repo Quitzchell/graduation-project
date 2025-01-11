@@ -33,7 +33,7 @@ De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt dir
 > _Voor uitgebreide informatie over het ontwikkelen met Statamic kan de officiele documentatie geraadpleegd worden._
 > * [Statamic Documentatie](https://statamic.dev/)
 
-> _Er is ook een videocursus beschikbaar van de maker Jack McDade via Laracasts/_
+> _Er is ook een videocursus beschikbaar van de maker Jack McDade via Laracasts_
 > * [Laracast cursus](https://laracasts.com/series/learn-statamic-with-jack)
 
 # Beheren van content en objecten
@@ -52,7 +52,7 @@ Voor grotere projecten die hogere schaalbaarheid vereisen, complexere relaties b
 **Eloquent-driver**
 Met de eloquent-driver packages kan Statamic worden geconfigureerd om gegevens via Laravel's **Eloquent ORM** in een database op te slaan. In deze opzet is het echter niet mogelijk om direct de entiteiten in het systeem als Eloquent-modellen te gebruiken. In plaats daarvan worden de Entries, die voorheen in Markdown-bestanden werden opgeslagen, nu als JSON-objecten in de database gepersisteerd.
 
-Het omzetten van de flat-fileconfiguratie naar de eloquent-driverconfiguratie is relatief eenvoudig. De eloquent-driver package biedt namelijk functionaliteiten die het omzetten van flat-files naar database-records en vice versa eenvoudig maken. Hoe de eloquent-driver binnen het systeem precies wordt ingezet, kan naar wens worden geconfigureerd in het configuratiebestand van de driver. 
+Het omzetten van de flat-file configuratie naar de eloquent-driver configuratie is relatief eenvoudig. De eloquent-driver package biedt namelijk functionaliteiten die het omzetten van flat-files naar database-records en vice versa eenvoudig maken. Hoe de eloquent-driver binnen het systeem precies wordt ingezet, kan naar wens worden geconfigureerd in het configuratiebestand van de driver. 
 
 > * [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
 > * [Eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
