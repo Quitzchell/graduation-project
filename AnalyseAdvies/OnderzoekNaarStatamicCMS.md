@@ -35,11 +35,11 @@ De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt dir
 > _Er is ook een videocursus beschikbaar van de maker Jack McDade via Laracasts_
 > * [Laracast cursus](https://laracasts.com/series/learn-statamic-with-jack)
 
-# Beheren van content en objecten
+
+# Verschillende configuraties
 
 Statamic biedt redelijk wat flexibiliteit bij het persisteren en beheren van content en objecten. Standaard maakt het systeem gebruik van een `flat-file` configuratie, maar het is mogelijk om Statamic te configureren zodat het geïntegreerd kan worden met databases zoals **MySQL** of **MongoDB**.
 
-# Flat-file en eloquent-driver
 
 **Flat-file**
 De flat-fileconfiguratie biedt diverse voordelen. Ten eerste wordt er geen gebruik gemaakt van een externe database, wat resulteert in een vereenvoudigde infrastructuur. In plaats daarvan worden alle gegevens en configuraties opgeslagen als bestanden in de codebase en meegenomen in de Git-repository. Omdat er geen verzoeken naar een externe database nodig zijn, zorgt dit voor snellere laadtijden. 
@@ -56,6 +56,7 @@ Het omzetten van de flat-file configuratie naar de eloquent-driver configuratie 
 > * [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
 > * [Eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
 
+# Beheren van content en objecten
 ## Collection
 
 In Statamic zijn `Collections` containers waarin gerelateerde `Entries` worden gegroepeerd. Denk bijvoorbeeld aan pagina's, blogposts of films. Je zou `Collections` kunnen vergelijken met een repository voor vergelijkbare entiteiten binnen een systeem, omdat ze een manier bieden om gestructureerde gegevens te organiseren. 
