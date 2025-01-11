@@ -8,7 +8,7 @@
 * **Intuïtieve gebruikersinterface**: Filament biedt een breed scala aan flexibele componenten die zorgen voor een gebruiksvriendelijke interface waarin objecten beheerd kunnen worden. Hierdoor is het mogelijk een adminpanel of CMS te realiseren waarmee gebruikers hun websites en/of applicaties eenvoudig kunnen beheren.
 * **Integratie met Laravel**: Filament is goed geïntegreerd met Laravel, het framework waarmee alle developers binnen AllesOnline vertrouwd zijn. Hierdoor kan het team van AllesOnline snel vertrouwd raken met het werken met Filament.
 * **Modulariteit**: De mogelijkheid om schema's te extraheren en in aparte PHP-classes te definiëren, maakt het mogelijk om schema's te hergebruiken. Daarnaast is het mogelijk om deze geëxtraheerde classes te voorzien van interfaces om bepaalde functionaliteiten, zoals het beschikbaar stellen van het schema, op een uniforme manier te integreren.
-* **Uitbreidbaarheid**: Omdat de componenten van Filament in PHP gedefinieerd worden, is het mogelijk om voor `Fields`, `Columns` en `Entries` inline onder andere de queries voor relatievelden uitbreiden, validaties toevoegen of velden reactief maken. 
+* **Uitbreidbaarheid**: Omdat de componenten van Filament in PHP zijn gedefinieerd, kun je voor `Fields`, `Columns` en `Entries` eenvoudig inline aanpassingen maken. Zo kun je onder andere queries voor relatievelden uitbreiden, validaties toevoegen en velden reactief maken.
 * **Autocompletion**: Omdat de componenten van Filament in PHP gedefinieerd worden, profiteren developers in moderne IDE's van autocompletions. 
 
 # Weaknesses (Zwaktes)
