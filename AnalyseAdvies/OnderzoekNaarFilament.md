@@ -32,7 +32,7 @@ De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze pa
 
 # Beheren van content
 
-Hieronder worden een aantal standaard Filament-modules, maar ook zelf gerealiseerde classes benoemt om CMS-functionaliteiten te realiseren.
+Hieronder worden een aantal standaard Filament-modules, maar ook zelf gerealiseerde classes benoemd om CMS-functionaliteiten mogelijk te maken.
 
 ## Resources
 
