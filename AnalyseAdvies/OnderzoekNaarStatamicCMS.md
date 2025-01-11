@@ -11,7 +11,6 @@ Dit document beschrijft de analyse van Statamic voor het opzetten van een CMS vo
 > _De belangrijkste bevindingen over het Statamic zijn samengebracht in een SWOT-analyse._
 >  * [SWOT: CMS met Statamic](./SwotStatamicCms.md)
 
-
 # Over Statamic
 
 Omdat **Statamic** developers de mogelijkheid biedt om eenvoudig te schakelen tussen verschillende configuraties, kan het CMS op diverse manieren worden opgezet. Hoewel Statamic geïntegreerd is met **Laravel**, maakt niet elke configuratie op dezelfde manier gebruik van de **Eloquent ORM**.
