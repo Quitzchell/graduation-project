@@ -150,24 +150,42 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 	- De flat-file en eloquent-driver configuraties van Statamic zijn snel op te zetten, maar kunnen tekort komen bij projecten waar meer complexiteit verwacht wordt.
 	- De flat-file en eloquent-driver configuraties zijn, ondanks tekortkomingen, uiterst geschikt voor simpele marketing- en whitelabelwebsites.
 	- Het opzetten van de Runway configuratie kost meer tijd en kan ook bij complexere projecten tekort schieten.
-	- Hoewel Statamic een breed scala aan functionaliteiten biedt, zullen voor sommige oplossingen die in het AllesOnline CMS zijn ingebouwd, aangepaste componenten of extra logica toegepast moeten worden.
+	- Hoewel Statamic een breed scala aan functionaliteiten biedt, zullen voor sommige oplossingen die in het AllesOnline CMS zijn ingebouwd, aangepaste componenten toegevoegd moeten worden.
 
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
-	* Qua prestaties kun je met Statamic meerdere kanten op. Bij een kleine website met alleen content is de flat-file architectuur ideaal en vaak aanzienlijk sneller, omdat er geen database-query's uitgevoerd hoeven te worden. Als je echter een database configuratie gebruikt, zal het verschil in prestaties eerder te maken hebben met de kwaliteit van de code die de developer schrijft dan met de keuze voor een framework zelf.
-	* De kosten voor Statamic kunnen variëren, afhankelijk van de gekozen licentie:
-		- **Statamic Pro**: $275 per jaar per site voor commerciële toepassingen.
-		- **Master License**: $1250 voor vijf websites, voordelig voor organisaties die meerdere sites beheren.
-		- **Platform Subscription**: Een abonnementsmodel waarbij de kosten per website dalen naarmate het aantal websites toeneemt.
+	* Statamic biedt verschillende licenties voor het bouwen van websites:
+		* **Statamic Core**: Gratis voor persoonlijke projecten.
+		* **Statamic Pro**: $259 per jaar per website voor professionele toepassingen.
+		* **Master License**: $1250 per jaar voor organisaties met vijf websites, inclusief kortingen op extra licenties.
+		* **Platform Subscription**: Abonnement vanaf $175 per maand voor de eerste 25 websites, met lagere kosten per website naarmate het aantal stijgt.
+	* Voor AllesOnline is minimaal **Statamic Pro** nodig. Voor meerdere websites is de **Master License** voordelig tot 10 websites, daarna is het voordeliger om over te schakelen naar het abonnementsmodel.
+	* Omdat er bij de **Master License** voor de eerste 25 websites een vast maandelijks tarief van $175 geldt, komen de jaarlijkse kosten uit op $2100.
 
 # Terugkoppeling migratie naar nieuw CMS
 
-Omwille van het gebrek aan tijd om een zorgvuldig onderzoek te doen naar een proof of concept (PoC) waarin we het AllesOnline CMS migreren naar een Statamic-project, heb ik ervoor gekozen geen PoC op te zetten. Wel heb ik nog een advies document geschreven over het migreren van de bestaande CMS'en.
+Omdat in de analyse van Statamic al naar voren kwam dat een migratie van het AllesOnline CMS naar Statamic niet de voorkeur heeft, heb ik besloten geen proof of concept (PoC) hiervoor op te zetten. In plaats daarvan heb ik een adviesdocument geschreven over de migratie van de bestaande CMS naar Filament.
 
 > * [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
 
-# Advies
+### Conclusies over migratie naar nieuw CMS
+
+* **Hoe verloopt de migratie van de bestaande webapplicaties naar een nieuw CMS, en welke technische uitdagingen komen hierbij kijken?**
+	* De projecten binnen AllesOnline variëren sterk in opzet, zoals monolitische projecten, quasi-monolitische projecten en projecten met een decoupled architecture. Elk van deze benaderingen heeft verschillende technieken en systemen voor de verwerking van informatie binnen het CMS. Dit zorgt ervoor dat per project zorgvuldig onderzocht moet worden welke technieken gebruikt zijn en hoe deze overgezet kunnen worden naar het nieuwe CMS.
+	* In het **AllesOnline CMS** worden validatieregels voor invoervelden gedefinieerd in de Eloquent-modellen, terwijl in **Filament** deze regels aan de `Form`-componenten worden gekoppeld via schema’s. Het migreren van deze validatieregels is complex omdat de migratietool bestanden één voor één overzet, maar de validatieregels en schema’s nu uit verschillende bestanden moeten worden samengevoegd. Dit maakt het ontwikkelen van de migratietool uitdagender.
+	* Er wordt aangeraden om de migratie in kleinere projecten te beginnen, zodat een iteratief proces kan plaatsvinden. Hierdoor wordt het fundament van de migratietool stapsgewijs gebouwd en verbeterd.
+	* Streef bij migraties naar het creëren van meer uniformiteit in de architectuur. Dit kan onder andere door gebruik te maken van abstracties en is nuttig wanneer projecten in de toekomst geüpdatet moeten worden.
+
+# Advies en conclusie
+
+Op basis van het onderzoek naar het huidige CMS van AllesOnline en de mogelijke alternatieven, heb ik een advies document geschreven en kan ik het volgende antwoord op de onderzoeksvraag formuleren.
 
 > * [Adviesdocument](../AnalyseAdvies/AdviesDocument.md)
+
+### Hoe kan AllesOnline het huidige CMS verbeteren of vervangen door een extern systeem zoals Filament of Statamic?
+
+AllesOnline zou het huidige CMS niet verder moeten ontwikkelen, aangezien het onvoldoende onderhouden wordt en daardoor verouderd is. In plaats daarvan wordt aanbevolen over te stappen op een extern systeem. Beide onderzochte systemen, **Filament** en **Statamic**, bieden aanzienlijke voordelen die kunnen bijdragen aan een efficiëntere en toekomstbestendige bedrijfsvoering. **Filament** is met name geschikt voor projecten die complexere, op maat gemaakte webapplicaties vereisen, terwijl **Statamic** een uitstekende keuze is voor marketingwebsites en meer gestandaardiseerde klantbehoeften.
+
+Naast de conclusie dat **Filament** de beste keuze is voor complexere projecten, heeft het vanwege de compatibiliteit met het huidige AllesOnline CMS, ook de voorkeur voor het migreren van bestaande AllesOnline-projecten.
 
 # Reflectie 
 
