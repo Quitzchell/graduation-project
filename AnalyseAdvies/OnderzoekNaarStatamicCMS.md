@@ -114,7 +114,7 @@ Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionali
 
 Hoewel Statamic veel van zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig en soms zelfs incompleet. Dit wordt vooral duidelijk wanneer je schema's via de codebase voor het CMS wilt definiëren. In de documentatie worden de velden die gebruikt kunnen worden niet gedefinieerd, wat de indruk wekt dat Statamic verwacht dat je hun UI gebruikt voor het beheren van schema's. Echter, ontbreken bepaalde opties in de UI, waardoor het alsnog nodig is om variabelen via de codebase aan je schema's mee te geven. 
 
-**Aanbeveling**: Moedig developers aan om actief deel te nemen aan de community van Statamic. Er is een actieve community en er zijn vaak gedetailleerde voorbeelden te vinden via GitHub of de Discord-community.
+**Aanbeveling**: Moedig developers aan om actief deel te nemen aan de community van Statamic. Deze community is actief en er zijn vaak gedetailleerde voorbeelden te vinden via GitHub-issues of de Discord.
 
 ## Gebruik van Vue 2
 
