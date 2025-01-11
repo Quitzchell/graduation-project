@@ -13,7 +13,7 @@
 
 # Weaknesses (Zwaktes)
 
-* **Beheren van hierarchische gegevens**: Het beheren van hiërarchische gegevens, zoals gerealiseerd in het AllesOnline CMS, is niet standaard inbegrepen in Filament. Hiervoor moet een oplossing worden gerealiseerd.
+* **Beheren van hiërarchische gegevens**: Het beheren van hiërarchische gegevens, zoals gerealiseerd in het AllesOnline CMS, is niet standaard inbegrepen in Filament. Hiervoor moet een oplossing worden gerealiseerd.
 * **Beperkte community-ondersteuning en documentatie**: Omdat Filament nog relatief nieuw is, kan het zijn dat een oplossing voor een edgecase niet direct beschikbaar is vanuit de documentatie.
 
 # Opportunities (Kansen)
