@@ -27,7 +27,7 @@ De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt dir
 * **Search**: Standaardondersteuning voor zoekfunctionaliteit, zowel out-of-the-box als via integratie met Algolia.
 * **Navigation**: Beheer en organisatie van navigatiemenu's via een gebruiksvriendelijke drag & drop-interface.
 * **Taxonomies**: Functionaliteit voor het categoriseren en taggen van content.
-* **Users**: Beheer gebruikersgegevens en -rechten.
+* **Users**: Beheer van gebruikersgegevens en -rechten.
 
 > _Voor uitgebreide informatie over het ontwikkelen met Statamic kan de officiele documentatie geraadpleegd worden._
 > * [Statamic Documentatie](https://statamic.dev/)
