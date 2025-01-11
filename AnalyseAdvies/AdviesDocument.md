@@ -239,6 +239,4 @@ Filament is een uitstekende keuze voor projecten die complexe, op maat gemaakte 
 
 Statamic, aan de andere kant, biedt een uitstekende oplossing voor marketingwebsites met dynamische contentbehoeften en kan snel en efficiënt worden geïmplementeerd voor minder complexe projecten. Het is een gebruiksvriendelijke keuze voor klanten die behoefte hebben aan een gestandaardiseerde websiteoplossing zonder veel technische diepgang.
 
-
-
 Op basis van de analyse en de diverse voordelen van Filament en Statamic wordt aanbevolen om Filament als primaire oplossing te gebruiken voor zowel de migratie van bestaande projecten als voor nieuwe ontwikkelingen. De compatibiliteit met het huidige AllesOnline CMS, de mogelijkheid om geautomatiseerde migraties te realiseren en de relatief vergelijkbare datastructuren maken Filament de beste keuze. Statamic kan echter worden ingezet voor eenvoudigere marketingwebsites of als een alternatief voor specifieke klantbehoeften.
