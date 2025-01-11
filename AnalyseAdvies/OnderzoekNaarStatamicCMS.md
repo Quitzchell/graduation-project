@@ -130,13 +130,13 @@ Het verschil tussen de flat-file en eloquent-driver configuraties in Runway is a
 
 ## Afwijkende datastructuren tussen Statamic en AllesOnline
 
-In alle verschillende configuraties wijkt de datastructuur van Statamic af van de datastructuur van het AllesOnline CMS. Deze variaties maken niet alleen het migreren van AllesOnline naar Statamic aanziek complexer dan een migratie naar **Filament**.
+In alle verschillende configuraties wijkt de datastructuur van Statamic af van de datastructuur van het AllesOnline CMS. Deze variaties maken niet alleen het migreren van AllesOnline naar Statamic aanzienlijk complexer dan een migratie naar **Filament**.
 
 **Aanbeveling**: Voor migraties van projecten met het AllesOnline CMS is het verstandiger om te migreren naar een CMS met Filament.
 
 ## Uitbreidbaarheid van Statamic
 
-Statamic heeft een marketplace voor `Addons`, die extra functionaliteiten bieden en zijn ontwikkeld door het Statamic-team of externe partijen. Deze `Addons` zijn zowel gratis als tegen betaling beschikbaar. Het is voor ALlesOnline ook mogelijk om zelf ontwikkelde `Addons` op de marketplace aan te bieden. Voor de ontwikkeling van `Addons` wordt het aanbevolen om gebruik te maken van Vue, Laravel, Tailwind en Vite.
+Statamic heeft een marketplace voor `Addons`, die extra functionaliteiten bieden en zijn ontwikkeld door het Statamic-team of externe partijen. Deze Addons zijn zowel gratis als tegen betaling beschikbaar. Het is voor AllesOnline ook mogelijk om zelf ontwikkelde Addons op de marketplace aan te bieden. Voor de ontwikkeling van Addons wordt het aanbevolen om gebruik te maken van Vue, Laravel, Tailwind en Vite.
 
 > _Documentatie voor het realiseren van Addons voor Statamic_
 > * [Addons documentatie](https://statamic.dev/extending/addons)
@@ -155,10 +155,10 @@ Om gebruik te maken van Statamic, moet een licentie aangeschaft worden. Statamic
 
 Voor AllesOnline is minimaal de **Statamic Pro** licentie nodig, aangezien de websites voor commerciële doeleinden worden gerealiseerd.
 
-Wanneer er meerdere website met Statamic gerealiseerd gaan worden, is het interresant om gebruik te maken van de **Master License**. Lukt het om binnen een jaar tien websites in productie te brengen met Statamic ben je met dit pakket het goedkoopste uit. Na tien website of nadat het jaar waarop je met korting extra licenties kan kopen
+Wanneer er meerdere website met Statamic gerealiseerd gaan worden, is het interresant om gebruik te maken van de **Master License**. Lukt het om binnen een jaar tien websites in productie te brengen met Statamic ben je met dit pakket het goedkoopste uit. Na tien website of nadat het jaar waarop je met korting extra licenties kan kopen is het voordeliger om over te schakelen naar de **Platform Subscription**. In dit geval betaal je $2100 per jaar voor de eerste 25 websites, dit omdat er tot 25 websites een flat-fee van $175 per maand is. 
 
 
- is het voordeliger om over te schakelen naar de **Platform Subscription**. In dit geval betaal je $2100 per jaar voor de eerste 25 websites, en voor elke extra website daarna een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic. Wanneer er 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar.
+ en voor elke extra website daarna een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic. Wanneer er 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar.
 
 > * [Informatie over kosten van Platform Subscription](https://statamic.com/pricing/platform)
 
