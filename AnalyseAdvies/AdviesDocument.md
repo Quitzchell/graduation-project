@@ -197,7 +197,7 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 * Eerste projecten live en werkend met Filament en Statamic.
 * Feedbackloops geïmplementeerd voor doorontwikkeling.
 
-## **Fase 3: Migratie bestaande projecten (4-5 maanden)**
+## **Fase 3: Migratie bestaande projecten (4-6 maanden)**
 **Doel: Gecontroleerde migratie van bestaande projecten naar Filament.**
 
 ### **Maand 7-9: Start migratietool en kleine migraties**
