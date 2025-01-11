@@ -101,7 +101,7 @@ Daarnaast zal er een workaround geimplementeren moeten worden om de functionalit
 > * [Runway addon documentatie](https://runway.duncanmcclean.com/)
 > * [Runway configuratie](../Bijlagen/RunwayConfigFile.md)
 
-#### Beperkingen Runway
+## Beperkingen Runway
 
 * **Beperkte ondersteuning voor bepaalde veldtypen**: niet alle veldtypen die beschikbaar zijn in Statamic, wat inhoudt dat er naast de documenatie van Statamic ook goed naar de documentatie van Runway gekeken moet worden. 
 * **Geen ondersteuning voor pivot-gegevens in many-to-many-relaties**: Bij het werken met many-to-many-relaties biedt Runway geen mogelijkheid om pivot-gegevens mee te geven.
