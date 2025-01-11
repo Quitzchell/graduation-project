@@ -73,29 +73,30 @@ Het gebruik van een **template** voor de verschillende pagina's werkt in Statami
 
 Binnen een `Blueprint` is het mogelijk om te verwijzen naar andere schema's waarin een samenstelling van `FieldTypes` beschikbaar zijn. Deze schema's worden in Statamic gedefinieerd als `FieldSets` en kunnen ook in dit CMS worden geordend.
 
-Met de Eloquent-driverconfiguratie kan het configuratiebestand voor een `Blueprint` in de database worden opgeslagen.
+Met de Eloquent-driver configuratie kan het configuratiebestand voor een `Blueprint` in de database worden opgeslagen.
 
 ## FieldSet
 
-`Fieldsets` zijn voorgedefineerde, gegroepeerde `FieldTypes` en bieden de mogelijkheid om op een consistente manier herbruikbare contentblokken te creeren die eindgebruikers eenvoudig kunnen toevoegen en ordenen.
+`Fieldsets` zijn voorgedefinieerde, gegroepeerde `FieldTypes` en bieden de mogelijkheid om op een consistente manier herbruikbare contentblokken te creëren die eindgebruikers eenvoudig kunnen toevoegen en ordenen.
 
 ## Entry
 
 De `Entry`-class is het model dat wordt gebruikt om alle objecten binnen een collectie te representeren. Deze class biedt mogelijkheden om de gegevens van een `Entry` te persisteren. 
 
-In het geval dat de flat-fileconfiguratie wordt gebruikt, worden de bestanden als markdown in de codebase opgeslagen in de directory van de bijbehorende `Collection`. Wanneer de eloquent-driverconfiguratie toegepast is, wordt de informatie van een Entry als JSON in de database gepersisteert. 
+In het geval dat de flat-fileconfiguratie wordt gebruikt, worden de bestanden als markdown in de codebase opgeslagen in de directory van de bijbehorende `Collection`. Wanneer de eloquent-driver configuratie toegepast is, wordt de informatie van een Entry als JSON in de database gepersisteert. 
 
 > _Voorbeeld van Entry binnen Page collection voor de homepage_
 > * [Markdown voor homepage](../Bijlagen/VoorbeeldStatamicFlatFile.md)
 
 # Runway
 
-Mocht het nodig zijn om voor je entiteiten specifieke Eloquent-modellen en databasetabellen te gebruiken, dan kan een configuratie met de `Runway`-addon worden gebruikt. Deze addon is ontwikkeld door **The Rad Pack**, een groep developers die nauw samenwerken met het Statamic-team. Met `Runway` kun je Eloquent-models in Statamic weergeven en beheren.
+Indien het nodig is om voor entiteiten binnen een systeem specifieke Eloquent-modellen en databasetabellen te gebruiken, kan een configuratie met de `Runway`-addon worden toegepast. Deze addon is ontwikkeld door **The Rad Pack**, een groep developers die nauw samenwerken met het Statamic-team. Met `Runway` kun je Eloquent-models in Statamic weergeven en beheren.
 
 ## Runway
 
-Het omzetten van de reguliere Statamic-configuratie naar Runway vergt, in tegenstelling tot de eloquent-driver, meer wijzigingen. Naast het configuratiebestand dat opgezet moet worden, is het ook nodig om voor alle entiteiten die je als specifieke Eloquent-models wilt beheren, Eloquent-models aan te maken, Runway-resources te definiëren en databasemigraties op te zetten. Daarnaast is het nodig om een workaround te implementeren om een functionaliteit te realiseren waarmee je gebruik kunt maken van pagina-templates. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
+Het omzetten van de Statamic flat-file of eloquent-driver configuratie naar Runway vergt meer werkt. Allereerst zullen alle entiteiten die als Eloquent-model beheert moeten gaan worden aangemaakt worden. Deze zullen vervolgens binnen het configuratiebestand meegegeven  
 
+Naast het configuratiebestand dat opgezet moet worden, zullen ook alle entiteiten die je als specifieke Eloquent-models wilt beheren aangemaakt moeten worden. Runway-resources te definiëren en databasemigraties op te zetten. Daarnaast is het nodig om een workaround te implementeren om een functionaliteit te realiseren waarmee je gebruik kunt maken van pagina-templates. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
 
 > * [Runway addon documentatie](https://runway.duncanmcclean.com/)
 > * [Runway configuratie](../Bijlagen/RunwayConfigFile.md)
@@ -126,7 +127,7 @@ Daarnaast heeft momenteel slechts één van de ontwikkelaars bij AllesOnline erv
 
 ### Groot verschil tussen werking Runway en flat-file/eloquent-driver
 
-Het verschil tussen de standaard/eloquent-driverconfiguratie en Runway is vrij groot. Je zou zelfs kunnen stellen dat dit twee verschillende CMS'en zijn, die bepaalde functionaliteiten en een frontend met elkaar delen. Dit heeft zowel voordelen als nadelen. Want ondanks dat het systeem hierdoor erg flexibel is, heeft elke configuratie een afwijkende structuur, zowel in de manier waarop het CMS achter de schermen werkt als in de manier waarop gegevens voor de frontend opgehaald moeten worden. Het migreren van gegevens tussen de configuraties kan hierdoor erg ingewikkeld zijn, zelfs als je binnen het Statamic-ecosysteem wilt migreren.
+Het verschil tussen de flat-file en eloquent-driver configuratie en Runway is vrij groot. Je zou zelfs kunnen stellen dat dit twee verschillende CMS'en zijn, die bepaalde functionaliteiten en een frontend met elkaar delen. Dit heeft zowel voordelen als nadelen. Want ondanks dat het systeem hierdoor erg flexibel is, heeft elke configuratie een afwijkende structuur, zowel in de manier waarop het CMS achter de schermen werkt als in de manier waarop gegevens voor de frontend opgehaald moeten worden. Het migreren van gegevens tussen de configuraties kan hierdoor erg ingewikkeld zijn, zelfs als je binnen het Statamic-ecosysteem wilt migreren.
 
 ## Uitbreidbaarheid van Statamic
 
