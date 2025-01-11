@@ -106,13 +106,13 @@ Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionali
 * **Geen ondersteuning voor pivot-gegevens in many-to-many-relaties**: Bij het werken met many-to-many-relaties biedt Runway geen mogelijkheid om pivot-gegevens mee te geven.
 * **Ontbreken van ondersteuning voor polymorfe relaties**: Geen ondersteuning voor polymorfe relaties, waardoor er geen mogelijkheid is om een model aan meerdere andere modellen te associëren.
 * **Out-of-the-box navigation functionaliteit vervalt**: De standaard Statamic-navigatie kan niet rechtstreeks omgaan met Runway-modellen. Het is dus niet mogelijk om Runway-gegevens direct op te nemen in de standaard navigatiefunctionaliteit zonder zelf aangepaste code toe te voegen.
-* **Afhankelijkheid van externe ontwikkelaars**: Runway is ontwikkeld door een groep externe ontwikkelaars. Hoewel een groot deel van deze ontwikkelaars ook deel uitmaakt van het Statamic-team, geniet dit project toch minder prioriteit. Dit betekent dat men bij problemen of de behoefte aan nieuwe functies afhankelijk is van de beschikbaarheid en bereidheid van The Rad Pack om updates of ondersteuning te bieden.
+* **Afhankelijkheid van externe ontwikkelaars**: Runway is ontwikkeld door een groep externe ontwikkelaars. Hoewel een groot deel van deze ontwikkelaars ook deel uitmaakt van het Statamic-team, geniet dit project toch minder prioriteit. Dit betekent dat men bij problemen of de behoefte aan nieuwe functies afhankelijk is van de beschikbaarheid en bereidheid van **The Rad Pack** om updates en ondersteuning te bieden.
 
 # Evaluatie van Statamic
 
 ## Documenatie en ondersteuning
 
-Hoewel Statamic veel van zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig en soms zelfs incompleet. Dit wordt vooral duidelijk wanneer je via de codebase schema's voor het CMS wilt definiëren. In de documentatie worden de velden die gebruikt kunnen worden niet gedefinieerd, wat de indruk wekt dat Statamic verwacht dat je hun UI gebruikt voor het beheren van schema's. Echter, bepaalde opties ontbreken in de UI, waardoor het alsnog nodig is om via codebase variabelen voor je schema's mee te geven. 
+Hoewel Statamic veel van zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig en soms zelfs incompleet. Dit wordt vooral duidelijk wanneer je schema's via de codebase voor het CMS wilt definiëren. In de documentatie worden de velden die gebruikt kunnen worden niet gedefinieerd, wat de indruk wekt dat Statamic verwacht dat je hun UI gebruikt voor het beheren van schema's. Echter, bepaalde opties ontbreken in de UI, waardoor het alsnog nodig is om via codebase variabelen voor je schema's mee te geven. 
 
 **aanbevelingen**: Moedig developers aan om actief deel te nemen aan de community van Statamic. Er is een actieve community en er zijn vaak gedetailleerde voorbeelden te vinden via GitHub of de Discord-community.
 
