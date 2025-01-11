@@ -136,7 +136,7 @@ In alle verschillende configuraties wijkt de datastructuur van Statamic af van d
 
 ## Uitbreidbaarheid van Statamic
 
-Statamic heeft een marketplace voor `Addons`, die extra functionaliteiten bieden en zijn ontwikkeld door het Statamic-team of externe partijen. Deze Addons zijn zowel gratis als tegen betaling beschikbaar. Het is voor AllesOnline ook mogelijk om zelf ontwikkelde Addons op de marketplace aan te bieden. Voor de ontwikkeling van Addons wordt het aanbevolen om gebruik te maken van Vue, Laravel, Tailwind en Vite.
+`Statamic` heeft een marketplace voor `Addons`, die extra functionaliteiten bieden en zijn ontwikkeld door het `Statamic`-team of externe partijen. Deze `Addons` zijn zowel gratis als tegen betaling beschikbaar. Het is voor AllesOnline ook mogelijk om zelf ontwikkelde `Addons` op de marketplace aan te bieden. Voor de ontwikkeling van `Addons` wordt het aanbevolen om gebruik te maken van `Vue`, `Laravel`, `Tailwind` en `Vite`.
 
 > _Documentatie voor het realiseren van Addons voor Statamic_
 > * [Addons documentatie](https://statamic.dev/extending/addons)
