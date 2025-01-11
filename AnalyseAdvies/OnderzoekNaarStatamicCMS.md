@@ -42,11 +42,11 @@ Statamic biedt redelijk wat flexibiliteit bij het persisteren en beheren van con
 # Flat-file en eloquent-driver
 
 **Flat-file**
-De flat-fileconfiguratie biedt diverse voordelen. Ten eerste wordt er geen gebruik gemaakt van een externe database, wat resulteert in een vereenvoudigde infrastructuur. In plaats daarvan worden alle gegevens en configuraties opgeslagen als bestanden in de codebase. Omdat er geen verzoeken naar een externe database nodig zijn, zorgt dit voor snellere laadtijden. Omdat de vanuit de codebase opgenomen worden in de Git-repository, kunnen wijzigingen gemakkelijk worden getraceerd en, indien gewenst, teruggedraaid.
+De flat-fileconfiguratie biedt diverse voordelen. Ten eerste wordt er geen gebruik gemaakt van een externe database, wat resulteert in een vereenvoudigde infrastructuur. In plaats daarvan worden alle gegevens en configuraties opgeslagen als bestanden in de codebase en meegenomen in de Git-repository. Omdat er geen verzoeken naar een externe database nodig zijn, zorgt dit voor snellere laadtijden. 
 
-Deze configuratie kent ook nadelen. Ten eerste is de schaalbaarheid beperkt: bij grotere projecten met veel gegevens kunnen de prestaties achterblijven ten opzichte van een configuratie met een database. Daarnaast kunnen er conflicten optreden wanneer meerdere gebruikers tegelijkertijd aan bestanden werken. Tot slot biedt deze configuratie beperkte mogelijkheden voor complexe relaties. Zo worden many-to-many-relaties bijvoorbeeld niet automatisch bi-directioneel gepersist.
+Deze configuratie kent ook nadelen. Ten eerste is de schaalbaarheid beperkt: bij grotere projecten met veel gegevens kunnen de prestaties achterblijven ten opzichte van een configuratie met een database. Daarnaast kunnen er conflicten optreden wanneer meerdere gebruikers tegelijkertijd aan bestanden werken. Tot slot biedt deze configuratie beperkte mogelijkheden voor complexe relaties. Zo worden many-to-many-relaties bijvoorbeeld niet automatisch bi-directioneel verwerkt.
 
-Voor grotere projecten die hogere schaalbaarheid vereisen, complexere relaties bevatten, of waarbij meerdere gebruikers tegelijk bewerkingen uitvoeren, is het het dus verstanding om gebruik te maken van een van de configuraties die gebruik maken van een database. 
+Voor grotere projecten die hogere schaalbaarheid vereisen, complexere relaties bevatten, of waarbij meerdere gebruikers tegelijk bewerkingen uitvoeren, is het dus verstandig om gebruik te maken van één van de configuraties die gebruik maakt van een database. 
 
 **Eloquent-driver**
 Met de eloquent-driver packages kan Statamic worden geconfigureerd om gegevens via Laravel's **Eloquent ORM** in een database op te slaan. In deze opzet is het echter niet mogelijk om direct de entiteiten in het systeem als Eloquent-modellen te gebruiken. In plaats daarvan worden de Entries, die voorheen in Markdown-bestanden werden opgeslagen, nu als JSON-objecten in de database gepersisteerd.
