@@ -40,17 +40,17 @@ De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt dir
 
 Statamic biedt redelijk wat flexibiliteit bij het persisteren en beheren van content en objecten. Standaard maakt het systeem gebruik van een `flat-file` configuratie, maar het is mogelijk om Statamic te configureren zodat het geïntegreerd kan worden met databases zoals **MySQL** of **MongoDB**.
 
-**Flat-file**
+## Flat-file
 De flat-fileconfiguratie biedt diverse voordelen. Ten eerste wordt er geen gebruik gemaakt van een externe database, wat resulteert in een vereenvoudigde infrastructuur. In plaats daarvan worden alle gegevens en configuraties opgeslagen als bestanden in de codebase en meegenomen in de Git-repository. Omdat er geen verzoeken naar een externe database nodig zijn, zorgt dit voor snellere laadtijden. 
 
 Deze configuratie kent ook nadelen. Ten eerste is de schaalbaarheid beperkt: bij grotere projecten met veel gegevens kunnen de prestaties achterblijven ten opzichte van een configuratie met een database. Daarnaast kunnen er conflicten optreden wanneer meerdere gebruikers tegelijkertijd aan bestanden werken. Tot slot biedt deze configuratie beperkte mogelijkheden voor complexe relaties. Zo worden many-to-many-relaties bijvoorbeeld niet automatisch bi-directioneel verwerkt.
 
 Voor grotere projecten die hogere schaalbaarheid vereisen, complexere relaties bevatten, of waarbij meerdere gebruikers tegelijk bewerkingen uitvoeren, is het dus verstandig om gebruik te maken van één van de configuraties die gebruik maakt van een database. 
 
-**Eloquent-driver**
+## Eloquent-driver
 Met de eloquent-driver packages kan Statamic worden geconfigureerd om gegevens via Laravel's **Eloquent ORM** in een database op te slaan. In deze opzet is het echter niet mogelijk om direct de entiteiten in het systeem als Eloquent-modellen te gebruiken. In plaats daarvan worden de Entries, die voorheen in Markdown-bestanden werden opgeslagen, nu als JSON-objecten in de database gepersisteerd.
 
-Het omzetten van de flat-file configuratie naar de eloquent-driver configuratie is relatief eenvoudig. De eloquent-driver package biedt namelijk functionaliteiten die het omzetten van flat-files naar database-records en vice versa eenvoudig maken. Hoe de eloquent-driver binnen het systeem precies wordt ingezet, kan naar wens worden geconfigureerd in het configuratiebestand van de driver. 
+Het omzetten van de flat-file configuratie naar de eloquent-driver configuratie is relatief eenvoudig. De eloquent-driver package biedt namelijk functionaliteiten die het omzetten van flat-files naar database-records en vice versa eenvoudig maken. Hoe de eloquent-driver binnen het systeem precies wordt ingezet, kan worden afgestemd in het configuratiebestand van de driver. 
 
 > * [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
 > * [Eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
@@ -90,9 +90,9 @@ In het geval dat de flat-fileconfiguratie wordt gebruikt, worden de bestanden al
 
 # Runway
 
-Mocht het nodig zijn om specifieke eloquent-models en databasetabellen te gebruiken, dan kan de `Runway` addon gebruikt worden. Deze addon is ontwikkeld door **The Rad Pack**, een groep developers die nauw samenwerken met het Statamic-team. Met Runway kun je Eloquent-models in Statamic weergeven en beheren.
+Mocht het nodig zijn om voor je entiteiten specifieke Eloquent-modellen en databasetabellen te gebruiken, dan kan een configuratie met de `Runway`-addon worden gebruikt. Deze addon is ontwikkeld door **The Rad Pack**, een groep developers die nauw samenwerken met het Statamic-team. Met `Runway` kun je Eloquent-models in Statamic weergeven en beheren.
 
-### Runway
+## Runway
 
 Het omzetten van de reguliere Statamic-configuratie naar Runway vergt, in tegenstelling tot de eloquent-driver, meer wijzigingen. Naast het configuratiebestand dat opgezet moet worden, is het ook nodig om voor alle entiteiten die je als specifieke Eloquent-models wilt beheren, Eloquent-models aan te maken, Runway-resources te definiëren en databasemigraties op te zetten. Daarnaast is het nodig om een workaround te implementeren om een functionaliteit te realiseren waarmee je gebruik kunt maken van pagina-templates. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
 
