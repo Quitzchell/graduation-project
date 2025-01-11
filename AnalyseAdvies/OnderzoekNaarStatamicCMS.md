@@ -25,7 +25,7 @@ De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt dir
 * **Fields**: Diverse soorten invoervelden.
 * **Globals**: Herbruikbare informatie die globaal kan worden opgehaald.
 * **Search**: Standaardondersteuning voor zoekfunctionaliteit, zowel out-of-the-box als via integratie met Algolia.
-* **Navigation**: Beheer en organiseer navigatiemenu's via een gebruiksvriendelijke drag & drop-interface.
+* **Navigation**: Beheer en organisatie van navigatiemenu's via een gebruiksvriendelijke drag & drop-interface.
 * **Taxonomies**: Functionaliteit voor het categoriseren en taggen van content.
 * **Users**: Beheer gebruikersgegevens en -rechten.
 
