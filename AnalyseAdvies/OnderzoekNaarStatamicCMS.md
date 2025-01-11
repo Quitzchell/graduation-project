@@ -149,13 +149,13 @@ In alle verschillende configuraties wijkt de datastructuur van Statamic af van d
 Om gebruik te maken van Statamic, moet een licentie aangeschaft worden. Statamic biedt verschillende pakketten aan die gekozen kunnen worden. Hieronder een overzicht:
 
 * **Statamic Core**: Deze versie is volledig gratis en geschikt voor persoonlijke projecten.
-* **Statamic Pro**: Voor professionele toepassingen is Statamic Pro beschikbaar voor $259 per jaar per site.
-* **Master License**: Voor organisaties die meerdere websites beheren, biedt Statamic de Master License aan voor $1250. Dit pakket omvat vijf Statamic Pro-licenties met een korting van 10% en 25% korting op alle extra licenties gedurende één jaar.
+* **Statamic Pro**: Voor professionele toepassingen is `Statamic Pro` beschikbaar voor $259 per jaar per website.
+* **Master License**: Voor organisaties die meerdere websites beheren, biedt `Statamic` de `Master License` aan voor $1250. Dit pakket omvat vijf `Statamic Pro`-licenties met een korting van 10% en 25% korting op alle extra licenties gedurende één jaar.
 * **Platform Subscription**: Voor een groter aantal websites is er een abonnementsmodel beschikbaar, waarbij de kosten per website per maand variëren op basis van het aantal websites. De eerste 25 websites kosten $175 per maand (vast tarief), de volgende 75 websites kosten $7 per maand per website, de volgende 400 sites kosten $6 per maand per website, enzovoorts.
 
 Voor AllesOnline is minimaal de **Statamic Pro** licentie nodig, aangezien de websites voor commerciële doeleinden worden gerealiseerd.
 
-Wanneer er meerdere website met Statamic gerealiseerd gaan worden, is het interresant om gebruik te maken van de **Master License**. Lukt het om binnen een jaar tien websites in productie te brengen met Statamic ben je met dit pakket het goedkoopste uit. Na tien website of nadat het jaar waarop je met korting extra licenties kan kopen is het voordeliger om over te schakelen naar de **Platform Subscription**. In dit geval betaal je $2100 per jaar voor de eerste 25 websites, dit omdat er tot 25 websites een flat-fee van $175 per maand is. 
+Wanneer er meerdere website met `Statamic` gerealiseerd gaan worden, is het interresant om gebruik te maken van de **Master License**. Lukt het om binnen een jaar tien websites in productie te brengen met Statamic ben je met dit pakket het goedkoopste uit. Na tien website of nadat het jaar waarop je met korting extra licenties kan kopen is het voordeliger om over te schakelen naar de **Platform Subscription**. In dit geval betaal je $2100 per jaar voor de eerste 25 websites, dit omdat er tot 25 websites een flat-fee van $175 per maand is. 
 
 
  en voor elke extra website daarna een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic. Wanneer er 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar.
