@@ -96,14 +96,13 @@ Indien het nodig is om voor entiteiten binnen een systeem specifieke Eloquent-mo
 
 Het omzetten van de flat-file of eloquent-driver configuratie naar Runway vergt meer werk. Allereerst moeten alle entiteiten die als Eloquent-model beheerd moeten worden, worden aangemaakt. Deze moeten vervolgens binnen het configuratiebestand worden meegegeven. Daarna is het belangrijk om databasemigraties op te zetten, waarbij rekening gehouden moet worden met de door Runway geaccepteerde datatypes voor de `FieldTypes` die in de `Blueprint` zijn gedefinieerd. In het geval dat er gebruik gemaakt is van relaties tussen objecten, moet de `FieldTypes` voor het beheren hiervan in de `Blueprint` worden vervangen door specifieke `Runway FieldTypes`.
 
-Daarnaast zal er een workaround geimplementeren moeten worden om de functionaliteit voor het beheren van pagina te behouden. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
+Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionaliteit voor het beheren van pagina te behouden. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
 
 > * [Runway addon documentatie](https://runway.duncanmcclean.com/)
 > * [Runway configuratie](../Bijlagen/RunwayConfigFile.md)
 
 ## Beperkingen Runway
 
-* **Beperkte ondersteuning voor bepaalde veldtypen**: niet alle veldtypen die beschikbaar zijn in Statamic, wat inhoudt dat er naast de documenatie van Statamic ook goed naar de documentatie van Runway gekeken moet worden. 
 * **Geen ondersteuning voor pivot-gegevens in many-to-many-relaties**: Bij het werken met many-to-many-relaties biedt Runway geen mogelijkheid om pivot-gegevens mee te geven.
 * **Ontbreken van ondersteuning voor polymorfe relaties**: Geen ondersteuning voor polymorfe relaties, wat inhoudt dat het niet mogelijk is om relaties te definiëren waarbij een model meerdere andere models kan associëren. 
 * **Out-of-the-box navigation functionaliteit vervalt**: De navigation die Statamic aanbied kan enkel gebruik maken van entries in Collections. Dit betekend dat alle gegevens die via Runway worden gepersisteerd niet meegenomen kunnen worden in de standaard navigation funcionaliteit van Statamic.
