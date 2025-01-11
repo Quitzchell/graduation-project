@@ -29,7 +29,7 @@ De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt dir
 * **Taxonomies**: Functionaliteit voor het categoriseren en taggen van content.
 * **Users**: Beheer van gebruikersgegevens en -rechten.
 
-> _Voor uitgebreide informatie over het ontwikkelen met Statamic kan de officiele documentatie geraadpleegd worden._
+> _Voor uitgebreide informatie over het ontwikkelen met Statamic kan de documentatie geraadpleegd worden._
 > * [Statamic Documentatie](https://statamic.dev/)
 
 > _Er is ook een videocursus beschikbaar van de maker Jack McDade via Laracasts_
