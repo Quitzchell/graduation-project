@@ -16,16 +16,19 @@ Dit document beschrijft de analyse van Statamic voor het opzetten van een CMS vo
 
 Omdat **Statamic** developers de mogelijkheid biedt om eenvoudig te schakelen tussen verschillende configuraties, kan het CMS op diverse manieren worden opgezet. Hoewel Statamic geïntegreerd is met **Laravel**, maakt niet elke configuratie op dezelfde manier gebruik van de **Eloquent ORM**.
 
-De basisinstallatie, die gebruikmaakt van een `flat-file` configuratie, biedt direct een volledig CMS met een breed scala aan componenten voor het beheren van content en objecten. In alle configuraties die in dit onderzoek worden besproken, worden de volgende modules beschikbaar:
-* **Assets**: voor het beheren van afbeeldingen en video's.
-* **Collections**: voor het opzetten van structuur en het organiseren van content en objecten.
-* **Entries**: records van objecten en/of content.
-* **Fields**: verschillende soorten invoervelden voor content.
+In Statamic zijn `Collections` containers waarin gerelateerde `Entries` worden gegroepeerd. Denk bijvoorbeeld aan pagina's, blogposts of films. Je zou `Collections` kunnen vergelijken met een repository voor vergelijkbare entiteiten binnen een systeem, omdat ze een manier bieden om gestructureerde gegevens te organiseren. 
+
+De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt direct een volledig CMS met een breed scala aan componenten voor het beheren van content en objecten. In alle configuraties die in dit onderzoek worden besproken, zijn de volgende modules beschikbaar:
+* **Assets**: Beheer van mediabestanden zoals afbeeldingen, video's en documenten.
+* **Blueprints**: Schema's die bepalen welke Fields beschikbaar zijn bij het aanmaken of bewerken van inhoud in het CMS.
+* **Collections**: Groepen van gerelateerde inhoudsitems (Entries) die samen een bepaald type content vormen.
+* **Entries**:  Individuele inhoudsitems.
+* **Fields**: Diverse soorten invoervelden.
 * **Globals**: herbruikbare informatie die globaal kan worden opgehaald.
-* **Search**: out-of-the-box ondersteuning voor zoekfunctionaliteit, zowel on-the-fly als met behulp van Algolia.
-* **Navigation**: beheren van navigatiemenu's via een drag & drop interface.
-* **Taxonomies**: functionaliteit voor het categoriseren en taggen van content voor globale organisatie van content.
-* **Users**: Voor het beheren van gebruikersgegevens.
+* **Search**: Standaardondersteuning voor zoekfunctionaliteit, zowel out-of-the-box als via integratie met Algolia.
+* **Navigation**: Beheer en organiseer navigatiemenu's via een gebruiksvriendelijke drag & drop-interface.
+* **Taxonomies**: Functionaliteit voor het categoriseren en taggen van content.
+* **Users**: Beheer gebruikersgegevens en -rechten.
 
 > _Voor uitgebreide informatie over het ontwikkelen met Statamic kan de officiele documentatie geraadpleegd worden._
 > * [Statamic Documentatie](https://statamic.dev/)
