@@ -119,4 +119,4 @@ Het gebruik van Filament is gratis, maar het team heeft weinig ervaring met twee
 
 Hoewel Filament de nodige flexibiliteit biedt, biedt het geen kant-en-klare CMS-oplossing, wat betekent dat er extra ontwikkeltijd nodig is om CMS-functionaliteiten te implementeren. Bovendien ontbreekt een drag-and-drop-interface voor het beheren van de menu-structuur, wat mogelijk als minder intuïtief wordt ervaren. Dit kan opgelost worden door een aparte menu-manager of door een complexere drag-and-dropcomponent te ontwikkelen, vergelijkbaar met de functionaliteiten van het AllesOnline CMS.
 
-Al met al biedt Filament een veelbelovende optie voor het ontwikkelen van een CMS, maar het vereist het nog wel de nodige investering in tijd en training om optimaal benut te worden.
+Al met al biedt Filament een veelbelovende optie voor het ontwikkelen van een CMS, maar het vereist nog wel de nodige investering in tijd en training om optimaal benut te worden.
