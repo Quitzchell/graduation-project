@@ -56,15 +56,6 @@ Het omzetten van de flat-file configuratie naar de eloquent-driver configuratie 
 > * [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
 > * [Eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
 
-#### Beperkingen Eloquent-driver
-
-* **Geen ondersteuning voor eager loading**: De Eloquent Driver ondersteunt (nog) geen eager loading van relaties. Er is vanuit het team ook geen plan om dit te realiseren. 
-* **Complexiteit bij migraties**: Het beheren van database-migraties kan complexer worden, vooral bij wijzigingen in de structuur en/of naamgeving van content(types).
-* **Bi-directionele many-to-many-relaties**: Many-to-many-relaties worden enkel gepersisteerd aan het object dat bewerkt wordt. Eventuele oplossingen hiervoor zijn externe addons of het realiseren van observers die beide objecten voorzien van gegevens over hun relatie.
-* **Geen specifieke models**: De `Eloquent-driver` slaat alle gegevens op in een enkele data-kolom als JSON. Hoewel het mogelijk is om velden in afzonderlijke kolommen op te slaan, is er geen mogelijkheid om eigen tabellen te creëren die door middel van Eloquent-models verantwoordelijk zijn voor het persisteren van de gegevens.
-
-> * [Github-issue: eager loading](https://github.com/statamic/eloquent-driver/issues/119)
-
 ## Collection
 
 In Statamic zijn `Collections` containers waarin gerelateerde `Entries` worden gegroepeerd. Denk bijvoorbeeld aan pagina's, blogposts of films. Je zou `Collections` kunnen vergelijken met een repository voor vergelijkbare entiteiten binnen een systeem, omdat ze een manier bieden om gestructureerde gegevens te organiseren. 
