@@ -19,11 +19,11 @@ In Statamic zijn `Collections` containers waarin gerelateerde `Entries` worden g
 
 De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt direct een volledig CMS met een breed scala aan componenten voor het beheren van content en objecten. In alle configuraties die in dit onderzoek worden besproken, zijn de volgende modules beschikbaar:
 * **Assets**: Beheer van mediabestanden zoals afbeeldingen, video's en documenten.
-* **Blueprints**: Schema's die bepalen welke Fields beschikbaar zijn bij het aanmaken of bewerken van inhoud in het CMS.
-* **Collections**: Groepen van gerelateerde inhoudsitems (Entries) die samen een bepaald type content vormen.
+* **Blueprints**: Schema's die bepalen welke `Fields` beschikbaar zijn bij het aanmaken of bewerken van inhoud in het CMS.
+* **Collections**: Groepen van gerelateerde inhoudsitems (`Entries`) die samen een bepaald type content vormen.
 * **Entries**:  Individuele inhoudsitems.
 * **Fields**: Diverse soorten invoervelden.
-* **Globals**: herbruikbare informatie die globaal kan worden opgehaald.
+* **Globals**: Herbruikbare informatie die globaal kan worden opgehaald.
 * **Search**: Standaardondersteuning voor zoekfunctionaliteit, zowel out-of-the-box als via integratie met Algolia.
 * **Navigation**: Beheer en organiseer navigatiemenu's via een gebruiksvriendelijke drag & drop-interface.
 * **Taxonomies**: Functionaliteit voor het categoriseren en taggen van content.
