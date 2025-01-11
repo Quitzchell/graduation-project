@@ -1,38 +1,35 @@
-# Onderzoek voor CMS migratie
+# **Onderzoek voor CMS migratie**
 
-## Inleiding
+# Inleiding
 
-Dit document bevat inzichten en overwegingen die zijn opgedaan tijdens het onderzoek naar beschikbare tools voor het migreren van het AllesOnline CMS naar een nieuwe CMS-oplossing.
+Dit document bevat de inzichten en aanbevelingen die zijn verkregen tijdens het onderzoek naar beschikbare tools voor de migratie van het AllesOnline CMS naar een nieuwe CMS-oplossing. Bij het kiezen van een tool of framework voor de migratie zijn verschillende opties onderzocht, waaronder **PHP-Rector**, **Laravel** en **Symfony**.
 
-## Kiezen voor de juiste tool
+# PHP-Rector
 
-Bij het kiezen van een tool of framework voor de realisatie heb ik verschillende opties onderzocht, waaronder PHP-Rector, Laravel en Symfony.
+Binnen AllesOnline is **PHP-Rector** meerdere keren genoemd als tool voor het automatiseren van versie-updates van Laravel en/of PHP. PHP-Rector is een tool die het proces van refactoren en upgraden van PHP-code automatiseert, met als doel developers tijd en moeite te besparen door repetitieve taken over te nemen. Dit wordt bereikt door middel van regels die via een configuratie in specifieke sets kunnen worden gedefinieerd.
 
-### PHP-Rector
+Hoewel het mogelijk is om op maat gemaakte regels voor deze tool te maken, is het belangrijk op te merken dat PHP-Rector niet specifiek is ontworpen om bestanden te transformeren (bijvoorbeeld van een XML-bestand naar een PHP-class). Het gebruik van PHP-Rector voor dergelijke complexe taken kan daarom uitdagend zijn. Het advies is om PHP-Rector vooral te gebruiken voor het doel waarvoor het oorspronkelijk is ontworpen: het updaten van PHP- en/of Laravel-versies.
 
-Binnen AllesOnline is PHP-Rector meerdere keren genoemd als hulpmiddel voor het automatiseren van een Laravel- en/of PHP-versie-update. PHP-Rector is een tool die het proces van refactoren en upgraden van PHP-code automatiseert, met als doel ontwikkelaars tijd en moeite te besparen door repetitieve taken over te nemen. Dit wordt bereikt door middel van regels die via een configuratie in bepaalde sets kunnen worden gespecificeerd.
+# Maatwerk
 
-Het is mogelijk om voor deze tool op maat gemaakte regels te definiëren. Echter, omdat PHP-Rector niet specifiek is ontworpen om bestanden te transformeren (bijvoorbeeld van een XML-bestand naar een PHP-klasse), kan dit vrij complex worden. Het advies is daarom om PHP-Rector vooral te gebruiken waarvoor het in eerste instantie bedoeld is: het updaten van PHP- en/of Laravel-versies.
+Voor de migratie van het AllesOnline CMS naar een nieuw systeem is het ook de optie om gebruik te maken van een op maat gemaakte CLI-applicatie. Voor deze opties is gekeken naar Laravel en Symfony. 
 
-### Laravel
+## Laravel
 
-Een andere optie voor het migreren van het AllesOnline CMS naar een nieuw systeem was het ontwikkelen van een op maat gemaakte CLI-applicatie. Hiervoor heb ik in eerste instantie Laravel overwogen. Het framework biedt namelijk de mogelijkheid om als CLI-applicatie te functioneren, wat in principe voldoende is om een migratie te realiseren. Daarnaast is het voor de developers binnen AllesOnline een bekend framework, wat de samenwerking vergemakkelijkt en de leercurve verkleint.
+**Laravel** biedt de mogelijkheid om als CLI-applicatie te functioneren, wat voldoende is om de migratie te realiseren. Bovendien is Laravel voor de developers binnen AllesOnline een vertrouwd framework. Dit betekent dat er voor het werken met het framework theoretisch gezien geen leercurve is.
 
-Met Laravel zou het mogelijk zijn om bestanden uit een bestaande directory te lezen en deze te controleren. Waar nodig kunnen we de bestanden aanpassen om ze geschikt te maken voor het nieuwe CMS. Vervolgens kan een nieuw project worden opgezet in een andere directory, waarbij de gewijzigde gegevens worden overgezet naar het nieuwe systeem.
+Echter, het gebruik van Laravel kan ook als overkill worden beschouwd voor eenvoudige CLI-applicaties die slechts lokaal draaien in een Docker-container. In dit geval kan een meer lichtgewicht oplossing, zoals een eenvoudige PHP-script of een minimalistisch CLI-framework, de benodigde functionaliteit bieden zonder de extra boilerplating die Laravel met zich meebrengt.
 
-### Symfony
+## Symfony
 
-Omdat het gebruik van het Laravel Framework naar mijn mening overkill is voor een CLI-tool die uitsluitend lokaal nodig is voor het omzetten van een AllesOnline CMS-project naar een project met een nieuw CMS, heb ik besloten om te onderzoeken of er alternatieve frameworks bestaan waarmee je eenvoudiger een CLI-tool kunt realiseren zonder onnodige boilerplate.
+**Symfony** is een minder **opinionated** framework dan Laravel, dat developers in staat stelt de losse componenten van het framework te gebruiken zonder de volledige boilerplate mee te nemen. Sterker nog, het consolecomponent van Symfony wordt gebruikt om de CLI-functionaliteiten van Laravel te realiseren (Akter, 2024). Om deze reden zouden we kunnen stellen dat het gebruik van Symfony voor het realiseren van een CLI-applicatie geen steile leercurve heeft voor developers met ervaring in Laravel.
 
-Na wat onderzoek kwam ik uit bij Symfony, een van de frameworks waarvan Taylor Otwell (de bedenker van Laravel) componenten gebruikt om de CLI-functionaliteit in Laravel te implementeren. Om die reden zou een CLI-applicatie met Symfony waarschijnlijk snel herkenbaar en begrijpelijk zijn voor iemand met ervaring in Laravel.
+# Conclusie
 
-Omdat Symfony minder **opinionated** is dan Laravel, maakt het de mogelijkheid om losse componenten van het framework te gebruiken zonder de volledige boilerplate mee te nemen. Dit zorgt ervoor dat het project relatief klein en flexibel kan worden opgebouwd.
+Na de bovengenoemde drie opties te hebben onderzocht, is besloten om voor een Proof of Concept gebruik te maken van **Symfony**. Deze keuze is voornamelijk gebaseerd op de behoefte aan een lichte en flexibele oplossing voor het realiseren van een migratietool. Symfony biedt deze mogelijkheid door specifieke componenten te gebruiken, zonder het volledige framework te hoeven importeren. Dit maakt het ideaal voor het ontwikkelen van een compacte en overzichtelijke CLI-applicatie. Daarnaast zorgt de bekendheid van deze componenten bij ontwikkelaars met ervaring in Laravel ervoor dat de leercurve relatief klein blijft.
 
-## Conclusie
+Naast de migratietool zie ik ook een rol voor **PHP-Rector** bij het automatiseren van PHP- en Laravel-versie-updates. Dit zou eventueel vóór of na het migreren van een AllesOnline CMS-project kunnen worden uitgevoerd, om naast het migreren van het CMS-systeem ook de PHP- en Laravel-versies up-to-date te brengen.
 
-Na onderzoek en het afwegen van de verschillende opties heb ik besloten om Symfony te gebruiken voor het opzetten van een PoC voor de migratietool. Deze keuze is voornamelijk gebaseerd op de behoefte aan een lichte en flexibele oplossing voor het bouwen, zonder een uitgebreide boilerplate zoals bijvoorbeeld bij Laravel.
+# Referenties
 
-Symfony biedt de mogelijkheid om specifieke componenten te gebruiken zonder het volledige framework te hoeven implementeren. Dit maakt het ideaal voor het ontwikkelen van een compacte en overzichtelijke CLI-applicatie. Daarnaast zorgt de bekendheid van deze componenten bij ontwikkelaars met ervaring in Laravel ervoor dat de leercurve relatief klein blijft.
-
-Naast de migratietool zie ik ook een rol voor het gebruiken van PHP-Rector in het automatiseren van PHP- en Laravel-versie-updates. Dit zou eventueel vóór of na het migreren van een AllesOnline CMS-project kunnen worden uitgevoerd, om naast het migreren van het CMS-systeem ook de PHP- en Laravel-versies up-to-date te brengen. 
-
+> Akter, A. (2024, oktober 22). Laravel Requires Require Symfony/Console: A Deep Dive. Medium. [https://medium.com/@asmatanhabd/laravel-requires-require-symfony-console-a-deep-dive-546d7d89b4a8](https://medium.com/@asmatanhabd/laravel-requires-require-symfony-console-a-deep-dive-546d7d89b4a8)
