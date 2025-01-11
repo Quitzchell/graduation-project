@@ -95,7 +95,7 @@ Een van de belangrijkste voordelen van Filament is de flexibiliteit die het ontw
 
 ## Documentatie en ondersteuning
 
-Filament is relatief nieuw en de community-ondersteuning staat nog in kinderschoenen. Hoewel de documentatie uitgebreid is en qua basisinformatie compleet is, bestaat de kans dat er minder informatie beschikbaar is voor complexere oplossingen.
+Omdat Filament nog relatief nieuw is, kan het zijn dat het vinden van een oplossing voor een edgecase niet direct beschikbaar is vanuit de community of documentatie. Desondanks beschikt Filament over een actieve en groeiende open source community (FilamentPHP, 2025).
 
 **Aanbeveling**: Draag bij aan het versterken van Filament. Door actief te zijn in de community wordt niet alleen de open-source software die je professioneel toepast sterker, maar komen de developers van AllesOnline ook in contact met externe developers. Dit kan bijdragen aan het verbreden van kennis over Filament, maar ook het verbreden van algemene inzichten over software- en webdevelopment.
 
