@@ -95,13 +95,13 @@ Eén van de belangrijkste voordelen van Filament is de flexibiliteit die het ont
 
 ## Documentatie en ondersteuning
 
-Omdat Filament nog relatief nieuw is, is het mogelijk dat het vinden van een oplossing voor edgecases niet direct beschikbaar is vanuit de community of documentatie. Desondanks beschikt Filament over een actieve en groeiende open source community (FilamentPHP, 2025).
+Doordat Filament nog relatief nieuw is, kan het zijn dat een oplossing voor edgecases niet direct beschikbaar zijn via de community of documentatie. Desondanks beschikt Filament over een actieve en groeiende open source community (FilamentPHP, 2025).
 
 **Aanbeveling**: Draag bij aan het versterken van Filament. Door actief te zijn in de community wordt niet alleen de open-source software die je professioneel toepast sterker, maar komen de developers van AllesOnline ook in contact met externe developers. Dit kan bijdragen aan het verbreden van kennis over Filament, maar ook het verbreden van algemene inzichten over software- en webdevelopment.
 
 ## Livewire & Alpine.js
 
-Van de tech-stack waar Filament gebruikt van maakt, de TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire), zijn de AllesOnline developers relatief onbekend met LiveWire en Alpine.js. 
+Van de tech-stack waar Filament gebruik van maakt, de TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire), zijn de AllesOnline developers relatief onbekend met LiveWire en Alpine.js. 
 
 **aanbevelingen**: Bied developers de gelegenheid om ervaring en kennis op te doen met Livewire en Alpine.js.
 
