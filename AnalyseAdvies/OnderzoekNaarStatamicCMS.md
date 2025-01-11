@@ -104,33 +104,37 @@ Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionali
 ## Beperkingen Runway
 
 * **Geen ondersteuning voor pivot-gegevens in many-to-many-relaties**: Bij het werken met many-to-many-relaties biedt Runway geen mogelijkheid om pivot-gegevens mee te geven.
-* **Ontbreken van ondersteuning voor polymorfe relaties**: Geen ondersteuning voor polymorfe relaties, wat inhoudt dat het niet mogelijk is om relaties te definiëren waarbij een model meerdere andere models kan associëren. 
-* **Out-of-the-box navigation functionaliteit vervalt**: De navigation die Statamic aanbied kan enkel gebruik maken van entries in Collections. Dit betekend dat alle gegevens die via Runway worden gepersisteerd niet meegenomen kunnen worden in de standaard navigation funcionaliteit van Statamic.
+* **Ontbreken van ondersteuning voor polymorfe relaties**: Geen ondersteuning voor polymorfe relaties, waardoor er geen mogelijkheid is om een model aan meerdere andere modellen te associëren.
+* **Out-of-the-box navigation functionaliteit vervalt**: De standaard Statamic-navigatie kan niet rechtstreeks omgaan met Runway-modellen. Het is dus niet mogelijk om Runway-gegevens direct op te nemen in de standaard navigatiefunctionaliteit zonder zelf aangepaste code toe te voegen.
 * **Afhankelijkheid van externe ontwikkelaars**: Runway is ontwikkeld door een groep externe ontwikkelaars. Hoewel een groot deel van deze ontwikkelaars ook deel uitmaakt van het Statamic-team, geniet dit project toch minder prioriteit. Dit betekent dat men bij problemen of de behoefte aan nieuwe functies afhankelijk is van de beschikbaarheid en bereidheid van The Rad Pack om updates of ondersteuning te bieden.
 
-## Evaluatie van Statamic
+# Evaluatie van Statamic
 
-### Documenatie en ondersteuning
+## Documenatie en ondersteuning
 
-Hoewel Statamic veel van zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig en soms zelfs incompleet. Dit wordt vooral duidelijk wanneer je via code schema's wilt opzetten voor het CMS. In de documentatie worden geen velden gedefinieerd die gebruikt kunnen worden, wat de indruk wekt dat Statamic verwacht dat je hun UI gebruikt voor het beheren van schema's. Echter, bepaalde opties ontbreken, waardoor het alsnog nodig is om via code variabelen voor je schema's mee te geven. Tijdens de ontwikkeling van het prototype heb ik daarom veel informatie over de functionaliteiten uit GitHub-issues moeten halen of heb ik de Discord-server van Statamic geraadpleegd.
+Hoewel Statamic veel van zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig en soms zelfs incompleet. Dit wordt vooral duidelijk wanneer je via de codebase schema's voor het CMS wilt definiëren. In de documentatie worden de velden die gebruikt kunnen worden niet gedefinieerd, wat de indruk wekt dat Statamic verwacht dat je hun UI gebruikt voor het beheren van schema's. Echter, bepaalde opties ontbreken in de UI, waardoor het alsnog nodig is om via codebase variabelen voor je schema's mee te geven. 
 
-**aanbevelingen**: Het is nuttig om actief deel te nemen aan de community van Statamic. Dit kan bijdragen aan het verbreden van kennis over Statamic, maar ook het initieren van wijzigingen voor het platform.
+**aanbevelingen**: Moedig developers aan om actief deel te nemen aan de community van Statamic. Er is een actieve community en er zijn vaak gedetailleerde voorbeelden te vinden via GitHub of de Discord-community.
 
-### Gebruik van Vue 2
+## Gebruik van Vue 2
 
-Statamic maakt gebruik van Vue 2 voor de views in het control panel. Dit is relatief opmerkelijk, aangezien Vue 2 op 31 december 2023 het einde van zijn levenscyclus (EOL) bereikte. Volgens de roadmap van Statamic is het de bedoeling om in de lente van 2025 over te stappen naar Vue 3. Voor ontwikkelaars die custom componenten in Statamic hebben gebouwd, betekent dit dat zij hun componenten ook moeten migreren naar Vue 3.
+Statamic maakt gebruik van Vue 2 voor de weergave in het control panel. Dit is opvallend, aangezien Vue 2 op 31 december 2023 het einde van zijn levenscyclus (EOL) bereikte. Volgens de roadmap van Statamic is het de bedoeling om in de lente van 2025 over te stappen naar Vue 3.
 
-Daarnaast heeft momenteel slechts één van de ontwikkelaars bij AllesOnline ervaring met het werken met Vue.
+Daarnaast heeft momenteel slechts één van de developers bij AllesOnline ervaring met Vue.
 
-**aanbevelingen**: Bied ontwikkelaars de gelegenheid om ervaring en kennis op te doen met Vue.
+**aanbevelingen**: Faciliteer training en kennisdeling om ontwikkelaars in staat te stellen ervaring op te doen met Vue.
 
-### Groot verschil tussen werking Runway en flat-file/eloquent-driver
+## Verschillen tussen werking Runway en andere configuraties
 
-Het verschil tussen de flat-file en eloquent-driver configuratie en Runway is vrij groot. Je zou zelfs kunnen stellen dat dit twee verschillende CMS'en zijn, die bepaalde functionaliteiten en een frontend met elkaar delen. Dit heeft zowel voordelen als nadelen. Want ondanks dat het systeem hierdoor erg flexibel is, heeft elke configuratie een afwijkende structuur, zowel in de manier waarop het CMS achter de schermen werkt als in de manier waarop gegevens voor de frontend opgehaald moeten worden. Het migreren van gegevens tussen de configuraties kan hierdoor erg ingewikkeld zijn, zelfs als je binnen het Statamic-ecosysteem wilt migreren.
+Het verschil tussen de flat-file en eloquent-driver configuraties in Runway is aanzienlijk. Je zou zelfs kunnen zeggen dat het om twee verschillende CMS'en gaat. Aan de ene kant zorgt dit voor flexibiliteit in de manier hoe je Statamic wilt opzetten. Aan de andere kant leidt het tot meer complexiteit omdat de verschillende configuraties specifieke werkwijze hebben in de manier waarop gegevens uit de backend beheert kunnen te worden.
+
+## Afwijkende datastructuren tussen Statamic en AllesOnline
+
+In alle verschillende configuraties wijkt de datastructuur van Statamic af van die van het AllesOnline CMS. Deze variaties maken niet alleen het migreren van AllesOnline naar Statamic aanziek complexer dan een migratie naar **Filament**. 
 
 ## Uitbreidbaarheid van Statamic
 
-Net zoals bij Filament heeft Statamic een marketplace waar oplossingen aangeboden worden die niet standaard in Statamic zijn geïmplementeerd. Deze in Statamic genoemde `Addons`, die zowel gratis als tegen betaling beschickbaar zijn, zijn ook hier ontwikkeld door het Statamic-team of door externe partijen. Ook binnen Statamic is het mogelijk om eigen componenten via de marketplace aan te bieden. Voor de ontwikkeling van deze Addons is het aan te raden om gebruik te maken van Vue, Laravel, Tailwind en Vite. 
+Statamic heeft een marketplace voor `Addons`, die extra functionaliteiten bieden en zijn ontwikkeld door het Statamic-team of externe partijen. Deze `Addons` zijn zowel gratis als tegen betaling beschikbaar. Het is voor ALlesOnline ook mogelijk om zelf ontwikkelde `Addons` op de marketplace aan te bieden. Voor de ontwikkeling van `Addons` wordt het aanbevolen om gebruik te maken van Vue, Laravel, Tailwind en Vite.
 
 > _Documentatie voor het realiseren van Addons voor Statamic_
 > * [Addons documentatie](https://statamic.dev/extending/addons)
@@ -138,8 +142,9 @@ Net zoals bij Filament heeft Statamic een marketplace waar oplossingen aangebode
 > _Laracast video over het realiseren van een Statamic Addon_
 > * [Laracast video](https://laracasts.com/series/learn-statamic-with-jack/episodes/15)
 
-### Kosten van Statamic CMS
-Om gebruik te maken van Statamic voor de websites die AllesOnline ontwikkelt, moet een licentie aangeschaft worden. Statamic biedt verschillende pakketten aan die gekozen kunnen worden. Hieronder een overzicht:
+## Kosten van Statamic
+
+Om gebruik te maken van Statamic, moet een licentie aangeschaft worden. Statamic biedt verschillende pakketten aan die gekozen kunnen worden. Hieronder een overzicht:
 
 * **Statamic Core**: Deze versie is volledig gratis en geschikt voor persoonlijke projecten.
 * **Statamic Pro**: Voor professionele toepassingen is Statamic Pro beschikbaar voor $259 per jaar per site.
