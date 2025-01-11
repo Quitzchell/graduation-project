@@ -47,12 +47,12 @@ Deze configuratie kent ook nadelen. Ten eerste is de schaalbaarheid beperkt: bij
 Voor grotere projecten die hogere schaalbaarheid vereisen, complexere relaties bevatten, of waarbij meerdere gebruikers tegelijk bewerkingen uitvoeren, is het het dus verstanding om gebruik te maken van een van de configuraties die gebruik maken van een database. 
 
 **Eloquent-driver**
-Met de officiële eloquent-driver package kan Statamic worden geconfigureerd om gegevens via Laravel's **Eloquent ORM** in een database te persisteren. In deze configuratie is het nog niet mogelijk om direct de entiteiten in het systeem als Eloquent-models te gebruiken. In plaats daarvan worden de gegevens voor `Entries`, die eerder in Markdown-bestanden werden opgeslagen, nu als JSON in de database gepersisteerd.
+Met de eloquent-driver packages kan Statamic worden geconfigureerd om gegevens via Laravel's **Eloquent ORM** in een database op te slaan. In deze opzet is het echter niet mogelijk om direct de entiteiten in het systeem als Eloquent-modellen te gebruiken. In plaats daarvan worden de Entries, die voorheen in Markdown-bestanden werden opgeslagen, nu als JSON-objecten in de database gepersisteerd.
 
-Het omzetten van de flat-fileconfiguratie naar de eloquent-driverconfiguratie is relatief eenvoudig. Het installeren van de package en het volgen van de documentatie is voldoende om tot een werkbare oplossing te komen. De package bevat namelijk functionaliteit die het eenvoudig maakt om gegevens van flat-files om te zetten naar database-records (en eventueel zelfs weer terug naar flat-files). De manier waarop de eloquent-driver binnen het systeem gebruikt dient te worden, kan geconfigureerd worden in het configuratiebestand voor de eloquent-driver. Het grootste voordeel van de eloquent-driver configuratie is dat deze de schaalbaarheid aanzienlijk verbetert.
+Het omzetten van de flat-fileconfiguratie naar de eloquent-driverconfiguratie is relatief eenvoudig. De eloquent-driver package biedt namelijk functionaliteiten die het omzetten van flat-files naar database-records en vice versa eenvoudig maken. Hoe de eloquent-driver binnen het systeem precies wordt ingezet, kan naar wens worden geconfigureerd in het configuratiebestand van de driver. 
 
 > * [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
-> * [Eloquent-driver config-file](../Bijlagen/eloquent-driver-config.md)
+> * [Eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
 
 #### Beperkingen Eloquent-driver
 
