@@ -77,7 +77,7 @@ Zoals al eerder benoemd wordt voor het definiëren van de velden in een schema g
 
 ## Uitbreidbaarheid
 
-Filament biedt naast de standaardcomponenten ook een marketplace waar aanvullende componenten beschikbaar zijn. Deze zogenaamde `Plugins`, die zowel gratis als tegen betaling worden beschikbaar zijn, worden ontwikkeld door het Filament-team en externe partijen.
+Filament biedt naast de standaardcomponenten ook een marketplace waar aanvullende componenten beschikbaar zijn. Deze zogenaamde `Plugins`, die zowel gratis als tegen betaling beschikbaar zijn, worden ontwikkeld door het Filament-team en externe partijen.
 
 Het is ook voor AllesOnline mogelijk om eigen, op maat gemaakte componenten via de marketplace aan te bieden. Voor de ontwikkeling van deze plugins wordt aanbevolen de TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire) te gebruiken, aangezien deze technologieën ook door Filament zelf worden toegepast.
 
@@ -91,11 +91,11 @@ Het is ook voor AllesOnline mogelijk om eigen, op maat gemaakte componenten via 
 
 ## Flexibiliteit
 
-Een van de belangrijkste voordelen van Filament is de flexibiliteit die het ontwikkelaars biedt, omdat vrijwel alles binnen Filament met PHP is gedefinieerd. Dit stelt ontwikkelaars in staat om eenvoudig hun eigen code te integreren en de standaardfunctionaliteit uit te breiden of aan te passen aan specifieke use cases.
+Eén van de belangrijkste voordelen van Filament is de flexibiliteit die het ontwikkelaars biedt, omdat vrijwel alles binnen Filament met PHP is gedefinieerd. Dit stelt ontwikkelaars in staat om eenvoudig hun eigen code te integreren en de standaardfunctionaliteit uit te breiden of aan te passen aan specifieke use cases.
 
 ## Documentatie en ondersteuning
 
-Omdat Filament nog relatief nieuw is, kan het zijn dat het vinden van een oplossing voor een edgecase niet direct beschikbaar is vanuit de community of documentatie. Desondanks beschikt Filament over een actieve en groeiende open source community (FilamentPHP, 2025).
+Omdat Filament nog relatief nieuw is, is het mogelijk dat het vinden van een oplossing voor edgecases niet direct beschikbaar is vanuit de community of documentatie. Desondanks beschikt Filament over een actieve en groeiende open source community (FilamentPHP, 2025).
 
 **Aanbeveling**: Draag bij aan het versterken van Filament. Door actief te zijn in de community wordt niet alleen de open-source software die je professioneel toepast sterker, maar komen de developers van AllesOnline ook in contact met externe developers. Dit kan bijdragen aan het verbreden van kennis over Filament, maar ook het verbreden van algemene inzichten over software- en webdevelopment.
 
