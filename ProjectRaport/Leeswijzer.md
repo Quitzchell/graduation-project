@@ -136,7 +136,7 @@ Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben i
 > * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 > * [SWOT: Statamic](../AnalyseAdvies/SwotStatamicCms.md)
 
-Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van het prototype met Statamic. Omdat Statamic in meerdere verschillende configuraties kan worden gebruikt, heb ik ook meerdere Designs gerealiseerd. Echter zijn deze wel allemaal vrij strict in het gebruik van een van de configuraties, terwijl het ook mogelijk is om de configuraties te combineren. Uiteindelijk verwacht ik dat dit voor AllesOnline de beste oplossing zou zijn als er gekozen wordt om met Statamic te werken. 
+Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van het prototype met Statamic. Omdat Statamic in meerdere verschillende configuraties kan worden gebruikt, heb ik ook meerdere designs gerealiseerd. Deze designs zijn vrij strikt gebonden aan de specifieke configuraties, terwijl het ook mogelijk is om verschillende configuraties te combineren.
 
 // todo: add repos
 * Design voor Statamic CMS met flat-file //todo
@@ -147,7 +147,9 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 ### Conclusies onderzoek naar Statamic CMS
 
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
-	- De standaardconfiguratie met flat-files van Statamic is snel op te zetten, maar voor de meeste projecten van AllesOnline zal een combinatie van flat-file, Eloquent-driver en Runway nodig zijn. Dit maakt het opzetten van een CMS een stuk complexer.
+	- De flat-file en eloquent-driver configuraties van Statamic zijn snel op te zetten, maar kunnen tekort komen bij projecten waar meer complexiteit verwacht wordt.
+	- De flat-file en eloquent-driver configuraties zijn, ondanks tekortkomingen, uiterst geschikt voor simpele marketing- en whitelabelwebsites.
+	- Het opzetten van de Runway configuratie kost meer tijd en kan ook bij complexere projecten tekort schieten.
 	- Hoewel Statamic een breed scala aan functionaliteiten biedt, zullen voor sommige oplossingen die in het AllesOnline CMS zijn ingebouwd, aangepaste componenten of extra logica toegepast moeten worden.
 
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
