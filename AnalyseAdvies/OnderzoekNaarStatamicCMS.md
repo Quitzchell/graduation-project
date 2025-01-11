@@ -41,7 +41,7 @@ De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt dir
 Statamic biedt redelijk wat flexibiliteit bij het persisteren en beheren van content en objecten. Standaard maakt het systeem gebruik van een `flat-file` configuratie, maar het is mogelijk om Statamic te configureren zodat het geïntegreerd kan worden met databases zoals **MySQL** of **MongoDB**.
 
 ## Flat-file
-De flat-fileconfiguratie biedt diverse voordelen. Ten eerste wordt er geen gebruik gemaakt van een externe database, wat resulteert in een vereenvoudigde infrastructuur. In plaats daarvan worden alle gegevens en configuraties opgeslagen als bestanden in de codebase en meegenomen in de Git-repository. Omdat er geen verzoeken naar een externe database nodig zijn, zorgt dit voor snellere laadtijden. 
+De flat-file configuratie biedt diverse voordelen. Ten eerste wordt er geen gebruik gemaakt van een externe database, wat resulteert in een vereenvoudigde infrastructuur. In plaats daarvan worden alle gegevens en configuraties opgeslagen als bestanden in de codebase en meegenomen in de Git-repository. Omdat er geen verzoeken naar een externe database nodig zijn, zorgt dit voor snellere laadtijden. 
 
 Deze configuratie kent ook nadelen. Ten eerste is de schaalbaarheid beperkt: bij grotere projecten met veel gegevens kunnen de prestaties achterblijven ten opzichte van een configuratie met een database. Daarnaast kunnen er conflicten optreden wanneer meerdere gebruikers tegelijkertijd aan bestanden werken. Tot slot biedt deze configuratie beperkte mogelijkheden voor complexe relaties. Zo worden many-to-many-relaties bijvoorbeeld niet automatisch bi-directioneel verwerkt.
 
@@ -83,7 +83,7 @@ Met de Eloquent-driver configuratie kan het configuratiebestand voor een `Bluepr
 
 De `Entry`-class is het model dat wordt gebruikt om alle objecten binnen een collectie te representeren. Deze class biedt mogelijkheden om de gegevens van een `Entry` te persisteren. 
 
-In het geval dat de flat-fileconfiguratie wordt gebruikt, worden de bestanden als markdown in de codebase opgeslagen in de directory van de bijbehorende `Collection`. Wanneer de eloquent-driver configuratie toegepast is, wordt de informatie van een Entry als JSON in de database gepersisteert. 
+In het geval dat de flat-file configuratie wordt gebruikt, worden de bestanden als markdown in de codebase opgeslagen in de directory van de bijbehorende `Collection`. Wanneer de eloquent-driver configuratie toegepast is, wordt de informatie van een Entry als JSON in de database gepersisteert. 
 
 > _Voorbeeld van Entry binnen Page collection voor de homepage_
 > * [Markdown voor homepage](../Bijlagen/VoorbeeldStatamicFlatFile.md)
@@ -94,9 +94,9 @@ Indien het nodig is om voor entiteiten binnen een systeem specifieke Eloquent-mo
 
 ## Runway
 
-Het omzetten van de Statamic flat-file of eloquent-driver configuratie naar Runway vergt meer werkt. Allereerst zullen alle entiteiten die als Eloquent-model beheert moeten gaan worden aangemaakt worden. Deze zullen vervolgens binnen het configuratiebestand meegegeven  
+Het omzetten van de flat-file of eloquent-driver configuratie naar Runway vergt meer werk. Allereerst moeten alle entiteiten die als Eloquent-model beheerd moeten worden, worden aangemaakt. Deze moeten vervolgens binnen het configuratiebestand worden meegegeven. Daarna is het belangrijk om databasemigraties op te zetten, waarbij rekening gehouden moet worden met de door Runway geaccepteerde datatypes voor de `FieldTypes` die in de `Blueprint` zijn gedefinieerd. In het geval dat er gebruik gemaakt is van relaties tussen objecten, moet de `FieldTypes` voor het beheren hiervan in de `Blueprint` worden vervangen door specifieke `Runway FieldTypes`.
 
-Naast het configuratiebestand dat opgezet moet worden, zullen ook alle entiteiten die je als specifieke Eloquent-models wilt beheren aangemaakt moeten worden. Runway-resources te definiëren en databasemigraties op te zetten. Daarnaast is het nodig om een workaround te implementeren om een functionaliteit te realiseren waarmee je gebruik kunt maken van pagina-templates. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
+Daarnaast zal er een workaround geimplementeren moeten worden om de functionaliteit voor het beheren van pagina te behouden. Bijvoorbeeld door de blueprints niet om te zetten naar Runway-recources, maar door de blueprints om te zetten naar FieldSets die doormiddel van een `replicator` geselecteerd kan worden.
 
 > * [Runway addon documentatie](https://runway.duncanmcclean.com/)
 > * [Runway configuratie](../Bijlagen/RunwayConfigFile.md)
