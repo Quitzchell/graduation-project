@@ -124,9 +124,9 @@ Het enige nadeel van Statamic, is dat de kosten voor een licentie in eerste inst
 
 Voor klanten die zowel complexiteit als een marketingwebsite verwachten, kan gesteld worden dat het inzetten van beide oplossingen een realistische keuze is. In dit geval zou bijvoorbeeld een adminpaneel voor stakeholders in Filament gerealiseerd kunnen worden, terwijl de marketingwebsite – of mogelijk zelfs whitelabel-websites – in Statamic beheerd kunnen worden. Op deze manier kan een diverse verzameling systemen worden opgeleverd, die elk afgestemd zijn op hun specifieke use cases. Dit zou bijvoorbeeld nuttig kunnen zijn voor projecten zoals OpleidingVinden of ScamAdviser.
 
-## Voor migratie van bestaande projecten
+## Migratie van bestaande projecten
 
-Voor de migratie van bestaande projecten is het raadzaam om te migreren naar **Filament**. Dit komt doordat Filament in staat is om relatief dicht bij de datastructuur van het AllesOnline CMS te blijven. De benodigde aanpassingen zijn minimaal en kunnen in grote lijnen geautomatiseerd worden met behulp van een op maat gemaakte migratietool.
+Voor de migratie van bestaande projecten is het raadzaam om te migreren naar **Filament**. Dit omdat Filament in staat is om relatief dicht bij de datastructuur van het AllesOnline CMS te komen. De benodigde aanpassingen zijn minimaal en kunnen in grote lijnen geautomatiseerd worden met behulp van een op maat gemaakte migratietool.
 
 Omdat Filament volledig compatibel is met **Eloquent ORM**, kunnen modellen en gegevens uit het huidige systeem vrijwel direct worden hergebruikt. Deze compatibiliteit zorgt ervoor dat de overgang naar Filament soepel kan verlopen, zonder dat er ingrijpende wijzigingen nodig zijn in de onderliggende entiteitslaag. 
 
@@ -137,9 +137,9 @@ Het migreren naar **Statamic** is, vooral voor grotere projecten, minder geschik
 
 ## Langetermijneffecten
 
-Hoewel de keuze om externe systemen te integreren nog steeds een investering is, kan het AllesOnline in de toekomst veel voordelen opleveren. Door te vertrouwen op doorontwikkelde oplossingen van externe partijen kan AllesOnline zich blijven aanpassen aan technologische innovaties, zonder de last van veroudering van een eigen systeem. Dit bevordert de duurzaamheid van de bedrijfsvoering en voorziet dat de focus kan liggen op het voldoen aan klantbehoeften in plaats van het onderhouden van verouderde systemen.
+Hoewel de keuze om externe systemen te integreren nog steeds een investering is, kan het AllesOnline in de toekomst veel voordelen opleveren. Door te vertrouwen op doorontwikkelde systemen van externe partijen kan AllesOnline zich blijven aanpassen aan technologische innovaties, zonder last te ervaren van de veroudering van een eigen systeem. Dit bevordert de duurzaamheid van de bedrijfsvoering en voorziet dat de focus kan liggen op het voldoen in klantbehoeften in plaats van het onderhouden van verouderde systemen.
 
-Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toekomstgerichte speler in de markt, waardoor het aantrekkelijk blijft voor zowel klanten als talentvolle, toekomstige medewerkers. Strategisch gezien kan deze beslissing bijdragen aan stabiele groei en biedt het een concurrentievoordeel, doordat de bedrijfsfocus volledig gericht blijft op klantgerichte innovatie en creatieve oplossingen.
+Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toekomstgerichte speler in de markt, waardoor het aantrekkelijk blijft voor zowel klanten als talentvolle, toekomstige medewerkers. Strategisch gezien kan deze beslissing bijdragen aan stabiele groei en biedt het een concurrentievoordeel, omdat de bedrijfsfocus volledig gericht blijft op klantgerichte innovatie en creatieve oplossingen.
 
 # Roadmap
 
@@ -164,17 +164,17 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
         *  [Bouw een custom Filament component met Livewire en Alpine.js.](../Bijlagen/HackatonBouwFilamentComponent.md)
 
 * **Week 3-4: Ontwikkel CMS-plugin voor Filament**
-    * Realisatie van een eenvoudige generieke Filament-plugin met basisfunctionaliteiten voor:
+    * Realisatie van een eenvoudige generieke **Filament-plugin** met basisfunctionaliteiten voor:
         * Templates
         * Contentblocks
         * Menustructuur
         * Persisteren van CMS content
     * Focus op modulaire opzet.
-    * Stel documentatie op voor gebruik binnen het team.
+    * Stel **documentatie** op voor gebruik binnen het team.
 
-* **Week 4-6: Validatie van plugin**
+* **Week 5-6: Validatie van plugin**
   * Koppel het CMS aan een bestaand project met een *decoupled architectuur*.
-  * Realiseer dat een deel van de templates, blokken en menustructuren goed gerenderd kunnen worden met de Filament-plugin. //todo
+  * Valideer dat een deel van de templates, blokken en menustructuur goed gerenderd kan worden met de Filament-plugin.
 
 **Deliverables**:
 * Gevalideerde CMS-plugin voor Filament.
@@ -186,7 +186,7 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 ### **Maand 4-6: Start ontwikkeling greenfield project**
 * **Identificeer nieuwe projecten** die geschikt zijn voor Filament en/of Statamic.
 * Begin met een **agile aanpak**: Start met het ontwikkelen van de CMS-functionaliteiten voor het eerste greenfield project.
-* Werk met een minimal viable product (MVP): Begin met de basisfunctionaliteit van het CMS en breid deze iteratief uit.
+* Werk met een **minimal viable product**: Begin met de basisfunctionaliteit van het CMS en breid deze iteratief uit.
 
 ### **Maand 6: Eerste project live en optimalisatie**
 * **Launch het eerste Filament- en/of Statamic-project**.
@@ -207,7 +207,7 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 
 ### **Maand 10-12: Grotere migraties en optimalisatie**
 * Begin met de migratie van grotere, complexere projecten.
-* Verfijn de migratietool en pas deze aan op basis van de ervaringen uit de eerdere migraties.
+* **Verfijn de migratietool** en pas deze aan op basis van de ervaringen uit de eerdere migraties.
 * Zorg ervoor dat het migratieproces geoptimaliseerd wordt voor snelheid en efficiëntie.
 
 **Deliverables**:
@@ -224,7 +224,7 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 
 ### **Maand 16-18: Afronden en verdere verfijning**
 * Zorg ervoor dat **alle bestaande projecten** succesvol zijn overgezet naar Filament. 
-* Werk aan **lange termijnstrategie** om de systemen toekomstbestendig te houden.
+* Werk aan een **lange termijnstrategie** om de systemen toekomstbestendig te houden.
 
 **Deliverables**:
   * AllesOnline volledig over op Filament en Statamic.
@@ -235,8 +235,10 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 
 In dit adviesdocument zijn, op basis van het uitgevoerde onderzoek, de mogelijkheden voor AllesOnline om van het interne CMS over te stappen naar **Filament** en **Statamic** geformuleerd. Het onderzoek onderbouwd dat het huidige AllesOnline CMS, hoewel het enkele voordelen biedt, beperkingen vertoont op het gebied van veroudering, onderhoud en uitbreidbaarheid. Het is daarom niet verantwoord om de capaciteit van het developmentteam te benutten voor het onderhouden en doorontwikkelen van dit systeem.
 
-Filament is een uitstekende keuze voor projecten die complexe, op maat gemaakte systemen vereisen, zoals webapplicaties met een uitgebreid assortiment, grote hoeveelheden data of complexe klantenservicesystemen. Dit mede omdat de componenten vna Filament eenvoudig kunnen worden aangepast via PHP. Ook de sterke integratie met Laravel is een voordeel voor het developmentteam van AllesOnline.
+Filament is een uitstekende keuze voor projecten die complexe, op maat gemaakte systemen vereisen, zoals webapplicaties met een uitgebreid assortiment, grote hoeveelheden data of complexe klantenservicesystemen. Dit mede omdat de componenten van Filament eenvoudig kunnen worden aangepast via PHP. Ook de sterke integratie met Laravel is een voordeel voor het developmentteam van AllesOnline.
 
-Statamic, aan de andere kant, biedt een uitstekende oplossing voor marketingwebsites met dynamische contentbehoeften en kan snel en efficiënt worden geïmplementeerd voor deze minder complexe projecten. Het is een gebruiksvriendelijke keuze voor klanten die behoefte hebben aan een gestandaardiseerde websiteoplossing zonder veel technische diepgang.
+Statamic, aan de andere kant, biedt een uitstekende oplossing voor marketingwebsites met dynamische contentbehoeften en kan snel en efficiënt worden geïmplementeerd voor minder complexe projecten. Het is een gebruiksvriendelijke keuze voor klanten die behoefte hebben aan een gestandaardiseerde websiteoplossing zonder veel technische diepgang.
 
-Op basis van de analyse en de verschillende voordelen van Filament en Statamic wordt het aanbevolen om voor de migratie van bestaande projecten en nieuwe ontwikkelingen te kiezen voor Filament als de primaire oplossing. De compatibiliteit met het huidige AllesOnline CMS, de mogelijkheid om geautomatiseerde migraties te ontwikkelen en de relatief vergelijkbare datastructuren maken Filament de beste keuze. Statamic kan echter worden ingezet voor eenvoudigere marketingwebsites of als een alternatief voor specifieke klantbehoeften.
+
+
+Op basis van de analyse en de diverse voordelen van Filament en Statamic wordt aanbevolen om Filament als primaire oplossing te gebruiken voor zowel de migratie van bestaande projecten als voor nieuwe ontwikkelingen. De compatibiliteit met het huidige AllesOnline CMS, de mogelijkheid om geautomatiseerde migraties te realiseren en de relatief vergelijkbare datastructuren maken Filament de beste keuze. Statamic kan echter worden ingezet voor eenvoudigere marketingwebsites of als een alternatief voor specifieke klantbehoeften.
