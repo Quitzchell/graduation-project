@@ -659,7 +659,7 @@ trait MutateDataBeforeCreateTrait
 
 ### Fill & Edit
 
-Wanneer een bestaand object wordt bewerkt, wordt de bijbehorende content in het formulier geladen. In de `mutateFormDataBeforeFill`-methode wordt de gekoppelde content opgehaald uit de `contents`-relatie en toegevoegd aan de formulierdata. Dit zorgt ervoor dat de opgeslagen gegevens in de velden worden weergegeven, zodat de gebruiker bestaande gegevens kan aanpassen zonder ze opnieuw in te voeren.
+Wanneer een bestaand object wordt bewerkt, wordt de bijbehorende content in het formulier geladen. In de `mutateFormDataBeforeFill`-methode wordt de gekoppelde content opgehaald uit de `contents`-relatie en toegevoegd aan de formulierdata. Dit zorgt ervoor dat de opgeslagen gegevens in de velden worden weergegeven, zodat de gebruiker bestaande gegevens weer kan aanpassen.
 
 Wanneer CMS-content wordt toegevoegd of bijgewerkt in een bestaand object, wordt het opslaan eenvoudiger. In dit geval hoeft alleen de relevante content uit de formuliergegevens te worden gehaald en via een Eloquent-relatie te worden opgeslagen. Pas daarna wordt het hoofdmodel (bijvoorbeeld het object dat de `contents` bevat) opgeslagen.
 
