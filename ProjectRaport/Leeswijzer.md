@@ -76,12 +76,6 @@ Nadat het prototype met het AllesOnline CMS was afgerond, ben ik begonnen met he
 
 > * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
 
--- oud 
-
-Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik het mogelijk gemaakt dat Cypress vanuit zijn eigen container draait en kan communiceren met de frontend-applicatie. Het voordeel hiervan is dat de container voor de frontend niet onnodig groot wordt door de toevoeging en extra benodigdheden voor Cypress. Het nadeel is echter dat er een timeout tussen de requests nodig is, omdat de frontend een exception teruggeeft doordat het te snel opvolgende verzoeken van hetzelfde adres ontvangt.
-
--- nieuw 
-
 Omdat **Cypress** in een standaard Linux Alpine-container complicaties kan ondervinden door ontbrekende afhankelijkheden, heb ik een aparte container voor Cypress opgezet die kan communiceren met de frontend-applicatie. Dit voorkomt dat de frontend-container onnodig groot wordt door de toevoeging van Cypress. Het nadeel is echter dat een timeout tussen de requests nodig is, omdat de frontend een exception teruggeeft bij te snel opvolgende verzoeken vanuit hetzelfde adres.
 
 > _Hieronder een kleine afwijking van het chronologische verhaal, met een aantal runs van de Cypress-testsuite waarin de verschillende CMS-oplossingen aan de frontend zijn gekoppeld._
@@ -119,7 +113,7 @@ Tijdens het onderzoek ben ik begonnen met het ontwerpen en ontwikkelen van het C
 ### Conclusies onderzoek Filament en realisatie Filament CMS
 
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
-	- Omdat Filament flexibel en modulair te gebruiken is, is het zeer geschikt als basis voor het realiseren van een CMS die gebruikt kan worden voor AllesOnline websites.
+	* Omdat Filament flexibel en modulair te gebruiken is, is het zeer geschikt als basis voor het realiseren van een CMS die gebruikt kan worden voor AllesOnline websites.
 
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
 	* Met Filament is het eenvoudiger om een CRM of andere SaaS-oplossing voor klanten te realiseren. Dit is aanzienlijk eenvoudiger dan het AllesOnline CMS in bochten te wringen om te voldoen aan vereisten waarvoor het praktisch gezien niet is ontworpen.
