@@ -18,8 +18,9 @@ Replicatie van pagina's: Het dupliceren van pagina's en hun gekoppelde content v
 
 Binnen de `ContentManagerController` worden de weergaven voor verschillende pagina's, zoals info-, create-, edit- en overview-pagina's, dynamisch gegenereerd via XML-templates en de `BaseView`-class. De `BaseView` stelt de juiste namespace in en zorgt ervoor dat de correcte weergave wordt geladen op basis van de context, zoals templates, menu-instellingen en andere data. Tegelijkertijd bepaalt de `PageTemplateResolver` welke templates beschikbaar zijn en laadt deze in.
 
-**XML-schema voor Template in AO CMS**
-
+```
+XML-schema voor Template in AO CMS
+```
 ```xml
 <template name="Home page">
     <field type="text" name="header_title" title="Header title"/>
@@ -28,8 +29,11 @@ Binnen de `ContentManagerController` worden de weergaven voor verschillende pagi
 		blocks="common/*"/>
 </template>
 ```
+---
 
-**Dynamische weergavegeneratie en het gebruik van BaseView**
+```
+Dynamische weergavegeneratie en het gebruik van BaseView
+```
 ```php
 public function getIndex($modelInstance = null)
 {
@@ -79,8 +83,11 @@ protected function editWithPage($page)
     return BaseView::make('edit')->with('menuRoots', $menuRoots)->with('page', $page)->with('templates', $templates)->with('manageable', $manageable);
 }
 ```
+---
 
-**Inladen van templates via de PageTemplateResolver**
+```
+Inladen van templates via de PageTemplateResolver
+```
 ```php
 protected function templates()
 {
@@ -97,13 +104,17 @@ protected function templates()
         ->filter()->sort()->all();
 }
 ```
+---
 
 ## CMS-content
 
 De `CmsContent`-class beheert inhoud binnen een CMS-systeem en maakt dynamisch renderen mogelijk op basis van XML-templates. 
 
-**CMS-content instellen vanuit een array**
-``` php
+
+```
+CMS-content instellen vanuit een array
+```
+``` php 
 public function setContentFromArray($content, &$i = 1) {
     $items = [];
     foreach ($content as $key => $blocks) {
@@ -141,9 +152,12 @@ public function setContentFromArray($content, &$i = 1) {
     }
     $this->setContent($items);
 }
-```
+``` 
+---
 
-**Content ophalen en verwerken binnen het CMS**
+```
+Content ophalen en verwerken binnen het CMS
+```
 ``` php
 public function content($tag = null, $default = '', $forceArray = false) {
     if ($tag === null) {
@@ -180,8 +194,11 @@ public function content($tag = null, $default = '', $forceArray = false) {
     return $v;
 }
 ```
+---
 
-**Recursieve doorlopen van contentstructuren**
+```
+Recursieve doorlopen van contentstructuren
+```
 ``` php
 public function traverse(callable $fn, $recursive = true) {
     foreach ($this->content as $objects) {
@@ -194,8 +211,11 @@ public function traverse(callable $fn, $recursive = true) {
     }
 }
 ```
+---
 
-**Dynamisch renderen van content met behulp van templates**
+```
+Dynamisch renderen van content met behulp van templates
+```
 ``` php
 public function render($data = []) {
     $provider = $this->getTemplate()->getProvider();
@@ -214,13 +234,15 @@ public function render($data = []) {
 }
 
 ```
+---
 
 ## Contentblokken
 
 Binnen de templates kan naar andere XML-bestanden worden verwezen die contentblokken genereren, welke door de `CmsContent`-class worden verwerkt.
 
-**XML-schema voor contentblokken in AO CMS**
-
+```
+XML-schema voor contentblokken in AO CMS
+```
 ```xml
 <template name="Paragraph">
     <field type="text" name="title" title="Title"/>
@@ -228,8 +250,11 @@ Binnen de templates kan naar andere XML-bestanden worden verwezen die contentblo
 		toolbar="formatselect | bold italic underline | charmap | link"/>
 </template>
 ```
+---
 
-**Dynamisch renderen van contentblokken**
+```
+Dynamisch renderen van contentblokken
+```
 ```php
 public function blocks(string $tag = 'blocks', array $data = [])
     {
@@ -252,6 +277,7 @@ public function blocks(string $tag = 'blocks', array $data = [])
         return $ret;
     }
 ```
+---
 
 # CMS met Filament
 
@@ -263,8 +289,9 @@ In **Filament** kan een CMS, vergelijkbaar met het AllesOnline CMS, worden opgeb
 
 De `Page`-class is een **Eloquent**-model in Laravel dat pagina-informatie beheert, relaties legt met menu's en URL's genereert op basis van de paginanaam.
 
-**Page-model**
-
+```
+Page-model
+```
 ```php
 <?php
 
@@ -309,6 +336,7 @@ class Page extends Model implements HasContent, HasUrl
     }
 }
 ```
+---
 
 ## Interfaces
 
@@ -318,8 +346,9 @@ Het `Page`-model implementeert interfaces die richtlijnen definiëren voor speci
 
 De `HasContent`-interface vereist dat het model een relatie met het Content-model definieert, waarin CMS-content wordt opgeslagen. In het Filament CMS wordt deze functionaliteit aangevuld met de `ProvidesContentTrait`.
 
-**HasContent interface**
-
+```
+HasContent interface
+```
 ```php
 <?php
 
@@ -334,13 +363,15 @@ interface HasContent
     public function content(string $name): string|array|null;
 }
 ```
+---
 
 ### HasUrl
 
 De `HasUrl`-interface vereist dat het model functionaliteit implementeert om een `uri` en een volledige `url` te genereren voor de bijbehorende objecten.
 
-**HasUrl interface**
-
+```
+HasUrl interface
+```
 ```php
 <?php
 
@@ -353,6 +384,7 @@ interface HasUrl
     public function url($lang = null): string;
 }
 ```
+---
 
 ## Traits
 
@@ -360,8 +392,9 @@ interface HasUrl
 
 De `ProvidesContentTrait` bevat de logica voor de polymorfe relatie tussen modellen die `HasContent` implementeren en het `Content`-model. Door deze **Trait** te gebruiken, kan de logica eenvoudig worden hergebruikt. Voor aanvullende functionaliteiten kan een nieuwe trait worden aangemaakt of kunnen de methoden uit de `HasContent`-interface rechtstreeks in de class worden geïmplementeerd.
 
-**ProvidesContentTrait**
-
+```
+ProvidesContentTrait
+```
 ```php
 <?php
 
@@ -383,13 +416,15 @@ trait ProvidesContentTrait
     }
 }
 ```
+---
 
 ## PageResource en dynamische templates
 
 De `Resource`-classes in Filament dienen als de brug tussen Eloquent-modellen en de adminpanelen binnen het CMS. In de `Resource` die is gekoppeld aan het `Page`-model, kan in de `form`-methode een `Select`-component worden toegevoegd. Hiermee kunnen gebruikers vooraf gedefinieerde **templates** voor een pagina selecteren.
 
-**Schema voor Content Management**
-
+```
+Schema voor Content Management
+```
 ```php
 public static function form(Form $form): Form
     {
@@ -427,13 +462,15 @@ public static function form(Form $form): Form
             ]);
     }
 ```
+---
 
 ## TemplateFactory
 
 De `TemplateFactory`-class ondersteunt het dynamisch ophalen van templates en zijn velden op basis van het gekozen template. Het valideert templates die de `HasTemplateSchema`-interface implementeren en biedt methoden voor het ophalen van veldnamen en een lijst van beschikbare templates.
 
-**TemplateFactory**
-
+```
+TemplateFactory
+```
 ```php
 <?php
 
@@ -490,13 +527,15 @@ readonly class TemplateFactory
     }
 }
 ```
+---
 
 ## Classes voor Templates
 
 De `Template`-class definieert de specifieke structuur van een pagina-template. De `getName`-methode retourneert de naam van het template, terwijl de `getForm`-methode een array van componenten retourneert die eindgebruikers kunnen gebruiken om gegevens in te voeren.
 
-**Template-class in CMS met Filament**
-
+```
+Template-class in CMS met Filament
+```
 ```php
 <?php
 
@@ -542,13 +581,15 @@ class HomeTemplate implements HasTemplateSchema
     }
 }
 ```
+---
 
 ## Interfaces
 
 Een `Template`-class implementeert de `HasTemplateSchema`-interface, die vereist dat classes zowel een schema voor CMS-content als een naam beschikbaar stelt. Het schema wordt ingeladen via de `TemplateFactory`, terwijl de naam wordt gebruikt in het select-veld waarin gebruikers een template kiezen in de `Page`-resource.
 
-**HasTemplateSchema interface**
-
+```
+HasTemplateSchema interface
+```
 ```php
 <?php
 
@@ -561,13 +602,21 @@ interface HasTemplateSchema
     public function getForm(): array;
 }
 ```
+---
 
-### Functionaliteit voor het aanmaken, bewerken en ophalen van CMS Content
+## Uitbreiding voor het create, edit en fill van CMS Content
 
-Filament biedt naast `Resource`-classes, een soort van manager voor models, ook aparte classes aan waarin de logica wordt beheerd voor de pagina's waar gebruikers modellen kunnen aanmaken, bewerken en ophalen. Om ervoor te zorgen dat onze CMS-content daadwerkelijk als content wordt opgeslagen, is het noodzakelijk om een wijziging in de functionaliteit toe te passen op alle classes die content aanbieden. Hiervoor zijn Traits aangemaakt die – wanneer toegepast – de logica voor het persisteren en ophalen van CMS-content afhandelt.
+Naast `Resource`-classes heeft Filament aparte classes voor het persisteren van de CMS gegevens. Om CMS-content op dezelfde manier als in het **AllesOnline CMS** te persisteren, moeten de functionaliteiten binnen deze classes worden aangepast. Filament biedt uitbreidbare, abstracte methoden om dit te realiseren. Omdat deze wijziging in alle `Resource`-classes doorgevoerd moet worden, zijn `Traits` ontwikkeld die de logica voor het persisteren en ophalen van CMS-content correct afhandelen.
 
-**MutateDataBeforeCreateTrait**
+### Create
 
+Om een object met bijbehorende content aan te maken, wordt eerst het hoofdmodel (bijvoorbeeld een `Page`) opgeslagen. Vervolgens wordt de content via een relatie opgeslagen in het `Content`-model dat aan het hoofdmodel wordt gekoppeld. 
+
+In het onderstaande voorbeeld wordt in de `mutateFormDataBeforeCreate`-methode de CMS-content uit het formulier gefilterd en tijdelijk opgeslagen tijdens het aanmaken van het hoofdmodel. Nadat het hoofdmodel succesvol is aangemaakt, wordt de content via een Eloquent-relatie in de `afterCreate`-methode opgeslagen.
+
+```
+MutateDataBeforeCreateTrait
+```
 ```php
 <?php
 
@@ -605,11 +654,17 @@ trait MutateDataBeforeCreateTrait
     }
 }
 ```
+---
 
-Om een object met bijbehorende content aan te maken, wordt eerst het hoofdmodel (bijvoorbeeld een `Page`) opgeslagen. Vervolgens wordt de content via een relatie opgeslagen in een apart Content-model dat naar het hoofdmodel verwijst. In het bovenstaande voorbeeld wordt in `mutateFormDataBeforeCreate()` de CMS-content uit het door de gebruiker ingevulde formulier gefilterd en tijdelijk opgeslagen tijdens het aanmaken van het hoofdmodel. Nadat het hoofdmodel succesvol is aangemaakt, wordt de content via een Eloquent-relatie in de `afterCreate()`-methode opgeslagen.
+### Edit
 
-**MutateDataBeforeFill**Trait
+Wanneer een bestaand object wordt bewerkt, wordt de bijbehorende content in het formulier geladen. In de `mutateFormDataBeforeFill`-methode wordt de gekoppelde content opgehaald uit de `contents`-relatie en toegevoegd aan de formulierdata. Dit zorgt ervoor dat de opgeslagen gegevens in de velden worden weergegeven, zodat de gebruiker bestaande gegevens kan aanpassen zonder ze opnieuw in te voeren.
 
+Wanneer CMS-content wordt toegevoegd of bijgewerkt in een bestaand object, wordt het opslaan eenvoudiger. In dit geval hoeft alleen de relevante content uit de formuliergegevens te worden gehaald en via een Eloquent-relatie te worden opgeslagen. Pas daarna wordt het hoofdmodel (bijvoorbeeld het object dat de `contents` bevat) opgeslagen.
+
+```
+MutateDataBeforeFillTrait
+```
 ```php
 <?php
 
@@ -629,11 +684,11 @@ trait MutateDataBeforeFillTrait
     }
 }
 ```
+---
 
-Wanneer een bestaand object wordt bewerkt, moet de bijbehorende content in het formulier worden geladen. In `mutateFormDataBeforeFill()` wordt de content die aan het object is gekoppeld opgehaald uit de `contents`-relatie en toegevoegd aan de formulierdata. Hierdoor worden de opgeslagen gegevens in de bijbehorende velden weergegeven, zodat de gebruiker de bestaande gegevens kan aanpassen zonder ze opnieuw in te voeren.
-
-**MutateBeforeSave**Trait
-
+```
+MutateBeforeSaveTrait
+```
 ```php
 <?php
 
@@ -661,32 +716,41 @@ trait MutateDateBeforeSaveTrait
     }
 }
 ```
+---
 
-Wanneer CMS-content wordt toegevoegd of bijgewerkt in een bestaand object, wordt het opslaan een stuk eenvoudiger. In dit geval hoeft alleen de relevante content uit de door de gebruiker ingevulde formuliergegevens te worden gehaald en via een Eloquent-relatie te worden opgeslagen. De gegevens die betrekking hebben op het hoofdmodel worden pas na deze handeling opgeslagen.
+## Schema's voor Contentblokken
 
-### Blockschema's voor Contentblokken in CMS met Filament
+Voor het CMS met Filament kunnen `Blocks` gedefinieerd worden via PHP-classes, die eenvoudig in verschillende templates hergebruikt kunnen worden door ze te importeren. In de blokken wordt ook aangegeven hoe de informatie moet worden opgehaald voor verwerking.
 
-In het CMS met Filament worden contentblokken gedefinieerd via PHP-classes. deze kunnen in verschillende templates hergebruikt worden. In de blokken wordt ook gespecificeerd hoe de informatie uit het blok moet worden opgehaald wanneer deze wordt opgevraagd.
-
-**Block-class in CMS met Filament**
-
+```
+Block-class in CMS met Filament
+```
 ```php 
 <?php
 
 namespace App\Cms\Blocks\Common;
 
-use App\Cms\Blocks\Interfaces\BlockContract;
+use App\Cms\Blocks\Interfaces\HasBlockSchema;
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Set;
 
 class Paragraph implements HasBlockSchema
 {
+    public static function getNamespace(): string
+    {
+        return 'Common';
+    }
+
     public static function getBlock(): Block
     {
-        return Block::make('common\paragraph')
+        return Block::make('paragraph')
             ->label('Paragraph')
             ->schema([
+                Hidden::make('namespace')
+                    ->afterStateHydrated(fn (Set $set) => $set('namespace', static::getNamespace())),
                 TextInput::make('title')
                     ->label('Title'),
                 RichEditor::make('text')
@@ -712,13 +776,15 @@ class Paragraph implements HasBlockSchema
     }
 }
 ```
+---
 
 ## Interfaces
 
-Ook voor de blocks is er een interface voorbereid, namelijk `HasBlockSchema`, die voorschrijft welke functionaliteiten een block moet bieden. Dit betreft het beschikbaar stellen van de formuliervelden die bij het block horen en een methode om de content van het block, die als JSON in het CMS wordt opgeslagen, op te halen.
+Voor de blocks is er de interface `HasBlockSchema`, die bepaalt welke functionaliteiten een `Block`-class moet bieden. Dit omvat het beschikbaar stellen van formuliervelden en een methode om de content van het block te verwerken.
 
-**HasBlockSchema interface in het CMS met Filament**
-
+```
+HasBlockSchema interface in het CMS met Filament
+```
 ```php
 <?php
 
@@ -733,16 +799,21 @@ interface HasBlockSchema
     public function resolve(array $blockData): array;
 }
 ```
+---
 
-## Statamic CMS met flat-file / eloquent-driver
+# Statamic CMS met flat-file / eloquent-driver
 
-In de flat-file en eloquent-driver configuratie van Statamic wordt het CMS anders opgezet dan bij traditionele CMS-systemen. Een belangrijk verschil is dat Statamic geen specifieke Eloquent-modellen per entiteit gebruikt, zoals bij veel andere Laravel-gebaseerde applicaties. In plaats daarvan maakt Statamic gebruik van `Collection`-modellen, die objecten zoals `Entry`-modellen beheren. Dit zorgt voor een structuur die geen complexe databasetabellen of acties vereist.
-### Collections
+In de **flat-file** en **Eloquent-driver** configuratie van **Statamic** wordt het CMS anders opgebouwd dan bij de andere systemen die we gezien hebben. In plaats van specifieke Eloquent-modellen per entiteit, gebruikt Statamic `Collections` waarin gerelateerde `Entries` worden opgeslagen. Dit vereenvoudigt de opzet, doordat er geen specifieke databasetabellen voor entiteiten hoeven te worden voorbereid.
+
+## Collections
 
 In de huidige configuratie worden pagina's beheerd binnen een `Collection`. Deze collecties bepalen de globale instellingen voor de entries die tot de collectie behoren. Denk hierbij aan zaken zoals de manier waarop de overzichtspagina gesorteerd moet worden, of entries genest kunnen worden, en het definiëren van de route die aangeroepen moet worden om een specifieke entry uit de collectie op te halen. Je kunt een collectie vergelijken met een Eloquent-model dat communiceert met de databasetabel van een bepaalde entiteit. Dit kunnen naast pagina's ook andere entiteiten zijn, zoals blogposts of reviews.
 
-**configuratie voor de `Pages`-collection**
+In de **flat-file** en **eloquent-driver** configuratie worden ook de pagina's beheerd binnen een `Collection`, die de globale instellingen voor de `Page`-entries binnen de collectie bepaalt. Je zou `Collections` kunnen vergelijken met een repository voor vergelijkbare entiteiten binnen een systeem. 
 
+```
+Configuratie voor de Pages-collection
+```
 ```yaml
 title: Pages  
 revisions: false  
@@ -755,15 +826,17 @@ structure:
   root: true  
   max_depth: 1
 ```
+---
 
-### Blueprints
+## Blueprints
 
-In de huidige configuratie worden de templates die gebruikt worden voor het beheren van de dynamische content op de pagina's gedefinieerd in een `Blueprint`. In het geval van pagina's waarvoor we meerdere templates gebruiken, kunnen we voor de `Pages`-collectie meerdere Blueprints aanmaken. Dit maakt het mogelijk om per template verschillende soorten velden te definiëren die aan een pagina meegegeven kunnen worden. Voor objecten waarvoor maar één soort beschikbaar is, maak je dus slechts één Blueprint aan.
+In de **flat-file** en **eloquent-driver** configuratie worden de templates voor het beheren van dynamische content gedefinieerd binnen een `Blueprint`. Voor pagina's die meerdere templates vereisen, kunnen meerdere `Blueprints` worden aangemaakt voor de `Pages`-collectie. Dit stelt ons in staat om per template verschillende velden te definiëren. Voor entiteiten waar slechts één definitie hoort te zijn, dient slechts één enkele `Blueprint` aangemaakt te worden.
 
-Een Blueprint definieert niet alleen het schema voor de invoervelden, maar bepaalt ook de validatie-regels, standaardwaarden en de zichtbaarheid van velden in de gebruikersinterface.
+Een `Blueprint` bepaalt niet alleen het schema voor invoervelden, maar ook de validatieregels, standaardwaarden en de zichtbaarheid van velden in de gebruikersinterface.
 
-**Blueprint voor het homepage-template**
-
+```
+Blueprint voor het homepage-template
+```
 ```yaml
 order: 1  
 tabs:  
@@ -846,13 +919,17 @@ tabs:
                           import: common.call_to_action  
 title: Homepage
 ```
+---
 
-### Fieldsets
+## Fieldsets
 
-Wellicht is het je al opgevallen dat er in de home-blueprint een `replicator`-veld is gedefinieerd met de handle `blocks`. Hieronder kunnen voorgedefinieerde sets van invoervelden worden meegegeven, die op hun beurt weer als contentblokken gebruikt kunnen worden. Om te voorkomen dat deze voorgedefinieerde sets elke keer dat ze gebruikt worden opnieuw gedefinieerd moeten worden, is het mogelijk om ze vooraf te definiëren in `Fieldsets`. Binnen de `replicator` op de pagina geef je vervolgens aan welke `Fieldsets` je wilt gebruiken.
+Zoals je kunt zien in de `Blueprint` voor de homepage, is er een `replicator`-veld gedefinieerd met de handle `blocks`.
 
-**Fieldset voor het Paragraph block**
+Dit veld stelt je in staat om vooraf gedefinieerde sets van invoervelden toe te voegen, die vervolgens als contentblokken gebruikt kunnen worden. Om te voorkomen dat deze sets telkens opnieuw gedefinieerd moeten worden, kunnen ze als `Fieldset` worden voorbereid. Deze `Fieldsets` kunnen daarna worden toegevoegd aan een `replicator`-veld.
 
+```
+Fieldset voor het Paragraph block
+```
 ```yaml
 title: Paragraph  
 fields:  
@@ -896,12 +973,17 @@ fields:
       replicator_preview: false  
       duplicate: false
 ```
+---
 
-### Entries
+## Entries
 
-De daadwerkelijke pagina's en objecten worden beheerd als `Entries` binnen de gedefinieerde collecties. Een `Entry` is in feite de representatie van een individueel item binnen een collectie, zoals een pagina of blogpost. Elke `Entry` bevat specifieke gegevens voor de velden die zijn gedefinieerd in de bijbehorende `Blueprint`. `Entries` worden in de flat-file configuratie opgeslagen als markdown-bestanden in de `content`-directory van de repository. Wanneer je gebruik maakt van de Eloquent-driver (en aangeeft dat `Entries` in de database opgeslagen moeten worden), wordt een `Entry` in de `entries`-databasetabel opgeslagen.
+In de **flat-file** en **eloquent-driver** confiugraties worden objecten gepersisteerd onder het `Entry`-model.
 
- **Entry in de `Pages`-collection, gebaseerd op de `Homepage`-blueprint.** 
+`Entries` worden in de flat-file configuratie opgeslagen als markdown-bestanden in de directory van de bijhorende `Collection`. Wanneer je gebruik maakt van de Eloquent-driver configuratie (en aangeeft dat `Entries` in de database opgeslagen moeten worden), wordt een `Entry` als JSON in een `entries`-tabel opgeslagen.
+
+```
+Entry in de `Pages`-collection, gebaseerd op de `Homepage`-blueprint.
+```
 ```markdown
 ---  
 id: 78f550f5-b9a4-404a-86e5-fc684b3e3b77  
@@ -914,21 +996,18 @@ updated_at: 1735046888
 template: homepage  
 ---
 ```
+---
 
-### Synchronisatie van relaties
+## Synchronisatie van relaties
 
-In de flat-file configuratie van **Statamic** is er geen automatische synchronisatie van bi-directionele relaties, wat kan leiden tot inconsistenties wanneer een relatie aan de ene kant van het object wordt verwijderd, maar aan de andere kant blijft bestaan.
+In de **flat-file** en **eloquent-driver** configuratie van Statamic is er geen automatische synchronisatie van bi-directionele relaties, wat kan leiden tot inconsistenties wanneer een relatie aan de ene kant van het object wordt verwijderd, maar aan de andere kant behouden blijft. Via de **Statamic Marketplace** is er echter de `Entry Relationships`-addon beschikbaar die automatische verwerking van bi-directionele relaties mogelijk maakt. 
+> * [Entry Relationship addon in de Statamic Marketplate](https://statamic.com/addons/stillat/entry-relationships)
 
-Een oplossing is het maken van een **Listener** voor modellen met bi-directionele relaties, die bij de `saved`-actie ook het gerelateerde object aanpast. Dit vereist aandacht voor infinite loops, race conditions en onbedoelde meerdere `saved`-acties. Wijzigingen in de blueprints, zoals veldnamen, moeten ook in de Listener worden verwerkt, wat de complexiteit verhoogt vergeleken met **Eloquent**-modellen.
+<br>
 
-In de marketplace is er een oplossing in de vorm van de addon **Entry Relationships**, die bi-directionele relaties beheert. Door de package te importeren en een functie in een serviceprovider aan te roepen, worden de velden met elkaar verbonden. Dit neemt nog niet weg dat de naam van de velden zowel in de blueprint als in de RelationServiceProvider aangepast moet worden.
-
-Een ander nadeel is dat dergelijke addons ontwikkeld worden door derde partijen die niet altijd dezelfde urgentie voelen om hun packages goed te onderhouden.
-
-> [Entry Relationship addon in de Statamic Marketplate](https://statamic.com/addons/stillat/entry-relationships)
-
-**Voorbeeld van de RelationShipServiceProvider**
-
+```
+Voorbeeld van de RelationShipServiceProvider met EntryRelationship-addon
+```
 ```php
 <?php  
   
@@ -951,18 +1030,23 @@ class RelationshipServiceProvider extends ServiceProvider
     {}  
 }
 ```
+---
 
-## Statamic CMS met Runway
+# Statamic CMS met Runway
 
-In de configuratie waarbij gebruik wordt gemaakt van de Runway-addon verandert de architectuur vrij drastisch. In tegenstelling tot `Collections` maken we nu gebruik van `Eloquent`-modellen en specifieke databasetabellen voor alle entiteiten binnen het systeem. Hierdoor verliezen we helaas de standaard `navigation`- en `navigation-tree`-functionaliteiten van Statamic, inclusief de drag-and-drop functionaliteit om een menustructuur te definiëren. Om dit op te vangen is er in deze configuratie gekozen om een `menu manager` te gebruiken, zoals ook in het **Filament** CMS het geval is.
+In de configuratie waarbij gebruik wordt gemaakt van de **Runway**-addon verandert de architectuur vrij drastisch. In tegenstelling tot `Collections` en `Entries` maken we nu gebruik van `Eloquent`-modellen en specifieke databasetabellen voor alle entiteiten binnen het systeem. Hierdoor verliezen we helaas de standaard `navigation`- en `navigation-tree`-functionaliteiten van Statamic, inclusief de drag-and-drop functionaliteit om een menustructuur te definiëren. Om dit op te vangen is er in deze configuratie gekozen om een `menu manager` te gebruiken, zoals ook in het **Filament** CMS het geval is.
+
+In de configuratie waarbij de **Runway**-addon wordt gebruikt, verandert de architectuur aanzienlijk. In plaats van `Collections` en `Entries`, maken we nu gebruik van `Eloquent`-modellen en specifieke databasetabellen voor alle entiteiten binnen het systeem. Dit betekent echter dat we de standaard `navigation`- en `navigation-tree`-functionaliteiten van Statamic verliezen, waaronder de **drag-and-drop-interface** om een menustructuur te definiëren. Om dit op te vangen is er in deze configuratie gekozen om een `menu manager` te gebruiken, zoals ook in het **Filament** CMS het geval is.
+
 ## Eloquent models
 
-In principe zijn er weinig verschillen zichtbaar tussen het `Eloquent`-model voor **Statamic** die van **Filament**. Wat opvalt is een andere Trait: `HasRunwayResource`. Deze maak het mogelijk om onze gegevens in `Statamic` weer te geven.
+In principe zijn er weinig verschillen zichtbaar tussen het `Eloquent`-model voor **Statamic** en dat van **Filament**. Een opvallend verschil is de aanwezigheid van een andere **Trait**: `HasRunwayResource`. Deze Trait maakt het mogelijk om de modelen in Statamic weer te beheren.
 
-Daarnaast zien we dat de `template`-attribute naar een `array` wordt gecast. Dit hint naar de eerste crux binnen deze configuratie, want alle gegevens die via een `replicator` worden meegegeven – dus de dynamische content voor een website – kunnen niet worden opgeslagen in een aparte tabel. In tegenstelling tot het AllesOnline CMS, wordt alle content onder het bijbehorende model als JSON opgeslagen.
+Een ander belangrijk punt is dat de `template`-attribute wordt gecast naar een `array`. Dit wijst op een belangrijke eigenschap van deze configuratie: alle gegevens die via een `replicator` worden meegegeven (lees: de dynamische content) kunnen niet in een aparte tabel worden opgeslagen. In tegenstelling tot het **AllesOnline CMS** en de realisatie in **Filament**, wordt alle content onder het bijbehorende model als JSON gepersisteert.
 
-**Eloquent model in Statamic met Runway-addon**
-
+```
+Eloquent model in Statamic met Runway-addon**
+```
 ```php
 <?php  
   
@@ -1001,14 +1085,17 @@ class Page extends Model implements hasUrl
     }  
 }
 ```
-
+---
 
 ## Runway Resources
 
 Als we gebruik maken van de Runway configuratie is het niet meer mogelijk om gebruik te maken van `blueprints`. Dit omdat Runway gebruikt maakt van Runway Resources die eigenlijk op het zelfde niveau als `blueprints` zitten. Dit zijn dus dus de bestanden waarin de CMS schemas voor de entiteiten gedefineerd worden. 
 
-**Runway resource voor het schema van het page-model**
+Wanneer we gebruikmaken van de **Runway**-configuratie, is het niet meer mogelijk om gebruik te maken van `Blueprints`. Dit komt doordat Runway gebruikmaakt van Runway `Resources`, die zich op hetzelfde niveau als `Blueprints` bevinden. In plaats van `Blueprints` worden de CMS-schema’s voor de entiteiten nu gedefinieerd binnen deze Runway `Resources`.
 
+```
+Runway resource voor het schema van het page-model**
+```
 ```yaml 
 tabs:  
   main:  
@@ -1068,10 +1155,11 @@ title: Page
 ```
 ## Formfields voor templates
 
-Omdat we met Runway de `collections` en daarmee een laag abstractie verliezen, is het niet meer mogelijk om de verschillende templates voor een page als blueprint op te geven. Daarom is het nodig om de templates een laag dieper te defineren, namelijk als `FieldSet`. In het voorbeeld hierboven zie je dat gebruikers een template via een `replicator` kunnen selecteren, in de `replicator` zelf zitten weer de velden die tot de template toe behoren. 
+Doordat we met Runway de `collections` en daarmee de abstractielaag verliezen, is het niet langer mogelijk om verschillende templates voor een pagina als `Blueprint` op te geven. In plaats daarvan moeten de templates anders gedefinieerd worden, namelijk als `FieldSet`. In het voorbeeld hierboven kunnen gebruikers een template selecteren via een `replicator`. Binnen de `replicator` bevinden zich de velden die specifiek aan de gekozen template zijn gekoppeld.
 
-**FieldSet voor Homepage template**
-
+```
+FieldSet voor Homepage template
+```
 ```yaml 
 title: Homepage  
 fields:  
@@ -1123,9 +1211,11 @@ fields:
 
 ## Formfields voor contentblokken
 
-Binnen de `fieldSets` voor de templates is het mogelijk om weer verder te verwijzen naar een `replicator` met fieldSets voor content blokken. Deze blijven in principe onveranderd
+Binnen de `fieldSets` voor de templates is het mogelijk om door te verwijzen naar een `replicator` met `fieldSets` voor contentblokken. Deze blijven in principe ongewijzigd, wat betekent dat de dynamische content die via de `replicator` wordt ingevoerd, zoals tekst of afbeeldingen, in de templates kan worden opgenomen.
 
-**Nogmaals FieldSet voor het Paragraph block**
+```
+FieldSet voor het Paragraph block
+```
 ```php
 title: Paragraph  
 fields:  
