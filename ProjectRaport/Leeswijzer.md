@@ -35,15 +35,7 @@ Uit de gesprekken met developers bleek dat zij over het algemeen tevreden zijn m
 > * [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 > * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 
---
-oud 
-
-Parallel aan het onderzoek heb ik de requirements opgesteld waaraan een CMS moet voldoen om te voorzien in de behoeften van een doorsnee AllesOnline-website. Op basis van deze requirements heb ik een DOT-frameworkesque `Multi-Criteria Decision Making`-analyse opgesteld, waarmee ik op een eenvoudige manier kan bijhouden hoe de te onderzoeken frameworks aan deze requirements voldoen.
-
--- 
-nieuw
-
-Parallel aan de analyse heb ik requirements opgesteld waaraan een CMS moet voldoen om te passen bij de behoeften van een typische AllesOnline-website. Gebaseerd op deze requirements heb ik een `Multi-Criteria Decision Making`-analyse in DOT-frameworkstijl opgesteld, waarmee ik eenvoudig kan bijhouden hoe de frameworks zich tot de gestelde requirements verhouden.
+Parallel aan de analyse heb ik requirements opgesteld waaraan een CMS moet voldoen om te voorzien in de behoeften van een typische AllesOnline-website. Op basis van deze requirements heb ik een **Multi-Criteria Decision Making**-analyse in **DOT**-frameworkstijl opgesteld, waarmee ik eenvoudig kan bijhouden hoe de frameworks zich tot de gestelde requirements verhouden.
 
 > * [Requirements](../AnalyseAdvies/Requirements.md)
 > * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
