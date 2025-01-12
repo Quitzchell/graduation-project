@@ -54,7 +54,7 @@ Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen
 
 ### Conclusies onderzoek AllesOnline CMS en realisatie eerste prototype
 
-Dankzij dit deel van het onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden geven op enkele deelvragen.
+Dankzij bovenstaand onderdeel van het onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden geven op enkele deelvragen.
  
 * __Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?__
 	* **Beperkte documentatie:** De documentatie is verouderd, waardoor ontwikkelaars onnodig lang bezig zijn met het begrijpen van bepaalde functionaliteiten en parameters.
