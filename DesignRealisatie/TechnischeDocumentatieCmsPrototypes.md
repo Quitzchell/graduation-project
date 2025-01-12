@@ -9,12 +9,12 @@ Dit document biedt een technisch overzicht van de werking en structuur van de on
 In het AllesOnline CMS worden pagina's en content beheerd via de `ContentManagerController`, die meestal ongewijzigd wordt geïmporteerd vanuit de AllesOnline CMS-packages. Deze controller beheert pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties en gebruikersrechtenverificatie.
 
 **Naast deze basisfunctionaliteiten biedt de controller:**
-**Content hiërarchie en volgorde**: Beheer van de hiërarchie en volgorde van pagina-items in de database via methoden zoals updateManagedContent.
-**Autorisatie**: Controle of gebruikers de juiste rechten hebben om acties uit te voeren, met methoden zoals can en methodPermission, ondersteund door middleware en configuratiebestanden.
-**Pagina-vergrendeling**: Mogelijkheid om pagina's te vergrendelen en ontgrendelen om ongewenste wijzigingen te voorkomen.
+* **Content hiërarchie en volgorde**: Beheer van de hiërarchie en volgorde van pagina-items in de database via methoden zoals updateManagedContent.
+* **Autorisatie**: Controle of gebruikers de juiste rechten hebben om acties uit te voeren, met methoden zoals can en methodPermission, ondersteund door middleware en configuratiebestanden.
+* **Pagina-vergrendeling**: Mogelijkheid om pagina's te vergrendelen en ontgrendelen om ongewenste wijzigingen te voorkomen.
 Replicatie van pagina's: Het dupliceren van pagina's en hun gekoppelde content via de getCopy-methode.
-**Templatebeheer**: Beheer van beschikbare pagina-templates, inclusief filtering, sortering en integratie met specifieke resolvers.
-**Menu-integratie**: Koppeling van pagina's aan menu's en het beheer van de menustructuur.
+* **Templatebeheer**: Beheer van beschikbare pagina-templates, inclusief filtering, sortering en integratie met specifieke resolvers.
+* **Menu-integratie**: Koppeling van pagina's aan menu's en het beheer van de menustructuur.
 
 ## Dynamische Weergavegeneratie en Templatebeheer
 
@@ -257,17 +257,17 @@ public function blocks(string $tag = 'blocks', array $data = [])
     }
 ```
 
-## CMS met Filament
+# CMS met Filament
 
-In Filament kan op een soortgelijke manier een CMS worden gerealiseerd door gebruik te maken van Resources en een Eloquent-model geinspireerd op het `Page`-model van AllesOnline CMS. Dit model bevat de gegevens en relaties van pagina’s en hun hiërarchie.
+In **Filament** kan een CMS, vergelijkbaar met het AllesOnline CMS, worden opgebouwd met behulp van `Resources` en een `Eloquent`-model, zoals het `Page`-model van AllesOnline. Dit model beheert de gegevens en relaties van pagina's en hun hiërarchie.
 
-*Een UML class-diagram met het onderstaande concept voor content management kan je [hier bekijken](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)*
+> [UML class-diagram met het concept content management in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 
-### Eloquent Model: Page
+## Eloquent Model: Page
 
-Het `Page`-model slaat paginagegevens in de database op en beheert relaties tussen pagina's.
+De `Page`-class is een **Eloquent**-model in Laravel dat pagina-informatie beheert, relaties legt met menu's en URL's genereert op basis van de paginanaam.
 
-**Page-model in CMS met Filament**
+**Page-model**
 
 ```php
 <?php
@@ -295,17 +295,13 @@ class Page extends Model implements HasContent, HasUrl
         'content',
     ];
 
-    protected $casts = [
-        'content' => 'array',
-    ];
-
     /* Relations */
     public function menus(): BelongsToMany
     {
         return $this->belongsToMany(Menu::class);
     }
 
-    /* Urlable */
+    /* HasUrl */
     public function uri($lang = null): string
     {
         return strtolower($this->name);
@@ -313,20 +309,20 @@ class Page extends Model implements HasContent, HasUrl
 
     public function url($lang = null): string
     {
-        return config('app.url').'Page.php/'.$this->uri($lang);
+        return url($this->uri($lang));
     }
 }
 ```
 
-### Interfaces
+## Interfaces
 
-Het Page model implementeert verschillende interfaces die voorschrijven waar het model aan moet voldoen. 
+Het `Page`-model implementeert interfaces die richtlijnen definiëren voor specifieke functionaliteiten, zoals het beheren van content (`HasContent`) en het genereren van URL's (`HasUrl`), waardoor het model consistent en uitbreidbaar blijft.
 
-#### HasContent
+### HasContent
 
-De `HasContent`-interface schrijft voor dat het model een relatie heeft met het Content-model, waarin de daarvoor aangewezen CMS-content wordt opgeslagen. In het Filament CMS wordt deze interface gecombineerd met de `ProvidesContentTrait`.
+De `HasContent`-interface vereist dat het model een relatie met het Content-model definieert, waarin CMS-content wordt opgeslagen. In het Filament CMS wordt deze functionaliteit aangevuld met de `ProvidesContentTrait`.
 
-**HasContent interface in CMS met Filament**
+**HasContent interface**
 
 ```php
 <?php
@@ -343,11 +339,11 @@ interface HasContent
 }
 ```
 
-#### HasUrl
+### HasUrl
 
-De `HasUrl`-interface schrijft voor dat het model functionaliteit moet implementeren waarmee een `uri` en een `url` worden gegenereerd voor de objecten die uit het model voortkomen.
+De `HasUrl`-interface vereist dat het model functionaliteit implementeert om een `uri` en een volledige `url` te genereren voor de bijbehorende objecten.
 
-**HasUrl interface in het CMS met Filament**
+**HasUrl interface**
 
 ```php
 <?php
@@ -362,11 +358,13 @@ interface HasUrl
 }
 ```
 
-### Traits
+## Traits
 
-#### ProvidesContentTrait
+### ProvidesContentTrait
 
-De `ProvidesContentTrait` bevat de logica voor de polymorfe relatie tussen het model dat `HasContent` implementeert en het Content-model. Door gebruik te maken van een **trait** kan deze logica op een eenvoudige manier worden hergebruikt. Als er andere functionaliteit nodig is, kan er een nieuwe trait worden gedefinieerd, of kunnen de functies uit de `HasContent`-interface direct in de betreffende class worden geïmplementeerd.
+De `ProvidesContentTrait` bevat de logica voor de polymorfe relatie tussen modellen die `HasContent` implementeren en het `Content`-model. Door deze **Trait** te gebruiken, kan de logica eenvoudig worden hergebruikt. Voor aanvullende functionaliteiten kan een nieuwe trait worden aangemaakt of kunnen de methoden uit de `HasContent`-interface rechtstreeks in de class worden geïmplementeerd.
+
+**ProvidesContentTrait**
 
 ```php
 <?php
@@ -390,11 +388,11 @@ trait ProvidesContentTrait
 }
 ```
 
-### Filament PageResource en Dynamische Templates
+## PageResource en dynamische templates
 
-Met het `Page`-model kan een Filament `PageResource` een formulier genereren voor het beheren van pagina’s. Een select-veld stelt de gebruiker in staat om een template te kiezen, waarna het formulier dynamisch de velden van de bijbehorende template inlaadt.
+De `Resource`-classes in Filament dienen als de brug tussen Eloquent-modellen en de adminpanelen binnen het CMS. In de `Resource` die is gekoppeld aan het `Page`-model, kan in de `form()`-methode een `Select`-component worden toegevoegd. Hiermee kunnen gebruikers vooraf gedefinieerde **templates** voor een pagina selecteren.
 
-**Schema voor Content Management in CMS met Filament**
+**Schema voor Content Management**
 
 ```php
 public static function form(Form $form): Form
@@ -416,21 +414,15 @@ public static function form(Form $form): Form
                         ->unique(ignoreRecord: true)
                         ->required(),
 
-					// Het select veld voor het selecteren van een template
                     Forms\Components\Select::make('template')
                         ->options($templateFactory->getTemplateNames())
                         ->required()
                         ->live(),
 
-					// Het onderdeel van het formulier dat dynamisch wordt 
-					//  ingeladen nadat de gebruiker een template selecteert
                     Forms\Components\Section::make()
                         ->schema(function (Get $get) use ($templateFactory) {
                             if ($get('template')) {
-                                return 
-	                                $templateFactory->loadTemplateSchema(
-		                                $get('template')
-		                            );
+                                return $templateFactory->loadTemplateSchema($get('template'));
                             }
 
                             return [];
@@ -440,11 +432,11 @@ public static function form(Form $form): Form
     }
 ```
 
-### TemplateFactory voor Dynamische Template-selectie
+## TemplateFactory
 
-De `TemplateFactory`-class ondersteunt de selectie en dynamische weergave van velden op basis van het door de gebruiker gekozen template in de `PageResource`.
+De `TemplateFactory`-class ondersteunt het dynamisch ophalen van templates en zijn velden op basis van het gekozen template. Het valideert templates die de `HasTemplateSchema`-interface implementeren en biedt methoden voor het ophalen van veldnamen en een lijst van beschikbare templates.
 
-**TemplateFactory in CMS met Filament**
+**TemplateFactory**
 
 ```php
 <?php

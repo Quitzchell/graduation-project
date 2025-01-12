@@ -112,17 +112,9 @@ Tijdens het onderzoek ben ik begonnen met het ontwerpen en ontwikkelen van het C
 
 # Onderzoek migratie van AllesOnline naar Filament CMS
 
--- oud
-
-Nadat ik zowel een AllesOnline-prototype als een Filament CMS-prototype had gerealiseerd, kon ik aan de slag met een belangrijke requirement van AllesOnline: onderzoeken of het mogelijk is om bestaande projecten met het AllesOnline CMS op een geautomatiseerde manier te migreren naar een nieuw systeem.
-
-Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, maar een Proof of Concept (PoC) te realiseren. Het doel van de PoC is om aan te tonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor het realiseren van deze tool heb ik gekozen om gebruik te maken van Symfony's Console-componenten.
-
--- nieuw 
-
 Na het realiseren van zowel een AllesOnline- als een Filament CMS-prototype, ben ik begonnen met het onderzoeken van een belangrijke requirement van AllesOnline: het geautomatiseerd migreren van bestaande projecten naar een nieuw systeem.
 
-Om tijd te besparen, heb ik ervoor gekozen om een Proof of Concept (PoC) te ontwikkelen. Het doel van de PoC is het aantonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's, omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor de ontwikkeling van deze tool heb ik componenten van het **Symfony**-framework gebruikt.
+Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken,maar enkel een Proof of Concept (PoC) te ontwikkelen. Het doel van de PoC is om aan te tonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's, omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor de ontwikkeling van deze tool heb ik componenten van het **Symfony**-framework gebruikt.
 
 > _Verantwoording voor de keuze om Symfony voor de tool gebruiken lees je hier_:
 > * [Onderzoek voor Tool CMS Migratie](../AnalyseAdvies/OnderzoekVoorCmsMigratie.md)
