@@ -1,7 +1,8 @@
-# Reflectie
+# **Reflectie**
 
 Terugkijkend op het afgelopen semester en mijn afstudeerproject, kan ik concluderen dat ik veel heb geleerd, zowel op technisch als persoonlijk vlak.
 
+# De examenopdracht
 Het onderzoek naar en het vergelijken van verschillende Content Management Systemen voor AllesOnline heeft niet alleen mijn kennis over het AllesOnline CMS vergroot, maar ook mijn inzicht in de werking van Filament en Statamic. Daarnaast ben ik tot het besef gekomen dat de uitspraak die Marco Meulenbroeks tijdens het tweede semester van deze opleiding steeds benadrukte, een belangrijke factor kan zijn in het werkveld. Deze uitspraak kon namelijk al aan het begin van dit semester de uitkomst van dit project samenvatten: "It depends". Want als we kijken naar welk systeem het meest geschikt is voor de diverse klanten van AllesOnline, is er geen eenduidig antwoord. Waarom zou je een Zwitsers zakmes gebruiken om een wijnfles te openen, als dat veel makkelijker gaat met een kurkentrekker? De meest waardevolle conclusie uit dit onderzoek is dan ook dat ik heb kunnen definiëren welk systeem in welke gevallen de voorkeur zou genieten.
 
 Naast mijn verdieping in deze systemen en het inzicht dat "it depends" belangrijker is dan ik aanvankelijk dacht, heb ik ook mijn kennis over de SOLID-principes verder uitgebreid. Dit kwam vooral doordat ik hiermee aan de slag ben gegaan tijdens het ontwikkelen van de CMS-functionaliteiten voor Filament, wat me de ideale gelegenheid bood om de verschillende concepten in de praktijk uit te proberen.
@@ -13,7 +14,8 @@ Mijn probleem met timemanagement bleek namelijk samen te hangen met mijn gebrek 
 
 De feedback die ik tijdens de midterm van Arjan Groeneweg en Frank Coenen kreeg, deed me inzien dat ik mijn werkwijze moest veranderen. In plaats van de verantwoordelijkheid voor tickets van andere developers op me te nemen, begon ik deze verantwoordelijkheid terug te leggen bij de betreffende personen of mijn leidingegevende hierover op de hoogte te stellen. Dit was een belangrijke stap in mijn persoonlijke ontwikkeling en droeg bij aan het versterken van zowel mijn communicatieve vaardigheden als mijn veerkracht. Deze nieuwe aanpak leidde tot een daling in mijn overuren, naar slechts 4 uur per maand in november en december. Dit verbeterde niet alleen mijn focus en energie, maar liet me ook inzien dat problemen niet altijd individueel opgelost hoeven te worden. Samenwerking en het delen van verantwoordelijkheid zijn namelijk essentieel binnen een succesvol bedrijf.
 
-# Bijvangst 
+# Ervaringen buiten de examenopdracht
 Naast dat ik waardevolle inzichten heb opgedaan tijdens mijn examenproject, heb ik ook tijdens mijn dagelijkse werkzaamheden bij AllesOnline mijn kennis verder kunnen uitbreiden. Zo heb ik onder andere gewerkt aan de migratie van on-premise hosting naar cloud hosting via DigitalOcean, waarbij ik ook documentatie heb geschreven om developers in de toekomst een gestandaardiseerde werkwijze te bieden. Daarnaast heb ik voor het eerst met Next.js voor een klant gewerkt, ervaring opgedaan met gechainede jobs en zware berekeningen via database-queries uitgevoerd. Ook heb ik een SOAP-api omgebouwd naar een REST-api en hiervoor het aantal requests per gegevensimport met 95% verminderd.
 
+# Conclusie
 Al met al was dit semester een zeer leerzame periode, waarin ik niet alleen mijn technische vaardigheden heb verbeterd, maar ook belangrijke inzichten heb opgedaan over het managen van werkdruk en het nemen van verantwoordelijkheid. Ik ben nu beter in staat om efficiënt samen te werken en mijn werk op een meer gebalanceerde manier te organiseren.
