@@ -1001,7 +1001,7 @@ template: homepage
 
 ## Synchronisatie van relaties
 
-In de **flat-file** en **eloquent-driver** configuratie van Statamic is er geen automatische synchronisatie van bi-directionele relaties, wat kan leiden tot inconsistenties wanneer een relatie aan de ene kant van het object wordt verwijderd, maar aan de andere kant behouden blijft. Via de **Statamic Marketplace** is er echter de `Entry Relationships`-addon beschikbaar die automatische verwerking van bi-directionele relaties mogelijk maakt. 
+In de **flat-file** en **eloquent-driver** configuratie van Statamic is er geen automatische synchronisatie van bi-directionele relaties, wat kan leiden tot inconsistenties wanneer een relatie aan de ene kant van het object wordt verwijderd, maar aan de andere kant behouden blijft. Via de **Statamic Marketplace** is er echter een `Entry Relationships`-addon beschikbaar die automatische verwerking van bi-directionele relaties mogelijk maakt. 
 > * [Entry Relationship addon in de Statamic Marketplate](https://statamic.com/addons/stillat/entry-relationships)
 
 <br>
@@ -1035,7 +1035,7 @@ class RelationshipServiceProvider extends ServiceProvider
 
 # Statamic CMS met Runway
 
-In de configuratie waarbij gebruik wordt gemaakt van de **Runway**-addon verandert de architectuur vrij drastisch. In tegenstelling tot `Collections` en `Entries` maken we nu gebruik van `Eloquent`-modellen en specifieke databasetabellen voor alle entiteiten binnen het systeem. Hierdoor verliezen we helaas de standaard `navigation`- en `navigation-tree`-functionaliteiten van Statamic, inclusief de drag-and-drop functionaliteit om een menustructuur te definiëren. Om dit op te vangen is er in deze configuratie gekozen om een `menu manager` te gebruiken, zoals ook in het **Filament** CMS het geval is.
+In de configuratie waarbij gebruik wordt gemaakt van de **Runway**-addon verandert de architectuur vrij drastisch. In tegenstelling tot `Collections` en `Entries` maken we nu gebruik van `Eloquent`-modellen en specifieke databasetabellen voor alle entiteiten binnen het systeem. Hierdoor verliezen we helaas de standaard `navigation`- en `navigation-tree`-functionaliteiten van Statamic, inclusief de drag-and-drop functionaliteit om een menustructuur te definiëren. Om dit op te vangen, is in deze configuratie gekozen voor het gebruik van een `menu-manager`, zoals ook het geval is in het **Filament** CMS
 
 In de configuratie waarbij de **Runway**-addon wordt gebruikt, verandert de architectuur aanzienlijk. In plaats van `Collections` en `Entries`, maken we nu gebruik van `Eloquent`-modellen en specifieke databasetabellen voor alle entiteiten binnen het systeem. Dit betekent echter dat we de standaard `navigation`- en `navigation-tree`-functionaliteiten van Statamic verliezen, waaronder de **drag-and-drop-interface** om een menustructuur te definiëren. Om dit op te vangen is er in deze configuratie gekozen om een `menu manager` te gebruiken, zoals ook in het **Filament** CMS het geval is.
 
