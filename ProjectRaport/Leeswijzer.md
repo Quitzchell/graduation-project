@@ -27,19 +27,9 @@ Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaa
 
 # Onderzoek naar huidige CMS en opzet eerste prototype
 
---
-oud
-
-In de eerste weken van dit project heb ik mij gericht op het analyseren van het AllesOnline CMS. Om een goed beeld te krijgen en hier gericht advies over uit te kunnen brengen, heb ik gesprekken gevoerd met collega-developers van AllesOnline over hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarnaast heb ik mijn eigen ervaringen met het CMS meegenomen in deze analyse en ben ik de code van het CMS ingedoken om op een dieper niveau te begrijpen hoe het systeem is opgebouwd.
-
-Uit de gesprekken en de analyse bleek dat de meeste developers tevreden zijn met het CMS. Hoewel niet alles volgens Best Practices verloopt en er onduidelijkheden bestaan over de werking van het CMS, slagen de meeste developers erin om op een pragmatische manier tot oplossingen te komen. Toch valt op dat de developers binnen AllesOnline graag een verbeterde developer experience zouden zien. Hierbij kan gedacht worden aan meer abstractie van functionaliteiten, waardoor complexiteit beter kan worden verborgen en herbruikbare oplossingen eenvoudiger te implementeren zijn. Dit kan bijdragen aan het sneller en eenvoudiger realiseren van specifieke klantwensen.
-
---
-nieuw
-
 In de eerste weken van dit project heb ik me gericht op het analyseren van het AllesOnline CMS. Om een goed beeld te krijgen en een onderbouwd advies te kunnen formuleren, heb ik verschillende acties ondernomen. Zo ben ik in gesprek gegaan met andere developers binnen AllesOnline, heb ik de codebase van het CMS geanalyseerd en heb ik mijn ervaringen van ongeveer 2 jaar werken bij AllesOnline meegenomen.
 
-Uit de gesprekken bleek dat de developers over het algemeen tevreden zijn met het CMS. Hoewel niet alles volgens Best Practices verloopt en er soms onduidelijkheden bestaan over de werking van het CMS, slagen de meeste developers erin om op een pragmatische manier tot oplossingen te komen. Er werd ook aangegeven dat de developers binnen AllesOnline een verbeterde developer experience zouden waarderen. Hierbij kan gedacht worden aan meer abstractie van functionaliteiten, zodat complexiteit beter kan worden verborgen en herbruikbare oplossingen eenvoudiger te implementeren zijn. Dit zou kunnen bijdragen aan het sneller en eenvoudiger realiseren van specifieke klantwensen.
+Uit de gesprekken met developers bleek dat zij over het algemeen tevreden zijn met het CMS. Hoewel niet alles volgens *Best Practices* verloopt en er soms onduidelijkheden bestaan over de werking van het CMS, slagen zij er meestal in om op een pragmatische manier tot oplossingen te komen. Er werd ook aangegeven dat zij een verbeterde developer experience zouden waarderen. Hierbij kan gedacht worden aan meer abstractie van functionaliteiten, zodat complexiteit beter kan worden verborgen en herbruikbare oplossingen eenvoudiger te implementeren zijn. Dit zou in de toekomst kunnen bijdragen aan het sneller en eenvoudiger realiseren van specifieke klantwensen.
 
 > * [Gesprekken met Developers](../AnalyseAdvies/GesprekkenEnErvaringenMetDevelopers.md)
 > * [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
@@ -76,7 +66,13 @@ Op basis van de requirements en het beeld van een typische AllesOnline-website b
 > * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 > * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
+-- oud
+
 Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb voor alle prototypes Docker-containers voorbereid. Voor de backends maak ik gebruik van de voorgedefinieerde AllesOnline-container, met een uitbreiding die het mogelijk maakt om van SQLite gebruik te maken. Dit maakt het eenvoudiger om zowel tijdens het programmeren als binnen een pipeline feature tests uit te voeren, zonder de reguliere database te beïnvloeden.
+
+-- nieuw
+
+Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, zijn voor alle prototypes Docker-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, uitgebreid om SQLite te ondersteunen. Dit maakt het mogelijk om feature tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend is 
 
 ### Conclusies onderzoek AllesOnline CMS en realisatie eerste prototype
 
