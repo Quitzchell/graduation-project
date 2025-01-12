@@ -93,7 +93,7 @@ Het tweede prototype dat ik ben gaan realiseren, was een CMS met Filament. Filam
 
 -- nieuw 
 
-Het tweede prototype dat ik heb ontwikkeld, was een CMS met **Filament**. Filament is niet strikt een CMS, maar een library met *"a collection of beautiful full-stack components"*, althans volgens hun website. Met de aangeboden componenten is het relatief eenvoudig om een CRUD-applicatie op te zetten en, met wat creativiteit, ook een CMS.
+Het tweede prototype dat ik heb ontwikkeld, was een CMS met **Filament**. Filament is niet strikt een CMS, maar een library met *"a collection of beautiful full-stack components"*, aldus hun website. Met deze componenten is het relatief eenvoudig om een CRUD-applicatie op te zetten, en met wat creativiteit ook een CMS.
 
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 > * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
