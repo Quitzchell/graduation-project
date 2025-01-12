@@ -605,7 +605,7 @@ interface HasTemplateSchema
 ```
 ---
 
-## Uitbreiding voor het create, edit en fill van CMS Content
+## Uitbreiding van functionaliteiten voor CMS-content
 
 Naast `Resource`-classes heeft Filament aparte classes voor het persisteren van de CMS gegevens. Om CMS-content op dezelfde manier als in het **AllesOnline CMS** te persisteren, moeten de functionaliteiten binnen deze classes worden aangepast. Filament biedt uitbreidbare, abstracte methoden om dit te realiseren. Omdat deze wijziging in alle `Resource`-classes doorgevoerd moet worden, zijn `Traits` ontwikkeld die de logica voor het persisteren en ophalen van CMS-content correct afhandelen.
 
