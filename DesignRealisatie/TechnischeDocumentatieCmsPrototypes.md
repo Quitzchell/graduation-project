@@ -9,14 +9,14 @@ Dit document biedt een technisch overzicht van de werking en structuur van de on
 In het AllesOnline CMS worden pagina's en content beheerd via de `ContentManagerController`, deze wordt meestal ongewijzigd geïmporteerd vanuit de AllesOnline CMS-packages. Deze controller beheert pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties en gebruikersrechtenverificatie.
 
 **Naast deze basisfunctionaliteiten biedt de controller:**
-* **Content hiërarchie en volgorde**: Beheer van de hiërarchie en volgorde van pagina-items in de database via methoden zoals updateManagedContent.
+* **Contenthiërarchie en volgorde**: Beheer van de hiërarchie en volgorde van pagina-items in de database via methoden zoals updateManagedContent.
 * **Autorisatie**: Controle of gebruikers de juiste rechten hebben om acties uit te voeren, met methoden zoals can en methodPermission, ondersteund door middleware en configuratiebestanden.
-* **Pagina-vergrendeling**: Mogelijkheid om pagina's te vergrendelen en ontgrendelen om ongewenste wijzigingen te voorkomen.
+* **Paginavergrendeling**: Mogelijkheid om pagina's te vergrendelen en ontgrendelen om ongewenste wijzigingen te voorkomen.
 Replicatie van pagina's: Het dupliceren van pagina's en hun gekoppelde content via de getCopy-methode.
 * **Templatebeheer**: Beheer van beschikbare pagina-templates, inclusief filtering, sortering en integratie met specifieke resolvers.
 * **Menu-integratie**: Koppeling van pagina's aan menu's en het beheer van de menustructuur.
 
-Binnen de `ContentManagerController` worden de weergaven voor verschillende pagina's, zoals info-, create-, edit- en overview-pagina's, dynamisch gegenereerd via XML-templates en de `BaseView`-class. De `BaseView` stelt de juiste namespace in en zorgt ervoor dat de correcte weergave wordt geladen op basis van de context, zoals templates, menu-instellingen en andere data. Tegelijkertijd bepaalt de `PageTemplateResolver` welke templates beschikbaar zijn en laadt deze.
+Binnen de `ContentManagerController` worden de weergaven voor verschillende pagina's, zoals info-, create-, edit- en overview-pagina's, dynamisch gegenereerd via XML-templates en de `BaseView`-class. De `BaseView` stelt de juiste namespace in en zorgt ervoor dat de correcte weergave wordt geladen op basis van de context, zoals templates, menu-instellingen en andere data. Tegelijkertijd bepaalt de `PageTemplateResolver` welke templates beschikbaar zijn en laadt deze in.
 
 **XML-schema voor Template in AO CMS**
 
@@ -78,7 +78,6 @@ protected function editWithPage($page)
 
     return BaseView::make('edit')->with('menuRoots', $menuRoots)->with('page', $page)->with('templates', $templates)->with('manageable', $manageable);
 }
-
 ```
 
 **Inladen van templates via de PageTemplateResolver**
@@ -180,7 +179,6 @@ public function content($tag = null, $default = '', $forceArray = false) {
     }
     return $v;
 }
-
 ```
 
 **Recursieve doorlopen van contentstructuren**
@@ -388,7 +386,7 @@ trait ProvidesContentTrait
 
 ## PageResource en dynamische templates
 
-De `Resource`-classes in Filament dienen als de brug tussen Eloquent-modellen en de adminpanelen binnen het CMS. In de `Resource` die is gekoppeld aan het `Page`-model, kan in de `form()`-methode een `Select`-component worden toegevoegd. Hiermee kunnen gebruikers vooraf gedefinieerde **templates** voor een pagina selecteren.
+De `Resource`-classes in Filament dienen als de brug tussen Eloquent-modellen en de adminpanelen binnen het CMS. In de `Resource` die is gekoppeld aan het `Page`-model, kan in de `form`-methode een `Select`-component worden toegevoegd. Hiermee kunnen gebruikers vooraf gedefinieerde **templates** voor een pagina selecteren.
 
 **Schema voor Content Management**
 
@@ -493,10 +491,9 @@ readonly class TemplateFactory
 }
 ```
 
-## Class voor Templates
+## Classes voor Templates
 
-De `Template`-class worden gebruikt om specifieke structuur voor de template van een pagina te definiëren. Omdat de `Template`-class de `HasTemplateSchema` implementeert is het verplicht zijn 
-Een `Template` wordt beheerd in een specifieke class die een array met Filament FormField-componenten teruggeven aan een `Resource`.
+De `Template`-class definieert de specifieke structuur van een pagina-template. De `getName`-methode retourneert de naam van het template, terwijl de `getForm`-methode een array van componenten retourneert die eindgebruikers kunnen gebruiken om gegevens in te voeren.
 
 **Template-class in CMS met Filament**
 
@@ -530,6 +527,7 @@ class HomeTemplate implements HasTemplateSchema
             FileUpload::make('header_image')
                 ->label('Header Image')
                 ->image()
+                ->imageEditor()
                 ->preserveFilenames()
                 ->required(),
 
