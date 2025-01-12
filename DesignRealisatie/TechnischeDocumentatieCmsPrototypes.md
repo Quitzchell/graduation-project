@@ -1,12 +1,12 @@
-# Technische Documentatie CMS Prototypes
+# **Technische Documentatie CMS Prototypes**
 
-Dit document geeft een overzicht over de werking van de verschillende Content Management Systemen en beschrijft hoe de ze opgebouwd worden.
+Dit document biedt een technisch overzicht van de werking en structuur van de onderzochte CMS'en.
 
 ## AllesOnline CMS
 
 ### ContentManagerController
 
-In het AllesOnline CMS worden pagina’s en hun content beheerd via de `ContentManagerController`. Deze controller wordt meestal zonder aanpassingen geïmporteerd vanuit het AllesOnline CMS-pakket en biedt toegang tot de `ManagedContent`, `Page`, en `CMSContent`-modellen voor de configuratie van content-elementen.
+In het AllesOnline CMS worden pagina's en content beheerd via de `ContentManagerController`, die meestal ongewijzigd wordt geïmporteerd vanuit de AllesOnline CMS-packages. Deze controller biedt toegang tot de `ManagedContent`, `Page`, en `CMSContent`-modellen voor het configureren van content-elementen.
 
 **ContentManagerController in AO CMS**
 
@@ -19,7 +19,6 @@ use ContentManager;
 
 class ContentManagerController extends ContentManager
 {
-    // Controller implementatie
 }
 ```
 

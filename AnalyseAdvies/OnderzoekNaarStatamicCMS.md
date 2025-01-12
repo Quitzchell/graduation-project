@@ -155,7 +155,7 @@ Om gebruik te maken van Statamic, moet een licentie aangeschaft worden. Statamic
 
 Voor AllesOnline is minimaal de **Statamic Pro** licentie nodig, aangezien de websites voor commerciële doeleinden worden gerealiseerd.
 
-Wanneer er meerdere websites met `Statamic` in productie gebracht worden, is het interessant om gebruik te maken van de **Master License**. Als het lukt om binnen een jaar tien websites in productie te brengen, ben je met dit pakket het goedkoopst uit. Na tien websites, of nadat het jaar waarin je met korting extra licenties kunt kopen voorbij is, is het voordeliger om over te schakelen naar de `Platform Subscription`. Omdat er tot 25 websites een flat fee van $175 per maand geldt, kost dit voor de eerste 25 websites $2100 per jaar. Wanneer er dus 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar. Voor elke extra website die hierop volgt is een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic.
+Wanneer er meerdere websites met `Statamic` in productie gebracht worden, is het interessant om gebruik te maken van de **Master License**. Als het lukt om binnen een jaar tien websites in productie te brengen, ben je met dit pakket het goedkoopst uit. Na tien websites, of nadat het jaar waarin je met korting extra licenties kunt kopen voorbij is, is het voordeliger om over te schakelen naar de `Platform Subscription`. Omdat er tot 25 websites een flat fee van $175 per maand geldt, kost dit voor de eerste 25 websites $2100 per jaar. Wanneer er dus 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar. Voor elke extra website die hierop volgt geldt een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic.
 
 > * [Informatie over kosten van Platform Subscription](https://statamic.com/pricing/platform)
 
@@ -167,4 +167,4 @@ Daarnaast is veel van de werking van Statamic moeilijk terug te vinden in de doc
 
 De kosten voor het gebruik van Statamic zijn in eerste instatie ook relatief hoog. Het wordt pas interessant wanneer er meerdere websites in productie zijn met Statamic. 
 
-Waar Statamic wel erg geschikt zou kunnen zijn, zijn simpele marketing- en whitelabel-websites. Omdat Statamic in de flat-file en eloquent-driver out-of-the-box met de Statamic API gegevens beschikbaar kunnen stellen, is mogelijk om met weinig werk een simpel CMS klaar te zetten waarin content beheerd kan worden. 
+Waar Statamic wel erg geschikt zou kunnen zijn, is voor simpele marketing- en whitelabel-websites. Omdat Statamic in de flat-file en eloquent-driver out-of-the-box met de Statamic API gegevens beschikbaar kunnen stellen, is mogelijk om met weinig werk een simpel CMS klaar te zetten waarin content beheerd kan worden. 
