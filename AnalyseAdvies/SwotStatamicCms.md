@@ -13,7 +13,7 @@
 
 ## Weaknesses (Zwaktes)
 
-* **Incompleet documentatie**: Er is weinig documentatie beschikbaar wanneer je buiten de gebaande paden wilt treden of wijzigingen wilt aanbrengen die niet via de Statamic UI mogelijk zijn. Hoewel er informatie te vinden is in de GitHub-issues of de Discord-community, is dit proces vaak omslachtig.
+* **Incomplete documentatie**: Er is weinig documentatie beschikbaar wanneer je buiten de gebaande paden wilt treden of wijzigingen wilt aanbrengen die niet via de Statamic UI mogelijk zijn. Hoewel er informatie te vinden is in de GitHub-issues of de Discord-community, is dit proces vaak omslachtig.
 * **Gebruik van Vue 2**: De views van Statamic zijn momenteel gebouwd met Vue 2, dat in 2023 al EOL was. Begin 2025 migreert Statamic naar Vue 3.
 * **Complexiteit bij configuraties**: De verschillen tussen de flat-file/eloquent-driver configuratie en de Runway configuratie maken migraties tussen deze configuraties meer hands-on.
 * **Beperkingen in databaseconfiguraties**: Het verschil in databasestructuur tussen het AllesOnline CMS en Statamic is groot, waardoor migratie naar Statamic complexer wordt. Daarnaast ontbreken er bepaalde features voor relatiebeheer, zoals het meegeven van pivot-gegevens en polymorfe relaties.
