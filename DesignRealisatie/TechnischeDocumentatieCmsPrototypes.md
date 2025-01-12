@@ -657,7 +657,7 @@ trait MutateDataBeforeCreateTrait
 ```
 ---
 
-### Edit
+### Fill & Edit
 
 Wanneer een bestaand object wordt bewerkt, wordt de bijbehorende content in het formulier geladen. In de `mutateFormDataBeforeFill`-methode wordt de gekoppelde content opgehaald uit de `contents`-relatie en toegevoegd aan de formulierdata. Dit zorgt ervoor dat de opgeslagen gegevens in de velden worden weergegeven, zodat de gebruiker bestaande gegevens kan aanpassen zonder ze opnieuw in te voeren.
 
