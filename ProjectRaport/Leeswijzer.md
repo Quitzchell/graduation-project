@@ -72,13 +72,7 @@ Dankzij bovenstaand onderdeel van het onderzoek en de ontwikkeling van het proto
 
 # Frontend tests met Cypress 
 
--- oud
-
-Rond het afronden van het prototype met het AllesOnline CMS ben ik aan de slag gegaan met het realiseren van een testsuite met Cypress. Deze is bedoeld om de communicatie tussen de backend en de frontend te valideren. Aan de hand van deze test kan ik controleren of de website vanuit de verschillende CMS-oplossingen de correcte informatie naar de frontend doorgeeft.
-
--- nieuw 
-
-Nadat het prototype met het AllesOnline CMS was afgerond, ben ik begonnen met het ontwikkelen van een testsuite in Cypress. Deze is bedoeld om de communicatie tussen de backend en frontend te valideren, zodat ik kan controleren of de frontend de juiste informatie van de verschillende backend prototypen ontvangt.
+Nadat het prototype met het AllesOnline CMS was afgerond, ben ik begonnen met het ontwikkelen van een testsuite in **Cypress**. Deze is bedoeld om de communicatie tussen de backend en frontend te valideren, zodat ik kan controleren of de frontend de juiste informatie van de verschillende backend-prototypen ontvangt.
 
 > * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
 
