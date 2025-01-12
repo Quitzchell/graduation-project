@@ -1156,7 +1156,7 @@ title: Page
 ```
 ## Formfields voor templates
 
-Doordat we met Runway de `collections` en daarmee de abstractielaag verliezen, is het niet langer mogelijk om verschillende templates voor een pagina als `Blueprint` op te geven. In plaats daarvan moeten de templates anders gedefinieerd worden, namelijk als `FieldSet`. In het voorbeeld hierboven is te zien hoe gebruikers een template kunnen selecteren via een `replicator`. Binnen de `replicator` bevinden zich de velden die specifiek aan de gekozen template zijn gekoppeld.
+Doordat we met Runway de `collections` en daarmee de abstractielaag verliezen, is het niet langer mogelijk om verschillende templates voor een pagina als `Blueprint` op te geven. In plaats daarvan moeten de templates anders gedefinieerd worden, namelijk als `FieldSet`. In het voorbeeld hierboven is te zien hoe gebruikers een template kunnen selecteren via een `replicator`. Binnen de `replicator` bevinden zich velden die gekoppeld zijn aan één van de templates.
 
 ```
 FieldSet voor Homepage template
