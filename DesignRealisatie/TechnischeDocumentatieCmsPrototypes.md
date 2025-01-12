@@ -495,8 +495,9 @@ readonly class TemplateFactory
 }
 ```
 
-### Class voor Templates in CMS met Filament
+## Class voor Templates
 
+De `Template`-class worden gebruikt om specifieke structuur voor de template van een pagina te definiëren. Deze wordt 
 Een `Template` wordt beheerd in een specifieke class die een array met Filament FormField-componenten teruggeven aan een `Resource`.
 
 **Template-class in CMS met Filament**
@@ -545,8 +546,6 @@ class HomeTemplate implements HasTemplateSchema
     }
 }
 ```
-
-Het bovenstaande sjabloon bevat een veld voor een headerafbeelding, een titel en biedt de mogelijkheid om contentblokken toe te voegen.
 
 ### Interfaces
 
