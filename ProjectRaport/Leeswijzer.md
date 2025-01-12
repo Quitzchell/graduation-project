@@ -87,22 +87,10 @@ Omdat **Cypress** in een standaard Linux Alpine-container complicaties kan onder
 
 # Onderzoek naar CMS met Filament
 
--- oud 
-
-Het tweede prototype dat ik ben gaan realiseren, was een CMS met Filament. Filament is niet perse een CMS, maar eerder een library met _"a collection of beautiful full-stack components"_, althans, als we hun eigen website moeten geloven. Met de componenten die het biedt, is het relatief eenvoudig om een CRUD-applicatie op te zetten en met een beetje creativiteit ook een CMS.
-
--- nieuw 
-
 Het tweede prototype dat ik heb ontwikkeld, was een CMS met **Filament**. Filament is niet strikt een CMS, maar een library met *"a collection of beautiful full-stack components"*, aldus hun website. Met deze componenten is het relatief eenvoudig om een CRUD-applicatie op te zetten, en met wat creativiteit ook een CMS.
 
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
-> * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
-
--- oud 
-
-Tijdens het onderzoek ben ik ook aan de slag gegaan met het ontwerpen en realiseren van het CMS gebaseerd op Filament. Voor het ontwerp van de CMS-functionaliteiten heb ik een iteratieve aanpak gehanteerd. Deze werkwijze stelde me in staat om tijdens elke ontwikkelstap te reflecteren op wat ik had gerealiseerd en wat de volgende logische stap zou zijn. Daarnaast ben ik begonnen met het documenteren van de werking van de verschillende systemen.
-
--- nieuw 
+> * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md) 
 
 Tijdens het onderzoek ben ik begonnen met het ontwerpen en ontwikkelen van het CMS op basis van **Filament**. Voor het ontwerp van de CMS-functionaliteiten heb ik een iteratieve aanpak gehanteerd, zodat ik bij elke stap kon reflecteren op de voortgang en de volgende logische stap kon bepalen. Daarnaast ben ik gestart met het documenteren van de werking van de verschillende systemen.
 
@@ -124,9 +112,17 @@ Tijdens het onderzoek ben ik begonnen met het ontwerpen en ontwikkelen van het C
 
 # Onderzoek migratie van AllesOnline naar Filament CMS
 
+-- oud
+
 Nadat ik zowel een AllesOnline-prototype als een Filament CMS-prototype had gerealiseerd, kon ik aan de slag met een belangrijke requirement van AllesOnline: onderzoeken of het mogelijk is om bestaande projecten met het AllesOnline CMS op een geautomatiseerde manier te migreren naar een nieuw systeem.
 
 Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, maar een Proof of Concept (PoC) te realiseren. Het doel van de PoC is om aan te tonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor het realiseren van deze tool heb ik gekozen om gebruik te maken van Symfony's Console-componenten.
+
+-- nieuw 
+
+Na het realiseren van zowel een AllesOnline- als een Filament CMS-prototype, ben ik begonnen met het onderzoeken van een belangrijke requirement van AllesOnline: het geautomatiseerd migreren van bestaande projecten naar een nieuw systeem.
+
+Om tijd te besparen, heb ik ervoor gekozen om een Proof of Concept (PoC) te ontwikkelen. Het doel van de PoC is het aantonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's, omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor de ontwikkeling van deze tool heb ik `Symfony's Console-componenten` gebruikt.
 
 > _Verantwoording voor de keuze om Symfony voor de tool gebruiken lees je hier_:
 > * [Onderzoek voor Tool CMS Migratie](../AnalyseAdvies/OnderzoekVoorCmsMigratie.md)
@@ -188,10 +184,11 @@ Omdat uit de analyse van Statamic bleek dat een migratie van het AllesOnline CMS
 
 # Advies en conclusie
 
-Op basis van het onderzoek naar het huidige CMS van AllesOnline en de mogelijke alternatieven, heb ik een advies document geschreven en kan ik het volgende antwoord op de onderzoeksvraag formuleren.
+Op basis van het onderzoek naar het huidige CMS van AllesOnline en de mogelijke alternatieven, heb ik een adviesdocument geschreven. 
 
 > * [Adviesdocument](../AnalyseAdvies/AdviesDocument.md)
 
+Ook kan ik het volgende antwoord op de onderzoeksvraag formuleren:
 ### Hoe kan AllesOnline het huidige CMS verbeteren of vervangen door een extern systeem zoals Filament of Statamic?
 
 AllesOnline zou het huidige CMS niet verder moeten ontwikkelen, aangezien het onvoldoende onderhouden wordt en daardoor verouderd is. In plaats daarvan wordt aanbevolen over te stappen op een extern systeem. Beide onderzochte systemen, **Filament** en **Statamic**, bieden aanzienlijke voordelen die kunnen bijdragen aan een efficiëntere en toekomstbestendige bedrijfsvoering. **Filament** is met name geschikt voor projecten die complexere, op maat gemaakte webapplicaties vereisen, terwijl **Statamic** een uitstekende keuze is voor marketingwebsites en meer gestandaardiseerde klantbehoeften.
