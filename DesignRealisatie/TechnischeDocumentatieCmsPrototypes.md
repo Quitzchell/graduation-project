@@ -1039,9 +1039,9 @@ In de configuratie waarbij gebruik wordt gemaakt van de **Runway**-addon verande
 
 In de configuratie waarbij de **Runway**-addon wordt gebruikt, verandert de architectuur aanzienlijk. In plaats van `Collections` en `Entries`, maken we nu gebruik van `Eloquent`-modellen en specifieke databasetabellen voor alle entiteiten binnen het systeem. Dit betekent echter dat we de standaard `navigation`- en `navigation-tree`-functionaliteiten van Statamic verliezen, waaronder de **drag-and-drop-interface** om een menustructuur te definiëren. Om dit op te vangen is er in deze configuratie gekozen om een `menu manager` te gebruiken, zoals ook in het **Filament** CMS het geval is.
 
-## Eloquent models
+## Eloquent-models
 
-In principe zijn er weinig verschillen zichtbaar tussen het `Eloquent`-model voor **Statamic** en dat van **Filament**. Een opvallend verschil is de aanwezigheid van een andere **Trait**: `HasRunwayResource`. Deze Trait maakt het mogelijk om de modelen in Statamic weer te beheren.
+In principe zijn er weinig verschillen zichtbaar tussen het `Eloquent`-model voor **Statamic** en dat van **Filament**. Een opvallend verschil is de aanwezigheid van een andere **Trait**: `HasRunwayResource`. Deze Trait maakt het mogelijk om de modelen in Statamic te beheren.
 
 Een ander belangrijk punt is dat de `template`-attribute wordt gecast naar een `array`. Dit wijst op een belangrijke eigenschap van deze configuratie: alle gegevens die via een `replicator` worden meegegeven (lees: de dynamische content) kunnen niet in een aparte tabel worden opgeslagen. In tegenstelling tot het **AllesOnline CMS** en de realisatie in **Filament**, wordt alle content onder het bijbehorende model als JSON gepersisteert.
 
@@ -1090,9 +1090,9 @@ class Page extends Model implements hasUrl
 
 ## Runway Resources
 
-Als we gebruik maken van de Runway configuratie is het niet meer mogelijk om gebruik te maken van `blueprints`. Dit omdat Runway gebruikt maakt van Runway Resources die eigenlijk op het zelfde niveau als `blueprints` zitten. Dit zijn dus dus de bestanden waarin de CMS schemas voor de entiteiten gedefineerd worden. 
+Als we gebruik maken van de Runway configuratie is het niet meer mogelijk om gebruik te maken van `blueprints`. Dit omdat Runway gebruikt maakt van Runway Resources die eigenlijk op het zelfde niveau als `blueprints` zitten. Dit zijn dus de bestanden waarin de CMS-schema's voor de entiteiten gedefinieerd worden. 
 
-Wanneer we gebruikmaken van de **Runway**-configuratie, is het niet meer mogelijk om gebruik te maken van `Blueprints`. Dit komt doordat Runway gebruikmaakt van Runway `Resources`, die zich op hetzelfde niveau als `Blueprints` bevinden. In plaats van `Blueprints` worden de CMS-schema’s voor de entiteiten nu gedefinieerd binnen deze Runway `Resources`.
+Wanneer we gebruikmaken van de **Runway**-configuratie, is het niet meer mogelijk om gebruik te maken van `Blueprints`. Dit komt omdat Runway gebruikmaakt van Runway `Resources`, die zich op hetzelfde niveau als `Blueprints` bevinden. In plaats van `Blueprints` worden de CMS-schema’s voor de entiteiten nu gedefinieerd binnen deze Runway `Resources`.
 
 ```
 Runway resource voor het schema van het page-model**
@@ -1156,7 +1156,7 @@ title: Page
 ```
 ## Formfields voor templates
 
-Doordat we met Runway de `collections` en daarmee de abstractielaag verliezen, is het niet langer mogelijk om verschillende templates voor een pagina als `Blueprint` op te geven. In plaats daarvan moeten de templates anders gedefinieerd worden, namelijk als `FieldSet`. In het voorbeeld hierboven kunnen gebruikers een template selecteren via een `replicator`. Binnen de `replicator` bevinden zich de velden die specifiek aan de gekozen template zijn gekoppeld.
+Doordat we met Runway de `collections` en daarmee de abstractielaag verliezen, is het niet langer mogelijk om verschillende templates voor een pagina als `Blueprint` op te geven. In plaats daarvan moeten de templates anders gedefinieerd worden, namelijk als `FieldSet`. In het voorbeeld hierboven is te zien hoe gebruikers een template kunnen selecteren via een `replicator`. Binnen de `replicator` bevinden zich de velden die specifiek aan de gekozen template zijn gekoppeld.
 
 ```
 FieldSet voor Homepage template
