@@ -48,7 +48,7 @@ Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsn
 --
 nieuw
 
-Op basis van de requirements en mijn bevindingen over een typische AllesOnline-website ben ik begonnen met het ontwikkelen van een prototype. Aanvankelijk zou het een stamboomapplicatie worden, gebaseerd op de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam en de complexiteit van het verwerken daarvan duidelijk werd, besloot ik om in plaats daarvan een eenvoudige blog-website te maken, geschreven vanuit het perspectief van Napoleon Bonaparte.
+Op basis van de requirements en mijn bevindingen over een typische AllesOnline-website ben ik begonnen met het ontwikkelen van een prototype. Aanvankelijk zou het een stamboomapplicatie worden, gebaseerd op de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam en de complexiteit van het verwerken daarvan duidelijk werd, besloot ik om een eenvoudige blog-website te maken, geschreven vanuit het perspectief van Napoleon Bonaparte.
 
 > _Meer over waarom ik van plan ben met prototypen te werken en hoe deze eruit gaan zien lees je in het onderstaande document._ 
 > * [Opzet van de prototypes](../DesignRealisatie/OpzetVanDePrototypes.md)
