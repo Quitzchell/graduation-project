@@ -138,7 +138,15 @@ Om tijd te besparen, heb ik ervoor gekozen om een Proof of Concept (PoC) te ontw
 	
 # Onderzoek naar Statamic CMS
 
+-- oud
+
 Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben ik begonnen met het opzetten van een prototype met Statamic. Dit is een commercieel CMS waarvoor een licentie vereist is bij commercieel gebruik. In tegenstelling tot Filament is Statamic specifiek ontworpen om als CMS te fungeren.
+
+-- nieuw 
+
+Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben ik begonnen met het opzetten van een prototype in Statamic, een commercieel CMS waarvoor een licentie vereist is bij commercieel gebruik. In tegenstelling tot Filament is Statamic specifiek ontworpen als CMS.
+
+
 
 > * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 > * [SWOT: Statamic](../AnalyseAdvies/SwotStatamicCms.md)
@@ -190,8 +198,7 @@ Op basis van het onderzoek naar het huidige CMS van AllesOnline en de mogelijke 
 
 Ook kan ik het volgende antwoord op de onderzoeksvraag formuleren:
 ### Hoe kan AllesOnline het huidige CMS verbeteren of vervangen door een extern systeem zoals Filament of Statamic?
-
-AllesOnline zou het huidige CMS niet verder moeten ontwikkelen, aangezien het onvoldoende onderhouden wordt en daardoor verouderd is. In plaats daarvan wordt aanbevolen over te stappen op een extern systeem. Beide onderzochte systemen, **Filament** en **Statamic**, bieden aanzienlijke voordelen die kunnen bijdragen aan een efficiëntere en toekomstbestendige bedrijfsvoering. **Filament** is met name geschikt voor projecten die complexere, op maat gemaakte webapplicaties vereisen, terwijl **Statamic** een uitstekende keuze is voor marketingwebsites en meer gestandaardiseerde klantbehoeften.
+Het wordt afgeraden om het huidige CMS van AllesOnline verder te ontwikkelen, omdat het onvoldoende is onderhouden en daardoor verouderd is. In plaats daarvan wordt aanbevolen over te stappen op een extern systeem. Beide onderzochte systemen, **Filament** en **Statamic**, bieden aanzienlijke voordelen die kunnen bijdragen aan een efficiëntere en toekomstbestendige bedrijfsvoering. **Filament** is met name geschikt voor projecten die complexere, op maat gemaakte webapplicaties vereisen, terwijl **Statamic** een uitstekende keuze is voor marketingwebsites en meer gestandaardiseerde klantbehoeften.
 
 Naast de conclusie dat **Filament** de beste keuze is voor complexere projecten, heeft het vanwege de compatibiliteit met het huidige AllesOnline CMS, ook de voorkeur voor het migreren van bestaande AllesOnline-projecten.
 
