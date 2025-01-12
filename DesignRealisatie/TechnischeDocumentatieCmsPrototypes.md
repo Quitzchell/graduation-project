@@ -810,7 +810,7 @@ In de **flat-file** en **eloquent-driver** configuratie van **Statamic** wordt h
 
 In de huidige configuratie worden pagina's beheerd binnen een `Collection`, die de globale instellingen bepaalt voor de `Entries` die tot een specifieke `Collection` toebehoren. Denk hierbij aan zaken zoals de manier waarop de overzichtspagina gesorteerd moet worden, of entries genest kunnen worden, en het definiëren van de route die aangeroepen moet worden om een specifieke entry uit de collectie op te halen. Je kunt een collectie vergelijken met een Eloquent-model dat communiceert met de databasetabel van een bepaalde entiteit. Dit kunnen naast pagina's ook andere entiteiten zijn, zoals blogposts of reviews.
 
-In de **flat-file** en **eloquent-driver** configuratie worden ook de pagina's beheerd binnen een `Collection`, die de globale instellingen voor de `Page`-entries binnen de collectie bepaalt. Je zou `Collections` kunnen vergelijken met een repository voor vergelijkbare entiteiten binnen een systeem. 
+In de **flat-file** en **eloquent-driver** configuratie worden ook pagina's beheerd binnen een `Collection`, die de globale instellingen voor de `Page`-entries binnen de collectie bepaalt. Je zou `Collections` kunnen vergelijken met een repository voor vergelijkbare entiteiten binnen een systeem. 
 
 ```
 Configuratie voor de Pages-collection
@@ -831,7 +831,7 @@ structure:
 
 ## Blueprints
 
-In de **flat-file** en **eloquent-driver** configuratie worden de templates voor het beheren van dynamische content gedefinieerd binnen een `Blueprint`. Voor pagina's die meerdere templates vereisen, kunnen meerdere `Blueprints` worden aangemaakt voor de `Pages`-collectie. Dit stelt ons in staat om per template verschillende velden te definiëren. Voor entiteiten waar slechts één definitie hoort te zijn, dient slechts één enkele `Blueprint` aangemaakt te worden.
+In de **flat-file** en **eloquent-driver** configuratie worden de templates voor het beheren van dynamische content gedefinieerd binnen een `Blueprint`. Voor pagina's die meerdere templates vereisen, kunnen meerdere `Blueprints` worden aangemaakt voor de `Pages`-collectie. Dit stelt ons in staat om per template verschillende velden te definiëren. Voor entiteiten waar slechts één definitie nodg is, dient slechts één enkele `Blueprint` aangemaakt te worden.
 
 Een `Blueprint` bepaalt niet alleen het schema voor invoervelden, maar ook de validatieregels, standaardwaarden en de zichtbaarheid van velden in de gebruikersinterface.
 
