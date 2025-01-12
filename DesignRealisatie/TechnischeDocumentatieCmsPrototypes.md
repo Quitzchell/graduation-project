@@ -16,7 +16,7 @@ Replicatie van pagina's: Het dupliceren van pagina's en hun gekoppelde content v
 * **Templatebeheer**: Beheer van beschikbare pagina-templates, inclusief filtering, sortering en integratie met specifieke resolvers.
 * **Menu-integratie**: Koppeling van pagina's aan menu's en het beheer van de menustructuur.
 
-## Dynamische Weergavegeneratie en Templatebeheer
+## ContentManagerController
 
 Binnen de `ContentManagerController` worden de weergaven voor verschillende pagina's, zoals info-, create-, edit- en overview-pagina's, dynamisch gegenereerd via XML-templates en de `BaseView`-class. De `BaseView` stelt de juiste namespace in en zorgt ervoor dat de correcte weergave wordt geladen op basis van de context, zoals templates, menu-instellingen en andere data. Tegelijkertijd bepaalt de `PageTemplateResolver` welke templates beschikbaar zijn en laadt deze.
 
