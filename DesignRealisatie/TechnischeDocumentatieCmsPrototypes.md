@@ -344,7 +344,7 @@ Het `Page`-model implementeert interfaces die richtlijnen definiëren voor speci
 
 ### HasContent
 
-De `HasContent`-interface vereist dat het model een relatie met het Content-model definieert, waarin CMS-content wordt opgeslagen. In het Filament CMS wordt deze functionaliteit aangevuld met de `ProvidesContentTrait`.
+De `HasContent`-interface vereist dat het model een relatie met het `Content`-model definieert, waarin CMS-content wordt opgeslagen. In het Filament CMS wordt deze functionaliteit aangevuld met de `ProvidesContentTrait`.
 
 ```
 HasContent interface
@@ -367,7 +367,7 @@ interface HasContent
 
 ### HasUrl
 
-De `HasUrl`-interface vereist dat het model functionaliteit implementeert om een `uri` en een volledige `url` te genereren voor de bijbehorende objecten.
+De `HasUrl`-interface vereist dat het model functionaliteiten implementeert om een `uri` en een volledige `url` te genereren voor de bijbehorende objecten.
 
 ```
 HasUrl interface
