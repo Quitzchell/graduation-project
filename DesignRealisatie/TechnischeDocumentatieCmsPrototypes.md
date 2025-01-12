@@ -831,7 +831,7 @@ structure:
 
 ## Blueprints
 
-In de **flat-file** en **eloquent-driver** configuratie worden de templates voor het beheren van dynamische content gedefinieerd binnen een `Blueprint`. Voor pagina's die meerdere templates vereisen, kunnen meerdere `Blueprints` worden aangemaakt voor de `Pages`-collectie. Dit stelt ons in staat om per template verschillende velden te definiëren. Voor entiteiten waar slechts één definitie nodg is, hoeft maar één `Blueprint` te worden aangemaakt.
+In de **flat-file** en **eloquent-driver** configuratie worden de templates voor het beheren van dynamische content gedefinieerd binnen een `Blueprint`. Voor pagina's die meerdere templates vereisen, kunnen meerdere `Blueprints` worden aangemaakt voor de `Pages`-collectie. Dit stelt ons in staat om per template verschillende velden te definiëren. Voor entiteiten waar slechts één definitie nodig is, hoeft maar één `Blueprint` te worden aangemaakt.
 
 Een `Blueprint` bepaalt niet alleen het schema voor invoervelden, maar ook de validatieregels, standaardwaarden en de zichtbaarheid van velden in de gebruikersinterface.
 
