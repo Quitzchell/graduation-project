@@ -1041,7 +1041,7 @@ In de configuratie waarbij de **Runway**-addon wordt gebruikt, verandert de arch
 
 ## Eloquent-models
 
-In principe zijn er weinig verschillen zichtbaar tussen het `Eloquent`-model voor **Statamic** en dat van **Filament**. Een opvallend verschil is de aanwezigheid van een andere **Trait**: `HasRunwayResource`. Deze Trait maakt het mogelijk om de modelen in Statamic te beheren.
+In principe zijn er weinig verschillen zichtbaar tussen het `Eloquent`-model voor **Statamic** en dat van **Filament**. Een opvallend verschil is de aanwezigheid van een andere **Trait**: `HasRunwayResource`. Deze Trait maakt het mogelijk om de modellen in Statamic te beheren.
 
 Een ander belangrijk punt is dat de `template`-attribute wordt gecast naar een `array`. Dit wijst op een belangrijke eigenschap van deze configuratie: alle gegevens die via een `replicator` worden meegegeven (lees: de dynamische content) kunnen niet in een aparte tabel worden opgeslagen. In tegenstelling tot het **AllesOnline CMS** en de realisatie in **Filament**, wordt alle content onder het bijbehorende model als JSON gepersisteert.
 
