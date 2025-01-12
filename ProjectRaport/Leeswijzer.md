@@ -50,8 +50,8 @@ Op basis van de requirements en mijn bevindingen over een typische AllesOnline-w
 > * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 > * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
-Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes **Docker**-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitgebreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend wordt gebruik gemaakt van een standaard **Node.js**-container.
-
+Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes **Docker**-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitgebreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend wordt gebruik gemaakt van een Linux Alpine **Node.js**-container.
+is 
 ### Conclusies onderzoek AllesOnline CMS en realisatie eerste prototype
 
 Dankzij bovenstaand onderdeel van het onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden geven op enkele deelvragen.
@@ -82,7 +82,7 @@ Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik het mogelij
 
 -- nieuw 
 
-Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik ervoor gezorgd dat Cypress in zijn eigen container draait en kan communiceren met de frontend-applicatie. Dit voorkomt dat de frontend-container onnodig groot wordt door de toevoeging van Cypress en zijn benodigdheden. Het nadeel is echter dat een timeout tussen de requests nodig is, omdat de frontend een exception teruggeeft bij te snel opvolgende verzoeken van hetzelfde adres.
+Omdat **Cypress** niet in een standaard Linux Alpine-container kan draaien, heb ik ervoor gezorgd dat Cypress in zijn eigen container draait en kan communiceren met de frontend-applicatie. Dit voorkomt dat de frontend-container onnodig groot wordt door de toevoeging van Cypress en zijn benodigdheden. Het nadeel is echter dat een timeout tussen de requests nodig is, omdat de frontend een exception teruggeeft bij te snel opvolgende verzoeken vanuit hetzelfde adres.
 
 > _Hieronder een kleine afwijking van het chronologische verhaal, met een aantal runs van de Cypress-testsuite waarin de verschillende CMS-oplossingen aan de frontend zijn gekoppeld._
 > * [Video: Cypress tests met AllesOnline CMS](../Bijlagen/CypressTestsAOCms.md)
@@ -158,7 +158,7 @@ Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realise
 	- Hoewel Statamic een breed scala aan functionaliteiten biedt, zullen voor sommige oplossingen die in het AllesOnline CMS zijn ingebouwd, aangepaste componenten toegevoegd moeten worden.
 
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
-	* Statamic biedt verschillende licenties voor het bouwen van websites:
+	* Statamic biedt verschillende licenties aan voor het bouwen van websites:
 		* **Statamic Core**: Gratis voor persoonlijke projecten.
 		* **Statamic Pro**: $259 per jaar per website voor professionele toepassingen.
 		* **Master License**: $1250 per jaar voor organisaties met vijf websites, inclusief kortingen op extra licenties.
