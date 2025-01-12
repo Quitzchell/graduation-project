@@ -2,29 +2,23 @@
 
 Dit document biedt een technisch overzicht van de werking en structuur van de onderzochte CMS'en.
 
-## AllesOnline CMS
+# AllesOnline CMS
 
-### ContentManagerController
+## ContentManagerController
 
-In het AllesOnline CMS worden pagina's en content beheerd via de `ContentManagerController`, die meestal ongewijzigd wordt geïmporteerd vanuit de AllesOnline CMS-packages. Deze controller biedt toegang tot de `ManagedContent`, `Page`, en `CMSContent`-modellen voor het configureren van content-elementen.
+In het AllesOnline CMS worden pagina's en content beheerd via de `ContentManagerController`, die meestal ongewijzigd wordt geïmporteerd vanuit de AllesOnline CMS-packages. Deze controller beheert pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties en gebruikersrechtenverificatie.
 
-**ContentManagerController in AO CMS**
+**Naast deze basisfunctionaliteiten biedt de controller:**
+**Content hiërarchie en volgorde**: Beheer van de hiërarchie en volgorde van pagina-items in de database via methoden zoals updateManagedContent.
+**Autorisatie**: Controle of gebruikers de juiste rechten hebben om acties uit te voeren, met methoden zoals can en methodPermission, ondersteund door middleware en configuratiebestanden.
+**Pagina-vergrendeling**: Mogelijkheid om pagina's te vergrendelen en ontgrendelen om ongewenste wijzigingen te voorkomen.
+Replicatie van pagina's: Het dupliceren van pagina's en hun gekoppelde content via de getCopy-methode.
+**Templatebeheer**: Beheer van beschikbare pagina-templates, inclusief filtering, sortering en integratie met specifieke resolvers.
+**Menu-integratie**: Koppeling van pagina's aan menu's en het beheer van de menustructuur.
 
-```php
-<?php
+## Dynamische Weergavegeneratie en Templatebeheer
 
-namespace App\Http\Controllers;
-
-use ContentManager;
-
-class ContentManagerController extends ContentManager
-{
-}
-```
-
-### XML-schema voor Templates met CMS-content
-
-Binnen de `ContentManager` worden `Page`-objecten dynamisch gegenereerd via XML-templates die specificeren welke velden (zoals tekst, afbeeldingen en blokken) kunnen worden toegevoegd. Dit stelt developers in staat om template-schema's te definiëren voor CMS-gebruikers.
+Binnen de `ContentManagerController` worden de weergaven voor verschillende pagina's, zoals info-, create-, edit- en overview-pagina's, dynamisch gegenereerd via XML-templates en de `BaseView`-class. De `BaseView` stelt de juiste namespace in en zorgt ervoor dat de correcte weergave wordt geladen op basis van de context, zoals templates, menu-instellingen en andere data. Tegelijkertijd bepaalt de `PageTemplateResolver` welke templates beschikbaar zijn en laadt deze.
 
 **XML-schema voor Template in AO CMS**
 
@@ -37,13 +31,199 @@ Binnen de `ContentManager` worden `Page`-objecten dynamisch gegenereerd via XML-
 </template>
 ```
 
-In het bovenstaande template zijn velden voor een headerafbeelding en een titel opgenomen. Gebruikers kunnen daarnaast blokken selecteren om toe te voegen, wat flexibiliteit biedt bij het vormgeven van de pagina.
+**Dynamische weergavegeneratie en het gebruik van BaseView**
+```php
+public function getIndex($modelInstance = null)
+{
+    $data = [
+        'ctrl' => $this,
+    ];
 
-### Blok-schema's voor Blokken met CMS-content
+    return BaseView::make('index', $data);
+}
 
-Contentblokken kunnen ook worden gedefinieerd met XML en vervolgens in verschillende templates worden hergebruikt.
+public function getAdd()
+{
+    $templates = $this->templates();
+    $menuRoots = \ManagedContent::getRoots();
 
-**XML-schema voor Blok in AO CMS**
+    $resolver = PageTemplateResolver::getInstance();
+
+    return BaseView::make('add')
+        ->with('templates', $templates)
+        ->with('resolver', $resolver)
+        ->with('menuRoots', $menuRoots);
+}
+
+public function getEdit($id)
+{
+    if (!isset($id))
+        return redirect(Config::get('component-skins.prefix') . 'content');
+
+    $page = Page::find($id);
+
+    if (!isset($page))
+        return redirect(Config::get('component-skins.prefix') . 'content');
+
+    return $this->editWithPage($page);
+}
+
+protected function editWithPage($page)
+{
+    $templates = $this->templates();
+    $menuRoots = \ManagedContent::getRoots();
+    $manageable = true;
+
+    if ($page->permissions('edit') === 'content') {
+        $manageable = false;
+    }
+
+    return BaseView::make('edit')->with('menuRoots', $menuRoots)->with('page', $page)->with('templates', $templates)->with('manageable', $manageable);
+}
+
+```
+
+**Inladen van templates via de PageTemplateResolver**
+```php
+protected function templates()
+{
+    return collect(PageTemplateResolver::getInstance()->getTemplates())
+        ->keyBy(function (Template\Template $template) {
+            return $template->getKey();
+        })
+        ->map(function (Template\Template $template) {
+            if ($template->getAttribute('hidden') && !\Request::input('show_hidden'))
+                return false;
+
+            return $template->getAttribute('name');
+        })
+        ->filter()->sort()->all();
+}
+```
+
+## CMS-content
+
+De `CmsContent`-class beheert inhoud binnen een CMS-systeem en maakt dynamisch renderen mogelijk op basis van XML-templates. 
+
+**CMS-content instellen vanuit een array**
+``` php
+public function setContentFromArray($content, &$i = 1) {
+    $items = [];
+    foreach ($content as $key => $blocks) {
+        $template = $this->getTemplate();
+        if ($template) {
+            $f = $template->getField($key);
+            $ls = $f->getLanguages();
+            if (count($ls) > 1) {
+                if (!is_array($blocks)) {
+                    $blocks = [default_language() => $blocks];
+                }
+                foreach ($ls as $l) {
+                    if (!isset($blocks[$l])) {
+                        continue;
+                    }
+                    $items[] = $child = new CmsContent();
+                    $child->fill(['value' => $blocks[$l], 'tag' => $key, 'id' => $i++]);
+                    $child->language = $l;
+                }
+                continue;
+            }
+        }
+        if (!is_array($blocks)) {
+            $items[] = $child = new CmsContent();
+            $child->fill(['value' => $blocks, 'tag' => $key, 'id' => $i++]);
+            continue;
+        }
+        foreach ($blocks as $block) {
+            $items[] = $child = new CmsContent();
+            $child->fill(['value' => $block['value'], 'tag' => $key, 'id' => $i++]);
+            if (array_key_exists('content', $block)) {
+                $child->setContentFromArray($block['content']);
+            }
+        }
+    }
+    $this->setContent($items);
+}
+```
+
+**Content ophalen en verwerken binnen het CMS**
+``` php
+public function content($tag = null, $default = '', $forceArray = false) {
+    if ($tag === null) {
+        return $this;
+    }
+    $field = null;
+    if ($this->getTemplate()) {
+        $field = $this->getTemplate()->getField($tag);
+    }
+    $v = null;
+    if ($field && count($field->getLanguages()) > 1) {
+        $v = $this->contentLanguageFilter($tag, app('language'));
+        if (in_array($v, [null, '']) && $fb = config('content.fallback_language')) {
+            $v = $this->contentLanguageFilter($tag, $fb);
+        }
+    }
+    if (!$v && $this->objectCount($tag) && config('content.return_fallback_language_if_empty', true)) {
+        $v = array_first_value($this->content[$tag])->value;
+    }
+    if (in_array($v, [null, ''])) {
+        $v = $default;
+    }
+    if (!config('cms.use_process_value')) {
+        return $v;
+    }
+    if (!$field) {
+        return $v;
+    }
+    $m = $this->getTemplate()->getField($tag)->getModuleClass();
+    $m = new $m();
+    if ($m instanceof ProcessValue) {
+        $v = $m->processValue($v);
+    }
+    return $v;
+}
+
+```
+
+**Recursieve doorlopen van contentstructuren**
+``` php
+public function traverse(callable $fn, $recursive = true) {
+    foreach ($this->content as $objects) {
+        foreach ($objects as $object) {
+            $fn($object);
+            if ($recursive) {
+                $object->traverse($fn);
+            }
+        }
+    }
+}
+```
+
+**Dynamisch renderen van content met behulp van templates**
+``` php
+public function render($data = []) {
+    $provider = $this->getTemplate()->getProvider();
+    if ($provider instanceof TemplateRenderer) {
+        $data['__content'] = $this;
+        $viewData = [];
+        if ($dataSources = $this->getTemplate()->getDataSources()) {
+            foreach ($dataSources as $name => $source) {
+                $instance = new $source($this, $data);
+                $viewData[$name] = $instance;
+            }
+        }
+        return $this->wrapFrontendCmsMarker($provider->render($this, $data, $viewData));
+    }
+    return null;
+}
+
+```
+
+## Contentblokken
+
+Binnen de templates kan naar andere XML-bestanden worden verwezen die contentblokken genereren, welke door de `CmsContent`-class worden verwerkt.
+
+**XML-schema voor contentblokken in AO CMS**
 
 ```xml
 <template name="Paragraph">
@@ -53,7 +233,29 @@ Contentblokken kunnen ook worden gedefinieerd met XML en vervolgens in verschill
 </template>
 ```
 
-Dit blok bevat een titel- en tekstveld met RichText-functionaliteit voor tekstopmaak.
+**Dynamisch renderen van contentblokken**
+```php
+public function blocks(string $tag = 'blocks', array $data = [])
+    {
+        $ret = '';
+
+        $objects = array_values($this->objects($tag));
+
+        foreach ($objects as $index => $block) {
+            if (config('content.blocks_state_option') && !$block->active) {
+                continue;
+            }
+
+            /** @var CmsContentInterface $block */
+            $ret .= $block->render(array_merge($data, [
+                '__block_index' => $index,
+                '__block_count' => count($objects)
+            ]));
+        }
+
+        return $ret;
+    }
+```
 
 ## CMS met Filament
 
