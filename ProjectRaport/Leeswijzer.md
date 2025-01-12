@@ -56,11 +56,11 @@ Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen
 
 -- nieuw
 
-Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes Docker-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitgebreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend is een standaard **Node.js** container.
+Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes **Docker**-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitgebreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend is een standaard **Node.js** container.
 
 ### Conclusies onderzoek AllesOnline CMS en realisatie eerste prototype
 
-Dankzij dit deel van het onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken alvast antwoorden geven op enkele deelvragen.
+Dankzij dit deel van het onderzoek en de ontwikkeling van het prototype kan ik vanuit verschillende invalshoeken al antwoorden geven op enkele deelvragen.
  
 * __Wat zijn de belangrijkste technische en functionele beperkingen van het huidige CMS?__
 	* **Beperkte documentatie:** De documentatie is verouderd, waardoor ontwikkelaars onnodig lang bezig zijn met het begrijpen van bepaalde functionaliteiten en parameters.
