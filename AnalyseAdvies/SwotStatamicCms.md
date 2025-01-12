@@ -5,29 +5,27 @@
 
 ## Strengths (Sterktes)
 
-* **Flexibiliteit in datamanagement**: Ondersteuning voor verschillende vormen van gegevenspersistentie, zowel via flat files als via databaseconfiguraties (zoals de Eloquent-driver en de Runway-addon).
-* **Integratie met Laravel**: Statamic is gebouwd op Laravel, een framework waarmee alle developers binnen AllesOnline bekend zijn.
-* **Uitgebreide functionaliteiten**: Veel out-of-the-box ondersteuning voor onder andere zoekfunctionaliteit, navigatiebeheer en mediabeheer.
+* **Flexibiliteit in datamanagement**: Ondersteuning voor verschillende configuraties voor gegevenspersistentie, zowel via flat-files als via databaseconfiguraties (zoals de Eloquent-driver en de Runway-addon).
+* **Integratie met Laravel**: Statamic is geïntegreerd met Laravel, een framework waarmee alle developers bij AllesOnline bekend zijn.
+* **Out-of-the-box CMS**: Statamic is een volledig CMS en heeft hier veel out-of-the-box functionaliteiten en componenten voor beschikbaar.
 * **Marketplace voor extensies**: Beschikbaarheid van gratis en betaalde addons, met mogelijkheden om zelf addons te ontwikkelen.
-* **Schaalbaarheid**: De mogelijkheid om te schalen van kleinere projecten naar complexere systemen met ondersteuning voor databases.
-* **Kosten**: Redelijk geprijsd met voordelige, schaalbare licentieopties (Master License en Platform Subscription).
+* **Schaalbaarheid**: De mogelijkheid om te schalen van kleinere projecten naar complexere systemen door te wisselen tussen configuraties.
 
 ## Weaknesses (Zwaktes)
 
-* **Incompleet documentatie**: Er is weinig informatie beschikbaar als je buiten de gebaande paden wilt treden of wijzigingen wilt aanbrengen buiten de Statamic UI. Voor veel informatie moet verder gezocht worden, bijvoorbeeld in GitHub-issues of de Discord-community.
-* **Gebruik van Vue 2**: De views van Statamic zijn momenteel gebouwd met Vue 2, dat in 2023 al EOL was. Begin 2025 migreert Statamic naar Vue 3. Hoewel dit positief is, kan het betekenen dat bepaalde custom inputvelden die door gebruikers zelf zijn ontwikkeld, ook omgezet moeten worden om te blijven functioneren.
-* **Complexiteit bij configuraties**: Grote verschillen tussen flat-file/eloquent-driver configuratie, en Runway configuratie maken migraties meer hands-on.
-* **Beperkingen in databaseconfiguraties**:
-    - Geen ondersteuning voor eager loading in Eloquent-driver.
-    - Complexe migraties en beperkte relatieondersteuning (bijvoorbeeld pivot-gegevens).
-* **Afhankelijkheid van externe ontwikkelaars**: Functionaliteit zoals de Runway-addon is ontwikkeld door derden en heeft lagere prioriteit bij updates.
+* **Incompleet documentatie**: Er is weinig documentatie beschikbaar wanneer je buiten de gebaande paden wilt treden of wijzigingen wilt aanbrengen die niet via de Statamic UI mogelijk zijn. Hoewel er informatie te vinden is in de GitHub-issues of de Discord-community, is dit proces vaak omslachtig.
+* **Gebruik van Vue 2**: De views van Statamic zijn momenteel gebouwd met Vue 2, dat in 2023 al EOL was. Begin 2025 migreert Statamic naar Vue 3.
+* **Complexiteit bij configuraties**: De verschillen tussen de flat-file/eloquent-driver configuratie en de Runway configuratie maken migraties tussen deze configuraties meer hands-on.
+* **Beperkingen in databaseconfiguraties**: Het verschil in databasestructuur tussen het AllesOnline CMS en Statamic is groot, waardoor migratie naar Statamic complexer wordt. Daarnaast ontbreken er bepaalde features voor relatiebeheer, zoals het meegeven van pivot-gegevens en polymorfe relaties.
+* **Afhankelijkheid van externe ontwikkelaars**: Functionaliteit zoals de Runway-addon is ontwikkeld door derden.
 
 ## Opportunities (Kansen)
 
-* **Vergroting van de flexibiliteit met addons**: Statamic heeft een speciale marktplaats beschikbaar gesteld waar plugins van derden beschikbaar zijn en eventueel oplossingen door AllesOnline - eventueel tegen betaling - aangeboden kunnen worden. 
+* **Snellere implementatie voor simpele websites**: Dankzij de vele kant-en-klare functionaliteiten en de gebruiksvriendelijke interface kan het CMS de implementatietijd aanzienlijk verkorten voor eenvoudige websites die niet veel complexiteit of complexe datastructuren vereisen.
+**Gestandaardiseerde Componenten voor Whitelabel Websites**: Het is mogelijk om een boilerplate voor Statamic te ontwikkelen met gestandaardiseerde componenten. Dit zou de vormgevers van AllesOnline in staat stellen om zelfstandig whitelabel-websites te realiseren.
+**Kostenefficiëntie op de Lange Termijn**: Hoewel de initiële kosten van de Statamic Pro licentie hoger zijn, biedt het Platform Subscription-model een aantrekkelijke oplossing voor grotere aantallen websites. De kosten per website dalen aanzienlijk wanneer meer websites worden toegevoegd, waardoor het op lange termijn kostenefficiënt is voor AllesOnline wanneer er veel Statamic-websites in productie gaan.
 
 ## Threats (Bedreigingen)
 
 * **Onbekende technieken voor AllesOnline developers**: Een risico voor AllesOnline is dat Statamic voor de views binnen het CMS gebruik maakt van Vue. Dit framework is voor vrijwel alle developers binnen AllesOnline onbekend.
-- **Afgebakend**: Statamic is in de basis ontworpen als CMS. Hoewel het mogelijk is om het systeem aan te passen voor gebruik als CRM-systeem, is Statamic niet in dezelfde mate flexibel als bijvoorbeeld Filament.
-* **Beperkingen bij complexe relaties**: De flat-file-architectuur en de eloquent-driver bieden onvoldoende ondersteuning voor complexe relaties, wat extra logica vereist, waardoor het systeem complexer kan worden dan noodzakelijk is.
+* **Beperkte scope**: Statamic is oorspronkelijk ontworpen als CMS. Hoewel het mogelijk is om het systeem aan te passen voor gebruik als CRM, biedt Statamic niet dezelfde mate van flexibiliteit als bijvoorbeeld Filament.
