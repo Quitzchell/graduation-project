@@ -1,6 +1,6 @@
 # Reflectie
 
-Terugkijkend op het afgelopen semester en mijn afstudeerproject, kan ik concluderen dat ik veel heb geleerd, zowel op technisch als op persoonlijk vlak.
+Terugkijkend op het afgelopen semester en mijn afstudeerproject, kan ik concluderen dat ik veel heb geleerd, zowel op technisch als persoonlijk vlak.
 
 Het onderzoek naar en het vergelijken van verschillende Content Management Systemen voor AllesOnline heeft niet alleen mijn kennis over het AllesOnline CMS vergroot, maar ook mijn inzicht in de werking van Filament en Statamic. Daarnaast ben ik tot het besef gekomen dat de uitspraak die Marco Meulenbroeks tijdens het tweede semester van deze opleiding steeds benadrukte, een doorslaggevende factor kan zijn in het werkveld. In principe kon de uitkomst van dit onderzoek aan het begin van het semester al worden samengevat met deze uitspraak: "It depends." Want als we kijken naar welk systeem het beste geschikt is voor de diverse klanten van AllesOnline, is er geen eenduidig antwoord. Waarom zou je een Zwitsers zakmes gebruiken om een wijnfles te openen, als dat veel makkelijker gaat met een kurkentrekker? Wat veel waardevoller is in dit onderzoek, is dat ik heb kunnen definiëren welk systeem in welke gevallen de voorkeur geniet.
 
