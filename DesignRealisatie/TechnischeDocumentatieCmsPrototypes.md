@@ -6,7 +6,7 @@ Dit document biedt een technisch overzicht van de werking en structuur van de on
 
 ## ContentManagerController
 
-In het AllesOnline CMS worden pagina's en content beheerd via de `ContentManagerController`, die meestal ongewijzigd wordt geïmporteerd vanuit de AllesOnline CMS-packages. Deze controller beheert pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties en gebruikersrechtenverificatie.
+In het AllesOnline CMS worden pagina's en content beheerd via de `ContentManagerController`, deze wordt meestal ongewijzigd geïmporteerd vanuit de AllesOnline CMS-packages. Deze controller beheert pagina's binnen het CMS en biedt functionaliteiten voor CRUD-operaties en gebruikersrechtenverificatie.
 
 **Naast deze basisfunctionaliteiten biedt de controller:**
 * **Content hiërarchie en volgorde**: Beheer van de hiërarchie en volgorde van pagina-items in de database via methoden zoals updateManagedContent.
@@ -495,7 +495,7 @@ readonly class TemplateFactory
 
 ## Class voor Templates
 
-De `Template`-class worden gebruikt om specifieke structuur voor de template van een pagina te definiëren. Deze wordt 
+De `Template`-class worden gebruikt om specifieke structuur voor de template van een pagina te definiëren. Omdat de `Template`-class de `HasTemplateSchema` implementeert is het verplicht zijn 
 Een `Template` wordt beheerd in een specifieke class die een array met Filament FormField-componenten teruggeven aan een `Resource`.
 
 **Template-class in CMS met Filament**
