@@ -93,7 +93,13 @@ Omdat **Cypress** in een standaard Linux Alpine-container complicaties kan onder
 
 # Onderzoek naar CMS met Filament
 
+-- oud 
+
 Het tweede prototype dat ik ben gaan realiseren, was een CMS met Filament. Filament is niet perse een CMS, maar eerder een library met _"a collection of beautiful full-stack components"_, althans, als we hun eigen website moeten geloven. Met de componenten die het biedt, is het relatief eenvoudig om een CRUD-applicatie op te zetten en met een beetje creativiteit ook een CMS.
+
+-- nieuw 
+
+Het tweede prototype dat ik heb ontwikkeld, was een CMS met **Filament**. Filament is niet strikt een CMS, maar een library met *"a collection of beautiful full-stack components"*, althans volgens hun website. Met de aangeboden componenten is het relatief eenvoudig om een CRUD-applicatie op te zetten en, met wat creativiteit, ook een CMS.
 
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 > * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
