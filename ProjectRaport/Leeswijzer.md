@@ -1,13 +1,12 @@
 # **Leeswijzer**
----
 
 > * [Evidence in verhouding tot leeruitkomsten](../Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
 
 # Inleiding
 
-Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_, waarin wordt onderzocht hoe AllesOnline - een full-service bureau voor online en offline communicatie - haar huidige intern ontwikkelde Content Management Systeem (CMS) kan moderniseren. Het CMS, dat momenteel in gebruik is en sinds 2015 operationeel is, vormt de basis van de webapplicaties die het bedrijf ontwikkelt. Door een gebrek aan aandacht en onderhoud is het systeem echter verouderd. Dit maakt het moeilijk uit te breiden, waardoor het werken met het systeem steeds minder efficiënt wordt.
+Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_, waarin wordt onderzocht hoe AllesOnline, een full-service bureau voor online en offline communicatie, zijn zelfontwikkelde Content Management Systeem (CMS) kan moderniseren. Het CMS, dat sinds 2015 operationeel is en nog altijd in gebruik is, vormt de basis van de webapplicaties die het bedrijf ontwikkelt. Door een gebrek aan aandacht en onderhoud is het systeem verouderd geraakt en onderhoudsintensief geworden.
 
-Concreet richt het onderzoek zich op het formuleren van een advies over twee mogelijke strategieën voor het CMS: het doorontwikkelen van het huidige systeem of het overstappen naar een door een derde partij ontwikkeld CMS. In het geval van de laatste strategie hoort daar ook de mogelijkheid bij om het CMS van de bestaande websites naar het nieuwe systeem te migreren.
+Het onderzoek richt zich op het formuleren van een advies over twee mogelijke strategieën voor het CMS: het doorontwikkelen van het huidige systeem of het overstappen naar een systeem van een externe partij. In het geval van de laatste strategie maakt de mogelijkheid om bestaande projecten met het AllesOnline CMS naar het nieuwe systeem te migreren deel uit van het onderzoek.
 
 ## Onderzoeksvraag
 
@@ -28,20 +27,46 @@ Hoe kan AllesOnline een bestaand Content Management Systeem inzetten om de schaa
 
 # Onderzoek naar huidige CMS en opzet eerste prototype
 
-In de eerste weken van dit project heb ik mij gericht op het analyseren van het AllesOnline CMS. Om een goed beeld te krijgen en hier gericht advies over uit te kunnen brengen, heb ik gesprekken gevoerd met mijn collega-developers van AllesOnline over hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarnaast heb ik mijn eigen ervaringen met het CMS meegenomen in deze analyse en ben ik de code van het CMS ingedoken om op een dieper niveau te begrijpen hoe het systeem is opgebouwd.
+--
+oud
+
+In de eerste weken van dit project heb ik mij gericht op het analyseren van het AllesOnline CMS. Om een goed beeld te krijgen en hier gericht advies over uit te kunnen brengen, heb ik gesprekken gevoerd met collega-developers van AllesOnline over hun ervaringen en de uitdagingen die zij tegenkomen bij het werken met het CMS. Daarnaast heb ik mijn eigen ervaringen met het CMS meegenomen in deze analyse en ben ik de code van het CMS ingedoken om op een dieper niveau te begrijpen hoe het systeem is opgebouwd.
 
 Uit de gesprekken en de analyse bleek dat de meeste developers tevreden zijn met het CMS. Hoewel niet alles volgens Best Practices verloopt en er onduidelijkheden bestaan over de werking van het CMS, slagen de meeste developers erin om op een pragmatische manier tot oplossingen te komen. Toch valt op dat de developers binnen AllesOnline graag een verbeterde developer experience zouden zien. Hierbij kan gedacht worden aan meer abstractie van functionaliteiten, waardoor complexiteit beter kan worden verborgen en herbruikbare oplossingen eenvoudiger te implementeren zijn. Dit kan bijdragen aan het sneller en eenvoudiger realiseren van specifieke klantwensen.
+
+--
+nieuw
+
+In de eerste weken van dit project heb ik me gericht op het analyseren van het AllesOnline CMS. Om een goed beeld te krijgen en een onderbouwd advies te kunnen formuleren, heb ik verschillende acties ondernomen. Zo ben ik in gesprek gegaan met andere developers binnen AllesOnline, heb ik de codebase van het CMS geanalyseerd en heb ik mijn ervaringen van ongeveer 2 jaar werken bij AllesOnline meegenomen.
+
+Uit de gesprekken bleek dat de developers over het algemeen tevreden zijn met het CMS. Hoewel niet alles volgens Best Practices verloopt en er soms onduidelijkheden bestaan over de werking van het CMS, slagen de meeste developers erin om op een pragmatische manier tot oplossingen te komen. Er werd ook aangegeven dat de developers binnen AllesOnline een verbeterde developer experience zouden waarderen. Hierbij kan gedacht worden aan meer abstractie van functionaliteiten, zodat complexiteit beter kan worden verborgen en herbruikbare oplossingen eenvoudiger te implementeren zijn. Dit zou kunnen bijdragen aan het sneller en eenvoudiger realiseren van specifieke klantwensen.
 
 > * [Gesprekken met Developers](../AnalyseAdvies/GesprekkenEnErvaringenMetDevelopers.md)
 > * [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 > * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 
+--
+oud 
+
 Parallel aan het onderzoek heb ik de requirements opgesteld waaraan een CMS moet voldoen om te voorzien in de behoeften van een doorsnee AllesOnline-website. Op basis van deze requirements heb ik een DOT-frameworkesque `Multi-Criteria Decision Making`-analyse opgesteld, waarmee ik op een eenvoudige manier kan bijhouden hoe de te onderzoeken frameworks aan deze requirements voldoen.
+
+-- 
+nieuw
+
+Parallel aan de analyse heb ik requirements opgesteld waaraan een CMS moet voldoen om te passen bij de behoeften van een typische AllesOnline-website. Gebaseerd op deze requirements heb ik een `Multi-Criteria Decision Making`-analyse in DOT-frameworkstijl opgesteld, waarmee ik eenvoudig kan bijhouden hoe de frameworks zich tot de gestelde requirements verhouden.
 
 > * [Requirements](../AnalyseAdvies/Requirements.md)
 > * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
 
+--
+oud
+
 Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsnee AllesOnline-website verwacht wordt, ben ik aan de slag gegaan met het realiseren van een prototype van een website. In eerste instantie was het de bedoeling om een stamboomapplicatie te ontwikkelen op basis van de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam – en de complexiteit van het verwerken hiervan in een systeem duidelijk werd – heb ik ervoor gekozen om in plaats daarvan een eenvoudige blog-website te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
+
+--
+nieuw
+
+Op basis van de requirements en het beeld van een typische AllesOnline-website ben ik begonnen met het ontwikkelen van een prototype. Aanvankelijk zou het een stamboomapplicatie worden, gebaseerd op de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam en de complexiteit van het verwerken daarvan duidelijk werd, besloot ik om in plaats daarvan een eenvoudige blog-website te maken, geschreven vanuit het perspectief van Napoleon Bonaparte.
 
 > _Meer over waarom ik van plan ben met prototypen te werken en hoe deze eruit gaan zien lees je in het onderstaande document._ 
 > * [Opzet van de prototypes](../DesignRealisatie/OpzetVanDePrototypes.md)
