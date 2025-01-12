@@ -40,14 +40,6 @@ Parallel aan de analyse heb ik requirements opgesteld waaraan een CMS moet voldo
 > * [Requirements](../AnalyseAdvies/Requirements.md)
 > * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
 
---
-oud
-
-Aan de hand van de requirements en een duidelijk beeld van wat er van een doorsnee AllesOnline-website verwacht wordt, ben ik aan de slag gegaan met het realiseren van een prototype van een website. In eerste instantie was het de bedoeling om een stamboomapplicatie te ontwikkelen op basis van de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam – en de complexiteit van het verwerken hiervan in een systeem duidelijk werd – heb ik ervoor gekozen om in plaats daarvan een eenvoudige blog-website te realiseren, geschreven vanuit het perspectief van Napoleon Bonaparte.
-
---
-nieuw
-
 Op basis van de requirements en mijn bevindingen over een typische AllesOnline-website ben ik begonnen met het ontwikkelen van een prototype. Aanvankelijk zou dit een stamboomapplicatie worden, gebaseerd op de familie Bonaparte. Toen echter de incestueuze geschiedenis van de Europese koningshuizen naar voren kwam en de complexiteit van het verwerken daarvan duidelijk werd, besloot ik in plaats daarvan om een eenvoudige blog-website te maken, geschreven vanuit het perspectief van Napoleon Bonaparte.
 
 > _Meer over waarom ik van plan ben met prototypen te werken en hoe deze eruit gaan zien lees je in het onderstaande document._ 
