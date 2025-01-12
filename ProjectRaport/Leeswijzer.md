@@ -190,4 +190,6 @@ Naast de conclusie dat **Filament** de beste keuze is voor complexere projecten,
 
 # Reflectie 
 
+Hieronder een document met mijn reflectie op het afgelopen semester. In dit document vat ik mijn ervaringen samen en benoem ik de lessen die ik hieruit heb geleerd.
+
 > * [Reflectie](../ProjectRaport/Reflectie.md)
