@@ -50,13 +50,7 @@ Op basis van de requirements en mijn bevindingen over een typische AllesOnline-w
 > * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 > * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
--- oud
-
-Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb voor alle prototypes Docker-containers voorbereid. Voor de backends maak ik gebruik van de voorgedefinieerde AllesOnline-container, met een uitbreiding die het mogelijk maakt om van SQLite gebruik te maken. Dit maakt het eenvoudiger om zowel tijdens het programmeren als binnen een pipeline feature tests uit te voeren, zonder de reguliere database te beïnvloeden.
-
--- nieuw
-
-Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes **Docker**-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitgebreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend is een standaard **Node.js** container.
+Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes **Docker**-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitgebreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend wordt gebruik gemaakt van een standaard **Node.js**-container.
 
 ### Conclusies onderzoek AllesOnline CMS en realisatie eerste prototype
 
@@ -78,7 +72,13 @@ Dankzij dit deel van het onderzoek en de ontwikkeling van het prototype kan ik v
 
 # Frontend tests met Cypress 
 
+-- oud
+
 Rond het afronden van het prototype met het AllesOnline CMS ben ik aan de slag gegaan met het realiseren van een testsuite met Cypress. Deze is bedoeld om de communicatie tussen de backend en de frontend te valideren. Aan de hand van deze test kan ik controleren of de website vanuit de verschillende CMS-oplossingen de correcte informatie naar de frontend doorgeeft.
+
+-- nieuw 
+
+Nadat het prototype met het AllesOnline CMS was afgerond, ben ik begonnen met het ontwikkelen van een testsuite in Cypress. Deze is bedoeld om de communicatie tussen de backend en frontend te valideren, zodat ik kan controleren of de website de juiste informatie van de verschillende CMS-oplossingen naar de frontend doorgeeft.
 
 > * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
 
