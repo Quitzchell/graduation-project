@@ -10,7 +10,7 @@ In de loop der jaren zijn er verschillende benaderingen geweest voor het opzette
 In het AllesOnline CMS worden validatieregels voor invoervelden in de Eloquent-modellen gedefinieerd, terwijl deze in Filament in schema's aan `Form`-componenten worden gechained. Dit maakt het migreren van de regels complex omdat de migratietool bestanden in principe één voor één overzet, maar validatieregels en schema's nu uit verschillende bestanden moeten worden samengevoegd. Dit maakt het ontwikkelen van een migratietool uitdagender.
 
 # Conclusie
-Gezien de complexiteit die naar voren komt in de verschillende soorten AllesOnline projecten, is het belangrijk om voor een migratie een goede voorbereiding te doen. Onderzoek welke keuzes gemaakt zijn en hoe deze opgelost kunnen worden naar het nieuwe CMS. 
+Gezien de complexiteit die naar voren komt in de verschillende soorten AllesOnline projecten, is het belangrijk om voor een migratie een goede voorbereiding te doen. Het is raadzaam te onderzoeken welke keuzes gemaakt zijn en hoe deze opgelost kunnen worden naar het nieuwe CMS.
 
 Begin daarnaast met kleinere projecten en werk op deze manier iteratief naar grotere en uitdagendere projecten. Op deze manier wordt het fundament van de tool iteratief uitgebreid en verbeterd.
 
