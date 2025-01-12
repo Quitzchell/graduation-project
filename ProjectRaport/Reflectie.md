@@ -14,7 +14,10 @@ Mijn probleem met timemanagement bleek namelijk samen te hangen met mijn gebrek 
 De feedback die ik tijdens de midterm van Arjan Groeneweg en Frank Coenen kreeg, deed me inzien dat ik mijn werkwijze moest veranderen. In plaats van de verantwoordelijkheid voor tickets van andere developers op me te nemen, begon ik deze verantwoordelijkheid terug te leggen bij de betreffende personen of mijn leidingegevende hierover op de hoogte te stellen. Dit was een belangrijke stap in mijn persoonlijke ontwikkeling en droeg bij aan het versterken van zowel mijn communicatieve vaardigheden als mijn veerkracht. Deze nieuwe aanpak leidde tot een daling in mijn overuren, naar slechts 4 uur per maand in november en december. Dit verbeterde niet alleen mijn focus en energie, maar liet me ook inzien dat problemen niet altijd individueel opgelost hoeven te worden. Samenwerking en het delen van verantwoordelijkheid zijn namelijk essentieel binnen een succesvol bedrijf.
 
 
--- hier nog naar kijken -- 
+# Bijvangst
+Naast de waardevolle inzichten die ik heb opgedaan tijdens mijn examenproject, heb ik ook tijdens mijn dagelijkse werkzaamheden bij AllesOnline mijn kennis verder kunnen uitbreiden. 
+
+
 Uiteraard heb ik van alle projecten tijdens het afgelopen halfjaar bij AllesOnline ook enorm veel geleerd. Zo heb ik gewerkt aan de migratie van on-premise hosting naar cloud hosting via DigitalOcean. en heb ik om toekomstige developers een gestandaardiseerde werkwijze te bieden bij het migreren van projecten naar DigitalOcean, heb ik documentatie geschreven voor dit proces.
 
 Daarnaast heb ik voor het eerst met Next.js gewerkt en heb ik ervaring opgedaan met gechainde jobs in een queue. Ook heb ik een SOAP-interface omgebouwd naar een REST-interface en deze geoptimaliseerd. Dit bracht het aantal requests per gegevensimport terug van circa 800 naar ongeveer 50.
