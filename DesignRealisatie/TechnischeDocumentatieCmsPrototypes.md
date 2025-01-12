@@ -543,11 +543,11 @@ class HomeTemplate implements HasTemplateSchema
 }
 ```
 
-### Interfaces
+## Interfaces
 
-Een `Template` implementeert de interface `HasTemplateSchema`. Deze interface vereist dat classes een schema voor hun CMS-content en een naam beschikbaar stellen. Het schema wordt verwacht in de `TemplateFactory`, terwijl de naam wordt gebruikt in het select-veld waarin gebruikers in de `Page`-resource een template kiezen.
+Een `Template`-class implementeert de `HasTemplateSchema`-interface, die vereist dat classes zowel een schema voor CMS-content als een naam beschikbaar stelt. Het schema wordt ingeladen via de `TemplateFactory`, terwijl de naam wordt gebruikt in het select-veld waarin gebruikers een template kiezen in de `Page`-resource.
 
-**HasTemplateSchema interface in het CMS met Filament**
+**HasTemplateSchema interface**
 
 ```php
 <?php
@@ -713,7 +713,7 @@ class Paragraph implements HasBlockSchema
 }
 ```
 
-### Interfaces
+## Interfaces
 
 Ook voor de blocks is er een interface voorbereid, namelijk `HasBlockSchema`, die voorschrijft welke functionaliteiten een block moet bieden. Dit betreft het beschikbaar stellen van de formuliervelden die bij het block horen en een methode om de content van het block, die als JSON in het CMS wordt opgeslagen, op te halen.
 
