@@ -7,7 +7,7 @@
 
 * **Flexibiliteit in datamanagement**: Ondersteuning voor verschillende configuraties voor gegevenspersistentie, zowel via flat-files als via databaseconfiguraties (zoals de Eloquent-driver en de Runway-addon).
 * **Integratie met Laravel**: Statamic is geïntegreerd met Laravel, een framework waarmee alle developers bij AllesOnline bekend zijn.
-* **Out-of-the-box CMS**: Statamic is een volledig CMS en heeft hier veel out-of-the-box functionaliteiten en componenten voor beschikbaar.
+* **Out-of-the-box CMS**: Statamic heeft veel out-of-the-box CMS-functionaliteiten en componenten beschikbaar.
 * **Marketplace voor extensies**: Beschikbaarheid van gratis en betaalde addons, met mogelijkheden om zelf addons te ontwikkelen.
 * **Schaalbaarheid**: De mogelijkheid om te schalen van kleinere projecten naar complexere systemen door te wisselen tussen configuraties.
 
