@@ -78,7 +78,7 @@ Rond het afronden van het prototype met het AllesOnline CMS ben ik aan de slag g
 
 -- nieuw 
 
-Nadat het prototype met het AllesOnline CMS was afgerond, ben ik begonnen met het ontwikkelen van een testsuite in Cypress. Deze is bedoeld om de communicatie tussen de backend en frontend te valideren, zodat ik kan controleren of de website de juiste informatie van de verschillende CMS-oplossingen naar de frontend doorgeeft.
+Nadat het prototype met het AllesOnline CMS was afgerond, ben ik begonnen met het ontwikkelen van een testsuite in Cypress. Deze is bedoeld om de communicatie tussen de backend en frontend te valideren, zodat ik kan controleren of de frontend de juiste informatie van de verschillende backend prototypen ontvangt.
 
 > * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
 
