@@ -6,7 +6,7 @@ In dit document deel ik nieuwe inzichten over het migreren van het AllesOnline C
 # Verschil in architectuur
 In de loop der jaren zijn er verschillende benaderingen geweest voor het opzetten van AllesOnline-projecten. Er zijn monolithische projecten met `Blade`-templates, quasi-monolithische projecten met `Inertia`, en projecten met een *decoupled architecture* waarin de backend API’s beschikbaar stelt voor een frontend die gebruikmaakt van een modern frontend-framework. De diversiteit aan de manier waarop informatie binnen deze architecturen vanuit het CMS verwerkt wordt zorgt ervoor dat er per project zorgvuldig onderzocht wordt welke technieken er gebruikt zijn en hoe deze via een tool automatisch overgezet kunnen worden.
 
-# Verschil in verantwoordelijkheid voor validatie-regels
+# Verschil in verantwoordelijkheid voor validatie
 In het AllesOnline CMS worden validatieregels voor invoervelden in de Eloquent-modellen gedefinieerd, terwijl deze in Filament in schema's aan `Form`-componenten worden gechained. Dit maakt het migreren van de regels complex omdat de migratietool bestanden in principe één voor één overzet, maar validatieregels en schema's nu uit verschillende bestanden moeten worden samengevoegd. Dit maakt het ontwikkelen van een migratietool uitdagender.
 
 # Conclusie
