@@ -719,7 +719,7 @@ trait MutateDateBeforeSaveTrait
 ```
 ---
 
-## Schema's voor Contentblokken
+## Schema's voor contentblokken
 
 Voor het CMS met Filament kunnen `Blocks` gedefinieerd worden via PHP-classes, die eenvoudig in verschillende templates hergebruikt kunnen worden door ze te importeren. In de blokken wordt ook aangegeven hoe de informatie moet worden opgehaald voor verwerking.
 
@@ -804,7 +804,7 @@ interface HasBlockSchema
 
 # Statamic CMS met flat-file / eloquent-driver
 
-In de **flat-file** en **Eloquent-driver** configuratie van **Statamic** wordt het CMS anders opgebouwd dan bij de andere systemen die we gezien hebben. In plaats van specifieke Eloquent-modellen per entiteit, gebruikt Statamic `Collections` waarin gerelateerde `Entries` worden opgeslagen. Dit vereenvoudigt de opzet, doordat er geen specifieke databasetabellen voor entiteiten hoeven te worden voorbereid.
+In de **flat-file** en **eloquent-driver** configuratie van **Statamic** wordt het CMS anders opgebouwd dan bij de eerder onderzochten systemen. In plaats van specifieke Eloquent-modellen per entiteit, gebruikt Statamic `Collections` waarin gerelateerde `Entries` worden opgeslagen. Dit vereenvoudigt de opzet, aangezien er geen specifieke databasetabellen voor entiteiten aangemaakt te hoeven worden.
 
 ## Collections
 
