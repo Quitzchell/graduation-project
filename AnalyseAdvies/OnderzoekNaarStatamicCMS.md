@@ -52,7 +52,7 @@ Met de eloquent-driver packages kan Statamic worden geconfigureerd om gegevens v
 
 Het omzetten van de flat-file configuratie naar de eloquent-driver configuratie is relatief eenvoudig. De eloquent-driver package biedt namelijk functionaliteiten die het omzetten van flat-files naar database-records en vice versa eenvoudig maken. Hoe de eloquent-driver binnen het systeem precies wordt ingezet, kan worden afgestemd in het configuratiebestand van de driver. 
 
-> * [Eloquent-driver documenatie](https://github.com/statamic/eloquent-driver)
+> * [Eloquent-driver documentatie](https://github.com/statamic/eloquent-driver)
 > * [Eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
 
 # Beheren van content en objecten
