@@ -82,7 +82,7 @@ Omdat Cypress niet in een Linux Alpine-container kan draaien, heb ik het mogelij
 
 -- nieuw 
 
-Omdat **Cypress** niet in een standaard Linux Alpine-container kan draaien, heb ik ervoor gezorgd dat Cypress in zijn eigen container draait en kan communiceren met de frontend-applicatie. Dit voorkomt dat de frontend-container onnodig groot wordt door de toevoeging van Cypress en zijn benodigdheden. Het nadeel is echter dat een timeout tussen de requests nodig is, omdat de frontend een exception teruggeeft bij te snel opvolgende verzoeken vanuit hetzelfde adres.
+Omdat **Cypress** in een standaard Linux Alpine-container complicaties kan ondervinden door ontbrekende afhankelijkheden, heb ik een aparte container voor Cypress opgezet die kan communiceren met de frontend-applicatie. Dit voorkomt dat de frontend-container onnodig groot wordt door de toevoeging van Cypress. Het nadeel is echter dat een timeout tussen de requests nodig is, omdat de frontend een exception teruggeeft bij te snel opvolgende verzoeken vanuit hetzelfde adres.
 
 > _Hieronder een kleine afwijking van het chronologische verhaal, met een aantal runs van de Cypress-testsuite waarin de verschillende CMS-oplossingen aan de frontend zijn gekoppeld._
 > * [Video: Cypress tests met AllesOnline CMS](../Bijlagen/CypressTestsAOCms.md)
