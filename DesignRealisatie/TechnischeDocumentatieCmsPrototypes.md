@@ -3,6 +3,7 @@
 Dit document biedt een technisch overzicht van de werking en structuur van de onderzochte CMS'en.
 
 # AllesOnline CMS
+> Code in het AllesOnline CMS hoofdstuk is afkomstig uit de `ao/cms` codebase
 
 ## ContentManagerController
 
@@ -420,7 +421,7 @@ trait ProvidesContentTrait
 
 ## PageResource en dynamische templates
 
-De `Resource`-classes in Filament dienen als de brug tussen Eloquent-modellen en de adminpanelen binnen het CMS. In de `Resource` die is gekoppeld aan het `Page`-model, kan in de `form`-methode een `Select`-component worden toegevoegd. Hiermee kunnen gebruikers vooraf gedefinieerde **templates** voor een pagina selecteren.
+De `Resource`-classes in Filament dienen als de brug tussen Eloquent-modellen en de adminpanelen binnen het CMS. In de `Resource` die is gekoppeld aan het `Page`-model, kan in de `form`-methode een `Select`-component worden toegevoegd. Hiermee kunnen gebruikers voorgedefinieerde **templates** voor een pagina selecteren.
 
 ```
 Schema voor Content Management
@@ -585,7 +586,7 @@ class HomeTemplate implements HasTemplateSchema
 
 ## Interfaces
 
-Een `Template`-class implementeert de `HasTemplateSchema`-interface, die vereist dat classes zowel een schema voor CMS-content als een naam beschikbaar stelt. Het schema wordt ingeladen via de `TemplateFactory`, terwijl de naam wordt gebruikt in het select-veld waarin gebruikers een template kiezen in de `Page`-resource.
+Een `Template`-class implementeert de `HasTemplateSchema`-interface, die vereist dat classes zowel een schema voor CMS-content als een naam beschikbaar stellen. Het schema wordt ingeladen via de `TemplateFactory`, terwijl de naam wordt gebruikt in het select-veld waarin gebruikers een template kiezen in de `Page`-resource.
 
 ```
 HasTemplateSchema interface
