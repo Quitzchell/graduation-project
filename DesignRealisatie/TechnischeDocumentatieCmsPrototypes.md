@@ -924,7 +924,7 @@ title: Homepage
 
 ## Fieldsets
 
-Zoals je kunt zien in de `Blueprint` voor de homepage, is er een `replicator`-veld gedefinieerd met de handle `blocks`.
+Zoals te zien is in de `Blueprint` voor de homepage, is er een `replicator`-veld gedefinieerd met de handle `blocks`.
 
 Dit veld stelt je in staat om vooraf gedefinieerde sets van invoervelden toe te voegen, die vervolgens als contentblokken gebruikt kunnen worden. Om te voorkomen dat deze sets telkens opnieuw gedefinieerd moeten worden, kunnen ze als `Fieldset` worden voorbereid. Deze `Fieldsets` kunnen daarna worden toegevoegd aan een `replicator`-veld.
 
