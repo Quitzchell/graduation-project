@@ -1,4 +1,4 @@
-# SWOT: Statamic
+# **SWOT: Statamic**
 
 >_Voor meer informatie over het Statamic:_
 > * [Onderzoeksdocument over Statamic](./OnderzoekNaarStatamicCMS.md)
