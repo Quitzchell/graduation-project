@@ -104,7 +104,13 @@ Het tweede prototype dat ik heb ontwikkeld, was een CMS met **Filament**. Filame
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 > * [SWOT: Filament](../AnalyseAdvies/SwotFilamentCms.md)
 
+-- oud 
+
 Tijdens het onderzoek ben ik ook aan de slag gegaan met het ontwerpen en realiseren van het CMS gebaseerd op Filament. Voor het ontwerp van de CMS-functionaliteiten heb ik een iteratieve aanpak gehanteerd. Deze werkwijze stelde me in staat om tijdens elke ontwikkelstap te reflecteren op wat ik had gerealiseerd en wat de volgende logische stap zou zijn. Daarnaast ben ik begonnen met het documenteren van de werking van de verschillende systemen.
+
+-- nieuw 
+
+Tijdens het onderzoek ben ik begonnen met het ontwerpen en ontwikkelen van het CMS op basis van **Filament**. Voor het ontwerp van de CMS-functionaliteiten heb ik een iteratieve aanpak gehanteerd, zodat ik bij elke stap kon reflecteren op de voortgang en de volgende logische stap kon bepalen. Daarnaast ben ik gestart met het documenteren van de werking van de verschillende systemen.
 
 > * [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 > * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
