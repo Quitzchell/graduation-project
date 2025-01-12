@@ -22,8 +22,8 @@
 ## Opportunities (Kansen)
 
 * **Snellere implementatie voor simpele websites**: Dankzij de vele out-of-the-box CMS-functionaliteiten en de gebruiksvriendelijke interface kan het CMS de implementatietijd aanzienlijk verkorten voor websites die niet veel complexiteit vereisen.
-* **Gestandaardiseerde Componenten voor Whitelabel Websites**: Het is mogelijk om een boilerplate voor Statamic te ontwikkelen met gestandaardiseerde componenten. Dit zou de vormgevers van AllesOnline in staat stellen om zelfstandig whitelabel-websites te realiseren.
-* **Kostenefficiëntie op de Lange Termijn**: Hoewel de initiële kosten van de Statamic Pro licentie hoger zijn, biedt het Platform Subscription-model een aantrekkelijke oplossing voor grotere aantallen websites. De kosten per website dalen aanzienlijk wanneer meer websites worden toegevoegd, waardoor het op lange termijn kostenefficiënt is voor AllesOnline wanneer er veel Statamic-websites in productie gaan.
+* **Gestandaardiseerde componenten voor Whitelabel Websites**: Het is mogelijk om een boilerplate voor Statamic te ontwikkelen met gestandaardiseerde componenten. Dit zou de vormgevers van AllesOnline in staat stellen om zelfstandig whitelabel-websites te realiseren.
+* **Kostenefficiëntie op de lange termijn**: Hoewel de initiële kosten van de Statamic Pro licentie hoger zijn, biedt het Platform Subscription-model een aantrekkelijke oplossing voor grotere aantallen websites. De kosten per website dalen aanzienlijk wanneer meer websites worden toegevoegd, waardoor het op lange termijn kostenefficiënt is voor AllesOnline wanneer er veel Statamic-websites in productie gaan.
 
 ## Threats (Bedreigingen)
 
