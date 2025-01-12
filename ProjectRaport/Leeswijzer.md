@@ -130,24 +130,12 @@ Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, ma
 	
 # Onderzoek naar Statamic CMS
 
--- oud
-
-Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben ik begonnen met het opzetten van een prototype met Statamic. Dit is een commercieel CMS waarvoor een licentie vereist is bij commercieel gebruik. In tegenstelling tot Filament is Statamic specifiek ontworpen om als CMS te fungeren.
-
--- nieuw 
-
 Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben ik begonnen met het opzetten van een prototype in **Statamic**, een commercieel CMS waarvoor een licentie vereist is bij commercieel gebruik. In tegenstelling tot Filament is Statamic specifiek ontworpen als CMS.
 
 > * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 > * [SWOT: Statamic](../AnalyseAdvies/SwotStatamicCms.md)
 
--- oud 
-
-Ook tijdens dit onderzoek ben ik aan de slag gegaan met het ontwerpen en realiseren van het prototype met Statamic. Omdat Statamic in meerdere verschillende configuraties kan worden gebruikt, heb ik ook meerdere designs gerealiseerd. Deze designs zijn vrij strikt gebonden aan de specifieke configuraties, terwijl het ook mogelijk is om verschillende configuraties te combineren.
-
--- nieuw
-
-Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van het Statamic-prototype. Omdat Statamic in verschillende configuraties kan worden gebruikt, heb ik meerdere designs ontwikkeld. Deze zijn specifiek voor de genoemde configuraties, hoewel het ook mogelijk is om de verschillende configuraties te combineren.
+Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van het Statamic-prototype. Omdat Statamic in verschillende configuraties kan worden gebruikt, heb ik meerdere designs ontwikkeld. Deze zijn specifiek voor de hieronder genoemde configuraties, hoewel het ook mogelijk is om de verschillende configuraties te combineren.
 
 >* [Repository: Statamic met flat-file](https://github.com/Quitzchell/graduation-statamic-cms)
 >* [Repository: Statamic met eloquent-driver](https://github.com/Quitzchell/graduation-statamic-ed-cms)
