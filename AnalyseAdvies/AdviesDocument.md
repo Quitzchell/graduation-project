@@ -151,8 +151,8 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 <table width="100%">
 <thead>
     <tr>
-        <th width="35%">Activiteit</th>
-        <th width="25%">Duur</th>
+        <th width="32%">Activiteit</th>
+        <th width="28%">Duur</th>
         <th width="40%">Beschrijving</th>
     </tr>
 </thead>
@@ -193,8 +193,8 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 <table>
 <thead>
     <tr>
-        <th width="35%">Activiteit</th>
-        <th width="25%">Duur</th>
+        <th width="32%">Activiteit</th>
+        <th width="28%">Duur</th>
         <th width="40%">Beschrijving</th>
     </tr>
 </thead>
@@ -223,8 +223,8 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 <table>
 <thead>
     <tr>
-        <th width="35%">Activiteit</th>
-        <th width="25%">Duur</th>
+        <th width="32%">Activiteit</th>
+        <th width="28%">Duur</th>
         <th width="40%">Beschrijving</th>
     </tr>
 </thead>
@@ -297,8 +297,8 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 <table>
 <thead>
     <tr>
-        <th width="35%">Activiteit</th>
-        <th width="25%">Duur</th>
+        <th width="32%">Activiteit</th>
+        <th width="28%">Duur</th>
         <th width="40%">Beschrijving</th>
     </tr>
 </thead>
@@ -316,7 +316,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
     <tr>
         <td>Migratie van grote projecten</td>
         <td>-</td>
-        <td>Migreren van grotere en complexere projecten</td>
+        <td>Migreren van grote en complexe projecten</td>
     </tr>
     <tr>
         <td>Doorlopende cyclus</td>
