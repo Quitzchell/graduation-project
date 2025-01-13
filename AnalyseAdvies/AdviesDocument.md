@@ -150,11 +150,11 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
-| Introductie van systemen | 4 uur | Presentatie aan het team over Filament en Statamic. Basisfunctionaliteiten en voordelen worden uitgelegd. |
-| Training: Statamic / Filament | 3 - 7 uur | Developers volgen naar eigen inzicht relevante workshops op Laracast. |
-| Hackathon 1: Bouw een klein prototype CMS met Filament en Statamic | 1 dag (8 uur) | Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen. |
-| Training: Livewire / Alpine.js | 3 - 7 uur | Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen. |
-| Hackathon 2: Bouw een custom Filament-component met Livewire en Alpine.js | 1 dag (8 uur) | Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js. |
+| Introductie van systemen | Presentatie aan het team over Filament en Statamic. Basisfunctionaliteiten en voordelen worden uitgelegd. | 4 uur | 
+| Training: Statamic / Filament | Developers volgen naar eigen inzicht relevante workshops op Laracast. | 3 - 7 uur |
+| [Hackathon: Bouw van CMS met Filament en Statamic](../Bijlagen/HackatonBouwCMS.md) | Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen. |
+| Training: Livewire / Alpine.js | Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen. | 3 - 7 uur |
+| [Hackathon: Bouw een custom Filament component met Livewire en Alpine.js](../Bijlagen/HackatonBouwFilamentComponent.md) | 1 dag (8 uur) | Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js. | 1 dag (8 uur) |
 
 ## Fase 2: Prototype en evaluatie
 **Doel: Ontwikkelen van CMS-plugin voor Filament**
@@ -183,8 +183,8 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
 | MVP migratietool ontwikkelen | ca. 40 uur (5 dagen) | Ontwikkelen van een MVP voor een migratietool. |
-| Migratie van kleine projecten  | 40 uur (5 dagen per project)* | Migreren van kleine projecten (per project 5 dagen). |
-| Migratie van middelgrote projecten   | 120 uur (15 dagen per project)* | Migreren van middelgrote projecten (per project 15 dagen). |
+| Migratie van kleine projecten  | 40 uur (5 dagen per project)* | Migreren van kleine projecten. |
+| Migratie van middelgrote projecten   | 120 uur (15 dagen per project)* | Migreren van middelgrote projecten. |
 | Optimalisatie van migratietool | 40 uur (5 dagen)        | Feedback verwerken en de migratietool optimaliseren.   |
 
 \* Met een iteratief process, zal naar verwachting elke opvolgende migratie minder tijd in beslag nemen.
@@ -196,8 +196,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 | ---------- | ---- | ------------ |
 | Feedback verzamelen | – | Actief feedback verzamelen van klanten, gebruikers en het developmentteam over de ervaringen met de nieuwe systemen. |
 | Optimalisatie | – | Analyseren van feedback en continu optimaliseren van de systemen. Verbeter de performance, gebruikerservaring en schaalbaarheid. |
-| Migratie van grote projecten | – | Continue migratie van grotere en complexere projecten. |
-| Afronding migratieproces | – | Zorg ervoor dat alle projecten zijn gemigreerd, en dat de systemen geoptimaliseerd zijn voor lange termijn gebruik. |
+| Migratie van grote projecten | – | Migreren van grotere en complexere projecten. |
 | Doorlopende cyclus | – | Deze fase is een doorlopend proces van optimalisatie, migratie, en opschaling, waarbij steeds nieuwe projecten worden toegevoegd en bestaande systemen verder worden verfijnd. |
 
 
