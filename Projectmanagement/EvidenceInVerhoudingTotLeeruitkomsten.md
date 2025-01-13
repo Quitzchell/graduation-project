@@ -1,11 +1,11 @@
-
-
+# **Evidence in verhouding tot leeruitkomsten**
 
 ## Professional Duties
 ### Analyse
 * [Samenvatting initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
 * [Samenvatting gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
-* [Samenvatting gesprekken met developers voor adviesopstelling](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* [Samenvatting gesprekken met developers voor adviesopstelling](../AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* [Samenvatting gesprekken met vormgevers](../AnalyseAdvies/GesprekMetVormgevers.md)
 
 * [Requirements](../AnalyseAdvies/Requirements.md)
 * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
@@ -22,21 +22,21 @@
 
 ### Advice
 
-* [Advies CMS migratie](./AnalyseAdvies/AdviesCMSMigratie.md)
+* [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
 
-* [Adviesdocument](./AnalyseAdvies/AdviesDocument.md)
+* [Adviesdocument](../AnalyseAdvies/AdviesDocument.md)
 
-* [Hackathon: Bouw van CMS met Filament en Statamic](./Bijlagen/HackatonBouwCMS.md)
-* [Hackathon: Bouw een custom Filament component met Livewire en Alpine.js](./Bijlagen/HackatonBouwFilamentComponent.md)
+* [Hackathon: Bouw van CMS met Filament en Statamic](../Bijlagen/HackatonBouwCMS.md)
+* [Hackathon: Bouw een custom Filament component met Livewire en Alpine.js](../Bijlagen/HackatonBouwFilamentComponent.md)
 
 ### Design
 
-* [Opzet van het prototype](./DesignRealisatie/OpzetVanDePrototypes.md)
-* [Technische documentatie CMS prototypes](./DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
+* [Opzet van het prototype](../DesignRealisatie/OpzetVanDePrototypes.md)
+* [Technische documentatie CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
-* [ERD AllesOnline CMS (page model)](./Bijlagen/ErdAoCmsPageModel.md)
-* [UML Entiteiten diagram voor Prototype](./Bijlagen/UmlEntiteitenDiagramPrototype.md)
-* [UML Class diagram voor ContentManagement in Filament CMS](./Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+* [ERD AllesOnline CMS (page model)](../Bijlagen/ErdAoCmsPageModel.md)
+* [UML Entiteiten diagram voor Prototype](../Bijlagen/UmlEntiteitenDiagramPrototype.md)
+* [UML Class diagram voor ContentManagement in Filament CMS](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 
 ### Realise
 
@@ -54,11 +54,11 @@
 ### Management & Controll
 
 * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
-* [Video: Cypress tests met AllesOnline CMS](./Bijlagen/CypressTestsAOCms.md)
-* [Video: Cypress tests met Filament CMS](./Bijlagen/CypressTestsFilamentCms.md)
-* [Video: Cypress tests met Statamic CMS: Flat-file](./Bijlagen/CypressTestsStatamicFlatFileCms.md)
-* [Video: Cypress tests met Statamic CMS: Eloquent-driver](./Bijlagen/CypressTestsStatamicEloquentDriverCms.md)
-* [Video: Cypress tests met Statami CMS: Runway-addon](./Bijlagen/CypressTestsStatamicRunwayCms.md)
+* [Video: Cypress tests met AllesOnline CMS](../Bijlagen/CypressTestsAOCms.md)
+* [Video: Cypress tests met Filament CMS](../Bijlagen/CypressTestsFilamentCms.md)
+* [Video: Cypress tests met Statamic CMS: Flat-file](../Bijlagen/CypressTestsStatamicFlatFileCms.md)
+* [Video: Cypress tests met Statamic CMS: Eloquent-driver](../Bijlagen/CypressTestsStatamicEloquentDriverCms.md)
+* [Video: Cypress tests met Statami CMS: Runway-addon](../Bijlagen/CypressTestsStatamicRunwayCms.md)
 
 ## Situation-Orientation 
 
@@ -68,7 +68,7 @@
 * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 * [SWOT: CMS met Filament](../AnalyseAdvies/SwotFilamentCms.md)
 * [SWOT: Statamic CMS](../AnalyseAdvies/SwotStatamicCms.md)
-* [Technische documentatie CMS prototypes](./DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
+* [Technische documentatie CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
@@ -86,8 +86,8 @@
 * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 * [SWOT: CMS met Filament](../AnalyseAdvies/SwotFilamentCms.md)
 * [SWOT: Statamic CMS](../AnalyseAdvies/SwotStatamicCms.md)
-* [Advies CMS migratie](./AnalyseAdvies/AdviesCMSMigratie.md)
-* [Adviesdocument](./AnalyseAdvies/AdviesDocument.md)
+* [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
+* [Adviesdocument](../AnalyseAdvies/AdviesDocument.md)
 
 ## Investigative Problem Solving
 
@@ -98,9 +98,9 @@
 * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 * [SWOT: CMS met Filament](../AnalyseAdvies/SwotFilamentCms.md)
 * [SWOT: Statamic CMS](../AnalyseAdvies/SwotStatamicCms.md)
-* [Opzet van het prototype](./DesignRealisatie/OpzetVanDePrototypes.md)
-* [Technische documentatie CMS prototypes](./DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
-* [Advies CMS migratie](./AnalyseAdvies/AdviesCMSMigratie.md)
+* [Opzet van het prototype](../DesignRealisatie/OpzetVanDePrototypes.md)
+* [Technische documentatie CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
+* [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
 
 ## Personal Leadership
 
@@ -110,4 +110,5 @@
 
 * [Samenvatting initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
 * [Samenvatting gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
-* [Samenvatting gesprekken met developers voor adviesopstelling](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* [Samenvatting gesprekken met developers voor adviesopstelling](../AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* [Samenvatting gesprekken met vormgevers](../AnalyseAdvies/GesprekMetVormgevers.md)

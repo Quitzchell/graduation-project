@@ -174,9 +174,10 @@ Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van h
 
 # Laatste gesprekken over het project en opstellen van advies
 
-Na het afronden van mijn onderzoek naar de verschillende mogelijkheden voor het opzetten van een CMS met systemen van externe partijen, heb ik de resultaten besproken met twee developers van AllesOnline.
+Na het afronden van mijn onderzoek naar de verschillende mogelijkheden voor het opzetten van een CMS met systemen van externe partijen, heb ik de resultaten besproken met twee developers en twee vormgevers van AllesOnline.
 
 > * [Samenvatting gesprekken met developers voor adviesopstelling](../AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+> * * [Samenvatting gesprekken met vormgevers](../AnalyseAdvies/GesprekMetVormgevers.md)
 
 # Terugkoppeling migratie naar nieuw CMS
 

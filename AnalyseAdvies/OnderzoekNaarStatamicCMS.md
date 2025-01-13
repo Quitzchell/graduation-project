@@ -163,8 +163,8 @@ Wanneer er meerdere websites met `Statamic` in productie gebracht worden, is het
 
 Statamic is een veelzijdig en gebruiksvriendelijk CMS dat goed integreert met Laravel en nuttige out-of-the-box functionaliteiten biedt. Hoewel de flat-file en eloquent-driver configuratie interessant kan zijn voor kleinere websites, kunnen we ervan uitgaan dat het voor AllesOnline niet interessant is om grotere projecten met Statamic te realiseren. Daarnaast is het vanwege de verschillen in datastructuur ook niet verstandig om bestaande projecten met het AllesOnline CMs te migreren naar Statamic.
 
-Daarnaast is veel van de werking van Statamic moeilijk terug te vinden in de documentatie, dit kan de leercurve voor het werken met Statamic stijler maken dan nodig is. 
+Veel van de werking van Statamic is bovendien moeilijk terug te vinden in de documentatie, waardoor de leercurve voor het werken met Statamic steiler kan zijn dan noodzakelijk.
 
-De kosten voor het gebruik van Statamic zijn in eerste instatie ook relatief hoog. Het wordt pas interessant wanneer er meerdere websites in productie zijn met Statamic. 
+Waar Statamic wel erg geschikt zou kunnen zijn, is voor simpele marketing- en whitelabel-websites. Omdat Statamic in de flat-file en eloquent-driver out-of-the-box met de Statamic API gegevens beschikbaar kan stellen, is het mogelijk om met weinig werk een simpel CMS klaar te zetten waarin content beheerd kan worden. 
 
-Waar Statamic wel erg geschikt zou kunnen zijn, is voor simpele marketing- en whitelabel-websites. Omdat Statamic in de flat-file en eloquent-driver out-of-the-box met de Statamic API gegevens beschikbaar kunnen stellen, is mogelijk om met weinig werk een simpel CMS klaar te zetten waarin content beheerd kan worden. 
+Omdat de licentiekosten voor een Statamic-website per in productie genomen website lager worden, is het verstandig om een tijdlijn op te stellen waarmee inzichtelijk wordt gemaakt wanneer de kosten per website voor AllesOnline rendabel zijn.

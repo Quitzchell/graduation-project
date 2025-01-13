@@ -118,7 +118,7 @@ Statamic zou daarentegen een geschikte keuze kunnen zijn voor klanten die slecht
 
 Daarnaast zou het mogelijk zijn om een boilerplate voor Statamic te ontwikkelen met gestandaardiseerde componenten. Dit zou de vormgevers bij AllesOnline in staat stellen om zelfstandig whitelabel-websites te creëren via Statamic, terwijl de developers directe technische ondersteuning kunnen bieden wanneer dat nodig is.
 
-Het enige nadeel van Statamic, is dat de kosten voor een licentie in eerste instantie hoger zijn. Echter, naarmate meer websites gebruikmaken van Statamic, zullen de kosten per website dalen door de kwantumkorting binnen het abonnementsmodel van de **Platform Subscription**. In dit model betaal je voor de eerste 25 websites een vast bedrag van $175. Voor de volgende 75 websites betaal je $7 per website per maand, en voor de volgende 400 websites $6 per website per maand. Dit betekent dat de prijs per website daalt naarmate je meer websites toevoegt. Als er bijvoorbeeld 25 websites met Statamic actief zijn, zullen de kosten voor een licentie niet meer dan $7 per website bedragen.
+Een uitdaging van Statamic is dat de licentiekosten per website in eerste instantie hoger zijn. Echter, naarmate meer websites gebruikmaken van Statamic, zullen de kosten per website dalen door de kwantumkorting binnen het abonnementsmodel van de **Platform Subscription**. In dit model betaal je voor de eerste 25 websites een vast bedrag van $175. Voor de volgende 75 websites betaal je $7 per website per maand, en voor de volgende 400 websites $6 per website per maand. Dit betekent dat de prijs per website daalt naarmate je meer websites toevoegt. Als er bijvoorbeeld 25 websites met Statamic actief zijn, zullen de kosten voor een licentie niet meer dan $7 per website bedragen.
 
 ## Combineren
 
@@ -146,6 +146,12 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 Het wordt aanbevolen om de transitie van het AllesOnline CMS naar Filament en Statamic gefaseerd aan te pakken. In de eerste fase zal er meer tijd nodig zijn voor het aanleren en implementeren van de nieuwe systemen. Naarmate de transitie vordert, kunnen de activiteiten steeds meer worden geïntegreerd in de reguliere werkzaamheden. De benodigde tijd voor de transitie zal afnemen naarmate het team meer vertrouwd raakt met de nieuwe systemen.
 
 Afhankelijk van de mate waarin de activiteiten zich integreren met de dagelijkse taken van het development-team, wordt geschat dat maximaal 10 uur per week aan de transitie besteed zal moeten worden.
+
+
+----
+
+
+
 
 ## **Fase 1: Voorbereiding, kennisopbouw en validatie (3 maanden)**
 **Doel: Developers snel vertrouwd maken met Filament en Statamic en een werkend prototype creëren.**
@@ -232,9 +238,12 @@ Afhankelijk van de mate waarin de activiteiten zich integreren met de dagelijkse
   * AllesOnline volledig over op Filament en Statamic.
   * Geoptimaliseerde tools en systemen voor toekomstig gebruik.
 
+
+------
+
 # Conclusie
 
-In dit adviesdocument zijn, op basis van het uitgevoerde onderzoek, de mogelijkheden voor AllesOnline om van het interne CMS over te stappen naar **Filament** en **Statamic** geformuleerd. Het onderzoek onderbouwd dat het huidige AllesOnline CMS, hoewel het enkele voordelen biedt, beperkingen vertoont op het gebied van veroudering, onderhoud en uitbreidbaarheid. Het is daarom niet verantwoord om de capaciteit van het developmentteam te benutten voor het onderhouden en doorontwikkelen van dit systeem.
+In dit adviesdocument worden, op basis van het uitgevoerde onderzoek, de mogelijkheden voor AllesOnline besproken om over te stappen van het huidige interne CMS naar **Filament** en **Statamic**. Het onderzoek heeft aangetoond dat het AllesOnline CMS weliswaar enkele voordelen biedt, maar verouderd is en beperkingen vertoont in onderhoud en uitbreidbaarheid. Het verbeteren van dit systeem door middel van bijvoorbeeld de SOLID-principes is een langdurig proces dat aanzienlijke middelen vereist. Daarom is het niet geadviseerd om een doorontwikkeling van dit CMS te doen.
 
 Filament is een uitstekende keuze voor projecten die complexe, op maat gemaakte systemen vereisen, zoals webapplicaties met een uitgebreid assortiment, grote hoeveelheden data of complexe klantenservicesystemen. Dit mede omdat de componenten van Filament eenvoudig kunnen worden aangepast via PHP. Ook de sterke integratie met Laravel is een voordeel voor het developmentteam van AllesOnline.
 
