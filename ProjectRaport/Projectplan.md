@@ -1,5 +1,5 @@
 ## Revitalising Content Management
-***Versie 3***
+***Versie 3, 12-06-2024***
 
 # Inhoudsopgave
 * [AllesOnline](#allesonline)
