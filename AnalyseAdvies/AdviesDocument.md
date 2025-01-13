@@ -148,13 +148,51 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 ## Fase 1: Voorbereiding, kennisopbouw en validatie
 **Doel: Developers vertrouwd maken met Filament en Statamic**
 
+<table>
+  <thead>
+    <tr>
+      <th>Activiteit</th>
+      <th>Duur</th>
+      <th>Beschrijving</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Introductie van systemen</td>
+      <td>4 uur</td>
+      <td>Presentatie aan het team over Filament en Statamic. Basisfunctionaliteiten en voordelen worden uitgelegd.</td>
+    </tr>
+    <tr>
+      <td>Training: Statamic / Filament</td>
+      <td>3 - 7 uur</td>
+      <td>Developers volgen naar eigen inzicht relevante workshops op Laracast.</td>
+    </tr>
+    <tr>
+      <td>Hackathon 1: Bouw een klein prototype CMS met Filament en Statamic</td>
+      <td>1 dag (8 uur)</td>
+      <td>Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen.</td>
+    </tr>
+    <tr>
+      <td>Training: Livewire / Alpine.js</td>
+      <td>3 - 7 uur</td>
+      <td>Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen.</td>
+    </tr>
+    <tr>
+      <td>Hackathon 2: Bouw een custom Filament-component met Livewire en Alpine.js</td>
+      <td>1 dag (8 uur)</td>
+      <td>Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js.</td>
+    </tr>
+  </tbody>
+</table>
+
+
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
 | Introductie van systemen | 4 uur | Presentatie aan het team over Filament en Statamic. Basisfunctionaliteiten en voordelen worden uitgelegd. |
 | Training: Statamic / Filament | 3 - 7 uur | Developers volgen naar eigen inzicht relevante workshops op Laracast. |
 | Hackathon 1: Bouw een klein prototype CMS met Filament en Statamic | 1 dag (8 uur) | Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen. |
 | Training: Livewire / Alpine.js | 3 - 7 uur | Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen. |
-| Hackathon 2: Bouw een custom Filament-component met Livewire en Alpine.js | 1 dag (8 uur) | Ervaring met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js. |
+| Hackathon 2: Bouw een custom Filament-component met Livewire en Alpine.js | 1 dag (8 uur) | Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js. |
 
 ## Fase 2: Prototype en evaluatie
 **Doel: Ontwikkelen van CMS-plugin voor Filament**
@@ -163,7 +201,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 | --- | --- | --- |
 | Prototype CMS-plugin | ca. 40 uur (5 dagen) | Ontwikkeling van een generieke Filament-plugin voor CMS-functionaliteit. Doel is om het prototype modulair en SOLID te realiseren. |
 | Valideer prototype | 8 uur (1 dagen) | Test het prototype binnen een bestaand project met een _decoupled architecture_. Dit zorgt voor inzicht in de werking van de plugin en mogelijke verbeterpunten. |
-| Documenteer plugin | 16 uur (2 dagen) | Het opstellen van documentatie voor het team, zodat iedereen weet hoe het prototype te gebruiken en uit te breiden. |
+| Documenteer plugin | 16 uur (2 dagen) | Het opstellen van documentatie voor het team, zodat iedereen weet hoe het prototype te gebruiken en uit te breiden is. |
 
 ## Fase 3a: Ontwikkeling van greenfield-projecten
 **Doel: Realisatie van projecten met nieuwe CMS-systemen.**
@@ -183,8 +221,8 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
 | MVP migratietool ontwikkelen | ca. 40 uur (5 dagen) | Ontwikkel een MVP voor een migratietool die het mogelijk maakt om bestaande projecten van AllesOnline CMS naar Filament te migreren. |
-| Migratie van Kleine Projecten  | 40 uur (5 dagen per project) | Migreren van kleinere projecten (per project 5 dagen). |
-| Migratie van Grote Projecten   | 120 uur (15 dagen per project) | Migreren van complexere projecten (per project 15 dagen). |
+| Migratie van kleine projecten  | 40 uur (5 dagen per project) | Migreren van kleinere projecten (per project 5 dagen). |
+| Migratie van grote projecten   | 120 uur (15 dagen per project) | Migreren van complexere projecten (per project 15 dagen). |
 | Optimalisatie van Migratietool | 40 uur (5 dagen)        | Feedback verwerken en de migratietool optimaliseren.   |
 
 # Fase ∞: Doorlopende optimalisatie, migratie en opschaling
