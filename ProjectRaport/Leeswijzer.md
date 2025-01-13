@@ -94,7 +94,7 @@ Het tweede prototype dat ik heb ontwikkeld, was een CMS met **Filament**. Filame
 
 Tijdens het onderzoek ben ik begonnen met het ontwerpen en ontwikkelen van het CMS op basis van **Filament**. Voor het ontwerp van de CMS-functionaliteiten heb ik een iteratieve aanpak gehanteerd, zodat ik bij elke stap kon reflecteren op de voortgang en de volgende logische stap kon bepalen. Daarnaast ben ik gestart met het documenteren van de werking van de verschillende systemen.
 
-> * [Design voor CMS functionaliteit in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+> * [UML Class diagram voor ContentManagement in Filament CMS](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 > * [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
 > * [Technische documentatie van CMS Prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
@@ -124,10 +124,10 @@ Na het realiseren van zowel een AllesOnline- als een Filament CMS-prototype, ben
 Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, maar enkel een Proof of Concept (PoC) voor een migratietool te ontwikkelen. Het doel van de PoC is om aan te tonen dat de kern van het AllesOnline CMS, namelijk de XML-schema's, omgezet kunnen worden naar de schema's die in Filament worden gebruikt. Voor de ontwikkeling van de tool heb ik componenten van het **Symfony**-framework gebruikt.
 
 > _Verantwoording voor de keuze om Symfony voor de migratietool te gebruiken lees je hier_:
-> * [Onderzoek voor Tool CMS Migratie](../AnalyseAdvies/OnderzoekVoorCmsMigratie.md)
+> * [Onderzoek voor CMS migratie](../AnalyseAdvies/OnderzoekVoorCmsMigratie.md)
 
 > Proof of Concept: waarin een XML-block omgezet kan worden naar een PHP-class die gebruikt kan worden door het Filament CMS. 
-> * [Repository PoC: Transcription (migratietool)](https://github.com/Quitzchell/poc-transcription)
+> * [Repository: PoC Transcription](https://github.com/Quitzchell/poc-transcription)
 
 ### Conclusies onderzoek migratie AllesOnline CMS naar Filament CMS
 
@@ -147,9 +147,11 @@ Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van h
 >* [Repository: Statamic met flat-file](https://github.com/Quitzchell/graduation-statamic-cms)
 >* [Repository: Statamic met eloquent-driver](https://github.com/Quitzchell/graduation-statamic-ed-cms)
 >* [Repository: Statamic met Runway](https://github.com/Quitzchell/graduation-statamic-runway-cms)
+
 >* Design voor Statamic CMS met flat-file //todo
 >* Design voor Statamic met eloquent-driver //todo
 >* Design voor Statamic met Runway-addon //todo
+
 >* [Technische documentatie van CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
 ### Conclusies onderzoek naar Statamic CMS
