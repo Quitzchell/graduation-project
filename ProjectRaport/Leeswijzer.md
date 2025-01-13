@@ -150,9 +150,8 @@ Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van h
 >* [Repository: Statamic met eloquent-driver](https://github.com/Quitzchell/graduation-statamic-ed-cms)
 >* [Repository: Statamic met Runway](https://github.com/Quitzchell/graduation-statamic-runway-cms)
 
->* Diagram Statamic CMS met flat-file //todo
->* Diagram Statamic met eloquent-driver //todo
->* Diagram Statamic met Runway-addon //todo
+>* [Diagram Statamic CMS flat-file / eloquent-driver](../Bijlagen/UmlDiagramStatamicFlatFileEloquentDriver.md)
+>* [Diagram Statamic Runway-addon](../Bijlagen/UmlDiagramStatamicRunway.md)
 
 >* [Technische documentatie van CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
