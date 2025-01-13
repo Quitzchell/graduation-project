@@ -1,4 +1,4 @@
-# Voorbeeld CMS schema voor een AllesOnline object
+# **Voorbeeld CMS schema voor een AllesOnline object**
 
 ```xml
 <model>

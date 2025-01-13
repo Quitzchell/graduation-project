@@ -1,4 +1,4 @@
-# Voorbeeld flat-file in Statamic
+# **Voorbeeld flat-file in Statamic**
 
 ```md
 ---

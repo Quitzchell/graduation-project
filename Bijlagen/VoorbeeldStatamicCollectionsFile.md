@@ -1,4 +1,4 @@
-# Voorbeeld Collections file in Statamic
+# **Voorbeeld Collections file in Statamic**
 
 ```yaml
 title: Pages

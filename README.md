@@ -66,7 +66,7 @@
 * #### [Voorbeeld van schema in AllesOnline CMS](./Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
 * #### [Voorbeeld van documentatie AllesOnline CMS](./Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
 * #### [Voorbeeld Statamic eloquent-driver configuratiebestand](./Bijlagen/eloquent-driver-config.md)
-* #### [Voorbeeld statamic runway configuratiebestand](./Bijlagen/RunwayConfigFile.md)
+* #### [Voorbeeld Statamic runway configuratiebestand](./Bijlagen/RunwayConfigFile.md)
 
 * #### [Hackathon: Bouw van CMS met Filament en Statamic](./Bijlagen/HackatonBouwCMS.md)
 * #### [Hackathon: Bouw een custom Filament component met Livewire en Alpine.js](./Bijlagen/HackatonBouwFilamentComponent.md)
