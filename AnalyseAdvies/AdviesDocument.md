@@ -208,12 +208,12 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
-| Greenfield project (Filament) | ca. 40 uur (5 dagen)* | Realiseer een met Filament CMS, inclusief data-opslag, contentbeheer. |
-| Greenfield project (Statamic) | ca. 24 uur (3 dagen)* | Realiseer een met Statamic CMS, inclusief data-opslag, contentbeheer. |
+| Greenfield project (Filament) | ca. 40 uur (5 dagen)* | Realiseer een project met Filament CMS, inclusief data-opslag en contentbeheer. |
+| Greenfield project (Statamic) | ca. 24 uur (3 dagen)* | Realiseer een project met Statamic CMS, inclusief data-opslag en contentbeheer. |
 | Feedback verzamelen | 8 uur (1 dag) |  Verzamel feedback van het team en stakeholders over de gebruikerservaring. |
 | Optimaliseer systemen | 16 uur (2 dagen) | Gebruik de feedback om verbeteringen door te voeren. |
 
- \* Uren boven op reguliere uren voor realisatie van project
+ \* Uren boven op reguliere uren voor realisatie van project.
 
 ## Fase 3b: Migratie van bestaande projecten
 **Doel: Gecontroleerde migratie van bestaande projecten naar Filament.**
@@ -221,9 +221,11 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
 | MVP migratietool ontwikkelen | ca. 40 uur (5 dagen) | Ontwikkel een MVP voor een migratietool die het mogelijk maakt om bestaande projecten van AllesOnline CMS naar Filament te migreren. |
-| Migratie van kleine projecten  | 40 uur (5 dagen per project) | Migreren van kleinere projecten (per project 5 dagen). |
-| Migratie van grote projecten   | 120 uur (15 dagen per project) | Migreren van complexere projecten (per project 15 dagen). |
-| Optimalisatie van Migratietool | 40 uur (5 dagen)        | Feedback verwerken en de migratietool optimaliseren.   |
+| Migratie van kleine projecten  | 40 uur (5 dagen per project)* | Migreren van kleine projecten (per project 5 dagen). |
+| Migratie van middelgrote projecten   | 120 uur (15 dagen per project)* | Migreren van middelgrote projecten (per project 15 dagen). |
+| Optimalisatie van migratietool | 40 uur (5 dagen)        | Feedback verwerken en de migratietool optimaliseren.   |
+
+\* Met een iteratief process, zal naar verwachting elke opvolgende migratie minder tijd in beslag nemen.
 
 # Fase ∞: Doorlopende optimalisatie, migratie en opschaling
 
@@ -234,7 +236,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 | Feedback verzamelen | – | Actief feedback verzamelen van klanten, gebruikers en het developmentteam over de ervaringen met de nieuwe systemen. |
 | Optimalisatie | – | Analyseer de feedback en werk continu aan de optimalisatie van de systemen. Verbeter de performance, gebruikerservaring en schaalbaarheid. |
 | Verbeteren en opschalen | – | Optimaliseer ontwikkelde tools en plugins en schaal ze op voor bredere adoptie. |
-| Migratie van grotere projecten | – | Continue migratie van grotere en complexere projecten naar Filament en Statamic. |
+| Migratie van grote projecten | – | Continue migratie van grotere en complexere projecten naar Filament en Statamic. |
 | Afronding migratieproces | – | Zorg ervoor dat alle projecten zijn gemigreerd, en dat de systemen geoptimaliseerd zijn voor lange termijn gebruik. |
 | Doorlopende cyclus | – | Deze fase is een doorlopend proces van optimalisatie, migratie, en opschaling, waarbij steeds nieuwe projecten worden toegevoegd en bestaande systemen verder worden verfijnd. |
 
