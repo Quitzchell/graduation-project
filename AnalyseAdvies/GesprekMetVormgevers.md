@@ -14,7 +14,7 @@ Over het algemeen is het vullen van een CMS unaniem niet de favoriete bezigheid 
 
 # Feedback Filament en Statamic CMS
 
-De vormgevers geven feedback op de gerealiseerde CMS’en, waarbij ze aangeven dat de verschillende oplossingen er goed uitzien. In eerste instantie lijkt er niet veel veranderd te zijn, behalve voor de menu-manager in zowel de Filament- als Statamic flat-file/eloquent-driver configuratie. Ze verwachten zich te kunnen aanpassen aan de nieuwe omgeving, en waar van toepassing, aan de nieuwe `menu-manager`.
+De vormgevers geven feedback op de gerealiseerde CMS’en, waarbij ze aangeven dat de verschillende oplossingen er goed uitzien. In eerste instantie lijkt er niet veel veranderd te zijn, behalve voor de menu-manager in zowel de Filament- als Statamic Runway configuratie. Ze verwachten zich te kunnen aanpassen aan de nieuwe omgeving, en waar van toepassing, aan de nieuwe `menu-manager`.
 
 Wat betreft Statamic zijn de vormgevers enthousiast over de **focal point**-functionaliteit, waarmee een focuspunt voor afbeeldingen kan worden ingesteld, zodat deze met meer precisie gerenderd kan worden in een fluïde website.
 
