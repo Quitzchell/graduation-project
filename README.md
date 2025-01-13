@@ -41,7 +41,7 @@
 * ### [Opzet van het prototype](./DesignRealisatie/OpzetVanDePrototypes.md)
 * ### [Technische documentatie CMS prototypes](./DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
-* ### [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
+* ### [Repository: Frontend prototype](https://github.com/Quitzchell/graduation-frontend)
 * ### [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 * ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
 * ### [Repository: Backend Statamic Flat File](https://github.com/Quitzchell/graduation-statamic-cms)
