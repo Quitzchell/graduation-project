@@ -56,13 +56,13 @@
 
 * #### [ERD AllesOnline CMS (page model)](./Bijlagen/ErdAoCmsPageModel.md)
 * #### [UML Entiteiten diagram voor prototype](./Bijlagen/UmlEntiteitenDiagramPrototype.md)
-* #### [UML Class diagram voor ContentManagement in Filament CMS](./Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+* #### [UML Class diagram voor content management in Filament CMS](./Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 
 * #### [Video: Cypress tests met AllesOnline CMS](./Bijlagen/CypressTestsAOCms.md)
 * #### [Video: Cypress tests met Filament CMS](./Bijlagen/CypressTestsFilamentCms.md)
 * #### [Video: Cypress tests met Statamic CMS: Flat-file](./Bijlagen/CypressTestsStatamicFlatFileCms.md)
 * #### [Video: Cypress tests met Statamic CMS: Eloquent-driver](./Bijlagen/CypressTestsStatamicEloquentDriverCms.md)
-* #### [Video: Cypress tests met Statami CMS: Runway-addon](./Bijlagen/CypressTestsStatamicRunwayCms.md)
+* #### [Video: Cypress tests met Statamic CMS: Runway-addon](./Bijlagen/CypressTestsStatamicRunwayCms.md)
 
 * #### [Voorbeeld van schema in AllesOnline CMS](./Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
 * #### [Voorbeeld van documentatie AllesOnline CMS](./Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
