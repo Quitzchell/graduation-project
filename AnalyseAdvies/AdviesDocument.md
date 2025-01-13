@@ -162,18 +162,18 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
 | Prototype CMS-plugin | ca. 40 uur (5 dagen) | Ontwikkeling van een generieke Filament-plugin voor CMS-functionaliteit. Doel is om het prototype modulair en SOLID te realiseren. |
-| Valideer prototype | 8 uur (1 dagen) | Test het prototype binnen een bestaand project met een _decoupled architecture_. Dit zorgt voor inzicht in de werking van de plugin en mogelijke verbeterpunten. |
-| Documenteer plugin | 16 uur (2 dagen) | Het opstellen van documentatie voor het team, zodat iedereen weet hoe het prototype te gebruiken en uit te breiden is. |
+| Valideer prototype | 8 uur (1 dagen) | Testen van prototype binnen een bestaand project met een _decoupled architecture_. |
+| Documenteer plugin | 16 uur (2 dagen) | Opstellen van documentatie voor het team. |
 
 ## Fase 3a: Ontwikkeling van greenfield-projecten
 **Doel: Realisatie van projecten met nieuwe CMS-systemen.**
 
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
-| Greenfield project (Filament) | ca. 40 uur (5 dagen)* | Realiseer een project met Filament CMS, inclusief data-opslag en contentbeheer. |
-| Greenfield project (Statamic) | ca. 24 uur (3 dagen)* | Realiseer een project met Statamic CMS, inclusief data-opslag en contentbeheer. |
-| Feedback verzamelen | 8 uur (1 dag) |  Verzamel feedback van het team en stakeholders over de gebruikerservaring. |
-| Optimaliseer systemen | 16 uur (2 dagen) | Gebruik de feedback om verbeteringen door te voeren. |
+| Greenfield project (Filament) | ca. 40 uur (5 dagen)* | Project met Filament CMS realiseren, inclusief data-opslag en contentbeheer. |
+| Greenfield project (Statamic) | ca. 24 uur (3 dagen)* | Project met Statamic CMS realiseren, inclusief data-opslag en contentbeheer. |
+| Feedback verzamelen | 8 uur (1 dag) | Feedback verzamelen van het team en stakeholders over de gebruikerservaring. |
+| Optimaliseer systemen | 16 uur (2 dagen) | Feedback gebruiken om verbeteringen door te voeren. |
 
  \* Uren boven op reguliere uren voor realisatie van project.
 
@@ -182,22 +182,21 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
-| MVP migratietool ontwikkelen | ca. 40 uur (5 dagen) | Ontwikkel een MVP voor een migratietool die het mogelijk maakt om bestaande projecten van AllesOnline CMS naar Filament te migreren. |
+| MVP migratietool ontwikkelen | ca. 40 uur (5 dagen) | Ontwikkelen van een MVP voor een migratietool. |
 | Migratie van kleine projecten  | 40 uur (5 dagen per project)* | Migreren van kleine projecten (per project 5 dagen). |
 | Migratie van middelgrote projecten   | 120 uur (15 dagen per project)* | Migreren van middelgrote projecten (per project 15 dagen). |
 | Optimalisatie van migratietool | 40 uur (5 dagen)        | Feedback verwerken en de migratietool optimaliseren.   |
 
 \* Met een iteratief process, zal naar verwachting elke opvolgende migratie minder tijd in beslag nemen.
 
-# Fase ∞: Doorlopende optimalisatie, migratie en opschaling
-
+## Fase ∞: Doorlopende optimalisatie, migratie en opschaling
 **Doel: Continue verbetering, migratie van projecten en opschaling voor bredere adoptie.**
 
 | Activiteit | Duur | Beschrijving |
 | ---------- | ---- | ------------ |
 | Feedback verzamelen | – | Actief feedback verzamelen van klanten, gebruikers en het developmentteam over de ervaringen met de nieuwe systemen. |
-| Optimalisatie | – | Analyseer de feedback en werk continu aan de optimalisatie van de systemen. Verbeter de performance, gebruikerservaring en schaalbaarheid. |
-| Migratie van grote projecten | – | Continue migratie van grotere en complexere projecten naar Filament en Statamic. |
+| Optimalisatie | – | Analyseren van feedback en continu optimaliseren van de systemen. Verbeter de performance, gebruikerservaring en schaalbaarheid. |
+| Migratie van grote projecten | – | Continue migratie van grotere en complexere projecten. |
 | Afronding migratieproces | – | Zorg ervoor dat alle projecten zijn gemigreerd, en dat de systemen geoptimaliseerd zijn voor lange termijn gebruik. |
 | Doorlopende cyclus | – | Deze fase is een doorlopend proces van optimalisatie, migratie, en opschaling, waarbij steeds nieuwe projecten worden toegevoegd en bestaande systemen verder worden verfijnd. |
 
