@@ -2,6 +2,8 @@
 
 > * [Evidence in verhouding tot leeruitkomsten](../Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
 
+> * [Omschrijving opdracht](../ProjectRaport/Opdracht.md)
+
 # Inleiding
 
 Dit verslag beschrijft het verloop van het project _'Revitalising Content Management'_, waarin wordt onderzocht hoe AllesOnline, een full-service bureau voor online en offline communicatie, zijn zelfontwikkelde Content Management Systeem (CMS) kan moderniseren. Het CMS, dat sinds 2015 operationeel is en nog altijd in gebruik is, vormt de basis van de webapplicaties die het bedrijf ontwikkelt. Door een gebrek aan aandacht en onderhoud is het systeem verouderd geraakt en onderhoudsintensief geworden.
