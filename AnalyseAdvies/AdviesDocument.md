@@ -143,27 +143,30 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 
 # Roadmap
 
+Het wordt aanbevolen om de transitie van het AllesOnline CMS naar Filament en Statamic gefaseerd aan te pakken. In de eerste fase zal er meer tijd nodig zijn voor het aanleren en implementeren van de nieuwe systemen. Naarmate de transitie vordert, kunnen de activiteiten steeds meer worden geïntegreerd in de reguliere werkzaamheden. De benodigde tijd voor de transitie zal afnemen naarmate het team meer vertrouwd raakt met de nieuwe systemen.
+
+Afhankelijk van de mate waarin de activiteiten zich integreren met de dagelijkse taken van het development-team, wordt geschat dat maximaal 10 uur per week aan de transitie besteed zal moeten worden.
+
 ## **Fase 1: Voorbereiding, kennisopbouw en validatie (3 maanden)**
 **Doel: Developers snel vertrouwd maken met Filament en Statamic en een werkend prototype creëren.**
 
 ### **Maand 1: Introductie en versneld leren**
 * **Week 1-2: Introductie van de systemen**
     * Presentatie aan het team: Waarom Filament en Statamic?
-    * Kijken van **Laracast-workshops** over Filament en Statamic.
+    * verwijzen naar **Laracast-workshops** over Filament en Statamic.
     * Bespreken van eerste indrukken door het development-team.
   
 * **Week 3-4: Hands-on kennismaking**
     * Organiseer een hackathon: 
         * [Bouw een klein prototype CMS met Filament en Statamic](../Bijlagen/HackatonBouwCMS.md)
-    * **Output**: Eerste hands-on ervaring en input voor de volgende stappen.
 
 ### **Maand 2-3: Prototype en evaluatie**
 * **Week 1-2: Training Livewire en Alpine.js**
-    * Toewijzing van **Laracast-workshops** voor Livewire en Alpine.js.
+    * verwijzen naar **Laracast-workshops** voor Livewire en Alpine.js.
     * Organiseer een hackathon:
-        *  [Bouw een custom Filament component met Livewire en Alpine.js.](../Bijlagen/HackatonBouwFilamentComponent.md)
+        *  [Bouw een custom Filament component met Livewire en Alpine.js](../Bijlagen/HackatonBouwFilamentComponent.md)
 
-* **Week 3-4: Ontwikkel CMS-plugin voor Filament**
+* **Week 3-6: Ontwikkel CMS-plugin voor Filament**
     * Realisatie van een eenvoudige generieke **Filament-plugin** met basisfunctionaliteiten voor:
         * Templates
         * Contentblocks
@@ -172,7 +175,7 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
     * Focus op modulaire opzet.
     * Stel **documentatie** op voor gebruik binnen het team.
 
-* **Week 5-6: Validatie van plugin**
+* **Week 7-8: Validatie van plugin**
   * Koppel het CMS aan een bestaand project met een *decoupled architectuur*.
   * Valideer dat een deel van de templates, blokken en menustructuur goed gerenderd kan worden met de Filament-plugin.
 
@@ -180,7 +183,7 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 * Gevalideerde CMS-plugin voor Filament.
 * Documentatie voor het gebruik van de Filament-plugin.
 
-## **Fase 2: Ontwikkeling van tools en eerste projecten (5-6 maanden)**
+## **Fase 2: Ontwikkeling van tools en eerste projecten (6 maanden)**
 **Doel: Start met concrete projecten en verder ontwikkelen van systemen.**
 
 ### **Maand 4-6: Start ontwikkeling greenfield project**
@@ -188,7 +191,7 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 * Begin met een **agile aanpak**: Start met het ontwikkelen van de CMS-functionaliteiten voor het eerste greenfield project.
 * Werk met een **minimal viable product**: Begin met de basisfunctionaliteit van het CMS en breid deze iteratief uit.
 
-### **Maand 6: Eerste project live en optimalisatie**
+### **Maand 7-9: Eerste project live en optimalisatie**
 * **Launch het eerste Filament- en/of Statamic-project**.
 * Verzamel feedback van klanten en gebruikers.
 * Begin met de **optimalisatie** van de systemen en tools op basis van deze feedback.
@@ -197,7 +200,7 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 * Eerste projecten live en werkend met Filament en Statamic.
 * Feedbackloops geïmplementeerd voor doorontwikkeling.
 
-## **Fase 3: Migratie bestaande projecten (4-6 maanden)**
+## **Fase 3: Migratie bestaande projecten (6 maanden)**
 **Doel: Gecontroleerde migratie van bestaande projecten naar Filament.**
 
 ### **Maand 7-9: Start migratietool en kleine migraties**
@@ -214,13 +217,12 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 * Kleine migraties afgerond.
 * Grotere projecten in migratieproces.
 
-## **Fase 4: Opschaling en optimalisatie (2-3 maanden)**
+## **Fase 4: Opschaling en optimalisatie (6 maanden)**
 **Doel: Brede adoptie en verdere verfijning van systemen en processen.**
 
 ### **Maand 13-15: Verbeteren en opschalen**
 * Optimaliseer **ontwikkelde tools en plugin** voor meer efficiëntie.
 * **Brede adoptie** van de nieuwe systemen voor andere projecten binnen het bedrijf.
-
 
 ### **Maand 16-18: Afronden en verdere verfijning**
 * Zorg ervoor dat **alle bestaande projecten** succesvol zijn overgezet naar Filament. 
@@ -229,7 +231,6 @@ Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toek
 **Deliverables**:
   * AllesOnline volledig over op Filament en Statamic.
   * Geoptimaliseerde tools en systemen voor toekomstig gebruik.
-
 
 # Conclusie
 
