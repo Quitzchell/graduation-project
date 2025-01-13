@@ -15,8 +15,8 @@ Laat developers kennismaken met beide systemen via een hackathon. Geef hen de op
 * Test de API op naleving van de voorgedefinieerde structuur en functionaliteit.
 
 ## Beoordelingscriteria
-De projecten worden beoordeeld op basis van:
 
+**De projecten worden beoordeeld op basis van**:
 * Correctheid: In hoeverre volgt de API de gegeven datastructuur?
 * Efficiëntie: Is de oplossing performant en schaalbaar?
 * Creativiteit: Zijn er innovatieve features of benaderingen toegepast?

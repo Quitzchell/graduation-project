@@ -30,8 +30,7 @@ Laat developers tijdens een hackathon kennismaken met het gebruik van Livewire e
 
 ## Beoordelingscriteria
 
-De projecten worden beoordeeld op basis van:
-
+**De projecten worden beoordeeld op basis van**:
 * Functionaliteit: Voldoet het component aan de eisen en werkt het foutloos binnen Filament?
 * Interactiviteit: Hoe goed benutten Livewire en Alpine.js de server- en client-side mogelijkheden?
 * Codekwaliteit: Is de code goed gestructureerd, onderhoudbaar en volgens best practices?
