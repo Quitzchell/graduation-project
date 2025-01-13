@@ -1,4 +1,4 @@
-# Voorbeeld Documentatie voor het huidige AO CMS
+# **Voorbeeld Documentatie voor het huidige AO CMS**
 
 ```markdown
 ### type="tags"
