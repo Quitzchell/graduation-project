@@ -10,7 +10,7 @@ Om een beter inzicht te krijgen in de gebruikerservaring van de prototypes, heb 
 * Statamic runway
 
 # Algemene ervaring met AllesOnline CMS
-Over het algemeen is het vullen van een CMS unaniem niet de favoriete bezigheid van de vormgevers. Dit komt vooral doordat het niet altijd duidelijk is welke velden binnen het CMS welk resultaat opleveren in de frontend. Dit probleem wordt volgens de vormgevers soms veroorzaakt door onduidelijke benamingen voor bepaalde velden binnen het CMS. Ze geven aan dat een live-preview voor het CMS een waardevolle toevoeging zou zijn, maar niet per se noodzakelijk. Op dit moment slaan ze wijzigingen op en controleren ze deze direct in een ander tabblad.
+Over het algemeen is het vullen van een CMS unaniem niet de favoriete bezigheid van de vormgevers. Dit komt vooral doordat het niet altijd duidelijk is welke velden binnen het CMS welk resultaat opleveren in de frontend. Dit probleem wordt volgens de vormgevers soms veroorzaakt door onduidelijke benamingen voor bepaalde velden binnen het CMS. Ze geven aan dat een live-preview voor het CMS een waardevolle toevoeging zou zijn, maar dat dit niet perse noodzakelijk is. Op dit moment slaan ze wijzigingen op en controleren ze deze direct in een ander tabblad.
 
 # Feedback Filament en Statamic CMS
 
