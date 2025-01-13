@@ -166,22 +166,22 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
     <tr>
         <td>Training: Statamic / Filament</td>
         <td>3 - 7 uur</td>
-        <td>Developers volgen naar eigen inzicht relevante workshops op Laracast<td>
+        <td>Developers volgen naar eigen inzicht relevante workshops op Laracast</td>
     </tr>
     <tr>
         <td><a href="../Bijlagen/HackatonBouwCMS.md">Hackathon: Bouw van CMS met Filament en Statamic</a></td>
         <td>1 dag (8 uur)</td>
-        <td>Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen<td>
+        <td>Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen</td>
     </tr>
     <tr>
         <td>Training: Livewire / Alpine.js</td>
         <td>3 - 7 uur</td>
-        <td>Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen<td>
+        <td>Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen</td>
     </tr>
     <tr>
         <td><a href="../Bijlagen/HackatonBouwFilamentComponent.md">Hackathon: Bouw een custom Filament component met Livewire en Alpine.js</a></td>
         <td>1 dag (8 uur)</td>
-        <td>Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js<td>
+        <td>Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js</td>
     </tr>
 </tbody>
 </table>
