@@ -52,7 +52,7 @@ Op basis van de requirements en mijn bevindingen over een typische AllesOnline-w
 > * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 > * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
-Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes **Docker**-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitgebreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend wordt gebruik gemaakt van een Linux Alpine **Node.js**-container.
+Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes **Docker**-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitbreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend wordt gebruik gemaakt van een Linux Alpine **Node.js**-container.
 is 
 ### Conclusies onderzoek AllesOnline CMS en realisatie eerste prototype
 
@@ -135,7 +135,7 @@ Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, ma
 
 * **Hoe verloopt de migratie van de bestaande webapplicaties naar een nieuw CMS, en welke technische uitdagingen komen hierbij kijken?**
 	* De migratie tussen systemen kan plaatsvinden via een op maat gemaakte CLI-tool, bijvoorbeeld met Symfony. Deze tool kan bestanden uitlezen en op basis van regels nieuwe bestanden genereren voor het nieuwe CMS.
-	* De grootste uitdagingen zijn vooral te vinden in de verschillende architecturen en functionaliteiten tussen het originele en de nieuwe systemen. Dit betekend dat dat het belangrijk is dat er een goede planning en zorgvuldig vooronderzoek gedaan wordt voordat de migratie wordt uitgevoerd. 
+	* De grootste uitdagingen zijn vooral te vinden in de verschillende architecturen en functionaliteiten tussen het originele en de nieuwe systemen. Dit betekent dat dat het belangrijk is dat er een goede planning en zorgvuldig vooronderzoek gedaan wordt voordat de migratie wordt uitgevoerd. 
 	
 # Onderzoek naar Statamic CMS
 
@@ -173,7 +173,7 @@ Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van h
 	* Voor AllesOnline is minimaal **Statamic Pro** nodig. Voor meerdere websites is de **Master License** voordelig tot 10 websites, daarna is het voordeliger om over te schakelen naar het abonnementsmodel.
 	* Omdat er bij de **Master License** voor de eerste 25 websites een vast maandelijks tarief van $175 geldt, komen de jaarlijkse kosten uit op $2100.
 
-# Laatste gesprekken over project en opstellen van advies
+# Laatste gesprekken over het project en opstellen van advies
 
 Na het afronden van mijn onderzoek naar de verschillende mogelijkheden voor het opzetten van een CMS met systemen van externe partijen, heb ik de resultaten besproken met twee developers van AllesOnline.
 
