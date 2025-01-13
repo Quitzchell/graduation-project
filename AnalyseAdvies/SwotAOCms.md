@@ -1,4 +1,4 @@
-# SWOT: AllesOnline CMS
+# **SWOT: AllesOnline CMS**
 
 >_Voor meer informatie over het AllesOnline CMS:_
 > * [Onderzoeksdocument over het AllesOnline CMS](./OnderzoekNaarHetAOCms.md)

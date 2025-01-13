@@ -1,6 +1,6 @@
 # **Leeswijzer**
 
-> * [Evidence in verhouding tot leeruitkomsten](../Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
+> * [Evidence in verhouding tot leeruitkomsten](../Projectmanagement/EvidenceInVerhoudingTotLeeruitkomsten.md)
 
 > * [Omschrijving opdracht](../ProjectRaport/Opdracht.md)
 
