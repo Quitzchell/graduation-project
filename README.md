@@ -1,4 +1,4 @@
-# Revitalising Content Management
+# **Revitalising Content Management**
 # Project Raport
 
 * ### [Voorpagina](./ProjectRaport/Voorpagina.md)
@@ -6,6 +6,7 @@
 * ### [Leeswijzer](./ProjectRaport/Leeswijzer.md)
 * ### [Projectplan](./Projectmanagement/Projectplan.md)
 * ### [Reflectie](./ProjectRaport/Reflectie.md)
+
 # Projectmanagement
 
 * ### [Logboek](./Projectmanagement/Logboek.md)
@@ -68,3 +69,4 @@
 * #### [Voorbeeld statamic runway config-file](./Bijlagen/RunwayConfigFile.md)
 
 * #### [Hackathon: Bouw van CMS met Filament en Statamic](./Bijlagen/OpzetHackatonBouwCMS.md)
+* #### [Hackaton: Bouw een custom Filament component met Livewire en Alpine.js](./Bijlagen/HackatonBouwFilamentComponent.md)
