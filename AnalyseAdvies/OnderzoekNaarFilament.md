@@ -81,13 +81,14 @@ Filament biedt naast de standaardcomponenten ook een marketplace waar aanvullend
 
 Het is ook voor AllesOnline mogelijk om eigen, op maat gemaakte componenten via de marketplace aan te bieden. Voor de ontwikkeling van deze plugins wordt aanbevolen de TALL-stack (Tailwind CSS, Alpine.js, Laravel, Livewire) te gebruiken, aangezien deze technologieën ook door Filament zelf worden toegepast.
 
-> * [De Filament marketplace](https://filamentphp.com/plugins)_
+> _De Filament marketplace_
+> * [Filament marketplace](https://filamentphp.com/plugins)
 
 > _Documentatie voor het realiseren van een Filament Plugin_
 > * [Plugin documentatie](https://filamentphp.com/docs/3.x/support/plugins/getting-started)
 
 > _Er is ook een Laracastcursus beschikbaar waarin het realiseren van een plugin uitgelegd wordt_
-> * [Laracast video](https://laracasts.com/series/build-advanced-components-for-filament/episodes/12)
+> * [Laracast video](https://laracasts.com/series/build-advanced-components-for-filament)
 
 ## Flexibiliteit
 

@@ -19,7 +19,7 @@ Om vast te stellen aan welke eisen een CMS moet voldoen voor een doorsnee AllesO
 | **Relations Form Field**      | Veld om relaties tussen verschillende objecten binnen het CMS te defineren              | Must Have   |
 | **Textarea FormField**        | Ondersteuning voor lange tekstvelden (meerdere regels).                                 | Must Have   |
 | **URL FormField**             | Ondersteuning voor URL-invoer met validatie.                                            | Must Have   |
-| **Media-item FormField**      | Ondersteuning voor het toevoegen van media (afbeeldingen).                              | Must Have   |
+| **Media-item FormField**      | Ondersteuning voor het toevoegen van media (afbeeldingen).                              | Could Have   |
 | **File FormField**            | Ondersteuning voor het toevoegen van bestanden                                          | Must Have   |
 | **Relations module**          | Ondersteuning voor het zichtbaar maken van relaties tussen verschillende objecten.      | Must Have   |
 | **Maps FormField**            | Ondersteuning voor het beheren van een Google Maps functionaliteiten                              | Must have   |
