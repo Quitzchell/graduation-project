@@ -169,7 +169,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
     </tr>
     <tr>
         <td><a href="../Bijlagen/HackatonBouwCMS.md">Hackathon: Bouw van CMS met Filament en Statamic</a></td>
-        <td>1 dag (8 uur)</td>
+        <td>1 dag (8 uur)*</td>
         <td>Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen</td>
     </tr>
     <tr>
@@ -179,11 +179,13 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
     </tr>
     <tr>
         <td><a href="../Bijlagen/HackatonBouwFilamentComponent.md">Hackathon: Bouw een custom Filament component met Livewire en Alpine.js</a></td>
-        <td>1 dag (8 uur)</td>
+        <td>1 dag (8 uur)*</td>
         <td>Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js</td>
     </tr>
 </tbody>
 </table>
+
+\* _Hackathon duurt 8 uur per developer, waarbij het hele team samenwerkt gedurende deze tijd._ 
 
 ## Fase 2: Prototype en evaluatie
 **Doel: Ontwikkelen van CMS-plugin voor Filament**
@@ -250,7 +252,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 </tbody>
 </table>
 
- \* **Bovenop reguliere werkuren voor projectuitvoering.**
+ \* _Bovenop reguliere werkuren voor projectuitvoering._
 
 ## Fase 3b: Migratie van bestaande projecten
 **Doel: Gecontroleerde migratie van bestaande projecten naar Filament.**
