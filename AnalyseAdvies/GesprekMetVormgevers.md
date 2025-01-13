@@ -3,7 +3,7 @@
 # Inleiding
 Om een beter inzicht te krijgen in de gebruikerservaring van de prototypes, heb ik enkele vormgevers van AllesOnline gevraagd om hun oordeel te geven. Deze vormgevers zijn voornamelijk verantwoordelijk voor fysieke productie en het ontwerpen van UI/UX, maar vullen daarnaast ook regelmatig het CMS in voor de websites van onze klanten. Zij hebben hun feedback gegeven op zowel het CMS met Filament als op de verschillende CMS'en met Statamic.
 
-Op het moment dat dit gesprek plaatsvindt, zijn de volgende CMS-oplossingen gerealiseerd:
+**Op het moment dat dit gesprek plaatsvindt, zijn de volgende CMS-oplossingen gerealiseerd:**
 * Filament
 * Statamic flat-file
 * Statamic eloquent-driver
