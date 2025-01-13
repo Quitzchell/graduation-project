@@ -148,13 +148,12 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 ## Fase 1: Voorbereiding, kennisopbouw en validatie
 **Doel: Developers vertrouwd maken met Filament en Statamic**
 
-
 <table width="100%">
 <thead>
     <tr>
-        <th width="36%">Activiteit</th>
-        <th width="30%">Duur</th>
-        <th width="34%">Beschrijving</th>
+        <th width="35%">Activiteit</th>
+        <th width="25%">Duur</th>
+        <th width="40%">Beschrijving</th>
     </tr>
 </thead>
 <tbody>
@@ -189,46 +188,141 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 ## Fase 2: Prototype en evaluatie
 **Doel: Ontwikkelen van CMS-plugin voor Filament**
 
-| Activiteit | Duur | Beschrijving |
-| --- | --- | --- |
-| Prototype CMS-plugin | ca. 40 uur (5 dagen) | Ontwikkeling van een generieke Filament-plugin voor CMS-functionaliteit. Doel is om het prototype modulair en SOLID te realiseren. |
-| Valideer prototype | 8 uur (1 dagen) | Testen van prototype binnen een bestaand project met een _decoupled architecture_. |
-| Documenteer plugin | 16 uur (2 dagen) | Opstellen van documentatie voor het team. |
+<table>
+<thead>
+    <tr>
+        <th width="35%">Activiteit</th>
+        <th width="25%">Duur</th>
+        <th width="40%">Beschrijving</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Prototype CMS-plugin</td>
+        <td>ca. 40 uur (5 dagen)</td>
+        <td>Ontwikkeling van een generieke Filament-plugin voor CMS-functionaliteit</td>
+    </tr>
+    <tr>
+        <td>Valideer prototype</td>
+        <td>8 uur (1 dagen)</td>
+        <td>Testen van prototype binnen een bestaand project met een decoupled architecture</td>
+    </tr>
+    <tr>
+        <td>Documenteer plugin</td>
+        <td>16 uur (2 dagen)</td>
+        <td>Opstellen van documentatie voor het team</td>
+    </tr>
+</tbody>
+</table>
 
 ## Fase 3a: Ontwikkeling van greenfield-projecten
 **Doel: Realisatie van projecten met nieuwe CMS-systemen.**
 
-| Activiteit | Duur | Beschrijving |
-| --- | --- | --- |
-| Greenfield project (Filament) | ca. 40 uur (5 dagen)* | Project met Filament CMS realiseren, inclusief data-opslag en contentbeheer. |
-| Greenfield project (Statamic) | ca. 24 uur (3 dagen)* | Project met Statamic CMS realiseren, inclusief data-opslag en contentbeheer. |
-| Feedback verzamelen | 8 uur (1 dag) | Feedback verzamelen van het team en stakeholders over de gebruikerservaring. |
-| Optimaliseer systemen | 16 uur (2 dagen) | Feedback gebruiken om verbeteringen door te voeren. |
+<table>
+<thead>
+    <tr>
+        <th width="35%">Activiteit</th>
+        <th width="25%">Duur</th>
+        <th width="40%">Beschrijving</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Greenfield project (Filament)</td>
+        <td>ca. 40 uur (5 dagen)*</td>
+        <td>Project met Filament CMS realiseren, inclusief data-opslag en contentbeheer</td>
+    </tr>
+    <tr>
+        <td>Greenfield project (Statamic)</td>
+        <td>ca. 24 uur (3 dagen)*</td>
+        <td>Project met Statamic CMS realiseren, inclusief data-opslag en contentbeheer</td>
+    </tr>
+    <tr>
+        <td>Feedback verzamelen</td>
+        <td>8 uur (1 dag)</td>
+        <td>Feedback van team en stakeholders over de gebruikerservaring verzamelen</td>
+    </tr>
+    <tr>
+        <td>Systemen optimaliseren</td>
+        <td>16 uur (2 dagen)</td>
+        <td>Feedback gebruiken om verbeteringen door te voeren</td>
+    </tr>
+</tbody>
+</table>
 
- \* Uren boven op reguliere uren voor realisatie van project.
+ \* **Bovenop reguliere werkuren voor projectuitvoering.**
 
 ## Fase 3b: Migratie van bestaande projecten
 **Doel: Gecontroleerde migratie van bestaande projecten naar Filament.**
 
-| Activiteit | Duur | Beschrijving |
-| --- | --- | --- |
-| MVP migratietool ontwikkelen | ca. 40 uur (5 dagen) | Ontwikkelen van een MVP voor een migratietool. |
-| Migratie van kleine projecten  | 40 uur (5 dagen per project)* | Migreren van kleine projecten. |
-| Migratie van middelgrote projecten   | 120 uur (15 dagen per project)* | Migreren van middelgrote projecten. |
-| Optimalisatie van migratietool | 40 uur (5 dagen)        | Feedback verwerken en de migratietool optimaliseren.   |
+<table>
+<thead>
+    <tr>
+        <th width="35%">Activiteit</th>
+        <th width="25%">Duur</th>
+        <th width="40%">Beschrijving</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>MVP migratietool ontwikkelen</td>
+        <td>ca. 40 uur (5 dagen)</td>
+        <td>Ontwikkelen van een MVP voor een migratietool</td>
+    </tr>
+    <tr>
+        <td>Migratie van kleine projecten</td>
+        <td>40 uur (5 dagen per project)*</td>
+        <td>Migreren van kleine projecten</td>
+    </tr>
+    <tr>
+        <td>Migratie van middelgrote projecten</td>
+        <td>120 uur (15 dagen per project)*</td>
+        <td>Migreren van middelgrote projecten</td>
+    </tr>
+    <tr>
+        <td>Optimalisatie van migratietool</td>
+        <td>40 uur (5 dagen)</td>
+        <td>Feedback verwerken en de migratietool optimaliseren</td>
+    </tr>
+</tbody>
+</table>
 
-\* Met een iteratief process, zal naar verwachting elke opvolgende migratie minder tijd in beslag nemen.
+\* _Naar verwachting zullen volgende migraties minder tijd in beslag nemen._
 
 ## Fase ∞: Doorlopende optimalisatie, migratie en opschaling
 **Doel: Continue verbetering, migratie van projecten en opschaling voor bredere adoptie.**
 
-| Activiteit | Duur | Beschrijving |
-| ---------- | ---- | ------------ |
-| Feedback verzamelen | – | Actief feedback verzamelen van klanten, gebruikers en het developmentteam over de ervaringen met de nieuwe systemen. |
-| Optimalisatie | – | Analyseren van feedback en continu optimaliseren van de systemen. Verbeter de performance, gebruikerservaring en schaalbaarheid. |
-| Migratie van grote projecten | – | Migreren van grotere en complexere projecten. |
-| Doorlopende cyclus | – | Deze fase is een doorlopend proces van optimalisatie, migratie, en opschaling, waarbij steeds nieuwe projecten worden toegevoegd en bestaande systemen verder worden verfijnd. |
-
+<table>
+<thead>
+    <tr>
+        <th width="35%">Activiteit</th>
+        <th width="25%">Duur</th>
+        <th width="40%">Beschrijving</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Feedback verzamelen</td>
+        <td>-</td>
+        <td>Actief feedback verzamelen van klanten, gebruikers en het developmentteam over de ervaringen met de nieuwe systemen</td>
+    </tr>
+    <tr>
+        <td>Optimalisatie</td>
+        <td>-</td>
+        <td>Analyseren van feedback en continu optimaliseren van de systemen. Verbeter de performance, gebruikerservaring en schaalbaarheid</td>
+    </tr>
+    <tr>
+        <td>Migratie van grote projecten</td>
+        <td>-</td>
+        <td>Migreren van grotere en complexere projecten</td>
+    </tr>
+    <tr>
+        <td>Doorlopende cyclus</td>
+        <td>-</td>
+        <td>Deze fase is een doorlopend proces van optimalisatie, migratie, en opschaling, waarbij steeds nieuwe projecten worden toegevoegd en bestaande systemen verder worden verfijnd</td>
+    </tr>
+</tbody>
+</table>
 
 # Conclusie
 
