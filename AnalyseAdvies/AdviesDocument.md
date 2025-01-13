@@ -260,8 +260,8 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 <table>
 <thead>
     <tr>
-        <th width="35%">Activiteit</th>
-        <th width="25%">Duur</th>
+        <th width="32%">Activiteit</th>
+        <th width="28%">Duur</th>
         <th width="40%">Beschrijving</th>
     </tr>
 </thead>
