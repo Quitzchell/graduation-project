@@ -17,6 +17,7 @@
 * ### [Samenvatting initiële gesprekken met developers](./AnalyseAdvies/InitieleGesprekkenDevelopers.md)
 * ### [Samenvatting gesprekken met developers tijdens mid-term reviews](./AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
 * ### [Samenvatting gesprekken met developers voor adviesopstelling](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* ### [Samenvattig gesprekken met vormgevers](./AnalyseAdvies/GesprekMetVormgevers.md)
 
 * ### [Requirements](./AnalyseAdvies/Requirements.md)
 * ### [Checklist voor CMS criteria](./AnalyseAdvies/ChecklistVoorCMSCriteria)

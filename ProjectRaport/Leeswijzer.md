@@ -144,15 +144,15 @@ Na het afronden van de eerste Proof of Concept (PoC) voor de migratietool, ben i
 > * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 > * [SWOT: Statamic](../AnalyseAdvies/SwotStatamicCms.md)
 
-Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van het Statamic-prototype. Omdat Statamic in verschillende configuraties kan worden gebruikt, heb ik meerdere designs ontwikkeld. Deze zijn specifiek voor de hieronder genoemde configuraties, hoewel het ook mogelijk is om de verschillende configuraties te combineren.
+Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van het Statamic-prototype. Omdat de functionaliteit voor contentmanagement standaard is ingebouwd in de verschillende Statamic-configuraties, heb ik ter illustratie eenvoudige diagrammen gemaakt. Deze zijn specifiek voor de hieronder genoemde configuraties, hoewel het ook mogelijk is om de verschillende configuraties te combineren.
 
 >* [Repository: Statamic met flat-file](https://github.com/Quitzchell/graduation-statamic-cms)
 >* [Repository: Statamic met eloquent-driver](https://github.com/Quitzchell/graduation-statamic-ed-cms)
 >* [Repository: Statamic met Runway](https://github.com/Quitzchell/graduation-statamic-runway-cms)
 
->* Design voor Statamic CMS met flat-file //todo
->* Design voor Statamic met eloquent-driver //todo
->* Design voor Statamic met Runway-addon //todo
+>* Diagram Statamic CMS met flat-file //todo
+>* Diagram Statamic met eloquent-driver //todo
+>* Diagram Statamic met Runway-addon //todo
 
 >* [Technische documentatie van CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
