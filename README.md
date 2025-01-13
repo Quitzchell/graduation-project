@@ -16,7 +16,7 @@
 
 * ### [Samenvatting initiële gesprekken met developers](./AnalyseAdvies/InitieleGesprekkenDevelopers.md)
 * ### [Samenvatting gesprekken met developers tijdens mid-term reviews](./AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
-* ### [Samenvatting gesprekken met developers tijdens mid-term reviews](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* ### [Samenvatting gesprekken met developers voor adviesopstelling](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
 
 * ### [Requirements](./AnalyseAdvies/Requirements.md)
 * ### [Checklist voor CMS criteria](./AnalyseAdvies/ChecklistVoorCMSCriteria)
@@ -69,4 +69,4 @@
 * #### [Voorbeeld statamic runway configuratiebestand](./Bijlagen/RunwayConfigFile.md)
 
 * #### [Hackathon: Bouw van CMS met Filament en Statamic](./Bijlagen/HackatonBouwCMS.md)
-* #### [Hackaton: Bouw een custom Filament component met Livewire en Alpine.js](./Bijlagen/HackatonBouwFilamentComponent.md)
+* #### [Hackathon: Bouw een custom Filament component met Livewire en Alpine.js](./Bijlagen/HackatonBouwFilamentComponent.md)
