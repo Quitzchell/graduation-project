@@ -31,7 +31,7 @@ In de eerste weken van dit project heb ik me gericht op het analyseren van het A
 
 Uit de gesprekken met developers bleek dat zij over het algemeen tevreden zijn met het CMS. Hoewel niet alles volgens *Best Practices* verloopt en er soms onduidelijkheden bestaan over de werking van het CMS, slagen zij er meestal in om op een pragmatische manier tot oplossingen te komen. Er werd ook aangegeven dat zij een verbeterde developer experience zouden waarderen. Hierbij kan gedacht worden aan meer abstractie van functionaliteiten, zodat complexiteit beter kan worden verborgen en herbruikbare oplossingen eenvoudiger te implementeren zijn. Dit zou in de toekomst kunnen bijdragen aan het sneller en eenvoudiger realiseren van specifieke klantwensen.
 
-> * [Gesprekken met Developers](../AnalyseAdvies/GesprekkenEnErvaringenMetDevelopers.md)
+> * [Samenvatting initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
 > * [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 > * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 
@@ -110,6 +110,13 @@ Tijdens het onderzoek ben ik begonnen met het ontwerpen en ontwikkelen van het C
 	* Omdat Filament nog relatief nieuw is, zijn er nog wel enkele kinderziektes in het geval van edgecases.
 	* Filament is gebaseerd op Laravel, een framework waarmee het huidige development-team van AllesOnline al goed bekend is.
 
+# Gesprekken met Developers van AllesOnline tijdens mid-term reviews
+
+In de periode waarin ik het Filament CMS afrondde, die samenviel met de mid-term reviews, heb ik opnieuw gesprekken gevoerd over het afstudeerproject met de developers en mijn leidinggevende van AllesOnline.
+
+> * [Samenvatting gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
+
+
 # Onderzoek migratie van AllesOnline naar Filament CMS
 
 Na het realiseren van zowel een AllesOnline- als een Filament CMS-prototype, ben ik begonnen met het onderzoeken van een belangrijke requirement van AllesOnline: het geautomatiseerd migreren van bestaande projecten naar een nieuw systeem.
@@ -161,6 +168,12 @@ Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van h
 		* **Platform Subscription**: Abonnement vanaf $175 per maand voor de eerste 25 websites, met lagere kosten per website naarmate het aantal stijgt.
 	* Voor AllesOnline is minimaal **Statamic Pro** nodig. Voor meerdere websites is de **Master License** voordelig tot 10 websites, daarna is het voordeliger om over te schakelen naar het abonnementsmodel.
 	* Omdat er bij de **Master License** voor de eerste 25 websites een vast maandelijks tarief van $175 geldt, komen de jaarlijkse kosten uit op $2100.
+
+# Laatste gesprekken over project en opstellen van advies
+
+Na het afronden van mijn onderzoek naar de verschillende mogelijkheden voor het opzetten van een CMS met systemen van externe partijen, heb ik de resultaten besproken met twee developers van AllesOnline.
+
+> * [Samenvatting gesprekken met developers voor adviesopstelling](../AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
 
 # Terugkoppeling migratie naar nieuw CMS
 

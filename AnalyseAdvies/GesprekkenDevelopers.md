@@ -62,7 +62,6 @@ Wilco benoemde tijdens het gesprek meerdere punten, waar hij zowel positieve als
 - Lijkt vrij gemakkelijk om op te zetten voor klanten die een eenvoudige CMS nodig hebben voor een simpele content-website.
 - Mogelijkheid om, wanneer monolitisch gewerkt wordt, gemakkelijk live-previews voor klanten mogelijk te maken.
 
-
 **Negatief Statamic:** 
 - Dat Statamic nog achterloopt met het gebruik van Vue2.
 - Beperkte mogelijkheden wanneer een relatie complexer is, bijvoorbeeld wanneer er pivot-data toegevoegd moet worden.

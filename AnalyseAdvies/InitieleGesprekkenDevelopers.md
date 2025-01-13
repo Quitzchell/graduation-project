@@ -1,0 +1,27 @@
+# **Initiële gesprekken met developers**
+
+# Stefan Grevelink 
+
+Stefan is de eigenaar en directeur van AllesOnline, een bedrijf dat gespecialiseerd is in weboplossingen. Ongeveer tien jaar geleden heeft hij zelf een Content Management Systeem (CMS) ontwikkeld, wat tot op de dag van vandaag een belangrijk onderdeel van zijn bedrijf vormt. In gesprekken met Stefan komt naar voren dat zijn beslissing om een eigen CMS te bouwen destijds niet uit de lucht kwam vallen. Op het moment dat hij dit project startte, begon het Laravel-framework net populariteit te winnen onder PHP-developers. Dit nieuwe framework werd geprezen om zijn eenvoud en flexibiliteit, en leek een goede basis voor toekomstgerichte webontwikkelingen.
+
+Volgens Stefan was er op dat moment naar zijn idee geen kwalitatief, breed beschikbaar CMS van derde partijen dat goed aansloot bij Laravel. Deze situatie leidde ertoe dat hij besloot een eigen CMS te ontwikkelen, specifiek gericht op een optimale samenwerking met Laravel. Dankzij deze beslissing kon Stefan zijn klanten een op maat gemaakte oplossing bieden die zowel gebruiksvriendelijk als goed te onderhouden was, en bovendien kon meegroeien met de veranderingen binnen het Laravel-ecosysteem.
+
+Vandaag de dag blijft het CMS een belangrijk onderscheidend kenmerk van AllesOnline, waarmee het bedrijf zich weet te positioneren in een concurrerende markt. Stefan kijkt tevreden terug op zijn keuze, die zijn bedrijf niet alleen een uniek product en daarmee een voorsprong opleverde, maar ook de mogelijkheid bood om klanten op een flexibele en efficiënte manier te bedienen. 
+
+Echter, is Stefan zich er ook van bewust dat het onderhouden van een eigen CMS een kostbare en intensieve bezigheid is. Dit besef heeft ertoe geleid dat hij wilt laten onderzoeken wat de mogelijkheden zijn om over te stappen naar een CMS van derde partijen. Door gebruik te maken van een extern CMS zou hij niet alleen de onderhoudskosten kunnen verlagen, maar mogelijk ook profiteren van de doorontwikkeling en ondersteuning die deze systemen genieten. Dit zou AllesOnline in staat stellen om zich nog sterker te richten op haar kernactiviteiten en de klantbehoeften, zonder de operationele lasten van het onderhouden van een eigen systeem.
+
+Een belangrijke wens van Stefan is om het mogelijk te maken voor klanten om niet een volledig nieuw developmenttraject te hoeven doorlopen bij de overstap van het huidige CMS naar een nieuw CMS. Voor zover het haalbaar is, zou hij in het onderzoek graag willen zien of het mogelijk is om een migratie van het AllesOnline CMS naar een nieuw CMS te realiseren.
+
+# Wilco Kuijpers
+
+Wilco werkt al ongeveer acht jaar bij AllesOnline en is onze senior software developer. In de gesprekken die ik tijdens werktijd met hem voer, komt het CMS regelmatig ter sprake. Deze gesprekken vinden vooral plaats wanneer we samen in de wirwar van spaghetticode op zoek zijn naar een bug of een specifieke casus proberen mogelijk te maken binnen het CMS. Hij erkent dat het CMS, hoewel functioneel, erg ongestructureerd is. Volgens hem beperkt dit niet alleen onze flexibiliteit bij het realiseren van maatwerkoplossingen, maar ook de mogelijkheid om een grondige test-suite voor het systeem op te zetten.
+
+Een voorbeeld van deze gesprekken vond plaats tijdens een onderzoek naar hoe we de waarden die voor een gebruiker zichtbaar zijn in een selectieveld binnen het CMS kunnen filteren. Tijdens dit onderzoek ontdekten we dat er voor verschillende soorten selectievelden niet alleen verschillende syntaxis beschikbaar is, maar ook dat de mogelijkheden voor het filteren bij de ene beperkter zijn dan bij de andere. Wilco legde mij uit dat dit probleem in andere websites was opgelost door een nieuw model aan te maken met een global scope die voldoet aan de eisen van het filter dat we proberen op te zetten en de relatie voor het veld hierop te baseren. Naar mijn idee een omslachtige oplossing die indruist tegen best practices, maar wel een typische pragmatische oplossing die vaak door developers bij AllesOnline wordt gedaan om bepaalde cases te realiseren.
+
+# Yoran van Driel
+
+Yoran - een van onze nieuwe medior developers met ervaring bij andere webbureaus - vindt het CMS verouderd. Hij waardeert echter de modulariteit van het systeem, zoals de mogelijkheid om bijvoorbeeld SEO-instellingen te configureren. Het inbouwen van maatwerk is naar zijn idee wel tijdrovend. Wanneer je alleen gebruikmaakt van de beschikbare functies in het CMS, werkt het systeem prettig, maar zodra specifieke aanpassingen nodig zijn, wordt het een uitdaging om dit goed te realiseren. Hij heeft zelf nog niet eerder aanpassingen in het CMS hoeven doorvoeren en werkt er in de meeste gevallen omheen door een alternatieve oplossing te bedenken.
+
+Volgens Yoran is het CMS op zich een goed stuk maatwerk dat aangepast kan worden. Toch wordt er volgens hem besloten om deze aanpassingen niet door te voeren. Hij denkt dat dit komt doordat men ervan uitgaat dat bepaalde functionaliteiten niet voor alle klanten nodig zijn. Yoran is echter van mening dat deze functionaliteiten juist als verkoopargumenten kunnen dienen om klanten te overtuigen een website te laten ontwikkelen bij AllesOnline.
+
+Wat betreft de developer experience zou hij het ook fijn vinden als er in het CMS minder tijdrovende taken waren om bijvoorbeeld een objectmanager, template of block beschikbaar te maken.
