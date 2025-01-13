@@ -148,13 +148,43 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 ## Fase 1: Voorbereiding, kennisopbouw en validatie
 **Doel: Developers vertrouwd maken met Filament en Statamic**
 
-| Activiteit | Beschrijving | Duur |
-| --- | --- | --- |
-| Introductie van systemen | Presentatie aan het team over Filament en Statamic. Basisfunctionaliteiten en voordelen worden uitgelegd. | 4 uur |
-| Training: Statamic / Filament | Developers volgen naar eigen inzicht relevante workshops op Laracast. |  3 - 7 uur |
-| [Hackathon: Bouw van CMS met Filament en Statamic](../Bijlagen/HackatonBouwCMS.md) | Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen. | 1 dag (8 uur) |
-| Training: Livewire / Alpine.js | Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen. | 3 - 7 uur |
-| [Hackathon: Bouw een custom Filament component met Livewire en Alpine.js](../Bijlagen/HackatonBouwFilamentComponent.md) | Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js. | 1 dag (8 uur) |
+
+<table width="100%">
+<thead>
+    <tr>
+        <th width="36%">Activiteit</th>
+        <th width="30%">Duur</th>
+        <th width="34%">Beschrijving</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Introductie van systemen</td>
+        <td>4 uur</td>
+        <td>Presentatie aan het team over Filament en Statamic</td>
+    </tr>
+    <tr>
+        <td>Training: Statamic / Filament</td>
+        <td>3 - 7 uur</td>
+        <td>Developers volgen naar eigen inzicht relevante workshops op Laracast<td>
+    </tr>
+    <tr>
+        <td><a href="../Bijlagen/HackatonBouwCMS.md">Hackathon: Bouw van CMS met Filament en Statamic</a></td>
+        <td>1 dag (8 uur)</td>
+        <td>Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen<td>
+    </tr>
+    <tr>
+        <td>Training: Livewire / Alpine.js</td>
+        <td>3 - 7 uur</td>
+        <td>Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen<td>
+    </tr>
+    <tr>
+        <td><a href="../Bijlagen/HackatonBouwFilamentComponent.md">Hackathon: Bouw een custom Filament component met Livewire en Alpine.js</a></td>
+        <td>1 dag (8 uur)</td>
+        <td>Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js<td>
+    </tr>
+</tbody>
+</table>
 
 ## Fase 2: Prototype en evaluatie
 **Doel: Ontwikkelen van CMS-plugin voor Filament**
