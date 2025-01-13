@@ -3,8 +3,8 @@
 
 * ### [Voorpagina](./ProjectRaport/Voorpagina.md)
 * ### [De opdracht](./ProjectRaport/Opdracht.md)
-* ### [Leeswijzer](./ProjectRaport/Leeswijzer.md)
 * ### [Projectplan](./ProjectRaport/Projectplan.md)
+* ### [Leeswijzer](./ProjectRaport/Leeswijzer.md)
 * ### [Reflectie](./ProjectRaport/Reflectie.md)
 
 # Projectmanagement

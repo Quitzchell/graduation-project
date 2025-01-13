@@ -1,5 +1,5 @@
-# GRADUATION-INTERNSHIP PORTFOLIO BACHELOR-ICT
-## FONTYS UNIVERSITY OF APPLIED SCIENCES
+# **GRADUATION-INTERNSHIP PORTFOLIO BACHELOR-ICT**
+# FONTYS UNIVERSITY OF APPLIED SCIENCES
 
 | **Student**                   |                                    |
 | ----------------------------- | ---------------------------------- |
