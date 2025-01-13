@@ -159,33 +159,33 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 <tbody>
     <tr>
         <td>Introductie van systemen</td>
-        <td>4 uur</td>
+        <td>1 uur*</td>
         <td>Presentatie aan het team over Filament en Statamic</td>
     </tr>
     <tr>
         <td>Training: Statamic / Filament</td>
-        <td>3 - 7 uur</td>
+        <td>3 - 7 uur*</td>
         <td>Developers volgen naar eigen inzicht relevante workshops op Laracast</td>
     </tr>
     <tr>
         <td><a href="../Bijlagen/HackatonBouwCMS.md">Hackathon: Bouw van CMS met Filament en Statamic</a></td>
-        <td>1 dag (8 uur)*</td>
+        <td>8 uur (1 dag)*</td>
         <td>Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen</td>
     </tr>
     <tr>
         <td>Training: Livewire / Alpine.js</td>
-        <td>3 - 7 uur</td>
+        <td>3 - 7 uur*</td>
         <td>Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen</td>
     </tr>
     <tr>
         <td><a href="../Bijlagen/HackatonBouwFilamentComponent.md">Hackathon: Bouw een custom Filament component met Livewire en Alpine.js</a></td>
-        <td>1 dag (8 uur)*</td>
+        <td>8 uur (1 dag)*</td>
         <td>Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js</td>
     </tr>
 </tbody>
 </table>
 
-\* _Hackathon duurt 8 uur per developer, waarbij het hele team samenwerkt gedurende deze tijd._ 
+\* _In deze fase geldt de tijdsindicatie per developer._ 
 
 ## Fase 2: Prototype en evaluatie
 **Doel: Ontwikkelen van CMS-plugin voor Filament**
