@@ -13,11 +13,11 @@
 | Address:                      | 2913 LV Nieuwerkerk a/d IJssel     |
 |                               |                                    |
 | **Company mentor**            |                                    |
-| Family name, initials:        | Grevelink, S                       |
+| Family name, initials:        | Grevelink, S.                      |
 | Position:                     | Owner & Lead Web Developer         |
 |                               |                                    |
 | **University teacher**        |                                    |
-| Family name, initials:        | Groeneweg, A                       |
+| Family name, initials:        | Groeneweg, A.                      |
 |                               |                                    |
 | **Final portfolio**           |                                    |
 | Title:                        | Revitalising Content Management    |
