@@ -4,13 +4,13 @@
 * ### [Voorpagina](./ProjectRaport/Voorpagina.md)
 * ### [De opdracht](./ProjectRaport/Opdracht.md)
 * ### [Leeswijzer](./ProjectRaport/Leeswijzer.md)
-* ### [Projectplan](./Projectmanagement/Projectplan.md)
+* ### [Projectplan](./ProjectRaport/Projectplan.md)
 * ### [Reflectie](./ProjectRaport/Reflectie.md)
 
 # Projectmanagement
 
 * ### [Logboek](./Projectmanagement/Logboek.md)
-* ### [Evidence in verhouding tot leeruitkomsten](./Bijlagen/EvidenceInVerhoudingTotLeeruitkomsten.md)
+* ### [Evidence in verhouding tot leeruitkomsten](./Projectmanagement/EvidenceInVerhoudingTotLeeruitkomsten.md)
 
 # Analyse & Advies
 
