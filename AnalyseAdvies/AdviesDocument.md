@@ -148,44 +148,6 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 ## Fase 1: Voorbereiding, kennisopbouw en validatie
 **Doel: Developers vertrouwd maken met Filament en Statamic**
 
-<table>
-  <thead>
-    <tr>
-      <th>Activiteit</th>
-      <th>Duur</th>
-      <th>Beschrijving</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Introductie van systemen</td>
-      <td>4 uur</td>
-      <td>Presentatie aan het team over Filament en Statamic. Basisfunctionaliteiten en voordelen worden uitgelegd.</td>
-    </tr>
-    <tr>
-      <td>Training: Statamic / Filament</td>
-      <td>3 - 7 uur</td>
-      <td>Developers volgen naar eigen inzicht relevante workshops op Laracast.</td>
-    </tr>
-    <tr>
-      <td>Hackathon 1: Bouw een klein prototype CMS met Filament en Statamic</td>
-      <td>1 dag (8 uur)</td>
-      <td>Praktische ervaring opdoen door prototype CMS te bouwen. Hands-on ervaring met de systemen.</td>
-    </tr>
-    <tr>
-      <td>Training: Livewire / Alpine.js</td>
-      <td>3 - 7 uur</td>
-      <td>Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen.</td>
-    </tr>
-    <tr>
-      <td>Hackathon 2: Bouw een custom Filament-component met Livewire en Alpine.js</td>
-      <td>1 dag (8 uur)</td>
-      <td>Ervaring opdoen met het bouwen van custom Filament-componenten en het integreren van Livewire en Alpine.js.</td>
-    </tr>
-  </tbody>
-</table>
-
-
 | Activiteit | Duur | Beschrijving |
 | --- | --- | --- |
 | Introductie van systemen | 4 uur | Presentatie aan het team over Filament en Statamic. Basisfunctionaliteiten en voordelen worden uitgelegd. |
@@ -235,7 +197,6 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 | ---------- | ---- | ------------ |
 | Feedback verzamelen | – | Actief feedback verzamelen van klanten, gebruikers en het developmentteam over de ervaringen met de nieuwe systemen. |
 | Optimalisatie | – | Analyseer de feedback en werk continu aan de optimalisatie van de systemen. Verbeter de performance, gebruikerservaring en schaalbaarheid. |
-| Verbeteren en opschalen | – | Optimaliseer ontwikkelde tools en plugins en schaal ze op voor bredere adoptie. |
 | Migratie van grote projecten | – | Continue migratie van grotere en complexere projecten naar Filament en Statamic. |
 | Afronding migratieproces | – | Zorg ervoor dat alle projecten zijn gemigreerd, en dat de systemen geoptimaliseerd zijn voor lange termijn gebruik. |
 | Doorlopende cyclus | – | Deze fase is een doorlopend proces van optimalisatie, migratie, en opschaling, waarbij steeds nieuwe projecten worden toegevoegd en bestaande systemen verder worden verfijnd. |
