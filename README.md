@@ -55,7 +55,7 @@
 # Bijlagen
 
 * #### [ERD AllesOnline CMS (page model)](./Bijlagen/ErdAoCmsPageModel.md)
-* #### [UML Entiteiten diagram voor Prototype](./Bijlagen/UmlEntiteitenDiagramPrototype.md)
+* #### [UML Entiteiten diagram voor prototype](./Bijlagen/UmlEntiteitenDiagramPrototype.md)
 * #### [UML Class diagram voor ContentManagement in Filament CMS](./Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 
 * #### [Video: Cypress tests met AllesOnline CMS](./Bijlagen/CypressTestsAOCms.md)
