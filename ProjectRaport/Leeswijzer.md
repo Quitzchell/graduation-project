@@ -50,7 +50,7 @@ Op basis van de requirements en mijn bevindingen over een typische AllesOnline-w
 
 > _Repositories van de frontend en backend met het AllesOnline CMS zijn te vinden via onderstaande links._
 > * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
-> * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
+> * [Repository: Backend AllesOnline CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 
 Om ervoor te zorgen dat mijn collega's de prototypes op hun eigen systeem kunnen draaien, heb ik voor alle prototypes **Docker**-containers voorbereid. Voor de backends gebruik ik de AllesOnline-container, met een uitbreiding om **SQLite** te ondersteunen. Dit maakt het mogelijk om E2E-tests uit te voeren, zowel tijdens het programmeren als binnen een CI-pipeline, zonder de reguliere database te beïnvloeden. Voor de frontend wordt gebruik gemaakt van een Linux Alpine **Node.js**-container.
 is 
@@ -65,12 +65,12 @@ Dankzij bovenstaand onderdeel van het onderzoek en de ontwikkeling van het proto
 	* **Niet-naleven van SOLID-principes:** Het systeem voldoet niet aan de SOLID-principes, wat leidt tot hogere complexiteit en lagere testbaarheid en onderhoudbaarheid.
 
 * __Aan welke criteria moet een gemoderniseerd CMS voldoen?__
-	* **Uitgebreide documentatie:** Het CMS beschikt over actuele documentatie die modules en functionaliteiten helder beschrijft.
+	* **Uitgebreide documentatie:** Het CMS beschikt over actuele documentatie die modules en functionaliteiten helder beschrijven.
 	* **Modulariteit:** Het systeem moet bestaan uit goed afgebakende modules met specifieke verantwoordelijkheden, waarbij deze modules loosely-coupled zijn en onafhankelijk kunnen functioneren. Dit maakt het systeem gemakkelijker uit te breiden, aan te passen en te onderhouden.
 
-* __Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?__
+* __Wat zijn de prestatie- en kostenverschillen tussen het huidige CMS en een nieuw systeem?__
 	* **Prestatie:** Het gebrek aan modulariteit en documentatie resulteert in hogere onderhoudskosten en meer bugs, wat de prestaties en stabiliteit beïnvloedt.
-	* **Kosten:** De investeringen in het opschonen en onderhouden van een eigen systeem moet goed worden afgewogen tegen de voordelen van een al bestaande oplossing, die doorgaans lagere onderhoudskosten met zich meebrengt.
+	* **Kosten:** De investeringen in het opschonen en onderhouden van een eigen systeem moeten goed worden afgewogen tegen de voordelen van een al bestaande oplossing, die doorgaans lagere onderhoudskosten met zich meebrengt.
 
 # Frontend tests met Cypress 
 
@@ -85,7 +85,7 @@ Omdat **Cypress** in een standaard Linux Alpine-container complicaties kan onder
 > * [Video: Cypress tests met Filament CMS](../Bijlagen/CypressTestsFilamentCms.md)
 > * [Video: Cypress tests met Statamic CMS: Flat-file](../Bijlagen/CypressTestsStatamicFlatFileCms.md)
 > * [Video: Cypress tests met Statamic CMS: Eloquent-driver](../Bijlagen/CypressTestsStatamicEloquentDriverCms.md)
-> * [Video: Cypress tests met Statami CMS: Runway-addon](../Bijlagen/CypressTestsStatamicRunwayCms.md)
+> * [Video: Cypress tests met Statamic CMS: Runway-addon](../Bijlagen/CypressTestsStatamicRunwayCms.md)
 
 # Onderzoek naar CMS met Filament
 
@@ -116,7 +116,7 @@ Tijdens het onderzoek ben ik begonnen met het ontwerpen en ontwikkelen van het C
 
 In de periode waarin ik het Filament CMS afrondde, die samenviel met de mid-term reviews, heb ik opnieuw gesprekken gevoerd over het afstudeerproject met de developers en mijn leidinggevende van AllesOnline.
 
-> * [Samenvatting gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
+> * [Gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
 
 
 # Onderzoek migratie van AllesOnline naar Filament CMS
@@ -135,7 +135,7 @@ Om tijd te besparen, heb ik besloten niet het volledige proces uit te werken, ma
 
 * **Hoe verloopt de migratie van de bestaande webapplicaties naar een nieuw CMS, en welke technische uitdagingen komen hierbij kijken?**
 	* De migratie tussen systemen kan plaatsvinden via een op maat gemaakte CLI-tool, bijvoorbeeld met Symfony. Deze tool kan bestanden uitlezen en op basis van regels nieuwe bestanden genereren voor het nieuwe CMS.
-	* De grootste uitdagingen zijn vooral te vinden in de verschillende architecturen en functionaliteiten tussen het originele en de nieuwe systemen. Dit betekent dat dat het belangrijk is dat er een goede planning en zorgvuldig vooronderzoek gedaan wordt voordat de migratie wordt uitgevoerd. 
+	* De grootste uitdagingen zijn vooral te vinden in de verschillende architecturen en functionaliteiten tussen het originele en de nieuwe systemen. Dit betekent dat het belangrijk is dat er een goede planning en zorgvuldig vooronderzoek gedaan wordt voordat de migratie wordt uitgevoerd. 
 	
 # Onderzoek naar Statamic CMS
 
@@ -160,7 +160,7 @@ Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van h
 * **Welke commerciële en open-source CMS-oplossingen voldoen aan de vereisten voor modernisering en kunnen een haalbare vervanging bieden voor het huidige systeem?**
 	- De flat-file en eloquent-driver configuraties van Statamic zijn snel op te zetten, maar kunnen tekort komen bij projecten waar meer complexiteit verwacht wordt.
 	- De flat-file en eloquent-driver configuraties zijn, ondanks tekortkomingen, uiterst geschikt voor simpele marketing- en whitelabelwebsites.
-	- Het opzetten van de Runway configuratie kost meer tijd en kan ook bij complexere projecten tekort schieten.
+	- Het opzetten van de Runway configuratie kost meer tijd en kan ook bij complexere projecten tekortschieten.
 	- Hoewel Statamic een breed scala aan functionaliteiten biedt, zullen voor sommige oplossingen die in het AllesOnline CMS zijn ingebouwd, aangepaste componenten toegevoegd moeten worden.
 
 * **Wat zijn de prestatieverschillen en kosten tussen het huidige CMS en een nieuw systeem?**
@@ -207,6 +207,6 @@ Naast de conclusie dat **Filament** de beste keuze is voor complexere projecten,
 
 # Reflectie 
 
-Hieronder een document met mijn reflectie op het afgelopen semester. In dit document vat ik mijn ervaringen samen en benoem ik de lessen die ik hieruit heb geleerd.
+Hieronder een document met mijn reflectie over het afgelopen semester. In dit document vat ik mijn ervaringen samen en benoem ik de lessen die ik hieruit heb geleerd.
 
 > * [Reflectie](../ProjectRaport/Reflectie.md)

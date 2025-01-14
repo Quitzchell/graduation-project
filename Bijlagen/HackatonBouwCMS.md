@@ -1,6 +1,7 @@
 # **Hackathon: Bouw van CMS met Filament en Statamic**
 
 ## Inleiding
+
 Laat developers kennismaken met beide systemen via een hackathon. Geef hen de opdracht om een CMS te ontwerpen en te implementeren met behulp van zowel Filament als Statamic. Om volledig op de systemen te focussen, moeten de gegevens volgens een **voorgedefinieerde datastructuur** beschikbaar worden gesteld via een API.
 
 ## Doel van de challenge

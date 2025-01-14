@@ -1,4 +1,4 @@
-# **Voorbeeld documentatie voor het huidige AO CMS**
+# **Voorbeeld documentatie van het huidige AllesOnline CMS**
 
 ```markdown
 ### type="tags"

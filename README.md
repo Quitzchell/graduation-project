@@ -38,7 +38,7 @@
 
 # Design & Realisatie
 
-* ### [Opzet van het prototype](./DesignRealisatie/OpzetVanDePrototypes.md)
+* ### [Opzet van de prototypes](./DesignRealisatie/OpzetVanDePrototypes.md)
 * ### [Technische documentatie CMS prototypes](./DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
 * ### [Repository: Frontend prototype](https://github.com/Quitzchell/graduation-frontend)
@@ -66,10 +66,11 @@
 * #### [Video: Cypress tests met Statamic CMS: Eloquent-driver](./Bijlagen/CypressTestsStatamicEloquentDriverCms.md)
 * #### [Video: Cypress tests met Statamic CMS: Runway-addon](./Bijlagen/CypressTestsStatamicRunwayCms.md)
 
-* #### [Voorbeeld van schema in AllesOnline CMS](./Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
+* #### [CMS schema voor een AllesOnline object](./Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
 * #### [Voorbeeld van documentatie AllesOnline CMS](./Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
-* #### [Voorbeeld Statamic eloquent-driver configuratiebestand](./Bijlagen/eloquent-driver-config.md)
-* #### [Voorbeeld Statamic runway configuratiebestand](./Bijlagen/RunwayConfigFile.md)
+* #### [Collections file in Statamic](./bijlagen/VoorbeeldStatamicCollectionsFile.md)
+* #### [Statamic eloquent-driver configuratiebestand](./Bijlagen/eloquent-driver-config.md)
+* #### [Statamic Runway configuratiebestand](./Bijlagen/RunwayConfigFile.md)
 
 * #### [Hackathon: Bouw van CMS met Filament en Statamic](./Bijlagen/HackatonBouwCMS.md)
 * #### [Hackathon: Bouw een custom Filament component met Livewire en Alpine.js](./Bijlagen/HackatonBouwFilamentComponent.md)

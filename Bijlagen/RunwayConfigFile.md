@@ -1,4 +1,4 @@
-# **Statamic runway configuratiebestand**
+# **Runway configuratiebestand**
 
 ```php
 <?php
