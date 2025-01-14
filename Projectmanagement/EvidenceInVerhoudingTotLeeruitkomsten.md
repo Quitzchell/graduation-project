@@ -17,7 +17,7 @@
 * [Onderzoek voor CMS migratie](../AnalyseAdvies/OnderzoekVoorCmsMigratie.md)
 * [Technische documentatie CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
-### Advice
+### Advies
 
 * [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
 * [Adviesdocument](../AnalyseAdvies/AdviesDocument.md)
@@ -34,7 +34,7 @@
 * [Diagram Statamic CMS flat-file / eloquent-driver](../Bijlagen/UmlDiagramStatamicFlatFileEloquentDriver.md)
 * [Diagram Statamic Runway-addon](../Bijlagen/UmlDiagramStatamicRunway.md)
 
-### Realise
+### Realisatie
 
 * [Repository: Frontend Prototype](https://github.com/Quitzchell/graduation-frontend)
 * [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
@@ -43,8 +43,9 @@
 * [Repository: Backend Statamic Eloquent-driver](https://github.com/Quitzchell/graduation-statamic-ed-cms)
 * [Repository: Backend Statamic Runway-addon](https://github.com/Quitzchell/graduation-statamic-runway-cms)
 * [Repository: PoC Transcription](https://github.com/Quitzchell/poc-transcription)
+* [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
 
-### Management & Controll
+### Management & Control
 
 * [Cypress test-suite in frontend repository](https://github.com/Quitzchell/graduation-frontend/tree/main/src/cypress)
 * [Video: Cypress tests met AllesOnline CMS](../Bijlagen/CypressTestsAOCms.md)
