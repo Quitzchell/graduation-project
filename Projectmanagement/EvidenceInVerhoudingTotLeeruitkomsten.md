@@ -2,17 +2,17 @@
 
 ## Professional Duties
 ### Analyse
-* [Samenvatting initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
-* [Samenvatting gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
-* [Samenvatting gesprekken met developers voor adviesopstelling](../AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
-* [Samenvatting gesprekken met vormgevers](../AnalyseAdvies/GesprekMetVormgevers.md)
+* [Initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
+* [Gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
+* [Laatste gesprekken met Developers voor opstellen advies](../AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* [Gesprekken met vormgevers](../AnalyseAdvies/GesprekMetVormgevers.md)
 
 * [Requirements](../AnalyseAdvies/Requirements.md)
 * [Checklist voor CMS criteria](../AnalyseAdvies/ChecklistVoorCMSCriteria)
 
-* [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
-* [Onderzoek naar CMS met Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
-* [Onderzoek naar Statamic CMS](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
+* [Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+* [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
+* [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 
 * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 * [SWOT: CMS met Filament](../AnalyseAdvies/SwotFilamentCms.md)

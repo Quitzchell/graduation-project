@@ -1,4 +1,4 @@
-# **Onderzoek naar het AllesOnline CMS**
+# **Onderzoek naar AllesOnline CMS**
 
 # Inleiding
 
@@ -9,7 +9,7 @@ Dit document beschrijft de analyse van het AllesOnline CMS en is gericht op het 
 >* [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 >
 >*De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse:* 
->* [SWOT: AllesOnline CMS ](./SwotAOCms.md)
+>* [SWOT: AllesOnline CMS](./SwotAOCms.md)
 
 # Beheren van content 
 

@@ -1,4 +1,4 @@
-# **Diagram voor content management in Statamic flat-file / eloquent-driver**
+# **Diagram Statamic Runway-addon**
 
 ![Diagram voor Content Management met Statamic flat file](../Images/uml-diagram-statamic-runway.png)
 

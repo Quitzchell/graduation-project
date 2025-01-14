@@ -1,7 +1,7 @@
 # **SWOT: AllesOnline CMS**
 
 >_Voor meer informatie over het AllesOnline CMS:_
-> * [Onderzoeksdocument over het AllesOnline CMS](./OnderzoekNaarHetAOCms.md)
+> * [Onderzoek naar AllesOnline CMS](./OnderzoekNaarHetAOCms.md)
 
 ## Strengths (Sterktes)
 
