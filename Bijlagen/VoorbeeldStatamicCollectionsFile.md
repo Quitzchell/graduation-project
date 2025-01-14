@@ -1,4 +1,4 @@
-# **Collections file in Statamic**
+# **Collections YAML voor pages Collection**
 
 ```yaml
 title: Pages

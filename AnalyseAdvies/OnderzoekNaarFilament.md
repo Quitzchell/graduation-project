@@ -9,7 +9,7 @@ Dit document beschrijft de analyse van Filament en hoe het kan worden gebruikt v
 > * [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 
 > _De belangrijkste bevindingen over het Filament zijn samengebracht in een SWOT-analyse._
->  * [SWOT: CMS met Filament](./SwotFilamentCms.md)
+>  * [SWOT: Filament](./SwotFilamentCms.md)
 
 # Over Filament
 

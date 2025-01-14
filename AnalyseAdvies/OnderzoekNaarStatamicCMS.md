@@ -9,7 +9,7 @@ Dit document beschrijft de analyse van Statamic voor het opzetten van een CMS vo
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 
 > _De belangrijkste bevindingen over Statamic zijn samengebracht in een SWOT-analyse._
->  * [SWOT: CMS met Statamic](./SwotStatamicCms.md)
+>  * [SWOT: Statamic](./SwotStatamicCms.md)
 
 # Over Statamic
 
@@ -54,7 +54,7 @@ Het omzetten van de flat-file configuratie naar de eloquent-driver configuratie 
 
 > _Meer informatie omtrent de eloquent-driver_
 > * [Eloquent-driver documentatie](https://github.com/statamic/eloquent-driver)
-> * [Eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
+> * [Statamic eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
 
 # Beheren van content en objecten
 ## Collection
@@ -64,7 +64,7 @@ In Statamic zijn `Collections` containers waarin gerelateerde `Entries` worden g
 `Collections` kunnen via het Control Panel van Statamic of aan de hand van YAML-bestanden in de codebase gedefinieerd worden. In de eloquent-driver configuratie kan het configuratiebestand van een `Collection` in de database gepersisteerd worden.
 
 > _Voorbeeld van een Collections YAML_
-> * [Collections YAML voor Pages collection](../Bijlagen/VoorbeeldStatamicCollectionsFile.md)
+> * [Statamic Collections YAML voor Pages collection](../Bijlagen/VoorbeeldStatamicCollectionsFile.md)
 
 ## Blueprint
 
@@ -87,7 +87,7 @@ De `Entry`-class is het model dat wordt gebruikt om alle objecten binnen een col
 In het geval dat de flat-file configuratie wordt gebruikt, worden de bestanden als markdown in de codebase opgeslagen in de directory van de bijbehorende `Collection`. Wanneer de eloquent-driver configuratie toegepast is, wordt de informatie van een Entry als JSON in de database gepersisteert. 
 
 > _Voorbeeld van Entry binnen Page collection voor de homepage_
-> * [Markdown voor homepage](../Bijlagen/VoorbeeldStatamicFlatFile.md)
+> * [Statamic Markdown voor homepage](../Bijlagen/VoorbeeldStatamicFlatFile.md)
 
 # Runway
 
@@ -101,7 +101,7 @@ Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionali
 
 > _Meer informatie omtrent Runway_
 > * [Runway addon documentatie](https://runway.duncanmcclean.com/)
-> * [Runway configuratie](../Bijlagen/RunwayConfigFile.md)
+> * [Runway configuratiebestand](../Bijlagen/RunwayConfigFile.md)
 
 ## Beperkingen Runway
 

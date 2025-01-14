@@ -9,27 +9,26 @@
 
 # Projectmanagement
 
-* ### [Logboek](./Projectmanagement/Logboek.md)
 * ### [Evidence in verhouding tot leeruitkomsten](./Projectmanagement/EvidenceInVerhoudingTotLeeruitkomsten.md)
 
 # Analyse & Advies
 
-* ### [initiële gesprekken met developers](./AnalyseAdvies/InitieleGesprekkenDevelopers.md)
-* ### [gesprekken met developers tijdens mid-term reviews](./AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
-* ### [gesprekken met developers voor adviesopstelling](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* ### [Initiële gesprekken met developers](./AnalyseAdvies/InitieleGesprekkenDevelopers.md)
+* ### [Gesprekken met developers tijdens mid-term reviews](./AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
+* ### [Laatste gesprekken met Developers voor opstellen advies](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
 * ### [gesprekken met vormgevers](./AnalyseAdvies/GesprekMetVormgevers.md)
 
 * ### [Requirements](./AnalyseAdvies/Requirements.md)
 * ### [Checklist voor CMS criteria](./AnalyseAdvies/ChecklistVoorCMSCriteria)
 
-* ### [Onderzoek naar het AllesOnline CMS](./AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+* ### [Onderzoek naar AllesOnline CMS](./AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 * ### [SWOT: AllesOnline CMS](./AnalyseAdvies/SwotAOCms.md)
 
-* ### [Onderzoek naar CMS met Filament](./AnalyseAdvies/OnderzoekNaarFilament.md)
-* ### [SWOT: CMS met Filament](./AnalyseAdvies/SwotFilamentCms.md)
+* ### [Onderzoek naar Filament](./AnalyseAdvies/OnderzoekNaarFilament.md)
+* ### [SWOT: Filament](./AnalyseAdvies/SwotFilamentCms.md)
 
-* ### [Onderzoek naar Statamic CMS](./AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
-* ### [SWOT: Statamic CMS](./AnalyseAdvies/SwotStatamicCms.md)
+* ### [Onderzoek naar Statamic](./AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
+* ### [SWOT: Statamic](./AnalyseAdvies/SwotStatamicCms.md)
 
 * ### [Onderzoek voor CMS migratie](./AnalyseAdvies/OnderzoekVoorCmsMigratie.md)
 * ### [Advies CMS migratie](./AnalyseAdvies/AdviesCMSMigratie.md)
@@ -42,7 +41,7 @@
 * ### [Technische documentatie CMS prototypes](./DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
 * ### [Repository: Frontend prototype](https://github.com/Quitzchell/graduation-frontend)
-* ### [Repository: Backend AO CMS](https://github.com/Quitzchell/graduation-ao-cms/)
+* ### [Repository: Backend AllesOnline CMS](https://github.com/Quitzchell/graduation-ao-cms/)
 * ### [Repository: Backend Filament CMS](https://github.com/Quitzchell/graduation-filament-cms)
 * ### [Repository: Backend Statamic Flat File](https://github.com/Quitzchell/graduation-statamic-cms)
 * ### [Repository: Backend Statamic Eloquent-driver](https://github.com/Quitzchell/graduation-statamic-ed-cms)
@@ -68,9 +67,10 @@
 
 * #### [CMS schema voor een AllesOnline object](./Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
 * #### [Voorbeeld van documentatie AllesOnline CMS](./Bijlagen/VoorbeeldVanDocumentatieAllesOnlineCMS.md)
-* #### [Collections file in Statamic](./bijlagen/VoorbeeldStatamicCollectionsFile.md)
+* #### [Statamic Collections YAML voor pages Collection](./bijlagen/VoorbeeldStatamicCollectionsFile.md)
 * #### [Statamic eloquent-driver configuratiebestand](./Bijlagen/eloquent-driver-config.md)
 * #### [Statamic Runway configuratiebestand](./Bijlagen/RunwayConfigFile.md)
+* #### [Statamic Markdown voor homepage](../Bijlagen/VoorbeeldStatamicFlatFile.md)
 
 * #### [Hackathon: Bouw van CMS met Filament en Statamic](./Bijlagen/HackatonBouwCMS.md)
 * #### [Hackathon: Bouw een custom Filament component met Livewire en Alpine.js](./Bijlagen/HackatonBouwFilamentComponent.md)

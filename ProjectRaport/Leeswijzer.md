@@ -2,7 +2,7 @@
 
 > * [Evidence in verhouding tot leeruitkomsten](../Projectmanagement/EvidenceInVerhoudingTotLeeruitkomsten.md)
 
-> * [Omschrijving opdracht](../ProjectRaport/Opdracht.md)
+> * [De opdracht](../ProjectRaport/Opdracht.md)
 
 # Inleiding
 
@@ -33,8 +33,8 @@ In de eerste weken van dit project heb ik me gericht op het analyseren van het A
 
 Uit de gesprekken met developers bleek dat zij over het algemeen tevreden zijn met het CMS. Hoewel niet alles volgens *Best Practices* verloopt en er soms onduidelijkheden bestaan over de werking van het CMS, slagen zij er meestal in om op een pragmatische manier tot oplossingen te komen. Er werd ook aangegeven dat zij een verbeterde developer experience zouden waarderen. Hierbij kan gedacht worden aan meer abstractie van functionaliteiten, zodat complexiteit beter kan worden verborgen en herbruikbare oplossingen eenvoudiger te implementeren zijn. Dit zou in de toekomst kunnen bijdragen aan het sneller en eenvoudiger realiseren van specifieke klantwensen.
 
-> * [Samenvatting initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
-> * [Onderzoek naar het AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
+> * [Initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
+> * [Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 > * [SWOT: AllesOnline CMS](../AnalyseAdvies/SwotAOCms.md)
 
 Parallel aan de analyse heb ik requirements opgesteld waaraan een CMS moet voldoen om te voorzien in de behoeften van een typische AllesOnline-website. Op basis van deze requirements heb ik een **Multi-Criteria Decision Making**-analyse in **DOT**-frameworkstijl opgesteld, waarmee ik eenvoudig kan bijhouden hoe de frameworks zich tot de gestelde requirements verhouden.
@@ -153,7 +153,7 @@ Tijdens dit onderzoek ben ik ook begonnen met het ontwerpen en ontwikkelen van h
 >* [Diagram Statamic CMS flat-file / eloquent-driver](../Bijlagen/UmlDiagramStatamicFlatFileEloquentDriver.md)
 >* [Diagram Statamic Runway-addon](../Bijlagen/UmlDiagramStatamicRunway.md)
 
->* [Technische documentatie van CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
+>* [Technische documentatie CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
 
 ### Conclusies onderzoek naar Statamic CMS
 

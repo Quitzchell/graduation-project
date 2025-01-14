@@ -37,7 +37,7 @@ De weergave van de module is gedefinieerd in een **blade**-template, waarin de p
 Het `Page`-model kan gezien worden als het belangrijkste model binnen de websites die gebruik maken van het AllesOnline CMS. Dit model is verantwoordelijk voor het persisteren van de pagina's binnen een website en fungeert als de basisstructuur waarop de inhoud van de website wordt opgebouwd. Binnen het model worden belangrijke gegevens zoals de naam van de pagina, de URL en het toegepaste `Template` opgeslagen. Aan de hand van een `Template` wordt bepaald welke content aan een pagina kan worden toegevoegd. Deze content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
 
 > _Een ERD met betrekking tot het `Page`-model en CMS content_:
-> * [ERD AllesOnline CMS page model](../Bijlagen/ErdAoCmsPageModel.md)
+> * [ERD AllesOnline CMS (page model)](../Bijlagen/ErdAoCmsPageModel.md)
 
 ## Templates
 
@@ -78,7 +78,7 @@ Hoewel het AllesOnline CMS een goed fundament biedt voor het ontwikkelen van web
 Een van de grootste gebreken van het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is, ontbreekt het vaak aan concrete informatie over de werking van bepaalde modules en functionaliteiten. In sommige gevallen is er zelfs helemaal geen informatie beschikbaar over specifieke functionaliteiten.
 
 > _Een voorbeeld van documentatie vind je in deze bijlage:_
->  * [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
+>  * [Voorbeeld documentatie van het huidige AllesOnline CMS](../Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
 
 **Aanbeveling**:
 * Zorg voor correcte documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, met voorbeelden van hoe functionaliteiten in verschillende scenario’s gebruikt kunnen worden. Dit voorkomt onduidelijkheid en zorgt ervoor dat developers zich kunnen concentreren op het realiseren van de requirements van klanten.
