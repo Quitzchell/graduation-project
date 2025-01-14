@@ -1,7 +1,7 @@
 # **Revitalising Content Management**
 # Project Raport
 
-* ### [Voorpagina](./ProjectRaport/Voorpagina.md)
+* ### [Voorpagina](./Images/Voorpagina.png)
 * ### [De opdracht](./ProjectRaport/Opdracht.md)
 * ### [Projectplan](./ProjectRaport/Projectplan.md)
 * ### [Project Report](./ProjectRaport/ProjectReport.md)
