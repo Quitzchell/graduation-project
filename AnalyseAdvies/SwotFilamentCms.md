@@ -1,7 +1,7 @@
 # **SWOT: Filament**
 
 >_Voor meer informatie over het Filament:_
-> * [Onderzoeksdocument over Filament](./OnderzoekNaarFilament.md)
+> * [Onderzoek naar Filament](./OnderzoekNaarFilament.md)
 
 # Strengths (Sterktes)
 
@@ -19,12 +19,9 @@
 # Opportunities (Kansen)
 
 * **Vergroting van de flexibiliteit met plugins**: Filament heeft een marketplace met gratis en betaalde `Plugins`, ontwikkeld door het Filament-team en externe partijen. AllesOnline kan eigen componenten aanbieden via de marketplace.
-* **Actieve open source community:** De actieve open source community van Filament biedt niet alleen ondersteuning maar ook mogelijkheden voor samenwerking, zoals het bijdragen aan nieuwe features, verbeteren van documentatie, of oplossen van bugs. (FilamentPHP, 2025).
+* **Actieve open source community:** De actieve open source community van Filament biedt niet alleen ondersteuning maar ook mogelijkheden voor samenwerking, zoals het bijdragen aan nieuwe features, verbeteren van documentatie, of oplossen van bugs.
 
 # Threats (Bedreigingen)
 
 * **Onbekende technieken voor AllesOnline developers**: Een risico voor AllesOnline is dat Filament voor de werking van zijn componenten gebruikt maakt van Livewire en Alpine.js. Deze twee technieken zijn voor de developers van AllesOnline nog relatief onbekend.
 * **Kosten van maatwerkontwikkeling**: Filament is goed voor eenvoudige tot middelgrote projecten, maar voor organisaties die uitgebreide, complexe structuren nodig hebben, kunnen de kosten voor maatwerk en de tijdsinvestering in aanpassingen oplopen.
-
-# Literatuurlijst
-> FilamentPHP. (2025). Filament [Software repository]. GitHub. [https://github.com/filamentphp/filament](https://github.com/filamentphp/filament)

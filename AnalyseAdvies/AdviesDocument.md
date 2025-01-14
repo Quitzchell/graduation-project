@@ -26,7 +26,7 @@ Bovendien zijn er inconsistenties tussen bepaalde inputvelden, die ondanks gelij
 
 ## Hoe te verbeteren 
 
-De doorontwikkeling zou zich in eerste instantie moeten focussen op het modulair en testbaar maken van de `FormModules`. Deze modules functioneren op het hoogste niveau binnen het systeem en zijn relatief onafhankelijk van andere onderdelen. Door ze modulairder en meer single-responsible te ontwerpen, wordt het mogelijk om geautomatiseerde tests te implementeren. Deze tests waarborgen dat bestaande functionaliteiten intact blijven bij wijzigingen of verdere ontwikkeling. Dit creëert een solide basis waarmee stapsgewijs naar lagere niveaus kan worden gewerkt, zoals de code die verantwoordelijk is voor het persisteren van objecten en content.
+De doorontwikkeling zou zich in eerste instantie moeten focussen op het modulair en testbaar maken van de `FormModules`. Deze modules functioneren op het hoogste niveau binnen het systeem en zijn relatief onafhankelijk van andere onderdelen. Door ze modulair en meer single-responsible te ontwerpen, wordt het mogelijk om geautomatiseerde tests te implementeren. Deze tests waarborgen dat bestaande functionaliteiten intact blijven bij wijzigingen of verdere ontwikkeling. Dit creëert een solide basis waarmee stapsgewijs naar lagere niveaus kan worden gewerkt, zoals de code die verantwoordelijk is voor het persisteren van objecten en content.
 
 Op deze manier kunnen developers de scope van de doorontwikkeling stapsgewijs uitbreiden, terwijl ze tegelijkertijd werken aan een stevig fundament.
 
@@ -42,7 +42,7 @@ Filament is volledig geïntegreerd met Laravel en maakt gebruik van de Eloquent 
 
 In Filament zijn `Resource`-classes verantwoordelijk voor het definiëren hoe een `Eloquent`-model wordt beheerd in de gebruikersinterface. Deze klassen bepalen hoe gegevens worden weergegeven, ingevoerd en bewerkt. Daarnaast bieden ze tools voor het beheren van de gegevenslevenscyclus, waardoor vergelijkbare datastructuren, zoals die in het AllesOnline CMS, kunnen worden gerealiseerd. Aangezien deze classes volledig in PHP zijn gedefinieerd, kunnen developers eenvoudig extra logica toevoegen en profiteren van autocompletion.
 
-Daarnaast ondersteunen de inputvelden waarin relationships worden gedefinieerd in Filament wel polymorfe relaties, wat het mogelijk maakt om een overzichtelijkere weergave voor eindgebruikers te realiseren.
+Daarnaast ondersteunen de inputvelden waarin relationships worden gedefinieerd in Filament wel polymorfe relaties, wat het mogelijk maakt om een overzichtelijke weergave voor eindgebruikers te realiseren.
 
 ## Marketplace
 
@@ -58,7 +58,7 @@ Het gebruik van Filament is gratis. Het Filament-team biedt echter de mogelijkhe
 
 ## Beperkingen en overwegingen
 
-Het is belangrijk op te merken dat Filament geen kant-en-klare CMS-oplossing biedt. Hoewel het voldoende flexibiliteit biedt om CMS-functionaliteiten te implementeren, vereist dit extra ontwikkeltijd in vergelijking met systemen die deze functionaliteiten standaard aanbieden. Bovendien ontbreekt een drag-and-drop-interface voor het beheren van de menu-structuur. Dit kan voor sommige klanten mogelijk als minder intuïtief kan worden ervaren. Een eenvoudige oplossing is het implementeren van een aparte menu-manager. Een complexere benadering is het ontwikkelen van een custom drag-and-dropcomponent dat vergelijkbaar is met de functionaliteiten van het AllesOnline CMS.
+Het is belangrijk op te merken dat Filament geen kant-en-klare CMS-oplossing biedt. Hoewel het voldoende flexibiliteit biedt om CMS-functionaliteiten te implementeren, vereist dit extra ontwikkeltijd in vergelijking met systemen die deze functionaliteiten standaard aanbieden. Bovendien ontbreekt een drag-and-drop-interface voor het beheren van de menustructuur. Dit kan voor sommige klanten mogelijk als minder intuïtief kan worden ervaren. Een eenvoudige oplossing is het implementeren van een aparte menu-manager. Een complexere benadering is het ontwikkelen van een custom drag-and-dropcomponent dat vergelijkbaar is met de functionaliteiten van het AllesOnline CMS.
 
 Filament is afhankelijk van Livewire en Alpine.js, twee technologieën die mogelijk nog niet volledig beheerst worden door het AllesOnline-team, wat extra training en educatie kan vereisen.
 
@@ -68,17 +68,17 @@ Filament is afhankelijk van Livewire en Alpine.js, twee technologieën die mogel
 
 ## Laravel-ish
 
-In tegenstelling tot Filament is Statamic niet volledig geïntegreerd met Laravel. Dit zie je vooral in de flat-file en Eloquent-driver configuraties,  waarbij gegevens als documenten binnen de repository of als JSON in een database worden opgeslagen. Pas wanneer gekozen wordt voor de Runway-configuratie, wordt het mogelijk om voor elke entiteit specifieke Eloquent-modellen en databasetabellen te creëren. Het opzetten van deze configuratie is echter relatief complexer.
+In tegenstelling tot Filament is Statamic niet volledig geïntegreerd met Laravel. Dit zie je vooral in de flat-file- en eloquent-driver configuraties,  waarbij gegevens als documenten binnen de repository of als JSON in een database worden opgeslagen. Pas wanneer gekozen wordt voor de Runway-configuratie, wordt het mogelijk om voor elke entiteit specifieke Eloquent-modellen en databasetabellen te creëren. Het opzetten van deze configuratie is echter relatief complexer.
 
 ## Flat-file versus Database
 
-Met Statamic is het mogelijk om eenvoudig te kiezen tussen een flat-file of een database-gebaseerde architectuur. De flat-filearchitectuur is eenvoudig, snel en geschikt voor kleine tot middelgrote websites. Echter, bij grotere hoeveelheden data of meerdere gelijktijdige bewerkingen, is één van de databaseconfiguraties een betere keuze. Deze bieden namelijk betere schaalbaarheid en geavanceerder gegevensbeheer door het gebruik van een database.
+Met Statamic is het mogelijk om eenvoudig te kiezen tussen een flat-file of een database-gebaseerde architectuur. De flat-file configuratie is eenvoudig, snel en geschikt voor kleine tot middelgrote websites. Echter, bij grotere hoeveelheden data of meerdere gelijktijdige bewerkingen, is één van de database configuraties een betere keuze. Deze bieden namelijk betere schaalbaarheid en geavanceerder gegevensbeheer door het gebruik van een database.
 
 ## Gegevensbeheer
 
-Zoals eerder vermeld, is het gegevensbeheer in Statamic in de flat-file- en eloquent-driverconfiguraties documentgeoriënteerd. Dit maakt het beheren van gegevens flexibeler en stelt gebruikers in staat om inputvelden met polymorfe relaties te gebruiken. Dit voordeel verdwijnt echter bij het gebruik van de Runway-configuratie.
+Zoals eerder vermeld, is het gegevensbeheer in Statamic in de flat-file- en eloquent-driver configuraties documentgeoriënteerd. Dit maakt het beheren van gegevens flexibeler en stelt gebruikers in staat om inputvelden met polymorfe relaties te gebruiken. Dit voordeel verdwijnt echter bij het gebruik van de Runway-configuratie.
 
-Het wisselen tussen de flat-file- en eloquent-driverconfiguratie is volledig geautomatiseerd in Statamic en kan eenvoudig worden uitgevoerd via een CLI-command.
+Het wisselen tussen de flat-file- en eloquent-driver configuratie is volledig geautomatiseerd in Statamic en kan eenvoudig worden uitgevoerd via een CLI-command.
 
 ## Multi-site
 
@@ -90,17 +90,17 @@ De gebruiksvriendelijke interface stelt niet-technische gebruikers in staat om g
 
 ## Kosten 
 
-Afhankelijk van het aantal websites dat met Statamic in productie wordt genomen, biedt Statamic verschillende licentieopties. De keuze voor de **Statamic Pro** licentie is noodzakelijk voor commerciële toepassingen, maar de **Master License** biedt een goede mogelijkheid om meerdere websites te beheren tegen een gereduceerde prijs. Bij verdere groei kan het abonnementsmodel van de **Platform Subscription** voordeliger zijn.
+Afhankelijk van het aantal websites dat met Statamic in productie wordt genomen, biedt Statamic verschillende licentie opties. De keuze voor de **Statamic Pro** licentie is noodzakelijk voor commerciële toepassingen, maar de **Master License** biedt een goede mogelijkheid om meerdere websites te beheren tegen een gereduceerde prijs. Bij verdere groei kan het abonnementsmodel van de **Platform Subscription** voordeliger zijn.
 
 ## Beperkingen en overwegingen
 
-Statamic maakt voor de interface van het control panel gebruik van Vue 2 dat al is sinds eind 2023 EOL is. Statamic heeft aangegeven in het voorjaar van 2025 over te stappen naar Vue 3, wat betekent dat eventuele custom Vue 2-componenten naar Vue 3 gemigreerd moeten worden.
+Statamic maakt voor de interface van het control panel gebruik van Vue 2 dat al sinds eind 2023 EOL is. Statamic heeft aangegeven in het voorjaar van 2025 over te stappen naar Vue 3, wat betekent dat eventuele custom Vue 2-componenten naar Vue 3 gemigreerd moeten worden.
 
-Omdat Statamic gebruik maakt van YAML-bestanden voor de configuratie van schema’s, kan de leercurve aanvankelijk wat steiler zijn, vooral door de soms versplinterde structuur van de documentatie.
+Omdat Statamic gebruikmaakt van YAML-bestanden voor de configuratie van schema’s, kan de leercurve aanvankelijk wat steiler zijn, vooral door de soms versplinterde structuur van de documentatie.
 
 ## Migreren van bestaande AllesOnline CMS
 
-Statamic maakt in al zijn configuraties gebruik van een afwijkende datasctructuur, wat aanzienlijke aanpassingen vereist bij een migratie. Dit vergroot de complexiteit van het proces, waardoor het niet raadzaam is om bestaande AllesOnline-projecten naar Statamic te migreren. Wanneer het te migreren project echter niet te groot is, maar de voordelen voor de eindgebruiker bij Statamic doorslaggevend zijn, kan de backend van de website relatief eenvoudig opnieuw worden opgebouwd in Statamic met de Eloquent-driverconfiguratie. Met een goed voorbereide migratie zou in dit geval enkel de bestaande database nog hoeven te worden overgezet en aan de frontend worden gekoppeld.
+Statamic maakt in al zijn configuraties gebruik van een afwijkende datasctructuur, wat aanzienlijke aanpassingen vereist bij een migratie. Dit vergroot de complexiteit van het proces, waardoor het niet raadzaam is om bestaande AllesOnline-projecten naar Statamic te migreren. Wanneer het te migreren project echter niet te groot is, maar de voordelen voor de eindgebruiker bij Statamic doorslaggevend zijn, kan de backend van de website relatief eenvoudig opnieuw worden opgebouwd in Statamic met de Eloquent-driver configuratie. Met een goed voorbereide migratie zou in dit geval enkel de bestaande database nog hoeven te worden overgezet en aan de frontend worden gekoppeld.
 
 # Advies en aanbevelingen
 
@@ -114,7 +114,7 @@ De mogelijkheid om bestaande componenten direct via PHP aan te passen in Filamen
 
 ## Statamic
 
-Statamic zou daarentegen een geschikte keuze kunnen zijn voor klanten die slechts een marketingwebsite nodig hebben, waarbij de content dynamisch beheerd wordt, maar waar geen complexe relaties en datastructuren worden verwacht. Een CMS voor dit soort websites kan met Statamic relatief sneller gerealiseerd worden dan met Filament. Denk hierbij aan klanten zoals DPD, Vierstroom of zelfs Westfalia.
+Statamic zou daarentegen een geschikte keuze kunnen zijn voor klanten die slechts een marketing website nodig hebben, waarbij de content dynamisch beheerd wordt, maar waar geen complexe relaties en datastructuren worden verwacht. Een CMS voor dit soort websites kan met Statamic relatief sneller gerealiseerd worden dan met Filament. Denk hierbij aan klanten zoals DPD, Vierstroom of zelfs Westfalia.
 
 Daarnaast zou het mogelijk zijn om een boilerplate voor Statamic te ontwikkelen met gestandaardiseerde componenten. Dit zou de vormgevers bij AllesOnline in staat stellen om zelfstandig whitelabel-websites te creëren via Statamic, terwijl de developers directe technische ondersteuning kunnen bieden wanneer dat nodig is.
 
@@ -122,7 +122,7 @@ Een uitdaging van Statamic is dat de licentiekosten per website in eerste instan
 
 ## Combineren
 
-Voor klanten die zowel complexiteit als een marketingwebsite verwachten, kan gesteld worden dat het inzetten van beide oplossingen een realistische keuze is. In dit geval zou bijvoorbeeld een adminpaneel voor stakeholders in Filament gerealiseerd kunnen worden, terwijl de marketingwebsite – of mogelijk zelfs whitelabel-websites – in Statamic beheerd kunnen worden. Op deze manier kan een diverse verzameling systemen worden opgeleverd, die elk afgestemd zijn op hun specifieke use cases. Dit zou bijvoorbeeld nuttig kunnen zijn voor projecten zoals OpleidingVinden of ScamAdviser.
+Voor klanten die zowel complexiteit als een marketingwebsite verwachten, kan gesteld worden dat het inzetten van beide oplossingen een realistische keuze is. In dit geval zou bijvoorbeeld een adminpaneel voor stakeholders in Filament gerealiseerd kunnen worden, terwijl de marketingwebsite, of mogelijk zelfs whitelabel-websites, in Statamic beheerd kunnen worden. Op deze manier kan een diverse verzameling systemen worden opgeleverd, die elk afgestemd zijn op hun specifieke use cases. Dit zou bijvoorbeeld nuttig kunnen zijn voor projecten zoals OpleidingVinden of ScamAdviser.
 
 ## Migratie van bestaande projecten
 
@@ -137,7 +137,7 @@ Het migreren naar **Statamic** is, vooral voor grotere projecten, minder geschik
 
 ## Langetermijneffecten
 
-Hoewel de keuze om externe systemen te integreren nog steeds een investering is, kan het AllesOnline in de toekomst veel voordelen opleveren. Door te vertrouwen op doorontwikkelde systemen van externe partijen kan AllesOnline zich blijven aanpassen aan technologische innovaties, zonder last te ervaren van de veroudering van een eigen systeem. Dit bevordert de duurzaamheid van de bedrijfsvoering en voorziet dat de focus kan liggen op het voldoen in klantbehoeften in plaats van het onderhouden van verouderde systemen.
+Hoewel de keuze om externe systemen te integreren nog steeds een investering is, kan het AllesOnline in de toekomst veel voordelen opleveren. Door te vertrouwen op doorontwikkelde systemen van externe partijen kan AllesOnline zich blijven aanpassen aan technologische innovaties, zonder last te ervaren van de veroudering van een eigen systeem. Dit bevordert de duurzaamheid van de bedrijfsvoering en voorziet dat de focus kan liggen op het voldoen aan klantbehoeften in plaats van het onderhouden van verouderde systemen.
 
 Bovendien positioneert het bedrijf zich op deze manier als een flexibele en toekomstgerichte speler in de markt, waardoor het aantrekkelijk blijft voor zowel klanten als talentvolle, toekomstige medewerkers. Strategisch gezien kan deze beslissing bijdragen aan stabiele groei en biedt het een concurrentievoordeel, omdat de bedrijfsfocus volledig gericht blijft op klantgerichte innovatie en creatieve oplossingen.
 
@@ -165,7 +165,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
     <tr>
         <td>Training: Statamic / Filament</td>
         <td>3 - 7 uur*</td>
-        <td>Developers volgen naar eigen inzicht relevante workshops op Laracast</td>
+        <td>Developers volgen naar eigen inzicht relevante tutorial op Laracast</td>
     </tr>
     <tr>
         <td><a href="../Bijlagen/HackatonBouwCMS.md">Hackathon: Bouw van CMS met Filament en Statamic</a></td>
@@ -175,7 +175,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
     <tr>
         <td>Training: Livewire / Alpine.js</td>
         <td>3 - 7 uur*</td>
-        <td>Developers volgen naar eigen inzicht workshops voor Livewire en Alpine.js om dynamische functionaliteit in Filament beter te begrijpen</td>
+        <td>Developers volgen naar eigen inzicht relevante tutorial op Laracast</td>
     </tr>
     <tr>
         <td><a href="../Bijlagen/HackatonBouwFilamentComponent.md">Hackathon: Bouw een custom Filament component met Livewire en Alpine.js</a></td>
@@ -252,7 +252,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 </tbody>
 </table>
 
- \* _Bovenop reguliere werkuren voor projectuitvoering._
+ \* _Boven op reguliere werkuren voor projectuitvoering._
 
 ## Fase 3b: Migratie van bestaande projecten
 **Doel: Gecontroleerde migratie van bestaande projecten naar Filament.**
@@ -306,7 +306,7 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
     <tr>
         <td>Feedback verzamelen</td>
         <td>-</td>
-        <td>Actief feedback verzamelen van klanten, gebruikers en het developmentteam over de ervaringen met de nieuwe systemen</td>
+        <td>Actief feedback verzamelen van klanten, gebruikers en het development team over de ervaringen met de nieuwe systemen</td>
     </tr>
     <tr>
         <td>Optimalisatie</td>
@@ -330,10 +330,10 @@ Om een soepele overgang van het AllesOnline CMS naar Filament en Statamic te waa
 
 In dit adviesdocument worden, op basis van het uitgevoerde onderzoek, de mogelijkheden voor AllesOnline besproken om over te stappen van het huidige interne CMS naar **Filament** en **Statamic**. Hoewel het AllesOnline CMS jarenlang een solide basis heeft geboden voor webapplicaties, blijkt uit dit onderzoek dat het systeem inmiddels verouderd is en niet voldoende wordt onderhouden om bij te blijven met de groeiende eisen van klanten en technologische vooruitgang. Het verbeteren van het huidige CMS, bijvoorbeeld door de SOLID-principes toe te passen, zou een langdurig proces zijn dat een aanzienlijke inspanning vereist en niet in verhouding staat tot de voordelen van het inzetten van een externe oplossing.
 
-Daarom wordt AllesOnline aangeraden om niet verder door te ontwikkelen aan het huidige systeem, maar in plaats daarvan externe systemen te omarmen. Filament biedt een uitstekende keuze voor projecten die complexiteit en maatwerk vereisen, zoals webapplicaties met een uitgebreid assortiment, grote hoeveelheden data of complexe klantenservicesystemen. De flexibiliteit van Filament, gecombineerd met de sterke integratie met Laravel, maakt het een krachtige oplossing voor deze typen projecten.
+Daarom wordt AllesOnline aangeraden om niet verder door te ontwikkelen aan het huidige systeem, maar in plaats daarvan externe systemen te omarmen. Filament biedt een uitstekende keuze voor projecten die complexiteit en maatwerk vereisen, zoals webapplicaties met een uitgebreid assortiment, grote hoeveelheden data of complexe klantenservice systemen. De flexibiliteit van Filament, gecombineerd met de sterke integratie met Laravel, maakt het een krachtige oplossing voor deze typen projecten.
 
-Statamic biedt een meer gestandaardiseerde, gebruiksvriendelijke oplossing voor marketingwebsites met dynamische contentbehoeften. Dit maakt het ideaal voor eenvoudigere projecten die snel en efficiënt moeten worden geïmplementeerd.
+Statamic biedt een meer gestandaardiseerde, gebruiksvriendelijke oplossing voor marketingwebsites met dynamische content behoeften. Dit maakt het ideaal voor eenvoudigere projecten die snel en efficiënt moeten worden geïmplementeerd.
 
-Op basis van de analyse en de voordelen van zowel Filament als Statamic wordt het aangeraden om Filament als primaire oplossing te gebruiken voor zowel de migratie van bestaande projecten als voor nieuwe ontwikkelingen. De compatibiliteit van Filament met het huidige AllesOnline CMS, de mogelijkheid om geautomatiseerde migraties te realiseren en de relatief vergelijkbare datastructuren maken het de meest logische keuze. Statamic kan daarentegen een waardevolle aanvulling zijn voor marketingwebsites of als een alternatief voor specifieke klantbehoeften.
+Op basis van de analyse en de voordelen van zowel Filament als Statamic wordt het aangeraden om Filament als primaire oplossing te gebruiken voor zowel de migratie van bestaande projecten als voor nieuwe ontwikkelingen. De compatibiliteit van Filament met het huidige AllesOnline CMS, de mogelijkheid om geautomatiseerde migratie te realiseren en de relatief vergelijkbare datastructuren maken het de meest logische keuze. Statamic kan daarentegen een waardevolle aanvulling zijn voor marketingwebsites of als een alternatief voor specifieke klantbehoeften.
 
 Door de overstap naar deze externe systemen kan AllesOnline zich richten op zijn kerntaak: het ontwikkelen van klantgerichte oplossingen, terwijl de technologische basis stevig en toekomstbestendig blijft. Dit bevordert zowel de efficiëntie als de flexibiliteit van het bedrijf, en maakt het mogelijk om de focus volledig op klantbehoeften te richten, zonder het zware onderhoud van een eigen systeem.

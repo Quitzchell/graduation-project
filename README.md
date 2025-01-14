@@ -14,10 +14,10 @@
 
 # Analyse & Advies
 
-* ### [Samenvatting initiële gesprekken met developers](./AnalyseAdvies/InitieleGesprekkenDevelopers.md)
-* ### [Samenvatting gesprekken met developers tijdens mid-term reviews](./AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
-* ### [Samenvatting gesprekken met developers voor adviesopstelling](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
-* ### [Samenvatting gesprekken met vormgevers](./AnalyseAdvies/GesprekMetVormgevers.md)
+* ### [initiële gesprekken met developers](./AnalyseAdvies/InitieleGesprekkenDevelopers.md)
+* ### [gesprekken met developers tijdens mid-term reviews](./AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
+* ### [gesprekken met developers voor adviesopstelling](./AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* ### [gesprekken met vormgevers](./AnalyseAdvies/GesprekMetVormgevers.md)
 
 * ### [Requirements](./AnalyseAdvies/Requirements.md)
 * ### [Checklist voor CMS criteria](./AnalyseAdvies/ChecklistVoorCMSCriteria)
@@ -56,7 +56,7 @@
 
 * #### [ERD AllesOnline CMS (page model)](./Bijlagen/ErdAoCmsPageModel.md)
 * #### [UML Entiteiten diagram voor prototype](./Bijlagen/UmlEntiteitenDiagramPrototype.md)
-* #### [UML Class diagram voor content management in Filament CMS](./Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+* #### [UML class-diagram: content management Filament](./Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 * #### [Diagram Statamic CMS flat-file / eloquent-driver](./Bijlagen/UmlDiagramStatamicFlatFileEloquentDriver.md)
 * #### [Diagram Statamic Runway-addon](./Bijlagen/UmlDiagramStatamicRunway.md)
 

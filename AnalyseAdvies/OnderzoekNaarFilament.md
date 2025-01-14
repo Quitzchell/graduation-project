@@ -15,7 +15,7 @@ Dit document beschrijft de analyse van Filament en hoe het kan worden gebruikt v
 
 Net zoals het AllesOnline CMS, maakt Filement gebruik van **Laravel** en het **Eloquent ORM**. 
 
-De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze packages omvatten verzamelingen van modules voor tabellen, formulieren, acties, notificaties en een container om alle modules samen te brengen. Volgens de documentatie bevat de basisinstallatie van Filament de volgende packages:
+De beschikbare componenten zijn onderverdeeld in verschillende packages. Deze packages bevatten verzamelingen van modules voor tabellen, formulieren, acties, notificaties en een container om alle modules samen te brengen. Volgens de documentatie bevat de basisinstallatie van Filament de volgende packages:
 * Panel Builder
 * Form Builder 
 * Table Builder 
@@ -43,7 +43,7 @@ Voor het beheren van gegevens maakt Filament gebruik van de `Resource`-classes. 
 3. **Componenten**: Binnen de `Resources` kunnen componenten gedefinieerd worden om de eerder genoemde views van een gebruikersinterface te voorzien. Denk hierbij onder andere aan invoervelden en/of gegevens zichtbaar zijn voor de eindgebruiker en hoe ze hiermee kunnen interacteren.
 4. **Permissions en Middleware**: Filament integreert met Laravel's ingebouwde autorisatiesysteem, waardoor het mogelijk is om `policies` en `gates` te gebruiken voor autorisatie. Daarnaast kan de package `spatie/laravel-permission` worden geïntegreerd voor een uitgebreidere rolgebaseerde autorisatie. 
 
-## Menu managent
+## Menu management
 
 Filament biedt standaard geen module die het mogelijk maakt om objecten hiërarchisch in te delen via een overview. Hierdoor ontbreekt de functionaliteit om op een intuïtieve manier een menustructuur voor een website te definiëren, zoals mogelijk is in het **AllesOnline CMS** met de `ContentManagerModule`. Desondanks zijn er plugins beschikbaar die dit wel mogelijk maken. Het is ook mogelijk om te werken met een `MenuManager`, waarin `Page`-objecten aan een `Menu`-object gekoppeld kunnen worden en waar recursief `child-pages` aan gekoppeld kunnen worden. Dit zou eventueel uitgebreid kunnen worden naar meerdere objecten door bijvoorbeeld een interface te introduceren die voorziet in de functionaliteiten die een `menuable`-object nodig heeft.
 
@@ -53,7 +53,7 @@ Net zoals in het AllesOnline CMS, kan in Filament een `Page`-model worden gereal
 
 ## Templates, Blocks en Form-components
 
-Ook in Filament dient een `Template`, net zoals in het AllesOnline CMS, als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kunnen worden. Echter, kan een `Template` binnen Filament aan de hand van PHP-classes worden gedefineerd. Dit maakt het mogelijk om gebruik te maken van interfaces om bepaalde functionaliteiten van een `Template`-class te abstracteren. Denk hierbij aan het verplichten van het beschikbaar stellen van het `Template`-schema. 
+Ook in Filament dient een `Template`, net zoals in het AllesOnline CMS, als het schema dat voorschrijft welke gegevens via het CMS aan een pagina meegegeven kunnen worden. Echter, kan een `Template` binnen Filament aan de hand van PHP-classes worden gedefinieerd. Dit maakt het mogelijk om gebruik te maken van interfaces om bepaalde functionaliteiten van een `Template`-class te abstracteren. Denk hierbij aan het verplichten van het beschikbaar stellen van het `Template`-schema. 
 
 De schema's voor `Templates` worden opgemaakt met de door Filament beschikbaar gestelde `Form`-components (invoervelden). Binnen een `Template` is het ook weer mogelijk om te verwijzen naar andere schema's waarin een samenvoeging van `Form`-components beschikbaar wordt gesteld. Deze schema's noemen we binnen dit systeem ook weer `Blocks`, en ook deze kunnen geordend worden.
 

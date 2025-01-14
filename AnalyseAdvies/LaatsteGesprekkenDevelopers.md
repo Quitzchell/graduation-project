@@ -2,22 +2,22 @@
 
 # Wilco Kuijpers
 
-In de laatste week van het project heb ik met Wilco gesproken over de resultaten van het onderzoek en de realisatie van de CMS'en. Tijdens dit gesprek bespraken we de voordelen en nadelen van Filament en Statamic die ik tijdens mijn onderzoek heb geconstateerd.
+In de laatste week van het project heb ik met Wilco gesproken over de resultaten van het onderzoek en de realisatie van de CMS'en. Tijdens dit gesprek werd gesproken over de voordelen en nadelen van Filament en Statamic die ik tijdens mijn onderzoek heb geconstateerd.
 
 Wilco benoemde tijdens het gesprek meerdere punten, waar hij zowel positieve als kritische kanttekeningen bij plaatste.
 
 **Positief over Filament:**
-- De flexibiliteit van Filament, met name dat de CMS schema's op een laag niveau nog aan te passen zijn omdat deze in PHP gedefineerd worden. 
-- Ondersteuning voor autocompletion in de CMS-schema's, omdat deze in PHP worden gedefinieerd.
-- De tools die Filament beschikbaar stelt om lifecycle van de gegevensopslag te wijzigen.
+- De flexibiliteit van Filament, met name dat de schema's direct aan te passen zijn omdat deze in PHP gedefinieerd worden. 
+- Ondersteuning voor autocompletion in de schema's, omdat deze in PHP worden gedefinieerd.
+- De tools die Filament beschikbaar stelt om de levenscyclus van de gegevensopslag te wijzigen.
 - De mogelijkheid om Filament ook in te zetten voor klanten die niet perse een CMS nodig hebben, maar een adminpanel
-- Relatief duidelijkere documentatie in tegenstelling to die van Statamic
+- Relatief duidelijke documentatie in tegenstelling tot die van Statamic
 
 **Negatief over Filament:**
-- Dat het best practice is om custom compontenten in Filament met Livewire en Alpine.js te realiseren. 
+- De best practice om custom componenten in Filament met Livewire en Alpine.js te realiseren.
 
 **Positief Statamic:**
-- Lijkt vrij gemakkelijk om op te zetten voor klanten die een eenvoudige CMS nodig hebben voor een simpele content-website.
+- Lijkt vrij gemakkelijk om op te zetten voor klanten die een eenvoudige CMS nodig hebben voor een simpele marketingwebsite.
 - Mogelijkheid om, wanneer monolitisch gewerkt wordt, gemakkelijk live-previews voor klanten mogelijk te maken.
 
 **Negatief Statamic:** 
@@ -25,9 +25,9 @@ Wilco benoemde tijdens het gesprek meerdere punten, waar hij zowel positieve als
 - Beperkte mogelijkheden wanneer een relatie complexer is, bijvoorbeeld wanneer er pivot-data toegevoegd moet worden.
 - Het gebruik van YAML voor het definiëren van schema's. 
 - Dat er door het gebruik van YAML er geen autocompletion voor het maken van de schema's is. 
-- Ontoegangkelijke documentatie waar niet alles gemakkelijk te vinden blijkt te zijn.
+- Ontoegankelijke documentatie waar niet alles gemakkelijk te vinden blijkt te zijn.
 
-Wilco gaf ook aan dat hij het niet als noodzakelijk ziet om een definitieve keuze te maken tussen **Filament** en **Statamic** voor toekomstige projecten. Voor eenvoudige contentwebsites zonder complexe relaties of logica is **Statamic** een geschikte optie. Voor webapplicaties met complexere vereisten biedt **Filament** meer mogelijkheden dankzij de flexibele opzet. Bij grotere projecten waarbij een klant zowel een contentwebsite als een webapplicatie vraagt, kan een combinatie van **Filament** en **Statamic** zelfs een overweging zijn.
+Wilco gaf ook aan dat hij het niet als noodzakelijk ziet om een definitieve keuze te maken tussen **Filament** en **Statamic** voor toekomstige projecten. Voor eenvoudige marketingwebsites zonder complexe relaties of logica is **Statamic** een geschikte optie. Voor webapplicaties met complexere vereisten biedt **Filament** meer mogelijkheden dankzij de flexibele opzet. Bij grotere projecten waarbij een klant zowel een marketingwebsite als een webapplicatie vraagt, kan een combinatie van **Filament** en **Statamic** zelfs een overweging zijn.
 
 # Yoran van Driel
 

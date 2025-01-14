@@ -30,6 +30,6 @@ Na de bovengenoemde drie opties te hebben onderzocht, is besloten om voor een Pr
 
 Naast de migratietool zie ik ook een rol voor **PHP-Rector** bij het automatiseren van PHP- en Laravel-versie-updates. Dit zou eventueel vóór of na het migreren van een AllesOnline CMS-project kunnen worden uitgevoerd, om naast het migreren van het CMS-systeem ook de PHP- en Laravel-versies up-to-date te brengen.
 
-# Referenties
+## Referenties
 
 > Akter, A. (2024, oktober 22). Laravel Requires Require Symfony/Console: A Deep Dive. Medium. [https://medium.com/@asmatanhabd/laravel-requires-require-symfony-console-a-deep-dive-546d7d89b4a8](https://medium.com/@asmatanhabd/laravel-requires-require-symfony-console-a-deep-dive-546d7d89b4a8)

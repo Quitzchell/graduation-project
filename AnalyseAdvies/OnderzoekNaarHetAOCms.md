@@ -4,11 +4,11 @@
 
 Dit document beschrijft de analyse van het AllesOnline CMS en is gericht op het identificeren van knelpunten binnen het huidige systeem, evenals het doen van aanbevelingen. Deze analyse is uitgevoerd als onderdeel van een *Available Product Analysis*.
 
->**Andere onderdelen van het Available Product Analysis:**
+>*Andere onderdelen van het Available Product Analysis*:
 >* [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md) 
 >* [Onderzoek naar Statamic](../AnalyseAdvies/OnderzoekNaarStatamicCMS.md)
 >
->**De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse:** 
+>*De belangrijkste bevindingen over het AllesOnline CMS zijn samengebracht in een SWOT-analyse:* 
 >* [SWOT: AllesOnline CMS ](./SwotAOCms.md)
 
 # Beheren van content 
@@ -37,7 +37,7 @@ De weergave van de module is gedefinieerd in een **blade**-template, waarin de p
 Het `Page`-model kan gezien worden als het belangrijkste model binnen de websites die gebruik maken van het AllesOnline CMS. Dit model is verantwoordelijk voor het persisteren van de pagina's binnen een website en fungeert als de basisstructuur waarop de inhoud van de website wordt opgebouwd. Binnen het model worden belangrijke gegevens zoals de naam van de pagina, de URL en het toegepaste `Template` opgeslagen. Aan de hand van een `Template` wordt bepaald welke content aan een pagina kan worden toegevoegd. Deze content wordt op zijn beurt gepersisteerd via een polymorfe relatie tussen objecten die content aanbieden en het `CmsContent`-model. 
 
 > _Een ERD met betrekking tot het `Page`-model en CMS content_:
-> * [ERD AllesOnline CMS page model](../Bijlagen/ErdAoCmsPageModel.md).
+> * [ERD AllesOnline CMS page model](../Bijlagen/ErdAoCmsPageModel.md)
 
 ## Templates
 
@@ -78,14 +78,14 @@ Hoewel het AllesOnline CMS een goed fundament biedt voor het ontwikkelen van web
 Een van de grootste gebreken van het AllesOnline CMS is de beperkte en verouderde documentatie. Hoewel er documentatie beschikbaar is, ontbreekt het vaak aan concrete informatie over de werking van bepaalde modules en functionaliteiten. In sommige gevallen is er zelfs helemaal geen informatie beschikbaar over specifieke functionaliteiten.
 
 > _Een voorbeeld van documentatie vind je in deze bijlage:_
->  * [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldAllesOnlineCmsSchema.md).
+>  * [voorbeeld documentatie AllesOnline CMS](../Bijlagen/VoorbeeldAllesOnlineCmsSchema.md)
 
 **Aanbeveling**:
 * Zorg voor correcte documentatie, inclusief een up-to-date beschrijving van alle beschikbare modules, met voorbeelden van hoe functionaliteiten in verschillende scenario’s gebruikt kunnen worden. Dit voorkomt onduidelijkheid en zorgt ervoor dat developers zich kunnen concentreren op het realiseren van de requirements van klanten.
 
 ## Complexe codestructuur
 
-De huidige codestructuur van de modules is vaak onnodig complex. Dit komt onder andere door inconsistentie in naming conventions, relatief lange methoden met teveel verantwoordelijkheden, hardcoded strings die worden gebruikt als flag en te veel objecten die worden geïnstantieerd in plaats van geïnjecteerd.
+De huidige codestructuur van de modules is vaak onnodig complex. Dit komt onder andere door inconsistentie in naming conventions, relatief lange methoden met te veel verantwoordelijkheden, hardcoded strings die worden gebruikt als flag en te veel objecten die worden geïnstantieerd in plaats van geïnjecteerd.
 
 **Gevolgen van deze complexiteit:**
 * De kans op bugs neemt toe, omdat wijzigingen in een deel van de module vaak onbedoeld andere onderdelen kunnen beïnvloeden.
@@ -99,13 +99,13 @@ De huidige codestructuur van de modules is vaak onnodig complex. Dit komt onder 
 	* Een aparte module voor UI-gerelateerde configuratie.
 * Dit vereist het definiëren van duidelijke interfaces tussen deze onderdelen, wat zorgt voor betere herbruikbaarheid, testbaarheid en uitbreidbaarheid van de applicatie.
 
-## SOLID principes
+## SOLID-principes
 
 Het vorige punt stipte dit onderwerp al aan. Als we naar de  **SOLID-principes** kijken, blijkt uit de codebase dat deze principes niet zijn toegepast. Ondanks het niet verplicht is om strict aan deze principes vast te houden, zijn het sterke concepten om een codebase onderhoudbaar, uitbreidbaar en testbaar te maken (DigitalOcean, z.d.). 
 
 * **Single Responsibility Principle (SRP)**: Dit principe stelt dat een class slechts één reden tot verandering mag hebben. In het AllesOnline CMS zijn er veel classes waarvan de methoden verantwoordelijk zijn voor meerdere functionaliteiten. Dit verhoogt de complexiteit en maakt het moeilijker om methoden te isoleren, te testen en opnieuw te gebruiken.
     
-* **Open/Closed Principle (OCP)**: Dit principe stelt dat classes open moeten zijn voor uitbreiding, maar gesloten voor aanpassing. Dit betekent dat de functionaliteit van een class uitgebreid kan worden zonder de bestaande code te wijzigen. In de huidige codebase vereisen nieuwe functionaliteiten echter vaak wijzigingen in de bestaande code, wat de kans op bugs vergroot en de onderhoudbaarheid verminderd.
+* **Open/Closed Principle (OCP)**: Dit principe stelt dat classes open moeten zijn voor uitbreiding, maar gesloten voor aanpassing. Dit betekent dat de functionaliteit van een class uitgebreid kan worden zonder de bestaande code te wijzigen. In de huidige codebase vereisen nieuwe functionaliteiten echter vaak wijzigingen in de bestaande code, wat de kans op bugs vergroot en de onderhoudbaarheid vermindert.
 
 * **Liskov Substitution Principle (LSP):** Dit principe stelt dat objecten van een afgeleide class zonder problemen kunnen worden vervangen door objecten van de parent class.
 

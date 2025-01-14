@@ -8,7 +8,7 @@
 * **Uitgebreide functionaliteit voor content- en objectbeheer**: Het AllesOnline CMS biedt veel mogelijkheden voor content- en objectenbeheer, inclusief het hiërarchisch indelen van webpagina's.
 * **Dynamische websitebeheer**: Het CMS stelt eindgebruikers in staat om de content op een website zelf tot in detail te beheren.
 * **Integratie met Laravel**: Het AllesOnline CMS is geïntegreerd met het Laravel-Framework en maakt gebruik van de Eloquent ORM. Dit vereenvoudigt gegevensbeheer door middel van objectgeoriënteerde technieken. Bovendien profiteren developers van de uitgebreide en heldere documentatie van Laravel.
-* **Gebruiksvriendelijke interface voor het ordenen van websitestructuur met drag-and-drop-functionaliteit**: Dankzij de voorgedefinieerde templates en de drag-and-drop-interface kunnen gebruikers hun websitestructuur eenvoudig beheren en ordenen.
+* **Gebruiksvriendelijke interface voor het ordenen van websitestructuur met drag-and-drop-functionaliteit**: Dankzij de vooraf gedefinieerde templates en de drag-and-drop-interface kunnen gebruikers hun websitestructuur eenvoudig beheren en ordenen.
 
 ## Weaknesses (Zwaktes)
 
@@ -26,7 +26,7 @@
 
 ## Threats (Bedreigingen)
 
-* **Kosten en tijdsinvestering voor refactoring**: Het refactoren van de codebase vereist aanzienlijke middelen, wat extra druk kan leggen op het development en kan leiden tot budgetoverschrijdingen.
+* **Kosten en tijdsinvestering voor refactoring**: Het refactoren van de codebase vereist aanzienlijke middelen, wat extra druk kan leggen op het development team en kan leiden tot budgetoverschrijdingen.
 * **Risico op regressies door aanpassingen in bestaande code**: Door de complexe structuur en sterke afhankelijkheden van de huidige code, kan refactoring leiden tot bugs in bestaande functionaliteiten, wat de stabiliteit van het systeem in gevaar kan brengen.
 * **Concurrentie van third-party CMS-systemen**: Externe, goed onderhouden CMS-oplossingen bieden mogelijk een kostenefficiënt en gebruiksvriendelijk alternatief voor AllesOnline, waardoor de relevantie van een eigen CMS-oplossing kan afnemen.
 * **Beperkte testbaarheid van de huidige code**: Zonder refactoring zijn unit tests lastig te implementeren.

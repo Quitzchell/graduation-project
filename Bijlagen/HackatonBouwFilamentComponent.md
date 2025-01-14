@@ -1,8 +1,8 @@
-# **Hackaton: Bouw een custom Filament component met Livewire en Alpine.js**
+# **Hackathon: Bouw een custom Filament component met Livewire en Alpine.js**
 
 ## Inleiding
 
-Laat developers tijdens een hackathon kennismaken met het gebruik van Livewire en Alpine.js in Filament. Geef hen de opdracht om een custom component te ontwikkelen die in met Filament geintegreerd kan worden.
+Laat developers tijdens een hackathon kennismaken met het gebruik van Livewire en Alpine.js in Filament. Geef hen de opdracht om een custom component te ontwikkelen die in Filament geïntegreerd kan worden.
 
 ## Doel van de challenge
 
@@ -16,7 +16,7 @@ Laat developers tijdens een hackathon kennismaken met het gebruik van Livewire e
     * Ontwikkel een custom component dat een specifieke use case binnen een CMS vervult, bijvoorbeeld:
         * Een drag-and-drop interface voor het beheren van een menu.
         * Een interactieve datavisualisatie-widget.
-        * Een Google Maps integratie die automatisch adressen omzetten naar coördinaten (geocoderen) en vice versa (omgekeerd geocoderen).
+        * Een Google Maps integratie die automatisch adressen omzet naar coördinaten (geocoderen) en vice versa (omgekeerd geocoderen).
     * Gebruik Livewire voor server-side logica en state management.
     * Gebruik Alpine.js voor interactieve front-end functionaliteiten.
 

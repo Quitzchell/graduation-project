@@ -20,6 +20,8 @@
 
 * [Onderzoek voor CMS migratie](../AnalyseAdvies/OnderzoekVoorCmsMigratie.md)
 
+* [Technische documentatie CMS prototypes](../DesignRealisatie/TechnischeDocumentatieCmsPrototypes.md)
+
 ### Advice
 
 * [Advies CMS migratie](../AnalyseAdvies/AdviesCMSMigratie.md)
@@ -36,7 +38,7 @@
 
 * [ERD AllesOnline CMS (page model)](../Bijlagen/ErdAoCmsPageModel.md)
 * [UML Entiteiten diagram voor Prototype](../Bijlagen/UmlEntiteitenDiagramPrototype.md)
-* [UML Class diagram voor ContentManagement in Filament CMS](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+* [UML class-diagram: content management Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 
 ### Realise
 
@@ -108,7 +110,7 @@
 
 ## Targeted Interaction
 
-* [Samenvatting initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
-* [Samenvatting gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
-* [Samenvatting gesprekken met developers voor adviesopstelling](../AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
-* [Samenvatting gesprekken met vormgevers](../AnalyseAdvies/GesprekMetVormgevers.md)
+* [initiële gesprekken met developers](../AnalyseAdvies/InitieleGesprekkenDevelopers.md)
+* [gesprekken met developers tijdens mid-term reviews](../AnalyseAdvies/GesprekkenDevelopersMidTermReviews.md)
+* [gesprekken met developers voor adviesopstelling](../AnalyseAdvies/LaatsteGesprekkenDevelopers.md)
+* [gesprekken met vormgevers](../AnalyseAdvies/GesprekMetVormgevers.md)

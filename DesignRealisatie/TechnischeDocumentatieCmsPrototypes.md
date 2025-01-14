@@ -284,7 +284,8 @@ public function blocks(string $tag = 'blocks', array $data = [])
 
 In **Filament** kan een CMS, vergelijkbaar met het AllesOnline CMS, worden opgebouwd met behulp van `Resources` en een `Eloquent`-model, zoals het `Page`-model van AllesOnline. Dit model beheert de gegevens en relaties van pagina's en hun hiërarchie.
 
-> [UML class-diagram met het concept content management in Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
+> _UML class-diagram met het concept content management in Filament_
+> * [UML class-diagram: content management Filament](../Bijlagen/UmlEntiteitenDiagramContentManagementFilament.md)
 
 ## Eloquent Model: Page
 
@@ -1002,7 +1003,9 @@ template: homepage
 ## Synchronisatie van relaties
 
 In de **flat-file** en **eloquent-driver** configuratie van Statamic is er geen automatische synchronisatie van bi-directionele relaties, wat kan leiden tot inconsistenties wanneer een relatie aan de ene kant van het object wordt verwijderd, maar aan de andere kant behouden blijft. Via de **Statamic Marketplace** is er echter een `Entry Relationships`-addon beschikbaar die automatische verwerking van bi-directionele relaties mogelijk maakt. 
-> * [Entry Relationship addon in de Statamic Marketplate](https://statamic.com/addons/stillat/entry-relationships)
+
+> _Entry Relationship addon in Statamic Marketplace_
+> * [Entry Relationship addon](https://statamic.com/addons/stillat/entry-relationships)
 
 <br>
 

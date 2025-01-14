@@ -1,7 +1,7 @@
 # **SWOT: Statamic**
 
 >_Voor meer informatie over het Statamic:_
-> * [Onderzoeksdocument over Statamic](./OnderzoekNaarStatamicCMS.md)
+> * [Onderzoek naar Statamic](./OnderzoekNaarStatamicCMS.md)
 
 ## Strengths (Sterktes)
 

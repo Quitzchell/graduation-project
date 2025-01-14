@@ -2,7 +2,7 @@
 
 # Inleiding
 
-Om vast te stellen aan welke eisen een CMS moet voldoen voor een doorsnee AllesOnline-website, heb ik op basis van gesprekken met developers en een analyse van het AllesOnline CMS de volgende lijst met requirements opgesteld. Deze requirements vormen de basis voor het ontwikkelen van een prototype, zowel met het AllesOnline CMS als met andere systemen.
+Om vast te stellen aan welke eisen een CMS moet voldoen voor een typische AllesOnline-website, heb ik op basis van gesprekken met developers en een analyse van het AllesOnline CMS de volgende lijst met requirements opgesteld. Deze requirements vormen de basis voor het ontwikkelen van een prototype, zowel met het AllesOnline CMS als met andere systemen.
 
 # Requirements
 

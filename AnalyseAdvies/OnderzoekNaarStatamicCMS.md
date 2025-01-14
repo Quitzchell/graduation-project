@@ -1,4 +1,4 @@
-# **Onderzoek naar het Statamic CMS**
+# **Onderzoek naar Statamic**
 
 # Inleiding
 
@@ -8,7 +8,7 @@ Dit document beschrijft de analyse van Statamic voor het opzetten van een CMS vo
 > * [Onderzoek naar AllesOnline CMS](../AnalyseAdvies/OnderzoekNaarHetAOCms.md)
 > * [Onderzoek naar Filament](../AnalyseAdvies/OnderzoekNaarFilament.md)
 
-> _De belangrijkste bevindingen over het Statamic zijn samengebracht in een SWOT-analyse._
+> _De belangrijkste bevindingen over Statamic zijn samengebracht in een SWOT-analyse._
 >  * [SWOT: CMS met Statamic](./SwotStatamicCms.md)
 
 # Over Statamic
@@ -20,8 +20,8 @@ In Statamic zijn `Collections` containers waarin gerelateerde `Entries` worden g
 De basisinstallatie, die gebruikmaakt van de `flat-file` configuratie, biedt direct een volledig CMS met een breed scala aan componenten voor het beheren van content en objecten. In alle configuraties die in dit onderzoek worden besproken, zijn de volgende modules beschikbaar:
 * **Assets**: Beheer van mediabestanden zoals afbeeldingen, video's en documenten.
 * **Blueprints**: Schema's die bepalen welke `Fields` beschikbaar zijn bij het aanmaken of bewerken van inhoud in het CMS.
-* **Collections**: Groepen van gerelateerde inhoudsitems (`Entries`) die samen een bepaald type content vormen.
-* **Entries**:  Individuele inhoudsitems.
+* **Collections**: Groepen van gerelateerde `Entries` die samen een bepaald type content vormen.
+* **Entries**: Individuele `Entries`.
 * **Fields**: Diverse soorten invoervelden.
 * **Globals**: Herbruikbare informatie die globaal kan worden opgehaald.
 * **Search**: Standaardondersteuning voor zoekfunctionaliteit, zowel out-of-the-box als via integratie met Algolia.
@@ -52,6 +52,7 @@ Met de eloquent-driver packages kan Statamic worden geconfigureerd om gegevens v
 
 Het omzetten van de flat-file configuratie naar de eloquent-driver configuratie is relatief eenvoudig. De eloquent-driver package biedt namelijk functionaliteiten die het omzetten van flat-files naar database-records en vice versa eenvoudig maken. Hoe de eloquent-driver binnen het systeem precies wordt ingezet, kan worden afgestemd in het configuratiebestand van de driver. 
 
+> _Meer informatie omtrent de eloquent-driver_
 > * [Eloquent-driver documentatie](https://github.com/statamic/eloquent-driver)
 > * [Eloquent-driver configuratiebestand](../Bijlagen/eloquent-driver-config.md)
 
@@ -63,7 +64,7 @@ In Statamic zijn `Collections` containers waarin gerelateerde `Entries` worden g
 `Collections` kunnen via het Control Panel van Statamic of aan de hand van YAML-bestanden in de codebase gedefinieerd worden. In de eloquent-driver configuratie kan het configuratiebestand van een `Collection` in de database gepersisteerd worden.
 
 > _Voorbeeld van een Collections YAML_
-> * [Collections yaml voor Pages collection](../Bijlagen/VoorbeeldStatamicCollectionsFile.md)
+> * [Collections YAML voor Pages collection](../Bijlagen/VoorbeeldStatamicCollectionsFile.md)
 
 ## Blueprint
 
@@ -98,6 +99,7 @@ Het omzetten van de flat-file of eloquent-driver configuratie naar Runway vergt 
 
 Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionaliteit voor het beheren van templates te behouden. Bijvoorbeeld door de `Blueprints` van de templates om te zetten naar `FieldSets`. Deze kunnen dan doormiddel van een `replicator` geselecteerd worden.
 
+> _Meer informatie omtrent Runway_
 > * [Runway addon documentatie](https://runway.duncanmcclean.com/)
 > * [Runway configuratie](../Bijlagen/RunwayConfigFile.md)
 
@@ -110,7 +112,7 @@ Daarnaast zal er een workaround geïmplementeerd moeten worden om de functionali
 
 # Evaluatie van Statamic
 
-## Documenatie en ondersteuning
+## Documentatie en ondersteuning
 
 Hoewel Statamic veel van zijn functionaliteiten beschrijft in de documentatie, is deze vaak oppervlakkig en soms zelfs incompleet. Dit wordt vooral duidelijk wanneer je schema's via de codebase voor het CMS wilt definiëren. In de documentatie worden de velden die gebruikt kunnen worden niet gedefinieerd, wat de indruk wekt dat Statamic verwacht dat je hun UI gebruikt voor het beheren van schema's. Echter, ontbreken bepaalde opties in de UI, waardoor het alsnog nodig is om variabelen via de codebase aan je schema's mee te geven. 
 
@@ -157,14 +159,15 @@ Voor AllesOnline is minimaal de **Statamic Pro** licentie nodig, aangezien de we
 
 Wanneer er meerdere websites met `Statamic` in productie gebracht worden, is het interessant om gebruik te maken van de **Master License**. Als het lukt om binnen een jaar tien websites in productie te brengen, ben je met dit pakket het goedkoopst uit. Na tien websites, of nadat het jaar waarin je met korting extra licenties kunt kopen voorbij is, is het voordeliger om over te schakelen naar de `Platform Subscription`. Omdat er tot 25 websites een flat fee van $175 per maand geldt, kost dit voor de eerste 25 websites $2100 per jaar. Wanneer er dus 25 websites in gebruik zijn, komen de kosten per website neer op $84 per jaar. Voor elke extra website die hierop volgt geldt een lager tarief. Meer details over deze prijsstaffel zijn te vinden op de website van Statamic.
 
+> _Meer informatie over de kosten van de Platform Subscription_
 > * [Informatie over kosten van Platform Subscription](https://statamic.com/pricing/platform)
 
-### Conclusie 
+# Conclusie 
 
 Statamic is een veelzijdig en gebruiksvriendelijk CMS dat goed integreert met Laravel en nuttige out-of-the-box functionaliteiten biedt. Hoewel de flat-file en eloquent-driver configuratie interessant kan zijn voor kleinere websites, kunnen we ervan uitgaan dat het voor AllesOnline niet interessant is om grotere projecten met Statamic te realiseren. Daarnaast is het vanwege de verschillen in datastructuur ook niet verstandig om bestaande projecten met het AllesOnline CMs te migreren naar Statamic.
 
 Veel van de werking van Statamic is bovendien moeilijk terug te vinden in de documentatie, waardoor de leercurve voor het werken met Statamic steiler kan zijn dan noodzakelijk.
 
-Waar Statamic wel erg geschikt zou kunnen zijn, is voor simpele marketing- en whitelabel-websites. Omdat Statamic in de flat-file en eloquent-driver out-of-the-box met de Statamic API gegevens beschikbaar kan stellen, is het mogelijk om met weinig werk een simpel CMS klaar te zetten waarin content beheerd kan worden. 
+Waar Statamic wel erg geschikt zou kunnen zijn, is voor simpele marketing- en whitelabel-websites. Omdat Statamic in de flat-file en eloquent-driver met de Statamic API direct gegevens beschikbaar kan stellen, is het mogelijk om met weinig werk een simpel CMS klaar te zetten waarin content beheerd kan worden. 
 
 Omdat de licentiekosten voor een Statamic-website per in productie genomen website lager worden, is het verstandig om een tijdlijn op te stellen waarmee inzichtelijk wordt gemaakt wanneer de kosten per website voor AllesOnline rendabel zijn.
